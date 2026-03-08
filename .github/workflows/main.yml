@@ -1,0 +1,36 @@
+name: Daily Report Automation
+
+on:
+  schedule:
+    # 台灣時間早上 08:00 對應 UTC 00:00
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允許你手動測試執行
+
+jobs:
+  run-report:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # 這裡請列出你腳本用到的所有套件
+        pip install requests google-generativeai
+
+    - name: Run Script
+      env:
+        # 將剛剛設定的 Secret 帶入環境變數
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        # 依序執行你的腳本
+        python fetch_images_v2.py
+        python discord_webhook_sender.py
