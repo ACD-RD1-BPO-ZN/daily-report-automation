@@ -1,36 +1,40 @@
-name: Daily Report Automation
+name: Daily Technical Report
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # 台灣時間 08:00
+  # 1. 允許手動點擊測試 (非常重要)
   workflow_dispatch:
 
+  # 2. 定時排程 (例如台灣時間每天早上 8:00)
+  schedule:
+    # GitHub Actions 使用 UTC 時間，台灣 (UTC+8) 早上 8:00 是 UTC 0:00
+    - cron: '0 0 * * *'
+
 jobs:
-  run-report:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        # 修正點 1：安裝清單中的所有套件
-        pip install -r requirements.txt
-        # 修正點 2：安裝 Playwright 所需的瀏覽器核心與依賴
-        python -m playwright install --with-deps chromium
+      - name: Install dependencies
+        run: |
+          pip install google-generativeai requests playwright beautifulsoup4 python-dotenv
+          playwright install chromium
 
-    - name: Run Script
-      env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: |
-        # 請確認 GitHub 上的檔名是 fetch_images_v2.py
-        python fetch_images_v2.py
-        python discord_webhook_sender.py
+      - name: Run AI Report Generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python generate_report.py
+
+      - name: Fetch Dynamic Images
+        run: python fetch_images_v2.py
+
+      - name: Send to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python discord_webhook_sender.py
