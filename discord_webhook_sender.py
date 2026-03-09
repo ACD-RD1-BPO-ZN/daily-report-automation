@@ -77,12 +77,18 @@ def send_message(content=None, image_path=None):
 
 def main():
     base_dir = os.getcwd()
-    md_files = glob.glob(os.path.join(base_dir, "Daily_Full_Report_*.md"))
-    if not md_files:
-        print("No report files found.")
+    
+    # Get current date in UTC+8 (Taiwan Time)
+    from datetime import datetime, timezone, timedelta
+    tz = timezone(timedelta(hours=8))
+    today_str = datetime.now(tz).strftime("%Y%m%d")
+    expected_filename = f"Daily_Full_Report_{today_str}.md"
+    latest_report = os.path.join(base_dir, expected_filename)
+    
+    if not os.path.exists(latest_report):
+        print(f"Error: Today's report ({expected_filename}) not found. Skipping Discord push to avoid sending old reports.")
         return
         
-    latest_report = max(md_files, key=os.path.getmtime)
     print(f"Pushing segment-by-segment report: {latest_report}")
     
     with open(latest_report, "r", encoding="utf-8") as f:
