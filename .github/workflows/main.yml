@@ -4,10 +4,9 @@ on:
   # 1. 允許手動點擊測試 (非常重要)
   workflow_dispatch:
 
-  # 2. 定時排程 (例如台灣時間每天早上 8:00)
+  # 2. 定時排程 (每天台灣時間 07:45，即 UTC 23:45)
   schedule:
-    # GitHub Actions 使用 UTC 時間，台灣 (UTC+8) 早上 8:00 是 UTC 0:00
-    - cron: '0 0 * * *'
+    - cron: '45 23 * * *'
 
 jobs:
   build:
@@ -23,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install google-generativeai requests playwright beautifulsoup4 python-dotenv
+          pip install google-generativeai google-genai requests playwright beautifulsoup4 python-dotenv feedparser
           playwright install chromium
 
       - name: Run AI Report Generator
