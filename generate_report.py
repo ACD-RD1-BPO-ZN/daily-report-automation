@@ -5,7 +5,8 @@ import asyncio
 from datetime import datetime, timezone, timedelta
 import requests
 from bs4 import BeautifulSoup
-import google.generativeai as genai
+import google.genai as genai
+from google.genai import types as genai_types
 from dotenv import load_dotenv
 import feedparser
 import re
@@ -18,7 +19,7 @@ if not GEMINI_API_KEY:
     print("Error: GEMINI_API_KEY is not set.")
     exit(1)
 
-genai.configure(api_key=GEMINI_API_KEY)
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 # 台灣時間 (UTC+8)
 tz = timezone(timedelta(hours=8))
@@ -34,7 +35,8 @@ def fetch_rss_feeds():
         "Unity Blog": "https://blog.unity.com/feed",
         "Godot Engine Blog": "https://godotengine.org/rss.xml",
         "Game Developer (Indie/Business)": "https://www.gamedeveloper.com/rss.xml",
-        "Bahamut GNN (Local Taiwan News)": "https://gnn.gamer.com.tw/rss.xml"
+        "Bahamut GNN (Local Taiwan News)": "https://gnn.gamer.com.tw/rss.xml",
+        "Steam News": "https://store.steampowered.com/feeds/news.xml"
     }
     
     scraped_data = ""
@@ -71,20 +73,17 @@ def fetch_rss_feeds():
             soup = BeautifulSoup(r.text, 'html.parser')
             scraped_data += '\n### 來源資訊: 80.lv (TA/Tech)\n'
             count = 0
-            for article in soup.select('article, .article-card, .post-item, h2 a, h3 a'):
-                title_el = article.find(['h2', 'h3', 'h4']) or article
-                link_el = article.find('a', href=True)
-                if title_el and link_el:
-                    href = link_el['href']
+            for a in soup.select('a[href*="/articles/"]'):
+                href = a['href']
+                title_text = a.get_text(strip=True)
+                if title_text and len(title_text) > 15 and not href.endswith('/articles/'):
                     if not href.startswith('http'):
                         href = 'https://80.lv' + href
-                    title_text = title_el.get_text(strip=True)
-                    if title_text and href and '80.lv' in href:
-                        scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {href}\n  [摘要前言]: (Latest TA article)...\n'
-                        count += 1
-                        recent_news_count += 1
-                        if count >= 5:
-                            break
+                    scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {href}\n  [摘要前言]: (Latest TA article)...\n'
+                    count += 1
+                    recent_news_count += 1
+                    if count >= 5:
+                        break
             if count == 0:
                 print('  [Warning] 80.lv direct scrape also returned nothing')
         except Exception as e:
@@ -102,7 +101,7 @@ def fetch_rss_feeds():
                 if not href.startswith('http'):
                     href = 'https://unity.com' + href
                 title_text = a.get_text(strip=True)
-                if title_text and len(title_text) > 15 and href not in scraped_data:
+                if title_text and len(title_text) > 15 and not href.endswith('/blog/') and not href.endswith('/blog') and href not in scraped_data:
                     scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {href}\n  [摘要前言]: (Unity blog article)...\n'
                     count += 1
                     recent_news_count += 1
@@ -124,9 +123,6 @@ async def generate_daily_report():
     if not scraped_context.strip():
         scraped_context = "無法取得即時 RSS 新聞，請以過去 48 小時內廣為人知的開發新聞進行撰寫，但嚴格標示網址。"
         print("Warning: Scraped context is empty.")
-
-    # 使用 Gemini 模型
-    model = genai.GenerativeModel('gemini-2.5-flash')
 
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
@@ -154,6 +150,7 @@ async def generate_daily_report():
     [資料來源]
     ---
     **🎮 【獨立遊戲市場觀察】**
+    (🚨防捏造與強制機制🚨：請務必關注並包含「Steam News」的相關情報。如果有重要的 Steam 更新或發布，請在此段落進行深入摘要。若無則總結其他獨立遊戲情報。)
     (內容)
     [資料來源]
     ---
@@ -175,13 +172,13 @@ async def generate_daily_report():
     3. 只有在每個大段落（例如【今日頭條】的整塊內容）的「最結尾」才放置一個 `---` 水平分隔線來區隔下一個大分類標題。
     
     【防捏造警告 (Anti-Hallucination) 與 Discord 超連結優化】
-    1. 在每一個段落的最末尾（除了【今日全方位深度總結】之外），必須獨立一行標示該段落引用資訊的來源。
+    1. 【嚴格排版規定】：所有的資料來源超連結，必須集中且「統一條列放置於該大標題段落的最底部（[資料來源] 的正下方）」，絕對不可以穿插在每一條新聞摘要的正後方或文字段落中間，以免畫面凌亂影響閱讀體驗。
     2. 由於 Discord 原生超連結會產生冗長的預覽縮圖卡片，請「務必」使用 Markdown 的角括號 `< >` 將 URL 包起來，格式如下：
        `[網站名 - 新聞關鍵字/標題簡稱](<原始HTTPS網址>)`
        範例： `[Unreal - PCG 更新](<https://www...>)`, `[80.lv - 植被渲染](<https://www...>)`
-    2. 這些網址「絕對只能」從我上面提供給你的 Context 清單中挑選！嚴禁自行發明、捏造任何不存在的網址。
-    3. 如果針對某個標題（例如【在地社群】）在清單中完全找不到相關素材，你可以簡短說明「今日無重大本土社群動態」，但絕對不准無中生有生出假網址。
-    4. 最後的【今日全方位深度總結】請不要附上任何資料來源。
+    3. 這些網址「絕對只能」從我上面提供給你的 Context 清單中挑選！嚴禁自行發明、捏造任何不存在的網址。
+    4. 如果針對某個標題（例如【在地社群】）在清單中完全找不到相關素材，你可以簡短說明「今日無重大本土社群動態」，但絕對不准無中生有生出假網址。
+    5. 最後的【今日全方位深度總結】請不要附上任何資料來源。
     
     【圖文對位規範 (防呆排版)】
     在此 Markdown 輸出中，請確保每一段「**標題**」正下方「必定要」跟一條 Markdown 圖片標籤，然後才開始寫內文。
@@ -247,9 +244,10 @@ async def generate_daily_report():
     """
 
     print("Requesting strictly constrained content from Gemini...")
-    response = model.generate_content(
-        prompt,
-        generation_config=genai.GenerationConfig(
+    response = client.models.generate_content(
+        model='gemini-2.5-flash',
+        contents=prompt,
+        config=genai_types.GenerateContentConfig(
             response_mime_type="application/json",
             temperature=0.2,
         )

@@ -8,10 +8,25 @@ import json
 import shutil
 import base64
 from dotenv import load_dotenv
+import re
+import urllib.parse
 load_dotenv()
 
 # 圖片最小有效大小（bytes），低於此值視為 icon/placeholder
 MIN_IMAGE_SIZE = 5000  # 5KB
+
+def normalize_image_url(url):
+    """
+    移除網址中常見的尺寸後綴或 Query Parameter，避免同一張圖因為不同尺寸檔名造成重複。
+    """
+    try:
+        # 移除 URL 參數 (例如 ?width=1200)
+        base = urllib.parse.urlparse(url)._replace(query="").geturl()
+        # 移除檔名中像是 _1024x576, -800w 這樣的解析度後綴
+        base = re.sub(r'([_-]\d+(?:x\d+|w))(\.[a-zA-Z0-9]+)$', r'\2', base, flags=re.IGNORECASE)
+        return base.lower()
+    except Exception:
+        return url.lower()
 
 def is_valid_image(file_path):
     """檢查圖片檔案是否有效（大小超過門檻）"""
@@ -23,7 +38,9 @@ def is_valid_image(file_path):
         return False
     return True
 
-async def download_image(url, save_path, section_type="", image_keywords=None):
+async def download_image(url, save_path, section_type="", image_keywords=None, used_image_urls=None):
+    if used_image_urls is None:
+        used_image_urls = set()
     if image_keywords is None:
         image_keywords = []
 
@@ -62,8 +79,12 @@ async def download_image(url, save_path, section_type="", image_keywords=None):
                     with open(save_path, 'wb') as f:
                         f.write(img_data)
                     if is_valid_image(save_path):
-                        print(f"  Priority 1A: ✅ og:image saved successfully ({len(img_data)} bytes)")
-                        return True
+                        if normalize_image_url(og_url) not in used_image_urls:
+                            print(f"  Priority 1A: ✅ og:image saved successfully ({len(img_data)} bytes)")
+                            used_image_urls.add(normalize_image_url(og_url))
+                            return True
+                        else:
+                            print(f"  Priority 1A: og:image {og_url} already used in previous section, trying next strategy...")
                     else:
                         print(f"  Priority 1A: og:image too small, trying next strategy...")
                 except Exception as e:
@@ -100,10 +121,16 @@ async def download_image(url, save_path, section_type="", image_keywords=None):
             src_url = src if src.startswith('http') else urljoin(url, src)
             alt_text = img.get('alt', '').lower()
             src_lower = src_url.lower()
+            
+            # 排除 SVG 和 GIF (Discord 支援不佳)
+            if src_lower.endswith('.svg') or src_lower.endswith('.gif'):
+                continue
+                
             combined_text = src_lower + ' ' + alt_text
             
             if any(kw.lower() in combined_text for kw in search_keywords):
-                candidate_urls.append(src_url)
+                if normalize_image_url(src_url) not in used_image_urls:
+                    candidate_urls.append(src_url)
 
         # === Strategy C: Fallback — 第一張「大圖」(寬度/高度屬性 > 300) ===
         if not candidate_urls:
@@ -116,6 +143,8 @@ async def download_image(url, save_path, section_type="", image_keywords=None):
                 
                 # 排除明顯的 icon/logo
                 src_lower = src_url.lower()
+                if src_lower.endswith('.svg') or src_lower.endswith('.gif'):
+                    continue
                 
                 # 嘗試從 HTML 屬性判斷圖片大小
                 width = img.get('width', '')
@@ -131,9 +160,39 @@ async def download_image(url, save_path, section_type="", image_keywords=None):
                     
                 # 若有明確的尺寸屬性且夠大，或沒有尺寸屬性（可能是 CSS 控制的大圖）
                 if w >= 300 or h >= 200 or (w == 0 and h == 0):
-                    candidate_urls.append(src_url)
-                    if len(candidate_urls) >= 3:
-                        break
+                    if src_url not in used_image_urls:
+                        candidate_urls.append(src_url)
+                        if len(candidate_urls) >= 3:
+                            break
+                            
+        # === Strategy D: Ultimate Fallback — 如果上面的規則都沒找到圖，直接抓面積最大的 <img> ===
+        if not candidate_urls:
+            print(f"  Priority 1C: Still no matches, finding the absolute largest image tag on the page...")
+            largest_url = None
+            max_area = 0
+            for img in soup.find_all('img'):
+                src = img.get('src') or img.get('data-src') or ''
+                if not src: continue
+                src_url = src if src.startswith('http') else urljoin(url, src)
+                if normalize_image_url(src_url) in used_image_urls: continue
+                
+                src_lower = src_url.lower()
+                if src_lower.endswith('.svg') or src_lower.endswith('.gif'):
+                    continue
+                
+                try: w = int(str(img.get('width', '0')).replace('px', ''))
+                except: w = 0
+                try: h = int(str(img.get('height', '0')).replace('px', ''))
+                except: h = 0
+                
+                area = w * h
+                if area > max_area:
+                    max_area = area
+                    largest_url = src_url
+            
+            if largest_url:
+                print(f"  Priority 1C: Found largest candidate with w*h={max_area}: {largest_url}")
+                candidate_urls.append(largest_url)
 
         # 嘗試下載候選圖片
         for i, cand_url in enumerate(candidate_urls):
@@ -144,6 +203,7 @@ async def download_image(url, save_path, section_type="", image_keywords=None):
                     f.write(img_data)
                 if is_valid_image(save_path):
                     print(f"  Priority 1: ✅ Saved successfully ({len(img_data)} bytes)")
+                    used_image_urls.add(normalize_image_url(cand_url))
                     return True
                 else:
                     print(f"  Priority 1: Candidate too small, trying next...")
@@ -173,10 +233,34 @@ async def download_image(url, save_path, section_type="", image_keywords=None):
                 page_title = await page.title()
                 page_title = page_title.lower()
                 
-                if "auth.epicgames.com" in current_url or "login" in current_url or "captcha" in page_title or "challenge" in page_title or "human verification" in page_title or "just a moment" in page_title or "cloudflare" in page_title:
-                    print(f"  Priority 2: 🛑 Detected login/captcha wall at {current_url} | Title: {page_title}. Skipping this URL.")
+                if "auth.epicgames.com" in current_url or "login" in current_url:
+                    print(f"  Priority 2: 🛑 Detected strict login wall at {current_url} | Title: {page_title}. Skipping.")
                     await browser.close()
                     return False
+                    
+                if "captcha" in page_title or "challenge" in page_title or "human verification" in page_title or "just a moment" in page_title or "cloudflare" in page_title:
+                    print(f"  Priority 2: ⚠️ Detected Cloudflare/verification at {current_url}. Waiting extra 5 seconds to bypass...")
+                    await page.wait_for_timeout(5000)
+                    
+                    # 再檢查一次，如果還是卡在驗證畫面就放棄，避免截下一張盾牌圖
+                    page_title_retry = (await page.title()).lower()
+                    if "captcha" in page_title_retry or "challenge" in page_title_retry or "human verification" in page_title_retry or "just a moment" in page_title_retry or "cloudflare" in page_title_retry:
+                        print(f"  Priority 2: 🛑 Still stuck on Cloudflare/verification | Title: {page_title_retry}. Skipping.")
+                        await browser.close()
+                        return False
+                
+                print("  Priority 2: Scrolling down to trigger lazy-loaded images...")
+                # Scroll down and up to trigger lazy-loaded images
+                await page.evaluate("""
+                    window.scrollTo(0, document.body.scrollHeight / 2);
+                    setTimeout(() => window.scrollTo(0, 0), 1000);
+                """)
+                await page.wait_for_timeout(2000)
+                
+                try:
+                    await page.wait_for_load_state("networkidle", timeout=10000)
+                except Exception:
+                    print("  Priority 2: Networkidle timeout, proceeding anyway...")
                     
             except Exception as e:
                 print(f"  Playwright navigation failed: {e}")
@@ -254,6 +338,18 @@ async def main():
         except json.JSONDecodeError as e:
             print(f"Error parsing {targets_file}: {e}")
             print("Skipping image fetch due to invalid JSON.")
+            
+    used_image_urls = set()
+    
+    # 建立 global fallback URLs
+    global_candidate_urls = []
+    for item in targets_data:
+        srcs = item.get("source_urls", [])
+        if "source_url" in item and not srcs:
+            srcs = [item.get("source_url")]
+        for s in srcs:
+            if s and s != "GENERATE_AI_IMAGE":
+                global_candidate_urls.append(s)
     
     for item in targets_data:
         try:
@@ -273,19 +369,20 @@ async def main():
                 print(f"Prompt: {ai_prompt}")
                 success = False
                 
-                import base64
-                
                 try:
                     from google import genai as new_genai
                     from google.genai import types as genai_types
                     
-                    # 使用使用者提供的 API KEY 或環境變數
-                    API_KEY = "AIzaSyA9JS2ZU4RW7L4C2AkMROUa9Tta4hiHzcs"
-                    os.environ["GEMINI_API_KEY"] = API_KEY
+                    API_KEY = os.getenv("GEMINI_API_KEY")
+                    if not API_KEY:
+                        print("Error: GEMINI_API_KEY not found in environment for Image Generation.")
+                        success = False
+                        break
+                    
                     client = new_genai.Client(api_key=API_KEY)
                     
                     target_path = os.path.join(assets_dir, filename)
-                    # 依據最新 SDK 使用 imagen-4.0-generate-001 產圖
+                    print(f"AI Image: Requesting imagen-4.0-generate-001...")
                     result = client.models.generate_images(
                         model='imagen-4.0-generate-001',
                         prompt=ai_prompt,
@@ -307,15 +404,12 @@ async def main():
                     else:
                         print("AI Image: ❌ Failed to generate from Gemini API, no images returned.")
                         
-                except ImportError as imp_e:
-                    print(f"AI Image: ❌ Import failed — 'google-genai' package not installed: {imp_e}")
-                    print("  Fix: pip install google-genai")
                 except Exception as e:
-                    print(f"AI Image: ❌ Error during Gemini Image generation: {e}")
+                    print(f"AI Image Fallback: ❌ Error during Gemini Image generation: {e}")
                 
                 if not success:
                     target_path = os.path.join(assets_dir, filename)
-                    print(f"AI Image fallback: Copying default_cover.png to {target_path}")
+                    print(f"AI Image absolute fallback: Copying default_cover.png to {target_path}")
                     if os.path.exists(default_cover_path):
                         shutil.copy(default_cover_path, target_path)
             else:
@@ -329,7 +423,7 @@ async def main():
                 success = False
                 for target_url in source_urls:
                     print(f"\nEvaluating URL for {sec_type}: {target_url}")
-                    is_downloaded = await download_image(target_url, target_path, sec_type, image_keywords)
+                    is_downloaded = await download_image(target_url, target_path, sec_type, image_keywords, used_image_urls)
                     if is_downloaded:
                         print(f"✅ Successfully acquired image for {sec_type} from {target_url}")
                         success = True
@@ -337,8 +431,22 @@ async def main():
                     else:
                         print(f"❌ Failed to acquire image from {target_url}, trying next URL...")
                 
+                # 執行 Global Fallback
                 if not success:
-                    print(f"⚠ Exhausted all source URLs for {sec_type}. Using fallback cover.")
+                    print(f"❌ Failed to acquire image from primary URLs, attempting Global Fallback for {sec_type}...")
+                    for fallback_url in global_candidate_urls:
+                        # 避免重複抓取剛剛已經失敗的 URL 或已經使用的 URL
+                        if fallback_url in source_urls or normalize_image_url(fallback_url) in used_image_urls:
+                            continue
+                        print(f"  Attempting Global Fallback URL: {fallback_url}")
+                        is_downloaded = await download_image(fallback_url, target_path, sec_type, [], used_image_urls)
+                        if is_downloaded:
+                            print(f"✅ Successfully acquired image for {sec_type} via Global Fallback from {fallback_url}")
+                            success = True
+                            break
+
+                if not success:
+                    print(f"⚠ Absolute failure for {sec_type}. Using AI Synthesis Placeholder fallback cover.")
                     if os.path.exists(default_cover_path):
                         shutil.copy(default_cover_path, target_path)
                 
