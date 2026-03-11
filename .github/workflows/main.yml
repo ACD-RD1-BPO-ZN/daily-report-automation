@@ -1,0 +1,39 @@
+name: Daily Technical Report
+
+on:
+  # 1. 允許手動點擊測試 (非常重要)
+  workflow_dispatch:
+
+  # 2. 定時排程 (每天台灣時間 07:45，即 UTC 23:45)
+  schedule:
+    - cron: '45 23 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install google-generativeai google-genai requests playwright beautifulsoup4 python-dotenv feedparser
+          playwright install chromium
+
+      - name: Run AI Report Generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python generate_report.py
+
+      - name: Fetch Dynamic Images
+        run: python fetch_images_v2.py
+
+      - name: Send to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python discord_webhook_sender.py
