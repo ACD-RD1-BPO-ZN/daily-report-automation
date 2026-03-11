@@ -1,7 +1,7 @@
 requests
 beautifulsoup4
 playwright
-google-generativeai
+
 google-genai
 python-dotenv
 feedparser
