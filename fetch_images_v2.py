@@ -39,13 +39,18 @@ MIN_IMAGE_SIZE = 5000  # 5KB
 
 def normalize_image_url(url):
     """
-    移除網址中常見的尺寸後綴或 Query Parameter，避免同一張圖因為不同尺寸檔名造成重複。
+    移除網址中常見的尺寸後綴、Query Parameter 與 Fragment，
+    確保同一張圖的不同尺寸變體都能被正確識別為重複。
     """
     try:
-        # 移除 URL 參數 (例如 ?width=1200)
-        base = urllib.parse.urlparse(url)._replace(query="").geturl()
-        # 移除檔名中像是 _1024x576, -800w 這樣的解析度後綴
-        base = re.sub(r'([_-]\d+(?:x\d+|w))(\.[a-zA-Z0-9]+)$', r'\2', base, flags=re.IGNORECASE)
+        parsed = urllib.parse.urlparse(url)
+        # 移除 query string 和 fragment
+        base = parsed._replace(query='', fragment='').geturl()
+        # 移除檔名中的解析度後綴（多種格式）
+        # 例如: -1024x576, _800w, @2x, @3x, -large, -medium, -small
+        base = re.sub(r'([_-]\d+(?:x\d+)?w?)(@\d+x)?(\.[a-zA-Z0-9]+)$', r'\3', base, flags=re.IGNORECASE)
+        # 移除 CDN 常見的 /w_1200/ 或 /q_80,w_1200/ 這種路徑參數（Cloudinary 風格）
+        base = re.sub(r'/[a-z_,]+\d+[a-z_,]*/', '/', base, flags=re.IGNORECASE)
         return base.lower()
     except Exception:
         return url.lower()
@@ -402,10 +407,45 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
 
             captured = False
 
+            # ── 驗證頁面攔截閘門：截圖前先確認頁面不是錯誤/驗證頁 ──
+            try:
+                page_content_text = await page.content()
+                page_content_lower = page_content_text.lower()
+                current_url_check = page.url.lower()
+
+                BLOCK_URL_KEYWORDS = [
+                    'auth.epicgames.com', 'captcha', 'recaptcha',
+                    'sso.epicgames.com', '/login', '/signin'
+                ]
+                BLOCK_CONTENT_KEYWORDS = [
+                    'access denied', '403 forbidden', '429 too many',
+                    'security verification', 'human verification',
+                    '安全驗證', '人機驗證', '瀏覽器擴充功能不相容',
+                    'browser extension', 'verification required',
+                    'prove you are human', 'are you human',
+                    'enable javascript', 'please enable cookies',
+                    'this page isn\'t available', 'page not found'
+                ]
+
+                url_blocked = any(kw in current_url_check for kw in BLOCK_URL_KEYWORDS)
+                content_blocked = any(kw in page_content_lower for kw in BLOCK_CONTENT_KEYWORDS)
+
+                if url_blocked or content_blocked:
+                    reason = f'URL={current_url_check[:80]}' if url_blocked else 'content verification keywords'
+                    print(f"  Priority 2: 🛑 Pre-screenshot blocker triggered ({reason}). Aborting screenshot.")
+                    await context.close()
+                    await browser.close()
+                    return False
+
+                print("  Priority 2: ✅ Pre-screenshot check passed. Page looks clean.")
+            except Exception as e:
+                print(f"  Priority 2: Pre-screenshot check failed (non-critical): {e}")
+                page_content_text = ''
+
             # ── 嘗試 0: 從已渲染的 DOM 再提取靜態圖片 src（絕對優先於截圖，避免截到 loading 畫面）──
             try:
                 print("  Priority 2-DOM: Extracting img srcs from rendered DOM...")
-                rendered_soup = BeautifulSoup(await page.content(), 'html.parser')
+                rendered_soup = BeautifulSoup(page_content_text or await page.content(), 'html.parser')
                 for img_el in rendered_soup.find_all('img'):
                     src = extract_best_src(img_el)
                     if not src:
@@ -437,15 +477,15 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
 
             captured = False
             
-            # 嘗試 1: 找頁面中第一張大圖元素直接截圖
+            # 嘗試 1: 找頁面中第一張大圖元素直接截圖（門檻提升至 400x200）
             try:
                 images = await page.query_selector_all('img')
                 for img_el in images:
                     box = await img_el.bounding_box()
-                    if box and box['width'] >= 300 and box['height'] >= 150:
+                    if box and box['width'] >= 400 and box['height'] >= 200:
                         await img_el.screenshot(path=save_path)
                         if is_valid_image(save_path):
-                            print(f"  Priority 2: ✅ Captured large image element")
+                            print(f"  Priority 2: ✅ Captured large image element ({box['width']}x{box['height']})")
                             captured = True
                             break
             except Exception as e:

@@ -200,6 +200,7 @@ async def generate_daily_report():
     3. 這些網址「絕對只能」從我上面提供給你的 Context 清單中挑選！嚴禁自行發明、捏造任何不存在的網址。
     4. 如果針對某個標題（例如【在地社群】）在清單中完全找不到相關素材，你可以簡短說明「今日無重大本土社群動態」，但絕對不准無中生有生出假網址。
     5. 最後的【今日全方位深度總結】請不要附上任何資料來源。
+    6. 【⚠️ 圖片去重強制規範】：在 image_targets 的 source_urls 中，同一個網址「絕對禁止」出現在兩個不同的 section 裡。在為每個 section 挑選 source_urls 時，你必須維護一個已使用網址清單，確保跨 section 完全不重複。若某個 section（例如 Local、Producer）實在找不到未被使用過的新網址，則該 section 的 source_urls 必須直接設為 ["GENERATE_AI_IMAGE"]，讓系統改用 AI 生圖備援，嚴禁用已出現過的網址湊數。
     
     【圖文對位規範 (防呆排版)】
     在此 Markdown 輸出中，請確保每一段「**標題**」正下方「必定要」跟一條 Markdown 圖片標籤，然後才開始寫內文。
