@@ -193,9 +193,10 @@ async def generate_daily_report():
     
     【防捏造警告 (Anti-Hallucination) 與 Discord 超連結優化】
     1. 【嚴格排版規定】：所有的資料來源超連結，必須集中且「統一條列放置於該大標題段落的最底部（[資料來源] 的正下方）」，絕對不可以穿插在每一條新聞摘要的正後方或文字段落中間，以免畫面凌亂影響閱讀體驗。
-    2. 由於 Discord 原生超連結會產生冗長的預覽縮圖卡片，請「務必」使用 Markdown 的角括號 `< >` 將 URL 包起來，格式如下：
-       `[網站名 - 新聞關鍵字/標題簡稱](<原始HTTPS網址>)`
-       範例： `[Unreal - PCG 更新](<https://www...>)`, `[80.lv - 植被渲染](<https://www...>)`
+    2. 【強制 Discord 防預覽格式】：所有超連結「絕對禁止」使用 `[名稱](https://...)` 這種裸連結格式，Discord 會對這種格式自動展開冗長的預覽卡片，嚴重破壞版面。你「必須且只能」使用以下格式，將 URL 用 `<>` 包覆：
+       `[網站名 - 標題簡稱](<原始HTTPS網址>)`
+       範例：`[Unreal - PCG 更新](<https://www.unrealengine.com/...>)`，`[80.lv - 植被渲染](<https://80.lv/...>)`
+       ⚠️ 注意：`<` 和 `>` 是「必須存在的字元」，缺少任何一個都是格式錯誤。
     3. 這些網址「絕對只能」從我上面提供給你的 Context 清單中挑選！嚴禁自行發明、捏造任何不存在的網址。
     4. 如果針對某個標題（例如【在地社群】）在清單中完全找不到相關素材，你可以簡短說明「今日無重大本土社群動態」，但絕對不准無中生有生出假網址。
     5. 最後的【今日全方位深度總結】請不要附上任何資料來源。
@@ -254,7 +255,7 @@ async def generate_daily_report():
           "section_name": "Synthesis",
           "source_urls": ["GENERATE_AI_IMAGE"],
           "image_filename": "synthesis_ai_{today_str_file}.png",
-          "ai_prompt": "請隨機且精準地挑選今日報告中的「其中一個主要標題內容（例如頭條、獨立遊戲或技術美術）」，動態生成一句英文 AI 繪圖 Prompt。請務必在 Prompt 中加入以下風格標籤：'Unreal Engine 5 viewport, Technical Art concept, Node-based graph visualization, incredibly high quality, masterpiece'，並且確保不要出現人臉或文字。"
+          "ai_prompt": "【AI 生圖任務】請依今日【今日頭條】的最核心事件，撰寫一段約 60 個英文單字的『寫實場景描述』作為 AI 繪圖 Prompt，要求如下：\n1. 必須是『具體的場景』，而非關鍵字堆疊。例如：描述一台顯示特定技術 UI（Shader Graph、PCG Tool、Timeline 等）的專業工作站螢幕，或一個展示遊戲開發幕後的現代工作室場景。\n2. 場景的主題必須『直接源自』今日頭條的核心內容（如果今日頭條是關於 UE5 的 PCG 工具，就描述螢幕上顯示 PCG 樹狀圖節點的畫面）。\n3. 固定在 Prompt 結尾加上以下風格標籤（不可省略）：'Unreal Engine 5 viewport, Technical Art concept, photorealistic, cinematic lighting, highly detailed'\n4. 絕對禁止在畫面中出現人臉或任何可辨識的文字（在 Prompt 最後加上：no faces, no readable text）。"
         }}
       ]
     }}
