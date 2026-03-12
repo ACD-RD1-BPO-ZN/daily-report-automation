@@ -12,6 +12,28 @@ import re
 import urllib.parse
 load_dotenv()
 
+# ── 統一的「真實瀏覽器偽裝」Header，對抗 Akamai / Cloudflare ──
+REAL_BROWSER_HEADERS = {
+    'User-Agent': (
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+        'AppleWebKit/537.36 (KHTML, like Gecko) '
+        'Chrome/124.0.0.0 Safari/537.36'
+    ),
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'DNT': '1',
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Ch-Ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"Windows"',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Cache-Control': 'max-age=0',
+}
+
 # 圖片最小有效大小（bytes），低於此值視為 icon/placeholder
 MIN_IMAGE_SIZE = 5000  # 5KB
 
@@ -46,7 +68,7 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
 
     print(f"\n--- Processing {url} for Section: {section_type} ---")
     
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+    headers = REAL_BROWSER_HEADERS
     
     # Priority 1: requests + bs4 for og:image or direct img src
     try:
@@ -220,10 +242,45 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
     print("  Falling back to Playwright for Priority 2...")
     try:
         async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=True)
-            page = await browser.new_page(viewport={"width": 1280, "height": 720})
-            await page.set_extra_http_headers({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-            
+            # ── 反偵測 Playwright 啟動參數 ──
+            browser = await p.chromium.launch(
+                headless=True,
+                args=[
+                    '--disable-blink-features=AutomationControlled',
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-accelerated-2d-canvas',
+                    '--no-first-run',
+                    '--no-zygote',
+                    '--disable-gpu',
+                ]
+            )
+            # 使用完整 UA 建立 context，並隱藏 webdriver 特徵
+            context = await browser.new_context(
+                viewport={"width": 1280, "height": 720},
+                user_agent=REAL_BROWSER_HEADERS['User-Agent'],
+                locale='zh-TW',
+                extra_http_headers={
+                    k: v for k, v in REAL_BROWSER_HEADERS.items()
+                    if k != 'User-Agent'
+                }
+            )
+            page = await context.new_page()
+            # 注入 JS 讓 navigator.webdriver 回傳 undefined
+            await page.add_init_script("""
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined
+                });
+                Object.defineProperty(navigator, 'plugins', {
+                    get: () => [1, 2, 3, 4, 5]
+                });
+                Object.defineProperty(navigator, 'languages', {
+                    get: () => ['zh-TW', 'zh', 'en-US', 'en']
+                });
+                window.chrome = { runtime: {} };
+            """)
+
             try:
                 await page.goto(url, wait_until="domcontentloaded", timeout=30000)
                 await page.wait_for_timeout(3000)
@@ -303,6 +360,7 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                 await page.screenshot(path=save_path)
                 print(f"  Priority 2: ✅ Saved viewport screenshot")
 
+            await context.close()
             await browser.close()
             return True
             
