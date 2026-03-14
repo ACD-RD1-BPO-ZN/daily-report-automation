@@ -254,7 +254,7 @@ async def generate_daily_report():
           "section_name": "Synthesis",
           "source_urls": ["GENERATE_AI_IMAGE"],
           "image_filename": "synthesis_ai_{today_str_file}.png",
-          "ai_prompt": "請隨機且精準地挑選今日報告中的「其中一個主要標題內容（例如頭條、獨立遊戲或技術美術）」，動態生成一句英文 AI 繪圖 Prompt。請務必在 Prompt 中加入以下風格標籤：'Unreal Engine 5 viewport, Technical Art concept, Node-based graph visualization, incredibly high quality, masterpiece'，並且確保不要出現人臉或文字。"
+          "ai_prompt": 身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
         }}
       ]
     }}
@@ -337,9 +337,9 @@ async def generate_daily_report():
         if not synthesis_found:
             image_targets.append({
                 "section_name": "Synthesis",
-                "source_url": "GENERATE_AI_IMAGE",
+                "source_urls": ["GENERATE_AI_IMAGE"],
                 "image_filename": f"synthesis_ai_{today_str_file}.png",
-                "ai_prompt": "16:9 cinematic tech-art concept art representing today's game development synthesis, Unreal Engine 5 render style."
+                "ai_prompt": "Professional game concept art, an epic and highly stylized fantasy landscape with cinematic lighting and rich colors, visually striking storytelling illustration, masterpiece, no UI, no nodes, no text."
             })
         
         with open(targets_filename, "w", encoding="utf-8") as f:
