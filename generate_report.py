@@ -135,8 +135,22 @@ def fetch_rss_feeds():
     print(f"Scraped {recent_news_count} news items for context.")
     return scraped_data
 
-async def generate_daily_report():
+    async def generate_daily_report():
     print(f"Generating report for: {today_str_display}")
+
+    # ─── 新增：1. 讀取過去的頭條紀錄 ───
+    headline_history_file = "headline_history.json"
+    headline_history = []
+    if os.path.exists(headline_history_file):
+        try:
+            with open(headline_history_file, "r", encoding="utf-8") as f:
+                headline_history = json.load(f)
+        except Exception as e:
+            print(f"Warning: Failed to load headline history: {e}")
+            
+    # 將歷史網址組合成字串，準備塞入 Prompt
+    history_str = "\n".join([f"- {url}" for url in headline_history]) if headline_history else "無"
+    # ────────────────────────────────────
 
     # 第一階段：爬取真實精確的新聞清單
     scraped_context = fetch_rss_feeds()
@@ -162,6 +176,9 @@ async def generate_daily_report():
     2. 接下來，你必須嚴格產生以下 6 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
     
     **📢 【今日頭條】**
+    (🚨防重複強制指令🚨：過去幾天已經擔任過頭條的網址如下：
+    {history_str}
+    請你「絕對不要」再次選擇上述網址作為今天的【今日頭條】！請從 Context 中挑選另一則最重要的新聞。如果你認為上述網址依然很重要，你可以將它們歸類到下方的 TA 或獨立遊戲段落中。)
     (內容)
     [資料來源]
     ---
@@ -289,6 +306,26 @@ async def generate_daily_report():
     # 第三階段：輸出正確的格式檔 (Markdown & JSON Generation)
     try:
         report_data = json.loads(res_text, strict=False)
+
+        # ─── 新增：3. 抓出今天的頭條網址並存檔 ───
+        current_headline_urls = []
+        for target in report_data.get("image_targets", []):
+            if target.get("section_name") == "Headline":
+                current_headline_urls = target.get("source_urls", [])
+                break
+        
+        if current_headline_urls:
+            # 將新的網址加入歷史紀錄中，並移除重複項
+            updated_history = headline_history + current_headline_urls
+            updated_history = list(dict.fromkeys(updated_history))
+            # 只保留最近 10 筆頭條紀錄（約 5~10 天份），避免無限膨脹
+            updated_history = updated_history[-10:]
+            
+            with open(headline_history_file, "w", encoding="utf-8") as f:
+                json.dump(updated_history, f, ensure_ascii=False, indent=2)
+            print(f"Saved {len(current_headline_urls)} URLs to headline history.")
+        # ──────────────────────────────────────────
+
 
         # 防呆機制：檢查 JSON 裡的 source_urls 是否合法
         valid_targets = []
