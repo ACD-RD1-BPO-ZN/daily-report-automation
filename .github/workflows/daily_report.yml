@@ -11,10 +11,6 @@ env:
 jobs:
   generate-and-send-report:
     runs-on: ubuntu-latest
-    
-    # 【修改重點 1】：給予 GitHub Actions 寫入原始碼庫的權限
-    permissions:
-      contents: write
 
     steps:
     - name: Checkout repository
@@ -47,22 +43,3 @@ jobs:
         
         echo "Sending to Discord..."
         python discord_webhook_sender.py
-
-    # 【修改重點 2】：將產生的歷史紀錄檔 Commit 並 Push 回專案中
-    - name: Commit and push history file
-      run: |
-        # 設定機器人的 Git 身分
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        
-        # 將頭條歷史紀錄檔加入 Git 追蹤
-        git add headline_history.json
-        
-        # 檢查檔案是否有變動，如果有變動才執行 commit 與 push
-        if git diff --staged --quiet; then
-          echo "No new headline history to commit."
-        else
-          git commit -m "chore: update headline_history.json [skip ci]"
-          git push
-          echo "Successfully pushed updated headline_history.json to repository."
-        fi
