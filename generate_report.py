@@ -170,6 +170,7 @@ async def generate_daily_report():
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
     你是專業的遊戲開發與業界分析師、技術美術分析師。
+    {anti_duplicate_prompt}  # <--- ⚠️ 必須在這裡加入這行！
     【絕對強制指令：爬蟲優先 (Scrape-First)】
     我已經為你爬取了最新的真實遊戲業界新聞清單，請你「僅基於以下提供的新聞清單」進行篩選與總結。
     
