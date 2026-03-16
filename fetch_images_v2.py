@@ -150,9 +150,12 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                 
             combined_text = src_lower + ' ' + alt_text
             
+            # --- 新增：排除載入動畫圖 (Loading Spinner) ---
+            if any(skip in combined_text for skip in ['loading', 'spinner', 'loader', 'placeholder']):
+                continue
+            # --------------------------------------------
+            
             if any(kw.lower() in combined_text for kw in search_keywords):
-                if normalize_image_url(src_url) not in used_image_urls:
-                    candidate_urls.append(src_url)
 
         # === Strategy C: Fallback — 第一張「大圖」(寬度/高度屬性 > 300) ===
         if not candidate_urls:
@@ -282,8 +285,26 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
             """)
 
             try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                await page.wait_for_timeout(3000)
+                try:
+                # 調整為 networkidle，等待網路請求初步穩定
+                await page.goto(url, wait_until="networkidle", timeout=30000)
+                
+                # --- 新增：針對動態網頁內容的偵測機制 ---
+                # .cooked 是 Unreal 論壇的核心內容 class
+                content_selectors = [".cooked", "article", ".post-content", ".main-content"]
+                found_content = False
+                for selector in content_selectors:
+                    try:
+                        # 只要內容容器出現，就停止等待
+                        await page.wait_for_selector(selector, timeout=5000)
+                        found_content = True
+                        break
+                    except:
+                        continue
+                
+                if not found_content:
+                    await page.wait_for_timeout(3000) # 沒找到容器才用保底等待
+                # --------------------------------------
                 
                 # Check for login/verification walls
                 current_url = page.url.lower()
