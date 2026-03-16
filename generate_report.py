@@ -277,7 +277,7 @@ async def generate_daily_report():
           "section_name": "Synthesis",
           "source_urls": ["GENERATE_AI_IMAGE"],
           "image_filename": "synthesis_ai_{today_str_file}.png",
-          "ai_prompt": 身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
+          "ai_prompt": 身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：描述多個畫面、拼貼 (Collage)、格狀圖 (Grid) 或分割面板 (Split panels)。絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
         }}
       ]
     }}

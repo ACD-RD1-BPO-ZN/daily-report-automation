@@ -356,7 +356,29 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                     await page.wait_for_load_state("networkidle", timeout=10000)
                 except Exception:
                     print("  Priority 2: Networkidle timeout, proceeding anyway...")
-                    
+                # --- 💡 就在這裡插入掃除代碼！ ---
+                print("  Priority 2: Cleaning up popups and overlays...")
+                await page.evaluate("""
+                    () => {
+                        const selectors = [
+                            '[class*="modal"]', '[id*="modal"]', 
+                            '[class*="popup"]', '[id*="popup"]', 
+                            '[class*="newsletter"]', '[class*="subscription"]',
+                            '.overlay', '.backdrop', '.tp-backdrop', '.tp-modal',
+                            '[id*="newsletter"]', '#spu-main'
+                        ];
+                        selectors.forEach(s => {
+                            document.querySelectorAll(s).forEach(el => {
+                                el.style.display = 'none';
+                                el.style.visibility = 'hidden';
+                                el.style.opacity = '0';
+                            });
+                        });
+                        document.body.style.overflow = 'auto';
+                    }
+                """)
+                await page.wait_for_timeout(500) 
+                # --------------------------------------        
             except Exception as e:
                 print(f"  Playwright navigation failed: {e}")
                 await browser.close()
