@@ -138,12 +138,35 @@ def fetch_rss_feeds():
 async def generate_daily_report():
     print(f"Generating report for: {today_str_display}")
 
+    # --- 新增：讀取過去 3 天的頭條歷史 ---
+    history_file = "headline_history.json"
+    headline_history = []
+    if os.path.exists(history_file):
+        try:
+            with open(history_file, "r", encoding="utf-8") as f:
+                headline_history = json.load(f)
+            print(f"Loaded headline history: {headline_history}")
+        except json.JSONDecodeError:
+            print("History file exists but is invalid JSON. Starting fresh.")
+    # ------------------------------------
+    
+    
     # 第一階段：爬取真實精確的新聞清單
     scraped_context = fetch_rss_feeds()
     if not scraped_context.strip():
         scraped_context = "無法取得即時 RSS 新聞，請以過去 48 小時內廣為人知的開發新聞進行撰寫，但嚴格標示網址。"
         print("Warning: Scraped context is empty.")
 
+    # 建立防重複與最新熱門優先的 Prompt 規則
+    anti_duplicate_prompt = ""
+    if headline_history:
+        history_str = "\n".join([f"    - {url}" for url in headline_history])
+        anti_duplicate_prompt = (
+            f"\n    【🚨 頭條選題強制指令】：過去幾天的頭條網址如下：\n{history_str}\n"
+            f"    你今天【絕對不可以】再選這些網址作為「今日頭條」。\n"
+            f"    請從剩餘的新聞清單中，嚴格挑選「發布時間最新」且「最具業界影響力與討論度」的一篇文章作為今日頭條。若有重要但已涵蓋過的舊新聞，請將其歸類到其他如『TA相關』或『獨立遊戲』等次要段落。\n"
+        )
+    
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
     你是專業的遊戲開發與業界分析師、技術美術分析師。
@@ -346,6 +369,23 @@ async def generate_daily_report():
             json.dump(image_targets, f, ensure_ascii=False, indent=2)
         print(f"Generated targets file: {targets_filename} with {len(image_targets)} valid targets.")
 
+        # --- 新增：更新 3 天滾動頭條紀錄 ---
+        for target in image_targets:
+            if target.get("section_name") == "Headline" and target.get("source_urls"):
+                today_headline_url = target["source_urls"][0]
+                if today_headline_url and today_headline_url != "GENERATE_AI_IMAGE":
+                    # 如果今天的新頭條不在歷史中，就加進去
+                    if today_headline_url not in headline_history:
+                        headline_history.append(today_headline_url)
+                    
+                    # 強制切片，只保留陣列最後 3 筆資料（最近 3 天）
+                    headline_history = headline_history[-3:]
+                    
+                    with open(history_file, "w", encoding="utf-8") as f:
+                        json.dump(headline_history, f, ensure_ascii=False, indent=2)
+                    print(f"Saved today's headline to history. Current history size: {len(headline_history)}")
+                break
+        # ------------------------------------
     except json.JSONDecodeError as e:
         print(f"Error parsing Gemini response as JSON: {e}")
         print("Raw response saving fallback...")

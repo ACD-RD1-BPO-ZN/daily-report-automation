@@ -290,11 +290,24 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                 page_title = await page.title()
                 page_title = page_title.lower()
                 
+                # 新增獲取網頁純文字內容，用來檢查 Akamai 特徵 (加上 try-except 避免 body 沒載入報錯)
+                try:
+                    page_text = (await page.inner_text("body")).lower() if await page.query_selector("body") else ""
+                except Exception:
+                    page_text = ""
+                
                 if "auth.epicgames.com" in current_url or "login" in current_url:
                     print(f"  Priority 2: 🛑 Detected strict login wall at {current_url} | Title: {page_title}. Skipping.")
                     await browser.close()
                     return False
                     
+                # 1. 針對絕對不會通過的 CDN 阻擋 (Akamai 403 / Access Denied)，直接放棄
+                if "access denied" in page_title or "403 forbidden" in page_title or "reference #" in page_text:
+                    print(f"  Priority 2: 🛑 Detected Akamai/CDN block at {current_url}. Skipping.")
+                    await browser.close()
+                    return False
+
+                # 2. 針對「可能」可以繞過的 Cloudflare 驗證，保留你原本的等待 5 秒重試機制
                 if "captcha" in page_title or "challenge" in page_title or "human verification" in page_title or "just a moment" in page_title or "cloudflare" in page_title:
                     print(f"  Priority 2: ⚠️ Detected Cloudflare/verification at {current_url}. Waiting extra 5 seconds to bypass...")
                     await page.wait_for_timeout(5000)
