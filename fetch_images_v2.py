@@ -150,9 +150,17 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                 
             combined_text = src_lower + ' ' + alt_text
             
+            # --- 新增：排除載入動畫圖 (Loading Spinner) ---
+            if any(skip in combined_text for skip in ['loading', 'spinner', 'loader', 'placeholder']):
+                continue
+            # --------------------------------------------
+            
             if any(kw.lower() in combined_text for kw in search_keywords):
+                # 如果這張圖還沒被其他段落用過，就加進候選名單
                 if normalize_image_url(src_url) not in used_image_urls:
                     candidate_urls.append(src_url)
+                    if len(candidate_urls) >= 5: # 找到足夠多大圖就先停，節省效能
+                        break
 
         # === Strategy C: Fallback — 第一張「大圖」(寬度/高度屬性 > 300) ===
         if not candidate_urls:
@@ -282,19 +290,49 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
             """)
 
             try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                await page.wait_for_timeout(3000)
+                # 調整為 networkidle，等待網路請求初步穩定
+                await page.goto(url, wait_until="networkidle", timeout=30000)
+                
+                # --- 新增：針對動態網頁內容的偵測機制 ---
+                # .cooked 是 Unreal 論壇的核心內容 class
+                content_selectors = [".cooked", "article", ".post-content", ".main-content"]
+                found_content = False
+                for selector in content_selectors:
+                    try:
+                        # 只要內容容器出現，就停止等待
+                        await page.wait_for_selector(selector, timeout=5000)
+                        found_content = True
+                        break
+                    except:
+                        continue
+                
+                if not found_content:
+                    await page.wait_for_timeout(3000) # 沒找到容器才用保底等待
+                # --------------------------------------
                 
                 # Check for login/verification walls
                 current_url = page.url.lower()
                 page_title = await page.title()
                 page_title = page_title.lower()
                 
+                # 新增獲取網頁純文字內容，用來檢查 Akamai 特徵 (加上 try-except 避免 body 沒載入報錯)
+                try:
+                    page_text = (await page.inner_text("body")).lower() if await page.query_selector("body") else ""
+                except Exception:
+                    page_text = ""
+                
                 if "auth.epicgames.com" in current_url or "login" in current_url:
                     print(f"  Priority 2: 🛑 Detected strict login wall at {current_url} | Title: {page_title}. Skipping.")
                     await browser.close()
                     return False
                     
+                # 1. 針對絕對不會通過的 CDN 阻擋 (Akamai 403 / Access Denied)，直接放棄
+                if "access denied" in page_title or "403 forbidden" in page_title or "reference #" in page_text:
+                    print(f"  Priority 2: 🛑 Detected Akamai/CDN block at {current_url}. Skipping.")
+                    await browser.close()
+                    return False
+
+                # 2. 針對「可能」可以繞過的 Cloudflare 驗證，保留你原本的等待 5 秒重試機制
                 if "captcha" in page_title or "challenge" in page_title or "human verification" in page_title or "just a moment" in page_title or "cloudflare" in page_title:
                     print(f"  Priority 2: ⚠️ Detected Cloudflare/verification at {current_url}. Waiting extra 5 seconds to bypass...")
                     await page.wait_for_timeout(5000)
@@ -318,7 +356,29 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                     await page.wait_for_load_state("networkidle", timeout=10000)
                 except Exception:
                     print("  Priority 2: Networkidle timeout, proceeding anyway...")
-                    
+                # --- 💡 就在這裡插入掃除代碼！ ---
+                print("  Priority 2: Cleaning up popups and overlays...")
+                await page.evaluate("""
+                    () => {
+                        const selectors = [
+                            '[class*="modal"]', '[id*="modal"]', 
+                            '[class*="popup"]', '[id*="popup"]', 
+                            '[class*="newsletter"]', '[class*="subscription"]',
+                            '.overlay', '.backdrop', '.tp-backdrop', '.tp-modal',
+                            '[id*="newsletter"]', '#spu-main'
+                        ];
+                        selectors.forEach(s => {
+                            document.querySelectorAll(s).forEach(el => {
+                                el.style.display = 'none';
+                                el.style.visibility = 'hidden';
+                                el.style.opacity = '0';
+                            });
+                        });
+                        document.body.style.overflow = 'auto';
+                    }
+                """)
+                await page.wait_for_timeout(500) 
+                # --------------------------------------        
             except Exception as e:
                 print(f"  Playwright navigation failed: {e}")
                 await browser.close()

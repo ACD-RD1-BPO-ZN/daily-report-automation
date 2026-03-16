@@ -11,6 +11,11 @@ env:
 jobs:
   generate-and-send-report:
     runs-on: ubuntu-latest
+    
+    # 👇 --- 變動 1：賦予 Actions 寫入（Push）程式碼的權限 --- 👇
+    permissions:
+      contents: write
+    # 👆 -------------------------------------------------- 👆
 
     steps:
     - name: Checkout repository
@@ -33,7 +38,7 @@ jobs:
     - name: Run Report Automation
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.TEST_DISCORD_WEBHOOK_URL }}
       run: |
         echo "Starting daily report generation..."
         python generate_report.py
@@ -43,3 +48,22 @@ jobs:
         
         echo "Sending to Discord..."
         python discord_webhook_sender.py
+
+    # 👇 --- 變動 2：將新產生的 JSON 記憶檔案 Commit 回 Repo --- 👇
+    - name: Commit and push run history
+      run: |
+        # 1. 設定 Git 機器人的身分 (讓 GitHub 知道是這個腳本提交的)
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # 2. 告訴 Git 我們要追蹤這個記錄了 3 天頭條的 JSON 檔案
+        # (加 || true 是為了防止檔案萬一因為爬蟲失敗沒產生時，整個 Action 中斷報錯)
+        git add headline_history.json || true
+        
+        # 3. 提交變更。[skip ci] 非常重要，它能防止這次的 Push 再次觸發 Action 導致無限迴圈
+        # (加 || echo... 是防止如果今天抓取的頭條跟昨天完全一樣，Git 發現沒東西可更新時報錯)
+        git commit -m "chore: update daily headline history [skip ci]" || echo "No changes to commit"
+        
+        # 4. 推送回你的 GitHub 儲存庫
+        git push
+    # 👆 ------------------------------------------------------ 👆

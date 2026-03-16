@@ -138,15 +138,46 @@ def fetch_rss_feeds():
 async def generate_daily_report():
     print(f"Generating report for: {today_str_display}")
 
+    # --- 新增：讀取過去 3 天的頭條歷史 ---
+    history_file = "headline_history.json"
+    headline_history = []
+    if os.path.exists(history_file):
+        try:
+            with open(history_file, "r", encoding="utf-8") as f:
+                headline_history = json.load(f)
+            print(f"Loaded headline history: {headline_history}")
+        except json.JSONDecodeError:
+            print("History file exists but is invalid JSON. Starting fresh.")
+    # ------------------------------------
+    
+    
     # 第一階段：爬取真實精確的新聞清單
     scraped_context = fetch_rss_feeds()
     if not scraped_context.strip():
         scraped_context = "無法取得即時 RSS 新聞，請以過去 48 小時內廣為人知的開發新聞進行撰寫，但嚴格標示網址。"
         print("Warning: Scraped context is empty.")
 
+    # 建立防重複與最新熱門優先的 Prompt 規則
+    anti_duplicate_prompt = ""
+    if headline_history:
+        history_str = "\n".join([f"    - {url}" for url in headline_history])
+        anti_duplicate_prompt = (
+            f"\n    【🚨 頭條選題強制指令】：過去幾天的頭條網址如下：\n{history_str}\n"
+            f"    你今天【絕對不可以】再選這些網址作為「今日頭條」。\n"
+            f"    請從剩餘的新聞清單中，嚴格挑選「發布時間最新」且「最具業界影響力與討論度」的一篇文章作為今日頭條。若有重要但已涵蓋過的舊新聞，請將其歸類到其他如『TA相關』或『獨立遊戲』等次要段落。\n"
+        )
+    # --- ✅ 修正：在這裡定義圖片標籤變數 (位置必須在 prompt 之前) ---
+    headline_img_tag = f"![頭條圖片](../assets/headline_{today_str_file}.png)"
+    ta_img_tag = f"![TA技術](../assets/ta_{today_str_file}.png)"
+    indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
+    local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
+    producer_img_tag = f"![製作人週記](../assets/producer_{today_str_file}.png)"
+    synthesis_img_tag = f"![深度總結](../assets/synthesis_ai_{today_str_file}.png)"
+    # --------------------------------------------------------
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
     你是專業的遊戲開發與業界分析師、技術美術分析師。
+    {anti_duplicate_prompt}  # <--- ⚠️ 必須在這裡加入這行！
     【絕對強制指令：爬蟲優先 (Scrape-First)】
     我已經為你爬取了最新的真實遊戲業界新聞清單，請你「僅基於以下提供的新聞清單」進行篩選與總結。
     
@@ -162,27 +193,33 @@ async def generate_daily_report():
     2. 接下來，你必須嚴格產生以下 6 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
     
     **📢 【今日頭條】**
+    {headline_img_tag}
     (內容)
     [資料來源]
     ---
     **🎨 【Technical Art 相關】**
+    {ta_img_tag}
     (🚨防捏造與強制列舉機制🚨：請從 Context 中篩選 Unreal Engine, Unity, Godot 等引擎相關重點。如果沒有最新消息，請使用近期熱門內容總結。你必須盡可能確保這「三個引擎」的小標題都會出現。請善用條列式 (`-`) 或換行來排版多篇獨立的新聞，不要把不同文章的內容黏在一起。對於每篇文章，請摘要 1~2 句話的核心技術重點，保持版面透氣且易讀。)
     [資料來源]
     ---
     **🎮 【獨立遊戲市場觀察】**
+    {indie_img_tag}
     (🚨防捏造與強制機制🚨：請務必關注並包含「Steam News」的相關情報。如果有重要的 Steam 更新或發布，請在此段落進行深入摘要。若無則總結其他獨立遊戲情報。)
     (內容)
     [資料來源]
     ---
     **🤝 【在地社群】**
+    {local_img_tag}
     (內容)
     [資料來源]
     ---
     **💼 【製作人週記建議】**
+    {producer_img_tag}
     (內容)
     [資料來源]
     ---
     **🌌 【今日全方位深度總結】**
+    {synthesis_img_tag}
     (🚨全面總結與技術解析🚨：請依據上述「每一個標題」（頭條、TA、獨立遊戲、在地、製作人）的內容，分別用一句話進行精準總結。其中針對技術與引擎相關內容，請確保帶有 TA 專屬的深度視角 (如 Rendering, Pipeline 等)。請善用換行排版，不要把它寫成一整段擁擠的文字組合。)
     ---
 
@@ -254,7 +291,7 @@ async def generate_daily_report():
           "section_name": "Synthesis",
           "source_urls": ["GENERATE_AI_IMAGE"],
           "image_filename": "synthesis_ai_{today_str_file}.png",
-          "ai_prompt": 身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
+          "ai_prompt": 身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：描述多個畫面、拼貼 (Collage)、格狀圖 (Grid) 或分割面板 (Split panels)。絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
         }}
       ]
     }}
@@ -346,6 +383,23 @@ async def generate_daily_report():
             json.dump(image_targets, f, ensure_ascii=False, indent=2)
         print(f"Generated targets file: {targets_filename} with {len(image_targets)} valid targets.")
 
+        # --- 新增：更新 3 天滾動頭條紀錄 ---
+        for target in image_targets:
+            if target.get("section_name") == "Headline" and target.get("source_urls"):
+                today_headline_url = target["source_urls"][0]
+                if today_headline_url and today_headline_url != "GENERATE_AI_IMAGE":
+                    # 如果今天的新頭條不在歷史中，就加進去
+                    if today_headline_url not in headline_history:
+                        headline_history.append(today_headline_url)
+                    
+                    # 強制切片，只保留陣列最後 3 筆資料（最近 3 天）
+                    headline_history = headline_history[-3:]
+                    
+                    with open(history_file, "w", encoding="utf-8") as f:
+                        json.dump(headline_history, f, ensure_ascii=False, indent=2)
+                    print(f"Saved today's headline to history. Current history size: {len(headline_history)}")
+                break
+        # ------------------------------------
     except json.JSONDecodeError as e:
         print(f"Error parsing Gemini response as JSON: {e}")
         print("Raw response saving fallback...")
