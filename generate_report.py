@@ -166,7 +166,14 @@ async def generate_daily_report():
             f"    你今天【絕對不可以】再選這些網址作為「今日頭條」。\n"
             f"    請從剩餘的新聞清單中，嚴格挑選「發布時間最新」且「最具業界影響力與討論度」的一篇文章作為今日頭條。若有重要但已涵蓋過的舊新聞，請將其歸類到其他如『TA相關』或『獨立遊戲』等次要段落。\n"
         )
-    
+    # --- ✅ 修正：在這裡定義圖片標籤變數 (位置必須在 prompt 之前) ---
+    headline_img_tag = f"![頭條圖片](../assets/headline_{today_str_file}.png)"
+    ta_img_tag = f"![TA技術](../assets/ta_{today_str_file}.png)"
+    indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
+    local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
+    producer_img_tag = f"![製作人週記](../assets/producer_{today_str_file}.png)"
+    synthesis_img_tag = f"![深度總結](../assets/synthesis_ai_{today_str_file}.png)"
+    # --------------------------------------------------------
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
     你是專業的遊戲開發與業界分析師、技術美術分析師。
@@ -186,27 +193,33 @@ async def generate_daily_report():
     2. 接下來，你必須嚴格產生以下 6 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
     
     **📢 【今日頭條】**
+    {headline_img_tag}
     (內容)
     [資料來源]
     ---
     **🎨 【Technical Art 相關】**
+    {ta_img_tag}
     (🚨防捏造與強制列舉機制🚨：請從 Context 中篩選 Unreal Engine, Unity, Godot 等引擎相關重點。如果沒有最新消息，請使用近期熱門內容總結。你必須盡可能確保這「三個引擎」的小標題都會出現。請善用條列式 (`-`) 或換行來排版多篇獨立的新聞，不要把不同文章的內容黏在一起。對於每篇文章，請摘要 1~2 句話的核心技術重點，保持版面透氣且易讀。)
     [資料來源]
     ---
     **🎮 【獨立遊戲市場觀察】**
+    {indie_img_tag}
     (🚨防捏造與強制機制🚨：請務必關注並包含「Steam News」的相關情報。如果有重要的 Steam 更新或發布，請在此段落進行深入摘要。若無則總結其他獨立遊戲情報。)
     (內容)
     [資料來源]
     ---
     **🤝 【在地社群】**
+    {local_img_tag}
     (內容)
     [資料來源]
     ---
     **💼 【製作人週記建議】**
+    {producer_img_tag}
     (內容)
     [資料來源]
     ---
     **🌌 【今日全方位深度總結】**
+    {synthesis_img_tag}
     (🚨全面總結與技術解析🚨：請依據上述「每一個標題」（頭條、TA、獨立遊戲、在地、製作人）的內容，分別用一句話進行精準總結。其中針對技術與引擎相關內容，請確保帶有 TA 專屬的深度視角 (如 Rendering, Pipeline 等)。請善用換行排版，不要把它寫成一整段擁擠的文字組合。)
     ---
 
