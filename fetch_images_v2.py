@@ -156,6 +156,11 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
             # --------------------------------------------
             
             if any(kw.lower() in combined_text for kw in search_keywords):
+                # 如果這張圖還沒被其他段落用過，就加進候選名單
+                if normalize_image_url(src_url) not in used_image_urls:
+                    candidate_urls.append(src_url)
+                    if len(candidate_urls) >= 5: # 找到足夠多大圖就先停，節省效能
+                        break
 
         # === Strategy C: Fallback — 第一張「大圖」(寬度/高度屬性 > 300) ===
         if not candidate_urls:
@@ -285,7 +290,6 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
             """)
 
             try:
-                try:
                 # 調整為 networkidle，等待網路請求初步穩定
                 await page.goto(url, wait_until="networkidle", timeout=30000)
                 
