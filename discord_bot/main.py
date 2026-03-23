@@ -83,6 +83,152 @@ async def test_airdrop(ctx, amount: int, member: discord.Member, *, reason: str 
     """針對單一對象的測試空投 (發送至測試頻道)"""
     await process_reward(ctx, amount, member, reason, is_test=True)
 
+@bot.command(name='多重空投')
+@commands.has_permissions(administrator=True)
+async def multi_airdrop(ctx, amount: int, members: commands.Greedy[discord.Member], *, reason: str = "活動參與獎勵"):
+    """針對多位特定對象的空投，並在同一則訊息中顯示所有接收者"""
+    if not members:
+        await ctx.send("❓ 格式錯誤：請至少標註一位要發放的成員。範例：`!多重空投 10 @玩家A @玩家B 參加活動`")
+        return
+
+    # 管理端狀態提示
+    status_msg = await ctx.send(f"⏳ 正在為 {len(members)} 位成員發放各 {amount} 金幣...")
+
+    success_members = []
+    fail_members = []
+    headers = {"Authorization": UB_TOKEN, "Accept": "application/json"}
+    data = {"cash": amount}
+
+    # 迴圈處理每位玩家的 API 請求
+    async with aiohttp.ClientSession() as session:
+        for member in members:
+            url = f"https://unbelievaboat.com/api/v1/guilds/{GUILD_ID}/users/{member.id}"
+            async with session.patch(url, json=data, headers=headers) as response:
+                if response.status == 200:
+                    success_members.append(member.mention)
+                else:
+                    fail_members.append(member.display_name)
+                # 頻率保護：每秒處理 5 人
+                await asyncio.sleep(0.2) 
+
+    # 組合成功名單字串 (確保不超過 Discord Embed 欄位 1024 字元的限制)
+    if success_members:
+        success_str = " ".join(success_members)
+        if len(success_str) > 1024:
+            success_str = success_str[:1020] + "..."
+    else:
+        success_str = "無人發放成功"
+
+    # 視覺面板設定
+    embed = discord.Embed(
+        title="🚁 多重空投 金幣！",
+        description="金幣已成功降落至以下玩家的口袋！",
+        color=0xFFD700
+    )
+    embed.set_thumbnail(url=Z_COIN_ICON_URL)
+    embed.add_field(name="每人獲得金額", value=f"💰 {amount} 金幣", inline=True)
+    embed.add_field(name="管理員", value=ctx.author.display_name, inline=True)
+    embed.add_field(name="空投原因", value=reason, inline=False)
+    
+    # 加入成功接收名單的欄位
+    embed.add_field(name=f"成功接收名單 ({len(success_members)}人)", value=success_str, inline=False)
+
+    # 如果有失敗的，另外顯示出來以供管理員除錯
+    if fail_members:
+        embed.add_field(name="❌ 發放失敗名單", value=", ".join(fail_members), inline=False)
+
+    embed.set_footer(text="AI 自動日報系統 | 感謝你的支持")
+
+    # 標註邏輯與頻道發送
+    mention_str = ""
+    if OFFICIAL_MENTION:
+        if OFFICIAL_MENTION.lower() == "everyone": 
+            mention_str = "@everyone"
+        else: 
+            mention_str = f"<@&{OFFICIAL_MENTION}>"
+
+    target_channel = bot.get_channel(int(TARGET_CHANNEL_ID))
+
+    if target_channel:
+        await target_channel.send(
+            content=f"{mention_str} 🚁 **發現多重空投補給！**" if mention_str else None,
+            embed=embed
+        )
+        await status_msg.edit(content=f"✅ 多重空投處理完畢！成功發放給 {len(success_members)} 位成員，公告已同步至 {target_channel.mention}。")
+    else:
+        await ctx.send("❌ API 處理完成，但找不到目標頻道發布公告，請確認 TARGET_CHANNEL_ID。")
+
+
+@bot.command(name='測試多重空投')
+@commands.has_permissions(administrator=True)
+async def test_multi_airdrop(ctx, amount: int, members: commands.Greedy[discord.Member], *, reason: str = "開發者環境測試"):
+    """針對多位特定對象的測試空投 (發送至測試頻道)"""
+    if not members:
+        await ctx.send("❓ 格式錯誤：請至少標註一位要發放的成員。範例：`!測試多重空投 10 @玩家A @玩家B 測試`")
+        return
+
+    status_msg = await ctx.send(f"⏳ [測試模式] 正在為 {len(members)} 位成員發放各 {amount} 金幣...")
+
+    success_members = []
+    fail_members = []
+    headers = {"Authorization": UB_TOKEN, "Accept": "application/json"}
+    data = {"cash": amount}
+
+    async with aiohttp.ClientSession() as session:
+        for member in members:
+            url = f"https://unbelievaboat.com/api/v1/guilds/{GUILD_ID}/users/{member.id}"
+            async with session.patch(url, json=data, headers=headers) as response:
+                if response.status == 200:
+                    success_members.append(member.mention)
+                else:
+                    fail_members.append(member.display_name)
+                await asyncio.sleep(0.2)
+
+    if success_members:
+        success_str = " ".join(success_members)
+        if len(success_str) > 1024:
+            success_str = success_str[:1020] + "..."
+    else:
+        success_str = "無人發放成功"
+
+    # 測試版視覺面板設定 (標題與顏色改為灰色系)
+    embed = discord.Embed(
+        title="🧪 [測試模式] 多重空投 金幣！",
+        description="金幣已成功降落至以下玩家的口袋！",
+        color=0x95a5a6
+    )
+    embed.set_thumbnail(url=Z_COIN_ICON_URL)
+    embed.add_field(name="每人獲得金額", value=f"💰 {amount} 金幣", inline=True)
+    embed.add_field(name="管理員", value=ctx.author.display_name, inline=True)
+    embed.add_field(name="空投原因", value=reason, inline=False)
+    embed.add_field(name=f"成功接收名單 ({len(success_members)}人)", value=success_str, inline=False)
+
+    if fail_members:
+        embed.add_field(name="❌ 發放失敗名單", value=", ".join(fail_members), inline=False)
+
+    embed.set_footer(text="AI 自動日報系統 | 感謝你的支持")
+
+    # 標註邏輯切換為測試環境用的 TEST_MENTION
+    mention_str = ""
+    if TEST_MENTION:
+        if TEST_MENTION.lower() == "everyone":
+            mention_str = "@everyone"
+        else:
+            mention_str = f"<@&{TEST_MENTION}>"
+
+    # 頻道強制指定為測試頻道 (TEST_CHANNEL_ID)
+    target_channel = bot.get_channel(int(TEST_CHANNEL_ID))
+
+    if target_channel:
+        await target_channel.send(
+            content=f"{mention_str} 🧪 **[測試] 發現多重空投補給！**" if mention_str else None,
+            embed=embed
+        )
+        await status_msg.edit(content=f"✅ 測試多重空投處理完畢！發放 {len(success_members)} 人，公告已送至測試頻道 {target_channel.mention}。")
+    else:
+        await ctx.send("❌ 找不到測試頻道，請確認 TEST_CHANNEL_ID。")
+
+
 @bot.command(name='全體空投')
 @commands.has_permissions(administrator=True)
 async def global_airdrop(ctx, amount: int, *, reason: str = "慶祝「AI 自動日報系統」重大里程碑！"):
@@ -136,6 +282,8 @@ async def on_ready():
 @official_airdrop.error
 @test_airdrop.error
 @global_airdrop.error
+@multi_airdrop.error 
+@test_multi_airdrop.error 
 async def airdrop_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("🚫 權限不足：只有系統管理員可以使用此空投權限。")
