@@ -52,8 +52,8 @@ jobs:
         python discord_webhook_sender.py
 
         # 👇 執行臉書同步發文
-        echo "Syncing Headline to Facebook..."
-        python facebook_poster.py
+        #echo "Syncing Headline to Facebook..."
+        #python facebook_poster.py
 
     # 👇 --- 變動 2：將新產生的 JSON 記憶檔案 Commit 回 Repo --- 👇
     - name: Commit and push run history
