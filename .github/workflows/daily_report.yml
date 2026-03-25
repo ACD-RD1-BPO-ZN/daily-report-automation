@@ -44,7 +44,7 @@ jobs:
     - name: Run Report Automation
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        DISCORD_WEBHOOK_URL: ${{ secrets.TEST_DISCORD_WEBHOOK_URL }}    
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}    
         FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
         FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         TEST_MODE: ${{ inputs.test_mode }}
