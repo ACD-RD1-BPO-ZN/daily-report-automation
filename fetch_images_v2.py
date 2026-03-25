@@ -487,43 +487,48 @@ async def main():
                 print(f"Prompt: {ai_prompt}")
                 success = False
                 
-                try:
-                    from google import genai as new_genai
-                    from google.genai import types as genai_types
-                    
-                    API_KEY = os.getenv("GEMINI_API_KEY")
-                    if not API_KEY:
-                        print("Error: GEMINI_API_KEY not found in environment for Image Generation.")
-                        success = False
-                        break
-                    
-                    client = new_genai.Client(api_key=API_KEY)
-                    
-                    target_path = os.path.join(assets_dir, filename)
-                    print(f"AI Image: Requesting imagen-4.0-generate-001...")
-                    result = client.models.generate_images(
-                        model='imagen-4.0-generate-001',
-                        prompt=ai_prompt,
-                        config=genai_types.GenerateImagesConfig(
-                            number_of_images=1,
-                            output_mime_type="image/jpeg",
-                            aspect_ratio="16:9",
-                        )
-                    )
-                    
-                    if result.generated_images:
-                        generated_image = result.generated_images[0]
-                        image_bytes = generated_image.image.image_bytes
-                        with open(target_path, 'wb') as f:
-                            f.write(image_bytes)
-                        file_size = os.path.getsize(target_path)
-                        print(f"AI Image: ✅ Successfully saved ({file_size} bytes) to {target_path} using Gemini API")
-                        success = True
-                    else:
-                        print("AI Image: ❌ Failed to generate from Gemini API, no images returned.")
+                test_mode = os.getenv("TEST_MODE", "false").lower() == "true"
+                
+                if test_mode:
+                    print("AI Image: 🛑 Test mode enabled! Skipping Gemini API generation to save costs.")
+                else:
+                    try:
+                        from google import genai as new_genai
+                        from google.genai import types as genai_types
                         
-                except Exception as e:
-                    print(f"AI Image Fallback: ❌ Error during Gemini Image generation: {e}")
+                        API_KEY = os.getenv("GEMINI_API_KEY")
+                        if not API_KEY:
+                            print("Error: GEMINI_API_KEY not found in environment for Image Generation.")
+                            success = False
+                            break
+                        
+                        client = new_genai.Client(api_key=API_KEY)
+                        
+                        target_path = os.path.join(assets_dir, filename)
+                        print(f"AI Image: Requesting imagen-4.0-generate-001...")
+                        result = client.models.generate_images(
+                            model='imagen-4.0-generate-001',
+                            prompt=ai_prompt,
+                            config=genai_types.GenerateImagesConfig(
+                                number_of_images=1,
+                                output_mime_type="image/jpeg",
+                                aspect_ratio="16:9",
+                            )
+                        )
+                        
+                        if result.generated_images:
+                            generated_image = result.generated_images[0]
+                            image_bytes = generated_image.image.image_bytes
+                            with open(target_path, 'wb') as f:
+                                f.write(image_bytes)
+                            file_size = os.path.getsize(target_path)
+                            print(f"AI Image: ✅ Successfully saved ({file_size} bytes) to {target_path} using Gemini API")
+                            success = True
+                        else:
+                            print("AI Image: ❌ Failed to generate from Gemini API, no images returned.")
+                            
+                    except Exception as e:
+                        print(f"AI Image Fallback: ❌ Error during Gemini Image generation: {e}")
                 
                 if not success:
                     target_path = os.path.join(assets_dir, filename)
