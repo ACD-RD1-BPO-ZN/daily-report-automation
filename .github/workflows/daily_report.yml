@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '50 23 * * *' # Every day at 23:50 UTC (07:50 CST next day)
   workflow_dispatch: # Allows manual triggering from the GitHub Actions UI
+    inputs:
+      test_mode:
+        description: 'Run in test mode (Disables AI image generation)'
+        required: false
+        type: boolean
+        default: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -41,6 +47,7 @@ jobs:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}    
         FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
         FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        TEST_MODE: ${{ inputs.test_mode }}
       run: |
         echo "Starting daily report generation..."
         python generate_report.py
