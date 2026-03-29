@@ -1,0 +1,87 @@
+[
+  {
+    "section_name": "Headline",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/nintendo-cuts-switch-2-production-layoffs-at-epic-and-playstation-and-another-saudi-acquisition-patch-notes-45"
+    ],
+    "image_filename": "headline_20260329.png",
+    "image_keywords": [
+      "official",
+      "hero",
+      "cover",
+      "headline",
+      "promotion"
+    ]
+  },
+  {
+    "section_name": "TA",
+    "source_urls": [
+      "https://www.unrealengine.com/tech-blog/bringing-stunning-visuals-to-ue-mobile-games-with-arm-accuracy-super-resolution",
+      "https://www.unrealengine.com/spotlights/top-tips-on-using-substrate-materials-for-automotive-visualization",
+      "https://80.lv/articles/take-a-look-at-this-mysterious-and-detailed-environment-with-an-eerie-atmosphere"
+    ],
+    "image_filename": "ta_20260329.png",
+    "image_keywords": [
+      "screenshot",
+      "preview",
+      "featured",
+      "spotlight",
+      "render",
+      "engine",
+      "technology",
+      "shader",
+      "scene"
+    ]
+  },
+  {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/owlcat-games-is-using-gen-ai-to-iterate-faster-on-the-expanse",
+      "https://www.gamedeveloper.com/business/the-industry-is-in-a-really-horrible-place-say-brenda-and-john-romero"
+    ],
+    "image_filename": "indie_20260329.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=302591",
+      "https://gnn.gamer.com.tw/detail.php?sn=302590"
+    ],
+    "image_filename": "local_20260329.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/the-industry-is-in-a-really-horrible-place-say-brenda-and-john-romero",
+      "https://www.gamedeveloper.com/console/sony-confirms-ps5-hardware-is-about-to-become-more-expensive"
+    ],
+    "image_filename": "producer_20260329.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
+    ]
+  },
+  {
+    "section_name": "Synthesis",
+    "source_urls": [
+      "GENERATE_AI_IMAGE"
+    ],
+    "image_filename": "synthesis_ai_20260329.png",
+    "ai_prompt": "A futuristic game development studio, with holographic displays showing game assets and code, reflecting the industry's challenges and technological advancements. A lone developer is working on a mobile game with stunning desktop-like visuals, powered by advanced rendering techniques. The scene should convey both the struggle and innovation in the current gaming landscape. Professional game concept art, highly stylized, cinematic lighting, masterwork. 🚫Strictly no text, UI elements, computer screens, or node graphs."
+  }
+]
