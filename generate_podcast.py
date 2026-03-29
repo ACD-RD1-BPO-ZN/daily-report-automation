@@ -22,34 +22,44 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 
 # 台灣時間，用於檔名對齊
 tz = timezone(timedelta(hours=8))
-today_str_file = datetime.now(tz).strftime("%Y%m%d")
+now_tz = datetime.now(tz)
+today_str_file = now_tz.strftime("%Y%m%d")
+today_zh_format = f"{now_tz.year}年{now_tz.month}月{now_tz.day}日"
+
+# 確保 Podcast 資料夾存在
+PODCAST_DIR = "Podcast"
+os.makedirs(PODCAST_DIR, exist_ok=True)
 
 # --- 角色與聲音配置 ---
-# 姍姍：活潑好奇的年輕女性主持人 → Leda (Youthful) 聲音甜美年輕
-# 子恩：冷靜專業的 TA 技術專家     → Orus (Firm) 沉穩專業
+# 姍姍：活潑好奇的年輕女性主持人 → Zephyr (Bright) 明亮的聲音
+# zn：冷靜專業的 TA 技術專家     → Charon (Informative) 知性的聲音
 VOICE_MAPPING = {
-    "姍姍": "Leda",     # 女聲：甜美年輕
-    "子恩": "Orus"      # 男聲：沉穩專業
+    "姍姍": "Zephyr",    # 女聲：明亮
+    "zn": "Charon"       # 男聲：知性
 }
 
-SYSTEM_PROMPT = """
+SYSTEM_PROMPT = f"""
 你是一位專業的技術科技 Podcast 製作人與腳本編劇。
 你的任務是將每日的「遊戲開發與技術美術日報」轉化為一段生動、自然且具有「呼吸感」的雙人對話腳本。
+這是一檔時長約 5 分鐘的 Podcast，請確保雙人對話內容具備足夠的深度與長度（總對話回數大約在 25 到 35 句之間）。
 
 【角色設定】
-- 姍姍 (女)：聲音甜美、充滿活力與好奇心的年輕女性。負責開場、引導話題、提出開發者常遇到的痛點或疑問。說話風格親切、活潑，偶爾帶有俏皮的語氣。
-- 子恩 (男)：冷靜、客觀且經驗豐富的技術專家。負責深度解析新聞，特別專精於技術美術（TA 相關）與 Unreal Engine 領域。回答要具體、專業，並常以「獨立遊戲製作人」的實務視角來評估影響。
+- 姍姍 (女)：聲音明亮、充滿活力與好奇心的年輕主播。負責開場、引導話題、提出開發者常遇到的痛點或疑問。說話風格親切、活潑，偶爾帶有俏皮的語氣。
+- zn (男)：冷靜、客觀且經驗豐富的技術專家。負責深度解析新聞。回答要具體、專業，並常以「獨立遊戲製作人」的實務視角來評估影響與推演未來情況。
 
 【腳本撰寫原則】
-1. 資訊忠實度：你必須嚴格根據提供的 Markdown 日報內容進行改寫，不可自行捏造新聞或事件。特別注意「今日頭條」段落，劇本的主題頭條必須與日報的頭條一致。
-2. 資訊過濾：從日報中挑選 1 則重大頭條、1-2 則核心 TA 技術，以及 1 則獨立遊戲市場觀察作為主要談話內容。
-3. 對話感：使用繁體中文自然口語，加入語氣詞（例如：「耶」、「嗯」、「對啊」），讓兩人自然互動，避免單人長篇大論。每段對話不宜過長，保持 2~4 句話的節奏。
-4. 視角切入：務必將話題扣回「這對獨立遊戲開發或專案時程有什麼實際影響」。
-5. 開場與收尾：姍姍負責活潑開場（介紹節目名稱「遊戲開發與技術美術日報」），結尾雙人互動道別。
+1. 內容焦點：
+   - 節目的前半重點必須著重在「今日頭條」，詳細講解事件的來龍去脈與對產業的直接影響。
+   - 節目的後半重點必須從日報最後的「今日全方位深度總結」中，挑選出最值得延伸討論的重點，並以此為基礎，由 zn 進行市場或技術發展趨勢的推演與預測。
+2. 資訊忠實與延伸：嚴格根據提供的 Markdown 日報內容進行改寫。可以基於新聞與「總結」的內容，以 zn 的專家視角進行合理的延伸剖析，但不捏造不存在的新聞事件。
+3. 對話感：使用繁體中文自然口語，加入語氣詞（例如：「耶」、「嗯」、「對啊」、「喔」），讓兩人自然互動，避免單人長篇大論。
+4. 固定開場與收尾：
+   - 開場白：姍姍必須使用這句話開場：「歡迎收聽{today_zh_format}的『每日遊戲資訊日報』！我是你們的主播姍姍！」
+   - 結尾白：節目最後的道別，必須由雙方或其中一人說出這句完整的話：「感謝大家的收聽，希望今天的資訊對你們有幫助，我們明天同時間準時收聽！」
 
 【輸出格式限制】
 只輸出合法的 JSON 陣列 (JSON Array)，包含 "speaker" 與 "text" 兩個欄位。
-speaker 只能是 "姍姍" 或 "子恩"。
+speaker 只能是 "姍姍" 或 "zn"。
 所有 text 內容必須使用繁體中文。
 絕對不要加上 ```json 標記。
 """
@@ -129,7 +139,7 @@ async def main():
         return
         
     # 將生成的劇本存一份 JSON，方便除錯與確認對話品質
-    script_filename = f"daily_podcast_script_{today_str_file}.json"
+    script_filename = os.path.join(PODCAST_DIR, f"daily_podcast_script_{today_str_file}.json")
     with open(script_filename, "w", encoding="utf-8") as f:
         json.dump(script_data, f, ensure_ascii=False, indent=2)
     print(f"✅ 劇本已儲存至: {script_filename}")
@@ -175,7 +185,7 @@ async def main():
             print(f"❌ 句子 {index} 生成失敗: {e}")
 
     # 4. 匯出實體 MP3 音檔
-    output_filename = f"daily_podcast_{today_str_file}.mp3"
+    output_filename = os.path.join(PODCAST_DIR, f"daily_podcast_{today_str_file}.mp3")
     print(f"💾 正在匯出最終音檔至 {output_filename}...")
     combined_audio.export(output_filename, format="mp3", bitrate="128k")
     print(f"🚀 Podcast 處理完畢！可直接播放 {output_filename} 進行品質確認。")
