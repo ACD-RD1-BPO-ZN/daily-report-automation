@@ -46,7 +46,7 @@ jobs:
         path: ~/.cache/ms-playwright
         key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
-    - name: Install Playwright browsers and OS dependencies
+    - name: Install Playwright browsers and dependencies
       if: steps.playwright-cache.outputs.cache-hit != 'true'
       run: |
         playwright install --with-deps chromium
@@ -55,6 +55,10 @@ jobs:
       if: steps.playwright-cache.outputs.cache-hit == 'true'
       run: |
         playwright install-deps chromium
+
+    - name: Install System dependencies (FFmpeg)
+      run: |
+        sudo apt-get update && sudo apt-get install -y ffmpeg
     # 👆 ----------------------------------------------------------------- 👆
 
     - name: Run Report Automation
@@ -96,6 +100,7 @@ jobs:
         # (加 || true 是為了防止檔案萬一因為爬蟲失敗沒產生時，整個 Action 中斷報錯)
         git add headline_history.json || true
         git add Daily_Report/ || true
+        git add Podcast/ || true
         
         # 3. 提交變更。[skip ci] 非常重要，它能防止這次的 Push 再次觸發 Action 導致無限迴圈
         # (加 || echo... 是防止如果今天抓取的頭條跟昨天完全一樣，Git 發現沒東西可更新時報錯)
