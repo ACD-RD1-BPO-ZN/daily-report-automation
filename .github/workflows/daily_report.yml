@@ -31,15 +31,31 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
+        cache: 'pip'
 
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    # 👇 --- Cache Playwright 瀏覽器，避免每次重新下載 ~130MB 的 Chromium --- 👇
+    - name: Cache Playwright browsers
+      id: playwright-cache
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
     - name: Install Playwright browsers and OS dependencies
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
       run: |
         playwright install --with-deps chromium
+
+    - name: Install Playwright OS dependencies only (cache hit)
+      if: steps.playwright-cache.outputs.cache-hit == 'true'
+      run: |
+        playwright install-deps chromium
+    # 👆 ----------------------------------------------------------------- 👆
 
     - name: Run Report Automation
       env:

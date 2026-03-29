@@ -505,9 +505,9 @@ async def main():
                         client = new_genai.Client(api_key=API_KEY)
                         
                         target_path = os.path.join(assets_dir, filename)
-                        print(f"AI Image: Requesting imagen-4.0-generate-001...")
+                        print(f"AI Image: Requesting imagen-4.0-fast-generate-001...")
                         result = client.models.generate_images(
-                            model='imagen-4.0-generate-001',
+                            model='imagen-4.0-fast-generate-001',
                             prompt=ai_prompt,
                             config=genai_types.GenerateImagesConfig(
                                 number_of_images=1,
