@@ -22,7 +22,7 @@ def post_to_facebook():
     today_str_file = datetime.now(tz).strftime("%Y%m%d")
     
     # 3. 讀取今日的 Markdown 報告
-    md_filename = f"Daily_Full_Report_{today_str_file}.md"
+    md_filename = os.path.join("Daily_Report", f"Daily_Full_Report_{today_str_file}.md")
     if not os.path.exists(md_filename):
         print(f"❌ 找不到報告文件: {md_filename}")
         return

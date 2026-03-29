@@ -16,7 +16,7 @@ def send_to_discord():
         return
 
     # 1. 取得最新報告
-    report_files = glob.glob("Daily_Full_Report_*.md")
+    report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
     if not report_files: return
     report_files.sort(key=os.path.getmtime, reverse=True)
     latest_report = report_files[0]
