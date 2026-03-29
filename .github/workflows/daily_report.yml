@@ -88,7 +88,7 @@ jobs:
         # 2. 告訴 Git 我們要追蹤這個記錄了 3 天頭條的 JSON 檔案與當日的 Markdown 報告
         # (加 || true 是為了防止檔案萬一因為爬蟲失敗沒產生時，整個 Action 中斷報錯)
         git add headline_history.json || true
-        git add Daily_Full_Report_*.md || true
+        git add Daily_Report/Daily_Full_Report_*.md || true
         
         # 3. 提交變更。[skip ci] 非常重要，它能防止這次的 Push 再次觸發 Action 導致無限迴圈
         # (加 || echo... 是防止如果今天抓取的頭條跟昨天完全一樣，Git 發現沒東西可更新時報錯)
