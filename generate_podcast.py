@@ -117,6 +117,10 @@ def parse_audio_mime(mime_type: str) -> int:
     return int(rate_match.group(1)) if rate_match else 24000
 
 async def main():
+    # --- ⚠️ 系統提示：根據您的需求，每日語音日報功能已「暫時關閉」 ⚠️ ---
+    print("🔇 語音日報功能目前設定為【暫時關閉狀態】，如需重新啟用請移除此段攔截程式碼。")
+    return
+
     # --- 判斷是否為「僅文案」模式 ---
     script_only = os.getenv("SCRIPT_ONLY", "false").lower() == "true"
     

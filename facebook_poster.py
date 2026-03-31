@@ -9,6 +9,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def post_to_facebook():
+    # --- ⚠️ 系統提示：根據您的需求，每日 Facebook 發文功能已「暫時關閉」 ⚠️ ---
+    print("🔇 Facebook 發文功能目前設定為【暫時關閉狀態】，如需重新啟用請移除此段攔截程式碼。")
+    return
+
     # 1. 從環境變數取得金鑰 [cite: 1]
     page_access_token = os.getenv("FB_PAGE_ACCESS_TOKEN")
     page_id = os.getenv("FB_PAGE_ID")

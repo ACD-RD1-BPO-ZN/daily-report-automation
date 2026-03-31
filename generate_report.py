@@ -349,7 +349,8 @@ async def generate_daily_report():
         report_data["image_targets"] = valid_targets
 
         # 1. 輸出 Markdown
-        md_filename = f"Daily_Full_Report_{today_str_file}.md"
+        os.makedirs("Daily_Report", exist_ok=True)
+        md_filename = os.path.join("Daily_Report", f"Daily_Full_Report_{today_str_file}.md")
         with open(md_filename, "w", encoding="utf-8") as f:
             f.write(report_data.get("markdown_content", "No markdown content returned."))
         print(f"Generated Markdown report: {md_filename}")
@@ -405,7 +406,8 @@ async def generate_daily_report():
         print("Raw response saving fallback...")
         
         # Fallback Markdown
-        md_filename = f"Daily_Full_Report_{today_str_file}.md"
+        os.makedirs("Daily_Report", exist_ok=True)
+        md_filename = os.path.join("Daily_Report", f"Daily_Full_Report_{today_str_file}.md")
         with open(md_filename, "w", encoding="utf-8") as f:
             f.write(f"# Ultimate Daily Full Report ({today_str_display})\n\n")
             f.write("Error generating formatted JSON. Raw output from Gemini:\n\n")
