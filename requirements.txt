@@ -5,4 +5,3 @@ playwright
 google-genai
 python-dotenv
 feedparser
-pydub
