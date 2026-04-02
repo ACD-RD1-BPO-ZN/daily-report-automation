@@ -132,6 +132,42 @@ def fetch_rss_feeds():
         except Exception as e:
             print(f'  [Error] Unity Blog direct scrape failed: {e}')
 
+    # 映CG (incgmedia) — 無 RSS，爬分類頁面最新文章 (3D/CG/VFX)
+    try:
+        scraped_data += '\n### 來源資訊: 映CG InCG Media (3D/CG/VFX)\n'
+        count = 0
+        seen_incg = set()
+        incg_categories = [
+            ('https://www.incgmedia.com/new-release', '/new-release/'),
+            ('https://www.incgmedia.com/behind-the-scene', '/behind-the-scene/'),
+        ]
+        for page_url, slug_prefix in incg_categories:
+            r = requests.get(page_url, headers=headers, timeout=10)
+            soup = BeautifulSoup(r.text, 'html.parser')
+            for a in soup.select('a[href]'):
+                href = a.get('href', '')
+                # 只取分類下的文章連結（含 slug 前綴且有子路徑）
+                if not href.startswith(slug_prefix) or href.rstrip('/') == slug_prefix.rstrip('/'):
+                    continue
+                full_url = 'https://www.incgmedia.com' + href
+                title_text = a.get_text(strip=True)
+                if (title_text and len(title_text) > 15
+                        and full_url not in seen_incg):
+                    seen_incg.add(full_url)
+                    scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {full_url}\n  [摘要前言]: (映CG 3D/CG/VFX article)...\n'
+                    count += 1
+                    recent_news_count += 1
+                    if count >= 6:
+                        break
+            if count >= 6:
+                break
+        if count == 0:
+            print('  [Warning] 映CG scrape returned nothing')
+        else:
+            print(f'  映CG: scraped {count} articles')
+    except Exception as e:
+        print(f'  [Error] 映CG scrape failed: {e}')
+
     print(f"Scraped {recent_news_count} news items for context.")
     return scraped_data
 

@@ -35,11 +35,31 @@ TAG_IDS = {
 # Discord 論壇頻道每串最多只能套用 5 個標籤。
 # ============================================================
 SECTION_TAG_MAP = {
-    "📢": ["headline"],   # 今日頭條   → 頭條
-    "🎮": ["indie"],      # 獨立遊戲   → 遊戲|獨立遊戲
-    "🤝": ["global"],    # 在地社群   → 遊戲|全球
-    "💼": ["global"],    # 製作人週記 → 遊戲|全球
-    "🌌": ["ai"],        # 深度總結   → AI|資訊
+    "📢": ["headline"],   # 今日頭條     → 頭條
+    "🎮": ["indie"],      # 獨立遊戲     → 遊戲|獨立遊戲
+    "🤝": ["indie"],      # 在地社群     → 遊戲|獨立遊戲
+    "💼": ["global"],     # 製作人週記   → 遊戲|全球 (引擎相關自動分流)
+    "🌌": ["ai"],         # 深度總結     → AI|資訊
+}
+
+# ============================================================
+# 標籤顯示名稱（用於討論串標題）
+# ============================================================
+TAG_DISPLAY_NAMES = {
+    "headline": "🔥 頭條",
+    "indie":    "💗 遊戲｜獨立遊戲",
+    "global":   "🌍 遊戲｜全球",
+    "ue":       "📘 引擎｜UE",
+    "unity":    "📙 引擎｜Unity",
+    "ta":       "🛠️ 技術｜TA",
+    "3d":       "🛠️ 技術｜3D",
+    "ai":       "🤖 AI｜資訊",
+}
+
+# 引擎關鍵字路由（用於將製作人週記中的條目分流到引擎標籤）
+ENGINE_ROUTE_KEYWORDS: dict[str, list[str]] = {
+    "unity": ["unity"],
+    "ue":    ["unreal", "ue5", "ue4"],
 }
 
 # ============================================================
@@ -53,6 +73,7 @@ ENGINE_SUBSECTION_DEFS = [
     (re.compile(r"\*\*Unity",         re.IGNORECASE), "🟩 Unity",         ["unity"], ["[Unity"]),
     (re.compile(r"\*\*Godot",         re.IGNORECASE), "🎮 Godot Engine",  ["ta"],    ["[Godot"]),
     (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"],    ["[80.lv"]),
+    (re.compile(r"\*\*映CG|InCG",     re.IGNORECASE), "映CG (3D/CG)",    ["3d"],    ["[映CG", "[InCG"]),
 ]
 
 # 段落 Emoji → daily_targets.json 中的 section_name 對應
@@ -139,7 +160,7 @@ def _split_engine_section(section_text: str) -> list[tuple[str, list[str], str]]
         # 3. 篩選屬於此引擎的來源連結並附加
         if sources_lines and src_prefixes:
             matched = [ln for ln in sources_lines
-                       if any(ln.strip().startswith(p) for p in src_prefixes)]
+                       if any(p in ln for p in src_prefixes)]
             if matched:
                 content += "\n[資料來源]\n" + "\n".join(matched)
         if content:
@@ -147,85 +168,99 @@ def _split_engine_section(section_text: str) -> list[tuple[str, list[str], str]]
     return results
 
 
-def _extract_preview(content: str) -> tuple[str, str]:
+def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[str, str]:
     """
-    從段落內文提取極簡預覽（最多 2 行亮點 + 第一個來源連結）。
-    格式：blockquote 亮點 + 來源連結，作為論壇卡片預覽的 Embed 內容。
-    回傳 (preview_text, first_source_url)。
+    將段落的 bullet 依引擎關鍵字分流。
+    回傳 {tag_key: content_str}，非引擎相關的放在 default_tag。
     """
-    lines = content.split("\n")
-    highlights: list[str] = []
-    first_url = ""
-    in_sources = False
+    # 移除開頭粗體標題行
+    content = re.sub(r"^\*\*[^\n]+\*\*\s*\n*", "", content, count=1).strip()
 
-    for line in lines:
+    # 分離 [資料來源] 區塊
+    body = content
+    sources_text = ""
+    src_match = re.search(r"\[資料來源\]", content)
+    if src_match:
+        body = content[:src_match.start()].strip()
+        sources_text = content[src_match.start():]
+    source_lines = [ln for ln in sources_text.split("\n") if ln.strip() and ln.strip() not in ("[資料來源]", "---")]
+
+    # 路由 bullet
+    routed_bullets: dict[str, list[str]] = {}
+    for line in body.split("\n"):
         s = line.strip()
         if not s or s == "---":
             continue
-        if s == "[資料來源]":
-            in_sources = True
-            continue
-        if in_sources:
-            if not first_url:
-                m = re.search(r"\(<(https?://[^>]+)>\)", s)
-                if m:
-                    first_url = m.group(1)
-            continue
-        # 跳過圖片標籤、大標題、分隔線
-        if s.startswith("![") or (s.startswith("**") and s.endswith("**")):
-            continue
-        # 跳過引擎子標題行，例如「- **Unreal Engine**：」
-        if re.match(r"^-\s+\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
-            continue
-        if len(highlights) >= 2:
-            continue
-        # 條列式
-        if s.startswith("- "):
-            clean = re.sub(r"\*\*(.+?)\*\*", r"\1", s[2:]).strip()
-        elif not s.startswith("-") and not s.startswith("[") and not s.startswith("*"):
-            # 純段落文字（如頭條的長段落）
-            clean = re.sub(r"\*\*(.+?)\*\*", r"\1", s).strip()
-        else:
-            continue
-        # 移除 Markdown 連結標記
-        clean = re.sub(r"\[(.+?)\]\(<.+?>\)", r"\1", clean)
-        if len(clean) > 10:
-            highlights.append(clean[:130])
+        target = default_tag
+        lower = s.lower()
+        for tag_key, keywords in ENGINE_ROUTE_KEYWORDS.items():
+            if any(kw in lower for kw in keywords):
+                target = tag_key
+                break
+        routed_bullets.setdefault(target, []).append(line)
 
-    preview = "\n".join(f"> {h}" for h in highlights)
-    if first_url:
-        preview += f"\n\n[📰 來源]({first_url})"
-    return preview or content[:300], first_url
+    # 路由來源連結
+    routed_sources: dict[str, list[str]] = {}
+    for line in source_lines:
+        target = default_tag
+        lower = line.strip().lower()
+        for tag_key, keywords in ENGINE_ROUTE_KEYWORDS.items():
+            if any(kw in lower for kw in keywords):
+                target = tag_key
+                break
+        routed_sources.setdefault(target, []).append(line)
+
+    # 組合結果
+    result: dict[str, str] = {}
+    all_keys = set(list(routed_bullets.keys()) + list(routed_sources.keys()))
+    for tag_key in all_keys:
+        parts = []
+        if tag_key in routed_bullets:
+            parts.append("\n".join(routed_bullets[tag_key]))
+        if tag_key in routed_sources:
+            parts.append("[資料來源]\n" + "\n".join(routed_sources[tag_key]))
+        result[tag_key] = "\n".join(parts).strip()
+    return result
 
 
-def _extract_thread_name(section_text: str, date_str: str) -> str:
+def _extract_keywords(content: str, max_keywords: int = 6) -> str:
     """
-    從段落第一行提取出乾淨的討論串標題。
-    格式：{date_str} | {section_title}，最長 100 字元（Discord 上限）。
+    從段落內容提取關鍵詞（粗體文字 + 書名號內容），用於外層預覽。
+    回傳以 ｜ 分隔的關鍵詞字串。
     """
-    first_line = section_text.split("\n")[0].strip()
-    first_line = first_line.replace("**", "").strip()
-    return f"{date_str} | {first_line}"[:100]
+    keywords: list[str] = []
+    seen = set()
+    # 1. 提取粗體 **xxx** 中的文字
+    for m in re.finditer(r"\*\*(.+?)\*\*", content):
+        kw = m.group(1).strip().rstrip("：:")
+        lower = kw.lower()
+        # 過濾掉段落標題類的粗體（太長或含 emoji）
+        if len(kw) > 25 or any(ord(c) > 0xFFFF for c in kw):
+            continue
+        if lower not in seen and len(kw) > 1:
+            seen.add(lower)
+            keywords.append(kw)
+    # 2. 提取書名號《xxx》中的內容
+    for m in re.finditer(r"《(.+?)》", content):
+        kw = m.group(1).strip()
+        lower = kw.lower()
+        if lower not in seen and len(kw) > 1:
+            seen.add(lower)
+            keywords.append(kw)
+    return " ｜ ".join(keywords[:max_keywords])
 
 
-def _chunk_text(text: str, max_len: int = 1950) -> list[str]:
-    """將長文字切分成不超過 max_len 字元的 Chunk 清單，優先在換行符處切割。"""
-    chunks = []
-    while text:
-        if len(text) <= max_len:
-            chunks.append(text)
-            break
-        split_idx = text.rfind("\n", 0, max_len)
-        if split_idx == -1:
-            split_idx = max_len
-        chunks.append(text[:split_idx])
-        text = text[split_idx:].strip()
-    return chunks
 
 
-def _create_forum_thread(thread_name: str, content: str, tag_ids: list[str], img_path: str | None, color: int = DEFAULT_COLOR) -> str | None:
+
+def _create_forum_thread(thread_name: str, display_title: str, embed_description: str,
+                         tag_ids: list[str], img_path: str | None, color: int = DEFAULT_COLOR,
+                         keywords: str = "") -> str | None:
     """
-    在論壇頻道建立新討論串（含 Embed 訊息、顏色邊框與可選圖片附件）。
+    在論壇頻道建立新討論串。
+    - display_title: Embed 的 title 欄位，顯示較大字體。
+    - embed_description: Embed 的 description，包含完整詳細內容。
+    - keywords: 外層預覽關鍵詞，放入 message.content。
     回傳建立成功的討論串 Channel ID，失敗則回傳 None。
     DRY_RUN 模式下只印預覽。
     """
@@ -234,17 +269,23 @@ def _create_forum_thread(thread_name: str, content: str, tag_ids: list[str], img
         print(f"[DRY-RUN] 串名 : {thread_name}")
         print(f"[DRY-RUN] 標籤 : {tag_names}  顏色: #{color:06X}")
         print(f"[DRY-RUN] 圖片 : {img_path}")
-        print(f"[DRY-RUN] 內容預覽 (前200字):\n{content[:200]}")
+        print(f"[DRY-RUN] 關鍵詞 : {keywords}")
+        print(f"[DRY-RUN] Embed 標題 : {display_title}")
+        print(f"[DRY-RUN] Embed 內容 (前400字):\n{embed_description[:400]}")
         print("-" * 60)
         return "DRY_RUN_THREAD_ID"
 
     url = f"https://discord.com/api/v10/channels/{FORUM_CHANNEL_ID}/threads"
     headers = {"Authorization": f"Bot {BOT_TOKEN}"}
 
-    embed: dict = {"description": content, "color": color}
+    # Embed: title 顯示較大字體，description 上限 4096 字元
+    embed: dict = {"title": display_title, "description": embed_description[:4096], "color": color}
     payload: dict = {
         "name": thread_name,
-        "message": {"embeds": [embed]},
+        "message": {
+            "content": keywords[:2000] if keywords else "",
+            "embeds": [embed],
+        },
     }
     if tag_ids:
         payload["applied_tags"] = tag_ids
@@ -275,23 +316,6 @@ def _create_forum_thread(thread_name: str, content: str, tag_ids: list[str], img
     thread_id = resp.json().get("id")
     print(f"✅ 討論串已建立: 「{thread_name}」 (id={thread_id})")
     return thread_id
-
-
-def _post_message_to_thread(thread_id: str, content: str, color: int = DEFAULT_COLOR) -> None:
-    """在已存在的討論串中補發後續 Embed 訊息（用於超過字元上限時的分段）。"""
-    if DRY_RUN:
-        print(f"[DRY-RUN] 補發至串 {thread_id} (前100字): {content[:100]}")
-        return
-    url = f"https://discord.com/api/v10/channels/{thread_id}/messages"
-    headers = {
-        "Authorization": f"Bot {BOT_TOKEN}",
-        "Content-Type": "application/json",
-    }
-    resp = requests.post(url, headers=headers, json={"embeds": [{"description": content, "color": color}]})
-    if not resp.ok:
-        print(f"❌ 後續訊息發送失敗 [{resp.status_code}]: {resp.text[:200]}")
-    else:
-        print(f"  ↳ 後續訊息已補發至討論串 {thread_id}")
 
 
 def send_to_discord_forum() -> None:
@@ -346,14 +370,17 @@ def send_to_discord_forum() -> None:
             else:
                 print(f"⚠️  圖片不存在: {fpath}")
 
-    # 5. 逐段建立論壇討論串
+    # 5. 依標籤分類聚合內容（每個標籤建立一個討論串）
+    buckets: dict[str, list[str]] = {}          # tag_key → content blocks
+    bucket_imgs: dict[str, str | None] = {}     # tag_key → first image
+
     for section in sections:
         # 跳過純日期標題行與深度總結
         if section.startswith("# 📅") or "🌌" in section[:80]:
             print(f"⏭  跳過: {section[:30].strip()}")
             continue
 
-        # 清除 Markdown 圖片標籤（圖片改以附件形式附加）
+        # 清除 Markdown 圖片標籤
         message_content = re.sub(r"!\[.*?\]\(.*?\)", "", section).strip()
         if not message_content:
             continue
@@ -364,40 +391,51 @@ def send_to_discord_forum() -> None:
         if emoji_found:
             img_path = section_name_to_img.get(SECTION_IMG_KEY[emoji_found])
 
-        # 🎨 引擎段落：按子標題拆成多個獨立討論串
+        # 🎨 引擎段落：拆分後路由到各引擎標籤桶
         if "🎨" in section[:80]:
             engine_parts = _split_engine_section(message_content)
-            if engine_parts:
-                for idx, (eng_content, eng_tag_keys, eng_title) in enumerate(engine_parts):
-                    eng_thread_name = f"{date_str} | {eng_title}"[:100]
-                    eng_tag_ids = [TAG_IDS[k] for k in eng_tag_keys if TAG_IDS.get(k)]
-                    eng_color = _resolve_color(eng_tag_keys)
-                    use_img = img_path if idx == 0 else None
-                    # 建立討論串（極簡預覽 Embed）
-                    preview, _ = _extract_preview(eng_content)
-                    tid = _create_forum_thread(eng_thread_name, preview, eng_tag_ids, use_img, eng_color)
-                    time.sleep(1.5)
-                    # 完整內容補發至串內
-                    if tid:
-                        for chunk in _chunk_text(eng_content, max_len=4000):
-                            _post_message_to_thread(tid, chunk, eng_color)
-                            time.sleep(1)
-                continue  # 跳過下方通用發布邏輯
+            for eng_content, eng_tag_keys, _eng_title in engine_parts:
+                tag_key = eng_tag_keys[0]
+                buckets.setdefault(tag_key, []).append(eng_content)
+                if tag_key not in bucket_imgs and img_path:
+                    bucket_imgs[tag_key] = img_path
+            continue
 
-        thread_name = _extract_thread_name(section, date_str)
+        # 💼 製作人週記：依引擎關鍵字分流
+        if "💼" in section[:80]:
+            routed = _route_content_by_engine(message_content, default_tag="global")
+            for tag_key, routed_content in routed.items():
+                buckets.setdefault(tag_key, []).append(routed_content)
+            if "global" not in bucket_imgs and img_path:
+                bucket_imgs["global"] = img_path
+            continue
+
+        # 一般段落：路由到對應標籤，並將引擎相關條目分流
         emoji_key = next((e for e in SECTION_TAG_MAP if e in section[:80]), None)
-        sec_tag_keys = SECTION_TAG_MAP.get(emoji_key, []) if emoji_key else []
-        tag_ids = [TAG_IDS[k] for k in sec_tag_keys if TAG_IDS.get(k)]
-        sec_color = _resolve_color(sec_tag_keys)
-        # 建立討論串（極簡預覽 Embed + 圖片）
-        preview, _ = _extract_preview(message_content)
-        thread_id = _create_forum_thread(thread_name, preview, tag_ids, img_path, sec_color)
+        if not emoji_key:
+            continue
+        tag_key = SECTION_TAG_MAP[emoji_key][0]
+        content = re.sub(r"^\*\*[^\n]+\*\*\s*\n*", "", message_content, count=1).strip()
+        routed = _route_content_by_engine(content, default_tag=tag_key)
+        for rk, rc in routed.items():
+            buckets.setdefault(rk, []).append(rc)
+        if tag_key not in bucket_imgs and img_path:
+            bucket_imgs[tag_key] = img_path
+
+    # 6. 依標籤建立討論串（固定順序）
+    TAG_ORDER = ["headline", "ue", "unity", "ta", "3d", "indie", "global", "ai"]
+    for tag_key in TAG_ORDER:
+        if tag_key not in buckets:
+            continue
+        merged = "\n\n".join(buckets[tag_key])
+        tag_ids = [TAG_IDS[tag_key]] if TAG_IDS.get(tag_key) else []
+        color = _resolve_color([tag_key])
+        display_name = TAG_DISPLAY_NAMES.get(tag_key, tag_key)
+        thread_name = f"{date_str} | {display_name}"[:100]
+        img = bucket_imgs.get(tag_key)
+        kw = _extract_keywords(merged)
+        _create_forum_thread(thread_name, display_name, merged, tag_ids, img, color, keywords=kw)
         time.sleep(1.5)
-        # 完整內容補發至串內
-        if thread_id:
-            for chunk in _chunk_text(message_content, max_len=4000):
-                _post_message_to_thread(thread_id, chunk, sec_color)
-                time.sleep(1)
 
     print("✅ 所有段落已成功發布至 Discord 論壇頻道！")
 

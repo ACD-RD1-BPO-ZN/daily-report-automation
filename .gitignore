@@ -1,2 +1,4 @@
 .env
 discord_bot/.env
+__pycache__/
+*.pyc

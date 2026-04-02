@@ -1,6 +1,7 @@
 requests
 beautifulsoup4
 playwright
+Pillow
 
 google-genai
 python-dotenv
