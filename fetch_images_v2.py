@@ -7,10 +7,15 @@ from urllib.parse import urljoin
 import json
 import shutil
 import base64
+import io
 from dotenv import load_dotenv
 import re
 import urllib.parse
+from PIL import Image
 load_dotenv()
+
+# ── 開發用：設為 True 時，所有圖片都改用 assets/Test.jpg 暫代，跳過抓圖 ──
+USE_LOCAL_TEST_IMAGE = False
 
 # ── 統一的「真實瀏覽器偽裝」Header，對抗 Akamai / Cloudflare ──
 REAL_BROWSER_HEADERS = {
@@ -36,6 +41,20 @@ REAL_BROWSER_HEADERS = {
 
 # 圖片最小有效大小（bytes），低於此值視為 icon/placeholder
 MIN_IMAGE_SIZE = 5000  # 5KB
+
+def convert_to_png(img_data: bytes) -> bytes:
+    """
+    將任意格式的圖片 bytes 轉碼為真實 PNG 格式。
+    """
+    img = Image.open(io.BytesIO(img_data))
+    if img.mode in ("RGBA", "P"):
+        img = img.convert("RGBA")
+    else:
+        img = img.convert("RGB")
+    buf = io.BytesIO()
+    img.save(buf, format="PNG")
+    return buf.getvalue()
+
 
 def normalize_image_url(url):
     """
@@ -98,8 +117,9 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
                 print(f"  Priority 1A: Found og:image: {og_url}")
                 try:
                     img_data = requests.get(og_url, headers=headers, timeout=10).content
+                    png_data = convert_to_png(img_data)
                     with open(save_path, 'wb') as f:
-                        f.write(img_data)
+                        f.write(png_data)
                     if is_valid_image(save_path):
                         if normalize_image_url(og_url) not in used_image_urls:
                             print(f"  Priority 1A: ✅ og:image saved successfully ({len(img_data)} bytes)")
@@ -229,8 +249,9 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
             try:
                 print(f"  Priority 1: Trying candidate {i+1}/{len(candidate_urls)}: {cand_url[:100]}...")
                 img_data = requests.get(cand_url, headers=headers, timeout=10).content
+                png_data = convert_to_png(img_data)
                 with open(save_path, 'wb') as f:
-                    f.write(img_data)
+                    f.write(png_data)
                 if is_valid_image(save_path):
                     print(f"  Priority 1: ✅ Saved successfully ({len(img_data)} bytes)")
                     used_image_urls.add(normalize_image_url(cand_url))
@@ -459,6 +480,21 @@ async def main():
             
     used_image_urls = set()
     
+    # ── 開發用：直接用 Test.jpg 暫代所有圖片 ──
+    if USE_LOCAL_TEST_IMAGE:
+        test_image_path = os.path.join(assets_dir, "Test.jpg")
+        if not os.path.exists(test_image_path):
+            print(f"⚠ Test image not found at {test_image_path}")
+        else:
+            for item in targets_data:
+                filename = item.get("image_filename")
+                if filename:
+                    target_path = os.path.join(assets_dir, filename)
+                    shutil.copy(test_image_path, target_path)
+                    print(f"🧪 [TEST MODE] Copied Test.jpg → {filename}")
+            print("🧪 [TEST MODE] All images substituted with Test.jpg. Done.")
+            return
+    
     # 建立 global fallback URLs
     global_candidate_urls = []
     for item in targets_data:
@@ -506,7 +542,7 @@ async def main():
                         prompt=ai_prompt,
                         config=genai_types.GenerateImagesConfig(
                             number_of_images=1,
-                            output_mime_type="image/jpeg",
+                            output_mime_type="image/png",
                             aspect_ratio="16:9",
                         )
                     )
@@ -514,8 +550,9 @@ async def main():
                     if result.generated_images:
                         generated_image = result.generated_images[0]
                         image_bytes = generated_image.image.image_bytes
+                        png_bytes = convert_to_png(image_bytes)
                         with open(target_path, 'wb') as f:
-                            f.write(image_bytes)
+                            f.write(png_bytes)
                         file_size = os.path.getsize(target_path)
                         print(f"AI Image: ✅ Successfully saved ({file_size} bytes) to {target_path} using Gemini API")
                         success = True

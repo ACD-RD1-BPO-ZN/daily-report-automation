@@ -41,6 +41,16 @@
   - **職責**：將最終報告拆解並發送至 Discord Webhook。
   - **核心行為**：讀取 Markdown 與 `daily_targets.json` 映射，依照各個大標題（如 `# 📅` 或 `**📢`）將文章切塊 (Chunking)，並將 `assets/` 下的對應圖片夾帶於該段落的第一個 Chunk 發送，避免超過 Discord 單則訊息長度限制。
 
+- **`discord_forum_sender.py`**
+  - **職責**：將每日報告各段落以獨立「討論串 (Thread)」的形式發布至 Discord **論壇頻道 (Forum Channel)**。
+  - **核心行為**：
+    - 使用 Discord Bot API (`/channels/{forum_channel_id}/threads`) 而非 Webhook，因為論壇頻道必須透過 Bot Token 操作。
+    - 段落切割邏輯與 `discord_webhook_sender.py` 相同（共用 `section_pattern`）。
+    - 每個段落（跳過 `# 📅` 純標題行）建立一個獨立討論串，串名格式為 `YYYY-MM-DD | {段落標題}`。
+    - 透過 `SECTION_TAG_MAP` 字典，自動依段落 Emoji 掛上對應的論壇標籤 ID（如 🔹UE、🔸Unity），讓社群成員能夠篩選只看特定引擎的文章。
+    - 圖片以 multipart/form-data 附件形式夾帶於討論串的第一則訊息；超過字元上限的內容自動分段補發至同一串內。
+  - **所需環境變數**：`DISCORD_BOT_TOKEN`, `DISCORD_FORUM_CHANNEL_ID`, `FORUM_TAG_HEADLINE_ID`, `FORUM_TAG_UE_ID`, `FORUM_TAG_UNITY_ID`, `FORUM_TAG_AI_ID`, `FORUM_TAG_MARKET_ID`。
+
 - **`facebook_poster.py` (可選/獨立模組)**
   - **職責**：擷取報告中的特定段落（今日頭條）並發送至 Facebook Page。
   - **核心行為**：使用正規表達式精準擷取頭條段落的純文字，並透過 Facebook Graph API 結合 `headline_YYYYMMDD.png` 發布推文。
@@ -100,6 +110,13 @@
   1. **禁止修改現有 Sender**：不要把 Telegram 的邏輯寫進 `discord_webhook_sender.py`，應保持單一職責模式。
   2. 新模組純粹負責讀取已生成的 `Daily_Full_Report_*.md` 及 `assets/` 目錄，然後進行自身平台需要的文字轉換或切塊。
   3. 在 `daily_report.yml` 的 `Run Report Automation` step 中追加 `python telegram_sender.py` 即可。
+
+### 4.3.1 調整論壇頻道標籤對應 (Forum Channel Tag Mapping)
+- **修改位置**：`discord_forum_sender.py` 裡的 `SECTION_TAG_MAP` 字典與 `TAG_IDS` 字典。
+- **準則**：
+  1. **新增段落 Emoji → 標籤**：在 `SECTION_TAG_MAP` 新增一筆，鍵為段落 Emoji（如 `"🔮"`），值為 `TAG_IDS` 中的鍵名清單（如 `["ai"]`）。
+  2. **新增標籤種類**：在 Discord 論壇頻道建立新標籤後，將標籤 ID 加入 GitHub Secrets，再於 `TAG_IDS` 新增對應的 `os.getenv(...)` 讀取。
+  3. 同步更新 `daily_report.yml` 中 `env:` 區塊，宣告新增的 Secret 為環境變數。
 
 ### 4.4 圖片抓取邏輯優化 (Image Fetching Enhancements)
 - **修改位置**：`fetch_images_v2.py`。

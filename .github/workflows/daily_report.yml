@@ -39,6 +39,16 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+        DISCORD_FORUM_CHANNEL_ID: ${{ secrets.DISCORD_FORUM_CHANNEL_ID }}
+        FORUM_TAG_HEADLINE_ID: ${{ secrets.FORUM_TAG_HEADLINE_ID }}
+        FORUM_TAG_INDIE_ID: ${{ secrets.FORUM_TAG_INDIE_ID }}
+        FORUM_TAG_GLOBAL_ID: ${{ secrets.FORUM_TAG_GLOBAL_ID }}
+        FORUM_TAG_AI_ID: ${{ secrets.FORUM_TAG_AI_ID }}
+        FORUM_TAG_UE_ID: ${{ secrets.FORUM_TAG_UE_ID }}
+        FORUM_TAG_UNITY_ID: ${{ secrets.FORUM_TAG_UNITY_ID }}
+        FORUM_TAG_TA_ID: ${{ secrets.FORUM_TAG_TA_ID }}
+        FORUM_TAG_3D_ID: ${{ secrets.FORUM_TAG_3D_ID }}
       run: |
         echo "Starting daily report generation..."
         python generate_report.py
@@ -46,8 +56,11 @@ jobs:
         echo "Fetching images..."
         python fetch_images_v2.py
         
-        echo "Sending to Discord..."
+        echo "Sending to Discord (Webhook)..."
         python discord_webhook_sender.py
+
+        echo "Sending to Discord (Forum Channel)..."
+        python discord_forum/discord_forum_sender.py
 
     # 👇 --- 變動 2：將新產生的 JSON 記憶檔案 Commit 回 Repo --- 👇
     - name: Commit and push run history
