@@ -369,6 +369,10 @@ def _split_into_news_items(content: str) -> list[dict]:
 
         # 從 body 中提取 bullets
         bullets = _extract_bullets_from_body(body_text)
+        if not bullets and body_text.strip():
+            # Fallback: 沒有 bullet 格式，嘗試用來源連結數量拆分段落
+            # 如果有 N 個來源但只有 1 段文字，整段作為 1 條
+            bullets = [body_text.strip()]
         for b in bullets:
             all_items.append({"text": b, "source": ""})
 
@@ -580,12 +584,13 @@ def _post_embed_to_thread(thread_id: str, title: str, description: str,
 
 def _create_forum_thread(thread_name: str, display_title: str, embed_description: str,
                          tag_ids: list[str], img_path: str | None, color: int = DEFAULT_COLOR,
-                         keywords: str = "") -> str | None:
+                         keywords: str = "", img_url: str | None = None) -> str | None:
     """
     在論壇頻道建立新討論串。
     - display_title: Embed 的 title 欄位，顯示較大字體。
     - embed_description: Embed 的 description，包含完整詳細內容。
     - keywords: 外層預覽關鍵詞，放入 message.content。
+    - img_url: 外部圖片 URL（當沒有本地圖片時使用，用於避免重複縮圖）。
     回傳建立成功的討論串 Channel ID，失敗則回傳 None。
     DRY_RUN 模式下只印預覽。
     """
@@ -593,7 +598,7 @@ def _create_forum_thread(thread_name: str, display_title: str, embed_description
         tag_names = [k for k, v in TAG_IDS.items() if v in tag_ids]
         print(f"[DRY-RUN] 串名 : {thread_name}")
         print(f"[DRY-RUN] 標籤 : {tag_names}  顏色: #{color:06X}")
-        print(f"[DRY-RUN] 圖片 : {img_path}")
+        print(f"[DRY-RUN] 圖片 : {img_path or img_url or '(無)'}")
         print(f"[DRY-RUN] 關鍵詞 : {keywords}")
         print(f"[DRY-RUN] Embed 標題 : {display_title}")
         print(f"[DRY-RUN] Embed 內容 (前400字):\n{embed_description[:400]}")
@@ -630,6 +635,11 @@ def _create_forum_thread(thread_name: str, display_title: str, embed_description
                     "files[0]":     (fname, img_file, mime),
                 },
             )
+    elif img_url:
+        # 使用外部圖片 URL（避免重複縮圖時使用）
+        embed["image"] = {"url": img_url}
+        headers["Content-Type"] = "application/json"
+        resp = requests.post(url, headers=headers, json=payload)
     else:
         headers["Content-Type"] = "application/json"
         resp = requests.post(url, headers=headers, json=payload)
@@ -749,6 +759,7 @@ def send_to_discord_forum() -> None:
 
     # 6. 依標籤建立討論串，每條新聞獨立 Embed
     TAG_ORDER = ["ai", "3d", "unity", "ue", "ta", "global", "indie", "headline"]
+    used_img_paths: set[str] = set()  # 追蹤已使用的圖片路徑，避免論壇列表縮圖重複
     for tag_key in TAG_ORDER:
         if tag_key not in buckets:
             continue
@@ -760,17 +771,35 @@ def send_to_discord_forum() -> None:
         img = bucket_imgs.get(tag_key)
         kw = _extract_keywords(merged)
 
+        # 預先拆分新聞，後面建立串和發送 embed 都會用到
+        news_items = _split_into_news_items(merged)
+
+        # 判斷是否需要用 og:image 替代重複的本地圖片
+        og_fallback_url: str | None = None
+        if img and img in used_img_paths:
+            # 此圖片已被前一個討論串使用，改用第一條新聞的 og:image
+            print(f"🔄 {tag_key}: 本地圖片已被其他串使用，嘗試抓取 og:image 替代...")
+            if news_items:
+                src_url = _extract_url_from_source(news_items[0].get("source", ""))
+                og_fallback_url = _fetch_og_image(src_url)
+            if og_fallback_url:
+                print(f"✅ {tag_key}: 使用 og:image 作為串縮圖: {og_fallback_url[:80]}")
+                img = None  # 不使用本地檔案，改用 og:image URL
+            else:
+                print(f"⚠️ {tag_key}: 無法取得 og:image，仍使用原圖")
+        if img:
+            used_img_paths.add(img)
+
         # 建立討論串（首則訊息為概覽：標題 + 關鍵詞 + 圖片）
         thread_id = _create_forum_thread(
             thread_name, display_name,
-            f"今日 {display_name} 共 {len(_split_into_news_items(merged))} 則新聞，請往下瀏覽各則詳情。",
-            tag_ids, img, color, keywords=kw,
+            f"今日 {display_name} 共 {len(news_items)} 則新聞，請往下瀏覽各則詳情。",
+            tag_ids, img, color, keywords=kw, img_url=og_fallback_url,
         )
         if not thread_id:
             continue
 
-        # 拆分並逐條發送獨立 Embed
-        news_items = _split_into_news_items(merged)
+        # 逐條發送獨立 Embed
         for idx, item in enumerate(news_items, 1):
             # 從 bullet 文字提取簡短標題
             raw = re.sub(r"^\-\s*", "", item["text"].split("\n")[0]).strip()
