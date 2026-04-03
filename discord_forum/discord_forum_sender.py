@@ -423,7 +423,7 @@ def send_to_discord_forum() -> None:
             bucket_imgs[tag_key] = img_path
 
     # 6. 依標籤建立討論串（固定順序）
-    TAG_ORDER = ["ai", "global", "indie", "3d", "ta", "unity", "ue", "headline"]
+    TAG_ORDER = ["ai", "3d", "unity", "ue", "ta", "global", "indie", "headline"]
     for tag_key in TAG_ORDER:
         if tag_key not in buckets:
             continue
