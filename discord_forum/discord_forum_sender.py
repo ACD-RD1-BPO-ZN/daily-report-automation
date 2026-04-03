@@ -73,7 +73,8 @@ ENGINE_SUBSECTION_DEFS = [
     (re.compile(r"\*\*Unity",         re.IGNORECASE), "🟩 Unity",         ["unity"], ["[Unity"]),
     (re.compile(r"\*\*Godot",         re.IGNORECASE), "🎮 Godot Engine",  ["ta"],    ["[Godot"]),
     (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"],    ["[80.lv"]),
-    (re.compile(r"\*\*映CG|InCG",     re.IGNORECASE), "映CG (3D/CG)",    ["3d"],    ["[映CG", "[InCG"]),
+    (re.compile(r"\*\*(映CG|InCG|3D/CG|Blender|Maya|3ds\s*Max|ZBrush|Houdini|Boris\s*FX|Substance)", re.IGNORECASE),
+     "映CG (3D/CG/VFX)", ["3d"], ["[映CG", "[InCG", "[incgmedia", "[Blender", "[Maya", "[3ds", "[ZBrush", "[Houdini", "[Boris", "[Substance"]),
 ]
 
 # 段落 Emoji → daily_targets.json 中的 section_name 對應
