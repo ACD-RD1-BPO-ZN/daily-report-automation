@@ -223,9 +223,55 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
     return result
 
 
+def _has_cjk(text: str) -> bool:
+    """檢查字串是否包含中日韓文字。"""
+    return bool(re.search(r'[\u4e00-\u9fff\u3400-\u4dbf]', text))
+
+
+def _extract_bullet_summary(content: str, max_items: int = 3) -> list[str]:
+    """
+    從 bullet 正文中提取簡短的中文摘要片段。
+    用於沒有粗體/書名號/中文連結時的 fallback。
+    """
+    summaries: list[str] = []
+    for line in content.split("\n"):
+        s = line.strip()
+        # 跳過非 bullet、來源連結行、純英文行
+        if not s.startswith("- ") or s.startswith("- [") or not _has_cjk(s):
+            continue
+        text = s[2:].strip()
+        # 如果開頭是英文，跳到第一個有意義的中文詞開始提取
+        cjk_match = re.search(r'[\u4e00-\u9fff]', text)
+        if cjk_match and cjk_match.start() > 3:
+            text = text[cjk_match.start():]
+            # 跳過開頭的單字虛詞（的、了、在、於、為、正、和、與）
+            text = re.sub(r'^[的了在於為正和與]\s*', '', text)
+        # 取第一個逗號/句號前的片段
+        for sep in ("，", "、", "。", "；"):
+            idx = text.find(sep)
+            if 4 < idx < 22:
+                text = text[:idx]
+                break
+        if len(text) > 20:
+            text = text[:20]
+            # 如果截斷在英文單字中間，回退到最後一個中文字
+            while text and not re.search(r'[\u4e00-\u9fff\u3400-\u4dbf》）]$', text):
+                text = text[:-1]
+        text = text.strip()
+        # 跳過含有《》的摘要（書名號已在 step 2 提取）
+        if "《" in text:
+            continue
+        if len(text) > 4 and text not in summaries:
+            summaries.append(text)
+        if len(summaries) >= max_items:
+            break
+    return summaries
+
+
 def _extract_keywords(content: str, max_keywords: int = 6) -> str:
     """
-    從段落內容提取關鍵詞（粗體文字 + 書名號 + 來源連結標題），用於外層預覽。
+    從段落內容提取關鍵詞，用於外層預覽。
+    優先順序：粗體 → 書名號 → 中文來源連結 → bullet 正文摘要。
     回傳以 ｜ 分隔的關鍵詞字串。
     """
     keywords: list[str] = []
@@ -247,23 +293,31 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
         if lower not in seen and len(kw) > 1:
             seen.add(lower)
             keywords.append(kw)
-    # 3. 從來源連結 [Site - Keyword](<url>) 提取關鍵詞部分
+    # 3. 從中文來源連結 [站名 - 關鍵詞](<url>) 提取關鍵詞部分（僅限含中文的）
     if len(keywords) < max_keywords:
         for m in re.finditer(r"\[([^\]]+)\]\(<https?://[^>]+>\)", content):
             display = m.group(1).strip()
-            # 取 " - " 後面的部分作為關鍵詞（去掉來源站名）
             if " - " in display:
                 kw = display.split(" - ", 1)[1].strip()
             else:
                 kw = display
-            if len(kw) > 40:
-                kw = kw[:40]
+            if not _has_cjk(kw):
+                continue
+            if len(kw) > 32:
+                kw = kw[:32].strip()
             lower = kw.lower()
             if lower not in seen and len(kw) > 3:
                 seen.add(lower)
                 keywords.append(kw)
             if len(keywords) >= max_keywords:
                 break
+    # 4. Fallback：從 bullet 正文提取中文摘要片段
+    if len(keywords) < max_keywords:
+        for summary in _extract_bullet_summary(content, max_items=max_keywords - len(keywords)):
+            lower = summary.lower()
+            if lower not in seen:
+                seen.add(lower)
+                keywords.append(summary)
     return " ｜ ".join(keywords[:max_keywords])
 
 
