@@ -225,7 +225,7 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
 
 def _extract_keywords(content: str, max_keywords: int = 6) -> str:
     """
-    從段落內容提取關鍵詞（粗體文字 + 書名號內容），用於外層預覽。
+    從段落內容提取關鍵詞（粗體文字 + 書名號 + 來源連結標題），用於外層預覽。
     回傳以 ｜ 分隔的關鍵詞字串。
     """
     keywords: list[str] = []
@@ -247,6 +247,23 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
         if lower not in seen and len(kw) > 1:
             seen.add(lower)
             keywords.append(kw)
+    # 3. 從來源連結 [Site - Keyword](<url>) 提取關鍵詞部分
+    if len(keywords) < max_keywords:
+        for m in re.finditer(r"\[([^\]]+)\]\(<https?://[^>]+>\)", content):
+            display = m.group(1).strip()
+            # 取 " - " 後面的部分作為關鍵詞（去掉來源站名）
+            if " - " in display:
+                kw = display.split(" - ", 1)[1].strip()
+            else:
+                kw = display
+            if len(kw) > 40:
+                kw = kw[:40]
+            lower = kw.lower()
+            if lower not in seen and len(kw) > 3:
+                seen.add(lower)
+                keywords.append(kw)
+            if len(keywords) >= max_keywords:
+                break
     return " ｜ ".join(keywords[:max_keywords])
 
 
