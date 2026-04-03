@@ -370,19 +370,67 @@ def _split_into_news_items(content: str) -> list[dict]:
 
     _flush()
 
-    # 位置配對
-    n = max(len(all_bullets), len(all_sources))
-    if n == 0 and content.strip():
-        return [{"text": content.strip(), "source": ""}]
-
+    # 配對 bullets 和 sources
     items: list[dict] = []
-    for i in range(n):
-        text = all_bullets[i] if i < len(all_bullets) else ""
-        source = all_sources[i] if i < len(all_sources) else ""
-        if text or source:
-            items.append({"text": text, "source": source})
+    if len(all_bullets) >= len(all_sources):
+        # Bullets ≥ sources：簡單位置配對
+        for i, b in enumerate(all_bullets):
+            src = all_sources[i] if i < len(all_sources) else ""
+            items.append({"text": b, "source": src})
+    else:
+        # Sources > bullets：先位置配對，多餘來源用關鍵字匹配附加
+        for i, b in enumerate(all_bullets):
+            src = all_sources[i] if i < len(all_sources) else ""
+            items.append({"text": b, "source": src})
+        extra = all_sources[len(all_bullets):]
+        for src in extra:
+            best = _find_best_bullet_match(src, items)
+            if best >= 0:
+                items[best]["source"] += "\n" + src
+            elif items:
+                items[-1]["source"] += "\n" + src
 
-    return items if items else [{"text": content.strip(), "source": ""}]
+    if not items and content.strip():
+        items.append({"text": content.strip(), "source": ""})
+
+    return items
+
+
+# 來源連結關鍵字匹配時忽略的常見站名/路徑詞
+_SOURCE_SKIP_WORDS = frozenset({
+    'game', 'developer', 'steam', 'news', 'unity', 'unreal', 'blog',
+    'www', 'com', 'the', 'and', 'for', 'bahamut', 'gnn', 'articles',
+    'business', 'detail', 'php', 'https', 'http', 'how', 'with', 'from',
+})
+
+
+def _find_best_bullet_match(source: str, items: list[dict]) -> int:
+    """用來源的顯示名稱和 URL 路徑中的英文關鍵字，找到最佳配對的 bullet。"""
+    words: set[str] = set()
+    # 從 display name 提取
+    m = re.search(r'\[([^\]]+)\]', source)
+    if m:
+        for w in re.findall(r'[A-Za-z]{3,}', m.group(1)):
+            if w.lower() not in _SOURCE_SKIP_WORDS:
+                words.add(w.lower())
+    # 從 URL 路徑末段提取（常包含標題關鍵字）
+    url_m = re.search(r'<(https?://[^>]+)>', source) or re.search(r'\((https?://[^)]+)\)', source)
+    if url_m:
+        path = url_m.group(1).rsplit('/', 1)[-1].replace('-', ' ')
+        for w in re.findall(r'[A-Za-z]{3,}', path):
+            if w.lower() not in _SOURCE_SKIP_WORDS:
+                words.add(w.lower())
+    if not words:
+        return -1
+    best_idx = -1
+    best_score = 0
+    for i, item in enumerate(items):
+        text_lower = item["text"].lower()
+        score = sum(1 for w in words if w in text_lower)
+        if score > best_score:
+            best_score = score
+            best_idx = i
+    return best_idx
 
 
 def _extract_url_from_source(source: str) -> str:
