@@ -329,117 +329,60 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
 
 def _split_into_news_items(content: str) -> list[dict]:
     """
-    將合併後的段落內容拆分為獨立的新聞條目。
-    支援多個 [資料來源] 區塊（例如 TA 類別合併了 Godot + 80.lv 內容）。
+    將合併後的段落內容拆分為獨立新聞條目，每條配對一個來源連結。
+    採用線性掃描：收集所有 bullet 和來源連結，按位置配對。
     回傳 [{"text": "...", "source": "..."}, ...]
     """
-    # 以 [資料來源] 為分界，切成交替的 body / sources 片段
-    segments = re.split(r"\[資料來源\]\s*\n?", content)
+    all_bullets: list[str] = []
+    all_sources: list[str] = []
+    current_bullet: list[str] = []
 
-    all_items: list[dict] = []
-    for seg_idx, seg in enumerate(segments):
-        if seg_idx == 0:
-            # 第一段純 body
-            body_text = seg.strip()
-            source_lines: list[str] = []
-        else:
-            # 後續段：先是來源連結行，再（可能）接下一區的 body
-            lines = seg.split("\n")
-            src: list[str] = []
-            body_start = len(lines)
-            for li, ln in enumerate(lines):
-                s = ln.strip()
-                if s.startswith("- ["):
-                    src.append(s)
-                elif not s:
-                    continue
-                else:
-                    body_start = li
-                    break
-            source_lines = src
+    def _flush():
+        if current_bullet:
+            all_bullets.append("\n".join(current_bullet))
+            current_bullet.clear()
 
-            # 先把上一段的 bullets 配對來源
-            _pair_bullets_sources(all_items, source_lines)
-
-            # 剩餘行作為下一段 body
-            body_text = "\n".join(lines[body_start:]).strip()
-
-        if not body_text:
-            continue
-
-        # 從 body 中提取 bullets
-        bullets = _extract_bullets_from_body(body_text)
-        if not bullets and body_text.strip():
-            # Fallback: 沒有 bullet 格式，嘗試用來源連結數量拆分段落
-            # 如果有 N 個來源但只有 1 段文字，整段作為 1 條
-            bullets = [body_text.strip()]
-        for b in bullets:
-            all_items.append({"text": b, "source": ""})
-
-    # 最後一段如果有未配對的來源（只有一個 [資料來源] 的單一情況），補做
-    if len(segments) == 1:
-        # 沒有 [資料來源] 標記，整段作為一條
-        if not all_items and content.strip():
-            all_items.append({"text": content.strip(), "source": ""})
-    elif segments:
-        # 最後一段的 sources 在前面已經處理過了
-        pass
-
-    # 如果完全沒有結果但有文字，整段作為一條
-    if not all_items and content.strip():
-        all_items.append({"text": content.strip(), "source": ""})
-
-    return all_items
-
-
-def _extract_bullets_from_body(body: str) -> list[str]:
-    """從 body 文字中提取 bullet 列表，跳過子標題行。"""
-    bullets: list[str] = []
-    current: list[str] = []
-    for line in body.split("\n"):
+    for line in content.split("\n"):
         s = line.strip()
-        if not s or s == "---":
+        if not s or s == "---" or s == "[資料來源]":
             continue
-        # 跳過子標題行（例如 **Unreal Engine 相關：**）
+        # 跳過獨立子標題行（**Unreal Engine 相關：**）
         if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
-            if current:
-                bullets.append("\n".join(current))
-                current = []
+            _flush()
             continue
+        # 來源連結行：以 "- [" 開頭且含 URL
+        if s.startswith("- [") and re.search(r"\(<https?://|\(https?://", s):
+            _flush()
+            all_sources.append(s)
+            continue
+        # Bullet 行
         if s.startswith("- "):
-            # 跳過引擎子標題 bullet（如 "- **Unity**：" 或 "- **Unreal Engine**："）
-            stripped_bullet = re.sub(r"^-\s*", "", s)
-            if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped_bullet):
-                if current:
-                    bullets.append("\n".join(current))
-                    current = []
+            # 跳過引擎子標題 bullet（- **Unity**：）
+            stripped = re.sub(r"^-\s*", "", s)
+            if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped):
+                _flush()
                 continue
-            if current:
-                bullets.append("\n".join(current))
-            current = [s]
-        elif current:
-            current.append(s)
-    if current:
-        bullets.append("\n".join(current))
-    return bullets
+            _flush()
+            current_bullet.append(s)
+            continue
+        # 其他文字：追加到當前 bullet 或作為新的段落
+        current_bullet.append(s)
 
+    _flush()
 
-def _pair_bullets_sources(items: list[dict], source_lines: list[str]) -> None:
-    """將來源連結倒序配對到最近的無 source 項目。"""
-    # 找出最近一批無 source 的 items
-    unpaired = []
-    for i in range(len(items) - 1, -1, -1):
-        if not items[i]["source"]:
-            unpaired.insert(0, i)
-        else:
-            break
-    for j, idx in enumerate(unpaired):
-        if j < len(source_lines):
-            items[idx]["source"] = source_lines[j]
-    # 剩餘的來源附到最後一條
-    if len(source_lines) > len(unpaired) and items:
-        extra = source_lines[len(unpaired):]
-        items[-1]["source"] += ("\n" if items[-1]["source"] else "") + "\n".join(extra)
+    # 位置配對
+    n = max(len(all_bullets), len(all_sources))
+    if n == 0 and content.strip():
+        return [{"text": content.strip(), "source": ""}]
+
+    items: list[dict] = []
+    for i in range(n):
+        text = all_bullets[i] if i < len(all_bullets) else ""
+        source = all_sources[i] if i < len(all_sources) else ""
+        if text or source:
+            items.append({"text": text, "source": source})
+
+    return items if items else [{"text": content.strip(), "source": ""}]
 
 
 def _extract_url_from_source(source: str) -> str:
@@ -799,18 +742,21 @@ def send_to_discord_forum() -> None:
         if not thread_id:
             continue
 
-        # 逐條發送獨立 Embed
+        # 逐條發送：文章 Embed → 資料來源 Embed 交替
         for idx, item in enumerate(news_items, 1):
-            # 從 bullet 文字提取簡短標題
-            raw = re.sub(r"^\-\s*", "", item["text"].split("\n")[0]).strip()
-            # 用粗體或書名號內容做標題，否則用前 50 字
-            title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
-            embed_title = title_match.group(1)[:80] if title_match else raw[:50]
-            # 從來源連結抓取 og:image 作為縮圖
-            src_url = _extract_url_from_source(item["source"])
-            thumb = _fetch_og_image(src_url)
-            _post_embed_to_thread(thread_id, embed_title, item["text"], color, item["source"], thumbnail_url=thumb)
-            time.sleep(0.8)
+            # 文章 Embed
+            if item["text"]:
+                raw = re.sub(r"^\-\s*", "", item["text"].split("\n")[0]).strip()
+                title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
+                embed_title = title_match.group(1)[:80] if title_match else raw[:50]
+                _post_embed_to_thread(thread_id, embed_title, item["text"], color)
+                time.sleep(0.5)
+            # 資料來源 Embed（獨立顯示，帶 og:image 縮圖）
+            if item["source"]:
+                src_url = _extract_url_from_source(item["source"])
+                thumb = _fetch_og_image(src_url)
+                _post_embed_to_thread(thread_id, "📎 資料來源", item["source"], color, thumbnail_url=thumb)
+                time.sleep(0.5)
 
         time.sleep(1.5)
 

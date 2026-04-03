@@ -51,10 +51,10 @@ jobs:
         FORUM_TAG_3D_ID: ${{ secrets.FORUM_TAG_3D_ID }}
       run: |
         echo "Starting daily report generation..."
-        python generate_report.py
+        # python generate_report.py  # 暫時停用：調校論壇格式中
         
         echo "Fetching images..."
-        python fetch_images_v2.py
+        # python fetch_images_v2.py  # 暫時停用：調校論壇格式中
         
         echo "Sending to Discord (Webhook)..."
         # python discord_webhook_sender.py  # 暫時停用普通日報頻道
