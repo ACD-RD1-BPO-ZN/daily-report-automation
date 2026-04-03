@@ -172,6 +172,7 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
     """
     將段落的 bullet 依引擎關鍵字分流。
     回傳 {tag_key: content_str}，非引擎相關的放在 default_tag。
+    來源連結跟隨對應的 bullet 路由，而非獨立比對關鍵字。
     """
     # 移除開頭粗體標題行
     content = re.sub(r"^\*\*[^\n]+\*\*\s*\n*", "", content, count=1).strip()
@@ -187,6 +188,7 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
 
     # 路由 bullet
     routed_bullets: dict[str, list[str]] = {}
+    routed_tags: set[str] = set()        # 被分流到哪些引擎 tag
     for line in body.split("\n"):
         s = line.strip()
         if not s or s == "---":
@@ -198,16 +200,20 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
                 target = tag_key
                 break
         routed_bullets.setdefault(target, []).append(line)
+        if target != default_tag:
+            routed_tags.add(target)
 
-    # 路由來源連結
+    # 路由來源連結：只有 bullet 確實被分流的引擎 tag 才會收對應來源
     routed_sources: dict[str, list[str]] = {}
     for line in source_lines:
         target = default_tag
-        lower = line.strip().lower()
-        for tag_key, keywords in ENGINE_ROUTE_KEYWORDS.items():
-            if any(kw in lower for kw in keywords):
-                target = tag_key
-                break
+        if routed_tags:
+            lower = line.strip().lower()
+            for tag_key in routed_tags:
+                kws = ENGINE_ROUTE_KEYWORDS.get(tag_key, [])
+                if any(kw in lower for kw in kws):
+                    target = tag_key
+                    break
         routed_sources.setdefault(target, []).append(line)
 
     # 組合結果
