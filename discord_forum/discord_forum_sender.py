@@ -327,6 +327,169 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
     return " ｜ ".join(keywords[:max_keywords])
 
 
+def _split_into_news_items(content: str) -> list[dict]:
+    """
+    將合併後的段落內容拆分為獨立的新聞條目。
+    支援多個 [資料來源] 區塊（例如 TA 類別合併了 Godot + 80.lv 內容）。
+    回傳 [{"text": "...", "source": "..."}, ...]
+    """
+    # 以 [資料來源] 為分界，切成交替的 body / sources 片段
+    segments = re.split(r"\[資料來源\]\s*\n?", content)
+
+    all_items: list[dict] = []
+    for seg_idx, seg in enumerate(segments):
+        if seg_idx == 0:
+            # 第一段純 body
+            body_text = seg.strip()
+            source_lines: list[str] = []
+        else:
+            # 後續段：先是來源連結行，再（可能）接下一區的 body
+            lines = seg.split("\n")
+            src: list[str] = []
+            body_start = len(lines)
+            for li, ln in enumerate(lines):
+                s = ln.strip()
+                if s.startswith("- ["):
+                    src.append(s)
+                elif not s:
+                    continue
+                else:
+                    body_start = li
+                    break
+            source_lines = src
+
+            # 先把上一段的 bullets 配對來源
+            _pair_bullets_sources(all_items, source_lines)
+
+            # 剩餘行作為下一段 body
+            body_text = "\n".join(lines[body_start:]).strip()
+
+        if not body_text:
+            continue
+
+        # 從 body 中提取 bullets
+        bullets = _extract_bullets_from_body(body_text)
+        for b in bullets:
+            all_items.append({"text": b, "source": ""})
+
+    # 最後一段如果有未配對的來源（只有一個 [資料來源] 的單一情況），補做
+    if len(segments) == 1:
+        # 沒有 [資料來源] 標記，整段作為一條
+        if not all_items and content.strip():
+            all_items.append({"text": content.strip(), "source": ""})
+    elif segments:
+        # 最後一段的 sources 在前面已經處理過了
+        pass
+
+    # 如果完全沒有結果但有文字，整段作為一條
+    if not all_items and content.strip():
+        all_items.append({"text": content.strip(), "source": ""})
+
+    return all_items
+
+
+def _extract_bullets_from_body(body: str) -> list[str]:
+    """從 body 文字中提取 bullet 列表，跳過子標題行。"""
+    bullets: list[str] = []
+    current: list[str] = []
+    for line in body.split("\n"):
+        s = line.strip()
+        if not s or s == "---":
+            continue
+        # 跳過子標題行（例如 **Unreal Engine 相關：**）
+        if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
+            if current:
+                bullets.append("\n".join(current))
+                current = []
+            continue
+        if s.startswith("- "):
+            # 跳過引擎子標題 bullet（如 "- **Unity**：" 或 "- **Unreal Engine**："）
+            stripped_bullet = re.sub(r"^-\s*", "", s)
+            if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped_bullet):
+                if current:
+                    bullets.append("\n".join(current))
+                    current = []
+                continue
+            if current:
+                bullets.append("\n".join(current))
+            current = [s]
+        elif current:
+            current.append(s)
+    if current:
+        bullets.append("\n".join(current))
+    return bullets
+
+
+def _pair_bullets_sources(items: list[dict], source_lines: list[str]) -> None:
+    """將來源連結倒序配對到最近的無 source 項目。"""
+    # 找出最近一批無 source 的 items
+    unpaired = []
+    for i in range(len(items) - 1, -1, -1):
+        if not items[i]["source"]:
+            unpaired.insert(0, i)
+        else:
+            break
+    for j, idx in enumerate(unpaired):
+        if j < len(source_lines):
+            items[idx]["source"] = source_lines[j]
+    # 剩餘的來源附到最後一條
+    if len(source_lines) > len(unpaired) and items:
+        extra = source_lines[len(unpaired):]
+        items[-1]["source"] += ("\n" if items[-1]["source"] else "") + "\n".join(extra)
+
+
+def _extract_url_from_source(source: str) -> str:
+    """從來源連結文字中提取第一個 URL。"""
+    m = re.search(r"<(https?://[^>]+)>", source) or re.search(r"\((https?://[^)]+)\)", source)
+    return m.group(1) if m else ""
+
+
+def _fetch_og_image(url: str) -> str:
+    """抓取網頁的 og:image，回傳圖片 URL；失敗則回傳空字串。"""
+    if not url:
+        return ""
+    try:
+        resp = requests.get(url, timeout=6, headers={"User-Agent": "Mozilla/5.0"})
+        if not resp.ok:
+            return ""
+        pat1 = r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\'>]+)["\']'
+        pat2 = r'<meta[^>]+content=["\']([^"\'>]+)["\'][^>]+property=["\']og:image["\']'
+        m = re.search(pat1, resp.text) or re.search(pat2, resp.text)
+        return m.group(1) if m else ""
+    except Exception:
+        return ""
+
+
+def _post_embed_to_thread(thread_id: str, title: str, description: str,
+                          color: int = DEFAULT_COLOR, source: str = "",
+                          thumbnail_url: str = "") -> None:
+    """在討論串中發送一則獨立的 Embed 訊息（用於單條新聞展示）。"""
+    if source:
+        description += f"\n\n{source}"
+
+    if DRY_RUN:
+        thumb_tag = f" 🖼️" if thumbnail_url else ""
+        print(f"  [DRY-RUN] 📰 {title[:60]}{thumb_tag}")
+        print(f"  [DRY-RUN]    {description[:150]}")
+        return
+
+    url = f"https://discord.com/api/v10/channels/{thread_id}/messages"
+    headers = {
+        "Authorization": f"Bot {BOT_TOKEN}",
+        "Content-Type": "application/json",
+    }
+    embed: dict = {"description": description[:4096], "color": color}
+    if title:
+        embed["title"] = title[:256]
+    if thumbnail_url:
+        embed["thumbnail"] = {"url": thumbnail_url}
+    resp = requests.post(url, headers=headers, json={"embeds": [embed]})
+    if not resp.ok:
+        print(f"  ❌ Embed 發送失敗 [{resp.status_code}]: {resp.text[:200]}")
+    else:
+        print(f"  📰 已發送: {title[:50]}")
+
+
 
 
 
@@ -499,7 +662,7 @@ def send_to_discord_forum() -> None:
         if tag_key not in bucket_imgs and img_path:
             bucket_imgs[tag_key] = img_path
 
-    # 6. 依標籤建立討論串（固定順序）
+    # 6. 依標籤建立討論串，每條新聞獨立 Embed
     TAG_ORDER = ["ai", "3d", "unity", "ue", "ta", "global", "indie", "headline"]
     for tag_key in TAG_ORDER:
         if tag_key not in buckets:
@@ -511,7 +674,30 @@ def send_to_discord_forum() -> None:
         thread_name = f"{date_str} | {display_name}"[:100]
         img = bucket_imgs.get(tag_key)
         kw = _extract_keywords(merged)
-        _create_forum_thread(thread_name, display_name, merged, tag_ids, img, color, keywords=kw)
+
+        # 建立討論串（首則訊息為概覽：標題 + 關鍵詞 + 圖片）
+        thread_id = _create_forum_thread(
+            thread_name, display_name,
+            f"今日 {display_name} 共 {len(_split_into_news_items(merged))} 則新聞，請往下瀏覽各則詳情。",
+            tag_ids, img, color, keywords=kw,
+        )
+        if not thread_id:
+            continue
+
+        # 拆分並逐條發送獨立 Embed
+        news_items = _split_into_news_items(merged)
+        for idx, item in enumerate(news_items, 1):
+            # 從 bullet 文字提取簡短標題
+            raw = re.sub(r"^\-\s*", "", item["text"].split("\n")[0]).strip()
+            # 用粗體或書名號內容做標題，否則用前 50 字
+            title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
+            embed_title = title_match.group(1)[:80] if title_match else raw[:50]
+            # 從來源連結抓取 og:image 作為縮圖
+            src_url = _extract_url_from_source(item["source"])
+            thumb = _fetch_og_image(src_url)
+            _post_embed_to_thread(thread_id, embed_title, item["text"], color, item["source"], thumbnail_url=thumb)
+            time.sleep(0.8)
+
         time.sleep(1.5)
 
     print("✅ 所有段落已成功發布至 Discord 論壇頻道！")
