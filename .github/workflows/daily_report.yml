@@ -50,11 +50,11 @@ jobs:
         FORUM_TAG_TA_ID: ${{ secrets.FORUM_TAG_TA_ID }}
         FORUM_TAG_3D_ID: ${{ secrets.FORUM_TAG_3D_ID }}
       run: |
-        echo "Starting daily report generation..."
-        python generate_report.py
+        # echo "Starting daily report generation..."
+        # python generate_report.py
         
-        echo "Fetching images..."
-        python fetch_images_v2.py
+        # echo "Fetching images..."
+        # python fetch_images_v2.py
         
         # echo "Sending to Discord (Webhook)..."
         # python discord_webhook_sender.py
