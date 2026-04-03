@@ -670,13 +670,12 @@ def send_to_discord_forum() -> None:
             img_path = section_name_to_img.get(SECTION_IMG_KEY[emoji_found])
 
         # 🎨 引擎段落：拆分後路由到各引擎標籤桶
+        # 不將共用的 TA section 圖片分配給各引擎桶，改由各串自行抓取 og:image
         if "🎨" in section[:80]:
             engine_parts = _split_engine_section(message_content)
             for eng_content, eng_tag_keys, _eng_title in engine_parts:
                 tag_key = eng_tag_keys[0]
                 buckets.setdefault(tag_key, []).append(eng_content)
-                if tag_key not in bucket_imgs and img_path:
-                    bucket_imgs[tag_key] = img_path
             continue
 
         # 💼 製作人週記：依引擎關鍵字分流
@@ -720,16 +719,28 @@ def send_to_discord_forum() -> None:
         # 判斷是否需要用 og:image 替代重複的本地圖片
         og_fallback_url: str | None = None
         if img and img in used_img_paths:
-            # 此圖片已被前一個討論串使用，改用第一條新聞的 og:image
+            # 此圖片已被前一個討論串使用，嘗試從新聞來源抓取 og:image
             print(f"🔄 {tag_key}: 本地圖片已被其他串使用，嘗試抓取 og:image 替代...")
-            if news_items:
-                src_url = _extract_url_from_source(news_items[0].get("source", ""))
-                og_fallback_url = _fetch_og_image(src_url)
-            if og_fallback_url:
-                print(f"✅ {tag_key}: 使用 og:image 作為串縮圖: {og_fallback_url[:80]}")
-                img = None  # 不使用本地檔案，改用 og:image URL
-            else:
-                print(f"⚠️ {tag_key}: 無法取得 og:image，仍使用原圖")
+            for item in news_items:
+                src_url = _extract_url_from_source(item.get("source", ""))
+                if src_url:
+                    og_fallback_url = _fetch_og_image(src_url)
+                    if og_fallback_url:
+                        print(f"✅ {tag_key}: 使用 og:image 作為串縮圖: {og_fallback_url[:80]}")
+                        break
+            # 不論是否找到 og:image，都不再使用重複的本地圖片
+            img = None
+            if not og_fallback_url:
+                print(f"⚠️ {tag_key}: 所有來源均無 og:image，此串不使用縮圖")
+        elif not img and news_items:
+            # 沒有本地圖片（例如引擎子串），主動從新聞來源抓取 og:image
+            for item in news_items:
+                src_url = _extract_url_from_source(item.get("source", ""))
+                if src_url:
+                    og_fallback_url = _fetch_og_image(src_url)
+                    if og_fallback_url:
+                        print(f"🖼️ {tag_key}: 使用 og:image 作為串縮圖: {og_fallback_url[:80]}")
+                        break
         if img:
             used_img_paths.add(img)
 
