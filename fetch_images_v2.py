@@ -517,93 +517,47 @@ async def main():
             ai_prompt = item.get("ai_prompt")
             image_keywords = item.get("image_keywords", [])
             
-            # For AI Synthesis
+            # For AI Synthesis — 已停用 Imagen API 以節省費用，直接跳過
             if sec_type == "Synthesis" or (source_urls and source_urls[0] == "GENERATE_AI_IMAGE"):
-                print(f"\n--- Generating AI Synthesis Art for Section: {sec_type} ---")
-                print(f"Prompt: {ai_prompt}")
-                success = False
-                
-                try:
-                    from google import genai as new_genai
-                    from google.genai import types as genai_types
-                    
-                    API_KEY = os.getenv("GEMINI_API_KEY")
-                    if not API_KEY:
-                        print("Error: GEMINI_API_KEY not found in environment for Image Generation.")
-                        success = False
-                        break
-                    
-                    client = new_genai.Client(api_key=API_KEY)
-                    
-                    target_path = os.path.join(assets_dir, filename)
-                    print(f"AI Image: Requesting imagen-4.0-generate-001...")
-                    result = client.models.generate_images(
-                        model='imagen-4.0-generate-001',
-                        prompt=ai_prompt,
-                        config=genai_types.GenerateImagesConfig(
-                            number_of_images=1,
-                            output_mime_type="image/png",
-                            aspect_ratio="16:9",
-                        )
-                    )
-                    
-                    if result.generated_images:
-                        generated_image = result.generated_images[0]
-                        image_bytes = generated_image.image.image_bytes
-                        png_bytes = convert_to_png(image_bytes)
-                        with open(target_path, 'wb') as f:
-                            f.write(png_bytes)
-                        file_size = os.path.getsize(target_path)
-                        print(f"AI Image: ✅ Successfully saved ({file_size} bytes) to {target_path} using Gemini API")
-                        success = True
-                    else:
-                        print("AI Image: ❌ Failed to generate from Gemini API, no images returned.")
-                        
-                except Exception as e:
-                    print(f"AI Image Fallback: ❌ Error during Gemini Image generation: {e}")
-                
-                if not success:
-                    target_path = os.path.join(assets_dir, filename)
-                    print(f"AI Image absolute fallback: Copying default_cover.png to {target_path}")
-                    if os.path.exists(default_cover_path):
-                        shutil.copy(default_cover_path, target_path)
-            else:
-                if not source_urls:
-                    print(f"No URLs provided for target: {filename}. Skipping.")
-                    continue
-                    
-                target_path = os.path.join(assets_dir, filename)
-                print(f"Target path: {target_path}")
-                
-                success = False
-                for target_url in source_urls:
-                    print(f"\nEvaluating URL for {sec_type}: {target_url}")
-                    is_downloaded = await download_image(target_url, target_path, sec_type, image_keywords, used_image_urls)
-                    if is_downloaded:
-                        print(f"✅ Successfully acquired image for {sec_type} from {target_url}")
-                        success = True
-                        break
-                    else:
-                        print(f"❌ Failed to acquire image from {target_url}, trying next URL...")
-                
-                # 執行 Global Fallback
-                if not success:
-                    print(f"❌ Failed to acquire image from primary URLs, attempting Global Fallback for {sec_type}...")
-                    for fallback_url in global_candidate_urls:
-                        # 避免重複抓取剛剛已經失敗的 URL 或已經使用的 URL
-                        if fallback_url in source_urls or normalize_image_url(fallback_url) in used_image_urls:
-                            continue
-                        print(f"  Attempting Global Fallback URL: {fallback_url}")
-                        is_downloaded = await download_image(fallback_url, target_path, sec_type, [], used_image_urls)
-                        if is_downloaded:
-                            print(f"✅ Successfully acquired image for {sec_type} via Global Fallback from {fallback_url}")
-                            success = True
-                            break
+                print(f"⏭  跳過 AI 圖片生成（Synthesis）：節省 Imagen API 費用")
+                continue
 
-                if not success:
-                    print(f"⚠ Absolute failure for {sec_type}. Using AI Synthesis Placeholder fallback cover.")
-                    if os.path.exists(default_cover_path):
-                        shutil.copy(default_cover_path, target_path)
+            if not source_urls:
+                print(f"No URLs provided for target: {filename}. Skipping.")
+                continue
+                
+            target_path = os.path.join(assets_dir, filename)
+            print(f"Target path: {target_path}")
+            
+            success = False
+            for target_url in source_urls:
+                print(f"\nEvaluating URL for {sec_type}: {target_url}")
+                is_downloaded = await download_image(target_url, target_path, sec_type, image_keywords, used_image_urls)
+                if is_downloaded:
+                    print(f"✅ Successfully acquired image for {sec_type} from {target_url}")
+                    success = True
+                    break
+                else:
+                    print(f"❌ Failed to acquire image from {target_url}, trying next URL...")
+            
+            # 執行 Global Fallback
+            if not success:
+                print(f"❌ Failed to acquire image from primary URLs, attempting Global Fallback for {sec_type}...")
+                for fallback_url in global_candidate_urls:
+                    # 避免重複抓取剛剛已經失敗的 URL 或已經使用的 URL
+                    if fallback_url in source_urls or normalize_image_url(fallback_url) in used_image_urls:
+                        continue
+                    print(f"  Attempting Global Fallback URL: {fallback_url}")
+                    is_downloaded = await download_image(fallback_url, target_path, sec_type, [], used_image_urls)
+                    if is_downloaded:
+                        print(f"✅ Successfully acquired image for {sec_type} via Global Fallback from {fallback_url}")
+                        success = True
+                        break
+
+            if not success:
+                print(f"⚠ Absolute failure for {sec_type}. Using default cover fallback.")
+                if os.path.exists(default_cover_path):
+                    shutil.copy(default_cover_path, target_path)
                 
         except Exception as e:
             # 強化容錯處理 (Error Handling)，確保不會 Crash 整個迴圈
