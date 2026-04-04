@@ -65,6 +65,37 @@
   - **職責**：擷取報告中的特定段落（今日頭條）並發送至 Facebook Page。
   - **核心行為**：使用正規表達式精準擷取頭條段落的純文字，並透過 Facebook Graph API 結合 `headline_YYYYMMDD.png` 發布推文。
 
+#### 2.3.1 社群互動層: `discord_bot/main.py` (Z 幣金幣機器人)
+- **職責**：社群獎勵發放 (Community Reward Dispatcher)。這是一個**獨立常駐的 Discord Bot**，與日報自動化管線完全解耦，專門負責管理員手動觸發的虛擬金幣（Z 幣）空投任務。
+- **依賴第三方 API**：透過 **UnbelievaBoat (UB) API** (`PATCH /guilds/{guild_id}/users/{user_id}`) 向特定成員的錢包存入金幣。
+- **核心指令清單**（前綴 `!`，**僅限管理員**）：
+
+  | 指令 | 功能描述 |
+  |---|---|
+  | `!空投 <金額> @成員 <原因>` | 對單一對象正式發放金幣，公告至正式頻道 |
+  | `!測試空投 <金額> @成員 <原因>` | 對單一對象測試發放，公告至測試頻道（面板呈現灰色） |
+  | `!多重空投 <金額> @成員A @成員B... <原因>` | 對多位指定成員批次發放，合併為單一公告面板 |
+  | `!測試多重空投 <金額> @成員A @成員B... <原因>` | 多重空投的測試版，公告至測試頻道 |
+  | `!互動發放 <訊息ID> <金額> <原因>` | 掃描指定訊息的所有 Emoji 反應，自動發放給所有互動者（**自動去重複**） |
+  | `!測試互動發放 <訊息ID> <金額> <原因>` | 互動發放的測試版，公告至測試頻道 |
+  | `!全體空投 <金額> <原因>` | 對全伺服器所有非機器人成員進行群發（需 `members` Intent） |
+
+- **核心保護機制**：
+  - **速率限制保護**：所有批次 API 請求均在迴圈中加入 `await asyncio.sleep(0.2)`（每秒最多處理 5 人），防止觸發 UB API 或 Discord 的 Rate Limit (429)。**禁止移除此保護**。
+  - **Embed 字元截斷**：成功名單 (`@user1 @user2...`) 若超過 Discord Embed 欄位 1024 字元上限，自動截斷並加上 `...`。
+  - **廣播隔離**：管理員在隱密後台頻道輸入指令，公告面板只會發送至對外的 `TARGET_CHANNEL_ID`，指令本身不外洩。
+- **所需環境變數**（讀取自根目錄 `.env` 或 `discord_bot/.env`）：
+  - `DISCORD_TOKEN`：Bot 登入 Token。
+  - `UB_TOKEN`：UnbelievaBoat API 授權 Token。
+  - `GUILD_ID`：目標伺服器 ID。
+  - `TARGET_CHANNEL_ID`：正式空投公告頻道 ID。
+  - `TEST_CHANNEL_ID`：測試版公告頻道 ID。
+  - `OFFICIAL_MENTION`：正式公告的 @mention 對象（`everyone` 或 Role ID）。
+  - `TEST_MENTION`：測試公告的 @mention 對象。
+- **注意事項**：
+  - `!互動發放` 的訊息搜尋範圍**僅限**：①指令發動的當下頻道、②`TARGET_CHANNEL_ID` 頻道。若目標訊息在其他頻道，需在該頻道直接輸入指令。
+  - 本 Bot 為**長駐進程**（`bot.run()`），需在專屬伺服器/本地環境獨立啟動，**不由 GitHub Actions 管線觸發**。
+
 #### 2.4 自動化排程層: `.github/workflows/daily_report.yml`
 - **職責**：CI/CD 與環境變數注入。
 - **核心行為**：

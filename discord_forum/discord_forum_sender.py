@@ -889,9 +889,11 @@ def send_to_discord_forum() -> None:
         time.sleep(1.5)
 
     # 最後建立一個分割線討論串，用於視覺區隔前一天的內容
+    # 套上所有可用標籤（上限5個），確保任何標籤篩選下都能看到分隔線
     divider_name = f"━━━ {date_str} ━━━"
+    all_tag_ids = [v for v in TAG_IDS.values() if v][:5]
     if DRY_RUN:
-        print(f"[DRY-RUN] 分割線 : {divider_name}")
+        print(f"[DRY-RUN] 分割線 : {divider_name}  標籤: {list(TAG_IDS.keys())[:5]}")
     else:
         url = f"https://discord.com/api/v10/channels/{FORUM_CHANNEL_ID}/threads"
         headers = {"Authorization": f"Bot {BOT_TOKEN}", "Content-Type": "application/json"}
@@ -901,6 +903,7 @@ def send_to_discord_forum() -> None:
         }
         payload = {
             "name": divider_name[:100],
+            "applied_tags": all_tag_ids,
             "message": {"content": "", "embeds": [divider_embed]},
         }
         resp = requests.post(url, headers=headers, json=payload)

@@ -3,7 +3,10 @@ from discord.ext import commands
 import aiohttp
 import os
 import asyncio
+import sys
 from dotenv import load_dotenv
+import datetime
+from discord.ext import tasks
 
 # --- 1. 環境變數加載 (Environmental Configuration) ---
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +16,7 @@ parent_dir = os.path.dirname(current_dir)
 env_path = os.path.join(parent_dir, '.env') if os.path.exists(os.path.join(parent_dir, '.env')) else os.path.join(current_dir, '.env')
 load_dotenv(env_path)
 
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+DISCORD_TOKEN = os.getenv('DISCORD_BOT_TOKEN')
 UB_TOKEN = os.getenv('UB_TOKEN')
 GUILD_ID = os.getenv('GUILD_ID')
 TARGET_CHANNEL_ID = os.getenv('TARGET_CHANNEL_ID')
@@ -462,13 +465,118 @@ async def global_airdrop(ctx, amount: int, *, reason: str = "慶祝「AI 自動�
         # 在發送端顯示成功人數（僅管理員可見，不公開）
         await status_msg.edit(content=f"✅ 全體空投任務圓滿完成！成功發放對象：{success_count} 位成員。")
 
-# --- 5. 事件與報錯處理 ---
+async def build_total_leaderboard_embed():
+    url = f"https://unbelievaboat.com/api/v1/guilds/{GUILD_ID}/users/?sort=total&limit=10"
+    headers = {"Authorization": UB_TOKEN, "Accept": "application/json"}
+    
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, headers=headers) as response:
+            if response.status != 200:
+                return None
+            
+            response_data = await response.json()
+            data = response_data.get('users', response_data) if isinstance(response_data, dict) else response_data
+            
+    if not data:
+        return None
+        
+    embed = discord.Embed(
+        title="🏆 金幣排行榜",
+        description="累積活躍度前五名",
+        color=0xFFD700
+    )
+    embed.set_thumbnail(url=Z_COIN_ICON_URL)
+    
+    # 排除特定使用者，並取回真正的 Top 5
+    exclude_ids = ["1394136025487638608"]
+    filtered_data = [u for u in data if str(u.get('user_id')) not in exclude_ids]
+    display_data = filtered_data[:5]
+    
+    medals = ["🥇", "🥈", "🥉", "🏅", "🏅"]
+    for idx, user_data in enumerate(display_data):
+        user_id = user_data.get('user_id')
+        total_cash = user_data.get('total', 0)
+        
+        # 顯示名稱預設使用提到 (<@ID>)，若是 Bot 緩存有抓到就用 display_name
+        user = bot.get_user(int(user_id))
+        display_name = user.display_name if user else f"<@{user_id}>"
+            
+        medal = medals[idx] if idx < len(medals) else "🏅"
+        embed.add_field(
+            name=f"{medal} 第 {idx+1} 名", 
+            value=f"{display_name} - <:Gold_coin:1483028967152681010> **{total_cash}** 金幣", 
+            inline=False
+        )
+        
+    embed.set_footer(text="AI 自動日報系統 | 感謝您的支持")
+    return embed
+
+@bot.command(name='測試總數排行')
+@commands.has_permissions(administrator=True)
+async def test_total_leaderboard(ctx):
+    """取得伺服器內金幣排名前五名，並發布在測試頻道"""
+    status_msg = await ctx.send("⏳ 正在撈取伺服器總金幣排行榜...")
+    
+    embed = await build_total_leaderboard_embed()
+    if not embed:
+        await status_msg.edit(content="❌ 無法取得排行榜資料或資料為空。")
+        return
+    
+    target_channel = bot.get_channel(int(TEST_CHANNEL_ID))
+    if target_channel:
+        await target_channel.send(content="🧪 **[測試] 最新排行榜結算出爐！**", embed=embed)
+        await status_msg.edit(content=f"✅ 排行榜已成功發布至測試頻道 {target_channel.mention}！")
+    else:
+        await status_msg.edit(content="❌ 找不到測試頻道，請確認 TEST_CHANNEL_ID。")
+        
+@bot.command(name='總數排行')
+@commands.has_permissions(administrator=True)
+async def total_leaderboard(ctx):
+    """取得伺服器內金幣排名前五名，並手動發布在正式頻道"""
+    status_msg = await ctx.send("⏳ 正在撈取伺服器總金幣排行榜...")
+    
+    embed = await build_total_leaderboard_embed()
+    if not embed:
+        await status_msg.edit(content="❌ 無法取得排行榜資料或資料為空。")
+        return
+    
+    target_channel = bot.get_channel(int(TARGET_CHANNEL_ID))
+    if target_channel:
+        # 不標註任何人，單純發送文字跟 embed
+        await target_channel.send(content="🏆 **金幣排行榜結算出爐！**", embed=embed)
+        await status_msg.edit(content=f"✅ 排行榜已成功發布至正式頻道 {target_channel.mention}！")
+    else:
+        await status_msg.edit(content="❌ 找不到正式頻道，請確認 TARGET_CHANNEL_ID。")
 
 @bot.event
 async def on_ready():
     activity = discord.Activity(type=discord.ActivityType.listening, name="空投指令")
     await bot.change_presence(status=discord.Status.online, activity=activity)
     print(f'✅ AI 補給系統 [{bot.user.name}] 已連線，專案：AI 自動日報系統')
+    
+    # 檢查是否為 GitHub Actions 的一次性自動執行模式
+    if "--auto-weekly" in sys.argv:
+        print("偵測到 --auto-weekly 參數，執行一次性發布流程...")
+        tz = datetime.timezone(datetime.timedelta(hours=8))
+        now = datetime.datetime.now(tz)
+        
+        if now.weekday() == 0:  # 0代表星期一 (也就是星期天半夜)
+            target_channel = bot.get_channel(int(TARGET_CHANNEL_ID))
+            if target_channel:
+                embed = await build_total_leaderboard_embed()
+                if embed:
+                    await target_channel.send(content="🏆 **每週金幣排行榜結算出爐！**", embed=embed)
+                    print("✅ 自動每週排行榜已成功發布。")
+                else:
+                    print("❌ 取得排行榜失敗或資料為空。")
+            else:
+                print("❌ 找不到正式頻道，跳過發布。")
+        else:
+            print(f"今天不是星期一 (weekday={now.weekday()})，跳過排行榜發布。")
+            
+        print("一次性任務結束，關閉機器人...")
+        await bot.close()
+        return
 
 @official_airdrop.error
 @test_airdrop.error
@@ -477,6 +585,8 @@ async def on_ready():
 @test_multi_airdrop.error 
 @reaction_airdrop.error
 @test_reaction_airdrop.error
+@test_total_leaderboard.error
+@total_leaderboard.error
 async def airdrop_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("🚫 權限不足：只有系統管理員可以使用此空投權限。")
