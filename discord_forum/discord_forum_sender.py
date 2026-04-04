@@ -189,7 +189,6 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
 
     # 路由 bullet
     routed_bullets: dict[str, list[str]] = {}
-    routed_tags: set[str] = set()        # 被分流到哪些引擎 tag
     for line in body.split("\n"):
         s = line.strip()
         if not s or s == "---":
@@ -201,20 +200,18 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
                 target = tag_key
                 break
         routed_bullets.setdefault(target, []).append(line)
-        if target != default_tag:
-            routed_tags.add(target)
 
-    # 路由來源連結：只有 bullet 確實被分流的引擎 tag 才會收對應來源
+    # 路由來源連結：找到最匹配的 bullet，繼承該 bullet 的 tag
+    # 避免 [Unity - xxx] 顯示名稱把 Esoteric Ebb 等非引擎文章誤路由到 unity bucket
     routed_sources: dict[str, list[str]] = {}
+    all_routed_pairs = [(b, t) for t, bullets in routed_bullets.items() for b in bullets]
     for line in source_lines:
         target = default_tag
-        if routed_tags:
-            lower = line.strip().lower()
-            for tag_key in routed_tags:
-                kws = ENGINE_ROUTE_KEYWORDS.get(tag_key, [])
-                if any(kw in lower for kw in kws):
-                    target = tag_key
-                    break
+        if all_routed_pairs:
+            tmp_items = [{"text": b, "source": ""} for b, _ in all_routed_pairs]
+            best_idx = _find_best_bullet_match(line, tmp_items)
+            if best_idx >= 0:
+                target = all_routed_pairs[best_idx][1]
         routed_sources.setdefault(target, []).append(line)
 
     # 組合結果
@@ -868,8 +865,17 @@ def send_to_discord_forum() -> None:
                 continue
             base = item["text"] or item["source"]
             raw = re.sub(r"^\-\s*", "", base.split("\n")[0]).strip()
+            # 優先從 **bold** 或 《書名》 取標題（短且不重複內文）
             title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
-            embed_title = title_match.group(1)[:80] if title_match else raw[:50]
+            embed_title = title_match.group(1)[:80] if title_match else ""
+            # 若無 bold/書名 → 從來源連結顯示名稱提取（避免 title 與 description 重複）
+            if not embed_title and item["source"]:
+                src_m = re.search(r'\[([^\]]+)\]', item["source"])
+                if src_m:
+                    display = src_m.group(1)
+                    embed_title = display.split(" - ", 1)[1].strip()[:80] if " - " in display else display[:80]
+            if not embed_title:
+                embed_title = raw[:50]
             # 抓取文章縮圖（og:image）
             thumb = ""
             if item["source"]:
