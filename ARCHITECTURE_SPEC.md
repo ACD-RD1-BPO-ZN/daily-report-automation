@@ -1,7 +1,9 @@
 # 遊戲產業自動化日報系統分析與架構規格書 (Architecture Specification)
 
+> 最後更新：2026-04-04
+
 ## 1. 專案概述 (Project Overview)
-本專案 (`daily-report-automation`) 是一個完全自動化的遊戲產業新聞摘要與發布系統。它每天定時從多個遊戲開發相關的 RSS 及網頁來源抓取最新資訊，利用大語言模型 (Gemini 2.5 Flash) 進行摘要總結並排版成 Markdown 格式，同時動態抓取或生成配圖 (Playwright / Gemini Imagen)，最後自動推播至 Discord 等社群平台。
+本專案 (`daily-report-automation`) 是一個完全自動化的遊戲產業新聞摘要與發布系統。它每天定時從多個遊戲開發相關的 RSS 及網頁來源抓取最新資訊，利用大語言模型 (Gemini 2.5 Flash) 進行摘要總結並排版成 Markdown 格式，同時動態爬取配圖 (Playwright / requests)，最後自動推播至 Discord Webhook（普通日報）與 Discord 論壇頻道（論壇版日報）。
 
 此規格書旨在確立目前的系統核心架構、資料流及各模組職責，作為未來新增功能（如：新增新聞來源、新增發布渠道）時的核心設計準則，確保系統的穩定性與高擴展性。
 
@@ -24,32 +26,40 @@
   - `daily_targets.json`：後續爬圖腳本所需的圖片抓取指示清單 (包含 `section_name`, `source_urls`, `image_keywords` 與 AI 算圖用的 `ai_prompt`)。
 
 #### 2.2 媒體獲取層: `fetch_images_v2.py`
-- **職責**：圖片抓取 (Image Scraping) 與 AI 圖片生成 (AI Image Generation)。
+- **職責**：圖片抓取 (Image Scraping)。
 - **核心行為**：
   - 讀取 `daily_targets.json`。
   - **傳統圖片**：採用多層級的爬蟲策略。
     - *Priority 1*: Request + BeautifulSoup (尋找 `og:image` 或符合關鍵字的大圖)。
     - *Priority 2*: Playwright 無頭瀏覽器截圖 (應對動態網頁、Cloudflare 保護、lazy-loading)。
-  - **AI 生成圖片 (Synthesis 區塊)**：呼叫 Gemini `imagen-4.0-generate-001` 模型，利用 `ai_prompt` 產生圖片 (`TEST_MODE=true` 時可跳過以節省成本)。
+  - **Synthesis 段落**：已停用 Imagen AI 生成，直接跳過該條目（節省費用）。
 - **輸出約定**：
-  - 將抓取或生成的圖片存入 `assets/` 資料夾，命名規則依賴 JSON 定義 (如 `headline_YYYYMMDD.png`)。
+  - 將抓取的圖片存入 `assets/` 資料夾，命名規則依賴 JSON 定義 (如 `headline_YYYYMMDD.png`)。
 
 #### 2.3 渠道發布層 (發布器 Generators)
 發布層由多個獨立腳本組成，每個腳本負責一個特定的對接渠道，彼此互不干涉。
 
 - **`discord_webhook_sender.py`**
-  - **職責**：將最終報告拆解並發送至 Discord Webhook。
+  - **職責**：將最終報告拆解並發送至 Discord Webhook（普通日報頻道）。
   - **核心行為**：讀取 Markdown 與 `daily_targets.json` 映射，依照各個大標題（如 `# 📅` 或 `**📢`）將文章切塊 (Chunking)，並將 `assets/` 下的對應圖片夾帶於該段落的第一個 Chunk 發送，避免超過 Discord 單則訊息長度限制。
+  - **注意**：`🌌 深度總結` 段落不使用 `synthesis_ai_*.png`，改為重用前一段落已有的圖片。
+  - 報告排序依**檔名** (Daily_Full_Report_YYYYMMDD.md 字典序降序) 而非 mtime，確保 CI checkout 後仍能選到最新日期。
 
 - **`discord_forum_sender.py`**
   - **職責**：將每日報告各段落以獨立「討論串 (Thread)」的形式發布至 Discord **論壇頻道 (Forum Channel)**。
   - **核心行為**：
-    - 使用 Discord Bot API (`/channels/{forum_channel_id}/threads`) 而非 Webhook，因為論壇頻道必須透過 Bot Token 操作。
-    - 段落切割邏輯與 `discord_webhook_sender.py` 相同（共用 `section_pattern`）。
-    - 每個段落（跳過 `# 📅` 純標題行）建立一個獨立討論串，串名格式為 `YYYY-MM-DD | {段落標題}`。
-    - 透過 `SECTION_TAG_MAP` 字典，自動依段落 Emoji 掛上對應的論壇標籤 ID（如 🔹UE、🔸Unity），讓社群成員能夠篩選只看特定引擎的文章。
-    - 圖片以 multipart/form-data 附件形式夾帶於討論串的第一則訊息；超過字元上限的內容自動分段補發至同一串內。
-  - **所需環境變數**：`DISCORD_BOT_TOKEN`, `DISCORD_FORUM_CHANNEL_ID`, `FORUM_TAG_HEADLINE_ID`, `FORUM_TAG_UE_ID`, `FORUM_TAG_UNITY_ID`, `FORUM_TAG_AI_ID`, `FORUM_TAG_MARKET_ID`。
+    - 使用 Discord Bot API (`/channels/{forum_channel_id}/threads`) 而非 Webhook。
+    - `🎨 引擎段落` 依 `ENGINE_SUBSECTION_DEFS` 拆成子串（UE / Unity / Godot / 80.lv / 3D），每個子串掛精確的單一標籤。
+    - `💼 製作人週記` 依引擎關鍵字分流，來源連結透過 `_find_best_bullet_match` 關鍵字匹配（非位置）配對到對應 bullet，繼承該 bullet 的 tag，避免 `[Unity -...]` 顯示名稱誤路由非引擎文章。
+    - `_split_into_news_items`：同時支援 `- [xxx](<url>)` 與 `[xxx](<url>)` 兩種來源格式（引擎子段落的連結無前置 `- `）。
+    - 每則新聞的**文字 + 來源連結合為單一 Embed**（不再分兩個 Embed）。
+    - Embed **title** 優先從來源連結顯示名稱 ` - ` 後方提取，避免與 description 重複。
+    - 討論串封面縮圖一律使用串內第一篇有效 og:image（與串內文章縮圖一致）。
+    - `unrealengine.com` 回傳 403 或 Cloudflare 攔截時，直接走 Playwright fallback 抓 og:image。
+    - 每日最後發布一則分隔線討論串 `━━━ YYYY-MM-DD ━━━`。
+    - `DRY_RUN=true` 時只印預覽，不呼叫 Discord API。
+    - 報告排序依**檔名**字典序降序，同 webhook 邏輯。
+  - **所需環境變數**：`DISCORD_BOT_TOKEN`, `DISCORD_FORUM_CHANNEL_ID`, `FORUM_TAG_HEADLINE_ID`, `FORUM_TAG_INDIE_ID`, `FORUM_TAG_GLOBAL_ID`, `FORUM_TAG_AI_ID`, `FORUM_TAG_UE_ID`, `FORUM_TAG_UNITY_ID`, `FORUM_TAG_TA_ID`, `FORUM_TAG_3D_ID`。
 
 - **`facebook_poster.py` (可選/獨立模組)**
   - **職責**：擷取報告中的特定段落（今日頭條）並發送至 Facebook Page。
@@ -58,9 +68,9 @@
 #### 2.4 自動化排程層: `.github/workflows/daily_report.yml`
 - **職責**：CI/CD 與環境變數注入。
 - **核心行為**：
-  - 透過 Cron Job 每天定時觸發 (`50 23 * * *` UTC)。
-  - 依序執行：`generate_report.py` -> `fetch_images_v2.py` -> `discord_webhook_sender.py`。
-  - 將變更後的 `headline_history.json` 自動 commit 並 push 回 Repository，確保狀態持久化。
+  - 透過 Cron Job 每天定時觸發 (`50 23 * * *` UTC = 07:50 CST)，同時支援 `workflow_dispatch` 手動觸發。
+  - 依序執行：`generate_report.py` → `fetch_images_v2.py` → `discord_webhook_sender.py` → `discord_forum_sender.py`。
+  - 將變更後的 `headline_history.json`、`daily_targets.json`、`Daily_Report/`、`assets/` 自動 commit 並 push 回 Repository（commit message 附 `[skip ci]` 避免無限循環）。
 
 ---
 
@@ -75,9 +85,10 @@
       ↓
 (產生文字報告 Markdown) + (產生圖片需求 daily_targets.json)
       ↓
-[fetch_images_v2.py] --(依據 JSON)--> [抓圖片/生成圖片 -> 存入 assets/]
+[fetch_images_v2.py] --(依據 JSON)--> [爬取圖片 -> 存入 assets/]
       ↓
-[發布腳本 (discord, facebook 等)] --(讀取 Markdown 與 assets/)--> [目標社群 API]
+[discord_webhook_sender.py] --(讀取 Markdown + assets/)--> [Discord Webhook 普通日報]
+[discord_forum_sender.py]   --(讀取 Markdown)--> [Discord Forum 論壇版日報 + 爬取 og:image]
 ```
 
 ### 3.2 解耦設計 (Decoupling)
@@ -121,8 +132,20 @@
 ### 4.4 圖片抓取邏輯優化 (Image Fetching Enhancements)
 - **修改位置**：`fetch_images_v2.py`。
 - **準則**：
-  1. 必須維持現有的靜態嘗試 (Priority 1) -> 動態 Playwright (Priority 2) -> AI 生成 / 預設圖 (Fallback) 的恩典降級 (Graceful Degradation) 策略。
-  2. 確保 `used_image_urls` 機制持續運作，避免同一張圖在不同區段被重複使用。
+  1. 必須維持現有的靜態嘗試 (Priority 1) → 動態 Playwright (Priority 2) → 預設圖 (Fallback) 的恩典降級 (Graceful Degradation) 策略。
+  2. `Synthesis` 類型已停用，若未來要恢復請在 `if sec_type == "Synthesis"` 處重新實作，並評估 Imagen API 費用。
+  3. 確保 `used_image_urls` 機制持續運作，避免同一張圖在不同區段被重複使用。
 
-### 4.5 測試環境 (Test Mode)
-- **準則**：開發新功能時，請善用 `TEST_MODE=true` 環境變數。`fetch_images_v2.py` 已實作此判斷來略過昂貴的 Gemini 圖片生成。未來加入耗費成本或具破壞性的呼叫時，應將其包覆在 `if not test_mode:` 的檢查中。
+### 4.5 論壇發布邏輯維護 (Forum Sender Maintenance)
+- **修改位置**：`discord_forum_sender.py`。
+- **關鍵資料結構**：
+  - `ENGINE_SUBSECTION_DEFS`：新增引擎/工具子標題時，在此新增 `(regex, display_name, tag_keys, src_prefixes)` 元組。`src_prefixes` 須包含該來源所有可能的連結前綴（如 `[80.lv`）。
+  - `SECTION_TAG_MAP`：新增段落 Emoji → tag 對應。
+  - `TAG_IDS`：新增 tag key → Discord 標籤 ID。
+- **來源連結配對規則**：
+  - `_split_into_news_items` 同時辨識 `[xxx](<url>)` 與 `- [xxx](<url>)` 格式。
+  - `_find_best_bullet_match` 採用英文關鍵字 + 版本號 + 中文滑動視窗多維度匹配。
+  - `_route_content_by_engine` 的 source 路由依 `_find_best_bullet_match` 繼承 bullet 的 tag（非獨立靠顯示名稱關鍵字）。
+
+### 4.6 測試環境 (Test Mode)
+- **準則**：開發論壇發布新功能時善用 `DRY_RUN=true` 環境變數，只印預覽不呼叫 Discord API。開發圖片抓取時善用 `TEST_MODE=true`。
