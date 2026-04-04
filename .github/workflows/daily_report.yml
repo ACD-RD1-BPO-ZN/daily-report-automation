@@ -57,7 +57,7 @@ jobs:
         python fetch_images_v2.py
         
         echo "Sending to Discord (Webhook)..."
-        # python discord_webhook_sender.py  # 暫時停用普通日報頻道
+        python discord_webhook_sender.py
 
         echo "Sending to Discord (Forum Channel)..."
         python discord_forum/discord_forum_sender.py
