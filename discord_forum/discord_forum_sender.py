@@ -74,7 +74,7 @@ ENGINE_SUBSECTION_DEFS = [
     (re.compile(r"\*\*Godot",         re.IGNORECASE), "🎮 Godot Engine",  ["ta"],    ["[Godot"]),
     (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"],    ["[80.lv"]),
     (re.compile(r"\*\*(映CG|InCG|3D/CG|Blender|Maya|3ds\s*Max|ZBrush|Houdini|Boris\s*FX|Substance)", re.IGNORECASE),
-     "映CG (3D/CG/VFX)", ["3d"], ["[映CG", "[InCG", "[incgmedia", "[Blender", "[Maya", "[3ds", "[ZBrush", "[Houdini", "[Boris", "[Substance"]),
+     "映CG (3D/CG/VFX)", ["3d"], ["[映CG", "[InCG", "[incgmedia", "[Blender", "[Maya", "[3ds", "[ZBrush", "[Houdini", "[Boris", "[Substance", "[80.lv"]),
 ]
 
 # 段落 Emoji → daily_targets.json 中的 section_name 對應
@@ -300,6 +300,34 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
         if lower not in seen and len(kw) > 1:
             seen.add(lower)
             keywords.append(kw)
+    # 2.5 從段落正文（非 bullet、非連結行）提取第一句的 CJK 動作片段
+    # 例：《機甲戰士》開發商 Piranha Games 宣布裁員 30%，→ 開發商宣布裁員
+    if len(keywords) < max_keywords:
+        for line in content.split("\n"):
+            s = line.strip()
+            if not s or s.startswith("- ") or s.startswith("[") or s.startswith("#"):
+                continue
+            if re.match(r"^\*\*[^\n]{0,80}\*\*\s*$", s) or not _has_cjk(s):
+                continue
+            # 只取第一個句號/逗號前的子句
+            first_clause = s
+            for sep in ("，", "。", "；"):
+                idx = s.find(sep)
+                if idx > 0:
+                    first_clause = s[:idx]
+                    break
+            # 移除書名號（已在 step 2 抓過）
+            first_clause = re.sub(r"《[^》]+》", "", first_clause)
+            # 合併所有 CJK run → 短動作片語
+            cjk_joined = "".join(re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf]+', first_clause))
+            if len(cjk_joined) >= 4:
+                phrase = cjk_joined[:16]
+                lower = phrase.lower()
+                if lower not in seen:
+                    seen.add(lower)
+                    keywords.append(phrase)
+            if len(keywords) >= max_keywords:
+                break
     # 3. 從中文來源連結 [站名 - 關鍵詞](<url>) 提取關鍵詞部分（僅限含中文的）
     if len(keywords) < max_keywords:
         for m in re.finditer(r"\[([^\]]+)\]\(<https?://[^>]+>\)", content):
@@ -351,8 +379,9 @@ def _split_into_news_items(content: str) -> list[dict]:
         if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
             _flush()
             continue
-        # 來源連結行：以 "- [" 開頭且含 URL
-        if s.startswith("- [") and re.search(r"\(<https?://|\(https?://", s):
+        # 來源連結行：以 "- [" 或直接 "[" 開頭且含 URL（Markdown 連結格式）
+        # 引擎子段落的來源連結不帶前置 "- "，須同時支援兩種格式
+        if re.match(r"^-?\s*\[", s) and re.search(r"\(<https?://|\(https?://", s):
             _flush()
             all_sources.append(s)
             continue
@@ -502,9 +531,14 @@ def _fetch_og_image(url: str) -> str:
     try:
         resp = requests.get(url, timeout=8, headers=headers)
         if not resp.ok:
+            # JS 渲染網站（如 unrealengine.com）即使 403 也直接嘗試 Playwright
+            if any(domain in url for domain in _JS_RENDERED_DOMAINS):
+                return _fetch_og_image_playwright(url)
             return ""
         # 偵測 Cloudflare 攔截頁
         if any(t in resp.text[:500].lower() for t in ["just a moment", "cloudflare", "checking your browser"]):
+            if any(domain in url for domain in _JS_RENDERED_DOMAINS):
+                return _fetch_og_image_playwright(url)
             return ""
         og = _parse_og_image(resp.text)
         if og:
@@ -697,7 +731,8 @@ def send_to_discord_forum() -> None:
     if not report_files:
         print("找不到報告檔案，中止執行。")
         return
-    report_files.sort(key=os.path.getmtime, reverse=True)
+    # 依檔名排序（YYYYMMDD 格式），確保 CI checkout 後 mtime 相同時仍能正確取最新日期
+    report_files.sort(reverse=True)
     latest_report = report_files[0]
     print(f"发布報告: {latest_report}")
 
@@ -792,7 +827,6 @@ def send_to_discord_forum() -> None:
 
     # 6. 依標籤建立討論串，每條新聞獨立 Embed
     TAG_ORDER = ["ai", "3d", "unity", "ue", "ta", "global", "indie", "headline"]
-    used_img_paths: set[str] = set()  # 追蹤已使用的圖片路徑，避免論壇列表縮圖重複
     for tag_key in TAG_ORDER:
         if tag_key not in buckets:
             continue
@@ -807,70 +841,56 @@ def send_to_discord_forum() -> None:
         # 預先拆分新聞，後面建立串和發送 embed 都會用到
         news_items = _split_into_news_items(merged)
 
-        # 判斷是否需要用 og:image 替代重複的本地圖片
-        og_fallback_url: str | None = None
-        if img and img in used_img_paths:
-            # 此圖片已被前一個討論串使用，嘗試從新聞來源抓取 og:image
-            print(f"🔄 {tag_key}: 本地圖片已被其他串使用，嘗試抓取 og:image 替代...")
-            for item in news_items:
-                src_url = _extract_url_from_source(item.get("source", ""))
-                if src_url:
-                    og_fallback_url = _fetch_og_image(src_url)
-                    if og_fallback_url:
-                        print(f"✅ {tag_key}: 使用 og:image 作為串縮圖: {og_fallback_url[:80]}")
-                        break
-            # 不論是否找到 og:image，都不再使用重複的本地圖片
-            img = None
-            if not og_fallback_url:
-                print(f"⚠️ {tag_key}: 所有來源均無 og:image，此串不使用縮圖")
-        elif not img and news_items:
-            # 沒有本地圖片（例如引擎子串），主動從新聞來源抓取 og:image
-            for item in news_items:
-                src_url = _extract_url_from_source(item.get("source", ""))
-                if src_url:
-                    og_fallback_url = _fetch_og_image(src_url)
-                    if og_fallback_url:
-                        print(f"🖼️ {tag_key}: 使用 og:image 作為串縮圖: {og_fallback_url[:80]}")
-                        break
-        if img:
-            used_img_paths.add(img)
+        # 討論串封面一律使用串內第一篇文章的 og:image，確保預覽縮圖與內容一致
+        thread_cover_url: str | None = None
+        for item in news_items:
+            src_url = _extract_url_from_source(item.get("source", ""))
+            if src_url:
+                thread_cover_url = _fetch_og_image(src_url)
+                if thread_cover_url:
+                    print(f"🖼️ {tag_key}: 串封面縮圖: {thread_cover_url[:80]}")
+                    break
+        if not thread_cover_url:
+            print(f"⚠️ {tag_key}: 所有來源均無 og:image，此串不使用縮圖")
 
         # 建立討論串（首則訊息為概覽：標題 + 關鍵詞 + 圖片）
         thread_id = _create_forum_thread(
             thread_name, display_name,
             f"今日 {display_name} 共 {len(news_items)} 則新聞，請往下瀏覽各則詳情。",
-            tag_ids, img, color, keywords=kw, img_url=og_fallback_url,
+            tag_ids, None, color, keywords=kw, img_url=thread_cover_url,
         )
         if not thread_id:
             continue
 
-        # 逐條發送：文章 Embed → 資料來源 Embed 交替
+        # 逐條發送：每則新聞文字 + 來源連結合為單一 Embed
         for idx, item in enumerate(news_items, 1):
-            # 文章 Embed
-            if item["text"]:
-                raw = re.sub(r"^\-\s*", "", item["text"].split("\n")[0]).strip()
-                title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
-                embed_title = title_match.group(1)[:80] if title_match else raw[:50]
-                _post_embed_to_thread(thread_id, embed_title, item["text"], color)
-                time.sleep(0.5)
-            # 資料來源 Embed（獨立顯示，帶 og:image 縮圖）
+            if not item["text"] and not item["source"]:
+                continue
+            base = item["text"] or item["source"]
+            raw = re.sub(r"^\-\s*", "", base.split("\n")[0]).strip()
+            title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
+            embed_title = title_match.group(1)[:80] if title_match else raw[:50]
+            # 抓取文章縮圖（og:image）
+            thumb = ""
             if item["source"]:
                 src_url = _extract_url_from_source(item["source"])
-                thumb = _fetch_og_image(src_url)
-                _post_embed_to_thread(thread_id, "📎 資料來源", item["source"], color, thumbnail_url=thumb)
-                time.sleep(0.5)
+                if src_url:
+                    thumb = _fetch_og_image(src_url)
+            _post_embed_to_thread(thread_id, embed_title, item["text"], color,
+                                  source=item["source"], thumbnail_url=thumb)
+            time.sleep(0.5)
 
         time.sleep(1.5)
 
     # 最後建立一個分割線討論串，用於視覺區隔前一天的內容
-    divider_name = f"━━━ {date_str} 報告結束 ━━━"
+    divider_name = f"━━━ {date_str} ━━━"
     if DRY_RUN:
         print(f"[DRY-RUN] 分割線 : {divider_name}")
     else:
         url = f"https://discord.com/api/v10/channels/{FORUM_CHANNEL_ID}/threads"
         headers = {"Authorization": f"Bot {BOT_TOKEN}", "Content-Type": "application/json"}
         divider_embed = {
-            "description": f"━━━━━━━━━━━━━━━━━━━━\n📅 **{date_str}** 日報到此結束\n━━━━━━━━━━━━━━━━━━━━",
+            "description": f"━━━━━━━━━━━━━━━━━━━━\n📅 **{date_str}**\n━━━━━━━━━━━━━━━━━━━━",
             "color": 0x2C2F33,
         }
         payload = {
