@@ -208,7 +208,6 @@ async def generate_daily_report():
     indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
     local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
     producer_img_tag = f"![製作人週記](../assets/producer_{today_str_file}.png)"
-    synthesis_img_tag = f"![深度總結](../assets/synthesis_ai_{today_str_file}.png)"
     # --------------------------------------------------------
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
@@ -286,12 +285,6 @@ async def generate_daily_report():
     ![頭條圖片](../assets/headline_{today_str_file}.png)
     (內文從這裡開始...)
     
-    【特別提醒】
-    對於最後一個段落「**🌌 【今日全方位深度總結】**」，請在標題下方固定放置以下圖片標籤：
-    **🌌 【今日全方位深度總結】**
-    ![深度總結](../assets/synthesis_ai_{today_str_file}.png)
-    (內文...)
-    ---
 
     【關鍵輸出要求】
     請嚴格使用以下 JSON 格式回傳（直接回傳 JSON 物件字串，絕對不要加 ```json 區塊標記，確保能被 Python json.loads 直接解析）：
@@ -329,12 +322,6 @@ async def generate_daily_report():
           "image_filename": "producer_{today_str_file}.png",
           "image_keywords": ["marketing", "development", "producer", "idea"]
         }},
-        {{
-          "section_name": "Synthesis",
-          "source_urls": ["GENERATE_AI_IMAGE"],
-          "image_filename": "synthesis_ai_{today_str_file}.png",
-          "ai_prompt": 身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：描述多個畫面、拼貼 (Collage)、格狀圖 (Grid) 或分割面板 (Split panels)。絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
-        }}
       ]
     }}
     【致命關鍵：JSON 結構完整性警告】
@@ -414,14 +401,6 @@ async def generate_daily_report():
                 synthesis_found = True
                 break
                 
-        if not synthesis_found:
-            image_targets.append({
-                "section_name": "Synthesis",
-                "source_urls": ["GENERATE_AI_IMAGE"],
-                "image_filename": f"synthesis_ai_{today_str_file}.png",
-                "ai_prompt": "Professional game concept art, an epic and highly stylized fantasy landscape with cinematic lighting and rich colors, visually striking storytelling illustration, masterpiece, no UI, no nodes, no text."
-            })
-        
         with open(targets_filename, "w", encoding="utf-8") as f:
             json.dump(image_targets, f, ensure_ascii=False, indent=2)
         print(f"Generated targets file: {targets_filename} with {len(image_targets)} valid targets.")
