@@ -862,6 +862,27 @@ def send_to_discord_forum() -> None:
 
         time.sleep(1.5)
 
+    # 最後建立一個分割線討論串，用於視覺區隔前一天的內容
+    divider_name = f"━━━ {date_str} 報告結束 ━━━"
+    if DRY_RUN:
+        print(f"[DRY-RUN] 分割線 : {divider_name}")
+    else:
+        url = f"https://discord.com/api/v10/channels/{FORUM_CHANNEL_ID}/threads"
+        headers = {"Authorization": f"Bot {BOT_TOKEN}", "Content-Type": "application/json"}
+        divider_embed = {
+            "description": f"━━━━━━━━━━━━━━━━━━━━\n📅 **{date_str}** 日報到此結束\n━━━━━━━━━━━━━━━━━━━━",
+            "color": 0x2C2F33,
+        }
+        payload = {
+            "name": divider_name[:100],
+            "message": {"content": "", "embeds": [divider_embed]},
+        }
+        resp = requests.post(url, headers=headers, json=payload)
+        if resp.ok:
+            print(f"📏 分割線已建立: {divider_name}")
+        else:
+            print(f"⚠️ 分割線建立失敗: {resp.status_code}")
+
     print("✅ 所有段落已成功發布至 Discord 論壇頻道！")
 
 
