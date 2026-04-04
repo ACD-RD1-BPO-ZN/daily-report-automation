@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/nintendo-cuts-switch-2-production-layoffs-at-epic-and-playstation-and-another-saudi-acquisition-patch-notes-45"
+      "https://www.gamedeveloper.com/business/mechwarrior-dev-piranha-games-lays-off-30-of-staff-says-ceo"
     ],
-    "image_filename": "headline_20260329.png",
+    "image_filename": "headline_20260404.png",
     "image_keywords": [
       "official",
       "hero",
@@ -17,10 +17,10 @@
     "section_name": "TA",
     "source_urls": [
       "https://www.unrealengine.com/tech-blog/bringing-stunning-visuals-to-ue-mobile-games-with-arm-accuracy-super-resolution",
-      "https://www.unrealengine.com/spotlights/top-tips-on-using-substrate-materials-for-automotive-visualization",
-      "https://80.lv/articles/take-a-look-at-this-mysterious-and-detailed-environment-with-an-eerie-atmosphere"
+      "https://80.lv/articles/check-out-this-mayan-caves-dungeon-scene-created-with-zbrush-and-unreal-engine-5",
+      "https://unity.com/blog/eden-games-gear-club-unlimited-3"
     ],
-    "image_filename": "ta_20260329.png",
+    "image_filename": "ta_20260404.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -36,10 +36,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/owlcat-games-is-using-gen-ai-to-iterate-faster-on-the-expanse",
-      "https://www.gamedeveloper.com/business/the-industry-is-in-a-really-horrible-place-say-brenda-and-john-romero"
+      "https://gnn.gamer.com.tw/detail.php?sn=302943",
+      "https://unity.com/blog/interactive-writing-challenges-for-nonlinear-rpg-design"
     ],
-    "image_filename": "indie_20260329.png",
+    "image_filename": "indie_20260404.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -51,10 +51,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=302591",
-      "https://gnn.gamer.com.tw/detail.php?sn=302590"
+      "https://gnn.gamer.com.tw/detail.php?sn=302946"
     ],
-    "image_filename": "local_20260329.png",
+    "image_filename": "local_20260404.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -65,10 +64,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/the-industry-is-in-a-really-horrible-place-say-brenda-and-john-romero",
-      "https://www.gamedeveloper.com/console/sony-confirms-ps5-hardware-is-about-to-become-more-expensive"
+      "https://unity.com/blog/hidden-costs-traditional-3d-tools",
+      "https://80.lv/articles/running-with-scissors-ceo-on-the-evolution-of-postal-and-being-a-self-publishing-studio"
     ],
-    "image_filename": "producer_20260329.png",
+    "image_filename": "producer_20260404.png",
     "image_keywords": [
       "marketing",
       "development",
@@ -81,7 +80,7 @@
     "source_urls": [
       "GENERATE_AI_IMAGE"
     ],
-    "image_filename": "synthesis_ai_20260329.png",
-    "ai_prompt": "A futuristic game development studio, with holographic displays showing game assets and code, reflecting the industry's challenges and technological advancements. A lone developer is working on a mobile game with stunning desktop-like visuals, powered by advanced rendering techniques. The scene should convey both the struggle and innovation in the current gaming landscape. Professional game concept art, highly stylized, cinematic lighting, masterwork. 🚫Strictly no text, UI elements, computer screens, or node graphs."
+    "image_filename": "synthesis_ai_20260404.png",
+    "ai_prompt": "身為專業的遊戲概念美術指導，請閱讀「今日全方位深度總結」，挑選最具代表性的一個主題（例如某款大作發售、或某項跨時代光影技術）。將這個主題轉化為「外行人一看就懂」且「充滿獨特藝術風格」的遊戲情境插畫。\n\n例如：\n- 若總結提到『Substrate 材質與光追技術』，請描述：『陽光穿透茂密的奇幻森林，光影極度真實地折射在古代騎士的精緻鎧甲上，展現極致的材質細節』。\n- 若總結提到『牌組建構遊戲爆紅』，請描述：『一張散發著神秘魔法光芒的傳奇卡牌，懸浮在充滿氛圍的幽暗酒館木桌上』。\n- 若總結提到『獨立遊戲開發』，請描述：『一個溫馨且充滿魔法道具的微型工坊，散發著匠人精神的氛圍』。\n\n【強制風格標籤】：'Professional game concept art, highly stylized and expressive, rich vibrant colors, cinematic lighting, engaging storytelling, visually striking, masterpiece, trending on ArtStation'.\n【🚫嚴格禁止】：描述多個畫面、拼貼 (Collage)、格狀圖 (Grid) 或分割面板 (Split panels)。絕對不要出現任何軟體介面(UI)、節點圖(Node graph)、藍圖、電腦螢幕、程式碼、文字或人類真實臉孔。畫面必須是一張純粹且引人入勝的遊戲世界插畫。"
   }
 ]
