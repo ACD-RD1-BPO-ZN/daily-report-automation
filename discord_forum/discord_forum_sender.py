@@ -371,28 +371,33 @@ def _split_into_news_items(content: str) -> list[dict]:
 
     _flush()
 
-    # 配對 bullets 和 sources
-    items: list[dict] = []
-    if len(all_bullets) >= len(all_sources):
-        # Bullets ≥ sources：簡單位置配對
-        for i, b in enumerate(all_bullets):
-            src = all_sources[i] if i < len(all_sources) else ""
-            items.append({"text": b, "source": src})
-    else:
-        # Sources > bullets：先位置配對，多餘來源用關鍵字匹配附加
-        for i, b in enumerate(all_bullets):
-            src = all_sources[i] if i < len(all_sources) else ""
-            items.append({"text": b, "source": src})
-        extra = all_sources[len(all_bullets):]
-        for src in extra:
-            best = _find_best_bullet_match(src, items)
-            if best >= 0:
-                items[best]["source"] += "\n" + src
-            elif items:
-                items[-1]["source"] += "\n" + src
+    # 配對 bullets 和 sources — 全部使用關鍵字匹配，不再依賴位置
+    items: list[dict] = [{"text": b, "source": ""} for b in all_bullets]
 
-    if not items and content.strip():
-        items.append({"text": content.strip(), "source": ""})
+    if not items:
+        if all_sources:
+            return [{"text": "", "source": "\n".join(all_sources)}]
+        if content.strip():
+            return [{"text": content.strip(), "source": ""}]
+        return []
+
+    for src in all_sources:
+        best = _find_best_bullet_match(src, items)
+        if best >= 0:
+            if items[best]["source"]:
+                items[best]["source"] += "\n" + src
+            else:
+                items[best]["source"] = src
+        else:
+            # 關鍵字無命中 → 找第一個尚無來源的 bullet
+            assigned = False
+            for i in range(len(items)):
+                if not items[i]["source"]:
+                    items[i]["source"] = src
+                    assigned = True
+                    break
+            if not assigned and items:
+                items[-1]["source"] += "\n" + src
 
     return items
 
@@ -402,32 +407,67 @@ _SOURCE_SKIP_WORDS = frozenset({
     'game', 'developer', 'steam', 'news', 'unity', 'unreal', 'blog',
     'www', 'com', 'the', 'and', 'for', 'bahamut', 'gnn', 'articles',
     'business', 'detail', 'php', 'https', 'http', 'how', 'with', 'from',
+    'is', 'in', 'on', 'of', 'to', 'at', 'by', 'or', 'an', 'be', 'do',
+    'article', 'page', 'index',
 })
 
 
 def _find_best_bullet_match(source: str, items: list[dict]) -> int:
-    """用來源的顯示名稱和 URL 路徑中的英文關鍵字，找到最佳配對的 bullet。"""
+    """用來源的顯示名稱和 URL 路徑中的關鍵字，找到最佳配對的 bullet。
+    支援英文關鍵字（含 2 字元如 XR/AI）、版本號、以及中文滑動視窗匹配。"""
     words: set[str] = set()
+    cn_segments: list[str] = []
     # 從 display name 提取
     m = re.search(r'\[([^\]]+)\]', source)
     if m:
-        for w in re.findall(r'[A-Za-z]{3,}', m.group(1)):
+        display = m.group(1)
+        for w in re.findall(r'[A-Za-z]{2,}', display):
             if w.lower() not in _SOURCE_SKIP_WORDS:
                 words.add(w.lower())
+        # 版本號（如 4.7, 4.5.2）
+        for v in re.findall(r'\d+\.\d+(?:\.\d+)?', display):
+            words.add(v)
+        # 中文片段：從 " - " 後方提取連續中文字（至少 2 字）
+        if " - " in display:
+            kw_part = display.split(" - ", 1)[1].strip()
+            cn_segments = re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf]{2,}', kw_part)
     # 從 URL 路徑末段提取（常包含標題關鍵字）
     url_m = re.search(r'<(https?://[^>]+)>', source) or re.search(r'\((https?://[^)]+)\)', source)
     if url_m:
         path = url_m.group(1).rsplit('/', 1)[-1].replace('-', ' ')
-        for w in re.findall(r'[A-Za-z]{3,}', path):
+        for w in re.findall(r'[A-Za-z]{2,}', path):
             if w.lower() not in _SOURCE_SKIP_WORDS:
                 words.add(w.lower())
-    if not words:
+        # 從 URL 路徑重建版本號（如 4-5-2 → 4.5.2）
+        parts = url_m.group(1).rsplit('/', 1)[-1].split('-')
+        vbuf: list[str] = []
+        for p in parts:
+            if p.isdigit():
+                vbuf.append(p)
+            else:
+                if len(vbuf) >= 2:
+                    words.add('.'.join(vbuf))
+                vbuf = []
+        if len(vbuf) >= 2:
+            words.add('.'.join(vbuf))
+    if not words and not cn_segments:
         return -1
     best_idx = -1
     best_score = 0
     for i, item in enumerate(items):
         text_lower = item["text"].lower()
         score = sum(1 for w in words if w in text_lower)
+        # 中文滑動視窗：從最長子字串開始嘗試，找到最長匹配
+        for seg in cn_segments:
+            best_sub = 0
+            for width in range(len(seg), 1, -1):
+                for start in range(len(seg) - width + 1):
+                    if seg[start:start + width] in item["text"]:
+                        best_sub = width
+                        break
+                if best_sub > 0:
+                    break
+            score += best_sub
         if score > best_score:
             best_score = score
             best_idx = i
@@ -719,12 +759,14 @@ def send_to_discord_forum() -> None:
             img_path = section_name_to_img.get(SECTION_IMG_KEY[emoji_found])
 
         # 🎨 引擎段落：拆分後路由到各引擎標籤桶
-        # 不將共用的 TA section 圖片分配給各引擎桶，改由各串自行抓取 og:image
+        # TA section 圖片僅分配給 "ta" 桶，其餘引擎串由 og:image 提供縮圖
         if "🎨" in section[:80]:
             engine_parts = _split_engine_section(message_content)
             for eng_content, eng_tag_keys, _eng_title in engine_parts:
                 tag_key = eng_tag_keys[0]
                 buckets.setdefault(tag_key, []).append(eng_content)
+            if img_path and "ta" in buckets:
+                bucket_imgs.setdefault("ta", img_path)
             continue
 
         # 💼 製作人週記：依引擎關鍵字分流
