@@ -18,7 +18,7 @@ def send_to_discord():
     # 1. 取得最新報告
     report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
     if not report_files: return
-    report_files.sort(key=os.path.getmtime, reverse=True)
+    report_files.sort(reverse=True)
     latest_report = report_files[0]
     print(f"Sending report: {latest_report}")
 
@@ -59,8 +59,18 @@ def send_to_discord():
         img_path = None
         for filename, abs_path in target_mappings.items():
             if filename in section and os.path.exists(abs_path):
+                # 深度總結的 synthesis_ai 佔位圖略過，改用下方 fallback
+                if "synthesis_ai" in filename:
+                    continue
                 img_path = abs_path
                 break
+
+        # 深度總結段落（synthesis_ai 略過後 img_path 為 None）→ 重用第一張可用圖片
+        if img_path is None and "🌌" in section[:80]:
+            for filename, abs_path in target_mappings.items():
+                if "synthesis_ai" not in filename and os.path.exists(abs_path):
+                    img_path = abs_path
+                    break
 
         # 安全切分字串，避免截斷 Markdown 或網址
         max_chunk = 1950
