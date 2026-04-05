@@ -208,7 +208,6 @@ async def generate_daily_report():
     indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
     local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
     producer_img_tag = f"![製作人週記](../assets/producer_{today_str_file}.png)"
-    synthesis_img_tag = f"![深度總結](../assets/synthesis_{today_str_file}.png)"
     # --------------------------------------------------------
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
@@ -235,7 +234,13 @@ async def generate_daily_report():
     ---
     **🎨 【引擎相關】**
     {ta_img_tag}
-    (🚨防捏造與強制列舉機制🚨：請從 Context 中篩選 Unreal Engine, Unity, Godot 等引擎相關重點，以及 3D/CG/VFX 工具（如 Blender, Maya, 3ds Max, Houdini, Boris FX 等來自「映CG InCG Media」的新聞）。如果沒有最新消息，請使用近期熱門內容總結。你必須盡可能確保這「三個引擎」的小標題都會出現，並在引擎區之後額外加上「**3D/CG/VFX 工具**」子標題來收錄映CG等來源的 CG 產業新聞。請善用條列式 (`-`) 或換行來排版多篇獨立的新聞，不要把不同文章的內容黏在一起。對於每篇文章，請摘要 1~2 句話的核心技術重點，保持版面透氣且易讀。)
+    (🚨防捏造與強制列舉機制🚨：請從 Context 篩選引擎與技術相關新聞，並將它們強制分類到以下五個小標題中（若某分類無新聞，則跳過該小標題）：
+    - **Unreal Engine**
+    - **Unity**
+    - **Godot Engine**
+    - **3D 模型技術**：嚴格限定為 Maya, ZBrush, 3ds Max, Blender 等純 3D 建模與雕刻技術。
+    - **TA 與特效技術**：包含 Houdini, 動畫, 綁定, VFX 視覺特效，以及其他引擎等底層開發相關新聞。
+    請確保依上述明確分類。特別注意，為了方便系統辨識來源：若新聞分類到「3D 模型技術」，其最底部的資料來源命名請務必加上 `[3D - ]` 前綴，例如 `[3D - 80.lv - 標題]`；若是分類到「TA 與特效技術」，則加上 `[TA - ]` 前綴，例如 `[TA - 映CG - 標題]`。各引擎則維持原本習慣即可。請善用條列式保持版面透氣。)
     [資料來源]
     ---
     **🎮 【獨立遊戲市場觀察】**
@@ -255,7 +260,6 @@ async def generate_daily_report():
     [資料來源]
     ---
     **🌌 【今日全方位深度總結】**
-    {synthesis_img_tag}
     (🚨全面總結與技術解析🚨：請依據上述「每一個標題」（頭條、TA、獨立遊戲、在地、製作人）的內容，分別用一句話進行精準總結。其中針對技術與引擎相關內容，請確保帶有 TA 專屬的深度視角 (如 Rendering, Pipeline 等)。請善用換行排版，不要把它寫成一整段擁擠的文字組合。)
     ---
 
@@ -274,7 +278,7 @@ async def generate_daily_report():
     1. 【嚴格排版規定】：所有的資料來源超連結，必須集中且「統一條列放置於該大標題段落的最底部（[資料來源] 的正下方）」，絕對不可以穿插在每一條新聞摘要的正後方或文字段落中間，以免畫面凌亂影響閱讀體驗。
     2. 由於 Discord 原生超連結會產生冗長的預覽縮圖卡片，請「務必」使用 Markdown 的角括號 `< >` 將 URL 包起來，格式如下：
        `[網站名 - 新聞關鍵字/標題簡稱](<原始HTTPS網址>)`
-       範例： `[Unreal - PCG 更新](<https://www...>)`, `[80.lv - 植被渲染](<https://www...>)`
+       範例： `[Unreal - PCG 更新](<https://www...>)`, `[3D - 80.lv - 植被渲染](<https://www...>)`
     3. 這些網址「絕對只能」從我上面提供給你的 Context 清單中挑選！嚴禁自行發明、捏造任何不存在的網址。
     4. 如果針對某個標題（例如【在地社群】）在清單中完全找不到相關素材，你可以簡短說明「今日無重大本土社群動態」，但絕對不准無中生有生出假網址。
     5. 最後的【今日全方位深度總結】請不要附上任何資料來源。
@@ -322,12 +326,6 @@ async def generate_daily_report():
           "source_urls": ["(請優先挑選有遊戲宣傳圖的網址，避免純公司 Logo 新聞)", "備用網址"],
           "image_filename": "producer_{today_str_file}.png",
           "image_keywords": ["marketing", "development", "producer", "idea"]
-        }},
-        {{
-          "section_name": "Synthesis",
-          "source_urls": ["GENERATE_AI_IMAGE"],
-          "image_filename": "synthesis_{today_str_file}.png",
-          "image_keywords": ["hologram", "dashboard", "cyberpunk", "analysis"]
         }}
       ]
     }}

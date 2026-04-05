@@ -69,9 +69,13 @@ ENGINE_ROUTE_KEYWORDS: dict[str, list[str]] = {
 # ============================================================
 ENGINE_SUBSECTION_DEFS = [
     # (regex, 串名, tag_keys, 來源連結前綴清單)
-    (re.compile(r"\*\*Unreal Engine", re.IGNORECASE), "🟦 Unreal Engine", ["ue"],    ["[Unreal"]),
+    (re.compile(r"\*\*Unreal", re.IGNORECASE), "🟦 Unreal Engine", ["ue"],    ["[Unreal"]),
     (re.compile(r"\*\*Unity",         re.IGNORECASE), "🟩 Unity",         ["unity"], ["[Unity"]),
     (re.compile(r"\*\*Godot",         re.IGNORECASE), "🎮 Godot Engine",  ["ta"],    ["[Godot"]),
+    # 新版精確分類
+    (re.compile(r"\*\*3D\s*模",        re.IGNORECASE), "🛠️ 3D 模型技術",   ["3d"],    ["[3D"]),
+    (re.compile(r"\*\*TA\s*(與|&)?\s*特效", re.IGNORECASE), "🛠️ TA 與其他技術", ["ta"],    ["[TA"]),
+    # 以下為相容舊報告的 Fallback
     (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"],    ["[80.lv"]),
     (re.compile(r"\*\*(映CG|InCG|3D/CG|Blender|Maya|3ds\s*Max|ZBrush|Houdini|Boris\s*FX|Substance)", re.IGNORECASE),
      "映CG (3D/CG/VFX)", ["3d"], ["[映CG", "[InCG", "[incgmedia", "[Blender", "[Maya", "[3ds", "[ZBrush", "[Houdini", "[Boris", "[Substance", "[80.lv"]),
@@ -407,23 +411,40 @@ def _split_into_news_items(content: str) -> list[dict]:
             return [{"text": content.strip(), "source": ""}]
         return []
 
-    for src in all_sources:
-        best = _find_best_bullet_match(src, items)
+    for src_idx, src in enumerate(all_sources):
+        best = _find_best_bullet_match(src, items, src_idx, len(all_sources))
+        
+        target_item = None
         if best >= 0:
-            if items[best]["source"]:
-                items[best]["source"] += "\n" + src
-            else:
-                items[best]["source"] = src
+            target_item = items[best]
         else:
             # 關鍵字無命中 → 找第一個尚無來源的 bullet
-            assigned = False
             for i in range(len(items)):
                 if not items[i]["source"]:
-                    items[i]["source"] = src
-                    assigned = True
+                    target_item = items[i]
                     break
-            if not assigned and items:
-                items[-1]["source"] += "\n" + src
+            if target_item is None and items:
+                target_item = items[-1]
+                
+        if target_item is not None:
+            # 去重邏輯：如果已有相同顯示名稱的連結，則跳過
+            m_src = re.search(r'\[([^\]]+)\]', src)
+            display_text = m_src.group(1).strip() if m_src else src.strip()
+            
+            is_dup = False
+            if target_item["source"]:
+                for line in target_item["source"].split("\n"):
+                    m_line = re.search(r'\[([^\]]+)\]', line)
+                    exist_text = m_line.group(1).strip() if m_line else line.strip()
+                    if exist_text == display_text:
+                        is_dup = True
+                        break
+            
+            if not is_dup:
+                if target_item["source"]:
+                    target_item["source"] += "\n" + src
+                else:
+                    target_item["source"] = src
 
     return items
 
@@ -438,9 +459,9 @@ _SOURCE_SKIP_WORDS = frozenset({
 })
 
 
-def _find_best_bullet_match(source: str, items: list[dict]) -> int:
+def _find_best_bullet_match(source: str, items: list[dict], src_idx: int = -1, total_srcs: int = -1) -> int:
     """用來源的顯示名稱和 URL 路徑中的關鍵字，找到最佳配對的 bullet。
-    支援英文關鍵字（含 2 字元如 XR/AI）、版本號、以及中文滑動視窗匹配。"""
+    加入位置親和性 (Positional Affinity)，支援中英文關鍵字滑動比對。"""
     words: set[str] = set()
     cn_segments: list[str] = []
     # 從 display name 提取
@@ -483,6 +504,11 @@ def _find_best_bullet_match(source: str, items: list[dict]) -> int:
     for i, item in enumerate(items):
         text_lower = item["text"].lower()
         score = sum(1 for w in words if w in text_lower)
+        
+        # 位置親和性：若來源總數與新聞總數完全相等，同一序號的目標分數直接 +3 權重
+        if src_idx >= 0 and total_srcs == len(items) and i == src_idx:
+            score += 3
+            
         # 中文滑動視窗：從最長子字串開始嘗試，找到最長匹配
         for seg in cn_segments:
             best_sub = 0
@@ -850,12 +876,36 @@ def send_to_discord_forum() -> None:
         if not thread_cover_url:
             print(f"⚠️ {tag_key}: 所有來源均無 og:image，此串不使用縮圖")
 
+        # 為了保證 Discord 外層預覽圖 100% 顯示，將 thread_cover_url 實體下載
+        final_img_path = img  # 可以用該區塊的 AI 圖片做保底 (如果有分配到 img)
+        downloaded_temp = None
+        
+        if thread_cover_url:
+            try:
+                import tempfile
+                resp = requests.get(thread_cover_url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+                if resp.status_code == 200:
+                    ext = ".png" if "png" in resp.headers.get("Content-Type", "").lower() else ".jpg"
+                    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=ext)
+                    tmp.write(resp.content)
+                    tmp.close()
+                    final_img_path = tmp.name
+                    downloaded_temp = tmp.name
+            except Exception as e:
+                print(f"⚠️ 下載縮圖實體失敗: {e}")
+
         # 建立討論串（首則訊息為概覽：標題 + 關鍵詞 + 圖片）
         thread_id = _create_forum_thread(
             thread_name, display_name,
             f"今日 {display_name} 共 {len(news_items)} 則新聞，請往下瀏覽各則詳情。",
-            tag_ids, None, color, keywords=kw, img_url=thread_cover_url,
+            tag_ids, final_img_path, color, keywords=kw, img_url=None if final_img_path else thread_cover_url,
         )
+        
+        if downloaded_temp and os.path.exists(downloaded_temp):
+            try:
+                os.remove(downloaded_temp)
+            except:
+                pass
         if not thread_id:
             continue
 
@@ -889,11 +939,9 @@ def send_to_discord_forum() -> None:
         time.sleep(1.5)
 
     # 最後建立一個分割線討論串，用於視覺區隔前一天的內容
-    # 套上所有可用標籤（上限5個），確保任何標籤篩選下都能看到分隔線
     divider_name = f"━━━ {date_str} ━━━"
-    all_tag_ids = [v for v in TAG_IDS.values() if v][:5]
     if DRY_RUN:
-        print(f"[DRY-RUN] 分割線 : {divider_name}  標籤: {list(TAG_IDS.keys())[:5]}")
+        print(f"[DRY-RUN] 分割線 : {divider_name}  (無標籤)")
     else:
         url = f"https://discord.com/api/v10/channels/{FORUM_CHANNEL_ID}/threads"
         headers = {"Authorization": f"Bot {BOT_TOKEN}", "Content-Type": "application/json"}
@@ -903,7 +951,6 @@ def send_to_discord_forum() -> None:
         }
         payload = {
             "name": divider_name[:100],
-            "applied_tags": all_tag_ids,
             "message": {"content": "", "embeds": [divider_embed]},
         }
         resp = requests.post(url, headers=headers, json=payload)
