@@ -208,6 +208,7 @@ async def generate_daily_report():
     indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
     local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
     producer_img_tag = f"![製作人週記](../assets/producer_{today_str_file}.png)"
+    synthesis_img_tag = f"![深度總結](../assets/synthesis_{today_str_file}.png)"
     # --------------------------------------------------------
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
@@ -322,6 +323,12 @@ async def generate_daily_report():
           "image_filename": "producer_{today_str_file}.png",
           "image_keywords": ["marketing", "development", "producer", "idea"]
         }},
+        {{
+          "section_name": "Synthesis",
+          "source_urls": ["GENERATE_AI_IMAGE"],
+          "image_filename": "synthesis_{today_str_file}.png",
+          "image_keywords": ["hologram", "dashboard", "cyberpunk", "analysis"]
+        }}
       ]
     }}
     【致命關鍵：JSON 結構完整性警告】
