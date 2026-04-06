@@ -65,12 +65,7 @@ def send_to_discord():
                 img_path = abs_path
                 break
 
-        # 深度總結段落（synthesis_ai 略過後 img_path 為 None）→ 重用第一張可用圖片
-        if img_path is None and "🌌" in section[:80]:
-            for filename, abs_path in target_mappings.items():
-                if "synthesis_ai" not in filename and os.path.exists(abs_path):
-                    img_path = abs_path
-                    break
+
 
         # 安全切分字串，避免截斷 Markdown 或網址
         max_chunk = 1950

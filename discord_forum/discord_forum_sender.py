@@ -31,8 +31,6 @@ TAG_IDS = {
 
 # ============================================================
 # 段落 Emoji → 論壇標籤鍵值對應表
-# 新增報告段落時，在此處補充對應關係即可。
-# Discord 論壇頻道每串最多只能套用 5 個標籤。
 # ============================================================
 SECTION_TAG_MAP = {
     "📢": ["headline"],   # 今日頭條     → 頭條
@@ -68,21 +66,19 @@ ENGINE_ROUTE_KEYWORDS: dict[str, list[str]] = {
 # 格式：(用於比對子標題的 regex, 討論串顯示名稱, tag_keys)
 # ============================================================
 ENGINE_SUBSECTION_DEFS = [
-    # (regex, 串名, tag_keys, 來源連結前綴清單)
-    (re.compile(r"\*\*Unreal", re.IGNORECASE), "🟦 Unreal Engine", ["ue"],    ["[Unreal"]),
-    (re.compile(r"\*\*Unity",         re.IGNORECASE), "🟩 Unity",         ["unity"], ["[Unity"]),
-    (re.compile(r"\*\*Godot",         re.IGNORECASE), "🎮 Godot Engine",  ["ta"],    ["[Godot"]),
+    (re.compile(r"\*\*Unreal", re.IGNORECASE), "🟦 Unreal Engine", ["ue"]),
+    (re.compile(r"\*\*Unity",         re.IGNORECASE), "🟩 Unity",         ["unity"]),
+    (re.compile(r"\*\*Godot",         re.IGNORECASE), "🎮 Godot Engine",  ["ta"]),
     # 新版精確分類
-    (re.compile(r"\*\*3D\s*模",        re.IGNORECASE), "🛠️ 3D 模型技術",   ["3d"],    ["[3D"]),
-    (re.compile(r"\*\*TA\s*(與|&)?\s*特效", re.IGNORECASE), "🛠️ TA 與其他技術", ["ta"],    ["[TA"]),
+    (re.compile(r"\*\*3D\s*模",        re.IGNORECASE), "🛠️ 3D 模型技術",   ["3d"]),
+    (re.compile(r"\*\*TA\s*(與|&)?\s*特效", re.IGNORECASE), "🛠️ TA 與其他技術", ["ta"]),
     # 以下為相容舊報告的 Fallback
-    (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"],    ["[80.lv"]),
+    (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"]),
     (re.compile(r"\*\*(映CG|InCG|3D/CG|Blender|Maya|3ds\s*Max|ZBrush|Houdini|Boris\s*FX|Substance)", re.IGNORECASE),
-     "映CG (3D/CG/VFX)", ["3d"], ["[映CG", "[InCG", "[incgmedia", "[Blender", "[Maya", "[3ds", "[ZBrush", "[Houdini", "[Boris", "[Substance", "[80.lv"]),
+     "映CG (3D/CG/VFX)", ["3d"]),
 ]
 
 # 段落 Emoji → daily_targets.json 中的 section_name 對應
-# 用於不依賴 md 內的日期字串就能正確對到圖片
 SECTION_IMG_KEY: dict[str, str] = {
     "📢": "Headline",
     "🎨": "TA",
@@ -116,15 +112,6 @@ EMBED_COLORS = {
 DEFAULT_COLOR = 0x36393F  # Discord 預設深灰
 
 
-def _resolve_tag_ids(section_text: str) -> list[str]:
-    """根據段落開頭的 Emoji，回傳對應的有效 Tag ID 清單。"""
-    heading = section_text[:80]
-    for emoji, keys in SECTION_TAG_MAP.items():
-        if emoji in heading:
-            return [TAG_IDS[k] for k in keys if TAG_IDS.get(k)]
-    return []
-
-
 def _resolve_color(tag_keys: list[str]) -> int:
     """依照 tag_keys 回傳第一個命中的 Embed 顏色，無命中則回傳預設色。"""
     for k in tag_keys:
@@ -133,41 +120,119 @@ def _resolve_color(tag_keys: list[str]) -> int:
     return DEFAULT_COLOR
 
 
+# ============================================================
+# 內聯格式解析器 — 取代舊版智慧配對系統
+# ============================================================
+
+def _is_source_link(line: str) -> bool:
+    """判斷一行文字是否為來源連結（Markdown 超連結格式）。"""
+    s = line.strip().lstrip("- ")
+    return bool(re.match(r'\[', s) and re.search(r'\(<https?://|\(https?://', s))
+
+
+def _split_into_news_items(content: str) -> list[dict]:
+    """
+    解析內聯格式：每條 bullet + 緊接的來源連結行 = 一條新聞。
+    同時相容舊版「來源集中在底部」的格式（fallback）。
+    回傳 [{"text": "...", "source": "..."}, ...]
+    """
+    items: list[dict] = []
+    current_text = ""
+    current_source = ""
+    orphan_sources: list[str] = []  # 收集「沒有前置 bullet」的獨立來源（舊格式相容）
+
+    for line in content.split("\n"):
+        s = line.strip()
+        if not s or s == "---" or s == "[資料來源]":
+            continue
+
+        # 跳過子標題行（**Unreal Engine**：等）
+        if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
+            # flush 前一條
+            if current_text:
+                items.append({"text": current_text, "source": current_source})
+                current_text = ""
+                current_source = ""
+            continue
+
+        # 來源連結行
+        if _is_source_link(s):
+            clean_src = s.lstrip("- ").strip()
+            if current_text:
+                # 內聯模式：連結歸屬前一條 bullet
+                if current_source:
+                    # 已有來源 → 這是額外來源，追加
+                    current_source += "\n" + clean_src
+                else:
+                    current_source = clean_src
+            else:
+                # 沒有前置 bullet → 舊格式的集中來源
+                orphan_sources.append(clean_src)
+            continue
+
+        # Bullet 行
+        if s.startswith("- "):
+            # 跳過引擎子標題 bullet（- **Unity**：）
+            stripped = re.sub(r"^-\s*", "", s)
+            if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped):
+                if current_text:
+                    items.append({"text": current_text, "source": current_source})
+                    current_text = ""
+                    current_source = ""
+                continue
+            # flush 前一條
+            if current_text:
+                items.append({"text": current_text, "source": current_source})
+            current_text = s
+            current_source = ""
+            continue
+
+        # 其他文字：追加到當前 bullet
+        if current_text:
+            current_text += "\n" + s
+        else:
+            current_text = s
+
+    # flush 最後一條
+    if current_text:
+        items.append({"text": current_text, "source": current_source})
+
+    # 舊格式相容：將孤立來源按順序分配給沒有來源的 bullet
+    if orphan_sources:
+        empty_items = [it for it in items if not it["source"]]
+        for i, src in enumerate(orphan_sources):
+            if i < len(empty_items):
+                empty_items[i]["source"] = src
+            elif items:
+                # 多餘的來源附加到最後一條
+                items[-1]["source"] += ("\n" + src) if items[-1]["source"] else src
+
+    return items
+
+
 def _split_engine_section(section_text: str) -> list[tuple[str, list[str], str]]:
     """
-    將 🎨 引擎段落依照引擎子標題（Unreal/Unity/Godot/80.lv）切割為多份，
-    並將 [資料來源] 區塊中的連結依引擎名稱前綴分配至對應子串。
+    將 🎨 引擎段落依照引擎子標題（Unreal/Unity/Godot/3D/TA）切割為多份。
+    內聯格式下，來源連結已跟在各 bullet 旁，不需要額外的前綴比對分配。
     回傳 list of (content, tag_keys, sub_title)。
     """
-    # 1. 分離 [資料來源] 區塊與主體內容
-    sources_lines: list[str] = []
     body = section_text
-    sources_match = re.search(r"\[資料來源\]", section_text)
-    if sources_match:
-        body = section_text[:sources_match.start()]
-        sources_lines = section_text[sources_match.start():].split("\n")
 
-    # 2. 在主體內找各引擎子標題起始位置
-    split_points: list[tuple[int, str, list[str], list[str]]] = []
-    for pattern, display_name, tag_keys, src_prefixes in ENGINE_SUBSECTION_DEFS:
+    # 在主體內找各引擎子標題起始位置
+    split_points: list[tuple[int, str, list[str]]] = []
+    for pattern, display_name, tag_keys in ENGINE_SUBSECTION_DEFS:
         for m in pattern.finditer(body):
             line_start = body.rfind("\n", 0, m.start()) + 1
-            split_points.append((line_start, display_name, tag_keys, src_prefixes))
+            split_points.append((line_start, display_name, tag_keys))
 
     if not split_points:
         return []
 
     split_points.sort(key=lambda x: x[0])
     results = []
-    for i, (start, display_name, tag_keys, src_prefixes) in enumerate(split_points):
+    for i, (start, display_name, tag_keys) in enumerate(split_points):
         end = split_points[i + 1][0] if i + 1 < len(split_points) else len(body)
         content = body[start:end].strip()
-        # 3. 篩選屬於此引擎的來源連結並附加
-        if sources_lines and src_prefixes:
-            matched = [ln for ln in sources_lines
-                       if any(p in ln for p in src_prefixes)]
-            if matched:
-                content += "\n[資料來源]\n" + "\n".join(matched)
         if content:
             results.append((content, tag_keys, display_name))
     return results
@@ -177,58 +242,33 @@ def _route_content_by_engine(content: str, default_tag: str = "global") -> dict[
     """
     將段落的 bullet 依引擎關鍵字分流。
     回傳 {tag_key: content_str}，非引擎相關的放在 default_tag。
-    來源連結跟隨對應的 bullet 路由，而非獨立比對關鍵字。
+    內聯格式下，來源連結跟著 bullet 一起路由。
     """
     # 移除開頭粗體標題行
     content = re.sub(r"^\*\*[^\n]+\*\*\s*\n*", "", content, count=1).strip()
 
-    # 分離 [資料來源] 區塊
-    body = content
-    sources_text = ""
-    src_match = re.search(r"\[資料來源\]", content)
-    if src_match:
-        body = content[:src_match.start()].strip()
-        sources_text = content[src_match.start():]
-    source_lines = [ln for ln in sources_text.split("\n") if ln.strip() and ln.strip() not in ("[資料來源]", "---")]
+    # 路由 bullet（連同後面的來源連結行一起歸類）
+    routed: dict[str, list[str]] = {}
+    current_tag = default_tag
 
-    # 路由 bullet
-    routed_bullets: dict[str, list[str]] = {}
-    for line in body.split("\n"):
+    for line in content.split("\n"):
         s = line.strip()
         if not s or s == "---":
             continue
-        target = default_tag
-        lower = s.lower()
-        for tag_key, keywords in ENGINE_ROUTE_KEYWORDS.items():
-            if any(kw in lower for kw in keywords):
-                target = tag_key
-                break
-        routed_bullets.setdefault(target, []).append(line)
 
-    # 路由來源連結：找到最匹配的 bullet，繼承該 bullet 的 tag
-    # 避免 [Unity - xxx] 顯示名稱把 Esoteric Ebb 等非引擎文章誤路由到 unity bucket
-    routed_sources: dict[str, list[str]] = {}
-    all_routed_pairs = [(b, t) for t, bullets in routed_bullets.items() for b in bullets]
-    for line in source_lines:
-        target = default_tag
-        if all_routed_pairs:
-            tmp_items = [{"text": b, "source": ""} for b, _ in all_routed_pairs]
-            best_idx = _find_best_bullet_match(line, tmp_items)
-            if best_idx >= 0:
-                target = all_routed_pairs[best_idx][1]
-        routed_sources.setdefault(target, []).append(line)
+        # 新的 bullet → 決定路由
+        if s.startswith("- ") and not _is_source_link(s):
+            current_tag = default_tag
+            lower = s.lower()
+            for tag_key, keywords in ENGINE_ROUTE_KEYWORDS.items():
+                if any(kw in lower for kw in keywords):
+                    current_tag = tag_key
+                    break
 
-    # 組合結果
-    result: dict[str, str] = {}
-    all_keys = set(list(routed_bullets.keys()) + list(routed_sources.keys()))
-    for tag_key in all_keys:
-        parts = []
-        if tag_key in routed_bullets:
-            parts.append("\n".join(routed_bullets[tag_key]))
-        if tag_key in routed_sources:
-            parts.append("[資料來源]\n" + "\n".join(routed_sources[tag_key]))
-        result[tag_key] = "\n".join(parts).strip()
-    return result
+        # 所有行（包括來源連結）都跟著 current_tag
+        routed.setdefault(current_tag, []).append(line)
+
+    return {k: "\n".join(v).strip() for k, v in routed.items()}
 
 
 def _has_cjk(text: str) -> bool:
@@ -236,50 +276,10 @@ def _has_cjk(text: str) -> bool:
     return bool(re.search(r'[\u4e00-\u9fff\u3400-\u4dbf]', text))
 
 
-def _extract_bullet_summary(content: str, max_items: int = 3) -> list[str]:
-    """
-    從 bullet 正文中提取簡短的中文摘要片段。
-    用於沒有粗體/書名號/中文連結時的 fallback。
-    """
-    summaries: list[str] = []
-    for line in content.split("\n"):
-        s = line.strip()
-        # 跳過非 bullet、來源連結行、純英文行
-        if not s.startswith("- ") or s.startswith("- [") or not _has_cjk(s):
-            continue
-        text = s[2:].strip()
-        # 如果開頭是英文，跳到第一個有意義的中文詞開始提取
-        cjk_match = re.search(r'[\u4e00-\u9fff]', text)
-        if cjk_match and cjk_match.start() > 3:
-            text = text[cjk_match.start():]
-            # 跳過開頭的單字虛詞（的、了、在、於、為、正、和、與）
-            text = re.sub(r'^[的了在於為正和與]\s*', '', text)
-        # 取第一個逗號/句號前的片段
-        for sep in ("，", "、", "。", "；"):
-            idx = text.find(sep)
-            if 4 < idx < 22:
-                text = text[:idx]
-                break
-        if len(text) > 20:
-            text = text[:20]
-            # 如果截斷在英文單字中間，回退到最後一個中文字
-            while text and not re.search(r'[\u4e00-\u9fff\u3400-\u4dbf》）]$', text):
-                text = text[:-1]
-        text = text.strip()
-        # 跳過含有《》的摘要（書名號已在 step 2 提取）
-        if "《" in text:
-            continue
-        if len(text) > 4 and text not in summaries:
-            summaries.append(text)
-        if len(summaries) >= max_items:
-            break
-    return summaries
-
-
 def _extract_keywords(content: str, max_keywords: int = 6) -> str:
     """
     從段落內容提取關鍵詞，用於外層預覽。
-    優先順序：粗體 → 書名號 → 中文來源連結 → bullet 正文摘要。
+    優先順序：粗體 → 書名號。
     回傳以 ｜ 分隔的關鍵詞字串。
     """
     keywords: list[str] = []
@@ -288,7 +288,6 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
     for m in re.finditer(r"\*\*(.+?)\*\*", content):
         kw = m.group(1).strip().rstrip("：:")
         lower = kw.lower()
-        # 過濾掉段落標題類的粗體（太長或含 emoji）
         if len(kw) > 25 or any(ord(c) > 0xFFFF for c in kw):
             continue
         if lower not in seen and len(kw) > 1:
@@ -301,230 +300,14 @@ def _extract_keywords(content: str, max_keywords: int = 6) -> str:
         if lower not in seen and len(kw) > 1:
             seen.add(lower)
             keywords.append(kw)
-    # 2.5 從段落正文（非 bullet、非連結行）提取第一句的 CJK 動作片段
-    # 例：《機甲戰士》開發商 Piranha Games 宣布裁員 30%，→ 開發商宣布裁員
-    if len(keywords) < max_keywords:
-        for line in content.split("\n"):
-            s = line.strip()
-            if not s or s.startswith("- ") or s.startswith("[") or s.startswith("#"):
-                continue
-            if re.match(r"^\*\*[^\n]{0,80}\*\*\s*$", s) or not _has_cjk(s):
-                continue
-            # 只取第一個句號/逗號前的子句
-            first_clause = s
-            for sep in ("，", "。", "；"):
-                idx = s.find(sep)
-                if idx > 0:
-                    first_clause = s[:idx]
-                    break
-            # 移除書名號（已在 step 2 抓過）
-            first_clause = re.sub(r"《[^》]+》", "", first_clause)
-            # 合併所有 CJK run → 短動作片語
-            cjk_joined = "".join(re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf]+', first_clause))
-            if len(cjk_joined) >= 4:
-                phrase = cjk_joined[:16]
-                lower = phrase.lower()
-                if lower not in seen:
-                    seen.add(lower)
-                    keywords.append(phrase)
-            if len(keywords) >= max_keywords:
-                break
-    # 3. 從中文來源連結 [站名 - 關鍵詞](<url>) 提取關鍵詞部分（僅限含中文的）
-    if len(keywords) < max_keywords:
-        for m in re.finditer(r"\[([^\]]+)\]\(<https?://[^>]+>\)", content):
-            display = m.group(1).strip()
-            if " - " in display:
-                kw = display.split(" - ", 1)[1].strip()
-            else:
-                kw = display
-            if not _has_cjk(kw):
-                continue
-            if len(kw) > 32:
-                kw = kw[:32].strip()
-            lower = kw.lower()
-            if lower not in seen and len(kw) > 3:
-                seen.add(lower)
-                keywords.append(kw)
-            if len(keywords) >= max_keywords:
-                break
-    # 4. Fallback：從 bullet 正文提取中文摘要片段
-    if len(keywords) < max_keywords:
-        for summary in _extract_bullet_summary(content, max_items=max_keywords - len(keywords)):
-            lower = summary.lower()
-            if lower not in seen:
-                seen.add(lower)
-                keywords.append(summary)
+        if len(keywords) >= max_keywords:
+            break
     return " ｜ ".join(keywords[:max_keywords])
 
 
-def _split_into_news_items(content: str) -> list[dict]:
-    """
-    將合併後的段落內容拆分為獨立新聞條目，每條配對一個來源連結。
-    採用線性掃描：收集所有 bullet 和來源連結，按位置配對。
-    回傳 [{"text": "...", "source": "..."}, ...]
-    """
-    all_bullets: list[str] = []
-    all_sources: list[str] = []
-    current_bullet: list[str] = []
-
-    def _flush():
-        if current_bullet:
-            all_bullets.append("\n".join(current_bullet))
-            current_bullet.clear()
-
-    for line in content.split("\n"):
-        s = line.strip()
-        if not s or s == "---" or s == "[資料來源]":
-            continue
-        # 跳過獨立子標題行（**Unreal Engine 相關：**）
-        if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
-            _flush()
-            continue
-        # 來源連結行：以 "- [" 或直接 "[" 開頭且含 URL（Markdown 連結格式）
-        # 引擎子段落的來源連結不帶前置 "- "，須同時支援兩種格式
-        if re.match(r"^-?\s*\[", s) and re.search(r"\(<https?://|\(https?://", s):
-            _flush()
-            all_sources.append(s)
-            continue
-        # Bullet 行
-        if s.startswith("- "):
-            # 跳過引擎子標題 bullet（- **Unity**：）
-            stripped = re.sub(r"^-\s*", "", s)
-            if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped):
-                _flush()
-                continue
-            _flush()
-            current_bullet.append(s)
-            continue
-        # 其他文字：追加到當前 bullet 或作為新的段落
-        current_bullet.append(s)
-
-    _flush()
-
-    # 配對 bullets 和 sources — 全部使用關鍵字匹配，不再依賴位置
-    items: list[dict] = [{"text": b, "source": ""} for b in all_bullets]
-
-    if not items:
-        if all_sources:
-            return [{"text": "", "source": "\n".join(all_sources)}]
-        if content.strip():
-            return [{"text": content.strip(), "source": ""}]
-        return []
-
-    for src_idx, src in enumerate(all_sources):
-        best = _find_best_bullet_match(src, items, src_idx, len(all_sources))
-        
-        target_item = None
-        if best >= 0:
-            target_item = items[best]
-        else:
-            # 關鍵字無命中 → 找第一個尚無來源的 bullet
-            for i in range(len(items)):
-                if not items[i]["source"]:
-                    target_item = items[i]
-                    break
-            if target_item is None and items:
-                target_item = items[-1]
-                
-        if target_item is not None:
-            # 去重邏輯：如果已有相同顯示名稱的連結，則跳過
-            m_src = re.search(r'\[([^\]]+)\]', src)
-            display_text = m_src.group(1).strip() if m_src else src.strip()
-            
-            is_dup = False
-            if target_item["source"]:
-                for line in target_item["source"].split("\n"):
-                    m_line = re.search(r'\[([^\]]+)\]', line)
-                    exist_text = m_line.group(1).strip() if m_line else line.strip()
-                    if exist_text == display_text:
-                        is_dup = True
-                        break
-            
-            if not is_dup:
-                if target_item["source"]:
-                    target_item["source"] += "\n" + src
-                else:
-                    target_item["source"] = src
-
-    return items
-
-
-# 來源連結關鍵字匹配時忽略的常見站名/路徑詞
-_SOURCE_SKIP_WORDS = frozenset({
-    'game', 'developer', 'steam', 'news', 'unity', 'unreal', 'blog',
-    'www', 'com', 'the', 'and', 'for', 'bahamut', 'gnn', 'articles',
-    'business', 'detail', 'php', 'https', 'http', 'how', 'with', 'from',
-    'is', 'in', 'on', 'of', 'to', 'at', 'by', 'or', 'an', 'be', 'do',
-    'article', 'page', 'index',
-})
-
-
-def _find_best_bullet_match(source: str, items: list[dict], src_idx: int = -1, total_srcs: int = -1) -> int:
-    """用來源的顯示名稱和 URL 路徑中的關鍵字，找到最佳配對的 bullet。
-    加入位置親和性 (Positional Affinity)，支援中英文關鍵字滑動比對。"""
-    words: set[str] = set()
-    cn_segments: list[str] = []
-    # 從 display name 提取
-    m = re.search(r'\[([^\]]+)\]', source)
-    if m:
-        display = m.group(1)
-        for w in re.findall(r'[A-Za-z]{2,}', display):
-            if w.lower() not in _SOURCE_SKIP_WORDS:
-                words.add(w.lower())
-        # 版本號（如 4.7, 4.5.2）
-        for v in re.findall(r'\d+\.\d+(?:\.\d+)?', display):
-            words.add(v)
-        # 中文片段：從 " - " 後方提取連續中文字（至少 2 字）
-        if " - " in display:
-            kw_part = display.split(" - ", 1)[1].strip()
-            cn_segments = re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf]{2,}', kw_part)
-    # 從 URL 路徑末段提取（常包含標題關鍵字）
-    url_m = re.search(r'<(https?://[^>]+)>', source) or re.search(r'\((https?://[^)]+)\)', source)
-    if url_m:
-        path = url_m.group(1).rsplit('/', 1)[-1].replace('-', ' ')
-        for w in re.findall(r'[A-Za-z]{2,}', path):
-            if w.lower() not in _SOURCE_SKIP_WORDS:
-                words.add(w.lower())
-        # 從 URL 路徑重建版本號（如 4-5-2 → 4.5.2）
-        parts = url_m.group(1).rsplit('/', 1)[-1].split('-')
-        vbuf: list[str] = []
-        for p in parts:
-            if p.isdigit():
-                vbuf.append(p)
-            else:
-                if len(vbuf) >= 2:
-                    words.add('.'.join(vbuf))
-                vbuf = []
-        if len(vbuf) >= 2:
-            words.add('.'.join(vbuf))
-    if not words and not cn_segments:
-        return -1
-    best_idx = -1
-    best_score = 0
-    for i, item in enumerate(items):
-        text_lower = item["text"].lower()
-        score = sum(1 for w in words if w in text_lower)
-        
-        # 位置親和性：若來源總數與新聞總數完全相等，同一序號的目標分數直接 +3 權重
-        if src_idx >= 0 and total_srcs == len(items) and i == src_idx:
-            score += 3
-            
-        # 中文滑動視窗：從最長子字串開始嘗試，找到最長匹配
-        for seg in cn_segments:
-            best_sub = 0
-            for width in range(len(seg), 1, -1):
-                for start in range(len(seg) - width + 1):
-                    if seg[start:start + width] in item["text"]:
-                        best_sub = width
-                        break
-                if best_sub > 0:
-                    break
-            score += best_sub
-        if score > best_score:
-            best_score = score
-            best_idx = i
-    return best_idx
-
+# ============================================================
+# og:image 爬蟲
+# ============================================================
 
 def _extract_url_from_source(source: str) -> str:
     """從來源連結文字中提取第一個 URL。"""
@@ -554,7 +337,6 @@ def _fetch_og_image(url: str) -> str:
     try:
         resp = requests.get(url, timeout=8, headers=headers)
         if not resp.ok:
-            # JS 渲染網站（如 unrealengine.com）即使 403 也直接嘗試 Playwright
             if any(domain in url for domain in _JS_RENDERED_DOMAINS):
                 return _fetch_og_image_playwright(url)
             return ""
@@ -566,7 +348,6 @@ def _fetch_og_image(url: str) -> str:
         og = _parse_og_image(resp.text)
         if og:
             return og
-        # 靜態 HTML 找不到 og:image → 對 JS 渲染網站嘗試 Playwright
         if any(domain in url for domain in _JS_RENDERED_DOMAINS):
             return _fetch_og_image_playwright(url)
         return ""
@@ -580,8 +361,8 @@ _JS_RENDERED_DOMAINS = ["unrealengine.com"]
 
 def _parse_og_image(html: str) -> str:
     """從 HTML 中提取 og:image URL，過濾 logo/placeholder。"""
-    pat1 = r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\'>]+)["\']'
-    pat2 = r'<meta[^>]+content=["\']([^"\'>]+)["\'][^>]+property=["\']og:image["\']'
+    pat1 = r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\'<>]+)["\']'
+    pat2 = r'<meta[^>]+content=["\']([^"\'<>]+)["\'][^>]+property=["\']og:image["\']'
     m = re.search(pat1, html) or re.search(pat2, html)
     if not m:
         return ""
@@ -638,6 +419,10 @@ def _fetch_og_image_playwright(url: str) -> str:
         return ""
 
 
+# ============================================================
+# Discord API 互動
+# ============================================================
+
 def _post_embed_to_thread(thread_id: str, title: str, description: str,
                           color: int = DEFAULT_COLOR, source: str = "",
                           thumbnail_url: str = "") -> None:
@@ -668,20 +453,12 @@ def _post_embed_to_thread(thread_id: str, title: str, description: str,
         print(f"  📰 已發送: {title[:50]}")
 
 
-
-
-
 def _create_forum_thread(thread_name: str, display_title: str, embed_description: str,
                          tag_ids: list[str], img_path: str | None, color: int = DEFAULT_COLOR,
                          keywords: str = "", img_url: str | None = None) -> str | None:
     """
     在論壇頻道建立新討論串。
-    - display_title: Embed 的 title 欄位，顯示較大字體。
-    - embed_description: Embed 的 description，包含完整詳細內容。
-    - keywords: 外層預覽關鍵詞，放入 message.content。
-    - img_url: 外部圖片 URL（當沒有本地圖片時使用，用於避免重複縮圖）。
     回傳建立成功的討論串 Channel ID，失敗則回傳 None。
-    DRY_RUN 模式下只印預覽。
     """
     if DRY_RUN:
         tag_names = [k for k, v in TAG_IDS.items() if v in tag_ids]
@@ -697,7 +474,6 @@ def _create_forum_thread(thread_name: str, display_title: str, embed_description
     url = f"https://discord.com/api/v10/channels/{FORUM_CHANNEL_ID}/threads"
     headers = {"Authorization": f"Bot {BOT_TOKEN}"}
 
-    # Embed: title 顯示較大字體，description 上限 4096 字元
     embed: dict = {"title": display_title, "description": embed_description[:4096], "color": color}
     payload: dict = {
         "name": thread_name,
@@ -725,7 +501,6 @@ def _create_forum_thread(thread_name: str, display_title: str, embed_description
                 },
             )
     elif img_url:
-        # 使用外部圖片 URL（避免重複縮圖時使用）
         embed["image"] = {"url": img_url}
         headers["Content-Type"] = "application/json"
         resp = requests.post(url, headers=headers, json=payload)
@@ -742,6 +517,10 @@ def _create_forum_thread(thread_name: str, display_title: str, embed_description
     return thread_id
 
 
+# ============================================================
+# 主流程
+# ============================================================
+
 def send_to_discord_forum() -> None:
     if DRY_RUN:
         print("🔍 DRY-RUN 模式：只預覽，不發送至 Discord\n" + "=" * 60)
@@ -754,7 +533,6 @@ def send_to_discord_forum() -> None:
     if not report_files:
         print("找不到報告檔案，中止執行。")
         return
-    # 依檔名排序（YYYYMMDD 格式），確保 CI checkout 後 mtime 相同時仍能正確取最新日期
     report_files.sort(reverse=True)
     latest_report = report_files[0]
     print(f"发布報告: {latest_report}")
@@ -767,7 +545,7 @@ def send_to_discord_forum() -> None:
     with open(latest_report, "r", encoding="utf-8") as f:
         full_text = f.read()
 
-    # 3. 依照大標題切割段落（與 discord_webhook_sender.py 邏輯一致）
+    # 3. 依照大標題切割段落
     section_pattern = re.compile(
         r"(?=# 📅|\*\*[📢🎨🎮🇨🇳🇹🇼📍💼🤝🌌])",
         re.UNICODE,
@@ -776,18 +554,17 @@ def send_to_discord_forum() -> None:
     sections = [s.strip() for s in raw_sections if s.strip()]
 
     if not sections:
-        # 舊格式 fallback
         raw_sections = full_text.split("## ")
         sections = [("## " + s.strip() if i > 0 else s.strip())
                     for i, s in enumerate(raw_sections) if s.strip()]
 
-    # 4. 讀取圖片路徑映射（依 section_name 匹配，與日期無關）
+    # 4. 讀取圖片路徑映射（依 section_name 匹配）
     section_name_to_img: dict[str, str] = {}
     if os.path.exists("daily_targets.json"):
         with open("daily_targets.json", "r", encoding="utf-8") as f:
             targets_data = json.load(f)
         for item in targets_data:
-            sname = item.get("section_name", "").strip()  # e.g. "Headline", "TA"
+            sname = item.get("section_name", "").strip()
             fpath = os.path.join("assets", item["image_filename"])
             if os.path.exists(fpath):
                 section_name_to_img[sname] = fpath
@@ -817,7 +594,6 @@ def send_to_discord_forum() -> None:
             img_path = section_name_to_img.get(SECTION_IMG_KEY[emoji_found])
 
         # 🎨 引擎段落：拆分後路由到各引擎標籤桶
-        # TA section 圖片僅分配給 "ta" 桶，其餘引擎串由 og:image 提供縮圖
         if "🎨" in section[:80]:
             engine_parts = _split_engine_section(message_content)
             for eng_content, eng_tag_keys, _eng_title in engine_parts:
@@ -861,10 +637,10 @@ def send_to_discord_forum() -> None:
         img = bucket_imgs.get(tag_key)
         kw = _extract_keywords(merged)
 
-        # 預先拆分新聞，後面建立串和發送 embed 都會用到
+        # 預先拆分新聞
         news_items = _split_into_news_items(merged)
 
-        # 討論串封面一律使用串內第一篇文章的 og:image，確保預覽縮圖與內容一致
+        # 討論串封面一律使用串內第一篇文章的 og:image
         thread_cover_url: str | None = None
         for item in news_items:
             src_url = _extract_url_from_source(item.get("source", ""))
@@ -876,10 +652,10 @@ def send_to_discord_forum() -> None:
         if not thread_cover_url:
             print(f"⚠️ {tag_key}: 所有來源均無 og:image，此串不使用縮圖")
 
-        # 為了保證 Discord 外層預覽圖 100% 顯示，將 thread_cover_url 實體下載
-        final_img_path = img  # 可以用該區塊的 AI 圖片做保底 (如果有分配到 img)
+        # 下載封面圖實體，確保 Discord 外層預覽 100% 顯示
+        final_img_path = img
         downloaded_temp = None
-        
+
         if thread_cover_url:
             try:
                 import tempfile
@@ -894,13 +670,13 @@ def send_to_discord_forum() -> None:
             except Exception as e:
                 print(f"⚠️ 下載縮圖實體失敗: {e}")
 
-        # 建立討論串（首則訊息為概覽：標題 + 關鍵詞 + 圖片）
+        # 建立討論串
         thread_id = _create_forum_thread(
             thread_name, display_name,
             f"今日 {display_name} 共 {len(news_items)} 則新聞，請往下瀏覽各則詳情。",
             tag_ids, final_img_path, color, keywords=kw, img_url=None if final_img_path else thread_cover_url,
         )
-        
+
         if downloaded_temp and os.path.exists(downloaded_temp):
             try:
                 os.remove(downloaded_temp)
@@ -915,10 +691,10 @@ def send_to_discord_forum() -> None:
                 continue
             base = item["text"] or item["source"]
             raw = re.sub(r"^\-\s*", "", base.split("\n")[0]).strip()
-            # 優先從 **bold** 或 《書名》 取標題（短且不重複內文）
+            # 優先從 **bold** 或 《書名》 取標題
             title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
             embed_title = title_match.group(1)[:80] if title_match else ""
-            # 若無 bold/書名 → 從來源連結顯示名稱提取（避免 title 與 description 重複）
+            # 若無 bold/書名 → 從來源連結顯示名稱提取
             if not embed_title and item["source"]:
                 src_m = re.search(r'\[([^\]]+)\]', item["source"])
                 if src_m:
@@ -938,7 +714,7 @@ def send_to_discord_forum() -> None:
 
         time.sleep(1.5)
 
-    # 最後建立一個分割線討論串，用於視覺區隔前一天的內容
+    # 最後建立一個分割線討論串
     divider_name = f"━━━ {date_str} ━━━"
     if DRY_RUN:
         print(f"[DRY-RUN] 分割線 : {divider_name}  (無標籤)")

@@ -2,6 +2,29 @@
 
 ---
 
+## 2026-04-06
+
+### 報告生成 (`generate_report.py`)
+
+**架構重構：內聯來源連結格式**
+- **來源連結從「段落底部集中」改為「每條 bullet 正下方內聯」**：移除所有 `[資料來源]` 標題行，每則新聞摘要的正下方必須緊接該新聞的來源連結。此改動徹底解決了論壇版「內容與連結對不上」的配對問題，來源配對準確率從 ~85% 提升至 100%。
+- **移除 Godot Engine**：引擎相關段落的子標題從 5 類精簡為 4 類（Unreal / Unity / 3D 模型技術 / TA 與特效技術），Godot 相關新聞不再收錄。
+- **擴大 TA 定義範圍**：TA 與特效技術的涵蓋範圍從「Houdini, 動畫, 綁定, VFX」擴大為「Shader、渲染技術、光照、材質製作、場景搭建與展示、Houdini 特效、動畫/綁定、效能優化、引擎底層開發、VFX」，使 80.lv / 映CG 的技術美術文章正確歸類到 TA 而非 3D。
+
+### Discord 論壇發布 (`discord_forum_sender.py`)
+
+**大幅瘦身：967 行 → 640 行（-34%）**
+- **移除智慧配對系統**：刪除 `_find_best_bullet_match()`（65 行）、`_SOURCE_SKIP_WORDS`（8 行）、`_extract_bullet_summary()`（38 行）等舊配對邏輯。改由 prompt 端直接綁定來源連結，不再需要後端猜測。
+- **重寫 `_split_into_news_items()`**：改為簡潔的內聯格式解析器，直接讀取 bullet + 緊接的來源連結。同時保留 `orphan_sources` fallback 機制，完全向後相容舊格式報告。
+- **簡化 `_extract_keywords()`**：從 4 層 fallback（78 行）精簡為粗體 + 書名號提取（25 行）。
+- **簡化 `_split_engine_section()` 與 `_route_content_by_engine()`**：內聯格式下來源連結跟著 bullet 走，不再需要前綴比對分配或二次路由。
+
+### 普通日報 (`discord_webhook_sender.py`)
+
+- **移除深度總結 Fallback 圖片邏輯**：修正先前會把頭條圖片錯誤地分配給深度總結段落的 bug。
+
+---
+
 ## 2026-04-05
 
 ### Discord 論壇發布 (`discord_forum_sender.py`)
