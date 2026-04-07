@@ -276,33 +276,32 @@ def _has_cjk(text: str) -> bool:
     return bool(re.search(r'[\u4e00-\u9fff\u3400-\u4dbf]', text))
 
 
-def _extract_keywords(content: str, max_keywords: int = 6) -> str:
-    """
-    從段落內容提取關鍵詞，用於外層預覽。
-    優先順序：粗體 → 書名號。
-    回傳以 ｜ 分隔的關鍵詞字串。
-    """
-    keywords: list[str] = []
-    seen = set()
-    # 1. 提取粗體 **xxx** 中的文字
-    for m in re.finditer(r"\*\*(.+?)\*\*", content):
-        kw = m.group(1).strip().rstrip("：:")
-        lower = kw.lower()
-        if len(kw) > 25 or any(ord(c) > 0xFFFF for c in kw):
-            continue
-        if lower not in seen and len(kw) > 1:
-            seen.add(lower)
-            keywords.append(kw)
-    # 2. 提取書名號《xxx》中的內容
-    for m in re.finditer(r"《(.+?)》", content):
-        kw = m.group(1).strip()
-        lower = kw.lower()
-        if lower not in seen and len(kw) > 1:
-            seen.add(lower)
-            keywords.append(kw)
-        if len(keywords) >= max_keywords:
-            break
-    return " ｜ ".join(keywords[:max_keywords])
+def _get_item_title(item: dict) -> str:
+    """提取單則新聞的標題（支援從粗體、書名號或網址名稱提取）。"""
+    if not item.get("text") and not item.get("source"):
+        return ""
+    base = item.get("text") or item.get("source")
+    raw = re.sub(r"^\-\s*", "", base.split("\n")[0]).strip()
+    
+    # 1. 優先從粗體或書名號取標題
+    title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
+    title = title_match.group(1).strip().rstrip("：:") if title_match else ""
+    
+    # 2. 若無 bold/書名 → 從來源連結顯示名稱提取
+    if not title and item.get("source"):
+        src_m = re.search(r'\[([^\]]+)\]', item.get("source", ""))
+        if src_m:
+            display = src_m.group(1)
+            title = display.split(" - ", 1)[1].strip() if " - " in display else display
+            
+    # 3. 再不行就拔純文字前 50 字作為保底
+    if not title:
+        clean = re.sub(r'\[.*?\]\(.*?\)', '', raw)
+        clean = re.sub(r'https?://\S+', '', clean)
+        clean = re.sub(r'[\*\#\-🔗<>\n_]', ' ', clean).strip()
+        title = clean[:50]
+        
+    return title[:80].strip()
 
 
 # ============================================================
@@ -635,10 +634,17 @@ def send_to_discord_forum() -> None:
         display_name = TAG_DISPLAY_NAMES.get(tag_key, tag_key)
         thread_name = f"{date_str} | {display_name}"[:100]
         img = bucket_imgs.get(tag_key)
-        kw = _extract_keywords(merged)
 
         # 預先拆分新聞
         news_items = _split_into_news_items(merged)
+        
+        # 透過各別新聞的標題擷取作為預覽字串
+        item_titles = []
+        for it in news_items:
+            t = _get_item_title(it)
+            if t and t not in item_titles:
+                item_titles.append(t)
+        kw = " ｜ ".join(item_titles[:6])
 
         # 討論串封面一律使用串內第一篇文章的 og:image
         thread_cover_url: str | None = None
@@ -689,19 +695,9 @@ def send_to_discord_forum() -> None:
         for idx, item in enumerate(news_items, 1):
             if not item["text"] and not item["source"]:
                 continue
-            base = item["text"] or item["source"]
-            raw = re.sub(r"^\-\s*", "", base.split("\n")[0]).strip()
-            # 優先從 **bold** 或 《書名》 取標題
-            title_match = re.search(r"\*\*(.+?)\*\*", raw) or re.search(r"《(.+?)》", raw)
-            embed_title = title_match.group(1)[:80] if title_match else ""
-            # 若無 bold/書名 → 從來源連結顯示名稱提取
-            if not embed_title and item["source"]:
-                src_m = re.search(r'\[([^\]]+)\]', item["source"])
-                if src_m:
-                    display = src_m.group(1)
-                    embed_title = display.split(" - ", 1)[1].strip()[:80] if " - " in display else display[:80]
+            embed_title = _get_item_title(item)
             if not embed_title:
-                embed_title = raw[:50]
+                embed_title = "最新資訊"
             # 抓取文章縮圖（og:image）
             thumb = ""
             if item["source"]:

@@ -19,8 +19,8 @@
 - **職責**：資料獲取 (Data Ingestion) 與 內容生成 (Content Generation)。
 - **核心行為**：
   - 透過 `feedparser` 與 `requests` + `BeautifulSoup` 抓取多個遊戲新聞來源 (80.lv, Unreal, Unity, Godot 等)。
-  - 維護 `headline_history.json` 確保 3 天內的頭條不重複。
-  - 將爬取的原始內容 (Context) 餵給 Gemini API，並強制要求回傳嚴格的 **JSON 格式**。
+  - 維護 `global_history.json` 來儲存過去 3 天產生過的「全板塊」新聞網址，在 `fetch_rss_feeds()` 爬取階段實施「物理截斷法」過濾重複新聞，確保 100% 避開舊聞並節省 LLM Token 成本。
+  - 將過濾後的原始內容 (Context) 餵給 Gemini API，並強制要求回傳嚴格的 **JSON 格式**。
 - **輸出約定**：
   - `Daily_Full_Report_YYYYMMDD.md`：完整的最終文字報告。
   - `daily_targets.json`：後續爬圖腳本所需的圖片抓取指示清單 (包含 `section_name`, `source_urls`, `image_keywords` 與 AI 算圖用的 `ai_prompt`)。
@@ -53,7 +53,7 @@
     - `💼 製作人週記` 依引擎關鍵字分流，來源連結透過 `_find_best_bullet_match` 關鍵字匹配（非位置）配對到對應 bullet，繼承該 bullet 的 tag，避免 `[Unity -...]` 顯示名稱誤路由非引擎文章。
     - `_split_into_news_items`：同時支援 `- [xxx](<url>)` 與 `[xxx](<url>)` 兩種來源格式（引擎子段落的連結無前置 `- `）。
     - 每則新聞的**文字 + 來源連結合為單一 Embed**（不再分兩個 Embed）。
-    - Embed **title** 優先從來源連結顯示名稱 ` - ` 後方提取，避免與 description 重複。
+    - 透過 `_get_item_title()` 共用函式，將內部 Embed 的標題與最外圍的討論串「預覽字串清單」統整，淘汰依賴粗體字的猜測邏輯，達成內外標題 100% 同步顯示。
     - 討論串封面縮圖一律使用串內第一篇有效 og:image（與串內文章縮圖一致）。
     - `unrealengine.com` 回傳 403 或 Cloudflare 攔截時，直接走 Playwright fallback 抓 og:image。
     - 每日最後發布一則分隔線討論串 `━━━ YYYY-MM-DD ━━━`。

@@ -27,7 +27,9 @@ today_date = datetime.now(tz)
 today_str_display = today_date.strftime("%Y-%m-%d")
 today_str_file = today_date.strftime("%Y%m%d")
 
-def fetch_rss_feeds():
+def fetch_rss_feeds(recent_urls=None):
+    if recent_urls is None:
+        recent_urls = set()
     print("Fetching active RSS feeds for strict context...")
     feeds = {
         "80.lv (TA/Tech)": "https://80.lv/rss",
@@ -53,8 +55,11 @@ def fetch_rss_feeds():
                 
             scraped_data += f"\n### 來源資訊: {source_name}\n"
             for entry in parsed.entries[:6]:  # 取前 6 篇最新文章
-                title = entry.get('title', 'No Title')
                 link = entry.get('link', '')
+                if link in recent_urls:
+                    print(f"  [Skip] Recently reported: {link}")
+                    continue
+                title = entry.get('title', 'No Title')
                 # 清理 HTML 標籤
                 summary_raw = entry.get('summary', '') or entry.get('description', '')
                 summary_clean = re.sub(r'<[^>]+>', '', summary_raw)[:250].strip()
@@ -99,6 +104,7 @@ def fetch_rss_feeds():
                 if title_text and len(title_text) > 15 and not href.endswith('/articles/'):
                     if not href.startswith('http'):
                         href = 'https://80.lv' + href
+                    if href in recent_urls: continue
                     scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {href}\n  [摘要前言]: (Latest TA article)...\n'
                     count += 1
                     recent_news_count += 1
@@ -122,6 +128,7 @@ def fetch_rss_feeds():
                     href = 'https://unity.com' + href
                 title_text = a.get_text(strip=True)
                 if title_text and len(title_text) > 15 and not href.endswith('/blog/') and not href.endswith('/blog') and href not in scraped_data:
+                    if href in recent_urls: continue
                     scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {href}\n  [摘要前言]: (Unity blog article)...\n'
                     count += 1
                     recent_news_count += 1
@@ -153,6 +160,7 @@ def fetch_rss_feeds():
                 title_text = a.get_text(strip=True)
                 if (title_text and len(title_text) > 15
                         and full_url not in seen_incg):
+                    if full_url in recent_urls: continue
                     seen_incg.add(full_url)
                     scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {full_url}\n  [摘要前言]: (映CG 3D/CG/VFX article)...\n'
                     count += 1
@@ -174,36 +182,30 @@ def fetch_rss_feeds():
 async def generate_daily_report():
     print(f"Generating report for: {today_str_display}")
 
-    # --- 新增：讀取過去 3 天的頭條歷史 ---
-    history_file = "headline_history.json"
-    headline_history = []
+    # --- 新增：讀取過去 3 天的全域新聞歷史 ---
+    history_file = "global_history.json"
+    global_history = []
     if os.path.exists(history_file):
         try:
             with open(history_file, "r", encoding="utf-8") as f:
-                headline_history = json.load(f)
-            print(f"Loaded headline history: {headline_history}")
+                global_history = json.load(f)
+            print(f"Loaded global history ({len(global_history)} days)")
         except json.JSONDecodeError:
             print("History file exists but is invalid JSON. Starting fresh.")
+            
+    recent_urls = set()
+    for daily_urls in global_history:
+        recent_urls.update(daily_urls)
     # ------------------------------------
     
-    
-    # 第一階段：爬取真實精確的新聞清單
-    scraped_context = fetch_rss_feeds()
+    # 第一階段：爬取真實精確的新聞清單 (並將最近 3 天網址過濾掉)
+    scraped_context = fetch_rss_feeds(recent_urls)
     if not scraped_context.strip():
         scraped_context = "無法取得即時 RSS 新聞，請以過去 48 小時內廣為人知的開發新聞進行撰寫，但嚴格標示網址。"
         print("Warning: Scraped context is empty.")
-
-    # 建立防重複與最新熱門優先的 Prompt 規則
-    anti_duplicate_prompt = ""
-    if headline_history:
-        history_str = "\n".join([f"    - {url}" for url in headline_history])
-        anti_duplicate_prompt = (
-            f"\n    【🚨 頭條選題強制指令】：過去幾天的頭條網址如下：\n{history_str}\n"
-            f"    你今天【絕對不可以】再選這些網址作為「今日頭條」。\n"
-            f"    請從剩餘的新聞清單中，嚴格挑選「發布時間最新」且「最具業界影響力與討論度」的一篇文章作為今日頭條。若有重要但已涵蓋過的舊新聞，請將其歸類到其他如『TA相關』或『獨立遊戲』等次要段落。\n"
-        )
     # --- ✅ 修正：在這裡定義圖片標籤變數 (位置必須在 prompt 之前) ---
     headline_img_tag = f"![頭條圖片](../assets/headline_{today_str_file}.png)"
+    engine_img_tag = f"![引擎相關](../assets/engine_{today_str_file}.png)"
     ta_img_tag = f"![TA技術](../assets/ta_{today_str_file}.png)"
     indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
     local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
@@ -212,7 +214,6 @@ async def generate_daily_report():
     # 第二階段：限縮 AI 發揮空間 (Strict Prompting)
     prompt = f"""
     你是專業的遊戲開發與業界分析師、技術美術分析師。
-    {anti_duplicate_prompt}  # <--- ⚠️ 必須在這裡加入這行！
     【絕對強制指令：爬蟲優先 (Scrape-First)】
     我已經為你爬取了最新的真實遊戲業界新聞清單，請你「僅基於以下提供的新聞清單」進行篩選與總結。
     
@@ -225,21 +226,25 @@ async def generate_daily_report():
     【重要：結構強制規範】
     1. 報告的第一行必須是最大字體的 H1 標題（使用 # 號），格式如下，且標題下方「不需要」有 `---` 水平線：
        # 📅 Ultimate Daily Full Report — {today_str_display}
-    2. 接下來，你必須嚴格產生以下 6 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
+    2. 接下來，你必須嚴格產生以下 7 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
     
     **📢 【今日頭條】**
     {headline_img_tag}
-    (🚨頭條規則🚨：頭條只能是「一篇」最具影響力的新聞，用 2~3 句話深入摘要其核心重點。摘要結束後的下一行，必須緊接該新聞的來源連結。)
+    (🚨頭條規則🚨：頭條只能是「一篇」最具影響力的新聞，用 2~3 句話深入摘要其核心重點。摘要結束後的「下一行」，必須另起一個子項目放置來源連結，例如：`- 🔗 來源: [標題](<網址>)`。)
     ---
-    **🎨 【引擎相關】**
-    {ta_img_tag}
-    (🚨防捏造與強制列舉機制🚨：請從 Context 篩選引擎與技術相關新聞，並將它們強制分類到以下四個小標題中（若某分類無新聞，則跳過該小標題）：
+    **⚙️ 【引擎相關】**
+    {engine_img_tag}
+    (🚨防捏造與強制列舉機制🚨：請從 Context 篩選引擎與 3D 模型相關新聞，並將它們強制分類到以下三個小標題中（若某分類無新聞，則跳過該小標題）：
     - **Unreal Engine**
     - **Unity**
     - **3D 模型技術**：僅限純 3D 建模、雕刻、拓撲相關（Maya, ZBrush, 3ds Max, Blender 的建模類文章）。
-    - **TA 與特效技術**：Shader、渲染技術、光照、材質製作、場景搭建與展示、Houdini 特效、動畫/綁定、效能優化、引擎底層開發、VFX 視覺特效，以及 80.lv / 映CG 上的技術美術類文章。
     ⚠️ 不需要收錄 Godot Engine 的相關新聞，請直接忽略。
-    請確保依上述明確分類。特別注意，為了方便系統辨識來源：若新聞分類到「3D 模型技術」，其來源連結命名請務必加上 `[3D - ]` 前綴，例如 `[3D - 80.lv - 標題]`；若是分類到「TA 與特效技術」，則加上 `[TA - ]` 前綴，例如 `[TA - 映CG - 標題]`。各引擎則維持原本習慣即可。請善用條列式保持版面透氣。)
+    各引擎維持原本的標題前綴即可。系統若需辨識來源，若屬「3D 模型技術」請在其來源連結加上 `[3D - ]` 前綴。)
+    ---
+    **✨ 【TA 相關】**
+    {ta_img_tag}
+    (🚨防捏造與強制列舉機制🚨：請從 Context 篩選 TA 領域新聞，並「統一以 bullet point 列出」。包含：Shader、渲染技術、光照、材質製作、場景搭建與展示、Houdini 特效、動畫/綁定、效能優化、引擎底層開發、VFX 視覺特效，以及 80.lv / 映CG 上的技術美術類文章。
+    為了方便系統辨識，來源連結命名請務必加上 `[TA - ]` 前綴，例如 `[TA - 映CG - 標題]`。)
     ---
     **🎮 【獨立遊戲市場觀察】**
     {indie_img_tag}
@@ -258,26 +263,26 @@ async def generate_daily_report():
     ---
 
     【文章豐富度與閱讀體驗規範】
-    1. 📰 **豐富度指標**：絕對「不要」因為過度追求精簡而隨意拋棄 Context 提供給你的新聞網址。你應該將「每一篇」文章的核心菁華萃取成 1 到 2 句的高濃度摘要，確保所有重要情報都被收錄。
+    1. 📰 **豐富度指標**：請萃取所有重要情報。**【⚠️ 合併去重規則】**：針對同一款遊戲或軟體的連續「例行更新、微調修復」（例如同系列多篇 Steam 新聞），請您務必將它們「合併總結為單一條新聞」，並**「只需挑選其中一條網址作為來源示意即可，絕對不要堆疊多個重複或高度相似的網址」**。
     2. 📝 **排版與易讀性**：請「強烈依賴」Markdown 的條列式 (bullet points `-`) 以及「段落換行」來區隔不同的新聞事件與廠商。嚴禁將多筆毫不相干的事件塞進同一個巨大而擁擠的文字方塊中。請讓內文看起來有「呼吸空間」。
     3. 只有在每個大段落（例如【今日頭條】的整塊內容）的「最結尾」才放置一個 `---` 水平分隔線來區隔下一個大分類標題。
     
     🚨🚨【強制內聯來源格式 — 最關鍵規範】🚨🚨
     每一則獨立的新聞「必須」是一個獨立的 bullet point（以 `- ` 開頭），1~2 句摘要。
-    每條 bullet 的「正下方」必須緊接一條該新聞的來源連結（以兩個空格縮排），格式如下：
+    為了確保在 Discord 能正確換行顯示，每條新聞摘要的「正下方」，必須使用一個「子項目 (sub-bullet)」來放置來源連結，格式嚴格如下：
     ```
     - **Unreal Engine**：
-      - 第一篇文章的摘要。
-        [Unreal - 第一篇標題簡稱](<https://原始網址>)
-      - 第二篇文章的摘要。
-        [Unreal - 第二篇標題簡稱](<https://原始網址>)
+      - 第一篇文章的摘要內容。
+        - 🔗 來源: [Unreal - 第一篇標題簡稱](<https://原始網址>)
+      - 第二篇文章的摘要內容。
+        - 🔗 來源: [Unreal - 第二篇標題簡稱](<https://原始網址>)
     - **Unity**：
-      - 第一篇文章的摘要。
-        [Unity - 標題簡稱](<https://原始網址>)
+      - 第一篇文章的摘要內容。
+        - 🔗 來源: [Unity - 標題簡稱](<https://原始網址>)
     ```
-    🚨 絕對不要把來源連結集中放到段落底部！每條新聞摘要後面必須「立刻」跟上它自己的來源連結。
-    🚨 不需要寫 `[資料來源]` 標題行，來源連結直接內聯在 bullet 下方即可。
-    🚨 每條新聞必須有且僅有一條對應的來源連結，絕對不可以省略。
+    🚨 絕對不要把來源連結集中放到段落底部！每條新聞摘要下方必須「立刻」另起一行子項目放它的來源連結。
+    🚨 不需要寫整體 `[資料來源]` 標題行，每則新聞皆獨立附上自己的子項目連結即可。
+    🚨 每條獨立的 bullet 必須有一條對應的來源連結；若為多篇合併的新聞，保留最具代表性的一條連結即可。
     
     【防捏造警告 (Anti-Hallucination) 與 Discord 超連結優化】
     1. 由於 Discord 原生超連結會產生冗長的預覽縮圖卡片，請「務必」使用 Markdown 的角括號 `< >` 將 URL 包起來，格式如下：
@@ -306,6 +311,12 @@ async def generate_daily_report():
           "source_urls": ["從 Context 挑選出的頭條相關網址1", "從 Context 挑選出的頭條相關網址2"],
           "image_filename": "headline_{today_str_file}.png",
           "image_keywords": ["official", "hero", "cover", "headline", "promotion"]
+        }},
+        {{
+          "section_name": "Engine",
+          "source_urls": ["(請優先挑選有包含編輯器截圖的引擎新聞網址)", "備用網址2"],
+          "image_filename": "engine_{today_str_file}.png",
+          "image_keywords": ["engine", "editor", "unreal", "unity", "viewport"]
         }},
         {{
           "section_name": "TA",
@@ -414,22 +425,21 @@ async def generate_daily_report():
             json.dump(image_targets, f, ensure_ascii=False, indent=2)
         print(f"Generated targets file: {targets_filename} with {len(image_targets)} valid targets.")
 
-        # --- 新增：更新 3 天滾動頭條紀錄 ---
-        for target in image_targets:
-            if target.get("section_name") == "Headline" and target.get("source_urls"):
-                today_headline_url = target["source_urls"][0]
-                if today_headline_url and today_headline_url != "GENERATE_AI_IMAGE":
-                    # 如果今天的新頭條不在歷史中，就加進去
-                    if today_headline_url not in headline_history:
-                        headline_history.append(today_headline_url)
-                    
-                    # 強制切片，只保留陣列最後 3 筆資料（最近 3 天）
-                    headline_history = headline_history[-3:]
-                    
-                    with open(history_file, "w", encoding="utf-8") as f:
-                        json.dump(headline_history, f, ensure_ascii=False, indent=2)
-                    print(f"Saved today's headline to history. Current history size: {len(headline_history)}")
-                break
+        # --- 新增：更新 3 天滾動全域新聞紀錄 ---
+        today_urls = []
+        # 從 Markdown 內容取出所有連結以確保是最完整的清單
+        for m in re.finditer(r"\((https?://[^)]+)\)|<(https?://[^>]+)>", report_data.get("markdown_content", "")):
+            url = m.group(1) or m.group(2)
+            if url and url != "GENERATE_AI_IMAGE" and url not in today_urls:
+                today_urls.append(url)
+                
+        if today_urls:
+            global_history.append(today_urls)
+            # 強制切片，只保留陣列最後 3 筆資料（最近 3 天）
+            global_history = global_history[-3:]
+            with open(history_file, "w", encoding="utf-8") as f:
+                json.dump(global_history, f, ensure_ascii=False, indent=2)
+            print(f"Saved {len(today_urls)} today's urls to history. Current history days: {len(global_history)}")
         # ------------------------------------
     except json.JSONDecodeError as e:
         print(f"Error parsing Gemini response as JSON: {e}")
