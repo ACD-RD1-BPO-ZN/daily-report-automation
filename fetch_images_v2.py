@@ -40,7 +40,7 @@ REAL_BROWSER_HEADERS = {
 }
 
 # 圖片最小有效大小（bytes），低於此值視為 icon/placeholder
-MIN_IMAGE_SIZE = 5000  # 5KB
+MIN_IMAGE_SIZE = 80_000  # 80 KB — 足以排除大多數 Logo 小圖
 
 def convert_to_png(img_data: bytes) -> bytes:
     """
@@ -70,13 +70,22 @@ def normalize_image_url(url):
         return url.lower()
 
 def is_valid_image(file_path):
-    """檢查圖片檔案是否有效（大小超過門檻）"""
+    """檢查圖片檔案是否有效（大小超過門檻且解析度夠大）"""
     if not os.path.exists(file_path):
         return False
     size = os.path.getsize(file_path)
     if size < MIN_IMAGE_SIZE:
         print(f"  ⚠ Image too small ({size} bytes < {MIN_IMAGE_SIZE}), treating as invalid.")
         return False
+    # 解析度檢查：排除 Logo / Icon 類小方圖
+    try:
+        with Image.open(file_path) as img:
+            w, h = img.size
+            if w < 600 or h < 315:
+                print(f"  ⚠ Image resolution too small ({w}x{h} < 600x315), treating as logo/icon.")
+                return False
+    except Exception:
+        pass  # PIL 無法讀取時不強制拒絕
     return True
 
 async def download_image(url, save_path, section_type="", image_keywords=None, used_image_urls=None):

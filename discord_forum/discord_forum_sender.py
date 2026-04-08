@@ -34,6 +34,7 @@ TAG_IDS = {
 # ============================================================
 SECTION_TAG_MAP = {
     "📢": ["headline"],   # 今日頭條     → 頭條
+    "✨": ["ta"],         # TA 相關      → 技術|TA
     "🎮": ["indie"],      # 獨立遊戲     → 遊戲|獨立遊戲
     "🤝": ["indie"],      # 在地社群     → 遊戲|獨立遊戲
     "💼": ["global"],     # 製作人週記   → 遊戲|全球 (引擎相關自動分流)
@@ -72,6 +73,7 @@ ENGINE_SUBSECTION_DEFS = [
     # 新版精確分類
     (re.compile(r"\*\*3D\s*模",        re.IGNORECASE), "🛠️ 3D 模型技術",   ["3d"]),
     (re.compile(r"\*\*TA\s*(與|&)?\s*特效", re.IGNORECASE), "🛠️ TA 與其他技術", ["ta"]),
+    (re.compile(r"\*\*TA\s*相關",       re.IGNORECASE), "🛠️ TA 相關",        ["ta"]),
     # 以下為相容舊報告的 Fallback
     (re.compile(r"\*\*80\.lv",        re.IGNORECASE), "80.lv (TA/Tech)", ["ta"]),
     (re.compile(r"\*\*(映CG|InCG|3D/CG|Blender|Maya|3ds\s*Max|ZBrush|Houdini|Boris\s*FX|Substance)", re.IGNORECASE),
@@ -81,7 +83,9 @@ ENGINE_SUBSECTION_DEFS = [
 # 段落 Emoji → daily_targets.json 中的 section_name 對應
 SECTION_IMG_KEY: dict[str, str] = {
     "📢": "Headline",
-    "🎨": "TA",
+    "⚙️": "Engine",
+    "✨": "TA",
+    "🎨": "TA",    # 向後相容舊引擎格式
     "🎮": "Indie",
     "🤝": "Local",
     "💼": "Producer",
@@ -132,14 +136,28 @@ def _is_source_link(line: str) -> bool:
 
 def _split_into_news_items(content: str) -> list[dict]:
     """
-    解析內聯格式：每條 bullet + 緊接的來源連結行 = 一條新聞。
-    同時相容舊版「來源集中在底部」的格式（fallback）。
+    解析內聯格式：每條 bullet + 緊接的來源連結（子項目）= 一條新聞。
+    使用縮排層級來正確區分「新聞 bullet」與「來源連結 sub-bullet」。
     回傳 [{"text": "...", "source": "..."}, ...]
     """
     items: list[dict] = []
     current_text = ""
     current_source = ""
-    orphan_sources: list[str] = []  # 收集「沒有前置 bullet」的獨立來源（舊格式相容）
+    orphan_sources: list[str] = []
+
+    # 先計算整個 content 的 bullet 縮排基準
+    # 找出最淺的 bullet 縮排，作為「新聞級」的基準
+    bullet_indent_levels: list[int] = []
+    for line in content.split("\n"):
+        if re.match(r'^(\s*)-\s', line):
+            indent = len(line) - len(line.lstrip(' '))
+            bullet_indent_levels.append(indent)
+
+    # 排序後取最小值與次小值，用來判斷「內容bullet」vs「來源sub-bullet」
+    unique_indents = sorted(set(bullet_indent_levels))
+    content_indent = unique_indents[0] if unique_indents else 0
+    # 若只有一種縮排，來源辨識完全靠 _is_source_link
+    source_indent = unique_indents[1] if len(unique_indents) > 1 else 9999
 
     for line in content.split("\n"):
         s = line.strip()
@@ -148,32 +166,33 @@ def _split_into_news_items(content: str) -> list[dict]:
 
         # 跳過子標題行（**Unreal Engine**：等）
         if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", s):
-            # flush 前一條
             if current_text:
                 items.append({"text": current_text, "source": current_source})
                 current_text = ""
                 current_source = ""
             continue
 
-        # 來源連結行
-        if _is_source_link(s):
+        # 計算本行縮排
+        raw_indent = len(line) - len(line.lstrip(' '))
+        is_bullet = bool(re.match(r'^\s*-\s', line))
+
+        # 來源連結行：必須同時是 _is_source_link，且縮排比內容 bullet 深
+        if _is_source_link(s) and (raw_indent > content_indent or not is_bullet):
             clean_src = s.lstrip("- ").strip()
             if current_text:
-                # 內聯模式：連結歸屬前一條 bullet
                 if current_source:
-                    # 已有來源 → 這是額外來源，追加
+                    # 已有來源 → 此為額外連結（合併來源同一新聞罕見場合）
                     current_source += "\n" + clean_src
                 else:
                     current_source = clean_src
             else:
-                # 沒有前置 bullet → 舊格式的集中來源
                 orphan_sources.append(clean_src)
             continue
 
-        # Bullet 行
-        if s.startswith("- "):
+        # 新聞 bullet：縮排在內容層級或更淺
+        if is_bullet and raw_indent <= content_indent:
+            stripped = re.sub(r"^\s*-\s*", "", s)
             # 跳過引擎子標題 bullet（- **Unity**：）
-            stripped = re.sub(r"^-\s*", "", s)
             if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped):
                 if current_text:
                     items.append({"text": current_text, "source": current_source})
@@ -185,6 +204,14 @@ def _split_into_news_items(content: str) -> list[dict]:
                 items.append({"text": current_text, "source": current_source})
             current_text = s
             current_source = ""
+            continue
+
+        # 比內容層稍深的 bullet 但不是來源連結 → 次級 bullet，附加到當前新聞
+        if is_bullet and raw_indent > content_indent and not _is_source_link(s):
+            if current_text:
+                current_text += "\n" + s
+            else:
+                current_text = s
             continue
 
         # 其他文字：追加到當前 bullet
@@ -204,10 +231,10 @@ def _split_into_news_items(content: str) -> list[dict]:
             if i < len(empty_items):
                 empty_items[i]["source"] = src
             elif items:
-                # 多餘的來源附加到最後一條
                 items[-1]["source"] += ("\n" + src) if items[-1]["source"] else src
 
     return items
+
 
 
 def _split_engine_section(section_text: str) -> list[tuple[str, list[str], str]]:
@@ -544,9 +571,8 @@ def send_to_discord_forum() -> None:
     with open(latest_report, "r", encoding="utf-8") as f:
         full_text = f.read()
 
-    # 3. 依照大標題切割段落
     section_pattern = re.compile(
-        r"(?=# 📅|\*\*[📢🎨🎮🇨🇳🇹🇼📍💼🤝🌌])",
+        r"(?=# 📅|\*\*[📢🎨⚙️✨🎮🇨🇳🇹🇼📍💼🤝🌌])",
         re.UNICODE,
     )
     raw_sections = section_pattern.split(full_text)
@@ -592,8 +618,8 @@ def send_to_discord_forum() -> None:
         if emoji_found:
             img_path = section_name_to_img.get(SECTION_IMG_KEY[emoji_found])
 
-        # 🎨 引擎段落：拆分後路由到各引擎標籤桶
-        if "🎨" in section[:80]:
+        # 🎨/⚙️ 引擎段落：拆分後路由到各引擎標籤桶
+        if "🎨" in section[:80] or "⚙️" in section[:80]:
             engine_parts = _split_engine_section(message_content)
             for eng_content, eng_tag_keys, _eng_title in engine_parts:
                 tag_key = eng_tag_keys[0]
