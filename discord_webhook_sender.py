@@ -52,6 +52,11 @@ def send_to_discord():
                 target_mappings[item["image_filename"]] = os.path.join("assets", item["image_filename"])
 
     for i, section in enumerate(sections):
+        # 略過 TA 模塊 (普通日報不發送 TA 內容，保留在論壇版)
+        if "✨" in section[:80] or "TA 相關" in section[:80]:
+            print("Skipping TA section in webhook newspaper.")
+            continue
+
         # 清除 Markdown 圖片標籤（圖片由附件上傳）
         message_content = re.sub(r'!\[.*?\]\(.*?\)', '', section).strip()
 

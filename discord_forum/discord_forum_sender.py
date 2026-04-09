@@ -150,6 +150,10 @@ def _split_into_news_items(content: str) -> list[dict]:
     bullet_indent_levels: list[int] = []
     for line in content.split("\n"):
         if re.match(r'^(\s*)-\s', line):
+            # 排除子標題行（例如 - **Unreal Engine**：）以免干擾真實內容的縮排基準
+            stripped = re.sub(r"^\s*-\s*", "", line.strip())
+            if re.match(r"^\*\*[^*]+\*\*[\uff1a:]?\s*$", stripped):
+                continue
             indent = len(line) - len(line.lstrip(' '))
             bullet_indent_levels.append(indent)
 
