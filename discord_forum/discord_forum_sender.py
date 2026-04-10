@@ -130,7 +130,9 @@ def _resolve_color(tag_keys: list[str]) -> int:
 
 def _is_source_link(line: str) -> bool:
     """判斷一行文字是否為來源連結（Markdown 超連結格式）。"""
-    s = line.strip().lstrip("- ")
+    s = line.strip().lstrip("- ").strip()
+    # 相容舊格式：- 🔗 來源: [名稱](<url>)
+    s = re.sub(r"^(?:🔗\s*)?(?:來源|来源)\s*[:：]\s*", "", s)
     return bool(re.match(r'\[', s) and re.search(r'\(<https?://|\(https?://', s))
 
 
@@ -183,6 +185,7 @@ def _split_into_news_items(content: str) -> list[dict]:
         # 來源連結行：必須同時是 _is_source_link，且縮排比內容 bullet 深
         if _is_source_link(s) and (raw_indent > content_indent or not is_bullet):
             clean_src = s.lstrip("- ").strip()
+            clean_src = re.sub(r"^(?:🔗\s*)?(?:來源|来源)\s*[:：]\s*", "", clean_src)
             if current_text:
                 if current_source:
                     # 已有來源 → 此為額外連結（合併來源同一新聞罕見場合）
