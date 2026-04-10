@@ -2,6 +2,28 @@
 
 ---
 
+## 2026-04-10
+
+### 報告生成 (`generate_report.py`)
+
+**資料源擴充與 3D 板塊結構升級**
+- **修正映CG抓取失敗**：針對映CG卡片連結常無可見文字的情況，新增標題萃取 fallback（`a text` → `title/aria-label` → `img alt` → 文章頁 `<title>`），並放寬最小標題長度門檻，解決近期映CG內容長期缺席的問題。
+- **3D 模型技術升級為獨立大標**：Prompt 結構由 7 段擴為 8 段，新增 `**🧱 【3D 模型技術】**`，明確規範 3D 建模/雕刻/拓撲/DCC 教學不得再混入 `【引擎相關】`。
+- **新增 3D 專屬圖片目標**：`image_targets` 新增 `Model3D`，產生 `model3d_YYYYMMDD.png`，讓 3D 段落可有獨立配圖。
+- **新增 Blender 官方與社群來源**：爬蟲 feeds 新增 `code.blender.org`、`blender.org`、`blendernation.com`，並在 3D 段落規則中要求優先納入 Blender 相關符合內容。
+
+### 普通日報發布 (`discord_webhook_sender.py`)
+
+- **回歸源頭切段，不做發送端硬拆**：移除先前在 webhook 端臨時加入的「從引擎段落抽出 3D」前處理，改由生成端直接輸出 `🧱` 獨立段落，避免雙重邏輯與後續維護風險。
+- **支援新 3D 大標 Emoji 切段**：`section_pattern` 補入 `🧱`，確保普通日報可正確識別新段落。
+
+### Discord 論壇發布 (`discord_forum_sender.py`)
+
+- **支援新 3D 大標路由**：
+  - `SECTION_TAG_MAP` 補入 `"🧱": ["3d"]`，使 3D 獨立段可直接進入技術 | 3D 標籤桶。
+  - `SECTION_IMG_KEY` 補入 `"🧱": "Model3D"`，使論壇串可對應 3D 專屬圖片。
+  - `section_pattern` 補入 `🧱`，避免新段落被漏切。
+
 ## 2026-04-09
 
 ### 普通日報發布 (`discord_webhook_sender.py`)

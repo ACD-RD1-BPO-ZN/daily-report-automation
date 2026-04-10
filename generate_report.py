@@ -33,6 +33,9 @@ def fetch_rss_feeds(recent_urls=None):
     print("Fetching active RSS feeds for strict context...")
     feeds = {
         "80.lv (TA/Tech)": "https://80.lv/rss",
+        "Blender Developer Blog (Official)": "https://code.blender.org/feed/",
+        "Blender.org News (Official)": "https://www.blender.org/feed/",
+        "BlenderNation (Community)": "https://www.blendernation.com/feed/",
         "Unreal Engine News": "https://www.unrealengine.com/en-US/rss",
         "Unity Blog": "https://blog.unity.com/feed",
         "Godot Engine Blog": "https://godotengine.org/rss.xml",
@@ -140,6 +143,37 @@ def fetch_rss_feeds(recent_urls=None):
             print(f'  [Error] Unity Blog direct scrape failed: {e}')
 
     # 映CG (incgmedia) — 無 RSS，爬分類頁面最新文章 (3D/CG/VFX)
+    def _extract_incg_title(anchor, article_url):
+        """映CG卡片常用圖片連結，a 內文會是空字串，需多路徑取標題。"""
+        title_text = anchor.get_text(strip=True)
+        if title_text:
+            return title_text
+
+        # 常見可用屬性
+        for attr in ("title", "aria-label"):
+            v = (anchor.get(attr) or "").strip()
+            if v:
+                return v
+
+        # 圖片 alt 常帶標題
+        img = anchor.select_one("img[alt]")
+        if img:
+            alt = (img.get("alt") or "").strip()
+            if alt:
+                return alt
+
+        # 最後 fallback：打開文章頁取 <title>
+        try:
+            r = requests.get(article_url, headers=headers, timeout=10)
+            s = BeautifulSoup(r.text, "html.parser")
+            page_title = (s.title.string or "").strip() if s.title else ""
+            if page_title:
+                return re.sub(r"\s*[-|｜]\s*映CG.*$", "", page_title).strip()
+        except Exception:
+            pass
+
+        return ""
+
     try:
         scraped_data += '\n### 來源資訊: 映CG InCG Media (3D/CG/VFX)\n'
         count = 0
@@ -157,8 +191,8 @@ def fetch_rss_feeds(recent_urls=None):
                 if not href.startswith(slug_prefix) or href.rstrip('/') == slug_prefix.rstrip('/'):
                     continue
                 full_url = 'https://www.incgmedia.com' + href
-                title_text = a.get_text(strip=True)
-                if (title_text and len(title_text) > 15
+                title_text = _extract_incg_title(a, full_url)
+                if (title_text and len(title_text) > 4
                         and full_url not in seen_incg):
                     if full_url in recent_urls: continue
                     seen_incg.add(full_url)
@@ -206,6 +240,7 @@ async def generate_daily_report():
     # --- ✅ 修正：在這裡定義圖片標籤變數 (位置必須在 prompt 之前) ---
     headline_img_tag = f"![頭條圖片](../assets/headline_{today_str_file}.png)"
     engine_img_tag = f"![引擎相關](../assets/engine_{today_str_file}.png)"
+    model3d_img_tag = f"![3D模型技術](../assets/model3d_{today_str_file}.png)"
     ta_img_tag = f"![TA技術](../assets/ta_{today_str_file}.png)"
     indie_img_tag = f"![獨立遊戲](../assets/indie_{today_str_file}.png)"
     local_img_tag = f"![在地社群](../assets/local_{today_str_file}.png)"
@@ -226,7 +261,7 @@ async def generate_daily_report():
     【重要：結構強制規範】
     1. 報告的第一行必須是最大字體的 H1 標題（使用 # 號），格式如下，且標題下方「不需要」有 `---` 水平線：
        # 📅 Ultimate Daily Full Report — {today_str_display}
-    2. 接下來，你必須嚴格產生以下 7 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
+    2. 接下來，你必須嚴格產生以下 8 個段落，每個段落的開頭使用「**🔥 標題**」加粗格式（絕對不要在標題正下方加上 `---` 分隔線）：
     
     **📢 【今日頭條】**
     {headline_img_tag}
@@ -234,12 +269,17 @@ async def generate_daily_report():
     ---
     **⚙️ 【引擎相關】**
     {engine_img_tag}
-    (🚨防捏造與強制列舉機制🚨：請從 Context 篩選引擎與 3D 模型相關新聞，並將它們強制分類到以下三個小標題中（若某分類無新聞，則跳過該小標題）：
+    (🚨防捏造與強制列舉機制🚨：請從 Context 篩選引擎新聞，並將它們強制分類到以下兩個小標題中（若某分類無新聞，則跳過該小標題）：
     - **Unreal Engine**
     - **Unity**
-    - **3D 模型技術**：僅限純 3D 建模、雕刻、拓撲相關（Maya, ZBrush, 3ds Max, Blender 的建模類文章）。
     ⚠️ 不需要收錄 Godot Engine 的相關新聞，請直接忽略。
-    各引擎維持原本的標題前綴即可。系統若需辨識來源，若屬「3D 模型技術」請在其來源連結加上 `[3D - ]` 前綴。)
+    各引擎維持原本的標題前綴即可。)
+    ---
+    **🧱 【3D 模型技術】**
+    {model3d_img_tag}
+    (🚨強制獨立板塊🚨：請把純 3D 建模、雕刻、拓撲、貼圖流程、DCC 工具教學（Maya / ZBrush / 3ds Max / Blender / Substance）集中放在此段落，禁止再放在【引擎相關】。
+    此段落請優先納入 Blender 官方來源（code.blender.org、blender.org）、BlenderNation（blendernation.com）與映CG/80.lv 的符合內容。
+    來源連結命名請加上 `[3D - ]` 前綴。)
     ---
     **✨ 【TA 相關】**
     {ta_img_tag}
@@ -259,7 +299,7 @@ async def generate_daily_report():
     (內容)
     ---
     **🌌 【今日全方位深度總結】**
-    (🚨全面總結與技術解析🚨：請依據上述「每一個標題」（頭條、TA、獨立遊戲、在地、製作人）的內容，分別用一句話進行精準總結。其中針對技術與引擎相關內容，請確保帶有 TA 專屬的深度視角 (如 Rendering, Pipeline 等)。請善用換行排版，不要把它寫成一整段擁擠的文字組合。)
+    (🚨全面總結與技術解析🚨：請依據上述「每一個標題」（頭條、引擎、3D模型、TA、獨立遊戲、在地、製作人）的內容，分別用一句話進行精準總結。其中針對技術與引擎相關內容，請確保帶有 TA 專屬的深度視角 (如 Rendering, Pipeline 等)。請善用換行排版，不要把它寫成一整段擁擠的文字組合。)
     ---
 
     【文章豐富度與閱讀體驗規範】
@@ -323,6 +363,12 @@ async def generate_daily_report():
           "source_urls": ["(請優先挑選有包含編輯器截圖的引擎新聞網址)", "備用網址2"],
           "image_filename": "engine_{today_str_file}.png",
           "image_keywords": ["engine", "editor", "unreal", "unity", "viewport"]
+        }},
+        {{
+          "section_name": "Model3D",
+          "source_urls": ["(請優先挑選有建模成果展示圖的3D文章網址)", "備用網址2"],
+          "image_filename": "model3d_{today_str_file}.png",
+          "image_keywords": ["3d", "modeling", "sculpt", "topology", "blender", "maya", "zbrush", "substance"]
         }},
         {{
           "section_name": "TA",

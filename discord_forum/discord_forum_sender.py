@@ -575,6 +575,14 @@ def send_to_discord_forum() -> None:
     with open(latest_report, "r", encoding="utf-8") as f:
         full_text = f.read()
 
+    # 相容新生成格式：將獨立 3D 大標轉回舊版論壇可識別的「引擎子標題」語意，
+    # 以維持論壇既有 3D 標題/路由行為不變。
+    full_text = re.sub(
+        r"\*\*🧱\s*【3D\s*模型技術】\*\*",
+        "**⚙️ 【引擎相關】**\n- **3D 模型技術**：",
+        full_text,
+    )
+
     section_pattern = re.compile(
         r"(?=# 📅|\*\*[📢🎨⚙️✨🎮🇨🇳🇹🇼📍💼🤝🌌])",
         re.UNICODE,
