@@ -88,15 +88,40 @@ def is_valid_image(file_path):
         pass  # PIL 無法讀取時不強制拒絕
     return True
 
-async def download_image(url, save_path, section_type="", image_keywords=None, used_image_urls=None):
+async def download_image(url, save_path, section_type="", image_keywords=None, used_image_urls=None, url_metadata_cache=None):
     if used_image_urls is None:
         used_image_urls = set()
     if image_keywords is None:
         image_keywords = []
 
+    if url_metadata_cache is None:
+        url_metadata_cache = {}
+
     print(f"\n--- Processing {url} for Section: {section_type} ---")
     
     headers = REAL_BROWSER_HEADERS
+    
+    # Priority 0: Check Cache
+    cached_data = url_metadata_cache.get(url)
+    if cached_data and cached_data.get("og_image"):
+        og_url = cached_data["og_image"]
+        print(f"  Priority 0: Found cached og:image: {og_url}")
+        try:
+            img_data = requests.get(og_url, headers=headers, timeout=10).content
+            png_data = convert_to_png(img_data)
+            with open(save_path, 'wb') as f:
+                f.write(png_data)
+            if is_valid_image(save_path):
+                if normalize_image_url(og_url) not in used_image_urls:
+                    print(f"  Priority 0: ✅ Cached og:image saved successfully")
+                    used_image_urls.add(normalize_image_url(og_url))
+                    return True
+                else:
+                    print(f"  Priority 0: Cached og:image already used, skipping...")
+            else:
+                print(f"  Priority 0: Cached og:image invalid/small, trying next strategy...")
+        except Exception as e:
+            print(f"  Priority 0: Cached og:image download failed: {e}")
     
     # Priority 1: requests + bs4 for og:image or direct img src
     try:
@@ -488,6 +513,14 @@ async def main():
             print("Skipping image fetch due to invalid JSON.")
             
     used_image_urls = set()
+    used_article_urls = set()
+    url_metadata_cache = {}
+    if os.path.exists("url_metadata_cache.json"):
+        try:
+            with open("url_metadata_cache.json", "r", encoding="utf-8") as f:
+                url_metadata_cache = json.load(f)
+        except Exception as e:
+            print(f"Error loading metadata cache: {e}")
     
     # ── 開發用：直接用 Test.jpg 暫代所有圖片 ──
     if USE_LOCAL_TEST_IMAGE:
@@ -541,10 +574,11 @@ async def main():
             success = False
             for target_url in source_urls:
                 print(f"\nEvaluating URL for {sec_type}: {target_url}")
-                is_downloaded = await download_image(target_url, target_path, sec_type, image_keywords, used_image_urls)
+                is_downloaded = await download_image(target_url, target_path, sec_type, image_keywords, used_image_urls, url_metadata_cache)
                 if is_downloaded:
                     print(f"✅ Successfully acquired image for {sec_type} from {target_url}")
                     success = True
+                    used_article_urls.add(target_url)
                     break
                 else:
                     print(f"❌ Failed to acquire image from {target_url}, trying next URL...")
@@ -553,14 +587,15 @@ async def main():
             if not success:
                 print(f"❌ Failed to acquire image from primary URLs, attempting Global Fallback for {sec_type}...")
                 for fallback_url in global_candidate_urls:
-                    # 避免重複抓取剛剛已經失敗的 URL 或已經使用的 URL
-                    if fallback_url in source_urls or normalize_image_url(fallback_url) in used_image_urls:
+                    # 避免重複抓取已經失敗的 URL 或已經成功提供過圖片的文章 URL
+                    if fallback_url in source_urls or fallback_url in used_article_urls:
                         continue
                     print(f"  Attempting Global Fallback URL: {fallback_url}")
-                    is_downloaded = await download_image(fallback_url, target_path, sec_type, [], used_image_urls)
+                    is_downloaded = await download_image(fallback_url, target_path, sec_type, [], used_image_urls, url_metadata_cache)
                     if is_downloaded:
                         print(f"✅ Successfully acquired image for {sec_type} via Global Fallback from {fallback_url}")
                         success = True
+                        used_article_urls.add(fallback_url)
                         break
 
             if not success:

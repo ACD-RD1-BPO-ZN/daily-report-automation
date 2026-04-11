@@ -348,44 +348,30 @@ def _extract_url_from_source(source: str) -> str:
     return m.group(1) if m else ""
 
 
-def _fetch_og_image(url: str) -> str:
-    """抓取網頁的 og:image，回傳圖片 URL；失敗則回傳空字串。
-    使用完整的瀏覽器 Headers 來避開 Cloudflare / Akamai 等反爬蟲機制。
-    對 JS 渲染網站（如 unrealengine.com）自動使用 Playwright fallback。
+def _fetch_og_image(url: str, cache: dict = None) -> str:
+    """從快取或網頁中取得 og:image。
+    現在優先使用 url_metadata_cache.json 中的資料。
     """
     if not url:
         return ""
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/124.0.0.0 Safari/537.36"
-        ),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124"',
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-    }
-    try:
-        resp = requests.get(url, timeout=8, headers=headers)
-        if not resp.ok:
-            if any(domain in url for domain in _JS_RENDERED_DOMAINS):
-                return _fetch_og_image_playwright(url)
-            return ""
-        # 偵測 Cloudflare 攔截頁
-        if any(t in resp.text[:500].lower() for t in ["just a moment", "cloudflare", "checking your browser"]):
-            if any(domain in url for domain in _JS_RENDERED_DOMAINS):
-                return _fetch_og_image_playwright(url)
-            return ""
-        og = _parse_og_image(resp.text)
+    
+    # 優先從傳入的快取中尋找
+    if cache and url in cache:
+        og = cache[url].get("og_image", "")
         if og:
             return og
-        if any(domain in url for domain in _JS_RENDERED_DOMAINS):
-            return _fetch_og_image_playwright(url)
-        return ""
-    except Exception:
-        return ""
+
+    # 若快取未命中，才進行極簡的 requests 抓取 (作為本地執行時的保底)
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    }
+    try:
+        resp = requests.get(url, timeout=5, headers=headers)
+        if resp.ok:
+            return _parse_og_image(resp.text)
+    except:
+        pass
+    return ""
 
 
 # 需要 Playwright 支援的 JS 渲染網站
@@ -405,51 +391,8 @@ def _parse_og_image(html: str) -> str:
     return img_url
 
 
-def _fetch_og_image_playwright(url: str) -> str:
-    """用 Playwright（反偵測模式）載入 JS 渲染頁面後提取 og:image。"""
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        return ""
-    try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=True,
-                args=[
-                    "--disable-blink-features=AutomationControlled",
-                    "--no-sandbox",
-                    "--disable-setuid-sandbox",
-                    "--disable-dev-shm-usage",
-                    "--no-first-run",
-                    "--no-zygote",
-                    "--disable-gpu",
-                ],
-            )
-            context = browser.new_context(
-                viewport={"width": 1280, "height": 720},
-                user_agent=(
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/124.0.0.0 Safari/537.36"
-                ),
-                locale="zh-TW",
-            )
-            page = context.new_page()
-            page.add_init_script("""
-                Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-                Object.defineProperty(navigator, 'plugins', { get: () => [1,2,3,4,5] });
-                window.chrome = { runtime: {} };
-            """)
-            page.goto(url, wait_until="domcontentloaded", timeout=15000)
-            try:
-                page.wait_for_selector('meta[property="og:image"]', timeout=5000)
-            except Exception:
-                pass
-            html = page.content()
-            browser.close()
-        return _parse_og_image(html)
-    except Exception:
-        return ""
+# Note: _fetch_og_image_playwright has been removed. 
+# All complex scraping is moved to fetch_url_metadata.py to save Github Action minutes.
 
 
 # ============================================================
@@ -578,6 +521,16 @@ def send_to_discord_forum() -> None:
     with open(latest_report, "r", encoding="utf-8") as f:
         full_text = f.read()
 
+    # 3. 載入 URL Metadata 快取
+    url_metadata_cache = {}
+    if os.path.exists("url_metadata_cache.json"):
+        try:
+            with open("url_metadata_cache.json", "r", encoding="utf-8") as f:
+                url_metadata_cache = json.load(f)
+            print(f"📦 已載入 URL Metadata 快取 (共 {len(url_metadata_cache)} 筆)")
+        except Exception as e:
+            print(f"⚠️ 載入快取失敗: {e}")
+
     # 相容新生成格式：將獨立 3D 大標轉回舊版論壇可識別的「引擎子標題」語意，
     # 以維持論壇既有 3D 標題/路由行為不變。
     full_text = re.sub(
@@ -692,7 +645,7 @@ def send_to_discord_forum() -> None:
         for item in news_items:
             src_url = _extract_url_from_source(item.get("source", ""))
             if src_url:
-                thread_cover_url = _fetch_og_image(src_url)
+                thread_cover_url = _fetch_og_image(src_url, cache=url_metadata_cache)
                 if thread_cover_url:
                     print(f"🖼️ {tag_key}: 串封面縮圖: {thread_cover_url[:80]}")
                     break
@@ -744,7 +697,7 @@ def send_to_discord_forum() -> None:
             if item["source"]:
                 src_url = _extract_url_from_source(item["source"])
                 if src_url:
-                    thumb = _fetch_og_image(src_url)
+                    thumb = _fetch_og_image(src_url, cache=url_metadata_cache)
             _post_embed_to_thread(thread_id, embed_title, item["text"], color,
                                   source=item["source"], thumbnail_url=thumb)
             time.sleep(0.5)

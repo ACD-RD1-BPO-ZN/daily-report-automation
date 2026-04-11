@@ -2,6 +2,23 @@
 
 ---
 
+## 2026-04-11
+
+### 聯合圖片快取架構整合 (Unified Metadata Cache Strategy)
+
+**架構優化：實現「一次擷取，多處分發」**
+- **[NEW] 中央網址後設資料擷取 (`fetch_url_metadata.py`)**：新增專用腳本，負責一次性掃描日報中所有的 20+ 個來源網址。採用非同步 (Asyncio) 策略，結合 `requests` 與 `Playwright` 擷取 `og:image` 並存入 `url_metadata_cache.json`。
+- **[MODIFY] 下載圖片腳本 (`fetch_images_v2.py`)**：新增 **Priority 0 (Cache Hit)**。優先讀取快取中的圖片網址，大幅降低重複爬蟲的開銷與被網站（如 Cloudflare/Akamai）阻擋的機率。
+- **[MODIFY] Discord 論壇發布 (`discord_forum_sender.py`)**：徹底移除腳本中耗時的 Playwright 爬蟲邏輯。現在發文配圖改為直接查詢快取檔案，發文速度變為**瞬時完成**，並移除了約 100 多行的複雜維護代碼。
+- **[MODIFY] CI/CD (`daily_report.yml`)**：更新 GitHub Actions 流程，將快取擷取腳本納入正規步驟，並自動追蹤 `url_metadata_cache.json` 變動。
+
+### 媒體獲取 (`fetch_images_v2.py`)
+
+**Bug 修正：徹底解決重複圖片洗版問題**
+- **實作來源網址去重 (`used_article_urls`)**：修正了 Global Fallback（全局備用機制）在抓圖失敗時，會一直從同一個成功來源（如 Blender 官方新聞）反覆抓取不同圖片來填補空的版塊，導致整份報紙全都是同一主題的問題。現在每篇文章路徑在當天日報中僅能貢獻一張圖片。
+
+---
+
 ## 2026-04-10
 
 ### 報告生成 (`generate_report.py`)
