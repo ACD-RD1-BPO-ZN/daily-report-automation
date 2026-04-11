@@ -4,6 +4,7 @@ import glob
 import re
 import json
 import requests
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 
@@ -115,7 +116,10 @@ async def get_metadata_for_urls(urls):
             
             og_img = parse_og_image(resp.text)
             if og_img:
-                cache[url] = {"og_image": og_img}
+                cache[url] = {
+                    "og_image": og_img,
+                    "last_seen": datetime.now().strftime("%Y-%m-%d")
+                }
             else:
                 urls_to_fetch_pw.append(url) # Fallback to playwright if not found
         except Exception as e:
@@ -134,15 +138,46 @@ async def get_metadata_for_urls(urls):
             # Process sequentially to avoid memory spikes / aggressive bot blocking
             for url in urls_to_fetch_pw:
                 og_img = await fetch_with_playwright(browser, url)
-                cache[url] = {"og_image": og_img}
+                cache[url] = {
+                    "og_image": og_img,
+                    "last_seen": datetime.now().strftime("%Y-%m-%d")
+                }
             
             await browser.close()
             
+    # 3. Pruning logic: Only keep entries seen in the last 7 days
+    today = datetime.now()
+    expiry_limit = today - timedelta(days=7)
+    
+    pruned_cache = {}
+    pruned_count = 0
+    now_str = today.strftime("%Y-%m-%d")
+
+    # Update last_seen for current URLs
+    for url in urls:
+        if url in cache:
+            cache[url]["last_seen"] = now_str
+
+    for url, data in cache.items():
+        last_seen_str = data.get("last_seen", "2000-01-01")
+        try:
+            last_seen_dt = datetime.strptime(last_seen_str, "%Y-%m-%d")
+            if last_seen_dt > expiry_limit:
+                pruned_cache[url] = data
+            else:
+                pruned_count += 1
+        except:
+            # If for some reason the date format is wrong, keep it to be safe
+            pruned_cache[url] = data
+
+    if pruned_count > 0:
+        print(f"🗑  Pruned {pruned_count} expired entries from cache.")
+
     # Save cache
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
-        json.dump(cache, f, indent=2, ensure_ascii=False)
+        json.dump(pruned_cache, f, indent=2, ensure_ascii=False)
         
-    print(f"Metadata fetch complete. Updated {CACHE_FILE}")
+    print(f"Metadata fetch complete. Updated {CACHE_FILE} (Total {len(pruned_cache)} entries)")
 
 def main():
     urls = extract_all_urls()

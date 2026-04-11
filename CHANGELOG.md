@@ -8,6 +8,7 @@
 
 **架構優化：實現「一次擷取，多處分發」**
 - **[NEW] 中央網址後設資料擷取 (`fetch_url_metadata.py`)**：新增專用腳本，負責一次性掃描日報中所有的 20+ 個來源網址。採用非同步 (Asyncio) 策略，結合 `requests` 與 `Playwright` 擷取 `og:image` 並存入 `url_metadata_cache.json`。
+- **[NEW] 實作快取滾動清理機制**：為 `url_metadata_cache.json` 引入 `last_seen` 時間戳記與自動修剪功能。系統現在會自動刪除超過 7 天未使用的舊網址紀錄，確保快取庫體積精簡，同時維持一週內的發文效能。
 - **[MODIFY] 下載圖片腳本 (`fetch_images_v2.py`)**：新增 **Priority 0 (Cache Hit)**。優先讀取快取中的圖片網址，大幅降低重複爬蟲的開銷與被網站（如 Cloudflare/Akamai）阻擋的機率。
 - **[MODIFY] Discord 論壇發布 (`discord_forum_sender.py`)**：徹底移除腳本中耗時的 Playwright 爬蟲邏輯。現在發文配圖改為直接查詢快取檔案，發文速度變為**瞬時完成**，並移除了約 100 多行的複雜維護代碼。
 - **[MODIFY] CI/CD (`daily_report.yml`)**：更新 GitHub Actions 流程，將快取擷取腳本納入正規步驟，並自動追蹤 `url_metadata_cache.json` 變動。
