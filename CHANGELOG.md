@@ -2,6 +2,16 @@
 
 ---
 
+## 2026-04-12
+
+### CI/CD (`.github/workflows/daily_report.yml`)
+
+**Bug 修正：修復歷史紀錄遺漏導致的重複新聞問題**
+- **更正 Git 追蹤檔案**：修復了改版後遺漏更新的檔案追蹤清單，將已棄用的 `headline_history.json` 替換為 `global_history.json`，確保系統產生的 3 天全板塊歷史紀錄能正確 commit 回儲存庫，徹底恢復防重複機制。
+- **清理舊檔案**：執行 `git rm` 刪除了不再使用的 `headline_history.json`。
+
+---
+
 ## 2026-04-11
 
 ### 聯合圖片快取架構整合 (Unified Metadata Cache Strategy)

@@ -79,8 +79,8 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # 2. 追蹤產出的檔案（頭條歷史 + 報告 + 圖片目標 + 圖片快取 + 素材圖片）
-        git add headline_history.json || true
+        # 2. 追蹤產出的檔案（全域歷史 + 報告 + 圖片目標 + 圖片快取 + 素材圖片）
+        git add global_history.json || true
         git add daily_targets.json || true
         git add url_metadata_cache.json || true
         git add Daily_Report/ || true
