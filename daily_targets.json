@@ -4,7 +4,7 @@
     "source_urls": [
       "https://www.blender.org/press/netflix-animation-studios-joins-the-blender-development-fund-as-corporate-patron/"
     ],
-    "image_filename": "headline_20260411.png",
+    "image_filename": "headline_20260412.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/spotlights/ue5-is-becoming-the-platform-of-choice-for-robotics-simulation"
+      "https://www.unrealengine.com/spotlights/ue5-is-becoming-the-platform-of-choice-for-robotics-simulation",
+      "https://unity.com/blog/eden-games-gear-club-unlimited-3"
     ],
-    "image_filename": "engine_20260411.png",
+    "image_filename": "engine_20260412.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/08/discover-ucupaint-a-free-texture-painting-add-on-for-blender/"
+      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
+      "https://www.blendernation.com/2026/04/11/snapsplit-add-on-automates-splitting-and-connector-building-for-3d-printing/"
     ],
-    "image_filename": "model3d_20260411.png",
+    "image_filename": "model3d_20260412.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,9 +49,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/cyberpunk-2077-s-new-ps5-pro-update-is-absolutely-mind-blowing"
+      "https://80.lv/articles/this-metroid-fusion-animated-fan-art-created-with-unreal-engine-and-zbrush-is-really-impressive",
+      "https://80.lv/articles/cyberpunk-2077-s-new-ps5-pro-update-is-absolutely-mind-blowing",
+      "https://www.blendernation.com/2026/04/09/free-course-shading-masterclass-understanding-metals/"
     ],
-    "image_filename": "ta_20260411.png",
+    "image_filename": "ta_20260412.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -65,9 +69,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/a- stealthy-octopus-takes-center-stage-in-the-cinematic-25d-platformer-darwins-paradox"
+      "https://www.unrealengine.com/events/indie-games-week-2026",
+      "https://www.gamedeveloper.com/business/split-fiction-dev-hazelight-studios-accrues-50m-total-sales"
     ],
-    "image_filename": "indie_20260411.png",
+    "image_filename": "indie_20260412.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -79,9 +84,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303266"
+      "https://gnn.gamer.com.tw/detail.php?sn=303268",
+      "https://gnn.gamer.com.tw/detail.php?sn=303267"
     ],
-    "image_filename": "local_20260411.png",
+    "image_filename": "local_20260412.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -92,9 +98,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/split-fiction-dev-hazelight-studios-accrues-50m-total-sales"
+      "https://unity.com/blog/hidden-costs-traditional-3d-tools",
+      "https://www.gamedeveloper.com/business/gunzilla-called-out-netflix-s-surprise-app-store-surge-and-indie-publishers-rise-up-patch-notes-47"
     ],
-    "image_filename": "producer_20260411.png",
+    "image_filename": "producer_20260412.png",
     "image_keywords": [
       "marketing",
       "development",
