@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303453"
+      "https://www.blender.org/press/netflix-animation-studios-joins-the-blender-development-fund-as-corporate-patron/"
     ],
-    "image_filename": "headline_20260416.png",
+    "image_filename": "headline_20260417.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/unity-joins-iab-europe-tcf-compliant-data-use-advertising"
+      "https://www.unrealengine.com/developer-interviews/mixtape-making-the-magic-of-nostalgia-come-alive-in-unreal-engine-5",
+      "https://www.unrealengine.com/spotlights/ue5-is-becoming-the-platform-of-choice-for-robotics-simulation"
     ],
-    "image_filename": "engine_20260416.png",
+    "image_filename": "engine_20260417.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/15/non-blender-how-go-gaussian-splats-work/",
-      "https://www.blendernation.com/2026/04/15/blender-developers-meeting-notes-13-april-2026/"
+      "https://www.blender.org/press/blender-5-1-release/",
+      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/"
     ],
-    "image_filename": "model3d_20260416.png",
+    "image_filename": "model3d_20260417.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,9 +49,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/artist-shows-a-helmet-texturing-demo-created-with-substance-3d-painter-and-unreal-engine"
+      "https://80.lv/articles/creating-a-houdini-tool-that-generates-stylized-bridges-for-unreal-engine-5",
+      "https://unity.com/blog/eden-games-gear-club-unlimited-3",
+      "https://80.lv/articles/tutorial-how-to-rig-flat-eyes-for-stylized-3d-characters-in-blender"
     ],
-    "image_filename": "ta_20260416.png",
+    "image_filename": "ta_20260417.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +69,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/godot-showcase-xogot/",
-      "https://80.lv/articles/retro-cartoon-style-shooter-mouse-p-i-for-hire-gets-new-noir-cinematic-trailer",
-      "https://store.steampowered.com/news/259771/"
+      "https://unity.com/blog/interactive-writing-challenges-for-nonlinear-rpg-design",
+      "https://gnn.gamer.com.tw/detail.php?sn=303532"
     ],
-    "image_filename": "indie_20260416.png",
+    "image_filename": "indie_20260417.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -82,10 +84,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303452",
-      "https://gnn.gamer.com.tw/detail.php?sn=303449"
+      "https://gnn.gamer.com.tw/detail.php?sn=303537",
+      "https://gnn.gamer.com.tw/detail.php?sn=303536"
     ],
-    "image_filename": "local_20260416.png",
+    "image_filename": "local_20260417.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -96,10 +98,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/design/how-capcom-s-pragmata-blends-puzzle-solving-with-sci-fi-combat",
-      "https://www.gamedeveloper.com/business/runescape-developer-to-expand-its-ip-to-the-asian-pacific-region"
+      "https://unity.com/blog/hidden-costs-traditional-3d-tools",
+      "https://www.gamedeveloper.com/business/us-representative-maxwell-frost-voices-protest-over-saudi-buyout-of-ea"
     ],
-    "image_filename": "producer_20260416.png",
+    "image_filename": "producer_20260417.png",
     "image_keywords": [
       "marketing",
       "development",
