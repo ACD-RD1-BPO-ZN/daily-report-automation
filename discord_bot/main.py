@@ -901,6 +901,30 @@ async def total_leaderboard(ctx):
     else:
         await status_msg.edit(content="❌ 找不到正式頻道，請確認 TARGET_CHANNEL_ID。")
 
+@bot.command(name='測試發公告')
+@commands.has_permissions(administrator=True)
+async def test_announce(ctx, *, message: str):
+    """[測試用] 讓機器人代發客製化文字或公告至測試頻道"""
+    target_channel = bot.get_channel(int(TEST_CHANNEL_ID))
+    if target_channel:
+        await target_channel.send(message)
+        await ctx.message.add_reaction("✅")
+        await ctx.send(f"✅ 測試公告已成功發佈至 {target_channel.mention}！", delete_after=5)
+    else:
+        await ctx.send("❌ 找不到測試頻道，請確認 TEST_CHANNEL_ID。")
+
+@bot.command(name='發公告')
+@commands.has_permissions(administrator=True)
+async def announce(ctx, *, message: str):
+    """讓機器人代發客製化文字或公告至正式頻道"""
+    target_channel = bot.get_channel(int(TARGET_CHANNEL_ID))
+    if target_channel:
+        await target_channel.send(message)
+        await ctx.message.add_reaction("✅")
+        await ctx.send(f"✅ 公告已成功發佈至 {target_channel.mention}！", delete_after=5)
+    else:
+        await ctx.send("❌ 找不到正式頻道，請確認 TARGET_CHANNEL_ID。")
+
 @bot.event
 async def on_ready():
     activity = discord.Activity(type=discord.ActivityType.listening, name="空投指令")
@@ -941,6 +965,8 @@ async def on_ready():
 @test_reaction_airdrop.error
 @test_total_leaderboard.error
 @total_leaderboard.error
+@announce.error
+@test_announce.error
 async def airdrop_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("🚫 權限不足：只有系統管理員可以使用此空投權限。")
