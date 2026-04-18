@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blender.org/press/netflix-animation-studios-joins-the-blender-development-fund-as-corporate-patron/"
+      "https://www.gamedeveloper.com/business/iron-galaxy-studios-lays-off-a-number-of-workers-as-it-reduces-company-size"
     ],
-    "image_filename": "headline_20260417.png",
+    "image_filename": "headline_20260418.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/mixtape-making-the-magic-of-nostalgia-come-alive-in-unreal-engine-5",
-      "https://www.unrealengine.com/spotlights/ue5-is-becoming-the-platform-of-choice-for-robotics-simulation"
+      "https://www.unrealengine.com/developer-interviews/how-adhoc-used-unreal-engine-to-deliver-2025s-narrative-driven-hit-dispatch",
+      "https://unity.com/blog/games-made-with-unity-march-2026-releases"
     ],
-    "image_filename": "engine_20260417.png",
+    "image_filename": "engine_20260418.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,10 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-1-release/",
-      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/"
+      "https://www.blendernation.com/2026/04/17/best-of-blender-artists-2026-16/",
+      "https://80.lv/articles/how-to-sculpt-a-detailed-environment-of-a-hidden-temple-using-zbrush"
     ],
-    "image_filename": "model3d_20260417.png",
+    "image_filename": "model3d_20260418.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +49,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/creating-a-houdini-tool-that-generates-stylized-bridges-for-unreal-engine-5",
-      "https://unity.com/blog/eden-games-gear-club-unlimited-3",
-      "https://80.lv/articles/tutorial-how-to-rig-flat-eyes-for-stylized-3d-characters-in-blender"
+      "https://80.lv/articles/fans-reimagine-classic-tomb-raider-as-2d-side-scroller"
     ],
-    "image_filename": "ta_20260417.png",
+    "image_filename": "ta_20260418.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,10 +67,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://unity.com/blog/interactive-writing-challenges-for-nonlinear-rpg-design",
-      "https://gnn.gamer.com.tw/detail.php?sn=303532"
+      "https://store.steampowered.com/news/265126/"
     ],
-    "image_filename": "indie_20260417.png",
+    "image_filename": "indie_20260418.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -84,10 +81,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303537",
-      "https://gnn.gamer.com.tw/detail.php?sn=303536"
+      "https://gnn.gamer.com.tw/detail.php?sn=303613",
+      "https://gnn.gamer.com.tw/detail.php?sn=303614"
     ],
-    "image_filename": "local_20260417.png",
+    "image_filename": "local_20260418.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -98,10 +95,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://unity.com/blog/hidden-costs-traditional-3d-tools",
-      "https://www.gamedeveloper.com/business/us-representative-maxwell-frost-voices-protest-over-saudi-buyout-of-ea"
+      "https://www.gamedeveloper.com/production/panic-won-t-release-playdate-titles-that-use-some-forms-of-generative-ai",
+      "https://www.gamedeveloper.com/business/ubisoft-union-workers-agree-settlement-some-legal-advice-for-game-devs-and-is-xbox-game-pass-too-expensive-"
     ],
-    "image_filename": "producer_20260417.png",
+    "image_filename": "producer_20260418.png",
     "image_keywords": [
       "marketing",
       "development",
