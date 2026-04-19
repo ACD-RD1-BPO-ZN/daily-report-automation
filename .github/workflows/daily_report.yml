@@ -79,12 +79,12 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # 2. 追蹤產出的檔案（全域歷史 + 報告 + 圖片目標 + 圖片快取 + 素材圖片）
+        # 2. 追蹤產出的檔案（全域歷史 + 報告 + 圖片目標 + 圖片快取）
+        # 注意：assets/ 和 Podcast/ 已在 .gitignore 中排除，不再上傳至 GitHub 以節省空間
         git add global_history.json || true
         git add daily_targets.json || true
         git add url_metadata_cache.json || true
         git add Daily_Report/ || true
-        git add assets/ || true
         
         # 3. 提交變更。[skip ci] 非常重要，它能防止這次的 Push 再次觸發 Action 導致無限迴圈
         # (加 || echo... 是防止如果今天抓取的頭條跟昨天完全一樣，Git 發現沒東西可更新時報錯)
