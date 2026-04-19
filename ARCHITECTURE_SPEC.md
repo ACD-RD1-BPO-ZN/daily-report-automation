@@ -1,6 +1,6 @@
 # 遊戲產業自動化日報系統分析與架構規格書 (Architecture Specification)
 
-> 最後更新：2026-04-04
+> 最後更新：2026-04-19
 
 ## 1. 專案概述 (Project Overview)
 本專案 (`daily-report-automation`) 是一個完全自動化的遊戲產業新聞摘要與發布系統。它每天定時從多個遊戲開發相關的 RSS 及網頁來源抓取最新資訊，利用大語言模型 (Gemini 2.5 Flash) 進行摘要總結並排版成 Markdown 格式，同時動態爬取配圖 (Playwright / requests)，最後自動推播至 Discord Webhook（普通日報）與 Discord 論壇頻道（論壇版日報）。
@@ -18,25 +18,33 @@
 #### 2.1 內容生成層: `generate_report.py`
 - **職責**：資料獲取 (Data Ingestion) 與 內容生成 (Content Generation)。
 - **核心行為**：
-  - 透過 `feedparser` 與 `requests` + `BeautifulSoup` 抓取多個遊戲新聞來源 (80.lv, Unreal, Unity, Godot 等)。
+  - 透過 `feedparser` 與 `requests` + `BeautifulSoup` 抓取多個遊戲新聞來源 (80.lv, Unreal, Unity, BlenderNation, 映CG 等)。注意：Godot 已移除。
   - 維護 `global_history.json` 來儲存過去 3 天產生過的「全板塊」新聞網址，在 `fetch_rss_feeds()` 爬取階段實施「物理截斷法」過濾重複新聞，確保 100% 避開舊聞並節省 LLM Token 成本。
   - 將過濾後的原始內容 (Context) 餵給 Gemini API，並強制要求回傳嚴格的 **JSON 格式**。
 - **輸出約定**：
   - `Daily_Full_Report_YYYYMMDD.md`：完整的最終文字報告。
   - `daily_targets.json`：後續爬圖腳本所需的圖片抓取指示清單 (包含 `section_name`, `source_urls`, `image_keywords` 與 AI 算圖用的 `ai_prompt`)。
 
-#### 2.2 媒體獲取層: `fetch_images_v2.py`
+#### 2.2 中央網址後設資料擷取: `fetch_url_metadata.py`
+- **職責**：一次性掃描日報中所有來源網址的 `og:image`，建立統一快取。
+- **核心行為**：結合 `requests` 與 `Playwright` 非同步擷取，存入 `url_metadata_cache.json`。內建 7 天滾動清理機制，自動刪除過期條目。
+- **輸出約定**：`url_metadata_cache.json`（供 `fetch_images_v2.py` 與 `discord_forum_sender.py` 共用）。
+
+#### 2.3 媒體獲取層: `fetch_images_v2.py`
 - **職責**：圖片抓取 (Image Scraping)。
 - **核心行為**：
   - 讀取 `daily_targets.json`。
-  - **傳統圖片**：採用多層級的爬蟲策略。
+  - **多層級爬蟲策略**：
+    - *Priority 0*: 查詢 `url_metadata_cache.json` 快取命中（最快）。
     - *Priority 1*: Request + BeautifulSoup (尋找 `og:image` 或符合關鍵字的大圖)。
     - *Priority 2*: Playwright 無頭瀏覽器截圖 (應對動態網頁、Cloudflare 保護、lazy-loading)。
   - **Synthesis 段落**：已停用 Imagen AI 生成，直接跳過該條目（節省費用）。
+  - **去重機制**：`used_image_urls` 確保同一張圖不在不同區段重複使用；`used_article_urls` 確保同一篇文章只能貢獻一張圖片。
 - **輸出約定**：
   - 將抓取的圖片存入 `assets/` 資料夾，命名規則依賴 JSON 定義 (如 `headline_YYYYMMDD.png`)。
+  - **注意**：`assets/` 已加入 `.gitignore`，產出圖片不再推送至 GitHub，僅存在於 GitHub Actions 的臨時執行環境中供發布腳本使用。
 
-#### 2.3 渠道發布層 (發布器 Generators)
+#### 2.4 渠道發布層 (發布器 Generators)
 發布層由多個獨立腳本組成，每個腳本負責一個特定的對接渠道，彼此互不干涉。
 
 - **`discord_webhook_sender.py`**
@@ -49,7 +57,7 @@
   - **職責**：將每日報告各段落以獨立「討論串 (Thread)」的形式發布至 Discord **論壇頻道 (Forum Channel)**。
   - **核心行為**：
     - 使用 Discord Bot API (`/channels/{forum_channel_id}/threads`) 而非 Webhook。
-    - `🎨 引擎段落` 依 `ENGINE_SUBSECTION_DEFS` 拆成子串（UE / Unity / Godot / 80.lv / 3D），每個子串掛精確的單一標籤。
+    - `⚙️ 引擎段落` 依 `ENGINE_SUBSECTION_DEFS` 拆成子串（UE / Unity / 80.lv / 3D），每個子串掛精確的單一標籤。Godot 已移除。
     - `💼 製作人週記` 依引擎關鍵字分流，來源連結透過 `_find_best_bullet_match` 關鍵字匹配（非位置）配對到對應 bullet，繼承該 bullet 的 tag，避免 `[Unity -...]` 顯示名稱誤路由非引擎文章。
     - `_split_into_news_items`：同時支援 `- [xxx](<url>)` 與 `[xxx](<url>)` 兩種來源格式（引擎子段落的連結無前置 `- `）。
     - 每則新聞的**文字 + 來源連結合為單一 Embed**（不再分兩個 Embed）。
@@ -65,7 +73,7 @@
   - **職責**：擷取報告中的特定段落（今日頭條）並發送至 Facebook Page。
   - **核心行為**：使用正規表達式精準擷取頭條段落的純文字，並透過 Facebook Graph API 結合 `headline_YYYYMMDD.png` 發布推文。
 
-#### 2.3.1 社群互動層: `discord_bot/main.py` (Z 幣金幣機器人)
+#### 2.4.1 社群互動層: `discord_bot/main.py` (Z 幣金幣機器人)
 - **職責**：社群獎勵發放 (Community Reward Dispatcher)。這是一個**獨立常駐的 Discord Bot**，與日報自動化管線完全解耦，專門負責管理員手動觸發的虛擬金幣（Z 幣）空投任務。
 - **依賴第三方 API**：透過 **UnbelievaBoat (UB) API** (`PATCH /guilds/{guild_id}/users/{user_id}`) 向特定成員的錢包存入金幣。
 - **核心指令清單**（前綴 `!`，**僅限管理員**）：
@@ -76,16 +84,27 @@
   | `!測試空投 <金額> @成員 <原因>` | 對單一對象測試發放，公告至測試頻道（面板呈現灰色） |
   | `!多重空投 <金額> @成員A @成員B... <原因>` | 對多位指定成員批次發放，合併為單一公告面板 |
   | `!測試多重空投 <金額> @成員A @成員B... <原因>` | 多重空投的測試版，公告至測試頻道 |
-  | `!互動發放 <訊息ID> <金額> <原因>` | 掃描指定訊息的所有 Emoji 反應，自動發放給所有互動者（**自動去重複**） |
-  | `!測試互動發放 <訊息ID> <金額> <原因>` | 互動發放的測試版，公告至測試頻道 |
-  | `!全體空投 <金額> <原因>` | 對全伺服器所有非機器人成員進行群發（需 `members` Intent） |
+  | `!互動發放 <訊息ID> <金額> <原因>` | 掃描指定訊息的所有 Emoji 反應，自動發放給所有互動者（**自動去重複**），含 Money Log 審計 |
+  | `!測試互動發放 <訊息ID> <金額> <原因>` | 互動發放的測試版，公告至測試頻道，含 Money Log 審計 |
+  | `!全體空投 <金額> <原因>` | 對全伺服器所有非機器人成員進行群發（需 `members` Intent），含二次確認與 Money Log 審計 |
+  | `!測試全體空投 <金額> <原因>` | 全體空投的測試版，公告至測試頻道，含 Money Log 審計 |
+  | `!總數排行` | 撈取全伺服器金幣排行榜，發布至正式頻道 |
+  | `!測試總數排行` | 排行榜測試版，發布至測試頻道 |
+  | `!發公告 <文字>` | 讓機器人代發自定義文字至正式頻道 |
+  | `!測試發公告 <文字>` | 公告測試版，發布至測試頻道 |
 
 - **核心保護機制**：
-  - **速率限制保護**：所有批次 API 請求均在迴圈中加入 `await asyncio.sleep(0.2)`（每秒最多處理 5 人），防止觸發 UB API 或 Discord 的 Rate Limit (429)。**禁止移除此保護**。
-  - **Embed 字元截斷**：成功名單 (`@user1 @user2...`) 若超過 Discord Embed 欄位 1024 字元上限，自動截斷並加上 `...`。
+  - **PID 實例鎖檔 (`.bot.pid`)**：啟動時偵測是否有存活的其他 Bot 進程，若有則強制阻斷，杜絕雙重實例導致的指令重複執行。
+  - **API 429 智能重試 (`_patch_user_balance`)**：捕獲 `429 Too Many Requests` 並解析 `retry_after`，確保每個請求被限速也會排隊等到成功。
+  - **速率限制保護**：所有批次 API 請求均在迴圈中加入 `await asyncio.sleep(0.2)`（每秒最多處理 5 人）。**禁止移除此保護**。
+  - **Money Log 財報審計系統**：`!全體空投`、`!互動發放` 及其測試版指令均會在發幣前擷取全伺服器餘額快照，發放後寫入 `money_logs/` JSON 紀錄檔。內建滾動清理機制，固定保留最近 10 次紀錄。
+  - **全體空投二次確認**：`!全體空投` 會彈出 ✅/❌ 確認面板與狀態鎖 (`_global_airdrop_running`)，防止重複觸發。
+  - **Embed 字元截斷**：成功名單若超過 Discord Embed 欄位 1024 字元上限，自動截斷並加上 `...`。
   - **廣播隔離**：管理員在隱密後台頻道輸入指令，公告面板只會發送至對外的 `TARGET_CHANNEL_ID`，指令本身不外洩。
+- **顯示偏好**：
+  - `!互動發放` 與 `!測試互動發放` 的發放名單以純文字 `display_name`（逗號分隔）顯示，**不 @標註 (Mention) 使用者**。公告面板外圍也不附加標註字串。
 - **所需環境變數**（讀取自根目錄 `.env` 或 `discord_bot/.env`）：
-  - `DISCORD_TOKEN`：Bot 登入 Token。
+  - `DISCORD_BOT_TOKEN`：Bot 登入 Token。
   - `UB_TOKEN`：UnbelievaBoat API 授權 Token。
   - `GUILD_ID`：目標伺服器 ID。
   - `TARGET_CHANNEL_ID`：正式空投公告頻道 ID。
@@ -94,14 +113,16 @@
   - `TEST_MENTION`：測試公告的 @mention 對象。
 - **注意事項**：
   - `!互動發放` 的訊息搜尋範圍**僅限**：①指令發動的當下頻道、②`TARGET_CHANNEL_ID` 頻道。若目標訊息在其他頻道，需在該頻道直接輸入指令。
-  - 本 Bot 為**長駐進程**（`bot.run()`），需在專屬伺服器/本地環境獨立啟動，**不由 GitHub Actions 管線觸發**。
+  - 本 Bot 為**長駐進程**（`bot.run()`），需在專屬伺服器/本地環境獨立啟動，**不由 GitHub Actions 管線觸發**（僅 `--auto-weekly` 排行榜為例外，由 Actions 一次性呼叫後自動關閉）。
+  - `money_logs/` 與 `.bot.pid` 已加入 `.gitignore`，不上傳至 GitHub。
 
-#### 2.4 自動化排程層: `.github/workflows/daily_report.yml`
+#### 2.5 自動化排程層: `.github/workflows/daily_report.yml`
 - **職責**：CI/CD 與環境變數注入。
 - **核心行為**：
   - 透過 Cron Job 每天定時觸發 (`50 23 * * *` UTC = 07:50 CST)，同時支援 `workflow_dispatch` 手動觸發。
-  - 依序執行：`generate_report.py` → `fetch_images_v2.py` → `discord_webhook_sender.py` → `discord_forum_sender.py`。
-  - 將變更後的 `headline_history.json`、`daily_targets.json`、`Daily_Report/`、`assets/` 自動 commit 並 push 回 Repository（commit message 附 `[skip ci]` 避免無限循環）。
+  - 依序執行：`generate_report.py` → `fetch_url_metadata.py` → `fetch_images_v2.py` → `discord_webhook_sender.py` → `discord_forum_sender.py` → `discord_bot/main.py --auto-weekly`（僅週一發布排行榜）。
+  - 將變更後的 `global_history.json`、`daily_targets.json`、`url_metadata_cache.json`、`Daily_Report/` 自動 commit 並 push 回 Repository（commit message 附 `[skip ci]` 避免無限循環）。
+  - **注意**：`assets/` 與 `Podcast/` 已從 commit 清單中移除，產出的圖片與音檔僅存在於 Actions 臨時環境中，不再推送至 GitHub，以避免二進制檔案持續膨脹儲存庫容量。
 
 ---
 
@@ -112,14 +133,19 @@
 ```text
 [網頁/RSS來源]
       ↓ (fetch)
-[generate_report.py] --(Prompt)--> [Gemini API]
+[generate_report.py] --(給 Prompt)--> [Gemini API]
       ↓
 (產生文字報告 Markdown) + (產生圖片需求 daily_targets.json)
       ↓
-[fetch_images_v2.py] --(依據 JSON)--> [爬取圖片 -> 存入 assets/]
+[fetch_url_metadata.py] --(擷取 og:image)--> [存入 url_metadata_cache.json]
+      ↓
+[fetch_images_v2.py] --(依據 JSON + Cache)--> [爬取圖片 -> 存入 assets/]
       ↓
 [discord_webhook_sender.py] --(讀取 Markdown + assets/)--> [Discord Webhook 普通日報]
-[discord_forum_sender.py]   --(讀取 Markdown)--> [Discord Forum 論壇版日報 + 爬取 og:image]
+[discord_forum_sender.py]   --(讀取 Markdown + Cache)--> [Discord Forum 論壇版日報]
+[discord_bot/main.py --auto-weekly] --(僅週一)--> [Discord 排行榜公告]
+      ↓
+[GitHub Actions] --(自動 commit)--> [僅推送 JSON + Markdown 回 Repo，不含圖片/音檔]
 ```
 
 ### 3.2 解耦設計 (Decoupling)
@@ -163,9 +189,9 @@
 ### 4.4 圖片抓取邏輯優化 (Image Fetching Enhancements)
 - **修改位置**：`fetch_images_v2.py`。
 - **準則**：
-  1. 必須維持現有的靜態嘗試 (Priority 1) → 動態 Playwright (Priority 2) → 預設圖 (Fallback) 的恩典降級 (Graceful Degradation) 策略。
+  1. 必須維持現有的快取命中 (Priority 0) → 靜態嘗試 (Priority 1) → 動態 Playwright (Priority 2) → 預設圖 (Fallback) 的恩典降級 (Graceful Degradation) 策略。
   2. `Synthesis` 類型已停用，若未來要恢復請在 `if sec_type == "Synthesis"` 處重新實作，並評估 Imagen API 費用。
-  3. 確保 `used_image_urls` 機制持續運作，避免同一張圖在不同區段被重複使用。
+  3. 確保 `used_image_urls` 與 `used_article_urls` 機制持續運作，避免同一張圖或同一篇文章在不同區段被重複使用。
 
 ### 4.5 論壇發布邏輯維護 (Forum Sender Maintenance)
 - **修改位置**：`discord_forum_sender.py`。
@@ -178,5 +204,12 @@
   - `_find_best_bullet_match` 採用英文關鍵字 + 版本號 + 中文滑動視窗多維度匹配。
   - `_route_content_by_engine` 的 source 路由依 `_find_best_bullet_match` 繼承 bullet 的 tag（非獨立靠顯示名稱關鍵字）。
 
-### 4.6 測試環境 (Test Mode)
-- **準則**：開發論壇發布新功能時善用 `DRY_RUN=true` 環境變數，只印預覽不呼叫 Discord API。開發圖片抓取時善用 `TEST_MODE=true`。
+### 4.6 儲存空間與二進制檔案管理 (Storage & Binary File Policy)
+- **準則**：
+  1. **禁止將每日產出的圖片、音檔推送至 GitHub**：`assets/`、`Podcast/`、`*.mp3` 已在 `.gitignore` 中排除。工作流程 `.github/workflows/daily_report.yml` 中也已移除 `git add assets/`。
+  2. **僅允許純文字紀錄回存 GitHub**：`global_history.json`、`daily_targets.json`、`url_metadata_cache.json`、`Daily_Report/*.md`。
+  3. **`money_logs/` 與 `.bot.pid` 只存在於本機**：已加入 `.gitignore`，不上傳至 GitHub。Money Log 內建滾動清理，固定保留最近 10 筆。
+  4. 若未來新增產出物（如新的圖片或媒體檔案），必須同步將其加入 `.gitignore`，避免儲存庫容量無限膏脹。
+
+### 4.7 測試環境 (Test Mode)
+- **準則**：開發論壇發布新功能時善用 `DRY_RUN=true` 環境變數，只印預覽不呼叫 Discord API。開發圖片抓取時善用 `USE_LOCAL_TEST_IMAGE=True`（在 `fetch_images_v2.py` 中設定）。
