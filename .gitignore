@@ -12,3 +12,4 @@ assets/
 
 # Ignore generated podcast audio and scripts
 Podcast/
+*.mp3
