@@ -401,27 +401,61 @@ async def reaction_airdrop(ctx, message_id: int, amount: int, *, reason: str = "
         await status_msg.edit(content="⚠️ 該訊息沒有任何非機器人使用者的表情互動，已取消發放。")
         return
 
-    await status_msg.edit(content=f"⏳ 偵測到 {len(unique_users)} 位互動玩家，正在發放每人 {amount} 金幣...")
+    await status_msg.edit(content=f"⏳ 偵測到 {len(unique_users)} 位互動玩家，正在擷取發放前餘額快照...")
 
     # Step 3: API 串接與頻率限制
     success_members = []
     fail_members = []
+    fail_members_log = []
     headers = {"Authorization": UB_TOKEN, "Accept": "application/json"}
     data = {"cash": amount}
 
     async with aiohttp.ClientSession() as session:
+        balance_snapshot = await _fetch_all_balances(session, headers)
+        
+        tz = datetime.timezone(datetime.timedelta(hours=8))
+        log_data = {
+            "timestamp": datetime.datetime.now(tz).isoformat(),
+            "command": "互動發放",
+            "operator": ctx.author.display_name,
+            "operator_id": str(ctx.author.id),
+            "amount": amount,
+            "reason": reason,
+            "target_count": len(unique_users),
+            "balance_snapshot": [
+                {
+                    "user_id": str(u.get("user_id", "")),
+                    "rank": u.get("rank", 0),
+                    "cash": u.get("cash", 0),
+                    "bank": u.get("bank", 0),
+                    "total": u.get("total", 0),
+                }
+                for u in balance_snapshot
+            ],
+            "results": {"success_count": 0, "fail_count": 0, "failures": []}
+        }
+        
+        await status_msg.edit(content=f"⏳ 餘額快照完成，開始發放 {len(unique_users)} 人的金幣...")
+        
         for user in unique_users:
             success, status = await _patch_user_balance(session, user.id, data, headers)
             if success:
-                success_members.append(user.mention)
+                success_members.append(user.display_name)
             else:
                 fail_members.append(user.display_name)
+                fail_members_log.append({"user_id": str(user.id), "name": user.display_name, "http_status": status})
             # 頻率保護：每秒處理 5 人
             await asyncio.sleep(0.2)
+            
+    # 寫入 Money Log
+    log_data["results"]["success_count"] = len(success_members)
+    log_data["results"]["fail_count"] = len(fail_members_log)
+    log_data["results"]["failures"] = fail_members_log
+    _save_money_log(log_data)
 
     # Step 4: 結果結算與 Embed 面板
     if success_members:
-        success_str = " ".join(success_members)
+        success_str = ", ".join(success_members)
         if len(success_str) > 1024:
             success_str = success_str[:1020] + "..."
     else:
@@ -447,16 +481,11 @@ async def reaction_airdrop(ctx, message_id: int, amount: int, *, reason: str = "
     embed.add_field(name="🔗 活動訊息連結", value=f"[點擊前往]({target_message.jump_url})", inline=False)
     embed.set_footer(text="AI 自動日報系統 | 感謝你的支持")
 
-    # 標註邏輯：改為只標註成功發放對象
-    mention_str = " ".join(success_members)
-    if len(mention_str) > 1900:
-        mention_str = mention_str[:1900] + "..."
-
     target_channel = bot.get_channel(int(TARGET_CHANNEL_ID))
 
     if target_channel:
         await target_channel.send(
-            content=f"{mention_str} 🎯 **互動獎勵已結算發放！**" if mention_str else None,
+            content="🎯 **互動獎勵已結算發放！**" if success_members else None,
             embed=embed
         )
         await status_msg.edit(content=f"✅ 互動發放完畢！成功 {len(success_members)} 人，公告已同步至 {target_channel.mention}。")
@@ -490,24 +519,58 @@ async def test_reaction_airdrop(ctx, message_id: int, amount: int, *, reason: st
         await status_msg.edit(content="⚠️ 該訊息沒有任何非機器人使用者的表情互動，已取消發放。")
         return
 
-    await status_msg.edit(content=f"⏳ [測試模式] 偵測到 {len(unique_users)} 位互動玩家，正在發放每人 {amount} 金幣...")
+    await status_msg.edit(content=f"⏳ [測試模式] 偵測到 {len(unique_users)} 位互動玩家，正在擷取發放前餘額快照...")
 
     success_members = []
     fail_members = []
+    fail_members_log = []
     headers = {"Authorization": UB_TOKEN, "Accept": "application/json"}
     data = {"cash": amount}
 
     async with aiohttp.ClientSession() as session:
+        balance_snapshot = await _fetch_all_balances(session, headers)
+        
+        tz = datetime.timezone(datetime.timedelta(hours=8))
+        log_data = {
+            "timestamp": datetime.datetime.now(tz).isoformat(),
+            "command": "測試互動發放",
+            "operator": ctx.author.display_name,
+            "operator_id": str(ctx.author.id),
+            "amount": amount,
+            "reason": reason,
+            "target_count": len(unique_users),
+            "balance_snapshot": [
+                {
+                    "user_id": str(u.get("user_id", "")),
+                    "rank": u.get("rank", 0),
+                    "cash": u.get("cash", 0),
+                    "bank": u.get("bank", 0),
+                    "total": u.get("total", 0),
+                }
+                for u in balance_snapshot
+            ],
+            "results": {"success_count": 0, "fail_count": 0, "failures": []}
+        }
+        
+        await status_msg.edit(content=f"⏳ [測試模式] 餘額快照完成，開始發放 {len(unique_users)} 人的金幣...")
+        
         for user in unique_users:
             success, status = await _patch_user_balance(session, user.id, data, headers)
             if success:
-                success_members.append(user.mention)
+                success_members.append(user.display_name)
             else:
                 fail_members.append(user.display_name)
+                fail_members_log.append({"user_id": str(user.id), "name": user.display_name, "http_status": status})
             await asyncio.sleep(0.2)
+            
+    # 寫入 Money Log
+    log_data["results"]["success_count"] = len(success_members)
+    log_data["results"]["fail_count"] = len(fail_members_log)
+    log_data["results"]["failures"] = fail_members_log
+    _save_money_log(log_data)
 
     if success_members:
-        success_str = " ".join(success_members)
+        success_str = ", ".join(success_members)
         if len(success_str) > 1024:
             success_str = success_str[:1020] + "..."
     else:
@@ -534,17 +597,12 @@ async def test_reaction_airdrop(ctx, message_id: int, amount: int, *, reason: st
     embed.add_field(name="🔗 活動訊息連結", value=f"[點擊前往]({target_message.jump_url})", inline=False)
     embed.set_footer(text="AI 自動日報系統 | 感謝您的支持")
 
-    # 標註邏輯：改為只標註測試成功發放對象
-    mention_str = " ".join(success_members)
-    if len(mention_str) > 1900:
-        mention_str = mention_str[:1900] + "..."
-
     # 頻道強制指定為測試頻道 (TEST_CHANNEL_ID)
     target_channel = bot.get_channel(int(TEST_CHANNEL_ID))
 
     if target_channel:
         await target_channel.send(
-            content=f"{mention_str} 🧪 **[測試] 互動獎勵已結算發放！**" if mention_str else None,
+            content="🧪 **[測試] 互動獎勵已結算發放！**" if success_members else None,
             embed=embed
         )
         await status_msg.edit(content=f"✅ 測試完畢！成功發放對象：{len(success_members)} 位成員，公告已送至測試頻道 {target_channel.mention}。")

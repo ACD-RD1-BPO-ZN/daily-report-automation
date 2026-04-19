@@ -4,3 +4,11 @@ __pycache__/
 *.pyc
 discord_bot/money_logs/
 discord_bot/.bot.pid
+
+# Ignore generated daily assets but keep static base files
+assets/
+!assets/default_cover.png
+!assets/Test.jpg
+
+# Ignore generated podcast audio and scripts
+Podcast/
