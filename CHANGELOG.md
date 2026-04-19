@@ -2,6 +2,36 @@
 
 ---
 
+## 2026-04-19
+
+### Discord 機器人 (`discord_bot/main.py`)
+
+**功能改進：互動發放指令優化**
+- **[MODIFY] 移除使用者標註 (Mention)**：`!互動發放` 與 `!測試互動發放` 的發放名單由 `@mention` 改為純文字的 `display_name`，不再於公告中 Ping 所有已領取的使用者。
+- **[MODIFY] 列表格式優化**：成功領取名單由空格分隔改為逗號 (`, `) 分隔，提升純文字模式下的可讀性。
+- **[MODIFY] 移除公告外層標註**：原本機器人在發送 Embed 面板時，會在面板外圍額外寫入一長串的 `@mention` 強制通知字串，此行為已移除，現僅發送精簡的 Embed 面板。
+
+**功能新增：互動發放 Money Log 審計紀錄**
+- **[NEW] `!互動發放` Money Log**：互動發放指令現在會在發幣前擷取全伺服器餘額快照，並於發放完成後將完整審計紀錄（含操作者、金額、對象人數、成功/失敗明細）寫入 `money_logs/` 資料夾，與全體空投享有同等級的財務追溯能力。
+- **[NEW] `!測試互動發放` Money Log**：測試版同步實裝，紀錄標記為「測試互動發放」以利區分。
+
+---
+
+### GitHub 儲存空間優化
+
+**問題背景**：
+GitHub Actions 每日自動執行日報流程後，會將所有產出物（包含 7 個板塊的 PNG 配圖與 Podcast MP3 音檔）一併 Push 回儲存庫。由於圖片與音檔為大型二進制檔案（單日產出約 5~10 MB），且 Git 歷史紀錄會永久保留所有版本，導致儲存庫容量持續膨脹，長期將超出 GitHub 建議的 1 GB 上限。
+
+**修復措施**
+- **[MODIFY] `.gitignore`**：新增忽略規則，排除 `assets/`（每日配圖）、`Podcast/`（音檔與文字稿）、`*.mp3`。僅保留兩張靜態底圖 `default_cover.png` 與 `Test.jpg`。
+- **[MODIFY] `.github/workflows/daily_report.yml`**：移除工作流程中的 `git add assets/` 指令，從根源阻斷雲端自動化將圖片推回儲存庫的行為。
+- **[CLEANUP] 清理已追蹤的歷史檔案**：透過 `git rm --cached` 將近 100 張已上傳的 PNG 圖片與 4 個 MP3 音檔從 Git 追蹤中移除（本地檔案不受影響）。
+
+**影響範圍確認**：
+此次修改僅涉及 Git 版本控制層面的儲存策略，**未修改任何日報產線的 Python 腳本**（`generate_report.py`、`fetch_images_v2.py`、`fetch_url_metadata.py`、`discord_webhook_sender.py`、`discord_forum_sender.py` 均零改動）。GitHub Actions 每日自動化流程將繼續正常運作：抓新聞 → AI 生成 → 抓圖 → 發送 Discord，唯一差別為產出的圖片不再回存至 GitHub。
+
+---
+
 ## 2026-04-15
 
 ### Discord 機器人 (`discord_bot/main.py`)
