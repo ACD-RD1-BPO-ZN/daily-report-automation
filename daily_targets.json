@@ -2,47 +2,37 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303616"
+      "https://www.blendernation.com/2026/04/15/non-blender-how-go-gaussian-splats-work/"
     ],
-    "image_filename": "headline_20260419.png",
+    "image_filename": "headline_20260420.png",
     "image_keywords": [
       "official",
       "hero",
       "cover",
       "headline",
-      "promotion",
-      "shiftup",
-      "stellarblade",
-      "nikke",
-      "interview"
+      "promotion"
     ]
   },
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/crafted-by-hand-out-of-words-melds-traditional-art-with-modern-tech-using-ue5"
+      "https://unity.com/blog/unity-joins-iab-europe-tcf-compliant-data-use-advertising"
     ],
-    "image_filename": "engine_20260419.png",
+    "image_filename": "engine_20260420.png",
     "image_keywords": [
       "engine",
       "editor",
       "unreal",
       "unity",
-      "viewport",
-      "ue5",
-      "nanite",
-      "lumen",
-      "gameplay"
+      "viewport"
     ]
   },
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/18/stylized-tree-tutorial/",
-      "https://80.lv/articles/have-a-look-at-this-surreal-3d-character-based-on-a-2d-illustration",
-      "https://80.lv/articles/lead-character-artist-details-a-terrifying-boss-creature-from-killing-floor-3"
+      "https://80.lv/articles/check-out-this-fantastical-blue-dragon-with-a-head-that-looks-like-a-flower"
     ],
-    "image_filename": "model3d_20260419.png",
+    "image_filename": "model3d_20260420.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -51,20 +41,15 @@
       "blender",
       "maya",
       "zbrush",
-      "substance",
-      "character",
-      "creature",
-      "tutorial"
+      "substance"
     ]
   },
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/pragmata-interview-how-capcom-delivered-a-stunning-new-sci-fi-ip-with-re-engine",
-      "https://80.lv/articles/liquid-glass-magnifier-a-substance-3d-designer-tool",
-      "https://80.lv/articles/this-grotesque-material-is-oddly-beautiful-even-though-it-looks-like-intestines"
+      "https://www.blendernation.com/2026/04/15/blender-developers-meeting-notes-13-april-2026/"
     ],
-    "image_filename": "ta_20260419.png",
+    "image_filename": "ta_20260420.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -74,64 +59,21 @@
       "engine",
       "technology",
       "shader",
-      "scene",
-      "material",
-      "vfx",
-      "substance"
+      "scene"
     ]
   },
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303615",
-      "https://store.steampowered.com/news/260304/"
+      "https://store.steampowered.com/news/259771/"
     ],
-    "image_filename": "indie_20260419.png",
+    "image_filename": "indie_20260420.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
-      "indie",
-      "awards",
-      "bafta",
-      "update"
-    ]
-  },
-  {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303618",
-      "https://gnn.gamer.com.tw/detail.php?sn=303617"
-    ],
-    "image_filename": "local_20260419.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community",
-      "taiwan",
-      "bahamut",
-      "mobile",
-      "competition"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303615",
-      "https://www.unrealengine.com/developer-interviews/crafted-by-hand-out-of-words-melds-traditional-art-with-modern-tech-using-ue5"
-    ],
-    "image_filename": "producer_20260419.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea",
-      "philosophy",
-      "strategy",
-      "awards",
-      "innovation"
+      "indie"
     ]
   }
 ]
