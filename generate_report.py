@@ -216,23 +216,41 @@ def fetch_rss_feeds(recent_urls=None):
 async def generate_daily_report():
     print(f"Generating report for: {today_str_display}")
 
-    # --- 新增：讀取過去 3 天的全域新聞歷史 ---
+    # --- 讀取全域新聞歷史（7 天滾動字典結構） ---
     history_file = "global_history.json"
-    global_history = []
+    global_history = {}  # { "YYYY-MM-DD": [urls...] }
     if os.path.exists(history_file):
         try:
             with open(history_file, "r", encoding="utf-8") as f:
-                global_history = json.load(f)
+                raw = json.load(f)
+            # 向下相容：舊格式為 list-of-lists，自動轉換為 dict
+            if isinstance(raw, list):
+                print(f"Migrating old array-format history ({len(raw)} days) to dict format...")
+                for i, daily_urls in enumerate(raw):
+                    # 用倒推日期作為 key（最後一筆 = 昨天，倒數第二筆 = 前天...）
+                    backdate = (today_date - timedelta(days=len(raw) - i)).strftime("%Y-%m-%d")
+                    global_history[backdate] = daily_urls
+            else:
+                global_history = raw
             print(f"Loaded global history ({len(global_history)} days)")
         except json.JSONDecodeError:
             print("History file exists but is invalid JSON. Starting fresh.")
-            
+
+    # 清除超過 7 天的過期條目
+    cutoff_date = (today_date - timedelta(days=7)).strftime("%Y-%m-%d")
+    expired_keys = [k for k in global_history if k < cutoff_date]
+    for k in expired_keys:
+        del global_history[k]
+    if expired_keys:
+        print(f"Pruned {len(expired_keys)} expired history entries (older than {cutoff_date})")
+
     recent_urls = set()
-    for daily_urls in global_history:
+    for daily_urls in global_history.values():
         recent_urls.update(daily_urls)
+    print(f"Total unique URLs in history to filter: {len(recent_urls)}")
     # ------------------------------------
     
-    # 第一階段：爬取真實精確的新聞清單 (並將最近 3 天網址過濾掉)
+    # 第一階段：爬取真實精確的新聞清單 (並將最近 7 天網址過濾掉)
     scraped_context = fetch_rss_feeds(recent_urls)
     if not scraped_context.strip():
         scraped_context = "無法取得即時 RSS 新聞，請以過去 48 小時內廣為人知的開發新聞進行撰寫，但嚴格標示網址。"
@@ -477,7 +495,7 @@ async def generate_daily_report():
             json.dump(image_targets, f, ensure_ascii=False, indent=2)
         print(f"Generated targets file: {targets_filename} with {len(image_targets)} valid targets.")
 
-        # --- 新增：更新 3 天滾動全域新聞紀錄 ---
+        # --- 更新 7 天滾動全域新聞紀錄（字典結構） ---
         today_urls = []
         # 從 Markdown 內容取出所有連結以確保是最完整的清單
         for m in re.finditer(r"\((https?://[^)]+)\)|<(https?://[^>]+)>", report_data.get("markdown_content", "")):
@@ -486,9 +504,10 @@ async def generate_daily_report():
                 today_urls.append(url)
                 
         if today_urls:
-            global_history.append(today_urls)
-            # 強制切片，只保留陣列最後 3 筆資料（最近 3 天）
-            global_history = global_history[-3:]
+            global_history[today_str_display] = today_urls
+            # 再次清除超過 7 天的條目（防止殘留）
+            cutoff_date = (today_date - timedelta(days=7)).strftime("%Y-%m-%d")
+            global_history = {k: v for k, v in global_history.items() if k >= cutoff_date}
             with open(history_file, "w", encoding="utf-8") as f:
                 json.dump(global_history, f, ensure_ascii=False, indent=2)
             print(f"Saved {len(today_urls)} today's urls to history. Current history days: {len(global_history)}")

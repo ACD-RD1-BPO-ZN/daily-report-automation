@@ -19,7 +19,7 @@
 - **職責**：資料獲取 (Data Ingestion) 與 內容生成 (Content Generation)。
 - **核心行為**：
   - 透過 `feedparser` 與 `requests` + `BeautifulSoup` 抓取多個遊戲新聞來源 (80.lv, Unreal, Unity, BlenderNation, 映CG 等)。注意：Godot 已移除。
-  - 維護 `global_history.json` 來儲存過去 3 天產生過的「全板塊」新聞網址，在 `fetch_rss_feeds()` 爬取階段實施「物理截斷法」過濾重複新聞，確保 100% 避開舊聞並節省 LLM Token 成本。
+  - 維護 `global_history.json`（`{ "YYYY-MM-DD": [urls...] }` 字典結構）來儲存過去 **7 天**產生過的「全板塊」新聞網址，在 `fetch_rss_feeds()` 爬取階段實施「物理截斷法」過濾重複新聞，確保 100% 避開舊聞並節省 LLM Token 成本。啟動時自動清除超過 7 天的過期條目，並向下相容舊版 list-of-lists 陣列格式（首次執行時自動遷移）。
   - 將過濾後的原始內容 (Context) 餵給 Gemini API，並強制要求回傳嚴格的 **JSON 格式**。
 - **輸出約定**：
   - `Daily_Full_Report_YYYYMMDD.md`：完整的最終文字報告。
