@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/15/non-blender-how-go-gaussian-splats-work/"
+      "https://www.blender.org/press/netflix-animation-studios-joins-the-blender-development-fund-as-corporate-patron/"
     ],
-    "image_filename": "headline_20260420.png",
+    "image_filename": "headline_20260421.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/unity-joins-iab-europe-tcf-compliant-data-use-advertising"
+      "https://www.unrealengine.com/developer-interviews/mixtape-making-the-magic-of-nostalgia-come-alive-in-unreal-engine-5",
+      "https://unity.com/blog/eden-games-gear-club-unlimited-3"
     ],
-    "image_filename": "engine_20260420.png",
+    "image_filename": "engine_20260421.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +31,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/check-out-this-fantastical-blue-dragon-with-a-head-that-looks-like-a-flower"
+      "https://www.blendernation.com/2026/04/20/how-to-create-a-low-poly-forest-meadow-environment/",
+      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
+      "https://www.blender.org/press/blender-5-1-release/"
     ],
-    "image_filename": "model3d_20260420.png",
+    "image_filename": "model3d_20260421.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,9 +50,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/15/blender-developers-meeting-notes-13-april-2026/"
+      "https://80.lv/articles/building-a-modern-nes-style-retro-action-platformer-game-in-saint-slayer/",
+      "https://80.lv/articles/how-iconic-games-designs-voice-driven-player-interactions-for-dynamic-game-stories/"
     ],
-    "image_filename": "ta_20260420.png",
+    "image_filename": "ta_20260421.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -65,15 +69,44 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/259771/"
+      "https://www.gamedeveloper.com/business/pragmata-has-topped-1-million-sales-in-two-days",
+      "https://store.steampowered.com/news/265516/"
     ],
-    "image_filename": "indie_20260420.png",
+    "image_filename": "indie_20260421.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=303690",
+      "https://gnn.gamer.com.tw/detail.php?sn=303693"
+    ],
+    "image_filename": "local_20260421.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.blender.org/user-stories/creating-il-baracchino-italys-first-adult-animated-series-made-with-blender/",
+      "https://80.lv/articles/nearly-half-of-game-developers-are-considering-leaving-the-industry/"
+    ],
+    "image_filename": "producer_20260421.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
