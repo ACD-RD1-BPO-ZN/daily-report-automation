@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/nintendo-is-being-sued-by-customers-seeking-tariff-refunds"
+      "https://www.gamedeveloper.com/business/report-canada-federal-government-concerned-about-children-s-safety-in-roblox"
     ],
-    "image_filename": "headline_20260423.png",
+    "image_filename": "headline_20260424.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,12 +14,26 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://www.unrealengine.com/developer-interviews/invincible-vs-brings-its-brutal-brand-of-fighting-to-life-using-unreal-engine-5"
+    ],
+    "image_filename": "engine_20260424.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/22/learn-blender-beginners-guide-updated-for-blender-5-1/",
-      "https://80.lv/articles/procedural-traffic-cone-generator-in-blender"
+      "https://www.blendernation.com/2026/04/23/showreel-2026-manuel-burchi/",
+      "https://80.lv/articles/character-artist-on-creating-different-creatures-with-unsettling-vibes"
     ],
-    "image_filename": "model3d_20260423.png",
+    "image_filename": "model3d_20260424.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -32,12 +46,32 @@
     ]
   },
   {
+    "section_name": "TA",
+    "source_urls": [
+      "https://unity.com/blog/real-time-fluid-simulation-fire-vfx-ignitement-breakdown",
+      "https://www.blendernation.com/2026/04/23/free-download-surface-stable-fractal-dithering-for-blender/",
+      "https://80.lv/articles/for-the-stars-dev-diary-breaks-down-survival-systems-automation-planetary-tech"
+    ],
+    "image_filename": "ta_20260424.png",
+    "image_keywords": [
+      "screenshot",
+      "preview",
+      "featured",
+      "spotlight",
+      "render",
+      "engine",
+      "technology",
+      "shader",
+      "scene"
+    ]
+  },
+  {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303839",
-      "https://gnn.gamer.com.tw/detail.php?sn=303837"
+      "https://store.steampowered.com/news/259202/",
+      "https://80.lv/articles/new-blood-ceo-dave-oshry-on-indie-strategy-we-pump-new-blood-into-old-genres"
     ],
-    "image_filename": "indie_20260423.png",
+    "image_filename": "indie_20260424.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -49,10 +83,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=303841",
-      "https://gnn.gamer.com.tw/detail.php?sn=303840"
+      "https://gnn.gamer.com.tw/detail.php?sn=303921",
+      "https://gnn.gamer.com.tw/detail.php?sn=303917"
     ],
-    "image_filename": "local_20260423.png",
+    "image_filename": "local_20260424.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -63,10 +97,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/-a-scope-document-is-not-your-plan-laying-the-groundwork-for-indie-success",
-      "https://80.lv/articles/vampire-survivors-creators-are-working-on-15-projects-including-games-dlc-and-more"
+      "https://www.gamedeveloper.com/business/the-super-mario-galaxy-movie-earns-747m-at-box-office",
+      "https://www.gamedeveloper.com/business/fired-unknown-worlds-execs-withdraw-claim-that-krafton-violated-court-order-by-announcing-subnautica-2-release-date"
     ],
-    "image_filename": "producer_20260423.png",
+    "image_filename": "producer_20260424.png",
     "image_keywords": [
       "marketing",
       "development",
