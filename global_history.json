@@ -1,11 +1,4 @@
 {
-  "2026-04-20": [
-    "https://www.blendernation.com/2026/04/15/non-blender-how-go-gaussian-splats-work/",
-    "https://unity.com/blog/unity-joins-iab-europe-tcf-compliant-data-use-advertising",
-    "https://80.lv/articles/check-out-this-fantastical-blue-dragon-with-a-head-that-looks-like-a-flower",
-    "https://www.blendernation.com/2026/04/15/blender-developers-meeting-notes-13-april-2026/",
-    "https://store.steampowered.com/news/259771/"
-  ],
   "2026-04-21": [
     "https://www.blender.org/press/netflix-animation-studios-joins-the-blender-development-fund-as-corporate-patron/",
     "https://www.unrealengine.com/developer-interviews/mixtape-making-the-magic-of-nostalgia-come-alive-in-unreal-engine-5",
@@ -149,5 +142,25 @@
     "https://80.lv/articles/procedural-clouds-win-a-free-blender-add-on",
     "https://store.steampowered.com/news/260304/",
     "https://gnn.gamer.com.tw/detail.php?sn=304025"
+  ],
+  "2026-04-28": [
+    "https://gnn.gamer.com.tw/detail.php?sn=304109",
+    "https://www.unrealengine.com/developer-interviews/crafting-the-urban-open-world-of-nte-neverness-to-everness-with-ue5-across-pc-playstation-5-and-mobile",
+    "https://unity.com/blog/unity-joins-iab-europe-tcf-compliant-data-use-advertising",
+    "https://www.blendernation.com/2026/04/27/inside-sjor-a-two-person-pipeline-for-a-17-minute-cinematic-short/",
+    "https://80.lv/articles/3d-environment-prop-artist-on-creating-different-environments-props",
+    "https://80.lv/articles/designmatic-founder-on-creating-the-metroidvania-game-ayna-shattered-truth",
+    "https://80.lv/articles/valve-is-hard-at-work-on-steam-deck-2-focused-on-performance-upgrades",
+    "https://www.gamedeveloper.com/pc/-millimeters-matter-inside-the-steam-controller-s-flawless-physical-design",
+    "https://store.steampowered.com/news/259771/",
+    "https://gnn.gamer.com.tw/detail.php?sn=304107",
+    "https://gnn.gamer.com.tw/detail.php?sn=304106",
+    "https://gnn.gamer.com.tw/detail.php?sn=304105",
+    "https://gnn.gamer.com.tw/detail.php?sn=304104",
+    "https://gnn.gamer.com.tw/detail.php?sn=304108",
+    "https://www.gamedeveloper.com/business/magic-the-gathering-arena-devs-seek-to-unionise-to-deliver-genai-and-layoff-protections",
+    "https://www.gamedeveloper.com/business/xbox-boss-memory-crisis-could-impact-next-gen-hardware-availability-and-pricing",
+    "https://www.gamedeveloper.com/business/people-can-fly-acquires-cooldown-games-to-establish-dedicated-publishing-vertical",
+    "https://80.lv/articles/how-to-build-a-game-to-retain-300-million-players-with-long-term-appeal"
   ]
 }

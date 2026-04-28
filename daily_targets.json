@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/crafted-by-hand-out-of-words-melds-traditional-art-with-modern-tech-using-ue5"
+      "https://gnn.gamer.com.tw/detail.php?sn=304109"
     ],
-    "image_filename": "headline_20260427.png",
+    "image_filename": "headline_20260428.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/crafted-by-hand-out-of-words-melds-traditional-art-with-modern-tech-using-ue5"
+      "https://www.unrealengine.com/developer-interviews/crafting-the-urban-open-world-of-nte-neverness-to-everness-with-ue5-across-pc-playstation-5-and-mobile"
     ],
-    "image_filename": "engine_20260427.png",
+    "image_filename": "engine_20260428.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/this-gorgeous-xal-atath-from-world-of-warcraft-fan-sculpt-was-made-with-zbrush",
-      "https://80.lv/articles/watch-how-an-expert-3d-artist-sculpts-a-character-from-scratch"
+      "https://www.blendernation.com/2026/04/27/inside-sjor-a-two-person-pipeline-for-a-17-minute-cinematic-short/",
+      "https://80.lv/articles/3d-environment-prop-artist-on-creating-different-environments-props"
     ],
-    "image_filename": "model3d_20260427.png",
+    "image_filename": "model3d_20260428.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,11 +48,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/26/free-download-water-shader/",
-      "https://80.lv/articles/add-stylized-scribbles-directly-inside-nuke-using-this-tool",
-      "https://80.lv/articles/procedural-clouds-win-a-free-blender-add-on"
+      "https://80.lv/articles/designmatic-founder-on-creating-the-metroidvania-game-ayna-shattered-truth",
+      "https://80.lv/articles/valve-is-hard-at-work-on-steam-deck-2-focused-on-performance-upgrades"
     ],
-    "image_filename": "ta_20260427.png",
+    "image_filename": "ta_20260428.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,10 +67,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/260304/",
-      "https://gnn.gamer.com.tw/detail.php?sn=304025"
+      "https://gnn.gamer.com.tw/detail.php?sn=304107",
+      "https://www.gamedeveloper.com/pc/-millimeters-matter-inside-the-steam-controller-s-flawless-physical-design"
     ],
-    "image_filename": "indie_20260427.png",
+    "image_filename": "indie_20260428.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -83,9 +82,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304025"
+      "https://gnn.gamer.com.tw/detail.php?sn=304108"
     ],
-    "image_filename": "local_20260427.png",
+    "image_filename": "local_20260428.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -96,9 +95,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304025"
+      "https://www.gamedeveloper.com/business/magic-the-gathering-arena-devs-seek-to-unionise-to-deliver-genai-and-layoff-protections",
+      "https://80.lv/articles/how-to-build-a-game-to-retain-300-million-players-with-long-term-appeal"
     ],
-    "image_filename": "producer_20260427.png",
+    "image_filename": "producer_20260428.png",
     "image_keywords": [
       "marketing",
       "development",
