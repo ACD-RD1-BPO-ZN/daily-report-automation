@@ -133,7 +133,8 @@ def _is_source_link(line: str) -> bool:
     s = line.strip().lstrip("- ").strip()
     # 相容舊格式：- 🔗 來源: [名稱](<url>)
     s = re.sub(r"^(?:🔗\s*)?(?:來源|来源)\s*[:：]\s*", "", s)
-    return bool(re.match(r'\[', s) and re.search(r'\(<https?://|\(https?://', s))
+    # 嚴格判斷整行是否只有一個 Markdown 連結
+    return bool(re.match(r'^\[[^\]]+\]\s*\(\s*<?https?://[^>)]+>?\s*\)$', s))
 
 
 def _split_into_news_items(content: str) -> list[dict]:
@@ -182,8 +183,8 @@ def _split_into_news_items(content: str) -> list[dict]:
         raw_indent = len(line) - len(line.lstrip(' '))
         is_bullet = bool(re.match(r'^\s*-\s', line))
 
-        # 來源連結行：必須同時是 _is_source_link，且縮排比內容 bullet 深
-        if _is_source_link(s) and (raw_indent > content_indent or not is_bullet):
+        # 來源連結行：嚴格判斷為 Markdown 連結即視為來源 (解決 AI 生成未縮排的問題)
+        if _is_source_link(s):
             clean_src = s.lstrip("- ").strip()
             clean_src = re.sub(r"^(?:🔗\s*)?(?:來源|来源)\s*[:：]\s*", "", clean_src)
             if current_text:
