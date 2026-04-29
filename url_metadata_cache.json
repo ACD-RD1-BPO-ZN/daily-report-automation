@@ -1,96 +1,4 @@
 {
-  "https://unity.com/blog/games-made-with-unity-march-2026-releases": {
-    "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/2b044518d97ed070544a2a17e08e320f2e69a573-1280x720.jpg",
-    "last_seen": "2026-04-22"
-  },
-  "https://store.steampowered.com/news/265126/": {
-    "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.unrealengine.com/developer-interviews/timberlines-beastro-serves-up-a-flavorful-twist-on-a-variety-of-genres-with-ue5": {
-    "og_image": "https://cms-assets.unrealengine.com/AiKUh5PQCTaOFnmJDZJBfz/resize=width:1200/cmnf2alssqd6v07mz67g4ow20",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.unrealengine.com/news/the-fab-spring-creator-sale-has-started": {
-    "og_image": "https://cms-assets.unrealengine.com/AiKUh5PQCTaOFnmJDZJBfz/resize=width:1200/cmnp0vaeg4esc07mxuve83887",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.blendernation.com/2026/04/17/best-of-blender-artists-2026-16/": {
-    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/04/golupko-pigeon-mailman-800x450.jpg.webp",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.blendernation.com/2026/04/17/blender-jobs-for-april-17-2026/": {
-    "og_image": "https://www.blendernation.com/wp-content/uploads/2021/08/low-poly-office-file.jpeg",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.unrealengine.com/developer-interviews/how-adhoc-used-unreal-engine-to-deliver-2025s-narrative-driven-hit-dispatch": {
-    "og_image": "https://cms-assets.unrealengine.com/AiKUh5PQCTaOFnmJDZJBfz/resize=width:1200/cmn909suke5hc07n7lyladwl4",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.gamedeveloper.com/business/sony-rolls-out-age-verification-for-playstation-users-in-the-uk-and-ireland": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt8088c5c7b42593f5/69e750addf45793f21186eca/PlayStation_Header.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.blendernation.com/2026/04/21/blender-conference-2026-tickets-are-now-available/": {
-    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/04/bcon26.jpg",
-    "last_seen": "2026-04-22"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=303755": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/30/7624d2ab4b3296078a53b33f141yccq5.JPG",
-    "last_seen": "2026-04-22"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=303753": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/12/29845e4de0a561d7dc116efe651ycc85.PNG",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.gamedeveloper.com/business/sanrio-launches-self-publishing-label-sanrio-games": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt97d6283d73c64c32/69e783dfe82eb41ccd56155b/sanrio_games.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-04-22"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=303752": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/10/c7d6ac789e2b0dcc4943a0ed1f1ycc65.JPG",
-    "last_seen": "2026-04-22"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=303754": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/22/f831d0da53a80bf67a24daaa361ycci5.WEBP",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.gamedeveloper.com/business/union-workers-take-legal-action-against-build-a-rocket-boy-over-alleged-privacy-violations": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt37919bc1570a194d/69e77449c8863fe430049f6e/IWGB_Header.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-04-22"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=303756": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/22/eececdb9612fa2d112d922fbce1yc6y5.JPG",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.gamedeveloper.com/business/windrose-surpasses-1m-sales-within-a-week": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt0f5e436cc0bfdce5/69e7a71f0c15c4352322e861/windrose.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-04-22"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=303757": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/33/6eb8c9cc61856cdb89f6afd9a91ycct5.JPG",
-    "last_seen": "2026-04-22"
-  },
-  "https://www.gamedeveloper.com/design/how-double-fine-balances-fun-with-pottery-sculpting-in-kiln": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt7f31800d8f7633ff/69e7cfb307249111ed38aaf9/kilnfeatured.jpg?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-04-22"
-  },
-  "https://80.lv/articles/how-a-small-team-of-developers-created-net-attack-a-coding-roguelite-game": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/47853/images/69e6b09e27f89/contain_1200x630.jpg",
-    "last_seen": "2026-04-22"
-  },
-  "https://80.lv/articles/blender-tool-to-create-localized-volumetric-light-fog": {
-    "og_image": "",
-    "last_seen": "2026-04-22"
-  },
-  "https://80.lv/articles/interview-inside-the-tech-and-artistic-inspirations-of-no-rest-for-the-wicked-from-moon-studios": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/47881/images/69e7bca797f2a/contain_1200x630.jpg",
-    "last_seen": "2026-04-22"
-  },
-  "https://80.lv/articles/making-fantasy-house-on-cliff-environment-in-3d": {
-    "og_image": "",
-    "last_seen": "2026-04-22"
-  },
   "https://gnn.gamer.com.tw/detail.php?sn=303836": {
     "og_image": "https://p2.bahamut.com.tw/B/2KU/16/bdef61ca3fd58c974db1e5888c1yd1c5.JPG",
     "last_seen": "2026-04-23"
@@ -458,5 +366,129 @@
   "https://80.lv/articles/valve-is-hard-at-work-on-steam-deck-2-focused-on-performance-upgrades": {
     "og_image": "https://cdn.80.lv/api/upload/meta/47988/images/69efb46ab1325/contain_1200x630.jpg",
     "last_seen": "2026-04-28"
+  },
+  "https://code.blender.org/2025/08/bundles-and-closures/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2025/08/bundles_closures_thumbnail-480x270.webp",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blender.org/press/anthropic-joins-the-blender-development-fund-as-corporate-patron/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/04/anthropic_dev_fund-480x270.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2025/10/volume_grids_thumbnail-480x270.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304199": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/82/4fe2bcb3c73b01672204694afb1yg3i5.WEBP",
+    "last_seen": "2026-04-29"
+  },
+  "https://code.blender.org/2026/02/winter-of-quality-2026/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2026/02/winter_quality_2026-480x270.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.gamedeveloper.com/business/-we-ve-been-a-little-bit-too-romantic-ustwo-ceo-says-lowering-development-costs-is-now-paramount": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt8b4b9e18fba68117/69f0c9fb81ac099cd3fa4a3b/Ustwo_Header.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-04-29"
+  },
+  "https://unity.com/blog/hidden-costs-traditional-3d-tools": {
+    "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/7d0b36847efeaf6fa39e1e1f0499c1afaec94cbf-1999x914.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2025/10/geometry_workshop_september_2025_thumbnail-480x270.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304196": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/02/7c5e45d2bc0ce742615fc853301yg1a5.JPG",
+    "last_seen": "2026-04-29"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304195": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/01/0effcad5d0e6270c199bac6c331yg195.JPG",
+    "last_seen": "2026-04-29"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304194": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/00/193fdb5bd9c0a204754947043a1yg185.JPG",
+    "last_seen": "2026-04-29"
+  },
+  "https://store.steampowered.com/news/265516/": {
+    "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://code.blender.org/2025/08/new-socket-shapes/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2025/08/socket_shape_redesign_thumbnail-480x270.webp",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blender.org/user-stories/cosmology-with-geometry-nodes/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/01/CosmologyWithGN-480x270.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://unity.com/blog/eden-games-gear-club-unlimited-3": {
+    "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/074b654ed8753770369acd7ec104de01202119aa-1920x1234.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304197": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/06/99491abf530450a78883c94a8b1yg1e5.JPG",
+    "last_seen": "2026-04-29"
+  },
+  "https://unity.com/blog/10-questions-first-no-code-3d-project": {
+    "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/c4eb0288cbde8fd1401738d9b33949f44282da04-1920x1080.png",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blender.org/press/blender-5-1-release/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/03/blender_51_artwork_cropped-480x270.webp",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.gamedeveloper.com/production/github-copilot-is-pivoting-to-usage-based-billing-because-it-s-currently-unsustainable": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt177d8d26e29b2e79/69f09c5c6e88757c7ab0df0a/Github.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blendernation.com/2026/04/28/create-a-dna-medical-visualization-animation-in-blender/": {
+    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/04/Render-2-800x450.jpg.webp",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blender.org/development/projects-to-look-forward-to-in-2026/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/01/singularity-480x270.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://code.blender.org/2025/10/google-summer-of-code-2025-results/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2025/10/gsoc_2025-480x270.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304198": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/10/38213676ecb154df03e437c1b21yg1i5.JPG",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blender.org/user-stories/creating-il-baracchino-italys-first-adult-animated-series-made-with-blender/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/02/brc_poster_clean-480x270.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.gamedeveloper.com/business/playstation-increases-hardware-prices-in-southeast-asia": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt5b68e7492af29667/69f0c199b4185b7ff5c4027a/playstation.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.blendernation.com/2026/04/28/blender-developers-meeting-notes-27-april-2026/": {
+    "og_image": "",
+    "last_seen": "2026-04-29"
+  },
+  "https://80.lv/articles/from-game-boy-to-unity-magic-pockets-reflects-on-25-years-of-game-development": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48020/images/69f13d37b67b1/contain_1200x630.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://www.unrealengine.com/developer-interviews/mixtape-making-the-magic-of-nostalgia-come-alive-in-unreal-engine-5": {
+    "og_image": "https://cms-assets.unrealengine.com/AiKUh5PQCTaOFnmJDZJBfz/resize=width:1200/cmn917ljjenw906n9grdes2fv",
+    "last_seen": "2026-04-29"
+  },
+  "https://80.lv/articles/check-out-this-nostalgic-retro-scene-in-unreal-engine": {
+    "og_image": "",
+    "last_seen": "2026-04-29"
+  },
+  "https://80.lv/articles/inkblood-dev-diary-explores-building-a-cozy-occult-detective-game": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48012/images/69f0e84487345/contain_1200x630.jpg",
+    "last_seen": "2026-04-29"
+  },
+  "https://80.lv/articles/how-to-sculpt-and-texture-the-skin-of-a-realistic-and-mysterious-old-vampire": {
+    "og_image": "",
+    "last_seen": "2026-04-29"
   }
 }
