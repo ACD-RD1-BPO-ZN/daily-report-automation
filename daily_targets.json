@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blender.org/press/anthropic-joins-the-blender-development-fund-as-corporate-patron/"
+      "https://www.blendernation.com/2026/04/29/anthropic-adds-blender-support-joins-the-blender-development-fund-as-corporate-patron/"
     ],
-    "image_filename": "headline_20260429.png",
+    "image_filename": "headline_20260430.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/mixtape-making-the-magic-of-nostalgia-come-alive-in-unreal-engine-5",
-      "https://unity.com/blog/eden-games-gear-club-unlimited-3"
+      "https://www.unrealengine.com/developer-interviews/how-adhoc-used-unreal-engine-to-deliver-2025s-narrative-driven-hit-dispatch"
     ],
-    "image_filename": "engine_20260429.png",
+    "image_filename": "engine_20260430.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,10 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/28/create-a-dna-medical-visualization-animation-in-blender/",
-      "https://80.lv/articles/how-to-sculpt-and-texture-the-skin-of-a-realistic-and-mysterious-old-vampire"
+      "https://80.lv/articles/turning-an-animal-into-a-realistic-war-machine-with-a-retro-style"
     ],
-    "image_filename": "model3d_20260429.png",
+    "image_filename": "model3d_20260430.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +47,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
-      "https://80.lv/articles/check-out-this-nostalgic-retro-scene-in-unreal-engine",
-      "https://www.blender.org/press/blender-5-1-release/"
+      "https://gnn.gamer.com.tw/detail.php?sn=304283",
+      "https://80.lv/articles/keentools-releases-geotracker-for-houdini-in-open-beta"
     ],
-    "image_filename": "ta_20260429.png",
+    "image_filename": "ta_20260430.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,10 +66,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304195",
-      "https://gnn.gamer.com.tw/detail.php?sn=304194"
+      "https://gnn.gamer.com.tw/detail.php?sn=304280",
+      "https://www.gamedeveloper.com/business/landfall-and-aggro-crab-team-up-for-make-a-wish-game-bundle"
     ],
-    "image_filename": "indie_20260429.png",
+    "image_filename": "indie_20260430.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -84,10 +81,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304199",
-      "https://gnn.gamer.com.tw/detail.php?sn=304198"
+      "https://gnn.gamer.com.tw/detail.php?sn=304284",
+      "https://gnn.gamer.com.tw/detail.php?sn=304282"
     ],
-    "image_filename": "local_20260429.png",
+    "image_filename": "local_20260430.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -98,10 +95,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/-we-ve-been-a-little-bit-too-romantic-ustwo-ceo-says-lowering-development-costs-is-now-paramount",
-      "https://www.gamedeveloper.com/business/playstation-increases-hardware-prices-in-southeast-asia"
+      "https://www.gamedeveloper.com/production/the-secret-to-overwatch-s-revitalization-over-communicating-",
+      "https://www.gamedeveloper.com/business/starbreeze-to-develop-a-second-payday-experience-in-roblox"
     ],
-    "image_filename": "producer_20260429.png",
+    "image_filename": "producer_20260430.png",
     "image_keywords": [
       "marketing",
       "development",
