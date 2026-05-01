@@ -1,29 +1,57 @@
-# 遊戲產業自動化日報系統分析與架構規格書 (Architecture Specification)
+# 多頻道自動化日報系統架構規格書 (Architecture Specification)
 
-> 最後更新：2026-04-19
+> 最後更新：2026-05-01
 
 ## 1. 專案概述 (Project Overview)
-本專案 (`daily-report-automation`) 是一個完全自動化的遊戲產業新聞摘要與發布系統。它每天定時從多個遊戲開發相關的 RSS 及網頁來源抓取最新資訊，利用大語言模型 (Gemini 2.5 Flash) 進行摘要總結並排版成 Markdown 格式，同時動態爬取配圖 (Playwright / requests)，最後自動推播至 Discord Webhook（普通日報）與 Discord 論壇頻道（論壇版日報）。
+本專案 (`daily-report-automation`) 是一個**多頻道、配置驅動**的自動化新聞摘要與發布系統。系統採用共用核心引擎 (`core/`) 搭配頻道專屬設定檔 (`channels/`) 的架構，能以最低邊際成本擴展至不同主題的新聞頻道（如遊戲產業、電影資訊等）。
 
-此規格書旨在確立目前的系統核心架構、資料流及各模組職責，作為未來新增功能（如：新增新聞來源、新增發布渠道）時的核心設計準則，確保系統的穩定性與高擴展性。
+每個頻道每天定時從多個 RSS 及網頁來源抓取最新資訊，利用大語言模型 (Gemini 2.5 Flash) 進行摘要總結並排版成 Markdown 格式，同時動態爬取配圖 (Playwright / requests)，最後自動推播至 Discord Webhook（普通日報）與 Discord 論壇頻道（論壇版日報）。
+
+此規格書旨在確立目前的系統核心架構、資料流及各模組職責，作為未來新增功能（如：新增新聞來源、新增發布渠道、新增主題頻道）時的核心設計準則，確保系統的穩定性與高擴展性。
 
 ---
 
 ## 2. 系統架構與模組職責 (System Architecture & Module Responsibilities)
 
-系統採用**管線化 (Pipeline) 設計**，由 GitHub Actions 負責排程化執行，主流程被拆分為多個職責單一的獨立 Python 腳本，透過共用的中間檔案（Markdown、JSON）進行資料傳遞。
+系統採用**管線化 (Pipeline) + 配置驅動 (Config-Driven) 設計**，由 GitHub Actions 負責排程化執行。核心引擎 (`core/`) 提供與主題無關的通用功能，各頻道的特定配置（RSS 來源、板塊結構、Prompt 模板、論壇標籤）儲存在 `channels/<channel_id>/` 目錄中。
+
+### 頻道設定目錄結構：
+```
+channels/
+└── gamedev/
+    ├── channel_config.json    # RSS 來源、板塊定義、標籤映射、Discord 設定
+    ├── prompt_template.md     # Gemini Prompt 模板（含佔位符）
+    ├── section_rules.json     # 各板塊的專屬 Prompt 規則
+    └── history.json           # 頻道獨立的 7 天滾動歷史去重紀錄
+```
 
 ### 核心模組清單：
 
-#### 2.1 內容生成層: `generate_report.py`
-- **職責**：資料獲取 (Data Ingestion) 與 內容生成 (Content Generation)。
-- **核心行為**：
-  - 透過 `feedparser` 與 `requests` + `BeautifulSoup` 抓取多個遊戲新聞來源 (80.lv, Unreal, Unity, BlenderNation, 映CG 等)。注意：Godot 已移除。
-  - 維護 `global_history.json`（`{ "YYYY-MM-DD": [urls...] }` 字典結構）來儲存過去 **7 天**產生過的「全板塊」新聞網址，在 `fetch_rss_feeds()` 爬取階段實施「物理截斷法」過濾重複新聞，確保 100% 避開舊聞並節省 LLM Token 成本。啟動時自動清除超過 7 天的過期條目，並向下相容舊版 list-of-lists 陣列格式（首次執行時自動遷移）。
-  - 將過濾後的原始內容 (Context) 餵給 Gemini API，並強制要求回傳嚴格的 **JSON 格式**。
+#### 2.0 共用引擎層: `core/`
+
+- **`core/report_engine.py`**
+  - **職責**：通用的報告生成引擎（讀取任意頻道設定 → 爬取 → LLM → 輸出）。
+  - **核心函式**：
+    - `load_channel_config(channel_dir)` — 讀取 `channel_config.json`
+    - `load_history() / save_history()` — 頻道獨立的歷史去重管理（7 天滾動字典結構，向下相容舊版 list-of-lists）
+    - `fetch_sources(config, recent_urls)` — 依設定爬取 RSS + 網頁 fallback + 自定義爬蟲
+    - `build_prompt(config, channel_dir, scraped_context, today)` — 讀取 Prompt 模板 + 板塊規則，動態組裝完整 Prompt
+    - `call_gemini(config, prompt)` — 呼叫 Gemini API
+    - `parse_response() / save_outputs()` — JSON 解析 + 防呆驗證 + 輸出 Markdown & daily_targets.json
+    - `generate_report(channel_dir)` — 一鍵完整流程入口
+
+- **`core/discord_api.py`**
+  - **職責**：Discord API 共用工具（與頻道主題無關的純 API 操作）。
+  - **核心函式**：`post_webhook_message`, `post_embed_to_thread`, `create_forum_thread`, `create_divider_thread`, `fetch_og_image`
+
+#### 2.1 內容生成層: `generate_report.py`（薄入口）
+- **職責**：命令列入口，將頻道目錄參數傳遞給 `core/report_engine`。
+- **用法**：
+  - `python generate_report.py` — 預設遊戲頻道 (`channels/gamedev`)
+  - `python generate_report.py channels/movie` — 指定其他頻道
 - **輸出約定**：
   - `Daily_Full_Report_YYYYMMDD.md`：完整的最終文字報告。
-  - `daily_targets.json`：後續爬圖腳本所需的圖片抓取指示清單 (包含 `section_name`, `source_urls`, `image_keywords` 與 AI 算圖用的 `ai_prompt`)。
+  - `daily_targets.json`：後續爬圖腳本所需的圖片抓取指示清單 (包含 `section_name`, `source_urls`, `image_keywords`)。
 
 #### 2.2 中央網址後設資料擷取: `fetch_url_metadata.py`
 - **職責**：一次性掃描日報中所有來源網址的 `og:image`，建立統一快取。
@@ -151,6 +179,7 @@
 ### 3.2 解耦設計 (Decoupling)
 - **文字與圖片解耦**：`generate_report.py` 只管文字與宣告圖片需求，不負責耗時且易錯的圖片處理；`fetch_images_v2.py` 只管產生實體圖片。這保證了文字生成的穩定性。
 - **發布渠道解耦**：Discord 發布與 Facebook 發布完全無關。這讓各種平台的格式適應（如 Discord 的 Chunking, FB 的純提取）能夠各自封裝。
+- **頻道與引擎解耦**：頻道設定 (`channels/`) 與核心引擎 (`core/`) 完全分離。新增頻道不需修改任何 Python 程式碼，只需建立新的 JSON 設定檔。
 
 ---
 
@@ -158,8 +187,18 @@
 
 確保未來維護與擴充時，不會破壞現有的穩定架構。請嚴格遵守以下準則：
 
+### 4.0 新增主題頻道 (New Topic Channel)
+- **修改位置**：建立 `channels/<new_id>/` 目錄。
+- **準則**：
+  1. 複製 `channels/gamedev/` 目錄並重新命名（如 `channels/movie/`）。
+  2. 修改 `channel_config.json`：更換 `rss_feeds`、`sections`、`forum_tags`、`discord` 等設定。
+  3. 修改 `prompt_template.md`：調整 AI 角色定位與內容指引。
+  4. 修改 `section_rules.json`：定義各板塊的專屬 Prompt 規則。
+  5. 在 `.github/workflows/` 新增或修改 workflow，加入 `python generate_report.py channels/movie`。
+  6. **全程不需修改任何 Python 程式碼**。
+
 ### 4.1 新增或修改新聞來源 (News Sources)
-- **修改位置**：`generate_report.py` 裡的 `fetch_rss_feeds()`。
+- **修改位置**：`channels/<channel_id>/channel_config.json` 中的 `rss_feeds`、`scrape_fallbacks`、`scrape_custom`。
 - **準則**：
   1. 確保回傳的 `scraped_data` 格式一致（`### 來源資訊: ... \n - [標題]: ... `）。
   2. 若遇到反爬蟲 (403 等)，應在該函式內實作 Try-Catch Fallback (例如改用 `requests` + 偽裝 Header)，**絕對不要**讓單一來源的失敗導致整個腳本崩潰。

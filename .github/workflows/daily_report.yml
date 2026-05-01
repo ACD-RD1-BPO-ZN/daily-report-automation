@@ -82,6 +82,7 @@ jobs:
         # 2. 追蹤產出的檔案（全域歷史 + 報告 + 圖片目標 + 圖片快取）
         # 注意：assets/ 和 Podcast/ 已在 .gitignore 中排除，不再上傳至 GitHub 以節省空間
         git add global_history.json || true
+        git add channels/ || true
         git add daily_targets.json || true
         git add url_metadata_cache.json || true
         git add Daily_Report/ || true

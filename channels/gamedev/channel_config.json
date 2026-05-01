@@ -1,0 +1,182 @@
+{
+  "channel_id": "gamedev",
+  "display_name": "遊戲產業日報",
+
+  "rss_feeds": {
+    "80.lv (TA/Tech)": "https://80.lv/rss",
+    "Blender Developer Blog (Official)": "https://code.blender.org/feed/",
+    "Blender.org News (Official)": "https://www.blender.org/feed/",
+    "BlenderNation (Community)": "https://www.blendernation.com/feed/",
+    "Unreal Engine News": "https://www.unrealengine.com/en-US/rss",
+    "Unity Blog": "https://blog.unity.com/feed",
+    "Godot Engine Blog": "https://godotengine.org/rss.xml",
+    "Game Developer (Indie/Business)": "https://www.gamedeveloper.com/rss.xml",
+    "Bahamut GNN (Local Taiwan News)": "https://gnn.gamer.com.tw/rss.xml",
+    "Steam News": "https://store.steampowered.com/feeds/news.xml"
+  },
+
+  "rss_max_entries": 6,
+
+  "scrape_fallbacks": [
+    {
+      "name": "80.lv (TA/Tech)",
+      "check_key": "80.lv (TA/Tech)",
+      "url": "https://80.lv/articles/",
+      "selector": "a[href*=\"/articles/\"]",
+      "base_url": "https://80.lv",
+      "min_title_len": 15,
+      "max_items": 5,
+      "summary_hint": "(Latest TA article)"
+    },
+    {
+      "name": "Unity Blog",
+      "check_key": "Unity Blog",
+      "url": "https://unity.com/blog",
+      "selector": "a[href*=\"/blog/\"]",
+      "base_url": "https://unity.com",
+      "min_title_len": 15,
+      "max_items": 5,
+      "exclude_href_exact": ["/blog/", "/blog"],
+      "summary_hint": "(Unity blog article)"
+    }
+  ],
+
+  "scrape_custom": [
+    {
+      "name": "映CG InCG Media (3D/CG/VFX)",
+      "type": "incg",
+      "categories": [
+        {"url": "https://www.incgmedia.com/new-release", "slug_prefix": "/new-release/"},
+        {"url": "https://www.incgmedia.com/behind-the-scene", "slug_prefix": "/behind-the-scene/"}
+      ],
+      "base_url": "https://www.incgmedia.com",
+      "min_title_len": 4,
+      "max_items": 6,
+      "summary_hint": "(映CG 3D/CG/VFX article)"
+    }
+  ],
+
+  "sections": [
+    {
+      "emoji": "📢",
+      "title": "今日頭條",
+      "section_key": "Headline",
+      "image_keywords": ["official", "hero", "cover", "headline", "promotion"],
+      "forum_tags": ["headline"]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "引擎相關",
+      "section_key": "Engine",
+      "image_keywords": ["engine", "editor", "unreal", "unity", "viewport"],
+      "forum_tags": ["ue", "unity"],
+      "sub_sections": [
+        {"pattern": "\\*\\*Unreal", "display": "🟦 Unreal Engine", "tags": ["ue"]},
+        {"pattern": "\\*\\*Unity",  "display": "🟩 Unity",         "tags": ["unity"]},
+        {"pattern": "\\*\\*Godot",  "display": "🎮 Godot Engine",  "tags": ["ta"]},
+        {"pattern": "\\*\\*3D\\s*模", "display": "🛠️ 3D 模型技術",   "tags": ["3d"]},
+        {"pattern": "\\*\\*TA\\s*(與|&)?\\s*特效", "display": "🛠️ TA 與其他技術", "tags": ["ta"]},
+        {"pattern": "\\*\\*TA\\s*相關", "display": "🛠️ TA 相關",      "tags": ["ta"]},
+        {"pattern": "\\*\\*80\\.lv",  "display": "80.lv (TA/Tech)",  "tags": ["ta"]},
+        {"pattern": "\\*\\*(映CG|InCG|3D/CG|Blender|Maya|3ds\\s*Max|ZBrush|Houdini|Boris\\s*FX|Substance)", "display": "映CG (3D/CG/VFX)", "tags": ["3d"]}
+      ]
+    },
+    {
+      "emoji": "🧱",
+      "title": "3D 模型技術",
+      "section_key": "Model3D",
+      "image_keywords": ["3d", "modeling", "sculpt", "topology", "blender", "maya", "zbrush", "substance"],
+      "forum_tags": ["3d"],
+      "forum_transform": {
+        "from": "\\*\\*🧱\\s*【3D\\s*模型技術】\\*\\*",
+        "to": "**⚙️ 【引擎相關】**\n- **3D 模型技術**："
+      }
+    },
+    {
+      "emoji": "✨",
+      "title": "TA 相關",
+      "section_key": "TA",
+      "image_keywords": ["screenshot", "preview", "featured", "spotlight", "render", "engine", "technology", "shader", "scene"],
+      "forum_tags": ["ta"]
+    },
+    {
+      "emoji": "🎮",
+      "title": "獨立遊戲市場觀察",
+      "section_key": "Indie",
+      "image_keywords": ["gameplay", "chart", "capsule", "steam", "indie"],
+      "forum_tags": ["indie"]
+    },
+    {
+      "emoji": "🤝",
+      "title": "在地社群",
+      "section_key": "Local",
+      "image_keywords": ["event", "meetup", "poster", "community"],
+      "forum_tags": ["indie"]
+    },
+    {
+      "emoji": "💼",
+      "title": "製作人週記建議",
+      "section_key": "Producer",
+      "image_keywords": ["marketing", "development", "producer", "idea"],
+      "forum_tags": ["global"]
+    },
+    {
+      "emoji": "🌌",
+      "title": "今日全方位深度總結",
+      "section_key": "Synthesis",
+      "image_keywords": [],
+      "forum_tags": ["ai"],
+      "skip_webhook": false,
+      "skip_forum": true
+    }
+  ],
+
+  "forum_tags": {
+    "headline": {"env": "FORUM_TAG_HEADLINE_ID", "default": "1489205702886031500", "display": "🔥 頭條", "color": "0xE67E22"},
+    "indie":    {"env": "FORUM_TAG_INDIE_ID",    "default": "1489200534941597828", "display": "💗 遊戲｜獨立遊戲", "color": "0x2ECC71"},
+    "global":   {"env": "FORUM_TAG_GLOBAL_ID",   "default": "1489200786427875519", "display": "🌍 遊戲｜全球", "color": "0x3498DB"},
+    "ai":       {"env": "FORUM_TAG_AI_ID",       "default": "1489198768883630114", "display": "🤖 AI｜資訊", "color": "0x7B68EE"},
+    "ue":       {"env": "FORUM_TAG_UE_ID",       "default": "1489178833004265614", "display": "📘 引擎｜UE", "color": "0x0E4DA4"},
+    "unity":    {"env": "FORUM_TAG_UNITY_ID",    "default": "1489189619210911825", "display": "📙 引擎｜Unity", "color": "0x48A14D"},
+    "ta":       {"env": "FORUM_TAG_TA_ID",       "default": "1489189750874308780", "display": "🛠️ 技術｜TA", "color": "0x9B59B6"},
+    "3d":       {"env": "FORUM_TAG_3D_ID",       "default": "1489198718258380913", "display": "🛠️ 技術｜3D", "color": "0x7F8C8D"}
+  },
+
+  "engine_route_keywords": {
+    "unity": ["unity"],
+    "ue":    ["unreal", "ue5", "ue4"]
+  },
+
+  "forum_tag_order": ["ai", "3d", "unity", "ue", "ta", "global", "indie", "headline"],
+
+  "section_tag_map": {
+    "📢": ["headline"],
+    "✨": ["ta"],
+    "🎮": ["indie"],
+    "🤝": ["indie"],
+    "💼": ["global"],
+    "🌌": ["ai"]
+  },
+
+  "section_img_key": {
+    "📢": "Headline",
+    "⚙️": "Engine",
+    "✨": "TA",
+    "🎨": "TA",
+    "🎮": "Indie",
+    "🤝": "Local",
+    "💼": "Producer"
+  },
+
+  "webhook_skip_emojis": ["✨"],
+
+  "discord": {
+    "webhook_env": "DISCORD_WEBHOOK_URL",
+    "bot_token_env": "DISCORD_BOT_TOKEN",
+    "forum_channel_env": "DISCORD_FORUM_CHANNEL_ID"
+  },
+
+  "history_window_days": 7,
+  "gemini_model": "gemini-2.5-flash",
+  "gemini_temperature": 0.2
+}
