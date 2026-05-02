@@ -147,7 +147,7 @@ async def get_metadata_for_urls(urls):
             
     # 3. Pruning logic: Only keep entries seen in the last 7 days
     today = datetime.now()
-    expiry_limit = today - timedelta(days=7)
+    expiry_limit = today - timedelta(days=30)  # og:image 基本是不可變資源，延長 TTL 減少 Playwright 重複呼叫
     
     pruned_cache = {}
     pruned_count = 0

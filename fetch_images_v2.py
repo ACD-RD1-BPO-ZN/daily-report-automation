@@ -583,13 +583,19 @@ async def main():
                 else:
                     print(f"❌ Failed to acquire image from {target_url}, trying next URL...")
             
-            # 執行 Global Fallback
+            # 執行 Global Fallback（限制最大嘗試次數，避免 Playwright 雪崩）
+            MAX_GLOBAL_FALLBACK_ATTEMPTS = 3
             if not success:
-                print(f"❌ Failed to acquire image from primary URLs, attempting Global Fallback for {sec_type}...")
+                print(f"❌ Failed to acquire image from primary URLs, attempting Global Fallback for {sec_type} (max {MAX_GLOBAL_FALLBACK_ATTEMPTS} attempts)...")
+                fallback_attempt = 0
                 for fallback_url in global_candidate_urls:
+                    if fallback_attempt >= MAX_GLOBAL_FALLBACK_ATTEMPTS:
+                        print(f"  ⏹ Global Fallback 已達上限 ({MAX_GLOBAL_FALLBACK_ATTEMPTS} 次)，使用預設封面。")
+                        break
                     # 避免重複抓取已經失敗的 URL 或已經成功提供過圖片的文章 URL
                     if fallback_url in source_urls or fallback_url in used_article_urls:
                         continue
+                    fallback_attempt += 1
                     print(f"  Attempting Global Fallback URL: {fallback_url}")
                     is_downloaded = await download_image(fallback_url, target_path, sec_type, [], used_image_urls, url_metadata_cache)
                     if is_downloaded:

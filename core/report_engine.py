@@ -306,7 +306,8 @@ def build_prompt(config: dict, channel_dir: str,
         part = f"**{emoji} 【{title}】**\n{img_tag}\n{rules}\n---"
         sections_prompt_parts.append(part)
 
-        # 建構 JSON Schema 中的 image_targets
+        # 建構 JSON Schema 中的 image_targets（精簡版：只要求 LLM 輸出 section_name + source_urls）
+        # image_filename / image_keywords 由 Python 在 parse_response 中自動補齊，節省 output tokens
         if sec.get("skip_forum") and section_key == "Synthesis":
             continue  # 深度總結不需要圖片
         keywords = sec.get("image_keywords", [])
@@ -314,8 +315,6 @@ def build_prompt(config: dict, channel_dir: str,
             image_targets_schema.append({
                 "section_name": section_key,
                 "source_urls": [f"(請挑選相關的{title}網址)"],
-                "image_filename": f"{section_key.lower()}_{today_str_file}.png",
-                "image_keywords": keywords,
             })
 
     sections_prompt = "\n\n".join(sections_prompt_parts)
@@ -357,9 +356,22 @@ def call_gemini(config: dict, prompt: str) -> str:
         config=genai_types.GenerateContentConfig(
             response_mime_type="application/json",
             temperature=temperature,
+            thinking_config=genai_types.ThinkingConfig(
+                thinking_budget=0  # 關閉思考鏈，節省 ~90% API 成本
+            ),
         )
     )
     res_text = response.text.strip()
+
+    # 💰 Token 用量監控（用於確認成本優化效果）
+    usage = response.usage_metadata
+    if usage:
+        print(f"💰 Token 用量: input={usage.prompt_token_count}, "
+              f"output={usage.candidates_token_count}, "
+              f"thinking={getattr(usage, 'thoughts_token_count', 0) or 0}")
+        total_output = (usage.candidates_token_count or 0) + (getattr(usage, 'thoughts_token_count', 0) or 0)
+        est_cost = (usage.prompt_token_count or 0) * 0.15 / 1e6 + total_output * 2.50 / 1e6
+        print(f"💰 預估本次成本: ~${est_cost:.4f}")
 
     print("--- RAW GEMINI RESPONSE PREVIEW ---")
     print(res_text[:500] + "\n...\n" + res_text[-500:])
@@ -372,15 +384,26 @@ def call_gemini(config: dict, prompt: str) -> str:
     return res_text
 
 
-def parse_response(res_text: str, today_str_file: str) -> dict | None:
-    """解析 Gemini 回應的 JSON，執行防呆驗證。"""
+def parse_response(res_text: str, today_str_file: str, config: dict = None) -> dict | None:
+    """解析 Gemini 回應的 JSON，執行防呆驗證，並自動補齊 image_filename / image_keywords。"""
     try:
         report_data = json.loads(res_text, strict=False)
     except json.JSONDecodeError as e:
         print(f"Error parsing Gemini response as JSON: {e}")
         return None
 
-    # 防呆：檢查 source_urls
+    # 從 config 建立 section_key → {filename, keywords} 的查找表
+    section_meta: dict[str, dict] = {}
+    if config:
+        for sec in config.get("sections", []):
+            sk = sec.get("section_key", "")
+            if sk:
+                section_meta[sk] = {
+                    "image_filename": f"{sk.lower()}_{today_str_file}.png",
+                    "image_keywords": sec.get("image_keywords", []),
+                }
+
+    # 防呆：檢查 source_urls，並補齊 LLM 不再輸出的欄位
     valid_targets = []
     for target in report_data.get("image_targets", []):
         urls = target.get("source_urls", [])
@@ -389,6 +412,16 @@ def parse_response(res_text: str, today_str_file: str) -> dict | None:
         formatted = [u for u in urls if u and (u.startswith("http") or u == "GENERATE_AI_IMAGE")]
         if formatted:
             target["source_urls"] = formatted
+            # 自動補齊 image_filename / image_keywords（若 LLM 未輸出）
+            sec_name = target.get("section_name", "")
+            meta = section_meta.get(sec_name, {})
+            if "image_filename" not in target and meta:
+                target["image_filename"] = meta["image_filename"]
+            if "image_keywords" not in target and meta:
+                target["image_keywords"] = meta["image_keywords"]
+            # 最終保底：若仍無 filename，用 section_name 推導
+            if "image_filename" not in target:
+                target["image_filename"] = f"{sec_name.lower()}_{today_str_file}.png"
             valid_targets.append(target)
         else:
             print(f"Warning: Discarding invalid URLs for section {target.get('section_name')}")
@@ -474,7 +507,7 @@ async def generate_report(channel_dir: str) -> None:
     res_text = call_gemini(config, prompt)
 
     # 4. 解析回應 + 輸出
-    report_data = parse_response(res_text, today_str_file)
+    report_data = parse_response(res_text, today_str_file, config=config)
     if report_data is None:
         save_fallback(res_text, today)
         return
