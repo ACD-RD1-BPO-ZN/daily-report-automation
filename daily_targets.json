@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/-the-company-as-a-whole-no-longer-exists-greedfall-developer-spiders-confirms-closure"
+      "https://80.lv/articles/blender-clarifies-ai-policy-and-amends-anthropic-donation"
     ],
-    "image_filename": "headline_20260501.png",
+    "image_filename": "headline_20260502.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/learning/aprils-epic-learning-content-pcg-metahuman-mobile-development-and-more"
+      "https://www.unrealengine.com/learning/aprils-epic-learning-content-pcg-metahuman-mobile-development-and-more",
+      "https://unity.com/blog/games-made-with-unity-april-2026-releases"
     ],
-    "image_filename": "engine_20260501.png",
+    "image_filename": "engine_20260502.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/30/disks-rotation-with-geometry-nodes/"
+      "https://code.blender.org/2026/05/cycles-texture-cache/",
+      "https://80.lv/articles/take-a-look-at-this-grotesquely-detailed-infected-flesh-material"
     ],
-    "image_filename": "model3d_20260501.png",
+    "image_filename": "model3d_20260502.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,11 +49,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/making-of-a-modular-gothic-environment-with-procedural-systems-trim-sheets-custom-shaders",
-      "https://80.lv/articles/see-what-s-next-for-gamemaker-in-spring-2026-update",
-      "https://80.lv/articles/you-won-t-see-a-weirder-or-more-disturbing-creature-today"
+      "https://www.blender.org/development/blender-lab-activity-report-q1-2026/",
+      "https://www.blendernation.com/2026/04/28/blender-developers-meeting-notes-27-april-2026/"
     ],
-    "image_filename": "ta_20260501.png",
+    "image_filename": "ta_20260502.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,10 +68,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304403",
-      "https://80.lv/articles/one-of-the-most-wishlisted-games-in-steam-history-is-out-in-early-access"
+      "https://store.steampowered.com/news/265126/",
+      "https://www.gamedeveloper.com/business/report-vr-specialist-survios-has-laid-off-the-majority-of-its-development-team",
+      "https://gnn.gamer.com.tw/detail.php?sn=304415"
     ],
-    "image_filename": "indie_20260501.png",
+    "image_filename": "indie_20260502.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -82,11 +84,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304406",
-      "https://gnn.gamer.com.tw/detail.php?sn=304405",
-      "https://gnn.gamer.com.tw/detail.php?sn=304401"
+      "https://gnn.gamer.com.tw/detail.php?sn=304414",
+      "https://gnn.gamer.com.tw/detail.php?sn=304411"
     ],
-    "image_filename": "local_20260501.png",
+    "image_filename": "local_20260502.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -97,11 +98,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/rebellion-s-atomfall-is-being-turned-into-a-tv-series",
       "https://www.gamedeveloper.com/production/enduring-advice-for-all-game-producers-unlocking-the-vault-2-0",
-      "https://80.lv/articles/matt-firor-interview-eso-founder-on-why-modern-mmos-lost-what-made-them-special"
+      "https://www.blendernation.com/2026/05/01/blender-jobs-for-may-1-2026/"
     ],
-    "image_filename": "producer_20260501.png",
+    "image_filename": "producer_20260502.png",
     "image_keywords": [
       "marketing",
       "development",
