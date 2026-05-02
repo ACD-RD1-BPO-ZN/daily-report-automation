@@ -33,7 +33,11 @@ jobs:
 
     - name: Install Playwright browsers and OS dependencies
       run: |
-        playwright install --with-deps chromium
+        for i in 1 2 3; do
+          playwright install --with-deps chromium && break
+          echo "Attempt $i failed, retrying in 30s..."
+          sleep 30
+        done
 
     - name: Run Report Automation
       env:
