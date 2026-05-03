@@ -329,7 +329,7 @@
   },
   "https://unity.com/blog/games-made-with-unity-march-2026-releases": {
     "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/2b044518d97ed070544a2a17e08e320f2e69a573-1280x720.jpg",
-    "last_seen": "2026-04-30"
+    "last_seen": "2026-05-03"
   },
   "https://www.gamedeveloper.com/business/landfall-and-aggro-crab-team-up-for-make-a-wish-game-bundle": {
     "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt30ed87fbae800495/69f228d0279f0a6c59746785/dsdsa.png?disable=upscale&width=1200&height=630&fit=crop",
@@ -417,7 +417,7 @@
   },
   "https://store.steampowered.com/news/259481/": {
     "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
-    "last_seen": "2026-05-01"
+    "last_seen": "2026-05-03"
   },
   "https://80.lv/articles/matt-firor-interview-eso-founder-on-why-modern-mmos-lost-what-made-them-special": {
     "og_image": "https://cdn.80.lv/api/upload/meta/48051/images/69f3d2dfb74b9/contain_1200x630.png",
@@ -502,5 +502,45 @@
   "https://www.unrealengine.com/developer-interviews/invincible-vs-brings-its-brutal-brand-of-fighting-to-life-using-unreal-engine-5": {
     "og_image": "https://cms-assets.unrealengine.com/AiKUh5PQCTaOFnmJDZJBfz/resize=width:1200/cmo30iz1v961g08mzgy8ds0to",
     "last_seen": "2026-05-02"
+  },
+  "https://www.gamedeveloper.com/pc/we-tested-the-steam-controller": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt7faa05950769285e/69ef7df24b4c9e032fd51633/SteamController.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-05-03"
+  },
+  "https://www.blendernation.com/2026/05/02/made-realistic-ferrofluid-in-blender-extra-nodes-tutorial/": {
+    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/05/ferro_86552_BN.png",
+    "last_seen": "2026-05-03"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304416": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/68/29c906f7780caea7a48df512241yhjw5.PNG",
+    "last_seen": "2026-05-03"
+  },
+  "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/05/devfund_ai_policies-480x270.jpg",
+    "last_seen": "2026-05-03"
+  },
+  "https://www.gamedeveloper.com/business/gamemaker-says-ai-coding-is-inevitable-sony-clarifies-drm-confusion-and-how-video-games-are-helping-rikers-inmates-patch-notes-50": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltfbf85316bd3a214b/69f47fb461ba07556b14332e/Patch_Notes_50_Header.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-05-03"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=304417": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/02/1d7cc9871041f4496e15dd245a1yhnm5.JPG",
+    "last_seen": "2026-05-03"
+  },
+  "https://80.lv/articles/the-academy-draws-line-for-oscars-no-ai-actors-and-no-ai-scripts": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48088/images/69f5254cbadff/contain_1200x630.jpg",
+    "last_seen": "2026-05-03"
+  },
+  "https://80.lv/articles/from-dystopian-police-game-to-showgunners-a-design-postmortem": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48087/images/69f50e812a882/contain_1200x630.jpg",
+    "last_seen": "2026-05-03"
+  },
+  "https://80.lv/articles/150-developers-push-to-define-a-new-fake-os-genre-on-steam": {
+    "og_image": "",
+    "last_seen": "2026-05-03"
+  },
+  "https://80.lv/articles/senior-animator-shares-a-trick-to-make-your-animations-feel-more-alive": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/47992/images/69efed2b59b31/contain_1200x630.jpg",
+    "last_seen": "2026-05-03"
   }
 }
