@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 discord_bot/money_logs/
 discord_bot/.bot.pid
+global_history.json
 
 # Ignore generated daily assets but keep static base files
 assets/

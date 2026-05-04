@@ -33,9 +33,10 @@ channels/
   - **職責**：通用的報告生成引擎（讀取任意頻道設定 → 爬取 → LLM → 輸出）。
   - **核心函式**：
     - `load_channel_config(channel_dir)` — 讀取 `channel_config.json`
-    - `load_history() / save_history()` — 頻道獨立的歷史去重管理（7 天滾動字典結構，向下相容舊版 list-of-lists）
+    - `load_history() / save_history()` — 頻道獨立的歷史去重管理（滾動字典結構，窗口天數由 `channel_config.json` 的 `history_window_days` 控制，向下相容舊版 list-of-lists）
     - `fetch_sources(config, recent_urls)` — 依設定爬取 RSS + 網頁 fallback + 自定義爬蟲
-    - `build_prompt(config, channel_dir, scraped_context, today)` — 讀取 Prompt 模板 + 板塊規則，動態組裝完整 Prompt
+    - `_extract_recent_headlines(today, lookback_days)` — 語意級去重：從過去 N 天的日報 Markdown 擷取【今日頭條】摘要文字，注入 Prompt 讓 LLM 避免選用相同事件
+    - `build_prompt(config, channel_dir, scraped_context, today)` — 讀取 Prompt 模板 + 板塊規則 + 近期頭條摘要，動態組裝完整 Prompt
     - `call_gemini(config, prompt)` — 呼叫 Gemini API
     - `parse_response() / save_outputs()` — JSON 解析 + 防呆驗證 + 輸出 Markdown & daily_targets.json
     - `generate_report(channel_dir)` — 一鍵完整流程入口
@@ -149,7 +150,7 @@ channels/
 - **核心行為**：
   - 透過 Cron Job 每天定時觸發 (`50 23 * * *` UTC = 07:50 CST)，同時支援 `workflow_dispatch` 手動觸發。
   - 依序執行：`generate_report.py` → `fetch_url_metadata.py` → `fetch_images_v2.py` → `discord_webhook_sender.py` → `discord_forum_sender.py` → `discord_bot/main.py --auto-weekly`（僅週一發布排行榜）。
-  - 將變更後的 `global_history.json`、`daily_targets.json`、`url_metadata_cache.json`、`Daily_Report/` 自動 commit 並 push 回 Repository（commit message 附 `[skip ci]` 避免無限循環）。
+  - 將變更後的 `channels/`（含頻道歷史紀錄）、`daily_targets.json`、`url_metadata_cache.json`、`Daily_Report/` 自動 commit 並 push 回 Repository（commit message 附 `[skip ci]` 避免無限循環）。
   - **注意**：`assets/` 與 `Podcast/` 已從 commit 清單中移除，產出的圖片與音檔僅存在於 Actions 臨時環境中，不再推送至 GitHub，以避免二進制檔案持續膨脹儲存庫容量。
 
 ---
@@ -246,7 +247,7 @@ channels/
 ### 4.6 儲存空間與二進制檔案管理 (Storage & Binary File Policy)
 - **準則**：
   1. **禁止將每日產出的圖片、音檔推送至 GitHub**：`assets/`、`Podcast/`、`*.mp3` 已在 `.gitignore` 中排除。工作流程 `.github/workflows/daily_report.yml` 中也已移除 `git add assets/`。
-  2. **僅允許純文字紀錄回存 GitHub**：`global_history.json`、`daily_targets.json`、`url_metadata_cache.json`、`Daily_Report/*.md`。
+  2. **僅允許純文字紀錄回存 GitHub**：`channels/*/history.json`、`daily_targets.json`、`url_metadata_cache.json`、`Daily_Report/*.md`。**注意**：舊版的根目錄 `global_history.json` 已廢棄並移除，歷史紀錄改為各頻道獨立管理。
   3. **`money_logs/` 與 `.bot.pid` 只存在於本機**：已加入 `.gitignore`，不上傳至 GitHub。Money Log 內建滾動清理，固定保留最近 10 筆。
   4. 若未來新增產出物（如新的圖片或媒體檔案），必須同步將其加入 `.gitignore`，避免儲存庫容量無限膏脹。
 

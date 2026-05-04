@@ -266,6 +266,52 @@ def fetch_sources(config: dict, recent_urls: set) -> str:
 
 
 # ============================================================
+# 語意級去重：擷取近期頭條標題
+# ============================================================
+
+def _extract_recent_headlines(today: datetime, lookback_days: int = 3) -> str:
+    """
+    從過去 N 天的日報 Markdown 中擷取【今日頭條】段落的標題文字。
+    回傳供 Prompt 注入的純文字摘要，讓 LLM 避免選擇相同事件作為頭條。
+    """
+    headlines = []
+    report_dir = "Daily_Report"
+    if not os.path.isdir(report_dir):
+        return ""
+
+    for i in range(1, lookback_days + 1):
+        past_date = today - timedelta(days=i)
+        filename = os.path.join(report_dir, f"Daily_Full_Report_{past_date.strftime('%Y%m%d')}.md")
+        if not os.path.exists(filename):
+            continue
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                content = f.read()
+            # 擷取【今日頭條】到下一個段落之間的內容
+            headline_match = re.search(
+                r'\*\*📢\s*【今日頭條】\*\*.*?\n!\[.*?\]\(.*?\)\n(.*?)(?=\n\*\*[^\n]*【|\n---|\Z)',
+                content, re.DOTALL
+            )
+            if headline_match:
+                headline_text = headline_match.group(1).strip()
+                # 只取第一行（主要摘要），去除 Markdown 連結
+                first_line = headline_text.split('\n')[0].strip()
+                first_line = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', first_line)
+                first_line = re.sub(r'[<>]', '', first_line)
+                if first_line:
+                    headlines.append(f"- {past_date.strftime('%m/%d')}: {first_line}")
+        except Exception as e:
+            print(f"  [Warning] Failed to extract headline from {filename}: {e}")
+
+    if not headlines:
+        return ""
+
+    result = "【近期已報導頭條（禁止重複選用相同事件）】\n" + "\n".join(headlines)
+    print(f"Injected {len(headlines)} recent headline(s) for semantic dedup")
+    return result
+
+
+# ============================================================
 # Prompt 組裝
 # ============================================================
 
@@ -325,12 +371,20 @@ def build_prompt(config: dict, channel_dir: str,
         "image_targets": image_targets_schema,
     }, ensure_ascii=False, indent=2)
 
+    # 語意級去重：注入近期頭條摘要
+    recent_headlines = _extract_recent_headlines(today)
+
     # 替換模板中的佔位符
     prompt = template.replace("{scraped_context}", scraped_context)
     prompt = prompt.replace("{today_str_display}", today_str_display)
     prompt = prompt.replace("{section_count}", str(len(sections)))
     prompt = prompt.replace("{sections_prompt}", sections_prompt)
     prompt = prompt.replace("{json_schema}", json_schema)
+    prompt = prompt.replace("{recent_headlines}", recent_headlines)
+
+    # 向下相容：若模板中沒有 {recent_headlines} 佔位符，則附加在 scraped_context 後方
+    if "{recent_headlines}" not in template and recent_headlines:
+        prompt += "\n\n" + recent_headlines
 
     return prompt
 
