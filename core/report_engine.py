@@ -224,12 +224,14 @@ def fetch_sources(config: dict, recent_urls: set) -> str:
         except Exception as e:
             print(f'  [Error] {fb["name"]} direct scrape failed: {e}')
 
-    # ── 3. Custom scrapers (映CG 等) ──
+    # ── 3. Custom scrapers (映CG, TMDb, AniList 等) ──
     for custom in config.get("scrape_custom", []):
-        if custom.get("type") == "incg":
-            try:
-                scraped_data += f'\n### 來源資訊: {custom["name"]}\n'
-                count = 0
+        try:
+            custom_type = custom.get("type")
+            scraped_data += f'\n### 來源資訊: {custom["name"]}\n'
+            count = 0
+            
+            if custom_type == "incg":
                 seen = set()
                 for cat in custom.get("categories", []):
                     r = requests.get(cat["url"], headers=BROWSER_HEADERS, timeout=10)
@@ -254,12 +256,93 @@ def fetch_sources(config: dict, recent_urls: set) -> str:
                                 break
                     if count >= custom.get("max_items", 6):
                         break
-                if count == 0:
-                    print(f'  [Warning] {custom["name"]} scrape returned nothing')
-                else:
-                    print(f'  {custom["name"]}: scraped {count} articles')
-            except Exception as e:
-                print(f'  [Error] {custom["name"]} scrape failed: {e}')
+
+            elif custom_type == "tmdb_api":
+                tmdb_token = os.getenv("TMDB_API_TOKEN")
+                if not tmdb_token:
+                    print(f"  [Warning] Skipping TMDb API: TMDB_API_TOKEN environment variable not set")
+                    continue
+                headers = {"Authorization": f"Bearer {tmdb_token}", "accept": "application/json"}
+                for endpoint in custom.get("endpoints", []):
+                    r = requests.get(endpoint["url"], headers=headers, timeout=10)
+                    r.raise_for_status()
+                    results = r.json().get("results", [])[:5]
+                    for item in results:
+                        title = item.get("title") or item.get("name")
+                        overview = item.get("overview", "")[:250] + "..."
+                        url = f"https://www.themoviedb.org/movie/{item.get('id')}"
+                        if url in recent_urls:
+                            continue
+                        scraped_data += f"- 【標題】: [{endpoint['name']}] {title}\n  【網址 URL】: {url}\n  【摘要前言】: {overview}\n"
+                        count += 1
+                        recent_news_count += 1
+
+            elif custom_type == "anilist_graphql":
+                query = '''
+                query {
+                  Page(page: 1, perPage: 5) {
+                    media(type: ANIME, sort: POPULARITY_DESC, season: SPRING, seasonYear: 2026) {
+                      id
+                      title {
+                        romaji
+                        english
+                      }
+                      description
+                      siteUrl
+                    }
+                  }
+                }
+                '''
+                r = requests.post(custom["url"], json={"query": query}, timeout=10)
+                r.raise_for_status()
+                results = r.json().get("data", {}).get("Page", {}).get("media", [])
+                for item in results:
+                    title = item.get("title", {}).get("english") or item.get("title", {}).get("romaji")
+                    desc = (item.get("description") or "").replace("<br>", "\n")[:250] + "..."
+                    url = item.get("siteUrl")
+                    if url in recent_urls:
+                        continue
+                    scraped_data += f"- 【標題】: {title}\n  【網址 URL】: {url}\n  【摘要前言】: {desc}\n"
+                    count += 1
+                    recent_news_count += 1
+            
+            elif custom_type == "html":
+                r = requests.get(custom["url"], headers=BROWSER_HEADERS, timeout=10)
+                soup = BeautifulSoup(r.text, 'html.parser')
+                for a in soup.select(custom.get("selector", "a")):
+                    href = a.get('href', '')
+                    if not href.startswith('http'):
+                        href = custom.get("base_url", "") + href
+                    title_text = a.get_text(strip=True)
+                    if title_text and href not in scraped_data:
+                        if href in recent_urls:
+                            continue
+                        hint = custom.get("summary_hint", "(article)")
+                        scraped_data += f'- [標題]: {title_text}\n  [網址 URL]: {href}\n  [摘要前言]: {hint}...\n'
+                        count += 1
+                        recent_news_count += 1
+                        if count >= 5: # Default max 5 for simple HTML
+                            break
+                            
+            elif custom_type == "box_office_mojo":
+                # Basic placeholder for date-based URL
+                import datetime as dt
+                today_str = dt.datetime.now().strftime("%Y-%m-%d")
+                url = custom["url_template"].replace("{YYYY-MM-DD}", today_str)
+                r = requests.get(url, headers=BROWSER_HEADERS, timeout=10)
+                # Further specific scraping would go here, currently just notifying we fetched it
+                if r.status_code == 200:
+                    scraped_data += f"- [標題]: Daily Box Office for {today_str}\n  [網址 URL]: {url}\n  [摘要前言]: {custom.get('summary_hint')}\n"
+                    count += 1
+                    recent_news_count += 1
+
+            if count == 0:
+                print(f'  [Warning] {custom["name"]} scrape returned nothing')
+            else:
+                print(f'  {custom["name"]}: scraped {count} articles')
+
+        except Exception as e:
+            print(f'  [Error] {custom["name"]} scrape failed: {e}')
 
     print(f"Scraped {recent_news_count} news items for context.")
     return scraped_data

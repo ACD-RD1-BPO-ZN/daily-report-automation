@@ -1,0 +1,240 @@
+{
+  "channel_id": "movie",
+  "display_name": "電影資訊日報",
+  "rss_feeds": {
+    "電影產業 (Deadline)": "https://deadline.com/feed/",
+    "影視技術 (Variety)": "https://variety.com/v/film/feed/",
+    "動畫技術 (Cartoon Brew)": "https://www.cartoonbrew.com/feed",
+    "預告片 (FirstShowing)": "https://www.firstshowing.net/feed/"
+  },
+  "rss_max_entries": 6,
+  "scrape_fallbacks": [],
+  "scrape_custom": [
+    {
+      "name": "TMDb (The Movie Database)",
+      "type": "tmdb_api",
+      "endpoints": [
+        {
+          "name": "熱門電影",
+          "url": "https://api.themoviedb.org/3/movie/popular"
+        }
+      ],
+      "summary_hint": "(TMDb Data)"
+    },
+    {
+      "name": "AniList (動畫數據)",
+      "type": "anilist_graphql",
+      "url": "https://graphql.anilist.co",
+      "summary_hint": "(AniList Data)"
+    },
+    {
+      "name": "The Numbers (Box Office)",
+      "type": "html",
+      "url": "https://www.the-numbers.com/daily-box-office-chart",
+      "selector": "table#box_office_chart a[href*='/movie/']",
+      "base_url": "https://www.the-numbers.com",
+      "summary_hint": "(Box Office Data)"
+    },
+    {
+      "name": "Box Office Mojo",
+      "type": "box_office_mojo",
+      "url_template": "https://www.boxofficemojo.com/date/{YYYY-MM-DD}/",
+      "summary_hint": "(Box Office Mojo Data)"
+    }
+  ],
+  "sections": [
+    {
+      "emoji": "📢",
+      "title": "今日頭條",
+      "section_key": "Headline",
+      "image_keywords": [
+        "movie",
+        "cinema",
+        "headline",
+        "poster",
+        "trailer"
+      ],
+      "forum_tags": [
+        "headline"
+      ]
+    },
+    {
+      "emoji": "🎬",
+      "title": "電影快訊",
+      "section_key": "MovieNews",
+      "image_keywords": [
+        "film",
+        "production",
+        "cast",
+        "director",
+        "cinema"
+      ],
+      "forum_tags": [
+        "movie"
+      ],
+      "sub_sections": [
+        {
+          "pattern": "\\*\\*漫威/DC",
+          "display": "🦸‍♂️ 超級英雄",
+          "tags": [
+            "movie"
+          ]
+        },
+        {
+          "pattern": "\\*\\*好萊塢",
+          "display": "🌟 好萊塢大片",
+          "tags": [
+            "movie"
+          ]
+        },
+        {
+          "pattern": "\\*\\*獨立",
+          "display": "🎭 獨立電影",
+          "tags": [
+            "movie"
+          ]
+        }
+      ]
+    },
+    {
+      "emoji": "🎟️",
+      "title": "票房與市場分析",
+      "section_key": "BoxOffice",
+      "image_keywords": [
+        "box office",
+        "ticket",
+        "chart",
+        "audience"
+      ],
+      "forum_tags": [
+        "business"
+      ]
+    },
+    {
+      "emoji": "📺",
+      "title": "串流平台動態",
+      "section_key": "Streaming",
+      "image_keywords": [
+        "netflix",
+        "disney+",
+        "hbo",
+        "streaming",
+        "series"
+      ],
+      "forum_tags": [
+        "streaming"
+      ]
+    },
+    {
+      "emoji": "🤝",
+      "title": "在地社群與活動",
+      "section_key": "Local",
+      "image_keywords": [
+        "taiwan",
+        "event",
+        "cinema",
+        "festival"
+      ],
+      "forum_tags": [
+        "local"
+      ]
+    },
+    {
+      "emoji": "🌌",
+      "title": "今日全方位深度總結",
+      "section_key": "Synthesis",
+      "image_keywords": [],
+      "forum_tags": [
+        "ai"
+      ],
+      "skip_webhook": false,
+      "skip_forum": true
+    }
+  ],
+  "forum_tags": {
+    "headline": {
+      "env": "FORUM_TAG_MOVIE_HEADLINE_ID",
+      "default": "1234567890",
+      "display": "🔥 頭條",
+      "color": "0xE67E22"
+    },
+    "movie": {
+      "env": "FORUM_TAG_MOVIE_NEWS_ID",
+      "default": "1234567891",
+      "display": "🎬 電影快訊",
+      "color": "0x2ECC71"
+    },
+    "business": {
+      "env": "FORUM_TAG_MOVIE_BIZ_ID",
+      "default": "1234567892",
+      "display": "🎟️ 票房分析",
+      "color": "0x3498DB"
+    },
+    "streaming": {
+      "env": "FORUM_TAG_MOVIE_STREAM_ID",
+      "default": "1234567893",
+      "display": "📺 串流平台",
+      "color": "0x9B59B6"
+    },
+    "local": {
+      "env": "FORUM_TAG_MOVIE_LOCAL_ID",
+      "default": "1234567894",
+      "display": "🤝 在地活動",
+      "color": "0x7F8C8D"
+    },
+    "ai": {
+      "env": "FORUM_TAG_MOVIE_AI_ID",
+      "default": "1234567895",
+      "display": "🤖 深度總結",
+      "color": "0x7B68EE"
+    }
+  },
+  "engine_route_keywords": {},
+  "forum_tag_order": [
+    "ai",
+    "local",
+    "streaming",
+    "business",
+    "movie",
+    "headline"
+  ],
+  "section_tag_map": {
+    "📢": [
+      "headline"
+    ],
+    "🎬": [
+      "movie"
+    ],
+    "🎟️": [
+      "business"
+    ],
+    "📺": [
+      "streaming"
+    ],
+    "🤝": [
+      "local"
+    ],
+    "🌌": [
+      "ai"
+    ]
+  },
+  "section_img_key": {
+    "📢": "Headline",
+    "🎬": "MovieNews",
+    "🎟️": "BoxOffice",
+    "📺": "Streaming",
+    "🤝": "Local"
+  },
+  "webhook_skip_emojis": [
+    "✨"
+  ],
+  "discord": {
+    "webhook_env": "DISCORD_WEBHOOK_URL",
+    "bot_token_env": "DISCORD_BOT_TOKEN",
+    "forum_channel_env": "DISCORD_MOVIE_FORUM_CHANNEL_ID",
+    "forum_channel_id_hardcoded": "1500792573483159633"
+  },
+  "history_window_days": 30,
+  "gemini_model": "gemini-2.5-flash",
+  "gemini_temperature": 0.2
+}
