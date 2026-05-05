@@ -100,6 +100,13 @@
       "forum_tags": ["ta"]
     },
     {
+      "emoji": "🌍",
+      "title": "全球遊戲動態",
+      "section_key": "GlobalGames",
+      "image_keywords": ["gameplay", "trailer", "release", "commercial", "global"],
+      "forum_tags": ["global"]
+    },
+    {
       "emoji": "🎮",
       "title": "獨立遊戲市場觀察",
       "section_key": "Indie",
@@ -152,6 +159,7 @@
   "section_tag_map": {
     "📢": ["headline"],
     "✨": ["ta"],
+    "🌍": ["global"],
     "🎮": ["indie"],
     "🤝": ["indie"],
     "💼": ["global"],

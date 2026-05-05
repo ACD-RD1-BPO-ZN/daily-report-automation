@@ -35,9 +35,9 @@ TAG_IDS = {
 SECTION_TAG_MAP = {
     "📢": ["headline"],   # 今日頭條     → 頭條
     "✨": ["ta"],         # TA 相關      → 技術|TA
+    "🌍": ["global"],     # 全球遊戲     → 遊戲|全球
     "🎮": ["indie"],      # 獨立遊戲     → 遊戲|獨立遊戲
     "🤝": ["indie"],      # 在地社群     → 遊戲|獨立遊戲
-    "💼": ["global"],     # 製作人週記   → 遊戲|全球 (引擎相關自動分流)
     "🌌": ["ai"],         # 深度總結     → AI|資訊
 }
 
@@ -86,6 +86,7 @@ SECTION_IMG_KEY: dict[str, str] = {
     "⚙️": "Engine",
     "✨": "TA",
     "🎨": "TA",    # 向後相容舊引擎格式
+    "🌍": "GlobalGames",
     "🎮": "Indie",
     "🤝": "Local",
     "💼": "Producer",
