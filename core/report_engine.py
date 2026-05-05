@@ -571,23 +571,24 @@ def parse_response(res_text: str, today_str_file: str, config: dict = None) -> d
 # 輸出
 # ============================================================
 
-def save_outputs(report_data: dict, today_str_file: str) -> list[str]:
+def save_outputs(report_data: dict, today_str_file: str, channel_id: str) -> list[str]:
     """
     儲存 Markdown 報告與 daily_targets.json。
     回傳今日所有 URL 的列表（供歷史紀錄）。
     """
     # 1. Markdown
     os.makedirs("Daily_Report", exist_ok=True)
-    md_filename = os.path.join("Daily_Report", f"Daily_Full_Report_{today_str_file}.md")
+    md_filename = os.path.join("Daily_Report", f"Daily_Full_Report_{channel_id}_{today_str_file}.md")
     with open(md_filename, "w", encoding="utf-8") as f:
         f.write(report_data.get("markdown_content", "No markdown content returned."))
     print(f"Generated Markdown report: {md_filename}")
 
-    # 2. daily_targets.json
+    # 2. daily_targets_{channel_id}.json
     image_targets = report_data.get("image_targets", [])
-    with open("daily_targets.json", "w", encoding="utf-8") as f:
+    targets_filename = f"daily_targets_{channel_id}.json"
+    with open(targets_filename, "w", encoding="utf-8") as f:
         json.dump(image_targets, f, ensure_ascii=False, indent=2)
-    print(f"Generated targets file: daily_targets.json with {len(image_targets)} valid targets.")
+    print(f"Generated targets file: {targets_filename} with {len(image_targets)} valid targets.")
 
     # 3. 萃取今日所有 URL
     today_urls = []
@@ -649,7 +650,8 @@ async def generate_report(channel_dir: str) -> None:
         save_fallback(res_text, today)
         return
 
-    today_urls = save_outputs(report_data, today_str_file)
+    channel_id = config.get("channel_id", "unknown")
+    today_urls = save_outputs(report_data, today_str_file, channel_id)
 
     # 5. 更新歷史
     save_history(channel_dir, config, history, today_urls, today)

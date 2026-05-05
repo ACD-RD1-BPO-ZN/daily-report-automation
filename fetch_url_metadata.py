@@ -16,17 +16,19 @@ HEADERS = {
     "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7"
 }
 
-def get_latest_report():
-    report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
+import sys
+
+def get_latest_report(channel_id):
+    report_files = glob.glob(os.path.join("Daily_Report", f"Daily_Full_Report_{channel_id}_*.md"))
     if not report_files:
         return None
     report_files.sort(reverse=True)
     return report_files[0]
 
-def extract_all_urls():
+def extract_all_urls(channel_id):
     urls = set()
     # 1. From latest markdown
-    md_path = get_latest_report()
+    md_path = get_latest_report(channel_id)
     if md_path:
         with open(md_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -35,8 +37,9 @@ def extract_all_urls():
             urls.add(m.group(1))
             
     # 2. From daily_targets.json
-    if os.path.exists("daily_targets.json"):
-        with open("daily_targets.json", "r", encoding="utf-8") as f:
+    targets_file = f"daily_targets_{channel_id}.json"
+    if os.path.exists(targets_file):
+        with open(targets_file, "r", encoding="utf-8") as f:
             targets = json.load(f)
             for item in targets:
                 for url in item.get("source_urls", []):
@@ -180,8 +183,15 @@ async def get_metadata_for_urls(urls):
     print(f"Metadata fetch complete. Updated {CACHE_FILE} (Total {len(pruned_cache)} entries)")
 
 def main():
-    urls = extract_all_urls()
-    print(f"Found {len(urls)} unique URLs to process.")
+    channel_dir = sys.argv[1] if len(sys.argv) > 1 else "channels/gamedev"
+    config_path = os.path.join(channel_dir, "channel_config.json")
+    channel_id = "gamedev"
+    if os.path.exists(config_path):
+        with open(config_path, "r", encoding="utf-8") as f:
+            channel_id = json.load(f).get("channel_id", "gamedev")
+
+    urls = extract_all_urls(channel_id)
+    print(f"Found {len(urls)} unique URLs to process for channel: {channel_id}.")
     asyncio.run(get_metadata_for_urls(urls))
 
 if __name__ == "__main__":

@@ -58,20 +58,27 @@ jobs:
         FORUM_TAG_TA_ID: ${{ secrets.FORUM_TAG_TA_ID }}
         FORUM_TAG_3D_ID: ${{ secrets.FORUM_TAG_3D_ID }}
       run: |
-        echo "Starting daily report generation..."
-        python generate_report.py
-        
-        echo "Fetching URL metadatas..."
-        python fetch_url_metadata.py
+        CHANNELS="channels/gamedev channels/movie"
+        for CHANNEL in $CHANNELS; do
+          echo "=========================================="
+          echo "🚀 Processing channel: $CHANNEL"
+          echo "=========================================="
+          
+          echo "Starting daily report generation..."
+          python generate_report.py $CHANNEL
+          
+          echo "Fetching URL metadatas..."
+          python fetch_url_metadata.py $CHANNEL
 
-        echo "Fetching images..."
-        python fetch_images_v2.py
-        
-        echo "Sending to Discord (Webhook)..."
-        python discord_webhook_sender.py
+          echo "Fetching images..."
+          python fetch_images_v2.py $CHANNEL
+          
+          echo "Sending to Discord (Webhook)..."
+          python discord_webhook_sender.py $CHANNEL
 
-        echo "Sending to Discord (Forum Channel)..."
-        python discord_forum/discord_forum_sender.py
+          echo "Sending to Discord (Forum Channel)..."
+          python discord_forum/discord_forum_sender.py $CHANNEL
+        done
 
         echo "Sending Weekly Leaderboard (if Monday)..."
         python discord_bot/main.py --auto-weekly
@@ -86,6 +93,7 @@ jobs:
         # 2. 追蹤產出的檔案（全域歷史 + 報告 + 圖片目標 + 圖片快取）
         # 注意：assets/ 和 Podcast/ 已在 .gitignore 中排除，不再上傳至 GitHub 以節省空間
         git add channels/ || true
+        git add daily_targets_*.json || true
         git add daily_targets.json || true
         git add url_metadata_cache.json || true
         git add Daily_Report/ || true

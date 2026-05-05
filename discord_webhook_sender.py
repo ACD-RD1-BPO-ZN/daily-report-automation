@@ -4,19 +4,34 @@ import glob
 import json
 import re
 import time
+import sys
 from dotenv import load_dotenv
 
 load_dotenv()
 
-WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
-
 def send_to_discord():
-    if not WEBHOOK_URL:
-        print("Error: DISCORD_WEBHOOK_URL is not set. Skipping Discord push.")
+    channel_dir = sys.argv[1] if len(sys.argv) > 1 else "channels/gamedev"
+    config_path = os.path.join(channel_dir, "channel_config.json")
+    channel_id = "gamedev"
+    webhook_url = os.getenv("DISCORD_WEBHOOK_URL")
+    
+    if os.path.exists(config_path):
+        with open(config_path, "r", encoding="utf-8") as f:
+            config = json.load(f)
+            channel_id = config.get("channel_id", "gamedev")
+            discord_cfg = config.get("discord", {})
+            env_key = discord_cfg.get("webhook_env", "")
+            if env_key:
+                webhook_url = os.getenv(env_key)
+
+    if not webhook_url:
+        print("Error: Webhook URL is not set. Skipping Discord push.")
         return
 
     # 1. 取得最新報告
-    report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
+    report_files = glob.glob(os.path.join("Daily_Report", f"Daily_Full_Report_{channel_id}_*.md"))
+    if not report_files:
+        report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
     if not report_files: return
     report_files.sort(reverse=True)
     latest_report = report_files[0]
@@ -45,8 +60,12 @@ def send_to_discord():
 
     # 3. 讀取 targets 映射 (section_name -> image path)
     target_mappings = {}
-    if os.path.exists("daily_targets.json"):
-        with open("daily_targets.json", "r", encoding="utf-8") as f:
+    targets_file = f"daily_targets_{channel_id}.json"
+    if not os.path.exists(targets_file):
+        targets_file = "daily_targets.json"
+        
+    if os.path.exists(targets_file):
+        with open(targets_file, "r", encoding="utf-8") as f:
             targets_data = json.load(f)
             for item in targets_data:
                 target_mappings[item["image_filename"]] = os.path.join("assets", item["image_filename"])
@@ -97,7 +116,7 @@ def send_to_discord():
                 fname = os.path.basename(img_path)
                 files = {"file": (fname, open(img_path, "rb"))}
 
-            response = requests.post(WEBHOOK_URL, data=payload, files=files)
+            response = requests.post(webhook_url, data=payload, files=files)
             if not response.ok:
                 print(f"❌ 第 {i} 段 chunk {chunk_idx} 發送失敗: {response.text[:200]}")
             else:

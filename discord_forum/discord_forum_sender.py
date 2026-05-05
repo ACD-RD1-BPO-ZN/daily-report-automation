@@ -4,6 +4,7 @@ import glob
 import json
 import re
 import time
+import sys
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,7 +13,6 @@ load_dotenv()
 DRY_RUN = os.getenv("DRY_RUN", "false").lower() == "true"
 
 BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
-FORUM_CHANNEL_ID = os.getenv("DISCORD_FORUM_CHANNEL_ID")
 
 # ============================================================
 # 論壇標籤 ID 設定
@@ -499,16 +499,41 @@ def _create_forum_thread(thread_name: str, display_title: str, embed_description
 # ============================================================
 
 def send_to_discord_forum() -> None:
+    channel_dir = sys.argv[1] if len(sys.argv) > 1 else "channels/gamedev"
+    config_path = os.path.join(channel_dir, "channel_config.json")
+    channel_id = "gamedev"
+    forum_channel_id = os.getenv("DISCORD_FORUM_CHANNEL_ID")
+    
+    if os.path.exists(config_path):
+        with open(config_path, "r", encoding="utf-8") as f:
+            config = json.load(f)
+            channel_id = config.get("channel_id", "gamedev")
+            discord_cfg = config.get("discord", {})
+            
+            # 優先讀取 config 指定的環境變數，若無則使用 hardcoded
+            env_key = discord_cfg.get("forum_channel_env", "")
+            forum_channel_id = os.getenv(env_key) if env_key else None
+            if not forum_channel_id:
+                forum_channel_id = discord_cfg.get("forum_channel_id_hardcoded")
+
+    # Override module level FORUM_CHANNEL_ID for requests
+    global FORUM_CHANNEL_ID
+    FORUM_CHANNEL_ID = forum_channel_id
+
     if DRY_RUN:
         print("🔍 DRY-RUN 模式：只預覽，不發送至 Discord\n" + "=" * 60)
     elif not BOT_TOKEN or not FORUM_CHANNEL_ID:
-        print("Error: DISCORD_BOT_TOKEN 或 DISCORD_FORUM_CHANNEL_ID 尚未設定，跳過論壇發布。")
+        print("Error: DISCORD_BOT_TOKEN 或論壇頻道 ID 尚未設定，跳過論壇發布。")
         return
 
     # 1. 取得最新報告檔案
-    report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
+    report_files = glob.glob(os.path.join("Daily_Report", f"Daily_Full_Report_{channel_id}_*.md"))
+    # 向下相容舊檔名
     if not report_files:
-        print("找不到報告檔案，中止執行。")
+        report_files = glob.glob(os.path.join("Daily_Report", "Daily_Full_Report_*.md"))
+    
+    if not report_files:
+        print(f"找不到頻道 {channel_id} 的報告檔案，中止執行。")
         return
     report_files.sort(reverse=True)
     latest_report = report_files[0]
@@ -554,8 +579,12 @@ def send_to_discord_forum() -> None:
 
     # 4. 讀取圖片路徑映射（依 section_name 匹配）
     section_name_to_img: dict[str, str] = {}
-    if os.path.exists("daily_targets.json"):
-        with open("daily_targets.json", "r", encoding="utf-8") as f:
+    targets_file = f"daily_targets_{channel_id}.json"
+    if not os.path.exists(targets_file):
+        targets_file = "daily_targets.json" # fallback
+        
+    if os.path.exists(targets_file):
+        with open(targets_file, "r", encoding="utf-8") as f:
             targets_data = json.load(f)
         for item in targets_data:
             sname = item.get("section_name", "").strip()

@@ -483,7 +483,16 @@ async def download_image(url, save_path, section_type="", image_keywords=None, u
         print(f"  Playwright fallback absolutely failed: {e}")
         return False
 
+import sys
+
 async def main():
+    channel_dir = sys.argv[1] if len(sys.argv) > 1 else "channels/gamedev"
+    config_path = os.path.join(channel_dir, "channel_config.json")
+    channel_id = "gamedev"
+    if os.path.exists(config_path):
+        with open(config_path, "r", encoding="utf-8") as f:
+            channel_id = json.load(f).get("channel_id", "gamedev")
+
     assets_dir = os.path.join(os.getcwd(), "assets")
     os.makedirs(assets_dir, exist_ok=True)
     
@@ -500,7 +509,7 @@ async def main():
             with open(default_cover_path, 'wb') as f:
                 f.write(b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\nIDATx\x9cc\x00\x01\x00\x00\x05\x00\x01\r\n-\xb4\x00\x00\x00\x00IEND\xaeB`\x82')
 
-    targets_file = os.path.join(os.getcwd(), "daily_targets.json")
+    targets_file = os.path.join(os.getcwd(), f"daily_targets_{channel_id}.json")
     targets_data = []
     if not os.path.exists(targets_file):
         print(f"Warning: Targets file not found at {targets_file}. Skipping image fetch.")
