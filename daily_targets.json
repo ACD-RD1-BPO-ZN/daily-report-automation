@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blender.org/archive/anthropic-joins-the-blender-development-fund-as-corporate-patron/"
+      "https://www.blendernation.com/2026/05/01/update-anthropic-joins-the-blender-development-fund/"
     ],
-    "image_filename": "headline_20260504.png",
+    "image_filename": "headline_20260505.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/04/29/anthropic-adds-blender-support-joins-the-blender-development-fund-as-corporate-patron/",
-      "https://www.blendernation.com/2026/05/01/best-of-blender-artists-2026-18/"
+      "https://www.blendernation.com/2026/05/04/build-victorian-blender-scenes-faster-with-33-connected-cycles-materials-50-off/",
+      "https://www.blendernation.com/2026/05/04/steaming-coffee-animation-tutorial/",
+      "https://www.blendernation.com/2026/05/04/endless-fields-cinematic-cgi-breakdown/"
     ],
-    "image_filename": "model3d_20260504.png",
+    "image_filename": "model3d_20260505.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,11 +35,12 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/check-out-this-overwatch-inspired-game-ready-cybernetic-huntress-character",
-      "https://80.lv/articles/this-animated-short-film-about-a-curious-robot-hits-you-in-the-feels",
-      "https://80.lv/articles/epic-expands-star-wars-in-fortnite-with-hundreds-of-new-uefn-experiences"
+      "https://80.lv/articles/analysts-say-gta-6-could-sell-over-25m-copies-on-day-one-amid-terrifying-expectations",
+      "https://80.lv/articles/understanding-material-based-mesh-reorientation-in-unreal-engine-5",
+      "https://80.lv/articles/enhance-your-godot-experience-with-this-useful-editor",
+      "https://80.lv/articles/early-sonic-adventure-concept-art-reveals-very-different-direction-for-the-game"
     ],
-    "image_filename": "ta_20260504.png",
+    "image_filename": "ta_20260505.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,9 +56,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/259202/"
+      "https://www.gamedeveloper.com/business/meet-the-indie-studios-funding-other-indie-studios",
+      "https://gnn.gamer.com.tw/detail.php?sn=304507"
     ],
-    "image_filename": "indie_20260504.png",
+    "image_filename": "indie_20260505.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -68,10 +71,13 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304419",
-      "https://gnn.gamer.com.tw/detail.php?sn=304418"
+      "https://gnn.gamer.com.tw/detail.php?sn=304511",
+      "https://gnn.gamer.com.tw/detail.php?sn=304510",
+      "https://gnn.gamer.com.tw/detail.php?sn=304509",
+      "https://gnn.gamer.com.tw/detail.php?sn=304508",
+      "https://gnn.gamer.com.tw/detail.php?sn=304506"
     ],
-    "image_filename": "local_20260504.png",
+    "image_filename": "local_20260505.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -82,17 +88,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.blender.org/archive/anthropic-joins-the-blender-development-fund-as-corporate-patron/",
-      "https://www.blendernation.com/2026/04/29/anthropic-adds-blender-support-joins-the-blender-development-fund-as-corporate-patron/",
-      "https://www.blendernation.com/2026/05/01/best-of-blender-artists-2026-18/",
-      "https://80.lv/articles/check-out-this-overwatch-inspired-game-ready-cybernetic-huntress-character",
-      "https://80.lv/articles/this-animated-short-film-about-a-curious-robot-hits-you-in-the-feels",
-      "https://80.lv/articles/epic-expands-star-wars-in-fortnite-with-hundreds-of-new-uefn-experiences",
-      "https://store.steampowered.com/news/259202/",
-      "https://gnn.gamer.com.tw/detail.php?sn=304419",
-      "https://gnn.gamer.com.tw/detail.php?sn=304418"
+      "https://www.gamedeveloper.com/business/meet-the-indie-studios-funding-other-indie-studios",
+      "https://www.blendernation.com/2026/05/01/update-anthropic-joins-the-blender-development-fund/"
     ],
-    "image_filename": "producer_20260504.png",
+    "image_filename": "producer_20260505.png",
     "image_keywords": [
       "marketing",
       "development",
