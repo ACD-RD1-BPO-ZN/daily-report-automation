@@ -229,10 +229,8 @@
     "✨"
   ],
   "discord": {
-    "webhook_env": "DISCORD_WEBHOOK_URL",
-    "bot_token_env": "DISCORD_BOT_TOKEN",
-    "forum_channel_env": "DISCORD_MOVIE_FORUM_CHANNEL_ID",
-    "forum_channel_id_hardcoded": "1500792573483159633"
+    "skip_forum": true,
+    "webhook_env": "DISCORD_MOVIE_WEBHOOK_URL"
   },
   "history_window_days": 30,
   "gemini_model": "gemini-2.5-flash",

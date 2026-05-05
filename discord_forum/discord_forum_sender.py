@@ -510,6 +510,10 @@ def send_to_discord_forum() -> None:
             channel_id = config.get("channel_id", "gamedev")
             discord_cfg = config.get("discord", {})
             
+            if discord_cfg.get("skip_forum", False):
+                print(f"頻道 {channel_id} 設定為不使用論壇 (skip_forum=true)，跳過論壇發布。")
+                return
+
             # 優先讀取 config 指定的環境變數，若無則使用 hardcoded
             env_key = discord_cfg.get("forum_channel_env", "")
             forum_channel_id = os.getenv(env_key) if env_key else None
