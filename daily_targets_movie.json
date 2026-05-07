@@ -1,0 +1,82 @@
+[
+  {
+    "section_name": "Headline",
+    "source_urls": [
+      "https://deadline.com/2026/05/david-di-donatello-awards-2026-winners-1236883709/"
+    ],
+    "image_filename": "headline_20260507.png",
+    "image_keywords": [
+      "movie",
+      "cinema",
+      "headline",
+      "poster",
+      "trailer"
+    ]
+  },
+  {
+    "section_name": "MovieNews",
+    "source_urls": [
+      "https://deadline.com/2026/05/rachel-zegler-adrien-brody-last-dance-filmnation-cannes-1236883777/",
+      "https://variety.com/2026/film/global/miles-tiller-edmayne-doug-liman-thriller-star-one-1236739814/",
+      "https://variety.com/2026/film/news/planet-of-the-apes-new-movie-fantastic-four-director-matt-shakman-1236739815/",
+      "https://deadline.com/2026/05/kelly-marie-tran-ilia-isorelys-paulino-quads-the-kicker-1236883738/",
+      "https://deadline.com/2026/05/new-york-city-film-commissioner-rafael-espinal-interview-1236883322/",
+      "https://variety.com/2026/film/news/javier-bardem-cannes-hollywood-penelope-cruz-daily-variety-1236739798/"
+    ],
+    "image_filename": "movienews_20260507.png",
+    "image_keywords": [
+      "film",
+      "production",
+      "cast",
+      "director",
+      "cinema"
+    ]
+  },
+  {
+    "section_name": "BoxOffice",
+    "source_urls": [
+      "https://www.boxofficemojo.com/date/2026-05-07/",
+      "https://variety.com/2026/tv/news/gen-z-cancels-streaming-subs-one-show-dont-buy-games-1236739557/",
+      "https://variety.com/2026/film/news/robert-downey-jr-social-media-influencers-future-1236739305/"
+    ],
+    "image_filename": "boxoffice_20260507.png",
+    "image_keywords": [
+      "box office",
+      "ticket",
+      "chart",
+      "audience"
+    ]
+  },
+  {
+    "section_name": "Streaming",
+    "source_urls": [
+      "https://www.firstshowing.net/2026/first-teaser-for-legally-blonde-prequel-series-elle-with-lexi-minetree/",
+      "https://www.firstshowing.net/2026/05/official-trailer-for-music-biopic-kylie-doc-series-about-kylie-minogue/",
+      "https://deadline.com/2026/05/eugene-mirman-here-comes-the-whimsy-special-youtube-1236883712/",
+      "https://anilist.co/anime/147105"
+    ],
+    "image_filename": "streaming_20260507.png",
+    "image_keywords": [
+      "netflix",
+      "disney+",
+      "hbo",
+      "streaming",
+      "series"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://deadline.com/2026/05/book-of-mormon-broadway-fire-1236883793/",
+      "https://www.cartoonbrew.com/awards/view-conference-trailblazer-award-2026-260567.html",
+      "https://www.cartoonbrew.com/awards/oscars-new-rules-vfx-ai-writing-260541.html"
+    ],
+    "image_filename": "local_20260507.png",
+    "image_keywords": [
+      "taiwan",
+      "event",
+      "cinema",
+      "festival"
+    ]
+  }
+]
