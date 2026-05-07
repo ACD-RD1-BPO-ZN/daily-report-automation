@@ -5,7 +5,8 @@
     "電影產業 (Deadline)": "https://deadline.com/feed/",
     "影視技術 (Variety)": "https://variety.com/v/film/feed/",
     "動畫技術 (Cartoon Brew)": "https://www.cartoonbrew.com/feed",
-    "預告片 (FirstShowing)": "https://www.firstshowing.net/feed/"
+    "預告片 (FirstShowing)": "https://www.firstshowing.net/feed/",
+    "巴哈姆特 GNN (動漫/影視)": "https://gnn.gamer.com.tw/rss.php"
   },
   "rss_max_entries": 6,
   "scrape_fallbacks": [],
@@ -40,6 +41,14 @@
       "type": "box_office_mojo",
       "url_template": "https://www.boxofficemojo.com/date/{YYYY-MM-DD}/",
       "summary_hint": "(Box Office Mojo Data)"
+    },
+    {
+      "name": "豆瓣電影 (院線資訊)",
+      "type": "html",
+      "url": "https://movie.douban.com/chart",
+      "selector": "a[href*='/subject/']",
+      "base_url": "https://movie.douban.com",
+      "summary_hint": "(豆瓣電影評分資料)"
     }
   ],
   "sections": [
@@ -126,17 +135,18 @@
       ]
     },
     {
-      "emoji": "🤝",
-      "title": "在地社群與活動",
-      "section_key": "Local",
+      "emoji": "🎌",
+      "title": "動畫情報",
+      "section_key": "Anime",
       "image_keywords": [
-        "taiwan",
-        "event",
-        "cinema",
-        "festival"
+        "anime",
+        "animation",
+        "3D",
+        "character",
+        "art"
       ],
       "forum_tags": [
-        "local"
+        "anime"
       ]
     },
     {
@@ -176,11 +186,11 @@
       "display": "📺 串流平台",
       "color": "0x9B59B6"
     },
-    "local": {
-      "env": "FORUM_TAG_MOVIE_LOCAL_ID",
+    "anime": {
+      "env": "FORUM_TAG_MOVIE_ANIME_ID",
       "default": "1234567894",
-      "display": "🤝 在地活動",
-      "color": "0x7F8C8D"
+      "display": "🎌 動畫情報",
+      "color": "0xFF6B6B"
     },
     "ai": {
       "env": "FORUM_TAG_MOVIE_AI_ID",
@@ -192,7 +202,7 @@
   "engine_route_keywords": {},
   "forum_tag_order": [
     "ai",
-    "local",
+    "anime",
     "streaming",
     "business",
     "movie",
@@ -211,8 +221,8 @@
     "📺": [
       "streaming"
     ],
-    "🤝": [
-      "local"
+    "🎌": [
+      "anime"
     ],
     "🌌": [
       "ai"
@@ -223,7 +233,7 @@
     "🎬": "MovieNews",
     "🎟️": "BoxOffice",
     "📺": "Streaming",
-    "🤝": "Local"
+    "🎌": "Anime"
   },
   "webhook_skip_emojis": [
     "✨"

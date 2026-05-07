@@ -43,7 +43,7 @@ def send_to_discord():
     # 2. 依照標題切割各段落（保留標題本身）
     # 格式：# 📅... 或 **📢/🎨/⚙️/🧱/✨/🎮/🇹🇼/💼/🌌 【...】**
     section_pattern = re.compile(
-        r'(?=# 📅|\*\*[📢🎨⚙️🧱✨🎮🇨🇳🇹🇼📍💼🤝🌌])',
+        r'(?=# 📅|\*\*[📢🎨⚙️🧱✨🎮🇨🇳🇹🇼📍💼🤝🌌🎬🎟️📺🎌])',
         re.UNICODE
     )
     raw_sections = section_pattern.split(full_text)
