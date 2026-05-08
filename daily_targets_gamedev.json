@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ea-boasts-record-year-thanks-to-battlefield-6-and-ea-sports-fc"
+      "https://www.gamedeveloper.com/business/mobile-dev-mindtail-raises-2m-fund-for-ai-powered-games"
     ],
-    "image_filename": "headline_20260507.png",
+    "image_filename": "headline_20260508.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,28 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/oceanhorn-3-charts-a-course-for-rpg-success-with-ue5",
-      "https://www.unrealengine.com/spotlights/crafting-stylized-digital-humans-on-daughter-of-the-inner-stars-with-metahuman-and-ue5"
-    ],
-    "image_filename": "engine_20260507.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/06/create-a-satisfying-animation-loop-with-geometry-proximity/",
-      "https://www.blendernation.com/2026/05/05/create-a-star-wars-robot-vacuum/",
-      "https://www.blendernation.com/2026/05/05/free-download-quick-erosion-filter/"
+      "https://80.lv/articles/new-add-on-for-metahuman-character-rig-creation-in-blender"
     ],
-    "image_filename": "model3d_20260507.png",
+    "image_filename": "model3d_20260508.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -50,9 +33,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/instamat-instalod-get-native-linux-support/"
+      "https://80.lv/articles/maxon-makes-autograph-free-for-all-users",
+      "https://80.lv/articles/check-out-this-unusual-moving-circuit-board-3d-material"
     ],
-    "image_filename": "ta_20260507.png",
+    "image_filename": "ta_20260508.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,20 +52,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/former-lucasarts-ubisoft-veteran-clint-hocking-founds-new-studio",
-      "https://www.gamedeveloper.com/business/eve-online-studio-ccp-games-turns-independent-and-rebrands-as-fenris-creations",
-      "https://www.gamedeveloper.com/business/union-president-says-saudi-buyout-of-ea-should-trigger-virtually-every-alarm-bell-",
-      "https://www.gamedeveloper.com/business/xbox-appoints-new-leaders-and-ditches-copilot-ai",
-      "https://www.gamedeveloper.com/business/valve-to-restock-steam-controller-after-it-sells-out-in-a-day",
-      "https://gnn.gamer.com.tw/detail.php?sn=304609",
-      "https://gnn.gamer.com.tw/detail.php?sn=304610",
-      "https://gnn.gamer.com.tw/detail.php?sn=304608",
-      "https://80.lv/articles/star-fox-returns-in-new-remake-for-switch-2",
-      "https://80.lv/articles/shovel-knight-dev-s-excellent-pixel-art-zelda-like-finally-has-a-release-date",
-      "https://80.lv/articles/one-of-the-most-influential-vr-games-ever-is-finally-getting-a-sequel",
-      "https://80.lv/articles/veteran-bioware-developers-are-behind-star-wars-fate-of-the-old-republic"
+      "https://www.gamedeveloper.com/business/capcom-s-pragmata-tops-2m-sales-within-first-month",
+      "https://www.gamedeveloper.com/business/atari-acquires-the-rights-to-five-wizardry-titles",
+      "https://gnn.gamer.com.tw/detail.php?sn=304668"
     ],
-    "image_filename": "globalgames_20260507.png",
+    "image_filename": "globalgames_20260508.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -93,9 +68,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/270398/"
+      "https://www.gamedeveloper.com/business/griffin-gaming-partners-launches-100m-fund-to-support-indie-developers",
+      "https://www.gamedeveloper.com/business/gearbox-studio-quebec-founders-start-new-studio",
+      "https://www.gamedeveloper.com/marketing/-not-for-profit-biz-models-can-make-for-better-showcases-say-triple-i-initiative-organizers"
     ],
-    "image_filename": "indie_20260507.png",
+    "image_filename": "indie_20260508.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -107,11 +84,13 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304613",
-      "https://gnn.gamer.com.tw/detail.php?sn=304612",
-      "https://gnn.gamer.com.tw/detail.php?sn=304611"
+      "https://gnn.gamer.com.tw/detail.php?sn=304671",
+      "https://gnn.gamer.com.tw/detail.php?sn=304670",
+      "https://gnn.gamer.com.tw/detail.php?sn=304669",
+      "https://gnn.gamer.com.tw/detail.php?sn=304667",
+      "https://gnn.gamer.com.tw/detail.php?sn=304672"
     ],
-    "image_filename": "local_20260507.png",
+    "image_filename": "local_20260508.png",
     "image_keywords": [
       "event",
       "meetup",
