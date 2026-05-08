@@ -61,7 +61,9 @@
         "cinema",
         "headline",
         "poster",
-        "trailer"
+        "trailer",
+        "anime",
+        "animation"
       ],
       "forum_tags": [
         "headline"
@@ -69,38 +71,34 @@
     },
     {
       "emoji": "🎬",
-      "title": "電影快訊",
-      "section_key": "MovieNews",
+      "title": "新片與製作動態",
+      "section_key": "Production",
       "image_keywords": [
         "film",
         "production",
         "cast",
         "director",
-        "cinema"
+        "cinema",
+        "anime",
+        "animation",
+        "character"
       ],
       "forum_tags": [
-        "movie"
+        "production"
       ],
       "sub_sections": [
         {
-          "pattern": "\\*\\*漫威/DC",
-          "display": "🦸‍♂️ 超級英雄",
+          "pattern": "\\*\\*🎥 電影",
+          "display": "🎥 電影",
           "tags": [
-            "movie"
+            "production"
           ]
         },
         {
-          "pattern": "\\*\\*好萊塢",
-          "display": "🌟 好萊塢大片",
+          "pattern": "\\*\\*🎌 動畫",
+          "display": "🎌 動畫",
           "tags": [
-            "movie"
-          ]
-        },
-        {
-          "pattern": "\\*\\*獨立",
-          "display": "🎭 獨立電影",
-          "tags": [
-            "movie"
+            "production"
           ]
         }
       ]
@@ -117,36 +115,55 @@
       ],
       "forum_tags": [
         "business"
+      ],
+      "sub_sections": [
+        {
+          "pattern": "\\*\\*🎥 電影",
+          "display": "🎥 電影票房",
+          "tags": [
+            "business"
+          ]
+        },
+        {
+          "pattern": "\\*\\*🎌 動畫",
+          "display": "🎌 動畫市場",
+          "tags": [
+            "business"
+          ]
+        }
       ]
     },
     {
       "emoji": "📺",
-      "title": "串流平台動態",
+      "title": "串流與平台動態",
       "section_key": "Streaming",
       "image_keywords": [
         "netflix",
         "disney+",
         "hbo",
         "streaming",
-        "series"
+        "series",
+        "anime",
+        "crunchyroll"
       ],
       "forum_tags": [
         "streaming"
-      ]
-    },
-    {
-      "emoji": "🎌",
-      "title": "動畫情報",
-      "section_key": "Anime",
-      "image_keywords": [
-        "anime",
-        "animation",
-        "3D",
-        "character",
-        "art"
       ],
-      "forum_tags": [
-        "anime"
+      "sub_sections": [
+        {
+          "pattern": "\\*\\*🎥 影集",
+          "display": "🎥 影集與串流電影",
+          "tags": [
+            "streaming"
+          ]
+        },
+        {
+          "pattern": "\\*\\*🎌 動畫",
+          "display": "🎌 動畫影集",
+          "tags": [
+            "streaming"
+          ]
+        }
       ]
     },
     {
@@ -168,10 +185,10 @@
       "display": "🔥 頭條",
       "color": "0xE67E22"
     },
-    "movie": {
-      "env": "FORUM_TAG_MOVIE_NEWS_ID",
+    "production": {
+      "env": "FORUM_TAG_MOVIE_PRODUCTION_ID",
       "default": "1234567891",
-      "display": "🎬 電影快訊",
+      "display": "🎬 新片動態",
       "color": "0x2ECC71"
     },
     "business": {
@@ -186,12 +203,6 @@
       "display": "📺 串流平台",
       "color": "0x9B59B6"
     },
-    "anime": {
-      "env": "FORUM_TAG_MOVIE_ANIME_ID",
-      "default": "1234567894",
-      "display": "🎌 動畫情報",
-      "color": "0xFF6B6B"
-    },
     "ai": {
       "env": "FORUM_TAG_MOVIE_AI_ID",
       "default": "1234567895",
@@ -202,10 +213,9 @@
   "engine_route_keywords": {},
   "forum_tag_order": [
     "ai",
-    "anime",
     "streaming",
     "business",
-    "movie",
+    "production",
     "headline"
   ],
   "section_tag_map": {
@@ -213,7 +223,7 @@
       "headline"
     ],
     "🎬": [
-      "movie"
+      "production"
     ],
     "🎟️": [
       "business"
@@ -221,19 +231,15 @@
     "📺": [
       "streaming"
     ],
-    "🎌": [
-      "anime"
-    ],
     "🌌": [
       "ai"
     ]
   },
   "section_img_key": {
     "📢": "Headline",
-    "🎬": "MovieNews",
+    "🎬": "Production",
     "🎟️": "BoxOffice",
-    "📺": "Streaming",
-    "🎌": "Anime"
+    "📺": "Streaming"
   },
   "webhook_skip_emojis": [
     "✨"
