@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/mobile-dev-mindtail-raises-2m-fund-for-ai-powered-games"
+      "https://www.gamedeveloper.com/business/playstation-sees-ai-as-a-powerful-tool-teams-including-naughty-dog-san-diego-studio-already-using-it"
     ],
-    "image_filename": "headline_20260508.png",
+    "image_filename": "headline_20260509.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,25 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://80.lv/articles/unity-based-tool-for-jrpg-game-development"
+    ],
+    "image_filename": "engine_20260509.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/new-add-on-for-metahuman-character-rig-creation-in-blender"
+      "https://www.blendernation.com/2026/05/08/citigen-2026-released/"
     ],
-    "image_filename": "model3d_20260508.png",
+    "image_filename": "model3d_20260509.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,10 +47,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/maxon-makes-autograph-free-for-all-users",
-      "https://80.lv/articles/check-out-this-unusual-moving-circuit-board-3d-material"
+      "https://80.lv/articles/eve-online-studio-goes-indie-in-new-era-rebrand-with-google-deepmind-ai-partnership"
     ],
-    "image_filename": "ta_20260508.png",
+    "image_filename": "ta_20260509.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -52,11 +65,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/capcom-s-pragmata-tops-2m-sales-within-first-month",
-      "https://www.gamedeveloper.com/business/atari-acquires-the-rights-to-five-wizardry-titles",
-      "https://gnn.gamer.com.tw/detail.php?sn=304668"
+      "https://www.gamedeveloper.com/business/playstation-5-hardware-sales-down-amid-price-hikes-and-memory-shortage"
     ],
-    "image_filename": "globalgames_20260508.png",
+    "image_filename": "globalgames_20260509.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -68,11 +79,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/griffin-gaming-partners-launches-100m-fund-to-support-indie-developers",
-      "https://www.gamedeveloper.com/business/gearbox-studio-quebec-founders-start-new-studio",
-      "https://www.gamedeveloper.com/marketing/-not-for-profit-biz-models-can-make-for-better-showcases-say-triple-i-initiative-organizers"
+      "https://gnn.gamer.com.tw/detail.php?sn=304742"
     ],
-    "image_filename": "indie_20260508.png",
+    "image_filename": "indie_20260509.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -84,13 +93,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304671",
-      "https://gnn.gamer.com.tw/detail.php?sn=304670",
-      "https://gnn.gamer.com.tw/detail.php?sn=304669",
-      "https://gnn.gamer.com.tw/detail.php?sn=304667",
-      "https://gnn.gamer.com.tw/detail.php?sn=304672"
+      "https://www.blendernation.com/2026/05/08/blender-jobs-for-may-8-2026/"
     ],
-    "image_filename": "local_20260508.png",
+    "image_filename": "local_20260509.png",
     "image_keywords": [
       "event",
       "meetup",

@@ -2,44 +2,56 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/05/golden-globes-ai-rules-submissions-1236887169/"
+      "https://deadline.com/2026/05/hbo-max-paramount-plus-combo-dominate-unscripted-market-1236888254/"
     ],
-    "image_filename": "headline_20260508.png",
+    "image_filename": "headline_20260509.png",
     "image_keywords": [
       "movie",
       "cinema",
       "headline",
       "poster",
-      "trailer"
+      "trailer",
+      "anime",
+      "animation"
     ]
   },
   {
-    "section_name": "MovieNews",
+    "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/05/meet-the-beatles-cast-bbc-zdf-hamburg-days-1236886520/",
-      "https://deadline.com/2026/05/remarkably-bright-creatures-review-sally-field-1236882258/",
-      "https://variety.com/2026/film/news/paul-mescal-jessie-buckley-zeitlin-hold-on-to-your-angels-1236741030/",
-      "https://variety.com/2026/film/news/mark-ruffalo-paramount-warner-bros-blacklist-merger-1236740819/",
-      "https://www.firstshowing.net/2026/cinema-history-revisited-in-minions-monsters-movie-final-trailer/",
-      "https://deadline.com/2026/05/2026-fipresci-documentary-grand-prix-fiume-o-morte-1236887160/",
-      "https://www.firstshowing.net/2026/cookie-queens-doc-trailer-following-girl-scout-cookies-sellers/",
-      "https://www.firstshowing.net/2026/simone-ashley-in-mysterious-thriller-this-tempting-madness-trailer/"
+      "https://variety.com/2026/film/news/shawn-levy-sci-fi-drama-somewhere-out-there-netflix-1236742024/",
+      "https://deadline.com/2026/05/renee-zellweger-film-black-bear-artists-equity-1236888644/",
+      "https://deadline.com/2026/05/indie-films-opening-linda-perry-let-it-die-here-blue-film-1236888638/",
+      "https://www.firstshowing.net/2026/indie-horror-film-camp-official-trailer-about-witchcraft-friendship/",
+      "https://www.firstshowing.net/2026/holocaust-boxing-film-the-champion-trailer-starring-piotr-witkowski/",
+      "https://www.firstshowing.net/2026/first-trailer-for-bruno-dumonts-film-red-rocks-premiering-in-cannes/",
+      "https://variety.com/2026/film/markets-festivals/cannes-renee-zellweger-sissy-spacek-a-woman-in-the-sun-1236741991/",
+      "https://variety.com/2026/film/news/anonymous-content-darren-walker-cannes-parallel-tales-1236741811/",
+      "https://www.firstshowing.net/2026/watch-pixar-artists-extra-cute-animated-short-film-mothers-nature/"
     ],
-    "image_filename": "movienews_20260508.png",
+    "image_filename": "production_20260509.png",
     "image_keywords": [
       "film",
       "production",
       "cast",
       "director",
-      "cinema"
+      "cinema",
+      "anime",
+      "animation",
+      "character"
     ]
   },
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-05-08/"
+      "https://deadline.com/2026/05/box-office-mortal-kombat-ii-devil-wears-prada-2-1236887876/",
+      "https://variety.com/2026/film/news/devil-wears-prada-2-salaries-meryl-streep-hathaway-pay-1236741185/",
+      "https://deadline.com/2026/05/tv-upfronts-2026-schedule-what-to-expect-1236882246/",
+      "https://deadline.com/2026/05/david-attenborough-100-birthday-tributes-king-charles-1236887641/",
+      "https://variety.com/lists/mortal-kombat-2-cast-dies-video-game-characters/",
+      "https://www.boxofficemojo.com/date/2026-05-09/",
+      "https://www.cartoonbrew.com/business/sony-earnings-crunchyroll-pixomondo-bungie-260682.html"
     ],
-    "image_filename": "boxoffice_20260508.png",
+    "image_filename": "boxoffice_20260509.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -50,39 +62,17 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://www.firstshowing.net/2026/sam-worthington-must-break-out-of-prison-in-i-will-find-you-teaser/",
-      "https://www.firstshowing.net/2026/fun-trailer-for-comedy-series-alice-and-steve-with-jemaine-nicola/"
+      "https://www.firstshowing.net/2026/watch-kirbys-saving-grace-music-video-for-the-spider-noir-series/"
     ],
-    "image_filename": "streaming_20260508.png",
+    "image_filename": "streaming_20260509.png",
     "image_keywords": [
       "netflix",
       "disney+",
       "hbo",
       "streaming",
-      "series"
-    ]
-  },
-  {
-    "section_name": "Anime",
-    "source_urls": [
-      "https://www.cartoonbrew.com/series/know-your-rights-university-aclu-brandon-lake-260638.html",
-      "https://www.cartoonbrew.com/animators/gkids-tekkonkinkreet-4k-theatrical-release-blue-ray-260660.html",
-      "https://www.cartoonbrew.com/awards/studio-ghibli-spain-princess-of-asturias-award-260664.html",
-      "https://www.cartoonbrew.com/feature-film/gkids-another-world-theatrical-release-260674.html",
-      "https://www.firstshowing.net/2026/new-us-trailer-for-dark-fairytale-another-world-hk-animated-film/",
-      "https://www.cartoonbrew.com/animators/netflix-annecy-ray-gunn-ghostbusters-steps-alley-cats-260649.html",
-      "https://anilist.co/anime/189046",
-      "https://anilist.co/anime/180745",
-      "https://anilist.co/anime/182205",
-      "https://anilist.co/anime/195600"
-    ],
-    "image_filename": "anime_20260508.png",
-    "image_keywords": [
+      "series",
       "anime",
-      "animation",
-      "3D",
-      "character",
-      "art"
+      "crunchyroll"
     ]
   }
 ]
