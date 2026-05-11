@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/05/matt-reeves-test-shots-the-batman-part-ii-winter-setting-1236888981/"
+      "https://deadline.com/2026/05/wga-west-staff-union-strike-ends-members-ratify-first-deal-1236889747/"
     ],
-    "image_filename": "headline_20260510.png",
+    "image_filename": "headline_20260511.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,11 +18,12 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/05/nicolas-winding-refn-neon-demon-inspired-neon-name-1236889031/",
-      "https://www.firstshowing.net/2026/adelaide-ozploitation-horror-film-penny-lane-is-dead-official-trailer/",
-      "https://variety.com/2026/film/news/werner-herzog-bucking-fastard-turns-down-cannes-invite-1236741890/"
+      "https://variety.com/2026/film/news/princess-diaries-3-director-returns-crazy-rich-asians-sequel-1236744092/",
+      "https://deadline.com/2026/05/indie-film-box-office-silent-friend-blue-film-1236889735/",
+      "https://www.firstshowing.net/2026/first-trailer-for-nostalgia-for-the-future-doc-examining-chris-marker/",
+      "https://www.firstshowing.net/2026/watch-ozu-in-color-video-essay-about-yasujiro-ozus-use-of-color/"
     ],
-    "image_filename": "production_20260510.png",
+    "image_filename": "production_20260511.png",
     "image_keywords": [
       "film",
       "production",
@@ -37,35 +38,19 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://variety.com/2026/film/box-office/box-office-mortal-kombat-2-the-devil-wears-prada-2-1236742341/",
-      "https://variety.com/2026/tv/news/television-academy-post-production-tax-credit-nick-schultz-1236742365/",
-      "https://www.boxofficemojo.com/date/2026-05-10/"
+      "https://variety.com/2026/film/box-office/box-office-devil-wears-prada-2-michael-milestones-1236743981/",
+      "https://variety.com/2026/film/box-office/devil-wears-prada-2-box-office-first-place-mortal-kombat-2-opening-1236743920/",
+      "https://variety.com/2026/film/news/dga-amptp-negotiations-jobs-ai-healthcare-1236741983/",
+      "https://deadline.com/2026/05/2026-bafta-tv-awards-winners-list-1236889392/",
+      "https://deadline.com/2026/05/gaza-doctors-under-attack-team-attack-bbc-bafta-1236889644/",
+      "https://www.boxofficemojo.com/date/2026-05-11/"
     ],
-    "image_filename": "boxoffice_20260510.png",
+    "image_filename": "boxoffice_20260511.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
-    ]
-  },
-  {
-    "section_name": "Streaming",
-    "source_urls": [
-      "https://deadline.com/2026/05/kelly-reilly-wants-dutton-ranch-marshals-crossover-1236888998/",
-      "https://deadline.com/2026/05/saturday-night-live-uk-nigel-farage-cold-open-donald-trump-1236889056/",
-      "https://deadline.com/2026/05/eric-kripke-reacts-the-boys-predicting-trump-gold-statue-1236889017/",
-      "https://deadline.com/2026/05/riley-green-the-voice-season-30-1236888509/"
-    ],
-    "image_filename": "streaming_20260510.png",
-    "image_keywords": [
-      "netflix",
-      "disney+",
-      "hbo",
-      "streaming",
-      "series",
-      "anime",
-      "crunchyroll"
     ]
   }
 ]
