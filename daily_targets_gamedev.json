@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304809"
+      "https://www.gamedeveloper.com/business/metroid-dread-developer-mercurysteam-conducts-layoffs"
     ],
-    "image_filename": "headline_20260512.png",
+    "image_filename": "headline_20260513.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,26 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://forums.unrealengine.com/t/unreal-engine-5-8-preview/2721597",
+      "https://unity.com/blog/attain-partnership-measuring-mobile-gaming-sales-outcomes"
+    ],
+    "image_filename": "engine_20260513.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/11/new-cbaileyfilm-tutorial-create-an-alien-landscape-dust-effect/"
+      "https://www.blendernation.com/2026/05/12/build-your-first-blender-add-on-a-complete-beginner-walkthrough/"
     ],
-    "image_filename": "model3d_20260512.png",
+    "image_filename": "model3d_20260513.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,12 +48,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/beastlink-devs-detail-the-tech-behind-its-massive-kaiju-destruction-with-millions-of-dynamic-pieces",
-      "https://80.lv/articles/inside-the-scrapped-version-of-uncharted-4-led-by-amy-hennig",
-      "https://80.lv/articles/character-artist-shares-how-overwatch-s-vendetta-was-sculpted-and-textured",
-      "https://80.lv/articles/take-a-closer-look-at-how-materials-for-diablo-iv-lord-of-hatred-were-made"
+      "https://80.lv/articles/unreal-engine-generalist-reimagines-motorsport-across-alien-worlds-where-gravity-shifts",
+      "https://80.lv/articles/rl-based-retargeting-method-for-transferring-human-motion-to-robots",
+      "https://80.lv/articles/blender-tool-for-real-time-procedural-surface-fracturing"
     ],
-    "image_filename": "ta_20260512.png",
+    "image_filename": "ta_20260513.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,13 +68,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/stupendium-softworks-launched-new-studio-from-alex-oxspring-and-the-stupendium",
-      "https://www.gamedeveloper.com/business/double-fine-petitions-to-unionize",
-      "https://gnn.gamer.com.tw/detail.php?sn=304810",
-      "https://gnn.gamer.com.tw/detail.php?sn=304807",
-      "https://80.lv/articles/esa-opposes-california-bill-aimed-at-live-service-game-preservation"
+      "https://www.gamedeveloper.com/business/sega-is-lowering-the-priority-of-games-as-a-service-titles",
+      "https://www.gamedeveloper.com/business/microsoft-israel-s-general-manager-leaves-amid-alleged-unethical-use-of-azure",
+      "https://www.gamedeveloper.com/programming/video-codecs-are-a-nightmare-for-game-developers-but-there-s-no-solution-in-sight"
     ],
-    "image_filename": "globalgames_20260512.png",
+    "image_filename": "globalgames_20260513.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -72,9 +84,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304808"
+      "https://www.gamedeveloper.com/business/indika-developer-raises-5m-in-funding-for-next-project",
+      "https://80.lv/articles/solo-developer-marks-two-years-of-progress-on-3d-platformer-reytrieve-odyssey"
     ],
-    "image_filename": "indie_20260512.png",
+    "image_filename": "indie_20260513.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -86,10 +99,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304811",
-      "https://gnn.gamer.com.tw/detail.php?sn=304806"
+      "https://gnn.gamer.com.tw/detail.php?sn=304861",
+      "https://gnn.gamer.com.tw/detail.php?sn=304860",
+      "https://gnn.gamer.com.tw/detail.php?sn=304859",
+      "https://gnn.gamer.com.tw/detail.php?sn=304858",
+      "https://gnn.gamer.com.tw/detail.php?sn=304857",
+      "https://gnn.gamer.com.tw/detail.php?sn=304856"
     ],
-    "image_filename": "local_20260512.png",
+    "image_filename": "local_20260513.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -100,13 +117,13 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304809",
-      "https://www.gamedeveloper.com/business/stupendium-softworks-launched-new-studio-from-alex-oxspring-and-the-stupendium",
-      "https://www.gamedeveloper.com/business/double-fine-petitions-to-unionize",
-      "https://80.lv/articles/beastlink-devs-detail-the-tech-behind-its-massive-kaiju-destruction-with-millions-of-dynamic-pieces",
-      "https://80.lv/articles/character-artist-shares-how-overwatch-s-vendetta-was-sculpted-and-textured"
+      "https://forums.unrealengine.com/t/unreal-engine-5-8-preview/2721597",
+      "https://unity.com/blog/attain-partnership-measuring-mobile-gaming-sales-outcomes",
+      "https://www.gamedeveloper.com/business/sega-is-lowering-the-priority-of-games-as-a-service-titles",
+      "https://www.gamedeveloper.com/business/metroid-dread-developer-mercurysteam-conducts-layoffs",
+      "https://www.gamedeveloper.com/business/indika-developer-raises-5m-in-funding-for-next-project"
     ],
-    "image_filename": "producer_20260512.png",
+    "image_filename": "producer_20260513.png",
     "image_keywords": [
       "marketing",
       "development",
