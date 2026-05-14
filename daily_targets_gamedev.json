@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/metroid-dread-developer-mercurysteam-conducts-layoffs"
+      "https://gnn.gamer.com.tw/detail.php?sn=304922"
     ],
-    "image_filename": "headline_20260513.png",
+    "image_filename": "headline_20260514.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://forums.unrealengine.com/t/unreal-engine-5-8-preview/2721597",
-      "https://unity.com/blog/attain-partnership-measuring-mobile-gaming-sales-outcomes"
+      "https://forums.unrealengine.com/t/metahuman-5-8-preview-released/2721648",
+      "https://unity.com/blog/unity-for-humanity-2026-winner-announcement"
     ],
-    "image_filename": "engine_20260513.png",
+    "image_filename": "engine_20260514.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,9 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/12/build-your-first-blender-add-on-a-complete-beginner-walkthrough/"
+      "https://www.blendernation.com/2026/05/13/blender-developers-meeting-notes-4-may-2026/",
+      "https://80.lv/articles/free-public-beta-tool-for-3d-mesh-cache-viewing/"
     ],
-    "image_filename": "model3d_20260513.png",
+    "image_filename": "model3d_20260514.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,11 +49,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/unreal-engine-generalist-reimagines-motorsport-across-alien-worlds-where-gravity-shifts",
-      "https://80.lv/articles/rl-based-retargeting-method-for-transferring-human-motion-to-robots",
-      "https://80.lv/articles/blender-tool-for-real-time-procedural-surface-fracturing"
+      "https://80.lv/articles/creating-stylized-hand-painted-3d-models-of-the-artemis-ll-spacecraft"
     ],
-    "image_filename": "ta_20260513.png",
+    "image_filename": "ta_20260514.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,11 +67,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/sega-is-lowering-the-priority-of-games-as-a-service-titles",
-      "https://www.gamedeveloper.com/business/microsoft-israel-s-general-manager-leaves-amid-alleged-unethical-use-of-azure",
-      "https://www.gamedeveloper.com/programming/video-codecs-are-a-nightmare-for-game-developers-but-there-s-no-solution-in-sight"
+      "https://80.lv/articles/demand-is-as-strong-as-ever-sony-vp-is-super-optimistic-about-gaming-s-future",
+      "https://gnn.gamer.com.tw/detail.php?sn=304921",
+      "https://gnn.gamer.com.tw/detail.php?sn=304920",
+      "https://gnn.gamer.com.tw/detail.php?sn=304918"
     ],
-    "image_filename": "globalgames_20260513.png",
+    "image_filename": "globalgames_20260514.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,10 +84,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/indika-developer-raises-5m-in-funding-for-next-project",
-      "https://80.lv/articles/solo-developer-marks-two-years-of-progress-on-3d-platformer-reytrieve-odyssey"
+      "https://www.gamedeveloper.com/business/time-launches-its-own-nyt-games-equivalent",
+      "https://80.lv/articles/haunted-chocolatier-will-be-larger-in-scale-than-stardew-valley",
+      "https://www.gamedeveloper.com/business/last-flag-dev-night-street-games-is-laying-off-staff",
+      "https://gnn.gamer.com.tw/detail.php?sn=304919"
     ],
-    "image_filename": "indie_20260513.png",
+    "image_filename": "indie_20260514.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -99,14 +101,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=304861",
-      "https://gnn.gamer.com.tw/detail.php?sn=304860",
-      "https://gnn.gamer.com.tw/detail.php?sn=304859",
-      "https://gnn.gamer.com.tw/detail.php?sn=304858",
-      "https://gnn.gamer.com.tw/detail.php?sn=304857",
-      "https://gnn.gamer.com.tw/detail.php?sn=304856"
+      "https://gnn.gamer.com.tw/detail.php?sn=304917"
     ],
-    "image_filename": "local_20260513.png",
+    "image_filename": "local_20260514.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -117,13 +114,13 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://forums.unrealengine.com/t/unreal-engine-5-8-preview/2721597",
-      "https://unity.com/blog/attain-partnership-measuring-mobile-gaming-sales-outcomes",
-      "https://www.gamedeveloper.com/business/sega-is-lowering-the-priority-of-games-as-a-service-titles",
-      "https://www.gamedeveloper.com/business/metroid-dread-developer-mercurysteam-conducts-layoffs",
-      "https://www.gamedeveloper.com/business/indika-developer-raises-5m-in-funding-for-next-project"
+      "https://forums.unrealengine.com/t/metahuman-5-8-preview-released/2721648",
+      "https://www.gamedeveloper.com/business/last-flag-dev-night-street-games-is-laying-off-staff",
+      "https://80.lv/articles/haunted-chocolatier-will-be-larger-in-scale-than-stardew-valley",
+      "https://gnn.gamer.com.tw/detail.php?sn=304922",
+      "https://gnn.gamer.com.tw/detail.php?sn=304921"
     ],
-    "image_filename": "producer_20260513.png",
+    "image_filename": "producer_20260514.png",
     "image_keywords": [
       "marketing",
       "development",
