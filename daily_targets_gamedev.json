@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305002"
+      "https://www.gamedeveloper.com/business/subnautica-2-has-surpassed-2-million-sales-in-12-hours"
     ],
-    "image_filename": "headline_20260515.png",
+    "image_filename": "headline_20260516.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,12 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/how-to-model-and-texture-a-dark-fantasy-real-time-character-zbrush-maya-and-substance-3d",
-      "https://80.lv/articles/grasp-basics-of-maya-model-your-own-robot-with-think-tank-s-free-course"
+      "https://www.blendernation.com/2026/05/15/best-of-blender-artists-2026-20/",
+      "https://www.blendernation.com/2026/05/15/blender-jobs-for-may-15-2026/",
+      "https://www.blendernation.com/2026/05/15/blender-secrets-spring-sale/",
+      "https://www.blendernation.com/2026/05/15/clock-face-generator-blender-extension/"
     ],
-    "image_filename": "model3d_20260515.png",
+    "image_filename": "model3d_20260516.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,9 +36,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/get-25-ultra-realistic-gaussian-splat-clouds-in-one-pack"
+      "https://80.lv/articles/this-spider-gwen-3d-model-almost-looks-like-2d-digital-artwork",
+      "https://80.lv/articles/this-game-ready-model-of-robert-pattinson-s-batman-is-insanely-detailed"
     ],
-    "image_filename": "ta_20260515.png",
+    "image_filename": "ta_20260516.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -52,14 +55,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/tekken-veteran-katsuhiro-harada-to-lead-new-snk-subsidiary",
-      "https://www.gamedeveloper.com/business/report-wwe-2k26-dev-visual-concepts-is-laying-off-staff",
-      "https://www.gamedeveloper.com/business/report-amazon-cancels-the-lord-of-the-rings-mmo",
-      "https://www.gamedeveloper.com/business/nintendo-president-hardware-profitability-would-suffer-significantly-without-switch-2-price-increase",
-      "https://www.gamedeveloper.com/business/-your-proposal-is-neither-credible-nor-attractive-ebay-rejects-gamestop-takeover-bid",
-      "https://gnn.gamer.com.tw/detail.php?sn=304999"
+      "https://www.gamedeveloper.com/production/stories-from-making-marvel-rivals",
+      "https://www.gamedeveloper.com/business/politicians-accuse-rockstar-of-obstructing-legal-process-ebay-rebuffs-gamestop-and-video-game-hardware-screams-now-patch-notes-52",
+      "https://gnn.gamer.com.tw/detail.php?sn=305063",
+      "https://gnn.gamer.com.tw/detail.php?sn=305061",
+      "https://gnn.gamer.com.tw/detail.php?sn=305060",
+      "https://80.lv/articles/ps5-will-soon-start-displaying-player-counts-for-the-most-popular-games/"
     ],
-    "image_filename": "globalgames_20260515.png",
+    "image_filename": "globalgames_20260516.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -71,30 +74,18 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305004",
-      "https://gnn.gamer.com.tw/detail.php?sn=305003",
-      "https://gnn.gamer.com.tw/detail.php?sn=305000"
+      "https://gnn.gamer.com.tw/detail.php?sn=305065",
+      "https://gnn.gamer.com.tw/detail.php?sn=305064",
+      "https://gnn.gamer.com.tw/detail.php?sn=305062",
+      "https://80.lv/articles/how-this-indie-dev-kept-their-game-on-the-front-page-of-itch-for-an-entire-month/"
     ],
-    "image_filename": "indie_20260515.png",
+    "image_filename": "indie_20260516.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
-    ]
-  },
-  {
-    "section_name": "Local",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/manchester-games-network-launches-to-put-the-region-back-on-the-games-map-"
-    ],
-    "image_filename": "local_20260515.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
     ]
   }
 ]
