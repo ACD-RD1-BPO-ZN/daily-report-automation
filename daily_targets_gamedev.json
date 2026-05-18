@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305066"
+      "https://gnn.gamer.com.tw/detail.php?sn=305068"
     ],
-    "image_filename": "headline_20260517.png",
+    "image_filename": "headline_20260518.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,31 +14,15 @@
     ]
   },
   {
-    "section_name": "Model3D",
-    "source_urls": [
-      "https://www.blendernation.com/2026/05/16/clean-up-your-blender-data-with-scene-auditor-pro/",
-      "https://www.blendernation.com/2026/05/16/animate-a-black-hole-full-class/"
-    ],
-    "image_filename": "model3d_20260517.png",
-    "image_keywords": [
-      "3d",
-      "modeling",
-      "sculpt",
-      "topology",
-      "blender",
-      "maya",
-      "zbrush",
-      "substance"
-    ]
-  },
-  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/check-out-this-astonishing-and-impressive-3d-environment-of-a-sacred-tower/",
-      "https://80.lv/articles/this-spider-gwen-3d-model-almost-looks-like-2d-digital-artwork/",
-      "https://80.lv/articles/this-game-ready-model-of-robert-pattinson-s-batman-is-insanely-detailed/"
+      "https://80.lv/articles/check-out-this-succubus-warlock-class-cosmetic-made-for-diablo-iv",
+      "https://80.lv/articles/livin-the-cream-is-a-new-simulator-game-that-will-make-you-scream-for-ice-cream",
+      "https://80.lv/articles/check-out-this-astonishing-and-impressive-3d-environment-of-a-sacred-tower",
+      "https://80.lv/articles/this-spider-gwen-3d-model-almost-looks-like-2d-digital-artwork",
+      "https://80.lv/articles/this-game-ready-model-of-robert-pattinson-s-batman-is-insanely-detailed"
     ],
-    "image_filename": "ta_20260517.png",
+    "image_filename": "ta_20260518.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -52,41 +36,11 @@
     ]
   },
   {
-    "section_name": "Indie",
-    "source_urls": [
-      "https://80.lv/articles/how-this-indie-dev-kept-their-game-on-the-front-page-of-itch-for-an-entire-month/",
-      "https://80.lv/articles/livin-the-cream-is-a-new-simulator-game-that-will-make-you-scream-for-ice-cream"
-    ],
-    "image_filename": "indie_20260517.png",
-    "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
-    ]
-  },
-  {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305067"
-    ],
-    "image_filename": "local_20260517.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305066",
-      "https://www.blendernation.com/2026/05/16/clean-up-your-blender-data-with-scene-auditor-pro/",
-      "https://80.lv/articles/how-this-indie-dev-kept-their-game-on-the-front-page-of-itch-for-an-entire-month/"
+      "https://gnn.gamer.com.tw/detail.php?sn=305068"
     ],
-    "image_filename": "producer_20260517.png",
+    "image_filename": "producer_20260518.png",
     "image_keywords": [
       "marketing",
       "development",
