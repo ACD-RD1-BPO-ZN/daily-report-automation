@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/05/cannes-hope-movie-standing-ovation-1236913780/"
+      "https://deadline.com/2026/05/nicolas-winding-refns-her-private-hell-cannes-standing-ovation-1236914843/"
     ],
-    "image_filename": "headline_20260518.png",
+    "image_filename": "headline_20260519.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,14 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://variety.com/2026/film/reviews/hope-review-na-hong-jin-1236750496/",
-      "https://variety.com/2026/film/reviews/sheep-in-the-box-review-hirokazu-kore-eda-1236751690/",
-      "https://www.firstshowing.net/2026/cannes-2026-flesh-and-fuel-this-gay-trucker-romance-is-a-delight/",
-      "https://variety.com/2026/film/reviews/a-girls-story-review-1236751784/",
-      "https://variety.com/2026/film/reviews/another-day-review-1236751639/",
-      "https://deadline.com/2026/05/indie-film-box-office-new-mobile-suit-gundam-hathaway-anime-1236913679/"
+      "https://variety.com/2026/film/news/nicolas-refn-her-private-hell-cannes-charles-melton-1236739274/",
+      "https://www.firstshowing.net/2026/crazy-epic-teaser-for-na-hong-jins-hope-sci-fi-alien-action-film/",
+      "https://variety.com/2026/film/news/film-news-in-brief-may-18-2026-1236750364/",
+      "https://www.firstshowing.net/2026/teaser-for-shoot-the-people-doc-about-photographer-misan-harriman/",
+      "https://www.cartoonbrew.com/distribution/transformers-movie-4k-theatrical-re-release-260992.html",
+      "https://www.cartoonbrew.com/interviews/whisper-of-the-heart-cinematographer-atsushi-okui-interview-260963.html",
+      "https://www.cartoonbrew.com/distribution/light-pillar-us-theatrical-greenwich-entertainment-260957.html",
+      "https://www.cartoonbrew.com/feature-film/jim-queen-teaser-cannes-premiere-260945.html"
     ],
-    "image_filename": "production_20260518.png",
+    "image_filename": "production_20260519.png",
     "image_keywords": [
       "film",
       "production",
@@ -40,10 +42,10 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-05-18/",
-      "https://deadline.com/2026/05/maxime-saada-canal-plus-signatories-boycott-petition-1236913758/"
+      "https://variety.com/2026/film/news/michael-box-office-mandalorian-and-grogu-summer-movies-1236752971/",
+      "https://www.boxofficemojo.com/date/2026-05-19/"
     ],
-    "image_filename": "boxoffice_20260518.png",
+    "image_filename": "boxoffice_20260519.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -54,10 +56,15 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/05/julianne-hough-bruno-tonioli-dwts-early-days-longevity-1236913952/",
-      "https://deadline.com/2026/05/bob-odenkirk-reflects-on-heart-attack-better-call-saul-set-1236913835/"
+      "https://deadline.com/2026/05/josh-gad-signs-wme-1236915156/",
+      "https://deadline.com/feature/boys-of-tommen-news-updates-adaptation-prime-video-1236915108/",
+      "https://deadline.com/2026/05/the-rookie-season-8-finale-ratings-viewerhip-2025-26-season-1236915092/",
+      "https://variety.com/2026/tv/columns/colbert-host-wrap-party-final-late-show-taping-fired-festive-dress-code-1236753010/",
+      "https://variety.com/2026/film/news/netflix-buys-in-waves-cannes-1236753146/",
+      "https://deadline.com/2026/05/yokoso-scooby-doo-anime-series-tubi-matthew-lillard-1236915079/",
+      "https://www.cartoonbrew.com/series/mating-season-creators-interview-netflix-260974.html"
     ],
-    "image_filename": "streaming_20260518.png",
+    "image_filename": "streaming_20260519.png",
     "image_keywords": [
       "netflix",
       "disney+",
