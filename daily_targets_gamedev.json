@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://unity.com/blog/automating-3d-production-pipelines-with-unity"
+      "https://www.gamedeveloper.com/business/sony-is-being-sued-for-allegedly-benefiting-from-tariff-refunds"
     ],
-    "image_filename": "headline_20260519.png",
+    "image_filename": "headline_20260520.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,26 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://unity.com/blog/automating-3d-production-pipelines-with-unity"
-    ],
-    "image_filename": "engine_20260519.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/18/ball-bars-with-geometry-nodes/",
-      "https://www.blendernation.com/2026/05/18/from-caricature-to-mocap-building-a-john-wick-3d-character-for-blender-with-cc5/"
+      "https://www.blendernation.com/2026/05/19/pipes-joints-tutorial/"
     ],
-    "image_filename": "model3d_20260519.png",
+    "image_filename": "model3d_20260520.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,10 +33,13 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-heathen-reimagines-diablo-s-classic-dungeon-crawling-formula-in-first-person",
-      "https://80.lv/articles/tinybuild-ceo-on-15-years-of-indie-publishing-franchise-building"
+      "https://80.lv/articles/3d-character-artist-shares-his-work-for-the-kiriko-supid-character-skin-in-overwatch",
+      "https://80.lv/articles/voidmaw-games-on-the-development-journey-behind-cyberpunk-roguelite-katanaut",
+      "https://80.lv/articles/how-a-team-of-3d-artists-modeled-and-textured-an-architectural-structure",
+      "https://80.lv/articles/interview-how-project-shadowglass-creates-its-impossible-fully-3d-pixel-art-look",
+      "https://80.lv/articles/software-engineer-on-cross-platform-rendering-for-aaa-titles"
     ],
-    "image_filename": "ta_20260519.png",
+    "image_filename": "ta_20260520.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,12 +55,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/audio/obituary-veteran-voice-actor-tom-kane-passes-away-at-64",
-      "https://www.gamedeveloper.com/business/arc-raiders-tops-16-million-sales-and-could-be-heading-to-china",
-      "https://80.lv/articles/playstation-faces-class-action-lawsuit-over-ps5-tariff-refunds",
-      "https://80.lv/articles/no-more-playstation-games-on-pc-report-says"
+      "https://www.gamedeveloper.com/business/fortnite-returns-to-the-app-store-everywhere-except-australia",
+      "https://www.gamedeveloper.com/business/ci-games-and-epic-games-terminate-lords-of-the-fallen-ii-publishing-deal",
+      "https://www.gamedeveloper.com/business/sony-increasing-the-price-of-playstation-plus-for-new-customers",
+      "https://gnn.gamer.com.tw/detail.php?sn=305176",
+      "https://gnn.gamer.com.tw/detail.php?sn=305175",
+      "https://gnn.gamer.com.tw/detail.php?sn=305173"
     ],
-    "image_filename": "globalgames_20260519.png",
+    "image_filename": "globalgames_20260520.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,10 +74,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/the-nex-playground-is-launching-in-the-uk-and-ireland",
-      "https://80.lv/articles/steam-adds-new-tags-like-bullet-heaven-and-removes-others-like-nsfw"
+      "https://www.gamedeveloper.com/programming/what-happened-when-one-game-writer-tried-making-a-game-in-30-days-with-godot",
+      "https://gnn.gamer.com.tw/detail.php?sn=305172"
     ],
-    "image_filename": "indie_20260519.png",
+    "image_filename": "indie_20260520.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -99,36 +89,15 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305121",
-      "https://gnn.gamer.com.tw/detail.php?sn=305120",
-      "https://gnn.gamer.com.tw/detail.php?sn=305119",
-      "https://gnn.gamer.com.tw/detail.php?sn=305118",
-      "https://gnn.gamer.com.tw/detail.php?sn=305117",
-      "https://gnn.gamer.com.tw/detail.php?sn=305116"
+      "https://gnn.gamer.com.tw/detail.php?sn=305177",
+      "https://gnn.gamer.com.tw/detail.php?sn=305171"
     ],
-    "image_filename": "local_20260519.png",
+    "image_filename": "local_20260520.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://unity.com/blog/automating-3d-production-pipelines-with-unity",
-      "https://www.blendernation.com/2026/05/18/ball-bars-with-geometry-nodes/",
-      "https://www.blendernation.com/2026/05/18/from-caricature-to-mocap-building-a-john-wick-3d-character-for-blender-with-cc5/",
-      "https://www.gamedeveloper.com/business/the-nex-playground-is-launching-in-the-uk-and-ireland",
-      "https://80.lv/articles/steam-adds-new-tags-like-bullet-heaven-and-removes-others-like-nsfw"
-    ],
-    "image_filename": "producer_20260519.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
