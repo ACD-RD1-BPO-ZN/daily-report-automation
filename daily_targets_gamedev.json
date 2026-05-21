@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/sony-is-being-sued-for-allegedly-benefiting-from-tariff-refunds"
+      "https://gnn.gamer.com.tw/detail.php?sn=305233"
     ],
-    "image_filename": "headline_20260520.png",
+    "image_filename": "headline_20260521.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,27 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/unity-studio-collaboration-editor-export"
+    ],
+    "image_filename": "engine_20260521.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/19/pipes-joints-tutorial/"
+      "https://www.blendernation.com/2026/05/20/blender-developers-meeting-notes-18-may-2026/",
+      "https://www.blendernation.com/2026/05/20/free-add-on-general-ambient-occlusion-in-blender/",
+      "https://80.lv/articles/how-to-model-texture-jinx-from-arcane-with-zbrush"
     ],
-    "image_filename": "model3d_20260520.png",
+    "image_filename": "model3d_20260521.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,13 +49,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/3d-character-artist-shares-his-work-for-the-kiriko-supid-character-skin-in-overwatch",
-      "https://80.lv/articles/voidmaw-games-on-the-development-journey-behind-cyberpunk-roguelite-katanaut",
-      "https://80.lv/articles/how-a-team-of-3d-artists-modeled-and-textured-an-architectural-structure",
-      "https://80.lv/articles/interview-how-project-shadowglass-creates-its-impossible-fully-3d-pixel-art-look",
-      "https://80.lv/articles/software-engineer-on-cross-platform-rendering-for-aaa-titles"
+      "https://80.lv/articles/technical-artist-on-building-tools-pipelines-and-blending-art-with-engineering",
+      "https://80.lv/articles/this-simple-tip-can-make-your-character-animations-feel-more-natural",
+      "https://80.lv/articles/you-will-want-to-live-in-this-peaceful-countryside-environment"
     ],
-    "image_filename": "ta_20260520.png",
+    "image_filename": "ta_20260521.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -55,14 +69,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/fortnite-returns-to-the-app-store-everywhere-except-australia",
-      "https://www.gamedeveloper.com/business/ci-games-and-epic-games-terminate-lords-of-the-fallen-ii-publishing-deal",
-      "https://www.gamedeveloper.com/business/sony-increasing-the-price-of-playstation-plus-for-new-customers",
-      "https://gnn.gamer.com.tw/detail.php?sn=305176",
-      "https://gnn.gamer.com.tw/detail.php?sn=305175",
-      "https://gnn.gamer.com.tw/detail.php?sn=305173"
+      "https://www.gamedeveloper.com/business/ubisoft-s-net-bookings-are-down-54-year-on-year",
+      "https://www.gamedeveloper.com/business/report-xbox-adds-matthew-ball-and-scott-van-vliet-to-leadership-team",
+      "https://www.gamedeveloper.com/business/hasbro-cancels-dungeons-dragons-game-led-by-respawn-veteran",
+      "https://www.gamedeveloper.com/business/embracer-ceo-says-cost-control-does-not-get-enough-respect-",
+      "https://gnn.gamer.com.tw/detail.php?sn=305231"
     ],
-    "image_filename": "globalgames_20260520.png",
+    "image_filename": "globalgames_20260521.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -74,10 +87,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/what-happened-when-one-game-writer-tried-making-a-game-in-30-days-with-godot",
-      "https://gnn.gamer.com.tw/detail.php?sn=305172"
+      "https://80.lv/articles/channel-3-entertainment-on-creating-the-robot-factory-builder-game-foundry"
     ],
-    "image_filename": "indie_20260520.png",
+    "image_filename": "indie_20260521.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -89,15 +101,31 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305177",
-      "https://gnn.gamer.com.tw/detail.php?sn=305171"
+      "https://gnn.gamer.com.tw/detail.php?sn=305236",
+      "https://gnn.gamer.com.tw/detail.php?sn=305235",
+      "https://gnn.gamer.com.tw/detail.php?sn=305234",
+      "https://gnn.gamer.com.tw/detail.php?sn=305232"
     ],
-    "image_filename": "local_20260520.png",
+    "image_filename": "local_20260521.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/former-bioware-inflexion-games-and-timbre-games-developers-launch-studio-reset",
+      "https://www.gamedeveloper.com/business/uk-publisher-edcorp-breaks-cover-after-signing-garbage-country"
+    ],
+    "image_filename": "producer_20260521.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
