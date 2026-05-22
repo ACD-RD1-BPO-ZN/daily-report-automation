@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305233"
+      "https://www.gamedeveloper.com/business/destiny-2-s-active-development-will-end-in-june"
     ],
-    "image_filename": "headline_20260521.png",
+    "image_filename": "headline_20260522.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/unity-studio-collaboration-editor-export"
+      "https://unity.com/blog/d28-roas"
     ],
-    "image_filename": "engine_20260521.png",
+    "image_filename": "engine_20260522.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/20/blender-developers-meeting-notes-18-may-2026/",
-      "https://www.blendernation.com/2026/05/20/free-add-on-general-ambient-occlusion-in-blender/",
-      "https://80.lv/articles/how-to-model-texture-jinx-from-arcane-with-zbrush"
+      "https://www.blendernation.com/2026/05/21/subsurface-scattering-for-beginners/",
+      "https://www.blendernation.com/2026/05/21/phenix-a-gpu-native-particle-system-for-blender/"
     ],
-    "image_filename": "model3d_20260521.png",
+    "image_filename": "model3d_20260522.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +48,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/technical-artist-on-building-tools-pipelines-and-blending-art-with-engineering",
-      "https://80.lv/articles/this-simple-tip-can-make-your-character-animations-feel-more-natural",
-      "https://80.lv/articles/you-will-want-to-live-in-this-peaceful-countryside-environment"
+      "https://www.gamedeveloper.com/design/splinter-cell-designer-says-modern-lighting-have-made-stealth-games-harder-to-read",
+      "https://www.gamedeveloper.com/art/latam-indie-devs-lay-out-how-to-improve-your-text-animation",
+      "https://80.lv/articles/invincible-vs-devs-explain-building-a-violent-superhero-fighting-game-in-unreal-engine"
     ],
-    "image_filename": "ta_20260521.png",
+    "image_filename": "ta_20260522.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,13 +68,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ubisoft-s-net-bookings-are-down-54-year-on-year",
-      "https://www.gamedeveloper.com/business/report-xbox-adds-matthew-ball-and-scott-van-vliet-to-leadership-team",
-      "https://www.gamedeveloper.com/business/hasbro-cancels-dungeons-dragons-game-led-by-respawn-veteran",
-      "https://www.gamedeveloper.com/business/embracer-ceo-says-cost-control-does-not-get-enough-respect-",
-      "https://gnn.gamer.com.tw/detail.php?sn=305231"
+      "https://www.gamedeveloper.com/business/quantic-dream-cutting-jobs-after-scrapping-spellcasters-chronicles",
+      "https://gnn.gamer.com.tw/detail.php?sn=305301",
+      "https://gnn.gamer.com.tw/detail.php?sn=305305",
+      "https://gnn.gamer.com.tw/detail.php?sn=305303",
+      "https://gnn.gamer.com.tw/detail.php?sn=305300"
     ],
-    "image_filename": "globalgames_20260521.png",
+    "image_filename": "globalgames_20260522.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -87,9 +86,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/channel-3-entertainment-on-creating-the-robot-factory-builder-game-foundry"
+      "https://gnn.gamer.com.tw/detail.php?sn=305304",
+      "https://gnn.gamer.com.tw/detail.php?sn=305302"
     ],
-    "image_filename": "indie_20260521.png",
+    "image_filename": "indie_20260522.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -99,28 +99,14 @@
     ]
   },
   {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305236",
-      "https://gnn.gamer.com.tw/detail.php?sn=305235",
-      "https://gnn.gamer.com.tw/detail.php?sn=305234",
-      "https://gnn.gamer.com.tw/detail.php?sn=305232"
-    ],
-    "image_filename": "local_20260521.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/former-bioware-inflexion-games-and-timbre-games-developers-launch-studio-reset",
-      "https://www.gamedeveloper.com/business/uk-publisher-edcorp-breaks-cover-after-signing-garbage-country"
+      "https://www.gamedeveloper.com/business/destiny-2-s-active-development-will-end-in-june",
+      "https://unity.com/blog/d28-roas",
+      "https://www.blendernation.com/2026/05/21/phenix-a-gpu-native-particle-system-for-blender/",
+      "https://www.blendernation.com/2026/05/21/subsurface-scattering-for-beginners/"
     ],
-    "image_filename": "producer_20260521.png",
+    "image_filename": "producer_20260522.png",
     "image_keywords": [
       "marketing",
       "development",
