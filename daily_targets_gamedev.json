@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/take-two-expects-to-earn-8b-in-fy27-thanks-to-grand-theft-auto-vi"
+      "https://gnn.gamer.com.tw/detail.php?sn=305399"
     ],
-    "image_filename": "headline_20260523.png",
+    "image_filename": "headline_20260524.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/22/blender-jobs-for-may-22-2026/",
-      "https://www.blendernation.com/2026/05/22/course-using-blender-to-draft-cad-style-floor-plans-and-export-scaled-pdf/"
+      "https://80.lv/articles/blender-to-add-native-texture-layer-system",
+      "https://www.blendernation.com/2026/05/23/best-of-blender-artists-2026-21/"
     ],
-    "image_filename": "model3d_20260523.png",
+    "image_filename": "model3d_20260524.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,11 +34,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-cozy-painting-game-let-s-you-explore-the-landscapes-you-create",
-      "https://80.lv/articles/how-bubsy-4d-reimagines-a-retro-mascot-for-modern-3d-platformers",
-      "https://80.lv/articles/how-geology-and-vfx-helped-rebuild-prehistoric-earth-for-the-dinosaurs"
+      "https://80.lv/articles/explore-surface-variation-in-this-zbrush-stone-sculpting-practice",
+      "https://80.lv/articles/have-a-look-at-this-scene-of-a-misty-morning-that-looks-like-a-painting"
     ],
-    "image_filename": "ta_20260523.png",
+    "image_filename": "ta_20260524.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,12 +53,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/subnautica-2-hits-four-million-sales",
-      "https://www.gamedeveloper.com/business/layoffs-imminent-at-bungie-former-bioware-devs-launch-new-studio-and-gta-vi-still-on-for-november-patch-notes-53",
-      "https://80.lv/articles/inside-focus-entertainment-s-strategy-for-aa-games-and-long-term-franchises",
-      "https://gnn.gamer.com.tw/detail.php?sn=305395"
+      "https://80.lv/articles/spyro-crash-are-finally-playable-together-in-the-same-universe"
     ],
-    "image_filename": "globalgames_20260523.png",
+    "image_filename": "globalgames_20260524.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -71,13 +67,13 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/introducing-the-godot-asset-store/",
-      "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-3/",
-      "https://gnn.gamer.com.tw/detail.php?sn=305392",
-      "https://gnn.gamer.com.tw/detail.php?sn=305391",
-      "https://store.steampowered.com/news/271650/"
+      "https://gnn.gamer.com.tw/detail.php?sn=305402",
+      "https://gnn.gamer.com.tw/detail.php?sn=305401",
+      "https://gnn.gamer.com.tw/detail.php?sn=305400",
+      "https://gnn.gamer.com.tw/detail.php?sn=305398",
+      "https://80.lv/articles/this-co-op-mining-game-is-like-deep-rock-galactic-with-goblins"
     ],
-    "image_filename": "indie_20260523.png",
+    "image_filename": "indie_20260524.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -87,18 +83,18 @@
     ]
   },
   {
-    "section_name": "Local",
+    "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305397",
-      "https://gnn.gamer.com.tw/detail.php?sn=305394",
-      "https://gnn.gamer.com.tw/detail.php?sn=305393"
+      "https://gnn.gamer.com.tw/detail.php?sn=305399",
+      "https://gnn.gamer.com.tw/detail.php?sn=305402",
+      "https://gnn.gamer.com.tw/detail.php?sn=305398"
     ],
-    "image_filename": "local_20260523.png",
+    "image_filename": "producer_20260524.png",
     "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
