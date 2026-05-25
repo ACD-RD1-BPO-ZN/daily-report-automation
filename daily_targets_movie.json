@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/festivals/neon-seventh-palme-dor-fjord-cannes-1236757761/"
+      "https://variety.com/2026/film/box-office/mandalorian-and-grogu-box-office-opening-memorial-day-weekend-1236757827/"
     ],
-    "image_filename": "headline_20260524.png",
+    "image_filename": "headline_20260525.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,17 +18,15 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/05/florence-pugh-midnight-library-studios-in-talks-cannes-1236919776/",
-      "https://variety.com/2026/film/news/cannes-park-chan-wook-joke-palme-dor-jury-president-1236757779/",
-      "https://variety.com/2026/film/festivals/barbra-streisand-video-message-cannes-film-festival-1236757678/",
-      "https://variety.com/2026/film/global/the-secret-agent-tania-maria-sabado-morto-leonardo-lacca-1236757636/",
-      "https://variety.com/2026/film/news/the-mandalorian-grogu-ludwig-goransson-score-1236756207/",
-      "https://www.firstshowing.net/2026/scott-eastwood-in-wwii-battle-of-the-bulge-lucky-strike-movie-trailer/",
-      "https://www.firstshowing.net/2026/first-look-teaser-for-la-bola-negra-the-spanish-sensation-of-cannes/",
-      "https://www.firstshowing.net/2026/cannes-2026-maika-monroes-victorian-psycho-is-wicked-horror-fun/",
-      "https://deadline.com/2026/05/crunchyroll-anime-awards-2026-winners-list-1236920076/"
+      "https://www.firstshowing.net/2026/cannes-2026-awards-mungiu-wins-his-second-palme-dor-for-fjord/",
+      "https://www.firstshowing.net/2026/cannes-2026-na-hong-jins-hope-is-the-best-and-worst-of-sci-fi/",
+      "https://variety.com/2026/film/reviews/passenger-review-1236758047/",
+      "https://deadline.com/2026/05/nicolas-cage-christopher-nolan-wont-call-me-turning-down-insomnia-1236920221/",
+      "https://deadline.com/2026/05/richard-dreyfuss-cancels-jaws-cast-reunion-appearance-1236920266/",
+      "https://variety.com/2026/film/festivals/zvyagintsev-cannes-speech-putin-minotaur-1236757838/",
+      "https://www.firstshowing.net/2026/official-trailer-for-experimental-doc-bouchra-following-a-jackal-in-nyc/"
     ],
-    "image_filename": "production_20260524.png",
+    "image_filename": "production_20260525.png",
     "image_keywords": [
       "film",
       "production",
@@ -43,9 +41,12 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-05-24/"
+      "https://variety.com/2026/film/box-office/box-office-michael-800-million-devil-wears-prada-2-600-million-globally-1236757876/",
+      "https://deadline.com/2026/05/indie-film-box-office-tuner-i-love-boosters-obsession-1236920235/",
+      "https://variety.com/2026/film/box-office/obsession-box-office-breakout-hit-horror-1236757946/",
+      "https://www.boxofficemojo.com/date/2026-05-25/"
     ],
-    "image_filename": "boxoffice_20260524.png",
+    "image_filename": "boxoffice_20260525.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -56,9 +57,11 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/05/sherri-shepherd-1236920103/"
+      "https://deadline.com/2026/05/maximum-pleasure-guaranteed-apple-tv-premiere-interview-1236915228/",
+      "https://www.firstshowing.net/2026/peculiar-violinist-mystery-thriller-film-strung-trailer-with-chloe-bailey/",
+      "https://deadline.com/2026/05/noah-schnapp-jamie-campbell-bower-unanswered-texts-duffer-bros-1236920232/"
     ],
-    "image_filename": "streaming_20260524.png",
+    "image_filename": "streaming_20260525.png",
     "image_keywords": [
       "netflix",
       "disney+",

@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305399"
+      "https://80.lv/articles/epic-games-officially-teases-unreal-engine-6"
     ],
-    "image_filename": "headline_20260524.png",
+    "image_filename": "headline_20260525.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,30 +14,25 @@
     ]
   },
   {
-    "section_name": "Model3D",
+    "section_name": "Engine",
     "source_urls": [
-      "https://80.lv/articles/blender-to-add-native-texture-layer-system",
-      "https://www.blendernation.com/2026/05/23/best-of-blender-artists-2026-21/"
+      "https://80.lv/articles/epic-games-officially-teases-unreal-engine-6"
     ],
-    "image_filename": "model3d_20260524.png",
+    "image_filename": "engine_20260525.png",
     "image_keywords": [
-      "3d",
-      "modeling",
-      "sculpt",
-      "topology",
-      "blender",
-      "maya",
-      "zbrush",
-      "substance"
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
     ]
   },
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/explore-surface-variation-in-this-zbrush-stone-sculpting-practice",
-      "https://80.lv/articles/have-a-look-at-this-scene-of-a-misty-morning-that-looks-like-a-painting"
+      "https://80.lv/articles/this-stunning-3d-persian-warrior-character-was-rendered-in-real-time-using-ue5"
     ],
-    "image_filename": "ta_20260524.png",
+    "image_filename": "ta_20260525.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,9 +48,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/spyro-crash-are-finally-playable-together-in-the-same-universe"
+      "https://80.lv/articles/how-kixeye-survived-the-rise-and-fall-of-facebook-strategy-games"
     ],
-    "image_filename": "globalgames_20260524.png",
+    "image_filename": "globalgames_20260525.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -67,13 +62,14 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305402",
-      "https://gnn.gamer.com.tw/detail.php?sn=305401",
-      "https://gnn.gamer.com.tw/detail.php?sn=305400",
-      "https://gnn.gamer.com.tw/detail.php?sn=305398",
-      "https://80.lv/articles/this-co-op-mining-game-is-like-deep-rock-galactic-with-goblins"
+      "https://gnn.gamer.com.tw/detail.php?sn=305411",
+      "https://gnn.gamer.com.tw/detail.php?sn=305410",
+      "https://gnn.gamer.com.tw/detail.php?sn=305409",
+      "https://gnn.gamer.com.tw/detail.php?sn=305408",
+      "https://gnn.gamer.com.tw/detail.php?sn=305407",
+      "https://80.lv/articles/check-out-this-cozy-adventure-game-where-you-ll-explore-an-underwater-world"
     ],
-    "image_filename": "indie_20260524.png",
+    "image_filename": "indie_20260525.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -83,13 +79,28 @@
     ]
   },
   {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=305406"
+    ],
+    "image_filename": "local_20260525.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305399",
-      "https://gnn.gamer.com.tw/detail.php?sn=305402",
-      "https://gnn.gamer.com.tw/detail.php?sn=305398"
+      "https://gnn.gamer.com.tw/detail.php?sn=305411",
+      "https://gnn.gamer.com.tw/detail.php?sn=305410",
+      "https://gnn.gamer.com.tw/detail.php?sn=305409",
+      "https://gnn.gamer.com.tw/detail.php?sn=305408",
+      "https://gnn.gamer.com.tw/detail.php?sn=305407"
     ],
-    "image_filename": "producer_20260524.png",
+    "image_filename": "producer_20260525.png",
     "image_keywords": [
       "marketing",
       "development",
