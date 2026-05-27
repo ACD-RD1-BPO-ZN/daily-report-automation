@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305481"
+      "https://www.gamedeveloper.com/business/report-nintendo-orders-to-assemble-20-million-switch-2-consoles"
     ],
-    "image_filename": "headline_20260526.png",
+    "image_filename": "headline_20260527.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/25/free-download-blender-cobweb-generator/",
-      "https://80.lv/articles/tutorial-how-to-create-use-color-palettes-in-blender"
+      "https://www.blender.org/news/introducing-the-blender-roadmap/",
+      "https://www.blendernation.com/2026/05/26/free-download-generate-wooden-houses-with-this-geometry-nodes-setup/",
+      "https://www.blendernation.com/2026/05/26/no-text-accent-in-blender-using-linux-mint-easy-fix/"
     ],
-    "image_filename": "model3d_20260526.png",
+    "image_filename": "model3d_20260527.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,12 +35,13 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/native-c-gdextension-for-high-performance-object-pooling",
-      "https://80.lv/articles/browser-based-tool-for-creating-alpha-textures",
-      "https://80.lv/articles/interior-mapping-shader-built-for-vrchat",
-      "https://80.lv/articles/rpg-maker-u2u-introduces-hd-2d-inspired-visual-system"
+      "https://80.lv/articles/this-godot-indie-game-is-like-dark-messiah-with-low-poly-graphics",
+      "https://80.lv/articles/fantasy-greek-female-warrior-imagined-in-3d",
+      "https://80.lv/articles/tachyon-flow-parkour-game-adds-new-fluid-spin-moves",
+      "https://80.lv/articles/check-out-this-winter-fantasy-ue5-environment-with-detailed-assets",
+      "https://80.lv/articles/hyper-realistic-cgi-steam-iron-scene-you-can-almost-hear-smell"
     ],
-    "image_filename": "ta_20260526.png",
+    "image_filename": "ta_20260527.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -55,10 +57,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://store.steampowered.com/news/271749/",
-      "https://gnn.gamer.com.tw/detail.php?sn=305477"
+      "https://www.gamedeveloper.com/business/microsoft-to-pay-250m-to-settle-lawsuit-filed-by-aggrieved-activision-blizzard-shareholders",
+      "https://www.gamedeveloper.com/business/report-wizards-of-the-coast-is-trying-to-discourage-workers-from-unionizing",
+      "https://www.gamedeveloper.com/business/inside-the-brazilian-government-s-model-for-boosting-its-game-industry",
+      "https://gnn.gamer.com.tw/detail.php?sn=305523",
+      "https://gnn.gamer.com.tw/detail.php?sn=305524"
     ],
-    "image_filename": "globalgames_20260526.png",
+    "image_filename": "globalgames_20260527.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -70,18 +75,45 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305480",
-      "https://gnn.gamer.com.tw/detail.php?sn=305479",
-      "https://gnn.gamer.com.tw/detail.php?sn=305478",
-      "https://gnn.gamer.com.tw/detail.php?sn=305476"
+      "https://gnn.gamer.com.tw/detail.php?sn=305522"
     ],
-    "image_filename": "indie_20260526.png",
+    "image_filename": "indie_20260527.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=305521",
+      "https://gnn.gamer.com.tw/detail.php?sn=305520",
+      "https://gnn.gamer.com.tw/detail.php?sn=305519"
+    ],
+    "image_filename": "local_20260527.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/report-nintendo-orders-to-assemble-20-million-switch-2-consoles",
+      "https://www.blender.org/news/introducing-the-blender-roadmap/",
+      "https://www.blendernation.com/2026/05/26/free-download-generate-wooden-houses-with-this-geometry-nodes-setup/"
+    ],
+    "image_filename": "producer_20260527.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
