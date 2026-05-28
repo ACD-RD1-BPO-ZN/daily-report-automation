@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/report-nintendo-orders-to-assemble-20-million-switch-2-consoles"
+      "https://gnn.gamer.com.tw/detail.php?sn=305600"
     ],
-    "image_filename": "headline_20260527.png",
+    "image_filename": "headline_20260528.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,11 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/news/introducing-the-blender-roadmap/",
-      "https://www.blendernation.com/2026/05/26/free-download-generate-wooden-houses-with-this-geometry-nodes-setup/",
-      "https://www.blendernation.com/2026/05/26/no-text-accent-in-blender-using-linux-mint-easy-fix/"
+      "https://www.blendernation.com/2026/05/27/macbook-neo-blender-sculpting-honest-polycount-and-memory-performance-test/",
+      "https://80.lv/articles/3d-artist-shares-stylized- sculpts-of-orks-based-on-a-2d-concept"
     ],
-    "image_filename": "model3d_20260527.png",
+    "image_filename": "model3d_20260528.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -35,13 +34,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-godot-indie-game-is-like-dark-messiah-with-low-poly-graphics",
-      "https://80.lv/articles/fantasy-greek-female-warrior-imagined-in-3d",
-      "https://80.lv/articles/tachyon-flow-parkour-game-adds-new-fluid-spin-moves",
-      "https://80.lv/articles/check-out-this-winter-fantasy-ue5-environment-with-detailed-assets",
-      "https://80.lv/articles/hyper-realistic-cgi-steam-iron-scene-you-can-almost-hear-smell"
+      "https://80.lv/articles/how-submerge-rendered-cinematic-quality-3d-content-without-a-traditional-render-farm",
+      "https://80.lv/articles/turn-reference-footage-into-animation-curves-with-this-maya-tool"
     ],
-    "image_filename": "ta_20260527.png",
+    "image_filename": "ta_20260528.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -57,13 +53,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/microsoft-to-pay-250m-to-settle-lawsuit-filed-by-aggrieved-activision-blizzard-shareholders",
-      "https://www.gamedeveloper.com/business/report-wizards-of-the-coast-is-trying-to-discourage-workers-from-unionizing",
-      "https://www.gamedeveloper.com/business/inside-the-brazilian-government-s-model-for-boosting-its-game-industry",
-      "https://gnn.gamer.com.tw/detail.php?sn=305523",
-      "https://gnn.gamer.com.tw/detail.php?sn=305524"
+      "https://www.gamedeveloper.com/business/the-witcher-3-is-getting-a-new-expansion-12-years-after-launch",
+      "https://www.gamedeveloper.com/business/ps5-exclusive-destruction-allstars-shut-down-after-five-years",
+      "https://gnn.gamer.com.tw/detail.php?sn=305601",
+      "https://gnn.gamer.com.tw/detail.php?sn=305597",
+      "https://gnn.gamer.com.tw/detail.php?sn=305595"
     ],
-    "image_filename": "globalgames_20260527.png",
+    "image_filename": "globalgames_20260528.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -75,9 +71,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305522"
+      "https://gnn.gamer.com.tw/detail.php?sn=305599",
+      "https://80.lv/articles/valve-just-massively-raised-steam-deck-prices-by-over-40",
+      "https://80.lv/articles/this-cinematic-platformer-game-looks-very-cute-but-will-probably-make-you-cry"
     ],
-    "image_filename": "indie_20260527.png",
+    "image_filename": "indie_20260528.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -89,11 +87,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305521",
-      "https://gnn.gamer.com.tw/detail.php?sn=305520",
-      "https://gnn.gamer.com.tw/detail.php?sn=305519"
+      "https://gnn.gamer.com.tw/detail.php?sn=305598"
     ],
-    "image_filename": "local_20260527.png",
+    "image_filename": "local_20260528.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -104,11 +100,11 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/report-nintendo-orders-to-assemble-20-million-switch-2-consoles",
-      "https://www.blender.org/news/introducing-the-blender-roadmap/",
-      "https://www.blendernation.com/2026/05/26/free-download-generate-wooden-houses-with-this-geometry-nodes-setup/"
+      "https://gnn.gamer.com.tw/detail.php?sn=305600",
+      "https://www.gamedeveloper.com/business/ps5-exclusive-destruction-allstars-shut-down-after-five-years",
+      "https://gnn.gamer.com.tw/detail.php?sn=305598"
     ],
-    "image_filename": "producer_20260527.png",
+    "image_filename": "producer_20260528.png",
     "image_keywords": [
       "marketing",
       "development",
