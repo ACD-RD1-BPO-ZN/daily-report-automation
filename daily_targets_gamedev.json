@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305787"
+      "https://gnn.gamer.com.tw/detail.php?sn=305786"
     ],
-    "image_filename": "headline_20260530.png",
+    "image_filename": "headline_20260531.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,27 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://www.unrealengine.com/learning/mays-epic-learning-content-environments-lighting-and-more"
-    ],
-    "image_filename": "engine_20260530.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/05/29/blender-jobs-for-may-29-2026/",
-      "https://www.blendernation.com/2026/05/29/best-of-blender-artists-2026-22/",
-      "https://80.lv/articles/houdini-made-stylized-jungle-assets-with-no-textures/"
+      "https://80.lv/articles/check-out-this-highly-detailed-and-gritty-3d-character-model"
     ],
-    "image_filename": "model3d_20260530.png",
+    "image_filename": "model3d_20260531.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,10 +33,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-black-eye-2-0-is-rethinking-how-video-game-camera-systems-work",
-      "https://80.lv/articles/jorge-r-gutierrez-drops-out-of-amazon-s-genai-creators-fund-program"
+      "https://80.lv/articles/houdini-made-stylized-jungle-assets-with-no-textures",
+      "https://80.lv/articles/this-atmospheric-mystery-adventure-game-has-you-explore-a-remote-island"
     ],
-    "image_filename": "ta_20260530.png",
+    "image_filename": "ta_20260531.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,14 +52,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/balatro-publisher-playstack-sold-to-gamespot-and-fandom-parent-company",
-      "https://www.gamedeveloper.com/business/007-first-light-has-topped-1-5-million-sales",
       "https://80.lv/articles/xbox-delayed-fable-again-in-part-because-of-gta-6-now-releasing-february-2027",
-      "https://80.lv/articles/external-game-dev-partner-room-8-group-appoints-juanita-draude-as-new-ceo",
-      "https://www.gamedeveloper.com/business/micro-grants-for-indies-another-hardware-price-hike-and-valnet-sinks-to-new-lows-patch-notes-54",
-      "https://store.steampowered.com/news/260304/"
+      "https://80.lv/articles/external-game-dev-partner-room-8-group-appoints-juanita-draude-as-new-ceo"
     ],
-    "image_filename": "globalgames_20260530.png",
+    "image_filename": "globalgames_20260531.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -87,10 +67,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305783",
-      "https://gnn.gamer.com.tw/detail.php?sn=305782"
+      "https://gnn.gamer.com.tw/detail.php?sn=305789"
     ],
-    "image_filename": "indie_20260530.png",
+    "image_filename": "indie_20260531.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -102,9 +81,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305781"
+      "https://gnn.gamer.com.tw/detail.php?sn=305788"
     ],
-    "image_filename": "local_20260530.png",
+    "image_filename": "local_20260531.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -115,9 +94,11 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/design/crafting-clair-obscur-expedition-33-s-mournful-tale-ft-jennifer-svedeberg-yen"
+      "https://gnn.gamer.com.tw/detail.php?sn=305786",
+      "https://80.lv/articles/xbox-delayed-fable-again-in-part-because-of-gta-6-now-releasing-february-2027",
+      "https://gnn.gamer.com.tw/detail.php?sn=305789"
     ],
-    "image_filename": "producer_20260530.png",
+    "image_filename": "producer_20260531.png",
     "image_keywords": [
       "marketing",
       "development",
