@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/news/michael-de-luca-obsession-backrooms-warner-bros-new-line-1236763195/"
+      "https://deadline.com/2026/05/backrooms-kane-parsons-box-office-record-behind-the-scenes-1236931315/"
     ],
-    "image_filename": "headline_20260531.png",
+    "image_filename": "headline_20260601.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,12 +18,11 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/05/toy-story-5-swifties-speculating-ts-billboard-1236931161/",
-      "https://variety.com/2026/film/news/tom-holland-setting-new-spider-man-brand-new-day-marvel-1236763157/",
-      "https://www.firstshowing.net/2026/official-trailer-for-acclaimed-mexican-film-flies-with-teresita-sanchez/",
-      "https://variety.com/2026/film/news/minecraft-sequel-title-minecraft-movie-squared-1236763109/"
+      "https://www.firstshowing.net/2026/quick-tv-spots-for-dcs-supergirl-movie-packed-with-more-action/",
+      "https://www.firstshowing.net/2026/first-behind-the-scenes-look-at-a-minecraft-movie-squared-sequel/",
+      "https://variety.com/2026/film/reviews/viva-carmen-review-1236763333/"
     ],
-    "image_filename": "production_20260531.png",
+    "image_filename": "production_20260601.png",
     "image_keywords": [
       "film",
       "production",
@@ -38,11 +37,11 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-05-31/",
-      "https://deadline.com/2026/05/neon-tom-quinn-paramount-warner-bros-merger-a24-1236931132/",
-      "https://variety.com/2026/film/news/jason-blum-james-wan-obsession-backrooms-horror-box-office-1236763111/"
+      "https://variety.com/2026/film/box-office/backrooms-box-office-record-opening-weekend-obsession-jumps-star-wars-crumbles-1236763355/",
+      "https://variety.com/2026/film/columns/backrooms-obsession-hollywood-needs-whats-outside-the-box-1236762844/",
+      "https://www.boxofficemojo.com/date/2026-06-01/"
     ],
-    "image_filename": "boxoffice_20260531.png",
+    "image_filename": "boxoffice_20260601.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -53,11 +52,13 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/05/e-jean-carroll-investigation-director-ivy-meerpol-interview-1236931217/",
-      "https://deadline.com/2026/05/dan-levy-heated-rivalry-schitts-creek-canada-success-1236931196/",
-      "https://www.firstshowing.net/2026/funny-trailer-for-the-asylums-alien-disclosure-day-dumb-b-movie/"
+      "https://deadline.com/2026/05/house-of-the-dragon-season-3-ryan-condal-atx-tv-festival-1236930976/",
+      "https://deadline.com/2026/05/off-campus-antonio-cipriano-grace-logan-romance-season-2-1236931594/",
+      "https://deadline.com/2026/05/four-seasons-how-david-tennant-cast-romantic-cliffhanger-1236931562/",
+      "https://deadline.com/2026/05/karolina-wydra-pluribus-interview-vince-gilligan-apple-tv-1236929170/",
+      "https://variety.com/2026/film/news/lula-brazilian-streamer-catalog-rio2c-1236763185/"
     ],
-    "image_filename": "streaming_20260531.png",
+    "image_filename": "streaming_20260601.png",
     "image_keywords": [
       "netflix",
       "disney+",

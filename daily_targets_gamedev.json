@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305786"
+      "https://code.blender.org/2026/02/winter-of-quality-2026/"
     ],
-    "image_filename": "headline_20260531.png",
+    "image_filename": "headline_20260601.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,15 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/check-out-this-highly-detailed-and-gritty-3d-character-model"
+      "https://www.blender.org/press/blender-5-1-release/",
+      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
+      "https://code.blender.org/2025/08/bundles-and-closures/",
+      "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
+      "https://code.blender.org/2025/10/google-summer-of-code-2025-results/",
+      "https://80.lv/articles/iconic-steamboat-willie-s-mickey-mouse-recreated-in-blender",
+      "https://80.lv/articles/awesome-rick-and-morty-season-9-promo-animations-made-in-blender"
     ],
-    "image_filename": "model3d_20260531.png",
+    "image_filename": "model3d_20260601.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,10 +39,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/houdini-made-stylized-jungle-assets-with-no-textures",
-      "https://80.lv/articles/this-atmospheric-mystery-adventure-game-has-you-explore-a-remote-island"
+      "https://www.blender.org/user-stories/cosmology-with-geometry-nodes/"
     ],
-    "image_filename": "ta_20260531.png",
+    "image_filename": "ta_20260601.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -50,60 +55,18 @@
     ]
   },
   {
-    "section_name": "GlobalGames",
-    "source_urls": [
-      "https://80.lv/articles/xbox-delayed-fable-again-in-part-because-of-gta-6-now-releasing-february-2027",
-      "https://80.lv/articles/external-game-dev-partner-room-8-group-appoints-juanita-draude-as-new-ceo"
-    ],
-    "image_filename": "globalgames_20260531.png",
-    "image_keywords": [
-      "gameplay",
-      "trailer",
-      "release",
-      "commercial",
-      "global"
-    ]
-  },
-  {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305789"
+      "https://store.steampowered.com/news/265516/",
+      "https://80.lv/articles/forklift-chaos-awaits-extreme-forklifting-3-giveaway"
     ],
-    "image_filename": "indie_20260531.png",
+    "image_filename": "indie_20260601.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
-    ]
-  },
-  {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305788"
-    ],
-    "image_filename": "local_20260531.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305786",
-      "https://80.lv/articles/xbox-delayed-fable-again-in-part-because-of-gta-6-now-releasing-february-2027",
-      "https://gnn.gamer.com.tw/detail.php?sn=305789"
-    ],
-    "image_filename": "producer_20260531.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
