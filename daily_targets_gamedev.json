@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://code.blender.org/2026/02/winter-of-quality-2026/"
+      "https://www.gamedeveloper.com/business/atari-to-acquire-crossy-road-developer-hipster-whale"
     ],
-    "image_filename": "headline_20260601.png",
+    "image_filename": "headline_20260602.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,17 +14,26 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/games-made-with-unity-may-2026-releases"
+    ],
+    "image_filename": "engine_20260602.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-1-release/",
-      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
-      "https://code.blender.org/2025/08/bundles-and-closures/",
-      "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
-      "https://code.blender.org/2025/10/google-summer-of-code-2025-results/",
-      "https://80.lv/articles/iconic-steamboat-willie-s-mickey-mouse-recreated-in-blender",
-      "https://80.lv/articles/awesome-rick-and-morty-season-9-promo-animations-made-in-blender"
+      "https://code.blender.org/2026/05/cycles-texture-cache/",
+      "https://www.blender.org/development/blender-lab-activity-report-q1-2026/"
     ],
-    "image_filename": "model3d_20260601.png",
+    "image_filename": "model3d_20260602.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -39,9 +48,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blender.org/user-stories/cosmology-with-geometry-nodes/"
+      "https://80.lv/articles/take-a-look-at-this-astonishing-and-powerful-3d-model-of-a-blood-witch",
+      "https://80.lv/articles/how-to-create-rich-surface-details-like-crimson-desert-using-pom-silhouettes",
+      "https://80.lv/articles/rebuilding-a-ps2-classic-with-legacy-of-kain-defiance-remastered-devs"
     ],
-    "image_filename": "ta_20260601.png",
+    "image_filename": "ta_20260602.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -55,18 +66,51 @@
     ]
   },
   {
+    "section_name": "GlobalGames",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/uk-social-media-ban-could-impact-video-game-platforms",
+      "https://www.gamedeveloper.com/business/fable-reboot-delayed-until-february-2027",
+      "https://80.lv/articles/how-pubg-battlegrounds-became-a-co-op-heist-game-with-payday"
+    ],
+    "image_filename": "globalgames_20260602.png",
+    "image_keywords": [
+      "gameplay",
+      "trailer",
+      "release",
+      "commercial",
+      "global"
+    ]
+  },
+  {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/265516/",
-      "https://80.lv/articles/forklift-chaos-awaits-extreme-forklifting-3-giveaway"
+      "https://store.steampowered.com/news/265126/"
     ],
-    "image_filename": "indie_20260601.png",
+    "image_filename": "indie_20260602.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=305868",
+      "https://gnn.gamer.com.tw/detail.php?sn=305867",
+      "https://gnn.gamer.com.tw/detail.php?sn=305866",
+      "https://gnn.gamer.com.tw/detail.php?sn=305864",
+      "https://gnn.gamer.com.tw/detail.php?sn=305863",
+      "https://gnn.gamer.com.tw/detail.php?sn=305862"
+    ],
+    "image_filename": "local_20260602.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]

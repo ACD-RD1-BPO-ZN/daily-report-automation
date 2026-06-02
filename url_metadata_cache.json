@@ -1,55 +1,7 @@
 {
-  "https://unity.com/blog/games-made-with-unity-march-2026-releases": {
-    "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/2b044518d97ed070544a2a17e08e320f2e69a573-1280x720.jpg",
-    "last_seen": "2026-05-03"
-  },
   "https://www.blendernation.com/2026/04/29/anthropic-adds-blender-support-joins-the-blender-development-fund-as-corporate-patron/": {
     "og_image": "https://www.blendernation.com/wp-content/uploads/2026/04/anthropic-x-blender-800x450.png.webp",
     "last_seen": "2026-05-04"
-  },
-  "https://store.steampowered.com/news/259481/": {
-    "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
-    "last_seen": "2026-05-03"
-  },
-  "https://www.gamedeveloper.com/pc/we-tested-the-steam-controller": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt7faa05950769285e/69ef7df24b4c9e032fd51633/SteamController.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-05-03"
-  },
-  "https://www.blendernation.com/2026/05/02/made-realistic-ferrofluid-in-blender-extra-nodes-tutorial/": {
-    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/05/ferro_86552_BN.png",
-    "last_seen": "2026-05-03"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=304416": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/68/29c906f7780caea7a48df512241yhjw5.PNG",
-    "last_seen": "2026-05-03"
-  },
-  "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/": {
-    "og_image": "https://www.blender.org/wp-content/uploads/2026/05/devfund_ai_policies-480x270.jpg",
-    "last_seen": "2026-05-03"
-  },
-  "https://www.gamedeveloper.com/business/gamemaker-says-ai-coding-is-inevitable-sony-clarifies-drm-confusion-and-how-video-games-are-helping-rikers-inmates-patch-notes-50": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltfbf85316bd3a214b/69f47fb461ba07556b14332e/Patch_Notes_50_Header.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-05-03"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=304417": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/02/1d7cc9871041f4496e15dd245a1yhnm5.JPG",
-    "last_seen": "2026-05-03"
-  },
-  "https://80.lv/articles/the-academy-draws-line-for-oscars-no-ai-actors-and-no-ai-scripts": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/48088/images/69f5254cbadff/contain_1200x630.jpg",
-    "last_seen": "2026-05-03"
-  },
-  "https://80.lv/articles/from-dystopian-police-game-to-showgunners-a-design-postmortem": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/48087/images/69f50e812a882/contain_1200x630.jpg",
-    "last_seen": "2026-05-03"
-  },
-  "https://80.lv/articles/150-developers-push-to-define-a-new-fake-os-genre-on-steam": {
-    "og_image": "",
-    "last_seen": "2026-05-03"
-  },
-  "https://80.lv/articles/senior-animator-shares-a-trick-to-make-your-animations-feel-more-alive": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/47992/images/69efed2b59b31/contain_1200x630.jpg",
-    "last_seen": "2026-05-03"
   },
   "https://gnn.gamer.com.tw/detail.php?sn=304419": {
     "og_image": "https://p2.bahamut.com.tw/B/2KU/22/dbfea71c096c260a7204a91a0c1yho65.WEBP",
@@ -3442,5 +3394,173 @@
   "https://www.boxofficemojo.com/date/2026-06-01/": {
     "og_image": "",
     "last_seen": "2026-06-01"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=305864": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/48/61178690d561a9f284d59a23a01yuf85.JPG",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.gamedeveloper.com/business/atari-to-acquire-crossy-road-developer-hipster-whale": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltefa76053d534ecbf/6a1d760b9b211d75eb89620a/Hipster_Whale_Header.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-06-02"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=305866": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/61/af2d5797d03cea3156e372877d1yufl5.JPG",
+    "last_seen": "2026-06-02"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=305868": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/60/a5bc1af02cb45f4a2281d329f41yufk5.JPG",
+    "last_seen": "2026-06-02"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=305867": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/00/07c0ab001af444e94bd967127e1yugo5.JPG",
+    "last_seen": "2026-06-02"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=305862": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/46/69439ba900740c3a08b08c2bc61yuf65.JPG",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.gamedeveloper.com/business/uk-social-media-ban-could-impact-video-game-platforms": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt0b6fb8ff57d491a5/6a1da3a84a4fc7867515056a/Roblox_Header.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-06-02"
+  },
+  "https://store.steampowered.com/news/265126/": {
+    "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://code.blender.org/2026/05/cycles-texture-cache/": {
+    "og_image": "https://code.blender.org/wp-content/uploads/2026/05/cycles_texture_cache-480x270.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.gamedeveloper.com/business/fable-reboot-delayed-until-february-2027": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltca1a8c105ddf3bb0/6a1d6bbfccc2a5d04e304e68/Fable_Header.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-06-02"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=305863": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/47/556707f9dbd751acbe1c44d2ce1yuf75.JPG",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.blender.org/development/blender-lab-activity-report-q1-2026/": {
+    "og_image": "https://www.blender.org/wp-content/uploads/2026/04/claypencil-480x270.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://unity.com/blog/games-made-with-unity-may-2026-releases": {
+    "og_image": "https://cdn.sanity.io/images/fuvbjjlp/production/dfae83442f8c38bcd5e2e6e0167a0f162d225967-3840x2160.png",
+    "last_seen": "2026-06-02"
+  },
+  "https://80.lv/articles/how-to-create-rich-surface-details-like-crimson-desert-using-pom-silhouettes": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48579/images/6a1a23187835d/contain_1200x630.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://80.lv/articles/how-pubg-battlegrounds-became-a-co-op-heist-game-with-payday": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48601/images/6a1df2e525ef5/contain_1200x630.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://80.lv/articles/take-a-look-at-this-astonishing-and-powerful-3d-model-of-a-blood-witch": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48602/images/6a1e1212a5749/contain_1200x630.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://80.lv/articles/rebuilding-a-ps2-classic-with-legacy-of-kain-defiance-remastered-devs": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/48576/images/6a1a1c465fc3b/contain_1200x630.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.firstshowing.net/2026/final-trailer-for-scary-movie-6-they-coming-for-all-your-fave-horror/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img17/scarymovie6finalpostbigmaintw2.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://deadline.com/2026/06/jury-duty-presents-company-retreat-team-interview-1236930336/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/06/Jury-Duty.jpg?w=1024",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.firstshowing.net/2026/sam-worthington-britt-lower-in-thriller-i-will-find-you-full-trailer/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img17/iwillfindyoufinaltrailermainbigtw2.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.firstshowing.net/2026/fantastic-full-trailer-for-the-end-of-oak-street-dino-adventure-sci-fi/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img17/endofoakstreetpostfinbigmaintw1.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://deadline.com/2026/06/2026-gotham-tv-awards-winners-list-1236937998/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/06/2026-Gotham-TV-Awards.jpg?w=1024",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/series/warrior-cats-ac-bradley-rodrigo-blaas-261825.html/": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/Warrior-Cats.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://variety.com/2026/music/news/taylor-swift-toy-story-5-announces-1236764185/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/06/MixCollage-01-Jun-2026-12-09-PM-3777.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.firstshowing.net/2026/taye-diggs-tamar-braxton-in-tubi-thriller-stepfather-official-trailer/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img17/stepfatherpostermainimgbigtw2.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://variety.com/2026/film/global/virginia-woolfs-night-and-day-world-premiere-sxsw-london-1236763990/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/06/GettyImages-2279264682.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.firstshowing.net/2026/djimon-hounsou-kodi-smit-mcphee-in-thriller-the-passenger-trailer/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img17/thepassengerpostermainimgtw1.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/advertising/disney-lumee-animaj-hasbro-youtube-261819.html/": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/Lumee-Disney.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/schools/women-in-animation-esma-school-261815.html/": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/WIA-ESMA.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/advertising/disney-lumee-animaj-hasbro-youtube-261819.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/Lumee-Disney.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://deadline.com/2026/06/euphoria-season-3-finale-explained-sam-levinson-cast-reactions-1236937949/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/06/zendaya_0.jpg?w=1000",
+    "last_seen": "2026-06-02"
+  },
+  "https://variety.com/2026/film/news/film-news-in-brief-june-1-2026-1236763966/": {
+    "og_image": "https://variety.com/wp-content/uploads/2025/03/Academy-Museum.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-06-02"
+  },
+  "https://deadline.com/2026/06/alec-baldwin-jim-gaffigan-crosshairs-1236938077/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/06/Alec-Baldwin-and-Jim-Gaffigan-.jpg?w=1024",
+    "last_seen": "2026-06-02"
+  },
+  "https://variety.com/2026/film/news/cinespia-july-screenings-of-shrek-and-jurassic-park-firework-1236764132/": {
+    "og_image": "https://variety.com/wp-content/uploads/2022/04/MCDSHFO_EC033.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/shorts/under-the-lake-juan-carlos-mostaza-tribeca-trailer-261878.html/": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/Under-the-Lake-Head.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://deadline.com/2026/06/the-fine-art-of-lying-book-series-ucp-scarlett-johansson-1236935843/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/06/The-Fine-Art-of-Lying.jpg?w=1024",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.firstshowing.net/2026/meet-the-new-dinos-featurette-paw-patrol-the-dino-movie-sequel/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img17/pawpatroldinomoviefeatimgtw1.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/shorts/under-the-lake-juan-carlos-mostaza-tribeca-trailer-261878.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/Under-the-Lake-Head.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/schools/women-in-animation-esma-school-261815.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/WIA-ESMA.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://deadline.com/2026/06/lex-luthor-warsuit-superman-man-of-tomorrow-photo-1236938059/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/06/MCDSUPE_WB033.jpg?w=1024",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.cartoonbrew.com/series/warrior-cats-ac-bradley-rodrigo-blaas-261825.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/06/Warrior-Cats.jpg",
+    "last_seen": "2026-06-02"
+  },
+  "https://www.boxofficemojo.com/date/2026-06-02/": {
+    "og_image": "",
+    "last_seen": "2026-06-02"
   }
 }
