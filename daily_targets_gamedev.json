@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/atari-to-acquire-crossy-road-developer-hipster-whale"
+      "https://gnn.gamer.com.tw/detail.php?sn=305955"
     ],
-    "image_filename": "headline_20260602.png",
+    "image_filename": "headline_20260603.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/games-made-with-unity-may-2026-releases"
+      "https://www.unrealengine.com/news/fab-june-flash-sale-is-now-on"
     ],
-    "image_filename": "engine_20260602.png",
+    "image_filename": "engine_20260603.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/05/cycles-texture-cache/",
-      "https://www.blender.org/development/blender-lab-activity-report-q1-2026/"
+      "https://www.blendernation.com/2026/06/02/stop-wasting-days-rendering-in-blender/",
+      "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/",
+      "https://www.blender.org/press/blender-in-annecy-2026/"
     ],
-    "image_filename": "model3d_20260602.png",
+    "image_filename": "model3d_20260603.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,11 +49,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/take-a-look-at-this-astonishing-and-powerful-3d-model-of-a-blood-witch",
-      "https://80.lv/articles/how-to-create-rich-surface-details-like-crimson-desert-using-pom-silhouettes",
-      "https://80.lv/articles/rebuilding-a-ps2-classic-with-legacy-of-kain-defiance-remastered-devs"
+      "https://80.lv/articles/this-houdini-water-scene-looks-so-soothing-and-captivating",
+      "https://80.lv/articles/3d-artist-showcases-detailed-rustic-village-scene-created-in-unreal-engine-5"
     ],
-    "image_filename": "ta_20260602.png",
+    "image_filename": "ta_20260603.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,11 +68,16 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/uk-social-media-ban-could-impact-video-game-platforms",
-      "https://www.gamedeveloper.com/business/fable-reboot-delayed-until-february-2027",
-      "https://80.lv/articles/how-pubg-battlegrounds-became-a-co-op-heist-game-with-payday"
+      "https://www.gamedeveloper.com/business/tekken-8-game-director-kohei-ikeda-has-departed-bandai-namco",
+      "https://www.gamedeveloper.com/business/playstation-first-party-game-sales-are-in-decline",
+      "https://www.gamedeveloper.com/design/bungie-experiments-by-adding-casual-pvp-lite-mode-to-marathon",
+      "https://gnn.gamer.com.tw/detail.php?sn=305958",
+      "https://gnn.gamer.com.tw/detail.php?sn=305957",
+      "https://gnn.gamer.com.tw/detail.php?sn=305956",
+      "https://gnn.gamer.com.tw/detail.php?sn=305953",
+      "https://gnn.gamer.com.tw/detail.php?sn=305952"
     ],
-    "image_filename": "globalgames_20260602.png",
+    "image_filename": "globalgames_20260603.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,9 +89,14 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/265126/"
+      "https://godotengine.org/article/gabe-stable-release/",
+      "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-4/",
+      "https://godotengine.org/article/godot-xr-update-game-jam-v/",
+      "https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/",
+      "https://80.lv/articles/new-global-game-jam-initiative-connects-indie-studios-with-emerging-talent",
+      "https://80.lv/articles/this-3rd-person-horror-game-occurs-in-a-parallel-universe-with-voice-control"
     ],
-    "image_filename": "indie_20260602.png",
+    "image_filename": "indie_20260603.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -96,21 +106,19 @@
     ]
   },
   {
-    "section_name": "Local",
+    "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305868",
-      "https://gnn.gamer.com.tw/detail.php?sn=305867",
-      "https://gnn.gamer.com.tw/detail.php?sn=305866",
-      "https://gnn.gamer.com.tw/detail.php?sn=305864",
-      "https://gnn.gamer.com.tw/detail.php?sn=305863",
-      "https://gnn.gamer.com.tw/detail.php?sn=305862"
+      "https://www.gamedeveloper.com/business/playstation-first-party-game-sales-are-in-decline",
+      "https://www.gamedeveloper.com/design/bungie-experiments-by-adding-casual-pvp-lite-mode-to-marathon",
+      "https://godotengine.org/article/gabe-stable-release/",
+      "https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/"
     ],
-    "image_filename": "local_20260602.png",
+    "image_filename": "producer_20260603.png",
     "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
