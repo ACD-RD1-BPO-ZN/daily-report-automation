@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=305955"
+      "https://www.gamedeveloper.com/business/playerunknown-productions-is-laying-off-staff-and-halting-development"
     ],
-    "image_filename": "headline_20260603.png",
+    "image_filename": "headline_20260604.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/news/fab-june-flash-sale-is-now-on"
+      "https://www.unrealengine.com/events/join-us-at-annecy-international-animation-film-festival-2026"
     ],
-    "image_filename": "engine_20260603.png",
+    "image_filename": "engine_20260604.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/06/02/stop-wasting-days-rendering-in-blender/",
-      "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/",
-      "https://www.blender.org/press/blender-in-annecy-2026/"
+      "https://www.blender.org/archive/anthropic-joins-the-blender-development-fund-as-corporate-patron/"
     ],
-    "image_filename": "model3d_20260603.png",
+    "image_filename": "model3d_20260604.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,10 +47,13 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-houdini-water-scene-looks-so-soothing-and-captivating",
-      "https://80.lv/articles/3d-artist-showcases-detailed-rustic-village-scene-created-in-unreal-engine-5"
+      "https://80.lv/articles/ludeo-converts-clips-of-your-games-into-instantly-playable-snippets",
+      "https://80.lv/articles/real-time-voice-transformation-and-the-future-of-online-player-identity",
+      "https://80.lv/articles/how-devs-designed-a-scalable-ability-system-for-temtem-swarm",
+      "https://80.lv/articles/this-3d-take-on-a-mermaid-looks-scary-but-weirdly-fascinating",
+      "https://80.lv/articles/in-this-colorful-metroidvania-game-you-ll-explore-an-interconnected-3D-world"
     ],
-    "image_filename": "ta_20260603.png",
+    "image_filename": "ta_20260604.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,16 +69,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/tekken-8-game-director-kohei-ikeda-has-departed-bandai-namco",
-      "https://www.gamedeveloper.com/business/playstation-first-party-game-sales-are-in-decline",
-      "https://www.gamedeveloper.com/design/bungie-experiments-by-adding-casual-pvp-lite-mode-to-marathon",
-      "https://gnn.gamer.com.tw/detail.php?sn=305958",
-      "https://gnn.gamer.com.tw/detail.php?sn=305957",
-      "https://gnn.gamer.com.tw/detail.php?sn=305956",
-      "https://gnn.gamer.com.tw/detail.php?sn=305953",
-      "https://gnn.gamer.com.tw/detail.php?sn=305952"
+      "https://www.gamedeveloper.com/business/team17-has-laid-off-members-of-its-marketing-and-communications-department",
+      "https://www.gamedeveloper.com/business/total-consumer-spending-on-games-topped-60b-in-the-us-in-2025"
     ],
-    "image_filename": "globalgames_20260603.png",
+    "image_filename": "globalgames_20260604.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -89,14 +84,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/gabe-stable-release/",
-      "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-4/",
-      "https://godotengine.org/article/godot-xr-update-game-jam-v/",
-      "https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/",
-      "https://80.lv/articles/new-global-game-jam-initiative-connects-indie-studios-with-emerging-talent",
-      "https://80.lv/articles/this-3rd-person-horror-game-occurs-in-a-parallel-universe-with-voice-control"
+      "https://www.gamedeveloper.com/business/mina-the-hollower-sold-300-000-copies-in-three-days",
+      "https://gnn.gamer.com.tw/detail.php?sn=306022"
     ],
-    "image_filename": "indie_20260603.png",
+    "image_filename": "indie_20260604.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -106,14 +97,29 @@
     ]
   },
   {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=306023",
+      "https://gnn.gamer.com.tw/detail.php?sn=306021",
+      "https://gnn.gamer.com.tw/detail.php?sn=306020",
+      "https://gnn.gamer.com.tw/detail.php?sn=306019",
+      "https://gnn.gamer.com.tw/detail.php?sn=306018"
+    ],
+    "image_filename": "local_20260604.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/playstation-first-party-game-sales-are-in-decline",
-      "https://www.gamedeveloper.com/design/bungie-experiments-by-adding-casual-pvp-lite-mode-to-marathon",
-      "https://godotengine.org/article/gabe-stable-release/",
-      "https://godotengine.org/article/partners_jetbrains_rider_asset_store_addons_support/"
+      "https://www.gamedeveloper.com/business/playerunknown-productions-is-laying-off-staff-and-halting-development",
+      "https://www.gamedeveloper.com/business/mina-the-hollower-sold-300-000-copies-in-three-days"
     ],
-    "image_filename": "producer_20260603.png",
+    "image_filename": "producer_20260604.png",
     "image_keywords": [
       "marketing",
       "development",
