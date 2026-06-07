@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/06/i-knew-it-i-knew-you-music-video-taylor-swift-toy-story-5-1236942301/"
+      "https://deadline.com/2026/06/netflix-films-theatrical-release-dan-lin-1236942864/"
     ],
-    "image_filename": "headline_20260606.png",
+    "image_filename": "headline_20260607.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,15 +18,14 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/06/the-leader-review-tim-blake-nelson-vera-farmiga-suicide-cult-1236942509/",
-      "https://www.firstshowing.net/2026/strange-trailer-for-death-boom-doc-examining-the-deathcare-industry/",
-      "https://www.firstshowing.net/2026/first-trailer-for-boss-cat-down-syndrome-australian-comedy-film/",
-      "https://www.firstshowing.net/2026/indie-comedy-lets-love-trailer-with-freeman-akerman-hutcherson/",
-      "https://www.cartoonbrew.com/feature-film/kiri-and-lou-go-raaa-trailer-annecy-262161.html",
-      "https://www.firstshowing.net/2026/fun-trailer-for-kiri-and-lou-go-raaa-new-zealand-stop-motion-movie/",
-      "https://www.firstshowing.net/2026/another-trailer-for-chinese-tom-jerry-forbidden-compass-movie/"
+      "https://deadline.com/2026/06/tomb-raider-legacy-of-atlantis-alix-wilton-regan-interview-1236942875/",
+      "https://variety.com/2026/film/news/john-c-reilly-convince-leonardo-dicaprio-pass-on-titanic-1236768667/",
+      "https://variety.com/2026/artisans/news/masters-of-the-universe-daniel-pemberton-theme-brian-may-1236766974/",
+      "https://deadline.com/2026/06/margaret-cho-lilly-wachowski-nina-nguyen-special-dreams-ep-1236942670/",
+      "https://www.firstshowing.net/2026/another-trailer-for-chinese-tom-jerry-forbidden-compass-movie/",
+      "https://anilist.co/anime/147105"
     ],
-    "image_filename": "production_20260606.png",
+    "image_filename": "production_20260607.png",
     "image_keywords": [
       "film",
       "production",
@@ -41,40 +40,15 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/06/the-odyssey-advance-sales-amc-1236942447/",
-      "https://deadline.com/2026/06/paramount-video-games-new-studio-1236942484/",
-      "https://www.boxofficemojo.com/date/2026-06-06/",
-      "https://www.cartoonbrew.com/business/dneg-anima-kitchent-spain-canary-islands-262166.html",
-      "https://www.cartoonbrew.com/box-office-report/amazing-digital-circus-thursday-previews-262151.html"
+      "https://variety.com/2026/film/box-office/box-office-scary-movie-masters-of-the-universe-backrooms-1236768580/",
+      "https://www.boxofficemojo.com/date/2026-06-07/"
     ],
-    "image_filename": "boxoffice_20260606.png",
+    "image_filename": "boxoffice_20260607.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
-    ]
-  },
-  {
-    "section_name": "Streaming",
-    "source_urls": [
-      "https://deadline.com/2026/06/love-island-usa-season-8-premiere-ratings-streaming-record-1236942495/",
-      "https://variety.com/2026/film/news/netflix-dan-lin-wont-work-with-directors-who-want-theatrical-1236768048/",
-      "https://www.firstshowing.net/2026/go-back-to-high-school-in-never-change-hulu-comedy-movie-trailer/",
-      "https://variety.com/lists/best-movies-streaming-june-2026/",
-      "https://variety.com/2026/music/news/madonna-confessions-ii-the-film-release-youtube-1236768171/",
-      "https://deadline.com/2026/06/among-us-animated-series-game-release-date-trailer-1236941920/",
-      "https://www.cartoonbrew.com/streaming/swapped-netflix-nathan-greno-skydance-animation-262156.html"
-    ],
-    "image_filename": "streaming_20260606.png",
-    "image_keywords": [
-      "netflix",
-      "disney+",
-      "hbo",
-      "streaming",
-      "series",
-      "anime",
-      "crunchyroll"
     ]
   }
 ]
