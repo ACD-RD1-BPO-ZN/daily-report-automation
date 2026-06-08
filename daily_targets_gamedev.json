@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306205"
+      "https://gnn.gamer.com.tw/detail.php?sn=306231"
     ],
-    "image_filename": "headline_20260607.png",
+    "image_filename": "headline_20260608.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,29 +14,14 @@
     ]
   },
   {
-    "section_name": "Model3D",
-    "source_urls": [
-      "https://www.blendernation.com/2026/06/06/best-of-blender-artists-2026-23/"
-    ],
-    "image_filename": "model3d_20260607.png",
-    "image_keywords": [
-      "3d",
-      "modeling",
-      "sculpt",
-      "topology",
-      "blender",
-      "maya",
-      "zbrush",
-      "substance"
-    ]
-  },
-  {
     "section_name": "TA",
     "source_urls": [
+      "https://80.lv/articles/psychological-horror-game-un-me-announced-for-switch-2-ps5-and-pc",
       "https://80.lv/articles/take-a-closer-look-at-mesa-the-ai-from-prove-you-re-human",
+      "https://80.lv/articles/1666-amsterdam-is-a-dark-story-driven-action-game-from-the-creator-of-assassin-s-creed",
       "https://80.lv/articles/pick-your-poison-behind-the-iconic-blend-of-k-pop-energy-with-k-da-vibes-and-punk-rock"
     ],
-    "image_filename": "ta_20260607.png",
+    "image_filename": "ta_20260608.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -52,11 +37,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306207",
-      "https://80.lv/articles/psychological-horror-game-un-me-announced-for-switch-2-ps5-and-pc",
-      "https://80.lv/articles/1666-amsterdam-is-a-dark-story-driven-action-game-from-the-creator-of-assassin-s-creed"
+      "https://gnn.gamer.com.tw/detail.php?sn=306234",
+      "https://gnn.gamer.com.tw/detail.php?sn=306233",
+      "https://gnn.gamer.com.tw/detail.php?sn=306232",
+      "https://gnn.gamer.com.tw/detail.php?sn=306230",
+      "https://gnn.gamer.com.tw/detail.php?sn=306229"
     ],
-    "image_filename": "globalgames_20260607.png",
+    "image_filename": "globalgames_20260608.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -68,12 +55,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306208",
-      "https://gnn.gamer.com.tw/detail.php?sn=306203",
-      "https://80.lv/articles/indie-game-mina-the-hollower-sold-300-000-copies-in-its-first-three-days",
-      "https://store.steampowered.com/news/270398/"
+      "https://80.lv/articles/indie-game-mina-the-hollower-sold-300-000-copies-in-its-first-three-days"
     ],
-    "image_filename": "indie_20260607.png",
+    "image_filename": "indie_20260608.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -83,27 +67,16 @@
     ]
   },
   {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306206",
-      "https://gnn.gamer.com.tw/detail.php?sn=306204"
-    ],
-    "image_filename": "local_20260607.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306205",
-      "https://80.lv/articles/indie-game-mina-the-hollower-sold-300-000-copies-in-its-first-three-days",
-      "https://gnn.gamer.com.tw/detail.php?sn=306206"
+      "https://gnn.gamer.com.tw/detail.php?sn=306234",
+      "https://gnn.gamer.com.tw/detail.php?sn=306233",
+      "https://gnn.gamer.com.tw/detail.php?sn=306232",
+      "https://gnn.gamer.com.tw/detail.php?sn=306231",
+      "https://gnn.gamer.com.tw/detail.php?sn=306230",
+      "https://gnn.gamer.com.tw/detail.php?sn=306229"
     ],
-    "image_filename": "producer_20260607.png",
+    "image_filename": "producer_20260608.png",
     "image_keywords": [
       "marketing",
       "development",
