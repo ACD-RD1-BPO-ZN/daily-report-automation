@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/nintendo-of-europe-to-pay-40m-fine-for-joy-con-drift-issues"
+      "https://gnn.gamer.com.tw/detail.php?sn=306486"
     ],
-    "image_filename": "headline_20260610.png",
+    "image_filename": "headline_20260611.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,13 +16,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/silent-hill-townfall-uses-a-pocket-sized-crtv-to-replace-the-radio-as-a-core-game-mechanic",
-      "https://80.lv/articles/game-that-blends-2d-and-3d-platforming-finally-has-a-release-date",
-      "https://80.lv/articles/this-stylized-hand-animation-textured-with-substance-3d-has-spider-verse-vibes",
-      "https://80.lv/articles/this-cozy-hand-drawn-anime-inspired-farming-sim-looks-like-a-ghibli-movie",
-      "https://80.lv/articles/in-this-lovecraft-inspired-roguelite-game-you-ll-lead-a-team-of-alpinists"
+      "https://80.lv/articles/xbox-is-planning-major-layoffs-in-company-reset-after-being-over-extended",
+      "https://80.lv/articles/007-first-light-has-become-io-interactive-s-fastest-selling-game",
+      "https://80.lv/articles/resident-evil-veronica-producer-shares-new-details-confirms-re2-remake-team-at-helm"
     ],
-    "image_filename": "ta_20260610.png",
+    "image_filename": "ta_20260611.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -38,13 +36,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-rethinking-strategy-around-project-helix-due-to-memory-crisis",
-      "https://www.gamedeveloper.com/production/can-telltale-games-learn-from-its-past-mistakes-",
-      "https://www.gamedeveloper.com/business/007-first-light-sales-hit-3m-in-less-than-two-weeks",
-      "https://www.gamedeveloper.com/business/xbox-console-exclusives-are-returning-on-a-case-by-case-basis",
-      "https://www.gamedeveloper.com/business/embracer-owned-vr-developer-vertigo-games-closes-amsterdam-studio"
+      "https://www.gamedeveloper.com/business/ubisoft-closing-winnipeg-and-belgrade-studios-and-making-further-layoffs",
+      "https://www.gamedeveloper.com/business/esa-says-anti-deepfake-act-could-devastate-video-game-industry",
+      "https://www.gamedeveloper.com/business/xbox-ceo-unsure-whether-activision-blizzard-merger-is-paying-off",
+      "https://gnn.gamer.com.tw/detail.php?sn=306491",
+      "https://gnn.gamer.com.tw/detail.php?sn=306490"
     ],
-    "image_filename": "globalgames_20260610.png",
+    "image_filename": "globalgames_20260611.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -54,21 +52,47 @@
     ]
   },
   {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=306489",
+      "https://gnn.gamer.com.tw/detail.php?sn=306487"
+    ],
+    "image_filename": "indie_20260611.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306422",
-      "https://gnn.gamer.com.tw/detail.php?sn=306421",
-      "https://gnn.gamer.com.tw/detail.php?sn=306420",
-      "https://gnn.gamer.com.tw/detail.php?sn=306419",
-      "https://gnn.gamer.com.tw/detail.php?sn=306418",
-      "https://gnn.gamer.com.tw/detail.php?sn=306417"
+      "https://gnn.gamer.com.tw/detail.php?sn=306488"
     ],
-    "image_filename": "local_20260610.png",
+    "image_filename": "local_20260611.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/ubisoft-closing-winnipeg-and-belgrade-studios-and-making-further-layoffs",
+      "https://www.gamedeveloper.com/business/xbox-ceo-unsure-whether-activision-blizzard-merger-is-paying-off",
+      "https://gnn.gamer.com.tw/detail.php?sn=306486",
+      "https://gnn.gamer.com.tw/detail.php?sn=306487"
+    ],
+    "image_filename": "producer_20260611.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
