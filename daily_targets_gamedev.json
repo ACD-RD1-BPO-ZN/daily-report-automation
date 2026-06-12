@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306486"
+      "https://gnn.gamer.com.tw/detail.php?sn=306561"
     ],
-    "image_filename": "headline_20260611.png",
+    "image_filename": "headline_20260612.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,13 +14,45 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/mattel163-phase-10-vector-roas",
+      "https://unity.com/blog/interactive-3d-training-unity-studio-without-simulation-teams"
+    ],
+    "image_filename": "engine_20260612.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
+    "section_name": "Model3D",
+    "source_urls": [
+      "https://www.blendernation.com/2026/06/11/a-quick-guide-to-fields-in-blenders-geometry-nodes/"
+    ],
+    "image_filename": "model3d_20260612.png",
+    "image_keywords": [
+      "3d",
+      "modeling",
+      "sculpt",
+      "topology",
+      "blender",
+      "maya",
+      "zbrush",
+      "substance"
+    ]
+  },
+  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/xbox-is-planning-major-layoffs-in-company-reset-after-being-over-extended",
-      "https://80.lv/articles/007-first-light-has-become-io-interactive-s-fastest-selling-game",
-      "https://80.lv/articles/resident-evil-veronica-producer-shares-new-details-confirms-re2-remake-team-at-helm"
+      "https://80.lv/articles/how-to-create-dynamic-tentacle-and-rope-simulation-inspired-by-returnal",
+      "https://80.lv/articles/you-re-having-the-wrong-conversation-about-environment-art-co-development",
+      "https://80.lv/articles/see-how-you-can-create-large-city-environments-for-games"
     ],
-    "image_filename": "ta_20260611.png",
+    "image_filename": "ta_20260612.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -36,13 +68,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ubisoft-closing-winnipeg-and-belgrade-studios-and-making-further-layoffs",
-      "https://www.gamedeveloper.com/business/esa-says-anti-deepfake-act-could-devastate-video-game-industry",
-      "https://www.gamedeveloper.com/business/xbox-ceo-unsure-whether-activision-blizzard-merger-is-paying-off",
-      "https://gnn.gamer.com.tw/detail.php?sn=306491",
-      "https://gnn.gamer.com.tw/detail.php?sn=306490"
+      "https://gnn.gamer.com.tw/detail.php?sn=306564",
+      "https://gnn.gamer.com.tw/detail.php?sn=306562",
+      "https://gnn.gamer.com.tw/detail.php?sn=306566"
     ],
-    "image_filename": "globalgames_20260611.png",
+    "image_filename": "globalgames_20260612.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -54,10 +84,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306489",
-      "https://gnn.gamer.com.tw/detail.php?sn=306487"
+      "https://gnn.gamer.com.tw/detail.php?sn=306563",
+      "https://gnn.gamer.com.tw/detail.php?sn=306565",
+      "https://80.lv/articles/this-embroidered-platformer-with-hand-painted-backgrounds-finally-has-a-release-date",
+      "https://80.lv/articles/check-out-this-demo-where-you-craft-rubber-ducks-to-feed-to-a-corporate-void"
     ],
-    "image_filename": "indie_20260611.png",
+    "image_filename": "indie_20260612.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -67,27 +99,15 @@
     ]
   },
   {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306488"
-    ],
-    "image_filename": "local_20260611.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ubisoft-closing-winnipeg-and-belgrade-studios-and-making-further-layoffs",
-      "https://www.gamedeveloper.com/business/xbox-ceo-unsure-whether-activision-blizzard-merger-is-paying-off",
-      "https://gnn.gamer.com.tw/detail.php?sn=306486",
-      "https://gnn.gamer.com.tw/detail.php?sn=306487"
+      "https://gnn.gamer.com.tw/detail.php?sn=306561",
+      "https://unity.com/blog/mattel163-phase-10-vector-roas",
+      "https://unity.com/blog/interactive-3d-training-unity-studio-without-simulation-teams",
+      "https://www.blendernation.com/2026/06/11/a-quick-guide-to-fields-in-blenders-geometry-nodes/",
+      "https://80.lv/articles/how-to-create-dynamic-tentacle-and-rope-simulation-inspired-by-returnal"
     ],
-    "image_filename": "producer_20260611.png",
+    "image_filename": "producer_20260612.png",
     "image_keywords": [
       "marketing",
       "development",
