@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306561"
+      "https://gnn.gamer.com.tw/detail.php?sn=306648"
     ],
-    "image_filename": "headline_20260612.png",
+    "image_filename": "headline_20260613.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/mattel163-phase-10-vector-roas",
-      "https://unity.com/blog/interactive-3d-training-unity-studio-without-simulation-teams"
+      "https://unity.com/blog/attain-partnership-measuring-mobile-gaming-sales-outcomes"
     ],
-    "image_filename": "engine_20260612.png",
+    "image_filename": "engine_20260613.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,9 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/06/11/a-quick-guide-to-fields-in-blenders-geometry-nodes/"
+      "https://www.blendernation.com/2026/06/12/blender-jobs-for-june-12-2026/",
+      "https://80.lv/articles/3d-artist-shares-the-substance-3d-painter-file-of-man-on-the-subway/"
     ],
-    "image_filename": "model3d_20260612.png",
+    "image_filename": "model3d_20260613.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,11 +48,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-to-create-dynamic-tentacle-and-rope-simulation-inspired-by-returnal",
-      "https://80.lv/articles/you-re-having-the-wrong-conversation-about-environment-art-co-development",
-      "https://80.lv/articles/see-how-you-can-create-large-city-environments-for-games"
+      "https://80.lv/articles/akko-dash-ultra-40-gram-gaming-mouse-with-8k-polling",
+      "https://80.lv/articles/check-out-this-cool-animation-of-a-very-expressive-but-faceless-creature/"
     ],
-    "image_filename": "ta_20260612.png",
+    "image_filename": "ta_20260613.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,11 +67,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306564",
-      "https://gnn.gamer.com.tw/detail.php?sn=306562",
-      "https://gnn.gamer.com.tw/detail.php?sn=306566"
+      "https://www.gamedeveloper.com/business/playstack-ceo-pledges-to-be-mindful-about-growth-after-majority-takeover",
+      "https://www.gamedeveloper.com/business/crimson-desert-tops-6m-sales-within-three-months",
+      "https://www.gamedeveloper.com/business/report-pokemon-go-area-scans-sold-to-military-drone-technology-company",
+      "https://gnn.gamer.com.tw/detail.php?sn=306649"
     ],
-    "image_filename": "globalgames_20260612.png",
+    "image_filename": "globalgames_20260613.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,12 +84,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306563",
-      "https://gnn.gamer.com.tw/detail.php?sn=306565",
-      "https://80.lv/articles/this-embroidered-platformer-with-hand-painted-backgrounds-finally-has-a-release-date",
-      "https://80.lv/articles/check-out-this-demo-where-you-craft-rubber-ducks-to-feed-to-a-corporate-void"
+      "https://gnn.gamer.com.tw/detail.php?sn=306647",
+      "https://gnn.gamer.com.tw/detail.php?sn=306645",
+      "https://gnn.gamer.com.tw/detail.php?sn=306644",
+      "https://www.gamedeveloper.com/business/indie-games-sites-bring-bundles-back-to-media-solidarity-feels-like-a-very-important-part-of-the-scene-right-now-"
     ],
-    "image_filename": "indie_20260612.png",
+    "image_filename": "indie_20260613.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -99,15 +99,25 @@
     ]
   },
   {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=306646"
+    ],
+    "image_filename": "local_20260613.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306561",
-      "https://unity.com/blog/mattel163-phase-10-vector-roas",
-      "https://unity.com/blog/interactive-3d-training-unity-studio-without-simulation-teams",
-      "https://www.blendernation.com/2026/06/11/a-quick-guide-to-fields-in-blenders-geometry-nodes/",
-      "https://80.lv/articles/how-to-create-dynamic-tentacle-and-rope-simulation-inspired-by-returnal"
+      "https://www.gamedeveloper.com/design/the-art-of-game-writing-in-non-narrative-games-ft-emma-kidwell-and-harrison-pink",
+      "https://www.gamedeveloper.com/business/playstack-sold-xbox-announces-business-reset-and-is-generative-ai-poisoning-the-well-patch-notes-55"
     ],
-    "image_filename": "producer_20260612.png",
+    "image_filename": "producer_20260613.png",
     "image_keywords": [
       "marketing",
       "development",
