@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/columns/how-alien-conspiracy-theory-got-respectable-disclosure-day-1236780665/"
+      "https://variety.com/2026/film/box-office/disclosure-day-global-box-office-debut-michael-biopic-milestone-1236780903/"
     ],
-    "image_filename": "headline_20260614.png",
+    "image_filename": "headline_20260615.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,11 +18,15 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/06/cape-fear-creator-always-wanted-juliette-lewis-1236955797/",
-      "https://variety.com/2026/film/festivals/cashmere-brunello-cucinelli-tornatore-shanghai-chinese-1236780494/",
-      "https://variety.com/2026/film/reviews/act-one-review-1236780536/"
+      "https://deadline.com/2026/06/milly-alcock-supergirl-cape-same-fabric-christopher-reeve-1236956011/",
+      "https://deadline.com/2026/06/joel-mchale-patrick-dempsey-name-scream-7-set-chair-1236956055/",
+      "https://variety.com/2026/film/global/banu-sivacis-hear-the-yellow-taormina-film-festival-awards-1236780987/",
+      "https://variety.com/2026/film/festivals/anthony-chen-shanghai-film-festival-golden-goblet-break-conventions-1236780985/",
+      "https://variety.com/2026/film/global/riofilme-shanghai-mission-partnerships-content-growth-1236780727/",
+      "https://www.firstshowing.net/2026/official-trailer-for-my-fathers-island-in-norway-feat-swann-arlaud/",
+      "https://www.firstshowing.net/2026/flashy-20th-anniversary-trailer-for-pixars-cars-movie/"
     ],
-    "image_filename": "production_20260614.png",
+    "image_filename": "production_20260615.png",
     "image_keywords": [
       "film",
       "production",
@@ -37,33 +41,15 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/06/mexico-south-africa-most-watched-fifa-world-cup-opening-1236955788/",
-      "https://www.boxofficemojo.com/date/2026-06-14/",
-      "https://deadline.com/2026/06/laverne-cox-lost-so-much-money-trump-killed-dei-1236955803/",
-      "https://variety.com/2026/film/news/seth-rogen-no-plans-work-with-james-franco-havent-spoken-1236780763/"
+      "https://deadline.com/2026/06/indie-film-box-office-the-furious-stop-that-train-the-third-man-1236956010/",
+      "https://www.boxofficemojo.com/date/2026-06-15/"
     ],
-    "image_filename": "boxoffice_20260614.png",
+    "image_filename": "boxoffice_20260615.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
-    ]
-  },
-  {
-    "section_name": "Streaming",
-    "source_urls": [
-      "https://variety.com/2026/film/awards/emmys-tv-movie-category-crowd-pleasers-1236780016/"
-    ],
-    "image_filename": "streaming_20260614.png",
-    "image_keywords": [
-      "netflix",
-      "disney+",
-      "hbo",
-      "streaming",
-      "series",
-      "anime",
-      "crunchyroll"
     ]
   }
 ]
