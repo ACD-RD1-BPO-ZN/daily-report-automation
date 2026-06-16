@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306652"
+      "https://www.gamedeveloper.com/console/microsoft-ceo-says-xbox-must-become-sustainable-as-it-reportedly-considers-major-spinoff"
     ],
-    "image_filename": "headline_20260615.png",
+    "image_filename": "headline_20260616.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/playrix-township-roas-optimization-vector"
+      "https://www.unrealengine.com/news/free-professional-unreal-engine-courses-now-available-on-the-epic-developer-community",
+      "https://unity.com/blog/layering-gaming-audiences-to-unlock-programmatic-ad-performance"
     ],
-    "image_filename": "engine_20260615.png",
+    "image_filename": "engine_20260616.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +31,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/06/14/creating-a-helicopter-robot-in-blender/"
+      "https://www.blendernation.com/2026/06/15/blender-spotted-in-boston-dynamics-atlas-football-pipeline/",
+      "https://80.lv/articles/this-blender-animation-with-futuristic-vibes-looks-very-stunning",
+      "https://80.lv/articles/modeling-and-texturing-an-interesting-hand-painted-game-ready-3d-character"
     ],
-    "image_filename": "model3d_20260615.png",
+    "image_filename": "model3d_20260616.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,11 +50,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/3d-artist-shares-the-substance-3d-painter-file-of-man-on-the-subway",
-      "https://80.lv/articles/developing-original-3d-chimera-character",
-      "https://80.lv/articles/check-out-this-cool-animation-of-a-very-expressive-but-faceless-creature"
+      "https://80.lv/articles/this-war-short-film-made-with-unreal-engine-5-is-truly-heartbreaking",
+      "https://80.lv/articles/how-to-design-and-render-realistic-hair-using-xgen-and-unreal-engine",
+      "https://80.lv/articles/delicious-animation-for-first-food-forest-in-netherlands"
     ],
-    "image_filename": "ta_20260615.png",
+    "image_filename": "ta_20260616.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,10 +70,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306653",
-      "https://gnn.gamer.com.tw/detail.php?sn=306654"
+      "https://www.gamedeveloper.com/business/report-compulsion-games-leadership-in-negotiations-with-xbox-potential-studio-closure",
+      "https://www.gamedeveloper.com/marketing/ea-announces-advertising-platform-to-launch-ads-apos-directly-into-gameplay-apos-",
+      "https://www.gamedeveloper.com/business/report-two-former-rare-execs-are-leaving-xbox",
+      "https://gnn.gamer.com.tw/detail.php?sn=306707",
+      "https://gnn.gamer.com.tw/detail.php?sn=306706"
     ],
-    "image_filename": "globalgames_20260615.png",
+    "image_filename": "globalgames_20260616.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,10 +88,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/this-roguelike-deckbuilder-mixes-dante-s-inferno-and-lovecraftian-horror",
-      "https://80.lv/articles/what-keeps-a-game-running-for-24-years"
+      "https://gnn.gamer.com.tw/detail.php?sn=306709",
+      "https://gnn.gamer.com.tw/detail.php?sn=306705"
     ],
-    "image_filename": "indie_20260615.png",
+    "image_filename": "indie_20260616.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -95,18 +101,17 @@
     ]
   },
   {
-    "section_name": "Producer",
+    "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306652",
-      "https://unity.com/blog/playrix-township-roas-optimization-vector",
-      "https://80.lv/articles/what-keeps-a-game-running-for-24-years"
+      "https://gnn.gamer.com.tw/detail.php?sn=306712",
+      "https://gnn.gamer.com.tw/detail.php?sn=306708"
     ],
-    "image_filename": "producer_20260615.png",
+    "image_filename": "local_20260616.png",
     "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]
