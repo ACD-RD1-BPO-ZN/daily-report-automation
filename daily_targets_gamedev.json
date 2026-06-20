@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306952"
+      "https://80.lv/articles/epic-games-has-paid-out-over-usd1-billion-to-indie-creators-through-unreal-editor-for-fortnite"
     ],
-    "image_filename": "headline_20260619.png",
+    "image_filename": "headline_20260620.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306951",
-      "https://80.lv/articles/upd-unreal-engine-6-will-combine-uefn-and-ue-into-a-unified-engine/"
+      "https://80.lv/articles/state-of-unreal-ue6-reactions-hype-skepticism-and-what-it-means-for-game-devs"
     ],
-    "image_filename": "engine_20260619.png",
+    "image_filename": "engine_20260620.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,9 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/06/18/free-download-procedural-crystal-generator/"
+      "https://www.blendernation.com/2026/06/19/blender-jobs-for-june-19-2026/"
     ],
-    "image_filename": "model3d_20260619.png",
+    "image_filename": "model3d_20260620.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,10 +47,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-maya-tool-allows-you-to-keep-what-you-need-under-your-mouse-cursor/",
-      "https://80.lv/articles/aero-1-7-a-volumetric-fog-and-mist-shader-in-unity/"
+      "https://80.lv/articles/this-houdini-foam-simulation-it-s-very-satisfying-to-watch",
+      "https://80.lv/articles/check-out-this-beautiful-character-with-spellbinding-eyes",
+      "https://80.lv/articles/join-the-showcase-competition-to-win-creative-software-licenses"
     ],
-    "image_filename": "ta_20260619.png",
+    "image_filename": "ta_20260620.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,13 +67,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306952",
-      "https://gnn.gamer.com.tw/detail.php?sn=306950",
-      "https://gnn.gamer.com.tw/detail.php?sn=306949",
-      "https://gnn.gamer.com.tw/detail.php?sn=306948",
-      "https://gnn.gamer.com.tw/detail.php?sn=306947"
+      "https://gnn.gamer.com.tw/detail.php?sn=306958",
+      "https://gnn.gamer.com.tw/detail.php?sn=306956"
     ],
-    "image_filename": "globalgames_20260619.png",
+    "image_filename": "globalgames_20260620.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -83,17 +80,35 @@
     ]
   },
   {
-    "section_name": "Indie",
+    "section_name": "Local",
     "source_urls": [
-      "https://80.lv/articles/in-this-cute-exploration-game-you-ll-be-a-magpie-with-one-wing/"
+      "https://gnn.gamer.com.tw/detail.php?sn=306964",
+      "https://gnn.gamer.com.tw/detail.php?sn=306963",
+      "https://gnn.gamer.com.tw/detail.php?sn=306962",
+      "https://gnn.gamer.com.tw/detail.php?sn=306959"
     ],
-    "image_filename": "indie_20260619.png",
+    "image_filename": "local_20260620.png",
     "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://80.lv/articles/epic-games-has-paid-out-over-usd1-billion-to-indie-creators-through-unreal-editor-for-fortnite",
+      "https://gnn.gamer.com.tw/detail.php?sn=306958",
+      "https://gnn.gamer.com.tw/detail.php?sn=306962",
+      "https://gnn.gamer.com.tw/detail.php?sn=306959"
+    ],
+    "image_filename": "producer_20260620.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
