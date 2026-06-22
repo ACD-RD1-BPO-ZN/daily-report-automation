@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306967"
+      "https://gnn.gamer.com.tw/detail.php?sn=306969"
     ],
-    "image_filename": "headline_20260621.png",
+    "image_filename": "headline_20260622.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,96 +14,16 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://80.lv/articles/learn-unreal-engine-5-8-animation-rigging-with-free-zebra-character-sample",
-      "https://80.lv/articles/render-wireframe-effects-in-unity-with-this-shader"
-    ],
-    "image_filename": "engine_20260621.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
-    "section_name": "TA",
-    "source_urls": [
-      "https://80.lv/articles/create-your-own-survival-and-crafting-games-with-this-kit",
-      "https://80.lv/articles/possible-mistake-in-gta-6-cover-art-makes-players-discuss-gators-crocs-at-length"
-    ],
-    "image_filename": "ta_20260621.png",
-    "image_keywords": [
-      "screenshot",
-      "preview",
-      "featured",
-      "spotlight",
-      "render",
-      "engine",
-      "technology",
-      "shader",
-      "scene"
-    ]
-  },
-  {
-    "section_name": "GlobalGames",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/kabam-making-layoffs-after-choosing-to-consolidate-la-office",
-      "https://www.gamedeveloper.com/business/report-former-xbox-president-sarah-bond-and-take-two-ceo-strauss-zelnick-involved-in-peter-thiel-backed-secret-society",
-      "https://www.gamedeveloper.com/business/rockstar-s-legal-setback-final-fantasy-tax-incentives-and-playstation-swaps-'pc'-for-'ai'-patch-notes-57",
-      "https://80.lv/articles/epic-s-roadmap-for-its-game-store-includes-overhauled-launcher"
-    ],
-    "image_filename": "globalgames_20260621.png",
-    "image_keywords": [
-      "gameplay",
-      "trailer",
-      "release",
-      "commercial",
-      "global"
-    ]
-  },
-  {
-    "section_name": "Indie",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/palworld-lead-on-genai-gamers-don-t-want-it",
-      "https://www.gamedeveloper.com/business/vampire-survivors-dev-reviewing-fortnite-collab-after-ai-usage-news"
-    ],
-    "image_filename": "indie_20260621.png",
-    "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
-    ]
-  },
-  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=306966",
-      "https://gnn.gamer.com.tw/detail.php?sn=306965"
+      "https://gnn.gamer.com.tw/detail.php?sn=306968"
     ],
-    "image_filename": "local_20260621.png",
+    "image_filename": "local_20260622.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/-a-new-industry-with-a-new-identity-how-canadian-devs-are-faring-in-2026"
-    ],
-    "image_filename": "producer_20260621.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
