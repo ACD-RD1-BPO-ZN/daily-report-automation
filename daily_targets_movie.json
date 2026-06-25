@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/news/disney-failed-buy-james-bond-twitter-apple-bob-iger-1236788523/"
+      "https://deadline.com/2026/06/jeff-olson-dead-star-wars-star-trek-visual-effects-1236966864/"
     ],
-    "image_filename": "headline_20260624.png",
+    "image_filename": "headline_20260625.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,19 +18,17 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/06/kent-tsai-mark-lee-pts-taigi-s11-partners-third-culture-1236959103/",
-      "https://variety.com/2026/film/festivals/na-hong-jin-hope-north-american-premiere-nyaff-1236787868/",
-      "https://www.firstshowing.net/2026/official-trailer-for-volker-schlondorffs-visitation-film-with-lars-eidinger/",
-      "https://www.firstshowing.net/2026/hbo-maxs-stuart-fails-to-save-the-universe-sci-fi-series-full-trailer/",
-      "https://variety.com/2026/film/features/american-dollhouse-modern-slasher-wild-villain-1236787794/",
-      "https://www.firstshowing.net/2026/freaky-trailer-for-shark-horror-the-bay-set-in-a-tiger-shark-sanctuary/",
-      "https://www.cartoonbrew.com/feature-film/forgotten-island-annecy-trailer-joel-crawford-januel-mercado-263470.html",
-      "https://www.cartoonbrew.com/feature-film/minions-and-monsters-pierre-coffin-chris-meledandri-263497.html",
-      "https://www.cartoonbrew.com/feature-film/kiri-and-lou-go-raaa-creators-annecy-263503.html",
-      "https://www.cartoonbrew.com/feature-film/gregor-trailer-manu-gomez-annecy-263486.html",
-      "https://www.cartoonbrew.com/anime/nippon-animation-earth-odyssey-taverna-alices-annecy-263487.html"
+      "https://deadline.com/2026/06/beatles-hamburg-days-asa-butterfield-jonny-lee-miller-1236966007/",
+      "https://variety.com/2026/film/news/fjord-october-release-date-neon-1236789562/",
+      "https://www.firstshowing.net/2026/full-trailer-for-practical-magic-2-with-bullock-kidman-king-pace/",
+      "https://www.firstshowing.net/2026/official-trailer-for-the-outer-threat-alien-discovery-indie-sci-fi-film/",
+      "https://www.firstshowing.net/2026/music-history-documentary-wham-10-days-in-china-official-trailer/",
+      "https://deadline.com/2026/06/ss-rajamouli-annecy-baahubali-eternal-war-wip-european-tour-1236966782/",
+      "https://www.cartoonbrew.com/feature-film/shaun-the-sheep-the-beast-of-mossy-bottom-trailer-263546.html",
+      "https://www.cartoonbrew.com/anime/kasagi-ninja-scroll-living-in-a-world-without-magic-263535.html",
+      "https://www.cartoonbrew.com/feature-film/julien-chheng-mu-yi-and-the-handsome-general-cachette-annecy-263153.html"
     ],
-    "image_filename": "production_20260624.png",
+    "image_filename": "production_20260625.png",
     "image_keywords": [
       "film",
       "production",
@@ -45,16 +43,13 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-06-24/",
-      "https://deadline.com/2026/06/disney-bob-iger-ceo-succession-bob-chapek-1236965542/",
-      "https://variety.com/2026/film/news/film-news-in-brief-june-22-2026-1236787254/",
-      "https://deadline.com/2026/06/doc-talk-podcast-dc-dox-millennium-docs-against-gravity-1236965363/",
-      "https://variety.com/2026/film/news/nate-bargatze-maga-w-kamau-bell-fascist-photos-1236788337/",
-      "https://deadline.com/2026/06/ufc-joshua-hokit-michelle-obama-comment-compliment-1236965555/",
-      "https://deadline.com/2026/06/trump-regime-change-book-five-takeaways-1236965231/",
-      "https://www.cartoonbrew.com/festivals/crunchyroll-beyond-anime-wolf-dreamland-263481.html"
+      "https://www.boxofficemojo.com/date/2026-06-25/",
+      "https://variety.com/2026/film/awards/oscars-academy-new-members-jacob-elordi-jenna-ortega-1236789523/",
+      "https://deadline.com/2026/06/ida-getting-real-26-conference-lineup-1236966814/",
+      "https://deadline.com/2026/06/the-arena-hires-four-1236966735/",
+      "https://variety.com/2026/film/global/charlotte-toledano-alyx-films-geronimo-1236789526/"
     ],
-    "image_filename": "boxoffice_20260624.png",
+    "image_filename": "boxoffice_20260625.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -65,11 +60,11 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://www.firstshowing.net/2026/hbo-maxs-stuart-fails-to-save-the-universe-sci-fi-series-full-trailer/",
-      "https://deadline.com/2026/06/mindy-kaling-star-comedy-series-drama-golden-girls-1236963548/",
-      "https://variety.com/2026/film/news/magic-school-bus-live-action-movie-elizabeth-banks-ms-frizzle-director-1236787487/"
+      "https://www.cartoonbrew.com/streaming/helluva-boss-invincible-conan-prime-video-annecy-263531.html",
+      "https://www.cartoonbrew.com/streaming/netflix-ray-gun-ghostbusters-charlie-annecy-263465.html",
+      "https://www.cartoonbrew.com/animators/wba-genndy-tartakovsky-conan-bubblegum-and-marceline-263590.html"
     ],
-    "image_filename": "streaming_20260624.png",
+    "image_filename": "streaming_20260625.png",
     "image_keywords": [
       "netflix",
       "disney+",
