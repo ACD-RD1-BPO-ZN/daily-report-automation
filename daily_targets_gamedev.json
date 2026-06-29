@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307357"
+      "https://gnn.gamer.com.tw/detail.php?sn=307366"
     ],
-    "image_filename": "headline_20260628.png",
+    "image_filename": "headline_20260629.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,43 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307357"
-    ],
-    "image_filename": "engine_20260628.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
-    "section_name": "Model3D",
-    "source_urls": [
-      "https://80.lv/articles/one-click-blender-tool-for-finger-alignment-to-any-object"
-    ],
-    "image_filename": "model3d_20260628.png",
-    "image_keywords": [
-      "3d",
-      "modeling",
-      "sculpt",
-      "topology",
-      "blender",
-      "maya",
-      "zbrush",
-      "substance"
-    ]
-  },
-  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/miris-built-a-car-configurator-without-pixel-streaming-here-s-what-they-found",
-      "https://80.lv/articles/the-attention-economy-how-games-win-mind-share-in-2026"
+      "https://80.lv/articles/wkipedia-co-founder-has-been-banned-from-editing-the-site"
     ],
-    "image_filename": "ta_20260628.png",
+    "image_filename": "ta_20260629.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +34,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307356",
-      "https://gnn.gamer.com.tw/detail.php?sn=307358",
-      "https://gnn.gamer.com.tw/detail.php?sn=307355"
+      "https://gnn.gamer.com.tw/detail.php?sn=307361"
     ],
-    "image_filename": "globalgames_20260628.png",
+    "image_filename": "globalgames_20260629.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -80,18 +46,19 @@
     ]
   },
   {
-    "section_name": "Indie",
+    "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307359",
-      "https://80.lv/articles/adorable-adventures-win-your-steam-key"
+      "https://gnn.gamer.com.tw/detail.php?sn=307364",
+      "https://gnn.gamer.com.tw/detail.php?sn=307363",
+      "https://gnn.gamer.com.tw/detail.php?sn=307362",
+      "https://gnn.gamer.com.tw/detail.php?sn=307365"
     ],
-    "image_filename": "indie_20260628.png",
+    "image_filename": "local_20260629.png",
     "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]
