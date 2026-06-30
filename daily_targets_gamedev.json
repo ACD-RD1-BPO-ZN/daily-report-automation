@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307366"
+      "https://gnn.gamer.com.tw/detail.php?sn=307428"
     ],
-    "image_filename": "headline_20260629.png",
+    "image_filename": "headline_20260630.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,31 @@
     ]
   },
   {
+    "section_name": "Model3D",
+    "source_urls": [
+      "https://www.blendernation.com/2026/06/29/behind-the-scenes-somnus/"
+    ],
+    "image_filename": "model3d_20260630.png",
+    "image_keywords": [
+      "3d",
+      "modeling",
+      "sculpt",
+      "topology",
+      "blender",
+      "maya",
+      "zbrush",
+      "substance"
+    ]
+  },
+  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/wkipedia-co-founder-has-been-banned-from-editing-the-site"
+      "https://80.lv/articles/cyberpunk-2077-hit-its-best-steam-numbers-in-years-with-no-new-content",
+      "https://80.lv/articles/check-out-this-behind-the-scenes-animation-of-an-expressive-character",
+      "https://80.lv/articles/this-beautiful-hand-painted-scene-was-textured-using-a-mouse",
+      "https://80.lv/articles/3d-artist-on-creating-art-and-making-courses-for-beginner-artists/"
     ],
-    "image_filename": "ta_20260629.png",
+    "image_filename": "ta_20260630.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -34,9 +54,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307361"
+      "https://www.gamedeveloper.com/business/supermassive-games-ceo-steps-down-following-launch-of-directive-8020",
+      "https://www.gamedeveloper.com/business/inside-skybound-s-video-game-strategy-ft-david-da-alpert-and-jon-goldman",
+      "https://gnn.gamer.com.tw/detail.php?sn=307433",
+      "https://gnn.gamer.com.tw/detail.php?sn=307432",
+      "https://gnn.gamer.com.tw/detail.php?sn=307431",
+      "https://gnn.gamer.com.tw/detail.php?sn=307429"
     ],
-    "image_filename": "globalgames_20260629.png",
+    "image_filename": "globalgames_20260630.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -46,14 +71,25 @@
     ]
   },
   {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://store.steampowered.com/news/260304/"
+    ],
+    "image_filename": "indie_20260630.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307364",
-      "https://gnn.gamer.com.tw/detail.php?sn=307363",
-      "https://gnn.gamer.com.tw/detail.php?sn=307362",
-      "https://gnn.gamer.com.tw/detail.php?sn=307365"
+      "https://gnn.gamer.com.tw/detail.php?sn=307430"
     ],
-    "image_filename": "local_20260629.png",
+    "image_filename": "local_20260630.png",
     "image_keywords": [
       "event",
       "meetup",
