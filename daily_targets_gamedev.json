@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307428"
+      "https://www.gamedeveloper.com/business/io-interactive-to-lay-off-employees-after-xbox-pulls-support-for-untitled-fantasy-game"
     ],
-    "image_filename": "headline_20260630.png",
+    "image_filename": "headline_20260701.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/06/29/behind-the-scenes-somnus/"
+      "https://www.blendernation.com/2026/06/30/mixos-browser-based-3d-texture-painting-with-one-click-pbr-export/"
     ],
-    "image_filename": "model3d_20260630.png",
+    "image_filename": "model3d_20260701.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,12 +33,12 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/cyberpunk-2077-hit-its-best-steam-numbers-in-years-with-no-new-content",
-      "https://80.lv/articles/check-out-this-behind-the-scenes-animation-of-an-expressive-character",
-      "https://80.lv/articles/this-beautiful-hand-painted-scene-was-textured-using-a-mouse",
-      "https://80.lv/articles/3d-artist-on-creating-art-and-making-courses-for-beginner-artists/"
+      "https://80.lv/articles/check-out-this-amazing-short-animation-of-running-water-made-with-blender",
+      "https://80.lv/articles/how-ill-combines-body-horror-physics-and-binaural-audio-to-terrify-players",
+      "https://80.lv/articles/how-game-hosting-infrastructure-scales-modern-multiplayer-games",
+      "https://80.lv/articles/fabrizio-espindola-announces-new-course-on-real-time-water-in-unity"
     ],
-    "image_filename": "ta_20260630.png",
+    "image_filename": "ta_20260701.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,14 +54,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/supermassive-games-ceo-steps-down-following-launch-of-directive-8020",
-      "https://www.gamedeveloper.com/business/inside-skybound-s-video-game-strategy-ft-david-da-alpert-and-jon-goldman",
-      "https://gnn.gamer.com.tw/detail.php?sn=307433",
-      "https://gnn.gamer.com.tw/detail.php?sn=307432",
-      "https://gnn.gamer.com.tw/detail.php?sn=307431",
-      "https://gnn.gamer.com.tw/detail.php?sn=307429"
+      "https://www.gamedeveloper.com/business/memory-manufacturers-sued-in-class-action-suit-alleging-price-and-supply-fixing",
+      "https://www.gamedeveloper.com/business/report-nbcuniversal-could-expand-into-games-after-comcast-spinoff",
+      "https://www.gamedeveloper.com/production/grand-theft-auto-developers-seek-union-recognition-at-rockstar",
+      "https://gnn.gamer.com.tw/detail.php?sn=307502"
     ],
-    "image_filename": "globalgames_20260630.png",
+    "image_filename": "globalgames_20260701.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -73,9 +71,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/260304/"
+      "https://80.lv/articles/this-90s-cartoon-inspired-game-will-have-you-exploring-the-inside-of-a-middle-aged-man"
     ],
-    "image_filename": "indie_20260630.png",
+    "image_filename": "indie_20260701.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -87,9 +85,13 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307430"
+      "https://gnn.gamer.com.tw/detail.php?sn=307507",
+      "https://gnn.gamer.com.tw/detail.php?sn=307506",
+      "https://gnn.gamer.com.tw/detail.php?sn=307505",
+      "https://gnn.gamer.com.tw/detail.php?sn=307504",
+      "https://gnn.gamer.com.tw/detail.php?sn=307503"
     ],
-    "image_filename": "local_20260630.png",
+    "image_filename": "local_20260701.png",
     "image_keywords": [
       "event",
       "meetup",
