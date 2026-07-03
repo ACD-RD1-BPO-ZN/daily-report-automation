@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/playstation-ending-production-of-physical-software-in-january-2028"
+      "https://www.gamedeveloper.com/business/union-workers-establish-hardship-fund-to-support-devs-impacted-by-layoffs"
     ],
-    "image_filename": "headline_20260702.png",
+    "image_filename": "headline_20260703.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,14 +16,14 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
-      "https://code.blender.org/2025/08/bundles-and-closures/",
-      "https://code.blender.org/2026/02/winter-of-quality-2026/",
-      "https://www.blender.org/press/blender-5-1-release/",
-      "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
-      "https://code.blender.org/2025/10/google-summer-of-code-2025-results/"
+      "https://code.blender.org/2026/05/cycles-texture-cache/",
+      "https://www.blender.org/development/blender-lab-activity-report-q1-2026/",
+      "https://www.blendernation.com/2026/07/02/starfighter-modeling-tutorial/",
+      "https://80.lv/articles/modeling-and-texturing-a-weird-but-cute-purple-creature",
+      "https://80.lv/articles/amazing-blender-rig-test-for-clayton-from-disney-s-tarzan",
+      "https://80.lv/articles/zbrush-tutorial-how-to-paint-realistic-3d-sculpts"
     ],
-    "image_filename": "model3d_20260702.png",
+    "image_filename": "model3d_20260703.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -38,11 +38,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/testing-4-free-mesh-simplification-tools",
-      "https://80.lv/articles/breakdown-creating-a-detailed-and-vibrant-scene-with-unreal-engine-and-substance-3d",
-      "https://80.lv/articles/create-games-environments-and-cinematic-scenes-with-this-unity-bundle"
+      "https://80.lv/articles/how-to-design-emotional-game-environments-for-sky-children-of-the-light"
     ],
-    "image_filename": "ta_20260702.png",
+    "image_filename": "ta_20260703.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -58,16 +56,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/krafton-agrees-to-pay-bonuses-to-subnautica-2-studio-as-ceo-resigns",
-      "https://www.gamedeveloper.com/business/otherside-entertainment-lays-off-18-from-thick-as-thieves-team",
-      "https://www.gamedeveloper.com/business/ubisoft-barcelona-to-go-on-strike-over-proposed-layoffs",
-      "https://www.gamedeveloper.com/business/ps3-and-ps-vita-digital-stores-are-closing-starting-august-2026",
-      "https://gnn.gamer.com.tw/detail.php?sn=307577",
-      "https://gnn.gamer.com.tw/detail.php?sn=307576",
-      "https://gnn.gamer.com.tw/detail.php?sn=307578",
-      "https://gnn.gamer.com.tw/detail.php?sn=307575"
+      "https://www.gamedeveloper.com/business/ubisoft-taps-former-2k-president-christoph-hartmann-to-oversee-shooter-franchises",
+      "https://gnn.gamer.com.tw/detail.php?sn=307649",
+      "https://gnn.gamer.com.tw/detail.php?sn=307648",
+      "https://gnn.gamer.com.tw/detail.php?sn=307650"
     ],
-    "image_filename": "globalgames_20260702.png",
+    "image_filename": "globalgames_20260703.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -79,14 +73,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/godot-to-ban-almost-all-ai-coding-contributions",
-      "https://godotengine.org/article/release-candidate-godot-4-7-1-rc-1/",
-      "https://godotengine.org/article/godot-vision-statement-2026/",
-      "https://godotengine.org/article/godot-4-7-lights-camera-action/",
-      "https://godotengine.org/article/contribution-policy-2026/",
-      "https://store.steampowered.com/news/265516/"
+      "https://godotengine.org/article/release-candidate-godot-4-7-rc-3/",
+      "https://store.steampowered.com/news/265126/",
+      "https://80.lv/articles/dont-kill-the-disc-petition-pushes-back-against-sony-s-all-digital-playstation-future"
     ],
-    "image_filename": "indie_20260702.png",
+    "image_filename": "indie_20260703.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -98,10 +89,11 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307580",
-      "https://gnn.gamer.com.tw/detail.php?sn=307579"
+      "https://gnn.gamer.com.tw/detail.php?sn=307652",
+      "https://gnn.gamer.com.tw/detail.php?sn=307651",
+      "https://gnn.gamer.com.tw/detail.php?sn=307647"
     ],
-    "image_filename": "local_20260702.png",
+    "image_filename": "local_20260703.png",
     "image_keywords": [
       "event",
       "meetup",
