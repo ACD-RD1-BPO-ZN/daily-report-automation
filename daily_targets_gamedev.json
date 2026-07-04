@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/union-workers-establish-hardship-fund-to-support-devs-impacted-by-layoffs"
+      "https://www.gamedeveloper.com/business/cyberpunk-2077-has-sold-40-million-copies-worldwide"
     ],
-    "image_filename": "headline_20260703.png",
+    "image_filename": "headline_20260704.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,16 +14,27 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/games-made-with-unity-june-2026-releases"
+    ],
+    "image_filename": "engine_20260704.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/05/cycles-texture-cache/",
-      "https://www.blender.org/development/blender-lab-activity-report-q1-2026/",
-      "https://www.blendernation.com/2026/07/02/starfighter-modeling-tutorial/",
-      "https://80.lv/articles/modeling-and-texturing-a-weird-but-cute-purple-creature",
-      "https://80.lv/articles/amazing-blender-rig-test-for-clayton-from-disney-s-tarzan",
-      "https://80.lv/articles/zbrush-tutorial-how-to-paint-realistic-3d-sculpts"
+      "https://www.blender.org/events/blender-in-annecy-2026-recap/",
+      "https://www.blendernation.com/2026/07/03/free-download-blend-project-packer/",
+      "https://www.blendernation.com/2026/07/03/best-of-blender-artists-2026-27/"
     ],
-    "image_filename": "model3d_20260703.png",
+    "image_filename": "model3d_20260704.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -38,9 +49,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-to-design-emotional-game-environments-for-sky-children-of-the-light"
+      "https://80.lv/articles/aion-2-is-betting-on-scale-customization-and-faction-warfare-for-its-global-launch",
+      "https://80.lv/articles/sculpting-and-texturing-a-stylized-3d-environment-with-autumn-vibes"
     ],
-    "image_filename": "ta_20260703.png",
+    "image_filename": "ta_20260704.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -56,12 +68,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ubisoft-taps-former-2k-president-christoph-hartmann-to-oversee-shooter-franchises",
-      "https://gnn.gamer.com.tw/detail.php?sn=307649",
-      "https://gnn.gamer.com.tw/detail.php?sn=307648",
-      "https://gnn.gamer.com.tw/detail.php?sn=307650"
+      "https://www.gamedeveloper.com/business/enginefall-developer-is-making-layoffs",
+      "https://www.gamedeveloper.com/business/rockstar-workers-hit-back-playstation-ditches-physical-discs-and-chipmakers-accused-of-price-fixing-patch-notes-58"
     ],
-    "image_filename": "globalgames_20260703.png",
+    "image_filename": "globalgames_20260704.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -73,11 +83,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/release-candidate-godot-4-7-rc-3/",
-      "https://store.steampowered.com/news/265126/",
-      "https://80.lv/articles/dont-kill-the-disc-petition-pushes-back-against-sony-s-all-digital-playstation-future"
+      "https://80.lv/articles/don-t-miss-these-indie-cult-classics-on-steam-summer-sale-2026"
     ],
-    "image_filename": "indie_20260703.png",
+    "image_filename": "indie_20260704.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -89,16 +97,34 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307652",
-      "https://gnn.gamer.com.tw/detail.php?sn=307651",
-      "https://gnn.gamer.com.tw/detail.php?sn=307647"
+      "https://gnn.gamer.com.tw/detail.php?sn=307715",
+      "https://gnn.gamer.com.tw/detail.php?sn=307723",
+      "https://gnn.gamer.com.tw/detail.php?sn=307721",
+      "https://gnn.gamer.com.tw/detail.php?sn=307719",
+      "https://gnn.gamer.com.tw/detail.php?sn=307718",
+      "https://gnn.gamer.com.tw/detail.php?sn=307716"
     ],
-    "image_filename": "local_20260703.png",
+    "image_filename": "local_20260704.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/",
+      "https://www.blendernation.com/2026/07/03/blender-jobs-for-july-3-2026/",
+      "https://80.lv/articles/how-masangsoft-is-keeping-classic-online-games-alive-by-giving-them-a-second-life"
+    ],
+    "image_filename": "producer_20260704.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
