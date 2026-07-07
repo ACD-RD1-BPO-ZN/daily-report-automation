@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307742"
+      "https://www.gamedeveloper.com/business/xbox-cutting-3-200-jobs-and-parting-ways-with-double-fine-compulsion-ninja-theory-and-undead-labs"
     ],
-    "image_filename": "headline_20260706.png",
+    "image_filename": "headline_20260707.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,12 +14,27 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/hp-anyware-is-being-sunset-a-practical-guide-for-postproduction-teams"
+    ],
+    "image_filename": "engine_20260707.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/sculpting-and-texturing-a-stylized-3d-environment-with-autumn-vibes",
-      "https://80.lv/articles/how-to-recreate-a-scene-from-the-amboselli-national-park-in-kenya"
+      "https://www.blendernation.com/2026/07/06/blender-5-2-grease-pencil-16-new-features-breakdown/",
+      "https://80.lv/articles/how-to-sculpt-an-intriguing-and-mysterious-worship-leader",
+      "https://80.lv/articles/from-prompt-to-reality-how-to-turn-your-idea-into-a-physical-3d-printed-collectible-using-hi3d"
     ],
-    "image_filename": "model3d_20260706.png",
+    "image_filename": "model3d_20260707.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,10 +49,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/stop-leaving-ip-on-the-table",
-      "https://80.lv/articles/how-masangsoft-is-keeping-classic-online-games-alive-by-giving-them-a-second-life"
+      "https://www.gamedeveloper.com/production/eve-online-s-cross-platform-game-engine-framework-is-now-fully-open-source",
+      "https://80.lv/articles/delicious-cartoon-like-desserts-created-in-3d"
     ],
-    "image_filename": "ta_20260706.png",
+    "image_filename": "ta_20260707.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,13 +68,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307740",
-      "https://gnn.gamer.com.tw/detail.php?sn=307739",
-      "https://gnn.gamer.com.tw/detail.php?sn=307738",
-      "https://gnn.gamer.com.tw/detail.php?sn=307737",
-      "https://gnn.gamer.com.tw/detail.php?sn=307741"
+      "https://www.gamedeveloper.com/business/report-obsidian-losing-around-one-quarter-of-its-staff-to-xbox-reset-",
+      "https://www.gamedeveloper.com/business/nintendo-is-winding-down-switch-1-sales-in-europe",
+      "https://www.gamedeveloper.com/business/ingress-developer-niantic-spatial-shuttering-new-zealand-office",
+      "https://gnn.gamer.com.tw/detail.php?sn=307824"
     ],
-    "image_filename": "globalgames_20260706.png",
+    "image_filename": "globalgames_20260707.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -71,9 +85,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/don-t-miss-these-indie-cult-classics-on-steam-summer-sale-2026"
+      "https://80.lv/articles/solo-developer-on-creating-a-simulation-game-about-a-local-game-store"
     ],
-    "image_filename": "indie_20260706.png",
+    "image_filename": "indie_20260707.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -83,12 +97,28 @@
     ]
   },
   {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=307828",
+      "https://gnn.gamer.com.tw/detail.php?sn=307826",
+      "https://gnn.gamer.com.tw/detail.php?sn=307825",
+      "https://gnn.gamer.com.tw/detail.php?sn=307816"
+    ],
+    "image_filename": "local_20260707.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307742",
-      "https://80.lv/articles/how-masangsoft-is-keeping-classic-online-games-alive-by-giving-them-a-second-life"
+      "https://www.gamedeveloper.com/business/xbox-cutting-3-200-jobs-and-parting-ways-with-double-fine-compulsion-ninja-theory-and-undead-labs",
+      "https://unity.com/blog/hp-anyware-is-being-sunset-a-practical-guide-for-postproduction-teams"
     ],
-    "image_filename": "producer_20260706.png",
+    "image_filename": "producer_20260707.png",
     "image_keywords": [
       "marketing",
       "development",
