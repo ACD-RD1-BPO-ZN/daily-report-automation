@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-ceo-amidst-layoffs-i-think-our-core-has-to-be-healthy"
+      "https://www.gamedeveloper.com/business/blizzard-eliminates-small-number-of-roles-in-china"
     ],
-    "image_filename": "headline_20260708.png",
+    "image_filename": "headline_20260709.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,12 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/07/07/blender-5-2-lts-physics-just-got-insane/",
-      "https://www.blendernation.com/2026/07/07/render-control-remote-blender-addon/",
-      "https://80.lv/articles/tutorial-blender-s-geometry-nodes-for-beginners/",
-      "https://80.lv/articles/creating-hand-painted-elf-character-in-3d-from-scratch-using-blender-substance-3d-painter/"
+      "https://www.blendernation.com/2026/07/08/geometry-nodes-for-beginners/",
+      "https://80.lv/articles/breakdown-creating-cartoon-style-3d-electric-guitar-in-blender"
     ],
-    "image_filename": "model3d_20260708.png",
+    "image_filename": "model3d_20260709.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -36,11 +34,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/recreating-bluey-s-hand-drawn-world-in-bluey-s-quest-for-the-gold-pen",
-      "https://80.lv/articles/how-to-make-magical-hand-painted-crystal-sword-in-3d",
-      "https://80.lv/articles/explore-butterfly-wing-scales-captured-in-3dgs"
+      "https://80.lv/articles/interview-the-tech-behind-assin-s-creed-black-flag-resynced-s-seamless-open-world",
+      "https://80.lv/articles/elden-ring-glintstone-kris-shortsword-made-in-maya-zbrush-substance-3d-painter"
     ],
-    "image_filename": "ta_20260708.png",
+    "image_filename": "ta_20260709.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -56,15 +53,15 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/supercell-starts-developer-grants-program-for-studios-across-africa",
-      "https://www.gamedeveloper.com/business/io-interactive-closing-istanbul-studio-after-regaining-control-of-project-fantasy",
-      "https://www.gamedeveloper.com/business/report-around-half-of-the-id-software-team-have-been-laid-off",
-      "https://gnn.gamer.com.tw/detail.php?sn=307894",
-      "https://gnn.gamer.com.tw/detail.php?sn=307893",
-      "https://gnn.gamer.com.tw/detail.php?sn=307895",
-      "https://gnn.gamer.com.tw/detail.php?sn=307898"
+      "https://www.gamedeveloper.com/business/blizzard-eliminates-small-number-of-roles-in-china",
+      "https://www.gamedeveloper.com/business/mobile-game-mario-kart-tour-is-winding-down",
+      "https://www.gamedeveloper.com/business/atari-appoints-andreas-deptolla-as-president-of-atari-europe",
+      "https://www.gamedeveloper.com/business/opinion-welcome-to-the-house-of-pain-brought-to-you-by-xbox",
+      "https://www.gamedeveloper.com/business/-employers-are-ruthless-cwa-canada-slams-microsoft-over-handling-of-bethesda-layoffs",
+      "https://80.lv/articles/fallout-new-vegas-studio-obsidian-is-reportedly-making-a-new-fallout-game",
+      "https://80.lv/articles/the-elder-scrolls-6-is-still-2-years-away-but-it-s-coming-along-well-says-xbox"
     ],
-    "image_filename": "globalgames_20260708.png",
+    "image_filename": "globalgames_20260709.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -76,12 +73,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-1/",
-      "https://gnn.gamer.com.tw/detail.php?sn=307897",
-      "https://store.steampowered.com/news/274747/",
-      "https://store.steampowered.com/news/270398/"
+      "https://store.steampowered.com/news/275469/"
     ],
-    "image_filename": "indie_20260708.png",
+    "image_filename": "indie_20260709.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -93,9 +87,16 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=307896"
+      "https://gnn.gamer.com.tw/detail.php?sn=307949",
+      "https://gnn.gamer.com.tw/detail.php?sn=307948",
+      "https://gnn.gamer.com.tw/detail.php?sn=307947",
+      "https://gnn.gamer.com.tw/detail.php?sn=307946",
+      "https://gnn.gamer.com.tw/detail.php?sn=307945",
+      "https://gnn.gamer.com.tw/detail.php?sn=307944",
+      "https://www.blender.org/events/blender-at-siggraph-2026/",
+      "https://www.blender.org/events/blender-in-annecy-2026/"
     ],
-    "image_filename": "local_20260708.png",
+    "image_filename": "local_20260709.png",
     "image_keywords": [
       "event",
       "meetup",
