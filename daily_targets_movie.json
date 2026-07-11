@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/07/world-cup-ratings-record-usmnt-belgium-fox-1236975996/"
+      "https://deadline.com/2026/07/meta-disables-new-ai-image-generator-zuckerberg-1236979706/"
     ],
-    "image_filename": "headline_20260710.png",
+    "image_filename": "headline_20260711.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,17 +18,21 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://variety.com/2026/film/news/naruto-movie-casting-search-live-action-actors-1236806103/",
-      "https://variety.com/2026/film/news/free-willy-reboot-warner-bros-1236805831/",
-      "https://variety.com/2026/film/news/hunger-games-films-return-theaters-sunrise-on-reaping-1236805982/",
-      "https://deadline.com/2026/07/jk-simmons-wbd-bizarre-shelf-batgirl-movie-1236978897/",
-      "https://variety.com/2026/film/global/israeli-culture-minister-miki-zohar-mocks-film-industry-1236805822/",
-      "https://www.firstshowing.net/2026/shark-movie-thriller-above-below-trailer-with-antonio-banderas/",
-      "https://www.firstshowing.net/2026/new-us-trailer-for-na-hong-jins-alien-action-thriller-hope-out-soon/",
-      "https://www.firstshowing.net/2026/extra-wild-full-trailer-for-idiots-comedy-with-franco-thames-shipka/",
-      "https://www.cartoonbrew.com/awards/ves-awards-2026-landau-godzilla-framestore-264219.html"
+      "https://deadline.com/2026/07/box-office-moana-1236979144/",
+      "https://variety.com/2026/film/news/christopher-nolan-odyssey-backlash-elon-musk-irrelevant-1236806375/",
+      "https://deadline.com/2026/07/gemma-chan-update-anna-may-wong-biopic-1236979528/",
+      "https://variety.com/2026/film/news/cineverse-buys-horror-comedy-portal-to-hell-1236806935/",
+      "https://variety.com/2026/film/box-office/dakota-elle-fanning-nightingale-march-sonic-4-1236806835/",
+      "https://www.firstshowing.net/2026/funky-full-trailer-for-momo-and-the-time-thieves-with-martin-freeman/",
+      "https://www.firstshowing.net/2026/official-trailer-for-sons-film-starring-nighy-staunton-mackay/",
+      "https://www.firstshowing.net/2026/vicky-krieps-is-a-mom-fighting-for-custody-in-love-me-tender-trailer/",
+      "https://www.firstshowing.net/2026/worlds-first-vampire-horror-thriller-feed-trailer-with-grace-collender/",
+      "https://www.firstshowing.net/2026/scary-two-headed-doll-horror-movie-she-saw-us-official-trailer/",
+      "https://www.cartoonbrew.com/anime/taiki-sakurai-salamander-pictures-20001-an-earth-odyssey-264265.html",
+      "https://www.cartoonbrew.com/shorts/momo-cao-not-alone-online-262614.html",
+      "https://www.cartoonbrew.com/festivals/ottawa-international-animation-festival-shorts-competition-264277.html"
     ],
-    "image_filename": "production_20260710.png",
+    "image_filename": "production_20260711.png",
     "image_keywords": [
       "film",
       "production",
@@ -43,39 +47,17 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://variety.com/2026/film/box-office/toy-story-5-box-office-milestone-800-million-globally-1236805956/",
-      "https://variety.com/2026/film/columns/lucas-museum-of-narrative-art-free-admission-residents-1236804016/",
-      "https://www.boxofficemojo.com/date/2026-07-10/"
+      "https://deadline.com/2026/07/scripps-directv-retransmission-battle-tv-stations-go-dark-1236931598/",
+      "https://deadline.com/2026/07/randolph-mantooth-dead-emergency-1236979651/",
+      "https://variety.com/2026/film/news/tilly-norwood-new-movie-hollywood-concerns-ai-actors-1236806826/",
+      "https://www.boxofficemojo.com/date/2026-07-11/"
     ],
-    "image_filename": "boxoffice_20260710.png",
+    "image_filename": "boxoffice_20260711.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
-    ]
-  },
-  {
-    "section_name": "Streaming",
-    "source_urls": [
-      "https://deadline.com/feature/we-were-liars-season-2-news-updates-everything-we-know-1236887314/",
-      "https://deadline.com/2026/07/rafa-emmy-nomination-director-zach-heinzerling-interview-1236978921/",
-      "https://deadline.com/2026/07/little-house-on-the-prairie-netflix-ending-explained-boss-1236978848/",
-      "https://deadline.com/2026/07/diarra-from-detroit-season-2-trailer-1236978888/",
-      "https://www.firstshowing.net/2026/stanley-tucci-victor-belmondo-in-art-heist-film-masterplan-teaser/",
-      "https://www.firstshowing.net/2026/ella-rubin-in-sterling-point-summer-romance-on-a-lake-series-trailer/",
-      "https://www.firstshowing.net/2026/first-look-teaser-for-season-2-of-guy-ritchies-the-gentlemen-series/",
-      "https://www.cartoonbrew.com/executives/adult-swim-president-michael-ouweleen-interview-264214.html"
-    ],
-    "image_filename": "streaming_20260710.png",
-    "image_keywords": [
-      "netflix",
-      "disney+",
-      "hbo",
-      "streaming",
-      "series",
-      "anime",
-      "crunchyroll"
     ]
   }
 ]

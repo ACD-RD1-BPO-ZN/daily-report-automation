@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blendernation.com/2026/07/09/overgrown-a-feature-film-project-by-blender-studio/"
+      "https://www.gamedeveloper.com/pc/nexusmods-ceo-digs-into-the-dynamics-of-video-game-modding-ft-victor-folmann"
     ],
-    "image_filename": "headline_20260710.png",
+    "image_filename": "headline_20260711.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,26 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://unity.com/blog/inside-google-s-first-xr-hackathon"
-    ],
-    "image_filename": "engine_20260710.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/07/09/tearing-cloth-with-geometry-nodes/",
-      "https://80.lv/articles/something-is-really-wrong-with-this-blender-artist-s-geometry-nodes"
+      "https://www.blendernation.com/2026/07/10/best-of-blender-artists-2026-28/"
     ],
-    "image_filename": "model3d_20260710.png",
+    "image_filename": "model3d_20260711.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,11 +33,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/epic-animation-of-giant-spaceship-built-from-entire-planets",
-      "https://80.lv/articles/get-3d-model-of-dan-wesson-2-5-revolver-tutorial-on-how-to-make-it",
-      "https://80.lv/articles/free-custom-maya-deformer-for-high-end-facial-rigging"
+      "https://80.lv/articles/this-elastic-and-dynamic-cube-animation-was-made-using-a-blender-add-on/"
     ],
-    "image_filename": "ta_20260710.png",
+    "image_filename": "ta_20260711.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,12 +51,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/asha-sharma-joins-federal-reserve-task-force-days-after-laying-off-thousands-at-xbox",
-      "https://www.gamedeveloper.com/business/xbox-had-laid-off-379-zenimax-workers-in-maryland",
-      "https://www.gamedeveloper.com/business/fired-marathon-director-says-he-s-settled-misconduct-lawsuit-with-sony",
-      "https://80.lv/articles/getty-images-officially-drops-its-merger-plans-with-shutterstock"
+      "https://www.gamedeveloper.com/business/the-state-of-play-after-a-truly-torrid-week-for-xbox-patch-notes-60",
+      "https://80.lv/articles/assassin-s-creed-black-flag-resynced-sets-franchise-steam-player-record-sells-2-million-copies",
+      "https://80.lv/articles/how-poppy-playtime-became-one-of-gaming-s-biggest-horror-franchises",
+      "https://gnn.gamer.com.tw/detail.php?sn=308047",
+      "https://gnn.gamer.com.tw/detail.php?sn=308044"
     ],
-    "image_filename": "globalgames_20260710.png",
+    "image_filename": "globalgames_20260711.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -85,10 +69,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/eurogamer-and-vg247-veterans-launch-new-independent-site",
-      "https://www.gamedeveloper.com/production/the-game-industry-is-failing-marginalized-developers"
+      "https://godotengine.org/article/release-candidate-godot-4-7-1-rc-2/",
+      "https://store.steampowered.com/news/275718/",
+      "https://gnn.gamer.com.tw/detail.php?sn=308046",
+      "https://gnn.gamer.com.tw/detail.php?sn=308043"
     ],
-    "image_filename": "indie_20260710.png",
+    "image_filename": "indie_20260711.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -100,34 +86,15 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=308039",
-      "https://gnn.gamer.com.tw/detail.php?sn=308038",
-      "https://gnn.gamer.com.tw/detail.php?sn=308037",
-      "https://gnn.gamer.com.tw/detail.php?sn=308036",
-      "https://gnn.gamer.com.tw/detail.php?sn=308035",
-      "https://gnn.gamer.com.tw/detail.php?sn=308034"
+      "https://gnn.gamer.com.tw/detail.php?sn=308045",
+      "https://gnn.gamer.com.tw/detail.php?sn=308042"
     ],
-    "image_filename": "local_20260710.png",
+    "image_filename": "local_20260711.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.blendernation.com/2026/07/09/overgrown-a-feature-film-project-by-blender-studio/",
-      "https://www.gamedeveloper.com/business/asha-sharma-joins-federal-reserve-task-force-days-after-laying-off-thousands-at-xbox",
-      "https://www.gamedeveloper.com/production/the-game-industry-is-failing-marginalized-developers"
-    ],
-    "image_filename": "producer_20260710.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
