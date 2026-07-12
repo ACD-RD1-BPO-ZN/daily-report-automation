@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/07/meta-disables-new-ai-image-generator-zuckerberg-1236979706/"
+      "https://deadline.com/2026/07/karlovy-vary-aung-phyoe-fruit-gathering-wins-crystal-globe-1236979833/"
     ],
-    "image_filename": "headline_20260711.png",
+    "image_filename": "headline_20260712.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,21 +18,17 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/07/box-office-moana-1236979144/",
-      "https://variety.com/2026/film/news/christopher-nolan-odyssey-backlash-elon-musk-irrelevant-1236806375/",
-      "https://deadline.com/2026/07/gemma-chan-update-anna-may-wong-biopic-1236979528/",
-      "https://variety.com/2026/film/news/cineverse-buys-horror-comedy-portal-to-hell-1236806935/",
-      "https://variety.com/2026/film/box-office/dakota-elle-fanning-nightingale-march-sonic-4-1236806835/",
-      "https://www.firstshowing.net/2026/funky-full-trailer-for-momo-and-the-time-thieves-with-martin-freeman/",
-      "https://www.firstshowing.net/2026/official-trailer-for-sons-film-starring-nighy-staunton-mackay/",
-      "https://www.firstshowing.net/2026/vicky-krieps-is-a-mom-fighting-for-custody-in-love-me-tender-trailer/",
-      "https://www.firstshowing.net/2026/worlds-first-vampire-horror-thriller-feed-trailer-with-grace-collender/",
+      "https://deadline.com/2026/07/little-house-prairie-ingalls-backstory-anne-green-gables-1236979722/",
+      "https://variety.com/2026/film/reviews/lover-not-a-fighter-review-1236807148/",
+      "https://variety.com/2026/film/global/christos-nikou-apples-fingernails-tender-cinema-1236807307/",
+      "https://variety.com/2026/film/news/whispers-of-fatimah-release-date-first-look-video-1236806380/",
+      "https://variety.com/2026/film/features/moana-creatives-polynesian-culture-traditions-1236807177/",
+      "https://www.firstshowing.net/2026/kviff-2026-learning-to-breathe-under-water-starring-rory-kinnear/",
       "https://www.firstshowing.net/2026/scary-two-headed-doll-horror-movie-she-saw-us-official-trailer/",
-      "https://www.cartoonbrew.com/anime/taiki-sakurai-salamander-pictures-20001-an-earth-odyssey-264265.html",
-      "https://www.cartoonbrew.com/shorts/momo-cao-not-alone-online-262614.html",
-      "https://www.cartoonbrew.com/festivals/ottawa-international-animation-festival-shorts-competition-264277.html"
+      "https://www.cartoonbrew.com/newsletter/not-alone-premiere-emmy-nominations-exceptional-indies-264289.html",
+      "https://www.cartoonbrew.com/animators/wabie-velasquez-indie-animation-264237.html"
     ],
-    "image_filename": "production_20260711.png",
+    "image_filename": "production_20260712.png",
     "image_keywords": [
       "film",
       "production",
@@ -47,17 +43,33 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/07/scripps-directv-retransmission-battle-tv-stations-go-dark-1236931598/",
-      "https://deadline.com/2026/07/randolph-mantooth-dead-emergency-1236979651/",
-      "https://variety.com/2026/film/news/tilly-norwood-new-movie-hollywood-concerns-ai-actors-1236806826/",
-      "https://www.boxofficemojo.com/date/2026-07-11/"
+      "https://www.boxofficemojo.com/date/2026-07-12/",
+      "https://deadline.com/2026/07/barbara-ling-dead-michael-production-designer-1236979877/",
+      "https://deadline.com/2026/07/dwayne-johnson-tried-revive-odd-couple-broadway-kevin-hart-1236979858/",
+      "https://variety.com/2026/film/markets-festivals/tis-studios-stage-7-bogota-soundstage-expansion-1236807306/"
     ],
-    "image_filename": "boxoffice_20260711.png",
+    "image_filename": "boxoffice_20260712.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
+    ]
+  },
+  {
+    "section_name": "Streaming",
+    "source_urls": [
+      "https://deadline.com/2026/07/new-girl-cast-fought-for-lamorne-morris-zooey-deschanel-1236980001/"
+    ],
+    "image_filename": "streaming_20260712.png",
+    "image_keywords": [
+      "netflix",
+      "disney+",
+      "hbo",
+      "streaming",
+      "series",
+      "anime",
+      "crunchyroll"
     ]
   }
 ]
