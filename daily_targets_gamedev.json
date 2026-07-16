@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/assassin-s-creed-black-flag-topped-2m-sales-on-its-first-day"
+      "https://www.gamedeveloper.com/production/-good-work-is-not-going-to-save-your-job-at-this-company-laid-off-xbox-devs-condemn-microsoft"
     ],
-    "image_filename": "headline_20260715.png",
+    "image_filename": "headline_20260716.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,25 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/playrix-township-roas-optimization-vector"
+    ],
+    "image_filename": "engine_20260716.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-2-lts-release/"
+      "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more"
     ],
-    "image_filename": "model3d_20260715.png",
+    "image_filename": "model3d_20260716.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,10 +47,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/building-procedural-node-based-mesh-framework-in-unity/",
-      "https://80.lv/articles/artists-threaten-to-leave-turbosquid-because-of-plummeting-sales-and-missing-payments/"
+      "https://80.lv/articles/interview-how-denshattack-blends-tony-hawk-jet-set-radio-with-trains",
+      "https://80.lv/articles/the-viral-nopia-synth-will-be-out-by-the-end-of-the-year",
+      "https://80.lv/articles/80-level-job-digest-top-job-picks-for-artists-this-week"
     ],
-    "image_filename": "ta_20260715.png",
+    "image_filename": "ta_20260716.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -52,12 +67,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/paramount-confirms-mike-zaimont-previously-accused-of-sexual-harassment-is-employed-by-avatar-legends-dev",
-      "https://www.gamedeveloper.com/business/compulsion-games-is-seeking-partners-after-xbox-spin-off",
-      "https://www.gamedeveloper.com/business/ex-star-wars-galaxy-of-heroes-gm-studio-lays-off-staff",
-      "https://www.gamedeveloper.com/mobile/spin-master-lays-off-paw-patrol-the-game-devs-two-days-after-launch"
+      "https://www.gamedeveloper.com/business/former-epic-games-vp-appointed-saber-interactive-s-chief-business-officer",
+      "https://www.gamedeveloper.com/business/call-of-duty-co-director-glen-schofield-retires",
+      "https://gnn.gamer.com.tw/detail.php?sn=308246",
+      "https://gnn.gamer.com.tw/detail.php?sn=308244",
+      "https://gnn.gamer.com.tw/detail.php?sn=308243",
+      "https://gnn.gamer.com.tw/detail.php?sn=308241"
     ],
-    "image_filename": "globalgames_20260715.png",
+    "image_filename": "globalgames_20260716.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -69,12 +86,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/276074/",
-      "https://80.lv/articles/this-3d-pack-of-deep-sea-horrors-lets-you-add-leviathan-monsters-to-your-games",
-      "https://80.lv/articles/this-dystopian-survival-game-will-have-you-exploring-the-underwater-world",
-      "https://80.lv/articles/sabotage-your-friends-in-this-turn-based-co-op-dice-game"
+      "https://80.lv/articles/palworld-sees-new-surge-of-players-after-exiting-early-access"
     ],
-    "image_filename": "indie_20260715.png",
+    "image_filename": "indie_20260716.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -86,33 +100,17 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=308184",
-      "https://gnn.gamer.com.tw/detail.php?sn=308183",
-      "https://gnn.gamer.com.tw/detail.php?sn=308182",
-      "https://gnn.gamer.com.tw/detail.php?sn=308181",
-      "https://gnn.gamer.com.tw/detail.php?sn=308180",
-      "https://gnn.gamer.com.tw/detail.php?sn=308179"
+      "https://www.gamedeveloper.com/business/nyu-opens-incubator-applications-for-new-york-city-area-devs",
+      "https://www.gamedeveloper.com/production/uk-union-launches-free-resource-to-decode-video-game-writing-contracts",
+      "https://www.gamedeveloper.com/business/iwgb-game-workers-union-forms-redundancy-taskforce-to-defend-workers-rights",
+      "https://gnn.gamer.com.tw/detail.php?sn=308242"
     ],
-    "image_filename": "local_20260715.png",
+    "image_filename": "local_20260716.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/assassin-s-creed-black-flag-topped-2m-sales-on-its-first-day",
-      "https://www.blender.org/press/blender-5-2-lts-release/"
-    ],
-    "image_filename": "producer_20260715.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
