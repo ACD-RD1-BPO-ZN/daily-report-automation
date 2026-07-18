@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/unions-take-legal-action-against-microsoft-for-allegedly-mishandling-xbox-layoffs"
+      "https://www.gamedeveloper.com/business/za-um-studios-to-lay-off-up-to-32-workers-two-months-after-releasing-zero-parades-for-dead-spies"
     ],
-    "image_filename": "headline_20260717.png",
+    "image_filename": "headline_20260718.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://80.lv/articles/goodnight-punpun-creator-spent-month-building-rural-town-in-ue5-just-to-draw-one-shot-manga",
-      "https://80.lv/articles/change-your-scene-s-atmosphere-in-unity-with-single-click"
+      "https://unity.com/blog/digital-twin-building-machine-information-system"
     ],
-    "image_filename": "engine_20260717.png",
+    "image_filename": "engine_20260718.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,9 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/hurricane-new-multi-solver-physics-engine-for-blender"
+      "https://www.blendernation.com/2026/07/17/best-of-blender-artists-2026-29/"
     ],
-    "image_filename": "model3d_20260717.png",
+    "image_filename": "model3d_20260718.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,9 +47,13 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/check-out-this-sandbox-tactical-rpg-that-has-a-shōnen-anime-art-style"
+      "https://80.lv/articles/cliff-bleszinski-knows-what-went-wrong",
+      "https://80.lv/articles/bethesda-confirms-multiple-fallout-projects-including-remasters-and-new-obsidian-game",
+      "https://80.lv/articles/in-this-game-you-ll-be-a-spider-like-mech-navigating-a-post-apocalyptic-world",
+      "https://80.lv/articles/what-15-years-of-game-partnerships-taught-me",
+      "https://80.lv/articles/matthew-mercer-jennifer-english-ben-starr-this-pixel-rpg-revealed-impressive-cast"
     ],
-    "image_filename": "ta_20260717.png",
+    "image_filename": "ta_20260718.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,10 +69,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/zenimax-online-studios-leadership-is-part-of-the-379-laid-off-workers",
-      "https://www.gamedeveloper.com/business/pokemon-go-owner-scopely-reorganizes-stumble-guys-team"
+      "https://www.gamedeveloper.com/business/todd-howard-says-the-timing-is-right-for-a-collaboration-with-obsidian",
+      "https://www.gamedeveloper.com/business/labor-unions-challenge-xbox-gamestop-ceo-says-physical-game-sales-are-irrelevant-and-glen-schofield-retires-patch-notes-61"
     ],
-    "image_filename": "globalgames_20260717.png",
+    "image_filename": "globalgames_20260718.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -79,30 +82,18 @@
     ]
   },
   {
-    "section_name": "Indie",
+    "section_name": "Local",
     "source_urls": [
-      "https://store.steampowered.com/news/276347/"
+      "https://godotengine.org/article/godot-community-poll-2026/",
+      "https://godotengine.org/article/godotcon-us-2026-update/",
+      "https://godotengine.org/article/maintenance-release-godot-4-7-1/"
     ],
-    "image_filename": "indie_20260717.png",
+    "image_filename": "local_20260718.png",
     "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/design/-the-goal-of-design-is-to-efficiently-communicate-ideas-"
-    ],
-    "image_filename": "producer_20260717.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]
