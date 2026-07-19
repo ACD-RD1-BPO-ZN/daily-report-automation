@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/za-um-studios-to-lay-off-up-to-32-workers-two-months-after-releasing-zero-parades-for-dead-spies"
+      "https://www.unrealengine.com/news/unreal-engine-5-8-is-now-available"
     ],
-    "image_filename": "headline_20260718.png",
+    "image_filename": "headline_20260719.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/digital-twin-building-machine-information-system"
+      "https://www.unrealengine.com/news/the-road-to-ue-6"
     ],
-    "image_filename": "engine_20260718.png",
+    "image_filename": "engine_20260719.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/07/17/best-of-blender-artists-2026-29/"
+      "https://www.blendernation.com/2026/07/17/blender-jobs-for-july-17-2026/",
+      "https://80.lv/articles/3d-artist-shares-a-location-of-an-original-world-with-an-oriental-style"
     ],
-    "image_filename": "model3d_20260718.png",
+    "image_filename": "model3d_20260719.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,13 +48,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/cliff-bleszinski-knows-what-went-wrong",
-      "https://80.lv/articles/bethesda-confirms-multiple-fallout-projects-including-remasters-and-new-obsidian-game",
-      "https://80.lv/articles/in-this-game-you-ll-be-a-spider-like-mech-navigating-a-post-apocalyptic-world",
-      "https://80.lv/articles/what-15-years-of-game-partnerships-taught-me",
-      "https://80.lv/articles/matthew-mercer-jennifer-english-ben-starr-this-pixel-rpg-revealed-impressive-cast"
+      "https://80.lv/articles/check-out-this-tutorial-on-expanse-workflow-in-unreal-engine",
+      "https://80.lv/articles/surreal-animations-from-an-arctic-survival-game-made-in-godot",
+      "https://80.lv/articles/browser-based-pixel-art-editor-with-live-crt-effect"
     ],
-    "image_filename": "ta_20260718.png",
+    "image_filename": "ta_20260719.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,10 +68,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/todd-howard-says-the-timing-is-right-for-a-collaboration-with-obsidian",
-      "https://www.gamedeveloper.com/business/labor-unions-challenge-xbox-gamestop-ceo-says-physical-game-sales-are-irrelevant-and-glen-schofield-retires-patch-notes-61"
+      "https://80.lv/articles/epic-games-google-withdraw-settlement-third-party-app-stores-are-coming-to-android"
     ],
-    "image_filename": "globalgames_20260718.png",
+    "image_filename": "globalgames_20260719.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,18 +80,18 @@
     ]
   },
   {
-    "section_name": "Local",
+    "section_name": "Producer",
     "source_urls": [
-      "https://godotengine.org/article/godot-community-poll-2026/",
-      "https://godotengine.org/article/godotcon-us-2026-update/",
-      "https://godotengine.org/article/maintenance-release-godot-4-7-1/"
+      "https://www.unrealengine.com/news/unreal-engine-5-8-is-now-available",
+      "https://www.unrealengine.com/news/the-road-to-ue-6",
+      "https://80.lv/articles/epic-games-google-withdraw-settlement-third-party-app-stores-are-coming-to-android"
     ],
-    "image_filename": "local_20260718.png",
+    "image_filename": "producer_20260719.png",
     "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
