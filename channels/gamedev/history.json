@@ -1,17 +1,4 @@
 {
-  "2026-06-19": [
-    "https://gnn.gamer.com.tw/detail.php?sn=306952",
-    "https://gnn.gamer.com.tw/detail.php?sn=306951",
-    "https://80.lv/articles/upd-unreal-engine-6-will-combine-uefn-and-ue-into-a-unified-engine/",
-    "https://www.blendernation.com/2026/06/18/free-download-procedural-crystal-generator/",
-    "https://80.lv/articles/this-maya-tool-allows-you-to-keep-what-you-need-under-your-mouse-cursor/",
-    "https://80.lv/articles/aero-1-7-a-volumetric-fog-and-mist-shader-in-unity/",
-    "https://gnn.gamer.com.tw/detail.php?sn=306950",
-    "https://gnn.gamer.com.tw/detail.php?sn=306949",
-    "https://gnn.gamer.com.tw/detail.php?sn=306948",
-    "https://gnn.gamer.com.tw/detail.php?sn=306947",
-    "https://80.lv/articles/in-this-cute-exploration-game-you-ll-be-a-magpie-with-one-wing/"
-  ],
   "2026-06-20": [
     "https://80.lv/articles/epic-games-has-paid-out-over-usd1-billion-to-indie-creators-through-unreal-editor-for-fortnite",
     "https://80.lv/articles/state-of-unreal-ue6-reactions-hype-skepticism-and-what-it-means-for-game-devs",
@@ -503,5 +490,20 @@
     "https://80.lv/articles/surreal-animations-from-an-arctic-survival-game-made-in-godot",
     "https://80.lv/articles/browser-based-pixel-art-editor-with-live-crt-effect",
     "https://80.lv/articles/epic-games-google-withdraw-settlement-third-party-app-stores-are-coming-to-android"
+  ],
+  "2026-07-20": [
+    "https://www.gamedeveloper.com/business/the-future-of-gaming-tech-and-business-models",
+    "https://www.unrealengine.com/news/unreal-engine-5-4-release-notes",
+    "https://blog.unity.com/news/unity-developer-tools-update",
+    "https://code.blender.org/2026/07/cycles-memory-optimizations/",
+    "https://www.blendernation.com/2026/07/19/procedural-environment-creation-with-geometry-nodes/",
+    "https://www.incgmedia.com/next-gen-character-modeling-workflow",
+    "https://80.lv/articles/real-time-ray-tracing-optimization-techniques/",
+    "https://www.unrealengine.com/news/cinematic-vfx-with-niagara",
+    "https://www.incgmedia.com/pbr-materials-lighting-differences",
+    "https://www.gamedeveloper.com/business/new-aaa-game-breaks-pre-order-records",
+    "https://www.gamedeveloper.com/business/cloud-gaming-market-growth-report",
+    "https://store.steampowered.com/news/app/123456/view/789012345",
+    "https://www.gamedeveloper.com/indie/solo-dev-pixel-art-roguelike-success"
   ]
 }
