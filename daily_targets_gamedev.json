@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/the-future-of-gaming-tech-and-business-models"
+      "https://www.gamedeveloper.com/business/netflix-says-its-critically-panned-fifa-world-cup-video-game-was-a-big-success"
     ],
-    "image_filename": "headline_20260720.png",
+    "image_filename": "headline_20260721.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/news/unreal-engine-5-4-release-notes",
-      "https://blog.unity.com/news/unity-developer-tools-update"
+      "https://unity.com/blog/meet-the-unity-cli"
     ],
-    "image_filename": "engine_20260720.png",
+    "image_filename": "engine_20260721.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,11 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/07/cycles-memory-optimizations/",
-      "https://www.blendernation.com/2026/07/19/procedural-environment-creation-with-geometry-nodes/",
-      "https://www.incgmedia.com/next-gen-character-modeling-workflow"
+      "https://80.lv/articles/interview-understanding-3d-art-lighting-through-landscape-painting",
+      "https://80.lv/articles/this-incredible-stop-motion-scene-of-a-racing-chair-was-made-with-444-photos"
     ],
-    "image_filename": "model3d_20260720.png",
+    "image_filename": "model3d_20260721.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -50,11 +48,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/real-time-ray-tracing-optimization-techniques/",
-      "https://www.unrealengine.com/news/cinematic-vfx-with-niagara",
-      "https://www.incgmedia.com/pbr-materials-lighting-differences"
+      "https://80.lv/articles/valve-says-the-memory-crisis-doesn-t-seem-to-be-coming-to-an-end-anytime-soon"
     ],
-    "image_filename": "ta_20260720.png",
+    "image_filename": "ta_20260721.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -70,10 +66,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/new-aaa-game-breaks-pre-order-records",
-      "https://www.gamedeveloper.com/business/cloud-gaming-market-growth-report"
+      "https://www.gamedeveloper.com/production/two-thirds-of-doom-2016-development-team-laid-off-during-latest-round-of-xbox-cuts",
+      "https://80.lv/articles/interview-mmo-pioneer-raph-koster-on-stars-reach-and-the-future-of-sandbox-game-design"
     ],
-    "image_filename": "globalgames_20260720.png",
+    "image_filename": "globalgames_20260721.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -85,30 +81,15 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/app/123456/view/789012345",
-      "https://www.gamedeveloper.com/indie/solo-dev-pixel-art-roguelike-success"
+      "https://80.lv/articles/this-new-indie-rpg-in-early-access-is-like-starcraft-meets-mass-effect"
     ],
-    "image_filename": "indie_20260720.png",
+    "image_filename": "indie_20260721.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/the-future-of-gaming-tech-and-business-models",
-      "https://www.gamedeveloper.com/indie/solo-dev-pixel-art-roguelike-success"
-    ],
-    "image_filename": "producer_20260720.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
