@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/edge-of-memories-developer-midgar-studio-is-being-liquidated"
+      "https://www.gamedeveloper.com/business/microsoft-launches-xbox-backward-compatibility-for-pc"
     ],
-    "image_filename": "headline_20260722.png",
+    "image_filename": "headline_20260723.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/news/the-fab-summer-mega-sale-is-now-on"
+      "https://code.blender.org/2026/07/remote-asset-libraries/"
     ],
-    "image_filename": "engine_20260722.png",
+    "image_filename": "engine_20260723.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -28,30 +28,13 @@
     ]
   },
   {
-    "section_name": "Model3D",
-    "source_urls": [
-      "https://80.lv/articles/how-to-turn-a-2d-concept-into-a-colorful-and-lively-3d-environment",
-      "https://80.lv/articles/this-striking-spaceship-blender-animation-has-retro-futuristic-vibes"
-    ],
-    "image_filename": "model3d_20260722.png",
-    "image_keywords": [
-      "3d",
-      "modeling",
-      "sculpt",
-      "topology",
-      "blender",
-      "maya",
-      "zbrush",
-      "substance"
-    ]
-  },
-  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/interview-the-past-and-future-of-sonic-according-to-sega-devs",
-      "https://80.lv/articles/behind-the-development-of-hand-drawn-strategy-game-don-t-kill-them-all"
+      "https://80.lv/articles/breakdown-how-to-create-an-optimized-and-realistic-crystal-material",
+      "https://80.lv/articles/creating-a-procedural-waterfalls-tool-for-the-game-hawked",
+      "https://80.lv/articles/new-tear-painter-update-lets-you-pick-colors-directly-from-textures"
     ],
-    "image_filename": "ta_20260722.png",
+    "image_filename": "ta_20260723.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,12 +50,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/former-wreckreation-team-starts-up-new-studio-working-on-sequel",
-      "https://www.gamedeveloper.com/design/pentiment-director-emphasizes-the-importance-of-rpg-players-not-controlling-everything",
-      "https://www.gamedeveloper.com/business/nintendo-says-consumers-are-not-legally-entitled-to-tariff-rebate",
-      "https://80.lv/articles/pixar-hit-with-layoffs-despite-toy-story-5-s-massive-box-office-success"
+      "https://www.gamedeveloper.com/business/hasbro-records-56m-write-down-after-scrapping-several-video-games",
+      "https://www.gamedeveloper.com/business/alpha-dog-games-returns-to-independence-two-years-after-being-shuttered-by-xbox",
+      "https://www.gamedeveloper.com/production/-human-fall-flat-2-is-cancelled-we-are-making-human-fall-flat-3-no-brakes-games-founder-looks-back-on-a-defining-decade",
+      "https://www.gamedeveloper.com/design/splatoon-raiders-started-as-a-tower-defense-game-but-its-splatoon-ness-got-lost",
+      "https://www.gamedeveloper.com/business/a-kinect-game-that-debuted-in-2013-has-been-revived-in-the-year-of-our-lord-2026"
     ],
-    "image_filename": "globalgames_20260722.png",
+    "image_filename": "globalgames_20260723.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,29 +66,16 @@
     ]
   },
   {
-    "section_name": "Indie",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=308533",
-      "https://gnn.gamer.com.tw/detail.php?sn=308531",
-      "https://gnn.gamer.com.tw/detail.php?sn=308530",
-      "https://gnn.gamer.com.tw/detail.php?sn=308529"
-    ],
-    "image_filename": "indie_20260722.png",
-    "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
-    ]
-  },
-  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=308534",
-      "https://gnn.gamer.com.tw/detail.php?sn=308532"
+      "https://gnn.gamer.com.tw/detail.php?sn=308611",
+      "https://gnn.gamer.com.tw/detail.php?sn=308608",
+      "https://gnn.gamer.com.tw/detail.php?sn=308607",
+      "https://gnn.gamer.com.tw/detail.php?sn=308612",
+      "https://gnn.gamer.com.tw/detail.php?sn=308610",
+      "https://gnn.gamer.com.tw/detail.php?sn=308609"
     ],
-    "image_filename": "local_20260722.png",
+    "image_filename": "local_20260723.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -115,9 +86,11 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/design/what-developers-can-learn-from-this-generation-of-games-criticism"
+      "https://www.gamedeveloper.com/business/hasbro-records-56m-write-down-after-scrapping-several-video-games",
+      "https://www.gamedeveloper.com/business/alpha-dog-games-returns-to-independence-two-years-after-being-shuttered-by-xbox",
+      "https://code.blender.org/2026/07/remote-asset-libraries/"
     ],
-    "image_filename": "producer_20260722.png",
+    "image_filename": "producer_20260723.png",
     "image_keywords": [
       "marketing",
       "development",
