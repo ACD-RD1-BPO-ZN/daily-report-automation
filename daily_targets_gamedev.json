@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/microsoft-launches-xbox-backward-compatibility-for-pc"
+      "https://www.gamedeveloper.com/business/vermila-studios-lays-off-staff-studio-closure-a-feasible-possibility-in-coming-months"
     ],
-    "image_filename": "headline_20260723.png",
+    "image_filename": "headline_20260724.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://code.blender.org/2026/07/remote-asset-libraries/"
+      "https://www.unrealengine.com/events/south-east-asia-dev-days"
     ],
-    "image_filename": "engine_20260723.png",
+    "image_filename": "engine_20260724.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -28,13 +28,30 @@
     ]
   },
   {
+    "section_name": "Model3D",
+    "source_urls": [
+      "https://80.lv/articles/this-tool-gives-every-blender-object-its-own-undo-history"
+    ],
+    "image_filename": "model3d_20260724.png",
+    "image_keywords": [
+      "3d",
+      "modeling",
+      "sculpt",
+      "topology",
+      "blender",
+      "maya",
+      "zbrush",
+      "substance"
+    ]
+  },
+  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/breakdown-how-to-create-an-optimized-and-realistic-crystal-material",
-      "https://80.lv/articles/creating-a-procedural-waterfalls-tool-for-the-game-hawked",
-      "https://80.lv/articles/new-tear-painter-update-lets-you-pick-colors-directly-from-textures"
+      "https://80.lv/articles/from-concept-art-to-ue5-building-a-stylized-catalonia-inspired-town",
+      "https://80.lv/articles/disgaea-mayhem-shifting-from-tactical-rp-to-action-rpg",
+      "https://80.lv/articles/how-tides-of-tomorrow-s-story-link-system-lets-players-shape-each-other-s-stories"
     ],
-    "image_filename": "ta_20260723.png",
+    "image_filename": "ta_20260724.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -50,13 +67,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/hasbro-records-56m-write-down-after-scrapping-several-video-games",
-      "https://www.gamedeveloper.com/business/alpha-dog-games-returns-to-independence-two-years-after-being-shuttered-by-xbox",
-      "https://www.gamedeveloper.com/production/-human-fall-flat-2-is-cancelled-we-are-making-human-fall-flat-3-no-brakes-games-founder-looks-back-on-a-defining-decade",
-      "https://www.gamedeveloper.com/design/splatoon-raiders-started-as-a-tower-defense-game-but-its-splatoon-ness-got-lost",
-      "https://www.gamedeveloper.com/business/a-kinect-game-that-debuted-in-2013-has-been-revived-in-the-year-of-our-lord-2026"
+      "https://www.gamedeveloper.com/business/saudi-arabia-s-polarising-ea-buyout-approved-under-eu-merger-rules",
+      "https://www.gamedeveloper.com/production/canadian-union-workers-slam-xbox-for-offering-the-bare-legal-minimum-in-terms-of-severance-",
+      "https://80.lv/articles/faker-becomes-honorary-police-officer-to-fight-youth-cyber-gambling"
     ],
-    "image_filename": "globalgames_20260723.png",
+    "image_filename": "globalgames_20260724.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -66,16 +81,30 @@
     ]
   },
   {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://www.gamedeveloper.com/pc/steam-adds-wishlist-categories-and-cross-region-gifting"
+    ],
+    "image_filename": "indie_20260724.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=308611",
-      "https://gnn.gamer.com.tw/detail.php?sn=308608",
-      "https://gnn.gamer.com.tw/detail.php?sn=308607",
-      "https://gnn.gamer.com.tw/detail.php?sn=308612",
-      "https://gnn.gamer.com.tw/detail.php?sn=308610",
-      "https://gnn.gamer.com.tw/detail.php?sn=308609"
+      "https://gnn.gamer.com.tw/detail.php?sn=308697",
+      "https://gnn.gamer.com.tw/detail.php?sn=308696",
+      "https://gnn.gamer.com.tw/detail.php?sn=308695",
+      "https://gnn.gamer.com.tw/detail.php?sn=308694",
+      "https://gnn.gamer.com.tw/detail.php?sn=308693",
+      "https://gnn.gamer.com.tw/detail.php?sn=308692"
     ],
-    "image_filename": "local_20260723.png",
+    "image_filename": "local_20260724.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -86,11 +115,11 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/hasbro-records-56m-write-down-after-scrapping-several-video-games",
-      "https://www.gamedeveloper.com/business/alpha-dog-games-returns-to-independence-two-years-after-being-shuttered-by-xbox",
-      "https://code.blender.org/2026/07/remote-asset-libraries/"
+      "https://www.gamedeveloper.com/business/vermila-studios-lays-off-staff-studio-closure-a-feasible-possibility-in-coming-months",
+      "https://www.unrealengine.com/events/south-east-asia-dev-days",
+      "https://80.lv/articles/from-concept-art-to-ue5-building-a-stylized-catalonia-inspired-town"
     ],
-    "image_filename": "producer_20260723.png",
+    "image_filename": "producer_20260724.png",
     "image_keywords": [
       "marketing",
       "development",
