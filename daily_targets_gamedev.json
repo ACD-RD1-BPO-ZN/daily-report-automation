@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ea-boss-awarded-38-6m-after-year-of-franchise-success-studio-layoffs-and-genai-adoption"
+      "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5"
     ],
-    "image_filename": "headline_20260730.png",
+    "image_filename": "headline_20260731.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/mobile-game-webshop-business-case"
+      "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5",
+      "https://www.gamedeveloper.com/business/unity-brings-dedicated-engine-support-to-netflix-games"
     ],
-    "image_filename": "engine_20260730.png",
+    "image_filename": "engine_20260731.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/this-arcane-style-short-animated-film-will-leave-you-intrigued",
-      "https://80.lv/articles/breakdown-creating-a-star-wars-inspired-arabian-style-3d-scene-with-sci-fi-elements",
-      "https://80.lv/articles/interview-why-practical-puppets-still-matter-in-the-age-of-digital-characters"
+      "https://code.blender.org/2026/07/geometry-nodes-physics/",
+      "https://80.lv/articles/modeler-creates-a-blender-style-modeling-plugin-for-roblox-studio"
     ],
-    "image_filename": "model3d_20260730.png",
+    "image_filename": "model3d_20260731.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,9 +49,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/you-ll-be-able-to-add-different-birds-to-your-environments-with-this-bundle"
+      "https://80.lv/articles/breakdown-how-to-make-a-weapon-look-realistic-and-eye-catching",
+      "https://80.lv/articles/you-ll-be-able-to-create-dynamic-cloth-based-effects-with-this-pack",
+      "https://80.lv/articles/interview-how-hdr10-can-help-game-devs-preserve-their-artistic-vision"
     ],
-    "image_filename": "ta_20260730.png",
+    "image_filename": "ta_20260731.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,15 +69,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/subnautica-2-and-pubg-bolster-krafton-s-q2-revenue",
-      "https://www.gamedeveloper.com/business/tencent-owned-lightspeed-la-is-laying-off-staff",
-      "https://www.gamedeveloper.com/business/epic-games-hires-former-head-of-blizzard-s-battle-net",
-      "https://www.gamedeveloper.com/business/double-fine-making-layoffs-after-being-jettisoned-by-xbox",
-      "https://gnn.gamer.com.tw/detail.php?sn=309039",
-      "https://gnn.gamer.com.tw/detail.php?sn=309041",
-      "https://gnn.gamer.com.tw/detail.php?sn=309042"
+      "https://www.gamedeveloper.com/business/xbox-hardware-revenue-fell-by-1-7-billion-during-fiscal-2026",
+      "https://80.lv/articles/subnautica-2-sold-5-million-copies-in-22-days-gave-krafton-its-best-second-quarter-ever",
+      "https://gnn.gamer.com.tw/detail.php?sn=309143",
+      "https://gnn.gamer.com.tw/detail.php?sn=309141"
     ],
-    "image_filename": "globalgames_20260730.png",
+    "image_filename": "globalgames_20260731.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -87,10 +86,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/the-new-co-op-dark-fantasy-rpg-that-blends-dark-souls-arc-raiders-is-out-today",
-      "https://gnn.gamer.com.tw/detail.php?sn=309040"
+      "https://www.gamedeveloper.com/design/narrative-notebook-5-unbeatable-s-music-video-vibes-can-t-be-beat",
+      "https://www.gamedeveloper.com/business/the-truth-behind-the-resurrection-of-poinpy",
+      "https://gnn.gamer.com.tw/detail.php?sn=309145",
+      "https://gnn.gamer.com.tw/detail.php?sn=309142"
     ],
-    "image_filename": "indie_20260730.png",
+    "image_filename": "indie_20260731.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -102,15 +103,28 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309046",
-      "https://gnn.gamer.com.tw/detail.php?sn=309045"
+      "https://gnn.gamer.com.tw/detail.php?sn=309146",
+      "https://gnn.gamer.com.tw/detail.php?sn=309144"
     ],
-    "image_filename": "local_20260730.png",
+    "image_filename": "local_20260731.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/production/if-knowledge-if-power-why-are-game-companies-choosing-impotence-"
+    ],
+    "image_filename": "producer_20260731.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
