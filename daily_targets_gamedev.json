@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5"
+      "https://www.gamedeveloper.com/business/ea-says-all-regulatory-approvals-have-been-cleared-for-its-take-private-deal"
     ],
-    "image_filename": "headline_20260731.png",
+    "image_filename": "headline_20260801.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5",
-      "https://www.gamedeveloper.com/business/unity-brings-dedicated-engine-support-to-netflix-games"
+      "https://www.unrealengine.com/learning/julys-epic-learning-content-animation-mobile-game-development-and-more"
     ],
-    "image_filename": "engine_20260731.png",
+    "image_filename": "engine_20260801.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,10 +30,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/07/geometry-nodes-physics/",
-      "https://80.lv/articles/modeler-creates-a-blender-style-modeling-plugin-for-roblox-studio"
+      "https://www.blendernation.com/2026/07/31/blender-jobs-for-july-31-2026/",
+      "https://www.blendernation.com/2026/07/31/best-of-blender-artists-2026-31/",
+      "https://80.lv/articles/check-out-this-cool-vhs-like-effect-made-in-blender/"
     ],
-    "image_filename": "model3d_20260731.png",
+    "image_filename": "model3d_20260801.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +49,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/breakdown-how-to-make-a-weapon-look-realistic-and-eye-catching",
-      "https://80.lv/articles/you-ll-be-able-to-create-dynamic-cloth-based-effects-with-this-pack",
-      "https://80.lv/articles/interview-how-hdr10-can-help-game-devs-preserve-their-artistic-vision"
+      "https://80.lv/articles/creating-intricate-filigree-metalwork-patterns-for-a-material-with-substance-3d/"
     ],
-    "image_filename": "ta_20260731.png",
+    "image_filename": "ta_20260801.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,12 +67,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-hardware-revenue-fell-by-1-7-billion-during-fiscal-2026",
-      "https://80.lv/articles/subnautica-2-sold-5-million-copies-in-22-days-gave-krafton-its-best-second-quarter-ever",
-      "https://gnn.gamer.com.tw/detail.php?sn=309143",
-      "https://gnn.gamer.com.tw/detail.php?sn=309141"
+      "https://www.gamedeveloper.com/business/xbox-ceo-declares-priorities-after-reset-",
+      "https://www.gamedeveloper.com/business/xbox-perpetual-hardware-revenue-decline-leon-kennedy-pays-off-and-double-fine-cuts-staff-patch-notes-63"
     ],
-    "image_filename": "globalgames_20260731.png",
+    "image_filename": "globalgames_20260801.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -86,12 +82,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/design/narrative-notebook-5-unbeatable-s-music-video-vibes-can-t-be-beat",
-      "https://www.gamedeveloper.com/business/the-truth-behind-the-resurrection-of-poinpy",
-      "https://gnn.gamer.com.tw/detail.php?sn=309145",
-      "https://gnn.gamer.com.tw/detail.php?sn=309142"
+      "https://80.lv/articles/this-supernatural-mystery-game-looks-like-an-edward-hopper-painting",
+      "https://80.lv/articles/where-dolls-hang-creating-a-horror-game-inspired-by-mexican-folklore",
+      "https://www.gamedeveloper.com/audio/gdc-side-quest-a-sit-down-with-the-indomitable-sam-beart"
     ],
-    "image_filename": "indie_20260731.png",
+    "image_filename": "indie_20260801.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -103,10 +98,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309146",
-      "https://gnn.gamer.com.tw/detail.php?sn=309144"
+      "https://gnn.gamer.com.tw/detail.php?sn=309222",
+      "https://gnn.gamer.com.tw/detail.php?sn=309221",
+      "https://gnn.gamer.com.tw/detail.php?sn=309220",
+      "https://gnn.gamer.com.tw/detail.php?sn=309219",
+      "https://gnn.gamer.com.tw/detail.php?sn=309218",
+      "https://gnn.gamer.com.tw/detail.php?sn=309217"
     ],
-    "image_filename": "local_20260731.png",
+    "image_filename": "local_20260801.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -117,9 +116,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/if-knowledge-if-power-why-are-game-companies-choosing-impotence-"
+      "https://www.gamedeveloper.com/business/ea-says-all-regulatory-approvals-have-been-cleared-for-its-take-private-deal",
+      "https://gnn.gamer.com.tw/detail.php?sn=309222"
     ],
-    "image_filename": "producer_20260731.png",
+    "image_filename": "producer_20260801.png",
     "image_keywords": [
       "marketing",
       "development",
