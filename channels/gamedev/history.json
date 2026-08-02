@@ -1,32 +1,4 @@
 {
-  "2026-07-02": [
-    "https://www.gamedeveloper.com/business/playstation-ending-production-of-physical-software-in-january-2028",
-    "https://code.blender.org/2025/10/volume-grids-in-geometry-nodes/",
-    "https://code.blender.org/2025/08/bundles-and-closures/",
-    "https://code.blender.org/2026/02/winter-of-quality-2026/",
-    "https://www.blender.org/press/blender-5-1-release/",
-    "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
-    "https://code.blender.org/2025/10/google-summer-of-code-2025-results/",
-    "https://80.lv/articles/testing-4-free-mesh-simplification-tools",
-    "https://80.lv/articles/breakdown-creating-a-detailed-and-vibrant-scene-with-unreal-engine-and-substance-3d",
-    "https://80.lv/articles/create-games-environments-and-cinematic-scenes-with-this-unity-bundle",
-    "https://www.gamedeveloper.com/business/krafton-agrees-to-pay-bonuses-to-subnautica-2-studio-as-ceo-resigns",
-    "https://www.gamedeveloper.com/business/otherside-entertainment-lays-off-18-from-thick-as-thieves-team",
-    "https://www.gamedeveloper.com/business/ubisoft-barcelona-to-go-on-strike-over-proposed-layoffs",
-    "https://www.gamedeveloper.com/business/ps3-and-ps-vita-digital-stores-are-closing-starting-august-2026",
-    "https://gnn.gamer.com.tw/detail.php?sn=307577",
-    "https://gnn.gamer.com.tw/detail.php?sn=307576",
-    "https://gnn.gamer.com.tw/detail.php?sn=307578",
-    "https://gnn.gamer.com.tw/detail.php?sn=307575",
-    "https://www.gamedeveloper.com/business/godot-to-ban-almost-all-ai-coding-contributions",
-    "https://godotengine.org/article/release-candidate-godot-4-7-1-rc-1/",
-    "https://godotengine.org/article/godot-vision-statement-2026/",
-    "https://godotengine.org/article/godot-4-7-lights-camera-action/",
-    "https://godotengine.org/article/contribution-policy-2026/",
-    "https://store.steampowered.com/news/265516/",
-    "https://gnn.gamer.com.tw/detail.php?sn=307580",
-    "https://gnn.gamer.com.tw/detail.php?sn=307579"
-  ],
   "2026-07-03": [
     "https://www.gamedeveloper.com/business/union-workers-establish-hardship-fund-to-support-devs-impacted-by-layoffs",
     "https://code.blender.org/2026/05/cycles-texture-cache/",
@@ -527,5 +499,19 @@
     "https://gnn.gamer.com.tw/detail.php?sn=309219",
     "https://gnn.gamer.com.tw/detail.php?sn=309218",
     "https://gnn.gamer.com.tw/detail.php?sn=309217"
+  ],
+  "2026-08-02": [
+    "https://gnn.gamer.com.tw/detail.php?sn=309234",
+    "https://code.blender.org/2026/02/winter-of-quality-2026/",
+    "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
+    "https://code.blender.org/2025/10/google-summer-of-code-2025-results/",
+    "https://80.lv/articles/add-cinematic-volumetric-fog-to-blender-scenes-in-just-minutes",
+    "https://80.lv/articles/check-out-this-cool-vhs-like-effect-made-in-blender",
+    "https://80.lv/articles/creating-intricate-filigree-metalwork-patterns-for-a-material-with-substance-3d",
+    "https://gnn.gamer.com.tw/detail.php?sn=309233",
+    "https://gnn.gamer.com.tw/detail.php?sn=309231",
+    "https://gnn.gamer.com.tw/detail.php?sn=309230",
+    "https://gnn.gamer.com.tw/detail.php?sn=309229",
+    "https://gnn.gamer.com.tw/detail.php?sn=309232"
   ]
 }
