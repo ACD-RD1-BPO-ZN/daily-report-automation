@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309234"
+      "https://code.blender.org/2026/05/cycles-texture-cache/"
     ],
-    "image_filename": "headline_20260802.png",
+    "image_filename": "headline_20260803.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,29 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://code.blender.org/2026/02/winter-of-quality-2026/",
-      "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
-      "https://code.blender.org/2025/10/google-summer-of-code-2025-results/"
-    ],
-    "image_filename": "engine_20260802.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/add-cinematic-volumetric-fog-to-blender-scenes-in-just-minutes",
-      "https://80.lv/articles/check-out-this-cool-vhs-like-effect-made-in-blender",
-      "https://80.lv/articles/creating-intricate-filigree-metalwork-patterns-for-a-material-with-Substance-3D"
+      "https://www.blendernation.com/2026/08/02/easily-add-details-to-a-surface/"
     ],
-    "image_filename": "model3d_20260802.png",
+    "image_filename": "model3d_20260803.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,14 +31,31 @@
     ]
   },
   {
+    "section_name": "TA",
+    "source_urls": [
+      "https://80.lv/articles/this-rpg-brings-cosmic-horror-to-an-anime-pixel-art-style",
+      "https://80.lv/articles/this-retro-lcd-game-will-have-you-playing-as-a-robot-and-its-tumor"
+    ],
+    "image_filename": "ta_20260803.png",
+    "image_keywords": [
+      "screenshot",
+      "preview",
+      "featured",
+      "spotlight",
+      "render",
+      "engine",
+      "technology",
+      "shader",
+      "scene"
+    ]
+  },
+  {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309233",
-      "https://gnn.gamer.com.tw/detail.php?sn=309231",
-      "https://gnn.gamer.com.tw/detail.php?sn=309230",
-      "https://gnn.gamer.com.tw/detail.php?sn=309229"
+      "https://80.lv/articles/don-t-expect-dragon-age-remasters-no-one-at-bioware-understands-old-engine",
+      "https://80.lv/articles/game-that-shaped-youtube-might-get-new-version-this-year"
     ],
-    "image_filename": "globalgames_20260802.png",
+    "image_filename": "globalgames_20260803.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -66,17 +65,17 @@
     ]
   },
   {
-    "section_name": "Indie",
+    "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309232"
+      "https://code.blender.org/2026/05/cycles-texture-cache/",
+      "https://80.lv/articles/don-t-expect-dragon-age-remasters-no-one-at-bioware-understands-old-engine"
     ],
-    "image_filename": "indie_20260802.png",
+    "image_filename": "producer_20260803.png",
     "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
