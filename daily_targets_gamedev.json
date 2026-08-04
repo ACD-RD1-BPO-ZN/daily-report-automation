@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://code.blender.org/2026/05/cycles-texture-cache/"
+      "https://www.gamedeveloper.com/business/xbox-hardware-now-costs-a-lot-more-in-the-uk-and-europe"
     ],
-    "image_filename": "headline_20260803.png",
+    "image_filename": "headline_20260804.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,25 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/games-made-with-unity-july-2026-releases"
+    ],
+    "image_filename": "engine_20260804.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/08/02/easily-add-details-to-a-surface/"
+      "https://www.blender.org/events/blender-in-annecy-2026-recap/"
     ],
-    "image_filename": "model3d_20260803.png",
+    "image_filename": "model3d_20260804.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,10 +47,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-rpg-brings-cosmic-horror-to-an-anime-pixel-art-style",
-      "https://80.lv/articles/this-retro-lcd-game-will-have-you-playing-as-a-robot-and-its-tumor"
+      "https://80.lv/articles/this-robot-is-supposed-to-be-a-rescuer-but-it-looks-more-like-a-demon"
     ],
-    "image_filename": "ta_20260803.png",
+    "image_filename": "ta_20260804.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -52,10 +65,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/don-t-expect-dragon-age-remasters-no-one-at-bioware-understands-old-engine",
-      "https://80.lv/articles/game-that-shaped-youtube-might-get-new-version-this-year"
+      "https://www.gamedeveloper.com/design/how-silent-hill-townfall-gets-deep-into-its-protagonist-s-headspace"
     ],
-    "image_filename": "globalgames_20260803.png",
+    "image_filename": "globalgames_20260804.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -65,17 +77,30 @@
     ]
   },
   {
-    "section_name": "Producer",
+    "section_name": "Indie",
     "source_urls": [
-      "https://code.blender.org/2026/05/cycles-texture-cache/",
-      "https://80.lv/articles/don-t-expect-dragon-age-remasters-no-one-at-bioware-understands-old-engine"
+      "https://gnn.gamer.com.tw/detail.php?sn=309307"
     ],
-    "image_filename": "producer_20260803.png",
+    "image_filename": "indie_20260804.png",
     "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=309306"
+    ],
+    "image_filename": "local_20260804.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]

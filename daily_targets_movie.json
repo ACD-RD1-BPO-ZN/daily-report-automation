@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/box-office/spider-man-brand-new-day-global-debut-nears-1-billion-1236825975/"
+      "https://variety.com/2026/film/news/kevin-feige-spider-man-brand-new-day-sequel-tom-holland-1236826503/"
     ],
-    "image_filename": "headline_20260803.png",
+    "image_filename": "headline_20260804.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,11 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/08/gregg-araki-not-supporter-ai-useful-editing-i-want-your-sex-1237015578/",
-      "https://www.firstshowing.net/2026/official-trailer-for-esta-isla-award-winning-puerto-rican-indie-film/",
-      "https://www.firstshowing.net/2026/watch-other-life-doc-short-exploring-ufo-sightings-in-south-wales/"
+      "https://deadline.com/2026/08/spider-man-brand-new-day-amy-pascal-interview-1237016593/",
+      "https://deadline.com/2026/08/late-fame-review-willem-dafoe-and-greta-lee-superb-in-wonderful-indie-film-about-art-and-rediscovery-in-a-new-york-long-gone-1237016538/",
+      "https://www.firstshowing.net/2026/first-look-teaser-for-takashi-miikes-bad-lieutenant-tokyo-movie/",
+      "https://www.firstshowing.net/2026/first-trailer-for-korean-thriller-paradise-lost-about-a-missing-child/",
+      "https://www.firstshowing.net/2026/adorable-trailer-for-wild-inside-doc-following-nycs-flaco-the-owl/",
+      "https://www.firstshowing.net/2026/watch-a-fascinating-philosophical-interview-with-christopher-nolan/",
+      "https://www.cartoonbrew.com/shorts/70-deadly-sins-tara-hou-usc-xa-265118.html",
+      "https://variety.com/2026/film/news/miss-navajo-musical-billy-luther-raye-zaragoza-1236826631/"
     ],
-    "image_filename": "production_20260803.png",
+    "image_filename": "production_20260804.png",
     "image_keywords": [
       "film",
       "production",
@@ -37,11 +42,13 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/08/box-office-domestic-record-weekend-spider-man-brand-new-day-1237015511/",
-      "https://deadline.com/2026/08/indie-film-box-office-hadestown-the-musical-1237015560/",
-      "https://variety.com/2026/film/news/christopher-nolan-flaw-film-criticism-the-odyssey-1236826067/"
+      "https://deadline.com/2026/08/paramount-wbd-merger-q2-earnings-1237016279/",
+      "https://variety.com/2026/film/features/spider-man-popcorn-bucket-scalper-prices-imax-merch-1236817709/",
+      "https://www.boxofficemojo.com/date/2026-08-04/",
+      "https://www.cartoonbrew.com/awards/annie-award-submissions-open-anime-category-265121.html",
+      "https://www.cartoonbrew.com/opinion/opinion-festival-country-boycotts-265104.html"
     ],
-    "image_filename": "boxoffice_20260803.png",
+    "image_filename": "boxoffice_20260804.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -52,10 +59,13 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://variety.com/lists/best-movies-streaming-august-2026/",
-      "https://variety.com/2026/music/news/ariana-grande-step-back-public-scrutiny-sunday-in-the-park-1236826037/"
+      "https://variety.com/2026/film/news/the-devil-wears-prada-2-ratings-views-streaming-1236826857/",
+      "https://deadline.com/2026/08/hilda-in-lights-comedy-pilot-70-year-old-broadway-1237016526/",
+      "https://www.firstshowing.net/2026/quick-trailer-for-hit-point-crime-thriller-series-set-in-west-london/",
+      "https://www.firstshowing.net/2026/final-trailer-for-star-wars-visions-the-ninth-jedi-spin-off-series/",
+      "https://www.cartoonbrew.com/series/warhammer-40000-amazon-mgm-series-265107.html"
     ],
-    "image_filename": "streaming_20260803.png",
+    "image_filename": "streaming_20260804.png",
     "image_keywords": [
       "netflix",
       "disney+",
