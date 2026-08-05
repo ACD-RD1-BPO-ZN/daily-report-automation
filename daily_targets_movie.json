@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/news/kevin-feige-spider-man-brand-new-day-sequel-tom-holland-1236826503/"
+      "https://deadline.com/2026/08/david-ellison-paramount-open-to-settling-wbd-lawsuit-antitrust-1237017564/"
     ],
-    "image_filename": "headline_20260804.png",
+    "image_filename": "headline_20260805.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,16 +18,24 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/08/spider-man-brand-new-day-amy-pascal-interview-1237016593/",
-      "https://deadline.com/2026/08/late-fame-review-willem-dafoe-and-greta-lee-superb-in-wonderful-indie-film-about-art-and-rediscovery-in-a-new-york-long-gone-1237016538/",
-      "https://www.firstshowing.net/2026/first-look-teaser-for-takashi-miikes-bad-lieutenant-tokyo-movie/",
-      "https://www.firstshowing.net/2026/first-trailer-for-korean-thriller-paradise-lost-about-a-missing-child/",
-      "https://www.firstshowing.net/2026/adorable-trailer-for-wild-inside-doc-following-nycs-flaco-the-owl/",
-      "https://www.firstshowing.net/2026/watch-a-fascinating-philosophical-interview-with-christopher-nolan/",
-      "https://www.cartoonbrew.com/shorts/70-deadly-sins-tara-hou-usc-xa-265118.html",
-      "https://variety.com/2026/film/news/miss-navajo-musical-billy-luther-raye-zaragoza-1236826631/"
+      "https://variety.com/2026/film/news/naomi-watts-spider-man-brand-new-day-role-tom-holland-reunion-1236827951/",
+      "https://www.firstshowing.net/2026/david-harbour-is-back-as-badass-santa-in-violent-night-2-full-trailer/",
+      "https://www.firstshowing.net/2026/final-get-your-tickets-trailer-for-the-dog-stars-with-jacob-elordi/",
+      "https://deadline.com/2026/08/markus-schleinzer-signs-with-cinetic-rose-director-1237017875/",
+      "https://deadline.com/2026/08/tony-review-dominic-sessa-teenage-anthony-bourdain-biopic-1237017694/",
+      "https://variety.com/2026/film/news/cannibalism-comedy-ali-bens-spicy-meats-abnormal-studios-worldwide-sales-1236827535/",
+      "https://www.firstshowing.net/2026/first-look-teaser-for-john-wilsons-doc-film-the-history-of-concrete/",
+      "https://www.firstshowing.net/2026/nathalie-emmanuel-claire-forlani-in-thriller-confinement-trailer/",
+      "https://www.firstshowing.net/2026/official-trailer-for-jodorowsky-collection-a-10-film-blu-ray-box-set/",
+      "https://variety.com/2026/film/news/samantha-morton-ageism-odyssey-fired-her-scarlett-johansson-1236827803/",
+      "https://variety.com/2026/artisans/news/leslie-iwerks-disney-worldbuilders-jennifer-lee-1236826968/",
+      "https://variety.com/2026/film/features/boyhood-ellar-coltrane-interview-richard-linklater-12-years-1236826983/",
+      "https://www.cartoonbrew.com/feature-film/sun-xun-magic-atlas-interview-265154/",
+      "https://www.cartoonbrew.com/feature-film/cherry-and-virgin-masanao-kawajiri-interview-265139/",
+      "https://www.firstshowing.net/2026/final-trailers-for-anime-the-ribbon-hero-from-director-yuki-igarashi/",
+      "https://www.cartoonbrew.com/series/flying-bark-olan-rogers-lightfold-265160/"
     ],
-    "image_filename": "production_20260804.png",
+    "image_filename": "production_20260805.png",
     "image_keywords": [
       "film",
       "production",
@@ -42,13 +50,9 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/08/paramount-wbd-merger-q2-earnings-1237016279/",
-      "https://variety.com/2026/film/features/spider-man-popcorn-bucket-scalper-prices-imax-merch-1236817709/",
-      "https://www.boxofficemojo.com/date/2026-08-04/",
-      "https://www.cartoonbrew.com/awards/annie-award-submissions-open-anime-category-265121.html",
-      "https://www.cartoonbrew.com/opinion/opinion-festival-country-boycotts-265104.html"
+      "https://www.boxofficemojo.com/date/2026-08-05/"
     ],
-    "image_filename": "boxoffice_20260804.png",
+    "image_filename": "boxoffice_20260805.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -59,13 +63,12 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://variety.com/2026/film/news/the-devil-wears-prada-2-ratings-views-streaming-1236826857/",
-      "https://deadline.com/2026/08/hilda-in-lights-comedy-pilot-70-year-old-broadway-1237016526/",
-      "https://www.firstshowing.net/2026/quick-trailer-for-hit-point-crime-thriller-series-set-in-west-london/",
-      "https://www.firstshowing.net/2026/final-trailer-for-star-wars-visions-the-ninth-jedi-spin-off-series/",
-      "https://www.cartoonbrew.com/series/warhammer-40000-amazon-mgm-series-265107.html"
+      "https://deadline.com/feature/this-summer-will-be-different-adaptation-news-updates-1237017955/",
+      "https://deadline.com/2026/08/ocean-with-david-attenborough-director-interview-podcast-1237017001/",
+      "https://variety.com/2026/film/news/inside-googles-efforts-creatives-hooked-on-ai-1236827944/",
+      "https://www.cartoonbrew.com/shorts/don-hertzfeldt-films-streaming-dropout-265140/"
     ],
-    "image_filename": "streaming_20260804.png",
+    "image_filename": "streaming_20260805.png",
     "image_keywords": [
       "netflix",
       "disney+",
