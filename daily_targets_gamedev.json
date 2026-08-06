@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ea-is-now-owned-by-saudi-arabia-and-donald-trump-s-son-in-law"
+      "https://www.gamedeveloper.com/business/publisher-secret-mode-opens-development-studio-to-support-internal-projects"
     ],
-    "image_filename": "headline_20260805.png",
+    "image_filename": "headline_20260806.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/games-made-with-unity-june-2026-releases"
+      "https://unity.com/blog/the-3d-as-2d-sample-project,-bunny-blitz,-is-available-now"
     ],
-    "image_filename": "engine_20260805.png",
+    "image_filename": "engine_20260806.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/"
+      "https://www.blendernation.com/2026/08/05/blender-developers-meeting-notes-3-august-2026/",
+      "https://www.blendernation.com/2026/08/05/bgmc-game-jam/"
     ],
-    "image_filename": "model3d_20260805.png",
+    "image_filename": "model3d_20260806.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,11 +48,12 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/3d-artist-accidentally-creates-a-text-effect-system",
-      "https://80.lv/articles/this-asset-collection-helps-you-build-dungeon-style-environments-in-unity",
-      "https://80.lv/articles/gaku-tada-shares-beautiful-animated-scene-made-with-deep-paint"
+      "https://80.lv/articles/larian-just-revealed-some-very-telling-baldur-s-gate-3-player-stats",
+      "https://80.lv/articles/this-new-24-7-society-simulator-is-powered-by-thousands-of-ai-controlled-npcs",
+      "https://80.lv/articles/gunstoppable-how-speed-is-damage-defined-a-roguelite-fps",
+      "https://80.lv/articles/baldurs-gate-3-third-person-mod-makes-it-feel-like-a-different-game"
     ],
-    "image_filename": "ta_20260805.png",
+    "image_filename": "ta_20260806.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,12 +69,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/live-service-revenue-dominates-in-ea-s-last-fiscal-report-ahead-of-saudi-merger",
-      "https://www.gamedeveloper.com/business/the-game-industry-hardship-fund-bundle-surpasses-130-000",
-      "https://www.gamedeveloper.com/business/amid-child-safety-lawsuits-roblox-says-it-continues-to-set-a-standard-for-digital-safety",
-      "https://80.lv/articles/game-freak-s-big-aaa-action-rpg-step-beyond-pok-mon-has-mixed-results"
+      "https://www.gamedeveloper.com/business/candy-crush-maker-king-has-declined-staff-s-collective-bargaining-agreement",
+      "https://www.gamedeveloper.com/production/policymakers-across-europe-told-to-do-more-to-support-game-industry",
+      "https://www.gamedeveloper.com/business/coffee-stain-bullish-despite-underperformance-of-deep-rock-galactic-spinoff",
+      "https://80.lv/articles/henry-cavill-confirms-he-ll-star-in-the-warhammer-40k-live-action-series"
     ],
-    "image_filename": "globalgames_20260805.png",
+    "image_filename": "globalgames_20260806.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,9 +86,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/embark-on-big-walk-in-new-co-op-puzzle-game-by-developers-of-untitled-goose-game"
+      "https://godotengine.org/article/release-candidate-godot-4-7-2-rc-1/",
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/"
     ],
-    "image_filename": "indie_20260805.png",
+    "image_filename": "indie_20260806.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -98,14 +101,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309371",
-      "https://gnn.gamer.com.tw/detail.php?sn=309370",
-      "https://gnn.gamer.com.tw/detail.php?sn=309369",
-      "https://gnn.gamer.com.tw/detail.php?sn=309368",
-      "https://gnn.gamer.com.tw/detail.php?sn=309367",
-      "https://gnn.gamer.com.tw/detail.php?sn=309366"
+      "https://gnn.gamer.com.tw/detail.php?sn=309442",
+      "https://gnn.gamer.com.tw/detail.php?sn=309441",
+      "https://gnn.gamer.com.tw/detail.php?sn=309440",
+      "https://gnn.gamer.com.tw/detail.php?sn=309439",
+      "https://gnn.gamer.com.tw/detail.php?sn=309438",
+      "https://gnn.gamer.com.tw/detail.php?sn=309437"
     ],
-    "image_filename": "local_20260805.png",
+    "image_filename": "local_20260806.png",
     "image_keywords": [
       "event",
       "meetup",
