@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/marketing/rockstar-wants-you-to-pay-netflix-to-watch-the-next-gta-vi-trailer"
+      "https://www.gamedeveloper.com/business/gta-v-surpasses-230-million-sales-months-before-gta-vi-touches-down"
     ],
-    "image_filename": "headline_20260807.png",
+    "image_filename": "headline_20260808.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/unity-sells-supersonic-publishing-biz-to-tripledot-for-40m"
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/"
     ],
-    "image_filename": "engine_20260807.png",
+    "image_filename": "engine_20260808.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/interview-how-kidbash-super-legend-adapts-retro-style-graphics-with-a-modern-art-pipeline"
+      "https://www.blendernation.com/2026/08/07/best-of-blender-artists-2026-32/",
+      "https://www.blendernation.com/2026/08/07/how-to-boolean-cut-curves-and-text/"
     ],
-    "image_filename": "model3d_20260807.png",
+    "image_filename": "model3d_20260808.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,10 +48,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/the-void-how-to-create-a-survival-horror-fps-inspired-by-the-mist-movie",
-      "https://80.lv/articles/creating-a-survival-horror-game-that-blends-a-2d-retro-style-and-live-action-cutscenes"
+      "https://80.lv/articles/former-bethesda-lead-artist-looks-forward-to-fallout-3-s-remaster",
+      "https://80.lv/articles/how-to-create-hair-and-feathers-for-an-owl-harpy-character"
     ],
-    "image_filename": "ta_20260807.png",
+    "image_filename": "ta_20260808.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,13 +67,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/nintendo-switch-2-unit-sales-are-down-34-4-percent-year-on-year",
-      "https://www.gamedeveloper.com/production/halo-studios-jettisons-long-serving-contractors-after-launch-of-halo-campaign-evolved",
-      "https://gnn.gamer.com.tw/detail.php?sn=309526",
-      "https://gnn.gamer.com.tw/detail.php?sn=309525",
-      "https://gnn.gamer.com.tw/detail.php?sn=309527"
+      "https://www.gamedeveloper.com/business/ea-taken-private-by-saudi-arabia-gta-marketing-jumps-the-shark-and-devolver-s-huge-mistake-patch-notes-64",
+      "https://gnn.gamer.com.tw/detail.php?sn=309602",
+      "https://gnn.gamer.com.tw/detail.php?sn=309603",
+      "https://gnn.gamer.com.tw/detail.php?sn=309599"
     ],
-    "image_filename": "globalgames_20260807.png",
+    "image_filename": "globalgames_20260808.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,15 +84,47 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/devolver-wants-to-delist-because-indie-publishing-is-not-compatible-with-public-trading"
+      "https://store.steampowered.com/news/274747/",
+      "https://gnn.gamer.com.tw/detail.php?sn=309601",
+      "https://80.lv/articles/this-extraction-shooter-promises-real-money-for-playing"
     ],
-    "image_filename": "indie_20260807.png",
+    "image_filename": "indie_20260808.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=309600",
+      "https://gnn.gamer.com.tw/detail.php?sn=309598"
+    ],
+    "image_filename": "local_20260808.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/design/pushing-the-limits-in-simulating-a-city-one-page-at-a-time",
+      "https://www.gamedeveloper.com/production/what-devs-need-to-know-about-localization-ft-concha-fernandez-alvarez-aurelie-perrin-and-guido-di-carlo",
+      "https://80.lv/articles/richard-bartle-mmo-monetization-virtual-worlds-players-express-themselves",
+      "https://www.blendernation.com/2026/08/07/blender-jobs-for-august-7-2026/"
+    ],
+    "image_filename": "producer_20260808.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
