@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ea-taken-private-by-saudi-arabia-gta-marketing-jumps-the-shark-and-devolver-s-huge-mistake-patch-notes-64"
+      "https://www.gamedeveloper.com/business/unity-credits-ai-advertising-platform-for-driving-its-best-quarter-ever-"
     ],
-    "image_filename": "headline_20260810.png",
+    "image_filename": "headline_20260811.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/inside-google-s-first-xr-hackathon"
+      "https://80.lv/articles/unity-posts-best-quarter-in-company-history-as-revenue-hits-usd546m"
     ],
-    "image_filename": "engine_20260810.png",
+    "image_filename": "engine_20260811.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,12 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/events/blender-at-siggraph-2026/",
-      "https://www.blender.org/events/blender-in-annecy-2026/",
-      "https://www.blendernation.com/2026/08/08/dynamic-pinning-explained-create-amazing-motion-graphics-with-blender-5-2-cloth-dynamics/",
-      "https://www.blendernation.com/2026/08/08/create-an-audio-visualizer-with-geometry-nodes-in-blender-5-2/"
+      "https://80.lv/articles/artstation-and-sketchfab-have-been-acquired-by-kitbash",
+      "https://80.lv/articles/spider-man-style-web-shooter-with-geometry-nodes"
     ],
-    "image_filename": "model3d_20260810.png",
+    "image_filename": "model3d_20260811.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -50,9 +48,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/former-bethesda-lead-artist-looks-forward-to-fallout-3-s-remaster"
+      "https://80.lv/articles/lead-animator-shares-wip-scene-of-assassin-s-creed-black-flag-resynced"
     ],
-    "image_filename": "ta_20260810.png",
+    "image_filename": "ta_20260811.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,11 +66,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/uli-latukefu-cast-as-ganondorf-in-live-action-legend-of-zelda-movie",
-      "https://80.lv/articles/richard-bartle-mmo-monetization-virtual-worlds-players-express-selves",
-      "https://gnn.gamer.com.tw/detail.php?sn=309604"
+      "https://www.gamedeveloper.com/business/eve-online-studio-hires-former-icelandic-minister-to-lead-autonomous-ai-efforts",
+      "https://www.gamedeveloper.com/business/the-video-game-site-backed-by-walmart-has-laid-off-its-editorial-team"
     ],
-    "image_filename": "globalgames_20260810.png",
+    "image_filename": "globalgames_20260811.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,12 +81,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309605",
-      "https://store.steampowered.com/news/275469/",
-      "https://80.lv/articles/this-game-has-you-playing-a-people-eating-centipede",
-      "https://80.lv/articles/this-metroidvania-will-have-you-playing-as-a-grandpa-fighting-with-his-cane"
+      "https://store.steampowered.com/news/275718/",
+      "https://80.lv/articles/try-to-appease-sultan-by-doing-questionable-things-to-people-animals-in-this-story-rich-game"
     ],
-    "image_filename": "indie_20260810.png",
+    "image_filename": "indie_20260811.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -101,10 +96,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309607",
-      "https://gnn.gamer.com.tw/detail.php?sn=309606"
+      "https://gnn.gamer.com.tw/detail.php?sn=309685",
+      "https://gnn.gamer.com.tw/detail.php?sn=309684",
+      "https://gnn.gamer.com.tw/detail.php?sn=309683",
+      "https://gnn.gamer.com.tw/detail.php?sn=309682",
+      "https://gnn.gamer.com.tw/detail.php?sn=309681",
+      "https://gnn.gamer.com.tw/detail.php?sn=309680"
     ],
-    "image_filename": "local_20260810.png",
+    "image_filename": "local_20260811.png",
     "image_keywords": [
       "event",
       "meetup",
