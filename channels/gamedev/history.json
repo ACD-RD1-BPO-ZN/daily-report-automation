@@ -1,14 +1,4 @@
 {
-  "2026-07-13": [
-    "https://gnn.gamer.com.tw/detail.php?sn=308049",
-    "https://unity.com/blog/interactive-3d-training-unity-studio-without-simulation-teams",
-    "https://www.blendernation.com/2026/07/12/blender-at-siggraph-2026-los-angeles/",
-    "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-    "https://80.lv/articles/behind-creation-of-nitro-express-checks-and-balances-skin-for-hunt-showdown-1896/",
-    "https://80.lv/articles/assassin-s-creed-black-flag-resynced-sets-franchise-steam-player-record-sells-2-million-copies/",
-    "https://80.lv/articles/how-an-indie-studio-created-a-sequel-of-a-driving-platformer-game/",
-    "https://80.lv/articles/indie-game-publishing-the-21k-game-problem/"
-  ],
   "2026-07-14": [
     "https://www.gamedeveloper.com/business/the-alters-and-frostpunk-developer-11-bit-studios-is-laying-off-20-employees-",
     "https://www.blendernation.com/2026/07/13/add-wood-surface-detail-faster-with-50-decals-brushes-and-displacement-designs/",
@@ -490,5 +480,24 @@
     "https://80.lv/articles/cultist-simulator-developers-are-bringing-new-narrative-adventure-game",
     "https://gnn.gamer.com.tw/detail.php?sn=309740",
     "https://gnn.gamer.com.tw/detail.php?sn=309737"
+  ],
+  "2026-08-13": [
+    "https://www.gamedeveloper.com/business/developers-expect-generative-ai-to-impact-roles-and-team-sizes-in-the-next-three-years",
+    "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8",
+    "https://80.lv/articles/this-fascinating-scene-was-created-with-magicavoxel",
+    "https://80.lv/articles/how-lunarium-blends-hand-painted-2d-art-with-3d-environments",
+    "https://80.lv/articles/you-ll-be-able-to-create-sci-fi-and-medieval-scenes-with-this-bundle",
+    "https://80.lv/articles/building-procedural-2d-grass-with-gpu-compute",
+    "https://www.gamedeveloper.com/business/amazon-to-rescind-its-publisher-role-on-lost-ark-and-throne-and-liberty-by-early-2027",
+    "https://www.gamedeveloper.com/business/meccha-chameleon-tops-20m-sales-in-two-months",
+    "https://www.gamedeveloper.com/business/epics-sells-artstation-and-sketchfab-to-kitbash",
+    "https://www.gamedeveloper.com/business/-one-flag-for-each-laid-off-dev-union-members-stage-unmissable-protest-for-xbox-boss-asha-sharma",
+    "https://gnn.gamer.com.tw/detail.php?sn=309806",
+    "https://gnn.gamer.com.tw/detail.php?sn=309805",
+    "https://gnn.gamer.com.tw/detail.php?sn=309804",
+    "https://gnn.gamer.com.tw/detail.php?sn=309808",
+    "https://gnn.gamer.com.tw/detail.php?sn=309807",
+    "https://gnn.gamer.com.tw/detail.php?sn=309803",
+    "https://80.lv/articles/how-game-discovery-actually-works-and-fails-in-2026"
   ]
 }

@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/supermassive-games-begins-third-round-of-layoffs-in-three-years"
+      "https://www.gamedeveloper.com/business/developers-expect-generative-ai-to-impact-roles-and-team-sizes-in-the-next-three-years"
     ],
-    "image_filename": "headline_20260812.png",
+    "image_filename": "headline_20260813.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/5-tips-for-using-github-copilot-with-unity"
+      "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8"
     ],
-    "image_filename": "engine_20260812.png",
+    "image_filename": "engine_20260813.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +30,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/this-compact-disc-shader-made-in-blender-looks-very-impressive"
+      "https://80.lv/articles/this-fascinating-scene-was-created-with-magicavoxel",
+      "https://80.lv/articles/how-lunarium-blends-hand-painted-2d-art-with-3d-environments",
+      "https://80.lv/articles/you-ll-be-able-to-create-sci-fi-and-medieval-scenes-with-this-bundle"
     ],
-    "image_filename": "model3d_20260812.png",
+    "image_filename": "model3d_20260813.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,9 +49,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/torizon-telecom-an-fps-built-entirely-out-of-letters-and-words"
+      "https://80.lv/articles/building-procedural-2d-grass-with-gpu-compute"
     ],
-    "image_filename": "ta_20260812.png",
+    "image_filename": "ta_20260813.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -65,13 +67,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309741",
-      "https://www.gamedeveloper.com/business/remedy-entertainment-touts-pricing-control-resonant-attractively-for-an-aaa-title-",
-      "https://gnn.gamer.com.tw/detail.php?sn=309739",
-      "https://gnn.gamer.com.tw/detail.php?sn=309738",
-      "https://gnn.gamer.com.tw/detail.php?sn=309736"
+      "https://www.gamedeveloper.com/business/amazon-to-rescind-its-publisher-role-on-lost-ark-and-throne-and-liberty-by-early-2027",
+      "https://www.gamedeveloper.com/business/meccha-chameleon-tops-20m-sales-in-two-months",
+      "https://www.gamedeveloper.com/business/epics-sells-artstation-and-sketchfab-to-kitbash",
+      "https://www.gamedeveloper.com/business/-one-flag-for-each-laid-off-dev-union-members-stage-unmissable-protest-for-xbox-boss-asha-sharma"
     ],
-    "image_filename": "globalgames_20260812.png",
+    "image_filename": "globalgames_20260813.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -83,13 +84,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/report-crossfire-dev-that-s-no-moon-lays-off-14-staff",
-      "https://www.gamedeveloper.com/production/three-indie-horror-publishers-faced-sexual-harassment-claims-what-comes-next-",
-      "https://www.gamedeveloper.com/business/former-ubisoft-barcelona-devs-launch-dark-ritual-studios",
-      "https://store.steampowered.com/news/275791/",
-      "https://80.lv/articles/cultist-simulator-developers-are-bringing-new-narrative-adventure-game"
+      "https://gnn.gamer.com.tw/detail.php?sn=309806",
+      "https://gnn.gamer.com.tw/detail.php?sn=309805",
+      "https://gnn.gamer.com.tw/detail.php?sn=309804"
     ],
-    "image_filename": "indie_20260812.png",
+    "image_filename": "indie_20260813.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -101,10 +100,11 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309740",
-      "https://gnn.gamer.com.tw/detail.php?sn=309737"
+      "https://gnn.gamer.com.tw/detail.php?sn=309808",
+      "https://gnn.gamer.com.tw/detail.php?sn=309807",
+      "https://gnn.gamer.com.tw/detail.php?sn=309803"
     ],
-    "image_filename": "local_20260812.png",
+    "image_filename": "local_20260813.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -115,12 +115,9 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/supermassive-games-begins-third-round-of-layoffs-in-three-years",
-      "https://www.gamedeveloper.com/business/ukie-claims-i-restrictive-i-subscription-proposals-could-harm-game-businesses-in-the-uk",
-      "https://unity.com/blog/5-tips-for-using-github-copilot-with-unity",
-      "https://80.lv/articles/this-compact-disc-shader-made-in-blender-looks-very-impressive"
+      "https://80.lv/articles/how-game-discovery-actually-works-and-fails-in-2026"
     ],
-    "image_filename": "producer_20260812.png",
+    "image_filename": "producer_20260813.png",
     "image_keywords": [
       "marketing",
       "development",
