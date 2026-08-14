@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/developers-expect-generative-ai-to-impact-roles-and-team-sizes-in-the-next-three-years"
+      "https://www.gamedeveloper.com/business/netflix-closing-oxenfree-developer-night-school-studio-and-moonloot-games"
     ],
-    "image_filename": "headline_20260813.png",
+    "image_filename": "headline_20260814.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8"
+      "https://gnn.gamer.com.tw/detail.php?sn=309885"
     ],
-    "image_filename": "engine_20260813.png",
+    "image_filename": "engine_20260814.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/this-fascinating-scene-was-created-with-magicavoxel",
-      "https://80.lv/articles/how-lunarium-blends-hand-painted-2d-art-with-3d-environments",
-      "https://80.lv/articles/you-ll-be-able-to-create-sci-fi-and-medieval-scenes-with-this-bundle"
+      "https://80.lv/articles/this-free-blender-tool- procedurally-converts-hair-grooms-into-feathers"
     ],
-    "image_filename": "model3d_20260813.png",
+    "image_filename": "model3d_20260814.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,9 +47,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/building-procedural-2d-grass-with-gpu-compute"
+      "https://80.lv/articles/unveiling-the-pipeline-behind-aaa-quality-indie-game-characters",
+      "https://80.lv/articles/interview-how-wild-blue-skies-modernizes-classic-on-rails-shooters"
     ],
-    "image_filename": "ta_20260813.png",
+    "image_filename": "ta_20260814.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,12 +66,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/amazon-to-rescind-its-publisher-role-on-lost-ark-and-throne-and-liberty-by-early-2027",
-      "https://www.gamedeveloper.com/business/meccha-chameleon-tops-20m-sales-in-two-months",
-      "https://www.gamedeveloper.com/business/epics-sells-artstation-and-sketchfab-to-kitbash",
-      "https://www.gamedeveloper.com/business/-one-flag-for-each-laid-off-dev-union-members-stage-unmissable-protest-for-xbox-boss-asha-sharma"
+      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-aaa-studio-led-by-ea-veteran",
+      "https://www.gamedeveloper.com/business/xsolla-rolls-out-publishing-tools-to-keep-players-engaged-after-the-first-purchase",
+      "https://www.gamedeveloper.com/business/saber-interactive-denies-replacing-writers-with-ai-on-rideshare-stimulator-",
+      "https://gnn.gamer.com.tw/detail.php?sn=309888"
     ],
-    "image_filename": "globalgames_20260813.png",
+    "image_filename": "globalgames_20260814.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,11 +83,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309806",
-      "https://gnn.gamer.com.tw/detail.php?sn=309805",
-      "https://gnn.gamer.com.tw/detail.php?sn=309804"
+      "https://gnn.gamer.com.tw/detail.php?sn=309884"
     ],
-    "image_filename": "indie_20260813.png",
+    "image_filename": "indie_20260814.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -100,11 +97,11 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309808",
-      "https://gnn.gamer.com.tw/detail.php?sn=309807",
-      "https://gnn.gamer.com.tw/detail.php?sn=309803"
+      "https://gnn.gamer.com.tw/detail.php?sn=309887",
+      "https://gnn.gamer.com.tw/detail.php?sn=309886",
+      "https://gnn.gamer.com.tw/detail.php?sn=309883"
     ],
-    "image_filename": "local_20260813.png",
+    "image_filename": "local_20260814.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -115,9 +112,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://80.lv/articles/how-game-discovery-actually-works-and-fails-in-2026"
+      "https://www.gamedeveloper.com/production/opinion-deprofessionalization-could-foster-toxic-work-environments-on-small-teams",
+      "https://www.gamedeveloper.com/marketing/twitch-will-sacrifice-you-to-its-ai-overlord-whether-you-like-it-or-not"
     ],
-    "image_filename": "producer_20260813.png",
+    "image_filename": "producer_20260814.png",
     "image_keywords": [
       "marketing",
       "development",
