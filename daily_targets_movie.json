@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/08/box-office-spider-man-the-end-of-oak-street-1237033458/"
+      "https://variety.com/2026/film/news/paramount-warner-bros-mexicos-settle-ellison-1236834861/"
     ],
-    "image_filename": "headline_20260814.png",
+    "image_filename": "headline_20260815.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,18 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://variety.com/2026/film/news/tramell-tillman-signed-ndas-spider-man-brand-new-day-role-meeting-1236834204/",
-      "https://www.firstshowing.net/2026/quick-behind-the-scenes-promo-for-na-hong-jins-hope-action-film/",
-      "https://www.firstshowing.net/2026/wacky-comedy-the-musical-trailer-with-will-brill-gillian-jacobs/",
-      "https://www.firstshowing.net/2026/owen-wilson-gets-lost-at-a-hip-hop-fest-in-rolling-loud-movie-trailer/",
-      "https://www.firstshowing.net/2026/official-trailer-for-sara-bareilles-good-grief-doc-on-her-new-album/",
-      "https://www.firstshowing.net/2026/must-see-official-trailer-for-ken-russells-the-devils-4k-restoration/",
-      "https://www.firstshowing.net/2026/lesley-manville-in-warsaw-thriller-winter-of-the-crow-official-trailer/",
-      "https://www.cartoonbrew.com/cartoon-brew-pick/amok-balazs-turai-short-film-265529.html",
-      "https://www.cartoonbrew.com/distribution/coyote-vs-acme-budget-distribution-265524.html",
-      "https://www.cartoonbrew.com/feature-film/shiva-the-adiyogi-graphic-india-sadhguru-265479.html"
+      "https://deadline.com/2026/08/de-noche-producer-praises-pedro-pascal-danny-ramirez-1237040958/",
+      "https://deadline.com/2026/08/indie-films-opening-matthew-mcconaughey-green-day-comedy-1237040791/",
+      "https://www.firstshowing.net/2026/demonic-horror-film-yellow-eyes-trailer-produced-by-joe-swanberg/",
+      "https://www.firstshowing.net/2026/firstshowing.net/2026/june-shreiner-in-gnarly-creature-feature-dark-hollow-horror-trailer/",
+      "https://www.firstshowing.net/2026/official-trailer-for-indie-film-dear-you-about-chinese-families-abroad/",
+      "https://www.firstshowing.net/2026/first-look-teaser-for-if-i-go-will-they-miss-me-acclaimed-indie-film/",
+      "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html",
+      "https://www.cartoonbrew.com/educational/titmouse-foundation-warrior-art-camp-shorts-fellowship-2-265580.html"
     ],
-    "image_filename": "production_20260814.png",
+    "image_filename": "production_20260815.png",
     "image_keywords": [
       "film",
       "production",
@@ -44,10 +42,16 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-08-14/",
-      "https://deadline.com/2026/08/paramount-merger-teamsters-protest-1237033400/"
+      "https://www.boxofficemojo.com/date/2026-08-15/",
+      "https://deadline.com/2026/08/emmy-nominees-2026-final-campaign-stops-1237033459/",
+      "https://variety.com/2026/film/news/ian-crafford-dead-field-of-dreams-1236834958/",
+      "https://variety.com/2026/film/news/anne-hathaway-movies-dog-deaths-rated-r-1236834811/",
+      "https://variety.com/2026/film/global/paul-wright-george-mackay-mission-1236834494/",
+      "https://www.cartoonbrew.com/business/duolingo-acquires-animade-london-studio-265574.html",
+      "https://www.cartoonbrew.com/vfx/visual-effects-society-women-who-lead-summit-265583.html",
+      "https://www.cartoonbrew.com/festivals/pictoplasma-nyc-program-speakers-265567.html"
     ],
-    "image_filename": "boxoffice_20260814.png",
+    "image_filename": "boxoffice_20260815.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -58,12 +62,13 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/08/julianne-nicholson-concerned-reprising-mare-of-easttown-role-task-1237033475/",
-      "https://deadline.com/2026/08/just-one-day-kathryn-newton-hulu-1237033213/",
-      "https://deadline.com/2026/08/dtf-st-louis-steve-conrad-interview-1237033377/",
-      "https://www.cartoonbrew.com/distribution/animation-plus-vice-tv-animation-mixtape-265534.html"
+      "https://deadline.com/2026/08/netflix-ya-slate-end-of-summer-bash-crossover-prime-video-1237040780/",
+      "https://deadline.com/2026/08/ryan-de-nino-dead-married-at-first-sight-1237041002/",
+      "https://deadline.com/2026/08/indie-films-opening-matthew-mcconaughey-green-day-comedy-1237040791/",
+      "https://www.firstshowing.net/2026/official-trailer-for-dugout-dads-series-sandlot-spiritual-sequel/",
+      "https://www.cartoonbrew.com/newsletter/netflixs-theatrical-change-of-heart-juried-emmy-winners-coyote-vs-acme-details-265586.html"
     ],
-    "image_filename": "streaming_20260814.png",
+    "image_filename": "streaming_20260815.png",
     "image_keywords": [
       "netflix",
       "disney+",

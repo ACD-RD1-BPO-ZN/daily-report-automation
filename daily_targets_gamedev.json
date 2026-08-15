@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/netflix-closing-oxenfree-developer-night-school-studio-and-moonloot-games"
+      "https://www.blender.org/press/blender-5-2-lts-release/"
     ],
-    "image_filename": "headline_20260814.png",
+    "image_filename": "headline_20260815.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,25 +14,13 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309885"
-    ],
-    "image_filename": "engine_20260814.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/this-free-blender-tool- procedurally-converts-hair-grooms-into-feathers"
+      "https://www.blender.org/press/blender-5-2-lts-release/",
+      "https://www.blendernation.com/2026/08/14/blender-jobs-for-august-14-2026/",
+      "https://80.lv/articles/procedural-american-downtown-generator-for-blender/"
     ],
-    "image_filename": "model3d_20260814.png",
+    "image_filename": "model3d_20260815.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,10 +35,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/unveiling-the-pipeline-behind-aaa-quality-indie-game-characters",
-      "https://80.lv/articles/interview-how-wild-blue-skies-modernizes-classic-on-rails-shooters"
+      "https://80.lv/articles/this-game-where-you-renovate-1990s-flats-is-finally-out",
+      "https://80.lv/articles/build-eerie-worlds-with-this-dark-fantasy-signature-collection/"
     ],
-    "image_filename": "ta_20260814.png",
+    "image_filename": "ta_20260815.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,12 +54,17 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-aaa-studio-led-by-ea-veteran",
-      "https://www.gamedeveloper.com/business/xsolla-rolls-out-publishing-tools-to-keep-players-engaged-after-the-first-purchase",
-      "https://www.gamedeveloper.com/business/saber-interactive-denies-replacing-writers-with-ai-on-rideshare-stimulator-",
-      "https://gnn.gamer.com.tw/detail.php?sn=309888"
+      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran/",
+      "https://www.gamedeveloper.com/business/scabby-versus-sharma-twitch-s-genai-admission-and-netflix-shutters-more-studios-patch-notes-65",
+      "https://80.lv/articles/warner-bros-officially-confirmed-hogwarts-legacy-2-in-a-shareholder-letter/",
+      "https://80.lv/articles/embracer-group-expects-next-kingdom-come-sooner-than-you-might-think/",
+      "https://gnn.gamer.com.tw/detail.php?sn=309951",
+      "https://gnn.gamer.com.tw/detail.php?sn=309949",
+      "https://gnn.gamer.com.tw/detail.php?sn=309948",
+      "https://gnn.gamer.com.tw/detail.php?sn=309947",
+      "https://gnn.gamer.com.tw/detail.php?sn=309946"
     ],
-    "image_filename": "globalgames_20260814.png",
+    "image_filename": "globalgames_20260815.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -83,9 +76,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309884"
+      "https://godotengine.org/article/godotfest-2026/",
+      "https://store.steampowered.com/news/276074/"
     ],
-    "image_filename": "indie_20260814.png",
+    "image_filename": "indie_20260815.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -97,11 +91,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309887",
-      "https://gnn.gamer.com.tw/detail.php?sn=309886",
-      "https://gnn.gamer.com.tw/detail.php?sn=309883"
+      "https://gnn.gamer.com.tw/detail.php?sn=309950"
     ],
-    "image_filename": "local_20260814.png",
+    "image_filename": "local_20260815.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -112,10 +104,12 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/opinion-deprofessionalization-could-foster-toxic-work-environments-on-small-teams",
-      "https://www.gamedeveloper.com/marketing/twitch-will-sacrifice-you-to-its-ai-overlord-whether-you-like-it-or-not"
+      "https://www.blender.org/press/blender-5-2-lts-release/",
+      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran/",
+      "https://www.gamedeveloper.com/business/scabby-versus-sharma-twitch-s-genai-admission-and-netflix-shutters-more-studios-patch-notes-65",
+      "https://godotengine.org/article/godotfest-2026/"
     ],
-    "image_filename": "producer_20260814.png",
+    "image_filename": "producer_20260815.png",
     "image_keywords": [
       "marketing",
       "development",
