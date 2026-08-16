@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-2-lts-release/"
+      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran"
     ],
-    "image_filename": "headline_20260815.png",
+    "image_filename": "headline_20260816.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,11 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-2-lts-release/",
-      "https://www.blendernation.com/2026/08/14/blender-jobs-for-august-14-2026/",
-      "https://80.lv/articles/procedural-american-downtown-generator-for-blender/"
+      "https://80.lv/articles/huion-kamvas-22-gen-3-affordable-entry-level-pen-display-for-2d-3d-video-editing",
+      "https://80.lv/articles/procedural-american-downtown-generator-for-blender"
     ],
-    "image_filename": "model3d_20260815.png",
+    "image_filename": "model3d_20260816.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -35,10 +34,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-game-where-you-renovate-1990s-flats-is-finally-out",
-      "https://80.lv/articles/build-eerie-worlds-with-this-dark-fantasy-signature-collection/"
+      "https://80.lv/articles/build-eerie-worlds-with-this-dark-fantasy-signature-collection"
     ],
-    "image_filename": "ta_20260815.png",
+    "image_filename": "ta_20260816.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,17 +52,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran/",
       "https://www.gamedeveloper.com/business/scabby-versus-sharma-twitch-s-genai-admission-and-netflix-shutters-more-studios-patch-notes-65",
-      "https://80.lv/articles/warner-bros-officially-confirmed-hogwarts-legacy-2-in-a-shareholder-letter/",
-      "https://80.lv/articles/embracer-group-expects-next-kingdom-come-sooner-than-you-might-think/",
-      "https://gnn.gamer.com.tw/detail.php?sn=309951",
-      "https://gnn.gamer.com.tw/detail.php?sn=309949",
-      "https://gnn.gamer.com.tw/detail.php?sn=309948",
-      "https://gnn.gamer.com.tw/detail.php?sn=309947",
-      "https://gnn.gamer.com.tw/detail.php?sn=309946"
+      "https://80.lv/articles/warner-bros-officially-confirmed-hogwarts-legacy-2-in-a-shareholder-letter",
+      "https://gnn.gamer.com.tw/detail.php?sn=309958",
+      "https://gnn.gamer.com.tw/detail.php?sn=309959"
     ],
-    "image_filename": "globalgames_20260815.png",
+    "image_filename": "globalgames_20260816.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -76,10 +69,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/godotfest-2026/",
-      "https://store.steampowered.com/news/276074/"
+      "https://godotengine.org/article/submissions-open-godot-2026-showreel/",
+      "https://80.lv/articles/this-game-where-you-renovate-1990s-flats-is-finally-out"
     ],
-    "image_filename": "indie_20260815.png",
+    "image_filename": "indie_20260816.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -91,9 +84,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309950"
+      "https://gnn.gamer.com.tw/detail.php?sn=309957",
+      "https://gnn.gamer.com.tw/detail.php?sn=309960"
     ],
-    "image_filename": "local_20260815.png",
+    "image_filename": "local_20260816.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -104,12 +98,12 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-2-lts-release/",
-      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran/",
+      "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran",
       "https://www.gamedeveloper.com/business/scabby-versus-sharma-twitch-s-genai-admission-and-netflix-shutters-more-studios-patch-notes-65",
-      "https://godotengine.org/article/godotfest-2026/"
+      "https://godotengine.org/article/submissions-open-godot-2026-showreel/",
+      "https://gnn.gamer.com.tw/detail.php?sn=309958"
     ],
-    "image_filename": "producer_20260815.png",
+    "image_filename": "producer_20260816.png",
     "image_keywords": [
       "marketing",
       "development",

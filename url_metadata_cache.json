@@ -1,143 +1,7 @@
 {
-  "https://www.cartoonbrew.com/series/titmouse-meow-wolf-series-exhibition-264569.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Titmouse-Meow-Wolf.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/series/titmouse-meow-wolf-series-exhibition-264569.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Titmouse-Meow-Wolf.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://store.steampowered.com/news/276347/": {
-    "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.gamedeveloper.com/business/pokemon-go-owner-scopely-reorganizes-stumble-guys-team": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt6613ac3c5a7a5a2f/6a58edaf1b0942105044282d/New_Project(9).png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.gamedeveloper.com/design/-the-goal-of-design-is-to-efficiently-communicate-ideas-": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blte36ae28a6cabfa55/6a58f868be722d07cec664a4/spore_header.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.gamedeveloper.com/business/zenimax-online-studios-leadership-is-part-of-the-379-laid-off-workers": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltfd999ffe3473ac32/6a58fa7f5a62e7241c548a4b/b6304eff-elder-scrolls-online-promo-art.jpg?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.gamedeveloper.com/production/unions-take-legal-action-against-microsoft-for-allegedly-mishandling-xbox-layoffs": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt3d82e6591fa10ec9/6a590329cca248a33c587a7c/Union_Header_Redmond.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-07-17"
-  },
-  "https://80.lv/articles/change-your-scene-s-atmosphere-in-unity-with-single-click": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49297/images/6a58f71ee372d/contain_1200x630.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://80.lv/articles/goodnight-punpun-creator-spent-month-building-rural-town-in-ue5-just-to-draw-one-shot-manga": {
-    "og_image": "",
-    "last_seen": "2026-07-17"
-  },
-  "https://80.lv/articles/hurricane-new-multi-solver-physics-engine-for-blender": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49295/images/6a58ea4946ef4/contain_1200x630.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://80.lv/articles/check-out-this-sandbox-tactical-rpg-that-has-a-shōnen-anime-art-style": {
-    "og_image": "",
-    "last_seen": "2026-07-17"
-  },
-  "https://variety.com/2026/tv/news/netflix-stop-viewership-report-6-months-annual-1236812785/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/04/HIS__HERS_n_S1_E6_00_33_22_19_R.jpg?w=1000&h=563&crop=1",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.firstshowing.net/2026/first-look-teaser-for-our-effed-up-world-alien-invasion-sci-fi-comedy/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/oureffedupworldpostermainbtw1.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/studios/anima-estudios-shuts-down-mexico-264574.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Anima-Estudios.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://deadline.com/2026/07/age-of-attraction-netflix-top-new-reality-launch-1236984652/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2026/03/Age-of-Attraction.jpg?w=1024",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/feature-film/cocoon-one-summer-of-girlhood-trailer-264606.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Cocoon.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://variety.com/lists/odyssey-cast-characters-christopher-nolan/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/07/odyssey.png?w=1000&h=563&crop=1",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.firstshowing.net/2026/full-spanish-trailer-for-la-bola-negra-wonderful-triptych-from-spain/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/labolanegrapostersmainspbigtw1.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://deadline.com/2026/07/netflix-2026-content-spend-accelerates-generative-ai-savings-1236984524/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2024/05/ted-sarandos-netflix-hollywood-ai.jpg?w=1024",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.firstshowing.net/2026/andrew-garfield-leads-wat-tylers-rebellion-in-the-uprising-trailer/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/theuprisinggarfscifiposterbigtw2.jpg",
-    "last_seen": "2026-07-17"
-  },
   "https://www.cartoonbrew.com/series/duckman-reboot-opening-gabor-csupo-264612.html": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Duckman-Reboot-Proposal.jpg",
     "last_seen": "2026-07-19"
-  },
-  "https://www.cartoonbrew.com/feature-film/cocoon-one-summer-of-girlhood-trailer-264606.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Cocoon.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://variety.com/2026/film/news/paramount-subscribers-fail-injunction-merger-1236813567/": {
-    "og_image": "https://variety.com/wp-content/uploads/2023/12/Warner-Bros-Discovery-Paramount-Global.jpg?w=1000&h=563&crop=1",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.firstshowing.net/2026/official-trailer-for-kinetic-london-thriller-the-runner-with-gal-gadot/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/therunnertrailer1mainimgbigtw1.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://variety.com/2026/film/news/box-office-rebound-brent-lang-daily-variety-podcast-1236813285/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/07/Summer-Box-Office-Returns.jpg?w=1000&h=563&crop=1",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/studios/anima-estudios-shuts-down-mexico-264574.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Anima-Estudios.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.firstshowing.net/2026/incredible-true-story-pakistani-rescue-doc-hanging-by-a-wire-trailer/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/hangingbyawirepostermainbigtw.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/business/spanish-government-amuse-animation-investment-264587.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Amuse-Animation.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.firstshowing.net/2026/full-trailer-for-clever-coming-of-age-film-olmo-starring-aivan-uttapa/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/olmofilm26mexpostermaintw3.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://deadline.com/2026/07/the-boroughs-netflix-viewership-cancellation-why-1236984589/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2026/04/The_Boroughs_n_S1_00_40_18_15R.jpg?w=1024",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/business/spanish-government-amuse-animation-investment-264587.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Amuse-Animation.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/series/duckman-reboot-opening-gabor-csupo-264612.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/07/Duckman-Reboot-Proposal.jpg",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/distribution/avatar-aan-the-last-airbender-theatrical-264579.html": {
-    "og_image": "",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.boxofficemojo.com/date/2026-07-17/": {
-    "og_image": "",
-    "last_seen": "2026-07-17"
-  },
-  "https://www.cartoonbrew.com/distribution/avatar-aan-the-last-airbender-theatrical-264579.html/": {
-    "og_image": "",
-    "last_seen": "2026-07-17"
   },
   "https://www.gamedeveloper.com/business/todd-howard-says-the-timing-is-right-for-a-collaboration-with-obsidian": {
     "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt57cea795d5e1231e/6a5a5a555f99a5702ab3e322/fallout_new_vegas_combat.png?disable=upscale&width=1200&height=630&fit=crop",
@@ -3785,7 +3649,7 @@
   },
   "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Vision-Black-Headline.jpg",
-    "last_seen": "2026-08-15"
+    "last_seen": "2026-08-16"
   },
   "https://www.cartoonbrew.com/festivals/pictoplasma-nyc-program-speakers-265567.html/": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Pictoplasma-NYC.jpg",
@@ -3825,7 +3689,7 @@
   },
   "https://www.cartoonbrew.com/educational/titmouse-foundation-warrior-art-camp-shorts-fellowship-2-265580.html": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Short-Animation-Fellowship.jpg",
-    "last_seen": "2026-08-15"
+    "last_seen": "2026-08-16"
   },
   "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html/": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Vision-Black-Headline.jpg",
@@ -3846,5 +3710,121 @@
   "https://www.boxofficemojo.com/date/2026-08-15/": {
     "og_image": "",
     "last_seen": "2026-08-15"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=309959": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/84/bc0600f5ab21e6356dbbe3fb441zvhk5.JPG",
+    "last_seen": "2026-08-15"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=309958": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/55/c380422ee6c50b23eaf259ca3c1zvgr5.JPG",
+    "last_seen": "2026-08-15"
+  },
+  "https://godotengine.org/article/submissions-open-godot-2026-showreel/": {
+    "og_image": "https://godotengine.org/storage/blog/covers/godot-showreel-2024.webp",
+    "last_seen": "2026-08-15"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=309960": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/47/f3e9767c93516510548ec72ef71zurj5.PNG",
+    "last_seen": "2026-08-15"
+  },
+  "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran": {
+    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltb6373fc5e64be2aa/6a7df3b1d0a4172381d889a4/Small_Axe_Header.png?disable=upscale&width=1200&height=630&fit=crop",
+    "last_seen": "2026-08-15"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=309957": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/49/377706c5c5c64ecc1e64ddec641zvgl5.JPG",
+    "last_seen": "2026-08-15"
+  },
+  "https://80.lv/articles/huion-kamvas-22-gen-3-affordable-entry-level-pen-display-for-2d-3d-video-editing": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/49612/images/6a7c858f65ecd/contain_1200x630.jpg",
+    "last_seen": "2026-08-15"
+  },
+  "https://80.lv/articles/build-eerie-worlds-with-this-dark-fantasy-signature-collection": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/49733/images/6a7f3f392b514/contain_1200x630.jpg",
+    "last_seen": "2026-08-15"
+  },
+  "https://80.lv/articles/warner-bros-officially-confirmed-hogwarts-legacy-2-in-a-shareholder-letter": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/49750/images/6a7f5e9969593/contain_1200x630.jpg",
+    "last_seen": "2026-08-15"
+  },
+  "https://80.lv/articles/procedural-american-downtown-generator-for-blender": {
+    "og_image": "https://cdn.80.lv/api/upload/meta/49749/images/6a7f2a898ba59/contain_1200x630.jpg",
+    "last_seen": "2026-08-15"
+  },
+  "https://deadline.com/2026/08/summer-house-season-10-emmy-interview-1237041687/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Summer-House.jpg?w=1024",
+    "last_seen": "2026-08-16"
+  },
+  "https://deadline.com/2026/08/all-things-spidey-d23-friendly-neighborhood-amazing-friends-1237040751/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Spidey65.jpeg?w=1024",
+    "last_seen": "2026-08-16"
+  },
+  "https://deadline.com/2026/08/the-traitors-season-4-contestants-emmy-interview-1237041716/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Traitors-main.jpg?w=1024",
+    "last_seen": "2026-08-16"
+  },
+  "https://variety.com/2026/film/box-office/box-office-end-of-oak-street-spider-man-brand-new-day-1236835436/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/08/MCDENOF_WB002.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.firstshowing.net/2026/paul-bettany-returns-in-visionquest-trailer-wandavision-spin-off/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/visionquestpostermainbigimgtw.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://deadline.com/2026/08/john-higgins-scrubs-season-2-grant-abc-snl-1237041813/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/03/John-Higgins.jpg?w=1024",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.firstshowing.net/2026/08/special-d23-trailer-for-avengers-doomsday-unexciting/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/doomsdayd23trailermainimgtw1.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://variety.com/2026/film/festivals/locarno-marco-cavazzin-mutrion-venice-leopards-of-tomorrow-1236834478/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/08/Mutrion.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.firstshowing.net/2026/cute-teaser-for-the-bluey-movie-based-on-animated-series/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/blueymoviepostermaintsrimgtw.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://variety.com/2026/film/festivals/how-would-you-get-this-movie-made-vachon-film4-bbc-1236835455/": {
+    "og_image": "https://variety.com/wp-content/uploads/2024/10/Wicker-Man.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-08-16"
+  },
+  "https://variety.com/2026/film/reviews/the-state-of-us-review-1236835434/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/08/The-State-of-Us-scaled-1.webp?w=1000&h=563&crop=1",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.firstshowing.net/2026/08/first-teaser-for-star-wars-ahsoka-season-2-with-rosario-dawson/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/ahsokaseason2teaserpostbigtw1.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://deadline.com/2026/08/scott-foley-returning-scrubs-sean-kelly-season-2-revival-1237041064/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Scott-Foley-Scrubs.jpg?w=1024",
+    "last_seen": "2026-08-16"
+  },
+  "https://variety.com/2026/film/festivals/director-frieda-luk-olivia-luccardi-sacred-creatures-1236835353/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/08/courtesy_Nicolas_Villegas_3.jpg?w=1000&h=563&crop=1",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.cartoonbrew.com/feature-film/disney-animation-clay-zootopia-coco-frozen-incredibles-gatto-265646.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Clay.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.firstshowing.net/2026/first-teaser-for-star-wars-ahsoka-season-2-with-rosario-dawson/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/ahsokaseason2teaserpostbigtw1.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.cartoonbrew.com/series/disney-kingdom-hearts-anime-series-265647.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Kingdom-Hearts-Anime.jpg",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.boxofficemojo.com/date/2026-08-16/": {
+    "og_image": "",
+    "last_seen": "2026-08-16"
+  },
+  "https://www.firstshowing.net/2026/first-teaser-for-the-bluey-movie-based-on-animated-series/": {
+    "og_image": "",
+    "last_seen": "2026-08-16"
   }
 }

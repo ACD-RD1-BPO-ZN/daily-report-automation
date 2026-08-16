@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/news/paramount-warner-bros-mexicos-settle-ellison-1236834861/"
+      "https://www.cartoonbrew.com/feature-film/disney-animation-clay-zootopia-coco-frozen-incredibles-gatto-265646.html"
     ],
-    "image_filename": "headline_20260815.png",
+    "image_filename": "headline_20260816.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,16 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/08/de-noche-producer-praises-pedro-pascal-danny-ramirez-1237040958/",
-      "https://deadline.com/2026/08/indie-films-opening-matthew-mcconaughey-green-day-comedy-1237040791/",
-      "https://www.firstshowing.net/2026/demonic-horror-film-yellow-eyes-trailer-produced-by-joe-swanberg/",
-      "https://www.firstshowing.net/2026/firstshowing.net/2026/june-shreiner-in-gnarly-creature-feature-dark-hollow-horror-trailer/",
-      "https://www.firstshowing.net/2026/official-trailer-for-indie-film-dear-you-about-chinese-families-abroad/",
-      "https://www.firstshowing.net/2026/first-look-teaser-for-if-i-go-will-they-miss-me-acclaimed-indie-film/",
-      "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html",
+      "https://deadline.com/2026/08/all-things-spidey-d23-friendly-neighborhood-amazing-friends-1237040751/",
+      "https://www.firstshowing.net/2026/08/special-d23-trailer-for-avengers-doomsday-unexciting/",
+      "https://variety.com/2026/film/festivals/director-frieda-luk-olivia-luccardi-sacred-creatures-1236835353/",
+      "https://variety.com/2026/film/festivals/locarno-marco-cavazzin-mutrion-venice-leopards-of-tomorrow-1236834478/",
+      "https://variety.com/2026/film/reviews/the-state-of-us-review-1236835434/",
+      "https://variety.com/2026/film/festivals/how-would-you-get-this-movie-made-vachon-film4-bbc-1236835455/",
+      "https://www.firstshowing.net/2026/cute-teaser-for-the-bluey-movie-based-on-animated-series/",
       "https://www.cartoonbrew.com/educational/titmouse-foundation-warrior-art-camp-shorts-fellowship-2-265580.html"
     ],
-    "image_filename": "production_20260815.png",
+    "image_filename": "production_20260816.png",
     "image_keywords": [
       "film",
       "production",
@@ -42,16 +42,10 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-08-15/",
-      "https://deadline.com/2026/08/emmy-nominees-2026-final-campaign-stops-1237033459/",
-      "https://variety.com/2026/film/news/ian-crafford-dead-field-of-dreams-1236834958/",
-      "https://variety.com/2026/film/news/anne-hathaway-movies-dog-deaths-rated-r-1236834811/",
-      "https://variety.com/2026/film/global/paul-wright-george-mackay-mission-1236834494/",
-      "https://www.cartoonbrew.com/business/duolingo-acquires-animade-london-studio-265574.html",
-      "https://www.cartoonbrew.com/vfx/visual-effects-society-women-who-lead-summit-265583.html",
-      "https://www.cartoonbrew.com/festivals/pictoplasma-nyc-program-speakers-265567.html"
+      "https://variety.com/2026/film/box-office/box-office-end-of-oak-street-spider-man-brand-new-day-1236835436/",
+      "https://www.boxofficemojo.com/date/2026-08-16/"
     ],
-    "image_filename": "boxoffice_20260815.png",
+    "image_filename": "boxoffice_20260816.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -62,13 +56,16 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/08/netflix-ya-slate-end-of-summer-bash-crossover-prime-video-1237040780/",
-      "https://deadline.com/2026/08/ryan-de-nino-dead-married-at-first-sight-1237041002/",
-      "https://deadline.com/2026/08/indie-films-opening-matthew-mcconaughey-green-day-comedy-1237040791/",
-      "https://www.firstshowing.net/2026/official-trailer-for-dugout-dads-series-sandlot-spiritual-sequel/",
-      "https://www.cartoonbrew.com/newsletter/netflixs-theatrical-change-of-heart-juried-emmy-winners-coyote-vs-acme-details-265586.html"
+      "https://deadline.com/2026/08/scott-foley-returning-scrubs-sean-kelly-season-2-revival-1237041064/",
+      "https://deadline.com/2026/08/john-higgins-scrubs-season-2-grant-abc-snl-1237041813/",
+      "https://www.firstshowing.net/2026/paul-bettany-returns-in-visionquest-trailer-wandavision-spin-off/",
+      "https://www.firstshowing.net/2026/first-teaser-for-star-wars-ahsoka-season-2-with-rosario-dawson/",
+      "https://deadline.com/2026/08/summer-house-season-10-emmy-interview-1237041687/",
+      "https://deadline.com/2026/08/the-traitors-season-4-contestants-emmy-interview-1237041716/",
+      "https://www.cartoonbrew.com/series/disney-kingdom-hearts-anime-series-265647.html",
+      "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html"
     ],
-    "image_filename": "streaming_20260815.png",
+    "image_filename": "streaming_20260816.png",
     "image_keywords": [
       "netflix",
       "disney+",
