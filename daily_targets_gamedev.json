@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=309956"
+      "https://www.gamedeveloper.com/business/barbie-and-hot-wheels-owner-mattel-launches-mattel-game-studios"
     ],
-    "image_filename": "headline_20260817.png",
+    "image_filename": "headline_20260818.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,25 +14,12 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://80.lv/articles/3d-artist-reimagined-half-life-2-s-headcrab-with-unreal-engine-5-s-substrate"
-    ],
-    "image_filename": "engine_20260817.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/08/16/ranking-every-blender-splash-screen/"
+      "https://www.blendernation.com/2026/08/17/true-depth-v3-blender-add-on-realistic-depth-estimation/",
+      "https://www.blendernation.com/2026/08/17/dark-fantasy-book-tutorial/"
     ],
-    "image_filename": "model3d_20260817.png",
+    "image_filename": "model3d_20260818.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,10 +34,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/easy-stylized-line-art-technique-for-blender",
-      "https://80.lv/articles/phantom-blade-zero-uses-authentic-kung-fu-motion-capture"
+      "https://80.lv/articles/this-blender-eye-animation-looks-and-sounds-weirdly-satisfying",
+      "https://80.lv/articles/how-to-sculpt-surface-damage-and-wear-on-a-sci-fi-prop",
+      "https://80.lv/articles/free-blender-tool-for-easily-cutting-meshes-with-planes"
     ],
-    "image_filename": "ta_20260817.png",
+    "image_filename": "ta_20260818.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +54,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/embracer-group-expects-next-kingdom-come-sooner-than-you-might-think",
-      "https://gnn.gamer.com.tw/detail.php?sn=309955",
-      "https://80.lv/articles/change-future-in-new-sci-fi-detective-thriller-written-by-altered-carbon-author"
+      "https://gnn.gamer.com.tw/detail.php?sn=310016",
+      "https://www.gamedeveloper.com/business/pokemon-pokopia-has-topped-5-million-sales-worldwide",
+      "https://gnn.gamer.com.tw/detail.php?sn=310014"
     ],
-    "image_filename": "globalgames_20260817.png",
+    "image_filename": "globalgames_20260818.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,15 +70,48 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/276347/"
+      "https://www.gamedeveloper.com/business/inner-pocket-is-a-new-indie-publishing-label-that-wants-to-champion-intimate-experiences",
+      "https://www.gamedeveloper.com/design/how-forbidden-solitaire-brought-solitaire-games-to-the-forefront",
+      "https://gnn.gamer.com.tw/detail.php?sn=310015",
+      "https://gnn.gamer.com.tw/detail.php?sn=310013"
     ],
-    "image_filename": "indie_20260817.png",
+    "image_filename": "indie_20260818.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=310012",
+      "https://gnn.gamer.com.tw/detail.php?sn=310011",
+      "https://godotengine.org/article/godot-community-poll-2026/"
+    ],
+    "image_filename": "local_20260818.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/barbie-and-hot-wheels-owner-mattel-laundches-mattel-game-studios",
+      "https://www.blendernation.com/2026/08/17/true-depth-v3-blender-add-on-realistic-depth-estimation/",
+      "https://www.gamedeveloper.com/business/inner-pocket-is-a-new-indie-publishing-label-that-wants-to-champion-intimate-experiences"
+    ],
+    "image_filename": "producer_20260818.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
