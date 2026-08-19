@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/08/ghost-rider-2028-disney-release-dates-1237043467/"
+      "https://variety.com/2026/film/news/california-tax-cap-deal-film-credits-1236836863/"
     ],
-    "image_filename": "headline_20260818.png",
+    "image_filename": "headline_20260819.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,18 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://variety.com/2026/tv/columns/crystal-lake-linda-cardellini-friday-the-13th-prequel-series-gory-gross-blood-1236836771/",
-      "https://www.firstshowing.net/2026/jermaine-fowler-in-peculiar-sci-fi-thriller-terrestrial-official-trailer/",
-      "https://www.firstshowing.net/2026/returning-home-to-lebanon-in-shadows-of-beirut-official-uk-trailer/",
-      "https://www.firstshowing.net/2026/extra-gross-trailer-for-crawlers-another-scary-spider-horror-movie/",
-      "https://www.firstshowing.net/2026/trailer-for-4k-restoration-of-kwaidan-quartet-ghost-stories/",
-      "https://www.firstshowing.net/2026/awesome-where-rebels-gather-featurette-for-laikas-wildwood-film/",
-      "https://www.cartoonbrew.com/box-office-report/niu-lai-chinese-feature-surprise-265707.html",
-      "https://www.cartoonbrew.com/awards/melk-wins-locarno-pardino-doro-265694.html",
-      "https://www.cartoonbrew.com/shorts/balconada-short-melbourne-behind-the-scenes-265685.html",
-      "https://www.cartoonbrew.com/series/gargoyles-animated-series-in-development-265678.html"
+      "https://deadline.com/2026/08/john-irvin-dead-hamburger-hill-raw-deal-director-1237044695/",
+      "https://www.firstshowing.net/2026/tickets-on-sale-trailer-for-villeneuves-dune-part-three-sequel/",
+      "https://www.firstshowing.net/2026/australian-creature-feature-grief-thriller-the-room-below-trailer/",
+      "https://www.firstshowing.net/2026/schlocky-post-apocalyptic-battle-cabin-trailer-with-josh-mckenzie/",
+      "https://variety.com/2026/film/global/dua-blerta-basholli-interview-cannes-critics-week-1236742446/",
+      "https://www.firstshowing.net/2026/official-us-trailer-for-cocoon-one-summer-of-girlhood-anime-film/",
+      "https://www.cartoonbrew.com/anime/studio-ghibli-future-hayao-miyazaki-265713/",
+      "https://www.cartoonbrew.com/shorts/melbourne-winner-our-choir-has-always-been-travelling-tour-265718/"
     ],
-    "image_filename": "production_20260818.png",
+    "image_filename": "production_20260819.png",
     "image_keywords": [
       "film",
       "production",
@@ -44,12 +42,12 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://variety.com/2026/film/news/california-paramount-bonta-do-over-bond-1236836713/",
-      "https://variety.com/2026/film/news/paramount-requests-1-9-billion-bond-state-lawsuit-warner-bros-merger-1236836420/",
-      "https://www.boxofficemojo.com/date/2026-08-18/",
-      "https://www.cartoonbrew.com/shorts/youtube-shorts-monetization-rule-changes-265682.html"
+      "https://www.boxofficemojo.com/date/2026-08-19/",
+      "https://variety.com/2026/film/columns/oscars-youtube-ai-annual-budgets-member-meeting-1236837376/",
+      "https://variety.com/2026/film/news/sean-baker-samantha-quan-ampas-theater-committee-1236837591/",
+      "https://www.cartoonbrew.com/law/roblox-us-senate-investigation-child-safety-265715/"
     ],
-    "image_filename": "boxoffice_20260818.png",
+    "image_filename": "boxoffice_20260819.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -60,13 +58,19 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/08/kevin-macdonald-pep-guardiola-man-city-beautiful-obsession-1237014372/",
-      "https://deadline.com/feature/the-morning-show-season-5-news-updates-what-to-expect-1236760731/",
-      "https://deadline.com/feature/the-gilded-age-season-4-news-updates-everything-we-know-1236748421/",
-      "https://deadline.com/2026/08/all-her-fault-creator-megan-gallagher-interview-1237043228/",
-      "https://deadline.com/2026/08/abby-phillip-cnn-contract-1237043487/"
+      "https://deadline.com/2026/08/leslie-grossman-cast-power-origins-flossie-1237043664/",
+      "https://deadline.com/2026/08/the-diplomat-netflix-creative-team-interview-1237044316/",
+      "https://deadline.com/2026/08/the-pitt-production-designer-interview-season-2-1237044580/",
+      "https://deadline.com/2026/08/sally-field-remarkably-bright-creatures-interview-1237044576/",
+      "https://deadline.com/2026/08/beth-behrs-cast-abc-shifting-gears-season-3-1237044658/",
+      "https://variety.com/2026/tv/news/felicia-day-wil-wheaton-the-guild-movie-show-conludo-1236837516/",
+      "https://variety.com/2026/film/news/robin-williams-kids-revive-instagram-account-ai-slop-1236837661/",
+      "https://www.firstshowing.net/2026/final-trailer-for-netflixs-one-hundred-years-of-solitude-grand-finale/",
+      "https://www.firstshowing.net/2026/full-trailer-for-disneys-oasis-dont-look-back-in-anger-music-doc/",
+      "https://www.cartoonbrew.com/theme-parks/disney-parks-monsters-encanto-coco-lion-king-cars-265739.html",
+      "https://www.cartoonbrew.com/newsletter/disneys-big-announcements-youtubes-monetization-changes-robloxs-legal-troubles-265732.html"
     ],
-    "image_filename": "streaming_20260818.png",
+    "image_filename": "streaming_20260819.png",
     "image_keywords": [
       "netflix",
       "disney+",

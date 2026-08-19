@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/barbie-and-hot-wheels-owner-mattel-launches-mattel-game-studios"
+      "https://www.gamedeveloper.com/business/deus-ex-director-warren-spector-is-retiring-after-43-years"
     ],
-    "image_filename": "headline_20260818.png",
+    "image_filename": "headline_20260819.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/08/17/true-depth-v3-blender-add-on-realistic-depth-estimation/",
-      "https://www.blendernation.com/2026/08/17/dark-fantasy-book-tutorial/"
+      "https://www.blendernation.com/2026/08/18/keymapper-a-new-addon-for-easily-managing-key-bindings-in-blender/",
+      "https://80.lv/articles/add-more-details-to-your-characters-with-this-zbrush-and-blender-brush-bundle"
     ],
-    "image_filename": "model3d_20260818.png",
+    "image_filename": "model3d_20260819.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,11 +34,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-blender-eye-animation-looks-and-sounds-weirdly-satisfying",
-      "https://80.lv/articles/how-to-sculpt-surface-damage-and-wear-on-a-sci-fi-prop",
-      "https://80.lv/articles/free-blender-tool-for-easily-cutting-meshes-with-planes"
+      "https://80.lv/articles/creating-a-stylized-3d-character-in-a-2d-illustrated-look-with-zbrush",
+      "https://80.lv/articles/this-coral-growth-simulation-looks-beautiful-and-mesmerizing",
+      "https://80.lv/articles/three-professional-vfx-tools-for-blender-in-one-bundle"
     ],
-    "image_filename": "ta_20260818.png",
+    "image_filename": "ta_20260819.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,11 +54,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=310016",
-      "https://www.gamedeveloper.com/business/pokemon-pokopia-has-topped-5-million-sales-worldwide",
-      "https://gnn.gamer.com.tw/detail.php?sn=310014"
+      "https://www.gamedeveloper.com/business/memory-crisis-is-causing-uncertainty-over-playstation-6",
+      "https://www.gamedeveloper.com/business/roblox-being-investigated-by-u-s-senate-after-reporting-65-381-instances-of-suspected-child-abuse-in-2025",
+      "https://gnn.gamer.com.tw/detail.php?sn=310072",
+      "https://gnn.gamer.com.tw/detail.php?sn=310068",
+      "https://gnn.gamer.com.tw/detail.php?sn=310071",
+      "https://gnn.gamer.com.tw/detail.php?sn=310069"
     ],
-    "image_filename": "globalgames_20260818.png",
+    "image_filename": "globalgames_20260819.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -70,12 +73,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/inner-pocket-is-a-new-indie-publishing-label-that-wants-to-champion-intimate-experiences",
-      "https://www.gamedeveloper.com/design/how-forbidden-solitaire-brought-solitaire-games-to-the-forefront",
-      "https://gnn.gamer.com.tw/detail.php?sn=310015",
-      "https://gnn.gamer.com.tw/detail.php?sn=310013"
+      "https://www.gamedeveloper.com/business/arco-breaks-even-after-topping-100-000-sales",
+      "https://www.gamedeveloper.com/business/wings-really-really-wants-to-fund-your-neat-indie-video-game"
     ],
-    "image_filename": "indie_20260818.png",
+    "image_filename": "indie_20260819.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -85,28 +86,14 @@
     ]
   },
   {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=310012",
-      "https://gnn.gamer.com.tw/detail.php?sn=310011",
-      "https://godotengine.org/article/godot-community-poll-2026/"
-    ],
-    "image_filename": "local_20260818.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/barbie-and-hot-wheels-owner-mattel-laundches-mattel-game-studios",
-      "https://www.blendernation.com/2026/08/17/true-depth-v3-blender-add-on-realistic-depth-estimation/",
-      "https://www.gamedeveloper.com/business/inner-pocket-is-a-new-indie-publishing-label-that-wants-to-champion-intimate-experiences"
+      "https://www.gamedeveloper.com/business/deus-ex-director-warren-spector-is-retiring-after-43-years",
+      "https://www.gamedeveloper.com/business/memory-crisis-is-causing-uncertainty-over-playstation-6",
+      "https://www.gamedeveloper.com/business/wings-really-really-wants-to-fund-your-neat-indie-video-game",
+      "https://www.gamedeveloper.com/business/roblox-being-investigated-by-u-s-senate-after-reporting-65-381-instances-of-suspected-child-abuse-in-2025"
     ],
-    "image_filename": "producer_20260818.png",
+    "image_filename": "producer_20260819.png",
     "image_keywords": [
       "marketing",
       "development",
