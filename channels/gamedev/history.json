@@ -1,19 +1,4 @@
 {
-  "2026-07-20": [
-    "https://www.gamedeveloper.com/business/the-future-of-gaming-tech-and-business-models",
-    "https://www.unrealengine.com/news/unreal-engine-5-4-release-notes",
-    "https://blog.unity.com/news/unity-developer-tools-update",
-    "https://code.blender.org/2026/07/cycles-memory-optimizations/",
-    "https://www.blendernation.com/2026/07/19/procedural-environment-creation-with-geometry-nodes/",
-    "https://www.incgmedia.com/next-gen-character-modeling-workflow",
-    "https://80.lv/articles/real-time-ray-tracing-optimization-techniques/",
-    "https://www.unrealengine.com/news/cinematic-vfx-with-niagara",
-    "https://www.incgmedia.com/pbr-materials-lighting-differences",
-    "https://www.gamedeveloper.com/business/new-aaa-game-breaks-pre-order-records",
-    "https://www.gamedeveloper.com/business/cloud-gaming-market-growth-report",
-    "https://store.steampowered.com/news/app/123456/view/789012345",
-    "https://www.gamedeveloper.com/indie/solo-dev-pixel-art-roguelike-success"
-  ],
   "2026-07-21": [
     "https://www.gamedeveloper.com/business/netflix-says-its-critically-panned-fifa-world-cup-video-game-was-a-big-success",
     "https://unity.com/blog/meet-the-unity-cli",
@@ -502,5 +487,22 @@
     "https://gnn.gamer.com.tw/detail.php?sn=310069",
     "https://www.gamedeveloper.com/business/arco-breaks-even-after-topping-100-000-sales",
     "https://www.gamedeveloper.com/business/wings-really-really-wants-to-fund-your-neat-indie-video-game"
+  ],
+  "2026-08-20": [
+    "https://www.gamedeveloper.com/business/report-playstation-reworks-horizon-live-service-game-after-negative-feedback",
+    "https://80.lv/articles/breakdown-how-to-design-a-scarecrow-turned-human-character",
+    "https://80.lv/articles/sculpting-and-texturing-a-fungal-creature-inspired-by-the-last-of-us",
+    "https://80.lv/articles/this-psychological-sci-fi-fps-will-have-you-fighting-mutated-humans",
+    "https://80.lv/articles/tomb-raider-legacy-of-atlantis-devs-speak-about-combat-reimagination",
+    "https://www.gamedeveloper.com/business/harvey-smith-and-fellow-arkane-austin-veterans-launch-a-new-studio",
+    "https://www.gamedeveloper.com/business/triple-a-vets-and-accessibility-experts-launch-new-game-dev-co-op-raze-and-rebuild-studio",
+    "https://www.gamedeveloper.com/business/human-fall-flat-veterans-launch-new-uk-studio-pretty-cool-games",
+    "https://www.gamedeveloper.com/business/-i-feel-dirty-ea-workers-trapped-in-a-maelstrom-of-after-following-saudi-buyout",
+    "https://gnn.gamer.com.tw/detail.php?sn=310139",
+    "https://gnn.gamer.com.tw/detail.php?sn=310137",
+    "https://gnn.gamer.com.tw/detail.php?sn=310136",
+    "https://gnn.gamer.com.tw/detail.php?sn=310130",
+    "https://gnn.gamer.com.tw/detail.php?sn=310140",
+    "https://gnn.gamer.com.tw/detail.php?sn=310138"
   ]
 }
