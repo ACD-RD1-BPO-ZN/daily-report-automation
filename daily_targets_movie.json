@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/08/josh-brolin-sicario-3-happening-1237048151/"
+      "https://deadline.com/2026/08/box-office-domestic-7-billion-1237048328/"
     ],
-    "image_filename": "headline_20260823.png",
+    "image_filename": "headline_20260824.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,13 +18,15 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/08/national-treasure-3-in-works-1237048107/",
-      "https://deadline.com/2026/08/kid-cudi-fckin-gnarly-followup-directorial-debut-1237048159/",
-      "https://www.firstshowing.net/2026/new-trailer-for-charles-burnetts-my-brothers-wedding-restoration/",
-      "https://www.firstshowing.net/2026/brian-tyree-henrys-steampunk-western-bass-x-machina-anime-teaser/",
-      "https://anilist.co/anime/182300"
+      "https://deadline.com/2026/08/will-forte-lana-condor-had-hope-coyote-vs-acme-release-1237048343/",
+      "https://deadline.com/2026/08/indie-film-box-office-tony-anthony-bourdain-biopic-sizzling-1237048340/",
+      "https://variety.com/2026/film/reviews/boorman-and-the-devil-review-exorcist-ii-the-heretic-1236841140/",
+      "https://www.firstshowing.net/2026/official-trailer-for-dolph-unbreakable-biopic-doc-all-about-lundgren/",
+      "https://variety.com/2026/film/global/passo-nosso-segredo-won-gramado-best-film-kikito-1236841004/",
+      "https://variety.com/2026/awards/awards/sentimental-value-anders-danielsen-lie-anne-marie-ottersen-1236840981/",
+      "https://www.cartoonbrew.com/animators/miyu-animation-in-conversation-ru-kuwahata-max-porter-anna-mantzaris-265845.html"
     ],
-    "image_filename": "production_20260823.png",
+    "image_filename": "production_20260824.png",
     "image_keywords": [
       "film",
       "production",
@@ -39,34 +41,20 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/08/mark-ruffalo-blasts-paramount-calling-him-antisemitic-1237048114/",
-      "https://variety.com/2026/film/box-office/box-office-insidious-out-of-the-further-spider-man-1236840803/",
-      "https://deadline.com/2026/08/2026-hollyshorts-documentary-contenders-1237048128/",
-      "https://variety.com/2026/awards/awards/sentimental-value-amanda-awards-one-battle-after-another-1236840778/",
-      "https://www.boxofficemojo.com/date/2026-08-23/"
+      "https://deadline.com/2026/08/global-box-office-spider-man-brand-new-day-insidious-6-1237048315/",
+      "https://variety.com/2026/film/box-office/spiderman-brand-new-day-box-office-insidious-6-opens-1236838324/",
+      "https://www.boxofficemojo.com/date/2026-08-23/",
+      "https://deadline.com/2026/08/shelley-fabares-dead-1237048354/",
+      "https://variety.com/2026/film/global/mark-ruffalo-paramount-antisemitic-tropes-1236841081/",
+      "https://variety.com/2026/film/news/ridley-scott-not-a-filmmaker-im-an-influencer-the-dog-stars-1236841083/",
+      "https://deadline.com/2026/08/dr-dre-uses-ai-doesnt-see-threat-1237048327/"
     ],
-    "image_filename": "boxoffice_20260823.png",
+    "image_filename": "boxoffice_20260824.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
-    ]
-  },
-  {
-    "section_name": "Streaming",
-    "source_urls": [
-      "https://deadline.com/2026/08/rosie-odonnell-ends-jimmy-kimmel-live-trump-roasting-song-1237048098/"
-    ],
-    "image_filename": "streaming_20260823.png",
-    "image_keywords": [
-      "netflix",
-      "disney+",
-      "hbo",
-      "streaming",
-      "series",
-      "anime",
-      "crunchyroll"
     ]
   }
 ]
