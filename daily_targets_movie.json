@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/08/box-office-domestic-7-billion-1237048328/"
+      "https://deadline.com/2026/08/wildbrain-acquires-personality-ai-1237049261/"
     ],
-    "image_filename": "headline_20260824.png",
+    "image_filename": "headline_20260825.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,15 +18,18 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/08/will-forte-lana-condor-had-hope-coyote-vs-acme-release-1237048343/",
-      "https://deadline.com/2026/08/indie-film-box-office-tony-anthony-bourdain-biopic-sizzling-1237048340/",
-      "https://variety.com/2026/film/reviews/boorman-and-the-devil-review-exorcist-ii-the-heretic-1236841140/",
-      "https://www.firstshowing.net/2026/official-trailer-for-dolph-unbreakable-biopic-doc-all-about-lundgren/",
-      "https://variety.com/2026/film/global/passo-nosso-segredo-won-gramado-best-film-kikito-1236841004/",
-      "https://variety.com/2026/awards/awards/sentimental-value-anders-danielsen-lie-anne-marie-ottersen-1236840981/",
-      "https://www.cartoonbrew.com/animators/miyu-animation-in-conversation-ru-kuwahata-max-porter-anna-mantzaris-265845.html"
+      "https://deadline.com/2026/08/sleepover-jacob-chase-insidious-out-of-the-further-1237049257/",
+      "https://variety.com/2026/film/news/how-to-lose-a-guy-in-10-days-sequel-kate-hudson-paramount-1236839807/",
+      "https://deadline.com/2026/08/when-it-started-to-burn-field-of-vision-premiere-1237049415/",
+      "https://www.firstshowing.net/2026/official-trailer-for-mighty-mary-doc-about-all-women-sailing-team/",
+      "https://www.firstshowing.net/2026/adorable-first-trailer-for-the-saga-of-rex-handmade-animated-film/",
+      "https://www.firstshowing.net/2026/joko-anwars-prison-action-horror-ghost-in-the-cell-official-trailer/",
+      "https://www.firstshowing.net/2026/ghanaian-talking-fish-indie-comedy-the-fisherman-trailer/",
+      "https://www.cartoonbrew.com/distribution/cars-anniversary-re-release-pixar-disney-265902.html",
+      "https://www.cartoonbrew.com/anime/gkids-yoshiaki-kawajiris-vampire-hunter-d-bloodlust-265889.html",
+      "https://www.cartoonbrew.com/anime/two-one-piece-films-announced-toei-265884.html"
     ],
-    "image_filename": "production_20260824.png",
+    "image_filename": "production_20260825.png",
     "image_keywords": [
       "film",
       "production",
@@ -41,20 +44,38 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/08/global-box-office-spider-man-brand-new-day-insidious-6-1237048315/",
-      "https://variety.com/2026/film/box-office/spiderman-brand-new-day-box-office-insidious-6-opens-1236838324/",
-      "https://www.boxofficemojo.com/date/2026-08-23/",
-      "https://deadline.com/2026/08/shelley-fabares-dead-1237048354/",
-      "https://variety.com/2026/film/global/mark-ruffalo-paramount-antisemitic-tropes-1236841081/",
-      "https://variety.com/2026/film/news/ridley-scott-not-a-filmmaker-im-an-influencer-the-dog-stars-1236841083/",
-      "https://deadline.com/2026/08/dr-dre-uses-ai-doesnt-see-threat-1237048327/"
+      "https://variety.com/2026/film/news/amc-kips-bay-closing-new-york-movie-theater-1236841776/",
+      "https://variety.com/2026/tv/news/disney-offers-execs-voluntary-retirement-packages-1236841676/",
+      "https://variety.com/2026/film/news/child-star-raquel-lee-sues-disney-1236841598/",
+      "https://www.cartoonbrew.com/business/disney-employee-spouse-health-care-cut-265893.html"
     ],
-    "image_filename": "boxoffice_20260824.png",
+    "image_filename": "boxoffice_20260825.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
+    ]
+  },
+  {
+    "section_name": "Streaming",
+    "source_urls": [
+      "https://deadline.com/feature/god-of-war-tv-show-adaptation-news-updates-amazon-sony-tv-1237049420/",
+      "https://deadline.com/2026/08/wendy-williams-docuseries-peacock-1237049234/",
+      "https://deadline.com/2026/08/bbc-trump-documentary-lawsuit-1237049211/",
+      "https://variety.com/2026/film/news/you-caroline-kepnes-director-debut-the-attentionist-1236841684/",
+      "https://www.firstshowing.net/2026/berlin-vampires-sci-fi-series-city-of-blood-trailer-with-lars-eidinger/",
+      "https://www.firstshowing.net/2026/full-trailer-for-guy-ritchies-the-gentlemen-criminal-empire-season-2/"
+    ],
+    "image_filename": "streaming_20260825.png",
+    "image_keywords": [
+      "netflix",
+      "disney+",
+      "hbo",
+      "streaming",
+      "series",
+      "anime",
+      "crunchyroll"
     ]
   }
 ]
