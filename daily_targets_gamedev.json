@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/creative-artists-agency-spins-up-indie-funding-venture-frame1games"
+      "https://www.gamedeveloper.com/business/riot-games-is-winding-down-fighter-2xko-in-december-2026"
     ],
-    "image_filename": "headline_20260825.png",
+    "image_filename": "headline_20260826.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,13 +14,30 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://www.unrealengine.com/developer-interviews/star-wars-zero-company-bit-reactor-crafts-a-galaxy-of-tactical-possibilities-with-ue5",
+      "https://unity.com/blog/another-axiom-gorilla-tag",
+      "https://unity.com/blog/rendering-at-scale-efficient-strategies-for-massive-object-counts",
+      "https://unity.com/blog/data-driven-board-six-player-strategy-sente"
+    ],
+    "image_filename": "engine_20260826.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/interview-building-a-wuxia-sandbox-rpg-with-up-to-10-000-dynamic-npcs",
-      "https://80.lv/articles/this-unity-asset-pack-allows-you-to-add-interactive-2d-and-3d-maps-to-your-games",
-      "https://80.lv/articles/developing-complex-eye-system-for-strange-alien-creature"
+      "https://80.lv/articles/metro-2039-looks-darker-and-more-claustrophobic-than-ever-in-new-gameplay",
+      "https://80.lv/articles/in-this-beautiful-cinematic-game-you-ll-have-to-be-a-bearer-of-light",
+      "https://80.lv/articles/the-witcher-3-is-getting-a-massive-full-remaster-as-a-free-upgrade-very-soon"
     ],
-    "image_filename": "ta_20260825.png",
+    "image_filename": "ta_20260826.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -36,12 +53,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/cdpr-revealed-the-witcher-4-release-window",
-      "https://gnn.gamer.com.tw/detail.php?sn=310342",
-      "https://gnn.gamer.com.tw/detail.php?sn=310343",
-      "https://gnn.gamer.com.tw/detail.php?sn=310345"
+      "https://gnn.gamer.com.tw/detail.php?sn=310416",
+      "https://gnn.gamer.com.tw/detail.php?sn=310415",
+      "https://gnn.gamer.com.tw/detail.php?sn=310414",
+      "https://gnn.gamer.com.tw/detail.php?sn=310419",
+      "https://gnn.gamer.com.tw/detail.php?sn=310418",
+      "https://www.gamedeveloper.com/business/journey-maker-thatgamecompany-announces-thatgamepublisher"
     ],
-    "image_filename": "globalgames_20260825.png",
+    "image_filename": "globalgames_20260826.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -53,46 +72,18 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/this-indie-fishing-simulation-game-sold-1-million-copies-in-2-days",
-      "https://www.gamedeveloper.com/business/mutter-and-blue-prince-among-winners-at-gamescom-dev-awards-2026",
-      "https://gnn.gamer.com.tw/detail.php?sn=310346",
-      "https://gnn.gamer.com.tw/detail.php?sn=310344",
-      "https://gnn.gamer.com.tw/detail.php?sn=310341"
+      "https://gnn.gamer.com.tw/detail.php?sn=310417",
+      "https://www.gamedeveloper.com/business/report-among-us-3d-dev-schell-games-lays-off-staff",
+      "https://www.gamedeveloper.com/business/irish-browser-games-start-up-entity-raises-5m-in-funding-for-console-quality-games-for-the-new-web-era-",
+      "https://www.gamedeveloper.com/business/w4-games-raises-18m-to-expand-its-international-team"
     ],
-    "image_filename": "indie_20260825.png",
+    "image_filename": "indie_20260826.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
-    ]
-  },
-  {
-    "section_name": "Local",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/-each-event-has-to-feel-local-and-relevant-to-its-market-gamescom-boss-wants-responsible-expansion-after-record-breaking-year"
-    ],
-    "image_filename": "local_20260825.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/creative-artists-agency-spins-up-indie-funding-venture-frame1games",
-      "https://80.lv/articles/this-indie-fishing-simulation-game-sold-1-million-copies-in-2-days"
-    ],
-    "image_filename": "producer_20260825.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
