@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/rockstar-games-heartbroken-by-grand-theft-auto-6-leaks"
+      "https://www.gamedeveloper.com/business/saber-exec-the-game-industry-must-look-beyond-north-america-and-dilute-risk"
     ],
-    "image_filename": "headline_20260827.png",
+    "image_filename": "headline_20260828.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,12 +14,46 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://www.unrealengine.com/learning/city-sample-gets-a-major-update-with-pcg-and-unreal-mcp-workflows"
+    ],
+    "image_filename": "engine_20260828.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
+    "section_name": "Model3D",
+    "source_urls": [
+      "https://www.blender.org/news/introducing-the-blender-roadmap/",
+      "https://www.blendernation.com/2026/08/27/message-in-a-bottle-tutorial/",
+      "https://www.blendernation.com/2026/08/27/mixos-live-link-send-a-mesh-from-blender-get-a-principled-material-back/"
+    ],
+    "image_filename": "model3d_20260828.png",
+    "image_keywords": [
+      "3d",
+      "modeling",
+      "sculpt",
+      "topology",
+      "blender",
+      "maya",
+      "zbrush",
+      "substance"
+    ]
+  },
+  {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/gta-6-will-reportedly-blend-gta-5-s-chaos-with-red-dead-redemption-2-s-realism",
-      "https://80.lv/articles/new-commodore-64-includes-an-8-bit-cyberpunk-2077-demo"
+      "https://80.lv/articles/dwarf-fortress-will-get-an-update-with-procedural-magic-systems",
+      "https://80.lv/articles/modeling-and-texturing-assets-and-foliage-for-a-detailed-3d-environment",
+      "https://80.lv/articles/building-a-procedural-shell-grotto-with-substance-3d-designer-unreal-engine"
     ],
-    "image_filename": "ta_20260827.png",
+    "image_filename": "ta_20260828.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -35,14 +69,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-officially-announces-disc-to-digital-program",
-      "https://www.gamedeveloper.com/business/cd-projekt-red-and-blizzard-enter-a-partnership",
-      "https://www.gamedeveloper.com/audio/obituary-actor-tim-curry-celebrated-for-his-work-in-games-has-passed-at-age-80",
-      "https://www.gamedeveloper.com/business/creative-uk-launches-barclays-sponsored-growth-program-for-screen-businesses",
-      "https://80.lv/articles/mass-effect-sci-fi-rpg-exodus-launch-date-2027",
-      "https://gnn.gamer.com.tw/detail.php?sn=310515"
+      "https://www.gamedeveloper.com/production/cd-projekt-red-has-the-witcher-4-running-on-all-target-platforms-after-cyberpunk-2077-lesson",
+      "https://www.gamedeveloper.com/business/xbox-ceo-asha-sharma-once-again-stresses-xbox-s-need-for-affordability",
+      "https://www.gamedeveloper.com/business/saudi-owned-media-conglomerate-mbc-expands-into-the-game-industry",
+      "https://80.lv/articles/gta-6-gameplay-reveal-shows-a-shockingly-detailed-look-at-vice-city"
     ],
-    "image_filename": "globalgames_20260827.png",
+    "image_filename": "globalgames_20260828.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -54,11 +86,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/playdate-maker-is-refunding-tariff-fees-to-customers",
-      "https://gnn.gamer.com.tw/detail.php?sn=310516",
-      "https://80.lv/articles/this-action-roguelike-will-have-you-playing-as-an-anthropomorphic-dog"
+      "https://gnn.gamer.com.tw/detail.php?sn=310620",
+      "https://gnn.gamer.com.tw/detail.php?sn=310618",
+      "https://80.lv/articles/resonance-a-plague-tale-legacy-just-got-released"
     ],
-    "image_filename": "indie_20260827.png",
+    "image_filename": "indie_20260828.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -70,17 +102,30 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=310518",
-      "https://gnn.gamer.com.tw/detail.php?sn=310517",
-      "https://gnn.gamer.com.tw/detail.php?sn=310507",
-      "https://gnn.gamer.com.tw/detail.php?sn=310506"
+      "https://gnn.gamer.com.tw/detail.php?sn=310623",
+      "https://gnn.gamer.com.tw/detail.php?sn=310622",
+      "https://gnn.gamer.com.tw/detail.php?sn=310621",
+      "https://gnn.gamer.com.tw/detail.php?sn=310619"
     ],
-    "image_filename": "local_20260827.png",
+    "image_filename": "local_20260828.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/design/how-you-yes-you-can-benefit-from-1-on-1-synchronous-playtesting"
+    ],
+    "image_filename": "producer_20260828.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
