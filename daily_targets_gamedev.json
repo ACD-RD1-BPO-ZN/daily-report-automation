@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/saber-exec-the-game-industry-must-look-beyond-north-america-and-dilute-risk"
+      "https://www.gamedeveloper.com/business/spanish-union-calls-for-ongoing-strike-action-at-ubisoft-mobile-barcelona"
     ],
-    "image_filename": "headline_20260828.png",
+    "image_filename": "headline_20260829.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/learning/city-sample-gets-a-major-update-with-pcg-and-unreal-mcp-workflows"
+      "https://www.unrealengine.com/learning/augusts-epic-learning-content-networked-physics-dynamic-audio-and-more"
     ],
-    "image_filename": "engine_20260828.png",
+    "image_filename": "engine_20260829.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/news/introducing-the-blender-roadmap/",
-      "https://www.blendernation.com/2026/08/27/message-in-a-bottle-tutorial/",
-      "https://www.blendernation.com/2026/08/27/mixos-live-link-send-a-mesh-from-blender-get-a-principled-material-back/"
+      "https://www.blendernation.com/2026/08/28/blender-jobs-for-august-28-2026/",
+      "https://80.lv/articles/learn-facial-anatomy-drawing-and-sculpting-with-this-beginner-to-advance-course"
     ],
-    "image_filename": "model3d_20260828.png",
+    "image_filename": "model3d_20260829.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +48,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/dwarf-fortress-will-get-an-update-with-procedural-magic-systems",
-      "https://80.lv/articles/modeling-and-texturing-assets-and-foliage-for-a-detailed-3d-environment",
-      "https://80.lv/articles/building-a-procedural-shell-grotto-with-substance-3d-designer-unreal-engine"
+      "https://80.lv/articles/where-winds-meet-reached-over-100-million-players",
+      "https://80.lv/articles/star-wars-zero-company-is-a-stellar-evolution-of-the-xcom-formula",
+      "https://80.lv/articles/interview-how-mistfall-hunter-blends-soulslike-combat-with-dark-fantasy-rpg-extraction-mechanics"
     ],
-    "image_filename": "ta_20260828.png",
+    "image_filename": "ta_20260829.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,12 +68,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/cd-projekt-red-has-the-witcher-4-running-on-all-target-platforms-after-cyberpunk-2077-lesson",
-      "https://www.gamedeveloper.com/business/xbox-ceo-asha-sharma-once-again-stresses-xbox-s-need-for-affordability",
-      "https://www.gamedeveloper.com/business/saudi-owned-media-conglomerate-mbc-expands-into-the-game-industry",
-      "https://80.lv/articles/gta-6-gameplay-reveal-shows-a-shockingly-detailed-look-at-vice-city"
+      "https://www.gamedeveloper.com/audio/gdc-side-quest-inside-austin-wintory-s-collaborative-composing-process",
+      "https://www.gamedeveloper.com/business/panic-refunds-tariff-fees-1047-games-pivots-from-splitgate-and-gamescom-dev-grows-patch-notes-67",
+      "https://www.gamedeveloper.com/design/warlock-s-magic-system-was-built-on-game-breaking-player-choices"
     ],
-    "image_filename": "globalgames_20260828.png",
+    "image_filename": "globalgames_20260829.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -86,11 +84,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=310620",
-      "https://gnn.gamer.com.tw/detail.php?sn=310618",
-      "https://80.lv/articles/resonance-a-plague-tale-legacy-just-got-released"
+      "https://gnn.gamer.com.tw/detail.php?sn=310695",
+      "https://80.lv/articles/best-investigation-indie-games-to-play-if-you-like-golden-idol"
     ],
-    "image_filename": "indie_20260828.png",
+    "image_filename": "indie_20260829.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -102,30 +99,18 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=310623",
-      "https://gnn.gamer.com.tw/detail.php?sn=310622",
-      "https://gnn.gamer.com.tw/detail.php?sn=310621",
-      "https://gnn.gamer.com.tw/detail.php?sn=310619"
+      "https://gnn.gamer.com.tw/detail.php?sn=310694",
+      "https://gnn.gamer.com.tw/detail.php?sn=310693",
+      "https://gnn.gamer.com.tw/detail.php?sn=310692",
+      "https://gnn.gamer.com.tw/detail.php?sn=310691",
+      "https://gnn.gamer.com.tw/detail.php?sn=310690"
     ],
-    "image_filename": "local_20260828.png",
+    "image_filename": "local_20260829.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/design/how-you-yes-you-can-benefit-from-1-on-1-synchronous-playtesting"
-    ],
-    "image_filename": "producer_20260828.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
