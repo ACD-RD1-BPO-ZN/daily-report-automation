@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/news/anne-hathaway-tom-cruise-days-of-thunder-sequel-1236839347/"
+      "https://deadline.com/2026/08/ca-post-production-tax-incentive-bill-passes-1237062985/"
     ],
-    "image_filename": "headline_20260830.png",
+    "image_filename": "headline_20260831.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,18 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/08/tom-hardy-debut-rap-album-busta-rhymes-method-man-bane-1237062711/",
-      "https://deadline.com/2026/08/ali-g-who-iz-i-trailer-theater-boycott-racist-caricature-1237062699/",
-      "https://deadline.com/2026/08/venice-film-festival-scraps-jury-press-conference-1237062641/",
-      "https://www.firstshowing.net/2026/indie-sci-fi-survival-film-after-impact-trailer-starring-michiel-rensen/",
-      "https://www.firstshowing.net/2026/first-trailer-for-corbijns-thriller-a-talent-for-murder-with-helen-mirren/",
-      "https://www.firstshowing.net/2026/tennis-academy-freaky-horror-movie-bloody-tennis-shudder-trailer/",
-      "https://variety.com/2026/film/news/borges-and-me-review-1236843724/",
-      "https://www.cartoonbrew.com/box-office-report/coyote-vs-acme-opening-weekend-projections-266107.html",
-      "https://www.cartoonbrew.com/music/coyote-vs-acme-vinyl-soundtrack-266112.html",
-      "https://www.cartoonbrew.com/auctions/tippett-studio-closing-auction-266120.html"
+      "https://deadline.com/2026/08/days-of-thunder-randy-quaid-calls-anne-hathaway-horrible-sequel-1237062926/",
+      "https://deadline.com/2026/08/venice-film-festival-uturn-reinstates-jury-press-conference-1237062875/",
+      "https://www.firstshowing.net/2026/first-trailer-for-overboard-dark-comedy-directed-by-gael-garcia-bernal/",
+      "https://www.firstshowing.net/2026/indigenous-bowlers-comedy-lucky-strikes-with-meegwun-fairbrother/",
+      "https://variety.com/2026/film/reviews/17-review-1236846790/",
+      "https://variety.com/2026/film/news/call-my-agent-the-movie-review-1236846824/",
+      "https://www.cartoonbrew.com/auctions/tippett-studio-closing-auction-266120.html",
+      "https://www.cartoonbrew.com/music/coyote-vs-acme-vinyl-soundtrack-266112.html"
     ],
-    "image_filename": "production_20260830.png",
+    "image_filename": "production_20260831.png",
     "image_keywords": [
       "film",
       "production",
@@ -44,12 +42,13 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://variety.com/2026/film/news/box-office-the-dog-stars-spider-man-brand-new-day-1236846559/",
-      "https://deadline.com/2026/08/owner-heated-rivalry-cottage-soul-searching-season-2-1237062692/",
-      "https://deadline.com/2026/08/downstate-broadway-scott-rudin-joe-mantello-1237062672/",
-      "https://www.boxofficemojo.com/date/2026-08-30/"
+      "https://deadline.com/2026/08/box-office-summer-2026-near-record-1237062959/",
+      "https://deadline.com/2026/08/indie-film-box-office-buddy-r-rated-horror-comedy-busts-out-1237062910/",
+      "https://variety.com/2026/film/box-office/box-office-the-dog-stars-bombs-spider-man-brand-new-day-1236846879/",
+      "https://www.boxofficemojo.com/date/2026-08-31/",
+      "https://www.cartoonbrew.com/box-office-report/coyote-vs-acme-opening-weekend-projections-266107.html"
     ],
-    "image_filename": "boxoffice_20260830.png",
+    "image_filename": "boxoffice_20260831.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -60,11 +59,9 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://variety.com/2026/film/news/chris-hansen-robert-pattinson-primetime-overly-dramatic-1236846693/",
-      "https://variety.com/2026/tv/columns/new-girl-reunion-not-happening-no-scripts-liz-meriwether-britney-spears-1236846563/",
       "https://www.cartoonbrew.com/anime/pokemon-disney-plus-aardman-sirfetchd-pichu-266103.html"
     ],
-    "image_filename": "streaming_20260830.png",
+    "image_filename": "streaming_20260831.png",
     "image_keywords": [
       "netflix",
       "disney+",
