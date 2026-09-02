@@ -1,18 +1,4 @@
 {
-  "2026-08-02": [
-    "https://gnn.gamer.com.tw/detail.php?sn=309234",
-    "https://code.blender.org/2026/02/winter-of-quality-2026/",
-    "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
-    "https://code.blender.org/2025/10/google-summer-of-code-2025-results/",
-    "https://80.lv/articles/add-cinematic-volumetric-fog-to-blender-scenes-in-just-minutes",
-    "https://80.lv/articles/check-out-this-cool-vhs-like-effect-made-in-blender",
-    "https://80.lv/articles/creating-intricate-filigree-metalwork-patterns-for-a-material-with-substance-3d",
-    "https://gnn.gamer.com.tw/detail.php?sn=309233",
-    "https://gnn.gamer.com.tw/detail.php?sn=309231",
-    "https://gnn.gamer.com.tw/detail.php?sn=309230",
-    "https://gnn.gamer.com.tw/detail.php?sn=309229",
-    "https://gnn.gamer.com.tw/detail.php?sn=309232"
-  ],
   "2026-08-03": [
     "https://code.blender.org/2026/05/cycles-texture-cache/",
     "https://www.blendernation.com/2026/08/02/easily-add-details-to-a-surface/",
@@ -490,5 +476,30 @@
     "https://www.gamedeveloper.com/business/indie-devs-and-publishers-hit-in-gamescom-equipment-thefts",
     "https://80.lv/articles/this-rpg-will-have-you-exploring-the-surreal-worlds-of-hieronymus-bosch/",
     "https://80.lv/articles/the-blood-of-dawnwalker-is-a-special-kind-of-open-world-rp-with-a-narrative-sandbox/"
+  ],
+  "2026-09-02": [
+    "https://www.gamedeveloper.com/business/aggro-crab-launches-publishing-label-to-splash-that-peak-cash",
+    "https://code.blender.org/2026/02/winter-of-quality-2026/",
+    "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
+    "https://code.blender.org/2025/10/google-summer-of-code-2025-results/",
+    "https://www.blendernation.com/2026/09/01/retro-tv-animation-tutorial/",
+    "https://www.blendernation.com/2026/09/01/frame-perfect-put-your-blender-camera-exactly-where-youre-looking/",
+    "https://80.lv/articles/meet-natla-in-this-behind-the-scenes-footage-of-tomb-raider-legacy-of-atlantis",
+    "https://80.lv/articles/3d-artists-showcase-their-entries-for-pwnisher-s-tcg-challenge",
+    "https://www.gamedeveloper.com/business/report-savvy-games-group-ceo-brian-ward-departs-company",
+    "https://www.gamedeveloper.com/business/the-majority-of-doom-the-dark-ages-dlc-got-made-in-three-or-four-months",
+    "https://www.gamedeveloper.com/business/sega-owned-rovio-is-shutting-down-its-copenhagen-studio",
+    "https://www.gamedeveloper.com/design/paradox-interactive-s-afterworld-wants-to-entice-new-players-to-grand-strategy-with-tasty-rpg-hooks",
+    "https://www.gamedeveloper.com/business/star-wars-zero-company-studio-furloughed-workers-ahead-of-launch",
+    "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-4/",
+    "https://godotengine.org/article/fixing-high-polling-rate-mice-on-windows/",
+    "https://godotengine.org/article/maintenance-release-godot-3-6-3/",
+    "https://godotengine.org/article/maintenance-release-godot-4-7-2/",
+    "https://gnn.gamer.com.tw/detail.php?sn=310853",
+    "https://gnn.gamer.com.tw/detail.php?sn=310858",
+    "https://gnn.gamer.com.tw/detail.php?sn=310857",
+    "https://gnn.gamer.com.tw/detail.php?sn=310856",
+    "https://gnn.gamer.com.tw/detail.php?sn=310855",
+    "https://gnn.gamer.com.tw/detail.php?sn=310854"
   ]
 }
