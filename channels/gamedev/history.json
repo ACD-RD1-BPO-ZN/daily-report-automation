@@ -1,26 +1,4 @@
 {
-  "2026-08-06": [
-    "https://www.gamedeveloper.com/business/publisher-secret-mode-opens-development-studio-to-support-internal-projects",
-    "https://unity.com/blog/the-3d-as-2d-sample-project,-bunny-blitz,-is-available-now",
-    "https://www.blendernation.com/2026/08/05/blender-developers-meeting-notes-3-august-2026/",
-    "https://www.blendernation.com/2026/08/05/bgmc-game-jam/",
-    "https://80.lv/articles/larian-just-revealed-some-very-telling-baldur-s-gate-3-player-stats",
-    "https://80.lv/articles/this-new-24-7-society-simulator-is-powered-by-thousands-of-ai-controlled-npcs",
-    "https://80.lv/articles/gunstoppable-how-speed-is-damage-defined-a-roguelite-fps",
-    "https://80.lv/articles/baldurs-gate-3-third-person-mod-makes-it-feel-like-a-different-game",
-    "https://www.gamedeveloper.com/business/candy-crush-maker-king-has-declined-staff-s-collective-bargaining-agreement",
-    "https://www.gamedeveloper.com/production/policymakers-across-europe-told-to-do-more-to-support-game-industry",
-    "https://www.gamedeveloper.com/business/coffee-stain-bullish-despite-underperformance-of-deep-rock-galactic-spinoff",
-    "https://80.lv/articles/henry-cavill-confirms-he-ll-star-in-the-warhammer-40k-live-action-series",
-    "https://godotengine.org/article/release-candidate-godot-4-7-2-rc-1/",
-    "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/",
-    "https://gnn.gamer.com.tw/detail.php?sn=309442",
-    "https://gnn.gamer.com.tw/detail.php?sn=309441",
-    "https://gnn.gamer.com.tw/detail.php?sn=309440",
-    "https://gnn.gamer.com.tw/detail.php?sn=309439",
-    "https://gnn.gamer.com.tw/detail.php?sn=309438",
-    "https://gnn.gamer.com.tw/detail.php?sn=309437"
-  ],
   "2026-08-07": [
     "https://www.gamedeveloper.com/marketing/rockstar-wants-you-to-pay-netflix-to-watch-the-next-gta-vi-trailer",
     "https://www.gamedeveloper.com/business/unity-sells-supersonic-publishing-biz-to-tripledot-for-40m",
@@ -512,5 +490,16 @@
     "https://gnn.gamer.com.tw/detail.php?sn=311136",
     "https://gnn.gamer.com.tw/detail.php?sn=311135",
     "https://www.blendernation.com/2026/09/04/blender-jobs-for-september-4-2026/"
+  ],
+  "2026-09-06": [
+    "https://gnn.gamer.com.tw/detail.php?sn=311141",
+    "https://www.blendernation.com/2026/09/05/september-26-london-introduction-to-blender-3d-from-first-open-to-first-render/",
+    "https://www.blendernation.com/2026/09/05/sci-fi-helmet-tutorial/",
+    "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/",
+    "https://80.lv/articles/experimental-stylized-3d-tribute-to-spider-man-brand-new-day/",
+    "https://80.lv/articles/artist-shares-a-cool-blender-animation-of-jack-plugs-acting-weird/",
+    "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox/",
+    "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts/",
+    "https://gnn.gamer.com.tw/detail.php?sn=311142"
   ]
 }

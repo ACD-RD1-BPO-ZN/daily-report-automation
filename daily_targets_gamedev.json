@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311138"
+      "https://gnn.gamer.com.tw/detail.php?sn=311141"
     ],
-    "image_filename": "headline_20260905.png",
+    "image_filename": "headline_20260906.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,12 +16,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/",
-      "https://www.blendernation.com/2026/09/04/best-of-blender-artists-2026-36/",
-      "https://www.blendernation.com/2026/09/04/fusion-to-blender-bridge-keep-your-blender-materials-when-the-cad-changes/",
+      "https://www.blendernation.com/2026/09/05/september-26-london-introduction-to-blender-3d-from-first-open-to-first-render/",
+      "https://www.blendernation.com/2026/09/05/sci-fi-helmet-tutorial/",
       "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/"
     ],
-    "image_filename": "model3d_20260905.png",
+    "image_filename": "model3d_20260906.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -36,10 +35,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts",
+      "https://80.lv/articles/experimental-stylized-3d-tribute-to-spider-man-brand-new-day",
+      "https://80.lv/articles/artist-shares-a-cool-blender-animation-of-jack-plugs-acting-weird",
       "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox"
     ],
-    "image_filename": "ta_20260905.png",
+    "image_filename": "ta_20260906.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -55,10 +55,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/strategically-making-star-wars-zero-company-ft-greg-foertsch",
-      "https://80.lv/articles/naughty-dog-is-not-part-of-the-production-of-hbo-s-the-last-of-us-season-3"
+      "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts"
     ],
-    "image_filename": "globalgames_20260905.png",
+    "image_filename": "globalgames_20260906.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -70,9 +69,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/steam-wishlists-by-the-numbers-what-actually-gets-wishlisted"
+      "https://gnn.gamer.com.tw/detail.php?sn=311142"
     ],
-    "image_filename": "indie_20260905.png",
+    "image_filename": "indie_20260906.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -82,28 +81,13 @@
     ]
   },
   {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311140",
-      "https://gnn.gamer.com.tw/detail.php?sn=311139",
-      "https://gnn.gamer.com.tw/detail.php?sn=311137",
-      "https://gnn.gamer.com.tw/detail.php?sn=311136",
-      "https://gnn.gamer.com.tw/detail.php?sn=311135"
-    ],
-    "image_filename": "local_20260905.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/04/blender-jobs-for-september-4-2026/"
+      "https://gnn.gamer.com.tw/detail.php?sn=311141",
+      "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox",
+      "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/"
     ],
-    "image_filename": "producer_20260905.png",
+    "image_filename": "producer_20260906.png",
     "image_keywords": [
       "marketing",
       "development",

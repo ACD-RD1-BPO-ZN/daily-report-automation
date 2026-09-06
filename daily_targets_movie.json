@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/09/harry-potter-tv-series-max-release-date-cast-1235323284/"
+      "https://deadline.com/2026/09/danny-boyle-confirms-use-of-ai-in-new-movie-ink-1237069099/"
     ],
-    "image_filename": "headline_20260905.png",
+    "image_filename": "headline_20260906.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,20 +18,16 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/09/into-the-breach-kenneth-branagh-judi-dench-anthony-hopkins-1237068669/",
-      "https://deadline.com/2026/09/the-uprising-paul-greengrass-andrew-garfield-interview-1237068407/",
-      "https://variety.com/2026/film/news/topic-studios-indie-film-the-debut-club-kid-wicker-1236852204/",
-      "https://variety.com/2026/film/awards/club-kid-jordan-firstman-colleen-camp-telluride-oscars-1236852164/",
-      "https://variety.com/2026/film/festivals/paul-schrader-basics-of-philosophy-venice-premiere-1236851439/",
-      "https://www.firstshowing.net/2026/polish-wwii-thriller-wild-wild-east-festival-trailer-feat-joanna-kulig/",
-      "https://www.firstshowing.net/2026/first-look-teaser-for-tenzing-mountain-movie-with-tom-hiddleston/",
-      "https://www.firstshowing.net/2026/first-trailer-for-iraq-war-thriller-atonement-feat-branagh-holbrook/",
-      "https://www.cartoonbrew.com/auctions/wallace-gromit-shaun-aardman-auction-266289.html",
-      "https://www.cartoonbrew.com/newsletter/frankelda-bros-next-film-white-house-propaganda-games-skibidi-loses-its-creator-266286.html",
-      "https://www.cartoonbrew.com/feature-film/atlas-the-animated-movie-austin-mcconnell-266272.html",
-      "https://www.cartoonbrew.com/feature-film/moistcr1tikal-godslap-feature-powerhouse-266254.html"
+      "https://deadline.com/2026/09/telluride-film-festival-2026-reviews-deadline-1237068524/",
+      "https://deadline.com/2026/09/father-joe-first-clip-kiefer-sutherland-rebel-priest-1237069049/",
+      "https://deadline.com/2026/09/nanni-moretti-it-will-happen-tonight-ovation-venice-1237068969/",
+      "https://variety.com/2026/film/festivals/oasis-documentary-premiere-liam-noel-gallagher-venice-ovation-1236845853/",
+      "https://variety.com/2026/film/reviews/oasis-dont-look-back-in-anger-review-1236852875/",
+      "https://www.firstshowing.net/2026/rhys-ifans-laura-linney-in-uk-comedy-onwards-sideways-trailer/",
+      "https://www.firstshowing.net/2026/review-tenzing-is-so-much-more-than-a-mountain-climbing-movie/",
+      "https://www.firstshowing.net/2026/venice-2026-the-basics-of-philosophy-is-disgusting-pathetic-drivel/"
     ],
-    "image_filename": "production_20260905.png",
+    "image_filename": "production_20260906.png",
     "image_keywords": [
       "film",
       "production",
@@ -46,37 +42,17 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-09-05/",
-      "https://variety.com/2026/film/news/jennifer-lawrence-baby-botox-face-move-actor-1236851814/"
+      "https://www.boxofficemojo.com/date/2026-09-06/",
+      "https://deadline.com/2026/09/jimmy-kimmel-emmy-win-who-wants-to-be-a-millionaire-1237069209/",
+      "https://variety.com/2026/film/awards/penelope-cruz-oscars-la-bola-negra-the-invite-bunker-1236847565/",
+      "https://variety.com/2026/film/awards/mike-leigh-tender-loving-care-oscars-telluride-1236847564/"
     ],
-    "image_filename": "boxoffice_20260905.png",
+    "image_filename": "boxoffice_20260906.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
-    ]
-  },
-  {
-    "section_name": "Streaming",
-    "source_urls": [
-      "https://variety.com/lists/best-movies-streaming-september-2026/",
-      "https://www.firstshowing.net/2026/sneaky-teaser-for-season-4-of-silo-sci-fi-series-with-jessica-henwick/",
-      "https://deadline.com/2026/09/below-deck-maroons-nathan-gallagher-skips-court-date-1237068759/",
-      "https://deadline.com/2026/09/taylor-frankie-paul-got-engaged-bachelorette-unaired-season-1237068750/",
-      "https://deadline.com/2026/09/norah-odonnell-bari-weiss-critics-cbs-mornings-return-1237068590/",
-      "https://www.cartoonbrew.com/politics/white-house-racist-video-games-266259.html",
-      "https://www.cartoonbrew.com/feature-film/wile-e-coyote-vs-acme-david-zaslav-reddit-ama-266251.html"
-    ],
-    "image_filename": "streaming_20260905.png",
-    "image_keywords": [
-      "netflix",
-      "disney+",
-      "hbo",
-      "streaming",
-      "series",
-      "anime",
-      "crunchyroll"
     ]
   }
 ]
