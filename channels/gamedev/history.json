@@ -1,19 +1,4 @@
 {
-  "2026-08-07": [
-    "https://www.gamedeveloper.com/marketing/rockstar-wants-you-to-pay-netflix-to-watch-the-next-gta-vi-trailer",
-    "https://www.gamedeveloper.com/business/unity-sells-supersonic-publishing-biz-to-tripledot-for-40m",
-    "https://80.lv/articles/interview-how-kidbash-super-legend-adapts-retro-style-graphics-with-a-modern-art-pipeline",
-    "https://80.lv/articles/the-void-how-to-create-a-survival-horror-fps-inspired-by-the-mist-movie",
-    "https://80.lv/articles/creating-a-survival-horror-game-that-blends-a-2d-retro-style-and-live-action-cutscenes",
-    "https://www.gamedeveloper.com/business/nintendo-switch-2-unit-sales-are-down-34-4-percent-year-on-year",
-    "https://www.gamedeveloper.com/production/halo-studios-jettisons-long-serving-contractors-after-launch-of-halo-campaign-evolved",
-    "https://gnn.gamer.com.tw/detail.php?sn=309526",
-    "https://gnn.gamer.com.tw/detail.php?sn=309525",
-    "https://gnn.gamer.com.tw/detail.php?sn=309524",
-    "https://gnn.gamer.com.tw/detail.php?sn=309523",
-    "https://gnn.gamer.com.tw/detail.php?sn=309527",
-    "https://www.gamedeveloper.com/business/devolver-wants-to-delist-because-indie-publishing-is-not-compatible-with-public-trading"
-  ],
   "2026-08-08": [
     "https://www.gamedeveloper.com/business/gta-v-surpasses-230-million-sales-months-before-gta-vi-touches-down",
     "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/",
@@ -501,5 +486,14 @@
     "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox/",
     "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts/",
     "https://gnn.gamer.com.tw/detail.php?sn=311142"
+  ],
+  "2026-09-07": [
+    "https://www.blendernation.com/2026/09/06/sticking-hand-drawn-ink-lines-to-3d-animation-with-blender-grease-pencil-and-geometry-nodes/",
+    "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/",
+    "https://www.blendernation.com/2026/09/05/multiversal-short-film/",
+    "https://80.lv/articles/experimental-stylized-3d-tribute-to-spider-man-brand-new-day/",
+    "https://80.lv/articles/artist-shares-a-cool-blender-animation-of-jack-plugs-acting-weird/",
+    "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox/",
+    "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts/"
   ]
 }

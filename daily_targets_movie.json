@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/09/danny-boyle-confirms-use-of-ai-in-new-movie-ink-1237069099/"
+      "https://deadline.com/2026/09/woman-unknown-female-venice-competition-xx-minute-ovation-1237069513/"
     ],
-    "image_filename": "headline_20260906.png",
+    "image_filename": "headline_20260907.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,16 +18,13 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/09/telluride-film-festival-2026-reviews-deadline-1237068524/",
-      "https://deadline.com/2026/09/father-joe-first-clip-kiefer-sutherland-rebel-priest-1237069049/",
-      "https://deadline.com/2026/09/nanni-moretti-it-will-happen-tonight-ovation-venice-1237068969/",
-      "https://variety.com/2026/film/festivals/oasis-documentary-premiere-liam-noel-gallagher-venice-ovation-1236845853/",
-      "https://variety.com/2026/film/reviews/oasis-dont-look-back-in-anger-review-1236852875/",
-      "https://www.firstshowing.net/2026/rhys-ifans-laura-linney-in-uk-comedy-onwards-sideways-trailer/",
-      "https://www.firstshowing.net/2026/review-tenzing-is-so-much-more-than-a-mountain-climbing-movie/",
-      "https://www.firstshowing.net/2026/venice-2026-the-basics-of-philosophy-is-disgusting-pathetic-drivel/"
+      "https://deadline.com/2026/09/andrea-pallaoro-echo-chamber-susan-sarandon-ovation-1237069498/",
+      "https://deadline.com/2026/09/making-marie-antoinette-review-eleanor-coppola-sofia-coppola-telluride-1237069694/",
+      "https://variety.com/2026/film/news/hong-sangsoonowhere-to-lay-my-eyes-finecut-sales-1236853161/",
+      "https://deadline.com/2026/09/toronto-cannes-long-long-night-dora-finecut-japan-1237068823/",
+      "https://www.firstshowing.net/2026/venice-2026-possible-love-an-intricate-tale-of-social-class-disparity/"
     ],
-    "image_filename": "production_20260906.png",
+    "image_filename": "production_20260907.png",
     "image_keywords": [
       "film",
       "production",
@@ -42,17 +39,36 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-09-06/",
-      "https://deadline.com/2026/09/jimmy-kimmel-emmy-win-who-wants-to-be-a-millionaire-1237069209/",
-      "https://variety.com/2026/film/awards/penelope-cruz-oscars-la-bola-negra-the-invite-bunker-1236847565/",
-      "https://variety.com/2026/film/awards/mike-leigh-tender-loving-care-oscars-telluride-1236847564/"
+      "https://www.boxofficemojo.com/date/2026-09-07/",
+      "https://deadline.com/2026/09/tokyo-film-festival-kashiko-kawakita-crosscut-asia-1237068819/",
+      "https://variety.com/2026/film/festivals/tokyo-film-festival-new-competition-award-honoring-women-1236852405/"
     ],
-    "image_filename": "boxoffice_20260906.png",
+    "image_filename": "boxoffice_20260907.png",
     "image_keywords": [
       "box office",
       "ticket",
       "chart",
       "audience"
+    ]
+  },
+  {
+    "section_name": "Streaming",
+    "source_urls": [
+      "https://variety.com/2026/film/news/nathan-fielder-secret-elizabeth-holmes-doc-you-can-see-everything-a24-telluride-1236853584/",
+      "https://www.firstshowing.net/2026/trailer-for-hbos-band-of-brothers-legacy-doc-on-the-wwii-series/",
+      "https://deadline.com/2026/09/shailene-woodley-emmy-winner-paradise-guest-actress-speech-1237069703/",
+      "https://variety.com/2026/film/awards/danny-boyle-ink-oscars-guy-pearce-telluride-netflix-1236847562/",
+      "https://variety.com/2026/film/awards/john-turturro-oscars-only-living-pickpocket-telluride-1236847544/"
+    ],
+    "image_filename": "streaming_20260907.png",
+    "image_keywords": [
+      "netflix",
+      "disney+",
+      "hbo",
+      "streaming",
+      "series",
+      "anime",
+      "crunchyroll"
     ]
   }
 ]
