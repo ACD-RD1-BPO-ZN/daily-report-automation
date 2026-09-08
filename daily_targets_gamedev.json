@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/06/sticking-hand-drawn-ink-lines-to-3d-animation-with-blender-grease-pencil-and-geometry-nodes/"
+      "https://gnn.gamer.com.tw/detail.php?sn=311201"
     ],
-    "image_filename": "headline_20260907.png",
+    "image_filename": "headline_20260908.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/",
-      "https://www.blendernation.com/2026/09/05/multiversal-short-film/"
+      "https://www.blendernation.com/2026/09/07/booleans-to-subdivision-topology-with-quad-remesher/"
     ],
-    "image_filename": "model3d_20260907.png",
+    "image_filename": "model3d_20260908.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,11 +33,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/experimental-stylized-3d-tribute-to-spider-man-brand-new-day",
-      "https://80.lv/articles/artist-shares-a-cool-blender-animation-of-jack-plugs-acting-weird",
-      "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox"
+      "https://80.lv/articles/open-source-substance-3d-painter-alternative-armorpaint-1-0-released",
+      "https://80.lv/articles/bringing-a-piece-of-indian-cultural-history-to-life-in-3d"
     ],
-    "image_filename": "ta_20260907.png",
+    "image_filename": "ta_20260908.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,9 +52,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts"
+      "https://gnn.gamer.com.tw/detail.php?sn=311198",
+      "https://gnn.gamer.com.tw/detail.php?sn=311199",
+      "https://gnn.gamer.com.tw/detail.php?sn=311200",
+      "https://gnn.gamer.com.tw/detail.php?sn=311197",
+      "https://80.lv/articles/the-blood-of-dawnwalker-sold-over-1-million-copies-worldwide",
+      "https://80.lv/articles/former-bioware-designer-defends-studio-amid-next-mass-effect-doubts"
     ],
-    "image_filename": "globalgames_20260907.png",
+    "image_filename": "globalgames_20260908.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -66,12 +69,38 @@
     ]
   },
   {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://store.steampowered.com/news/274747/"
+    ],
+    "image_filename": "indie_20260908.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=311202"
+    ],
+    "image_filename": "local_20260908.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/06/sticking-hand-drawn-ink-lines-to-3d-animation-with-blender-grease-pencil-and-geometry-nodes/",
-      "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/"
+      "https://80.lv/articles/former-runescape-developer-sentenced-for-stealing-over-usd400k-from-players"
     ],
-    "image_filename": "producer_20260907.png",
+    "image_filename": "producer_20260908.png",
     "image_keywords": [
       "marketing",
       "development",
