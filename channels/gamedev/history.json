@@ -1,21 +1,4 @@
 {
-  "2026-08-11": [
-    "https://www.gamedeveloper.com/business/unity-credits-ai-advertising-platform-for-driving-its-best-quarter-ever-",
-    "https://80.lv/articles/unity-posts-best-quarter-in-company-history-as-revenue-hits-usd546m",
-    "https://80.lv/articles/artstation-and-sketchfab-have-been-acquired-by-kitbash",
-    "https://80.lv/articles/spider-man-style-web-shooter-with-geometry-nodes",
-    "https://80.lv/articles/lead-animator-shares-wip-scene-of-assassin-s-creed-black-flag-resynced",
-    "https://www.gamedeveloper.com/business/eve-online-studio-hires-former-icelandic-minister-to-lead-autonomous-ai-efforts",
-    "https://www.gamedeveloper.com/business/the-video-game-site-backed-by-walmart-has-laid-off-its-editorial-team",
-    "https://store.steampowered.com/news/275718/",
-    "https://80.lv/articles/try-to-appease-sultan-by-doing-questionable-things-to-people-animals-in-this-story-rich-game",
-    "https://gnn.gamer.com.tw/detail.php?sn=309685",
-    "https://gnn.gamer.com.tw/detail.php?sn=309684",
-    "https://gnn.gamer.com.tw/detail.php?sn=309683",
-    "https://gnn.gamer.com.tw/detail.php?sn=309682",
-    "https://gnn.gamer.com.tw/detail.php?sn=309681",
-    "https://gnn.gamer.com.tw/detail.php?sn=309680"
-  ],
   "2026-08-12": [
     "https://www.gamedeveloper.com/business/supermassive-games-begins-third-round-of-layoffs-in-three-years",
     "https://unity.com/blog/5-tips-for-using-github-copilot-with-unity",
@@ -512,5 +495,26 @@
     "https://gnn.gamer.com.tw/detail.php?sn=311365",
     "https://www.blender.org/events/blender-at-siggraph-2026/",
     "https://www.blender.org/events/blender-in-annecy-2026/"
+  ],
+  "2026-09-11": [
+    "https://www.gamedeveloper.com/business/xbox-to-publish-kojima-productions-physint-after-playstation-ditches-project",
+    "https://unity.com/blog/unity-plugin-for-claude-code",
+    "https://unity.com/blog/drakkenridge-building-open-world-mobile-vr-rpg-unity-ecs",
+    "https://code.blender.org/2026/09/small-teams-ambitious-projects/",
+    "https://www.blendernation.com/2026/09/10/299-tools-free-blender-tools-for-figure-3d-printing/",
+    "https://www.blendernation.com/2026/09/10/headshot-3-stylized-image-to-3d-building-a-bodybuilder-caricature-in-cc5-and-blender/",
+    "https://www.blendernation.com/2026/09/10/cbaileyfilm-5-tools-to-modelling-anything/",
+    "https://80.lv/articles/breakdown-modeling-a-3d-fantasy-character-based-on-a-2d-concept",
+    "https://80.lv/articles/how-abcd-trains-large-gaussian-splat-scenes-with-constant-vram",
+    "https://www.gamedeveloper.com/production/-ship-a-good-game-learn-from-it-and-build-from-there-lessons-from-going-indie-after-a-decade-at-id-software",
+    "https://www.gamedeveloper.com/production/-justice-at-last-feels-within-reach-fired-rockstar-workers-rally-in-glasgow-as-union-busting-tribunal-begins",
+    "https://store.steampowered.com/news/275718/",
+    "https://80.lv/articles/how-playable-game-moments-could-help-indie-games-get-discovered",
+    "https://gnn.gamer.com.tw/detail.php?sn=311473",
+    "https://gnn.gamer.com.tw/detail.php?sn=311472",
+    "https://gnn.gamer.com.tw/detail.php?sn=311471",
+    "https://gnn.gamer.com.tw/detail.php?sn=311470",
+    "https://gnn.gamer.com.tw/detail.php?sn=311469",
+    "https://gnn.gamer.com.tw/detail.php?sn=311468"
   ]
 }
