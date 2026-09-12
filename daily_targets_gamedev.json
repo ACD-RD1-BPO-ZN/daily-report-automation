@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-to-publish-kojima-productions-physint-after-playstation-ditches-project"
+      "https://www.gamedeveloper.com/production/rockstar-and-fired-gta-developers-outline-core-arguments-during-union-busting-tribunal"
     ],
-    "image_filename": "headline_20260911.png",
+    "image_filename": "headline_20260912.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/unity-plugin-for-claude-code",
-      "https://unity.com/blog/drakkenridge-building-open-world-mobile-vr-rpg-unity-ecs"
+      "https://80.lv/articles/making-a-recreation-of-dr-doom-using-unreal-engine-and-zbrush"
     ],
-    "image_filename": "engine_20260911.png",
+    "image_filename": "engine_20260912.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,13 +30,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/09/small-teams-ambitious-projects/",
-      "https://www.blendernation.com/2026/09/10/299-tools-free-blender-tools-for-figure-3d-printing/",
-      "https://www.blendernation.com/2026/09/10/headshot-3-stylized-image-to-3d-building-a-bodybuilder-caricature-in-cc5-and-blender/",
-      "https://www.blendernation.com/2026/09/10/cbaileyfilm-5-tools-to-modelling-anything/",
-      "https://80.lv/articles/breakdown-modeling-a-3d-fantasy-character-based-on-a-2d-concept"
+      "https://www.blendernation.com/2026/09/11/free-blender-extension-scenetrace-finds-what-made-your-scene-slower/",
+      "https://www.blendernation.com/2026/09/11/light-it-up-blender-lighting-addon-37-rigs-fog-and-your-own-hdri-library/",
+      "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
     ],
-    "image_filename": "model3d_20260911.png",
+    "image_filename": "model3d_20260912.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -52,9 +49,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-abcd-trains-large-gaussian-splat-scenes-with-constant-vram"
+      "https://www.blendernation.com/2026/09/11/free-blender-extension-scenetrace-finds-what-made-your-scene-slower/",
+      "https://www.blendernation.com/2026/09/11/light-it-up-blender-lighting-addon-37-rigs-fog-and-your-own-hdri-library/",
+      "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
     ],
-    "image_filename": "ta_20260911.png",
+    "image_filename": "ta_20260912.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -70,10 +69,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/-ship-a-good-game-learn-from-it-and-build-from-there-lessons-from-going-indie-after-a-decade-at-id-software",
-      "https://www.gamedeveloper.com/production/-justice-at-last-feels-within-reach-fired-rockstar-workers-rally-in-glasgow-as-union-busting-tribunal-begins"
+      "https://gnn.gamer.com.tw/detail.php?sn=311557",
+      "https://gnn.gamer.com.tw/detail.php?sn=311562",
+      "https://gnn.gamer.com.tw/detail.php?sn=311560",
+      "https://gnn.gamer.com.tw/detail.php?sn=311559",
+      "https://gnn.gamer.com.tw/detail.php?sn=311558",
+      "https://gnn.gamer.com.tw/detail.php?sn=311556"
     ],
-    "image_filename": "globalgames_20260911.png",
+    "image_filename": "globalgames_20260912.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -85,51 +88,18 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/275718/",
-      "https://80.lv/articles/how-playable-game-moments-could-help-indie-games-get-discovered"
+      "https://store.steampowered.com/news/275791/",
+      "https://80.lv/articles/what-to-play-top-10-best-games-from-steam-programming-fest-2026",
+      "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games/",
+      "https://80.lv/articles/80-level-contest-win-a-steam-key-for-breathedge-2-in-space-nobody-can-hear-your-chicken/"
     ],
-    "image_filename": "indie_20260911.png",
+    "image_filename": "indie_20260912.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
-    ]
-  },
-  {
-    "section_name": "Local",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311473",
-      "https://gnn.gamer.com.tw/detail.php?sn=311472",
-      "https://gnn.gamer.com.tw/detail.php?sn=311471",
-      "https://gnn.gamer.com.tw/detail.php?sn=311470",
-      "https://gnn.gamer.com.tw/detail.php?sn=311469",
-      "https://gnn.gamer.com.tw/detail.php?sn=311468"
-    ],
-    "image_filename": "local_20260911.png",
-    "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-to-publish-kojima-productions-physint-after-playstation-ditches-project",
-      "https://unity.com/blog/unity-plugin-for-claude-code",
-      "https://code.blender.org/2026/09/small-teams-ambitious-projects/",
-      "https://www.gamedeveloper.com/production/-ship-a-good-game-learn-from-it-and-build-from-there-lessons-from-going-indie-after-a-decade-at-id-software",
-      "https://www.gamedeveloper.com/production/-justice-at-last-feels-within-reach-fired-rockstar-workers-rally-in-glasgow-as-union-busting-tribunal-begins"
-    ],
-    "image_filename": "producer_20260911.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
