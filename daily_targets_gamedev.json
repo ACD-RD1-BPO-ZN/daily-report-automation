@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/rockstar-and-fired-gta-developers-outline-core-arguments-during-union-busting-tribunal"
+      "https://gnn.gamer.com.tw/detail.php?sn=311590"
     ],
-    "image_filename": "headline_20260912.png",
+    "image_filename": "headline_20260913.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,27 +14,13 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://80.lv/articles/making-a-recreation-of-dr-doom-using-unreal-engine-and-zbrush"
-    ],
-    "image_filename": "engine_20260912.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/11/free-blender-extension-scenetrace-finds-what-made-your-scene-slower/",
-      "https://www.blendernation.com/2026/09/11/light-it-up-blender-lighting-addon-37-rigs-fog-and-your-own-hdri-library/",
-      "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
+      "https://www.blendernation.com/2026/09/12/a-npr-horror-animation/",
+      "https://www.blendernation.com/2026/09/12/best-of-blender-artists-2026-37/",
+      "https://www.blendernation.com/2026/09/12/vintage-lantern-tutorial/"
     ],
-    "image_filename": "model3d_20260912.png",
+    "image_filename": "model3d_20260913.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +35,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/11/free-blender-extension-scenetrace-finds-what-made-your-scene-slower/",
-      "https://www.blendernation.com/2026/09/11/light-it-up-blender-lighting-addon-37-rigs-fog-and-your-own-hdri-library/",
+      "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/",
       "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
     ],
-    "image_filename": "ta_20260912.png",
+    "image_filename": "ta_20260913.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,14 +54,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311557",
-      "https://gnn.gamer.com.tw/detail.php?sn=311562",
-      "https://gnn.gamer.com.tw/detail.php?sn=311560",
-      "https://gnn.gamer.com.tw/detail.php?sn=311559",
-      "https://gnn.gamer.com.tw/detail.php?sn=311558",
-      "https://gnn.gamer.com.tw/detail.php?sn=311556"
+      "https://gnn.gamer.com.tw/detail.php?sn=311593",
+      "https://gnn.gamer.com.tw/detail.php?sn=311592",
+      "https://gnn.gamer.com.tw/detail.php?sn=311591",
+      "https://gnn.gamer.com.tw/detail.php?sn=311589",
+      "https://gnn.gamer.com.tw/detail.php?sn=311588",
+      "https://www.gamedeveloper.com/business/an-honest-opinion-or-defamation-a-solicitor-outlines-the-legal-nuance"
     ],
-    "image_filename": "globalgames_20260912.png",
+    "image_filename": "globalgames_20260913.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -88,12 +73,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/275791/",
-      "https://80.lv/articles/what-to-play-top-10-best-games-from-steam-programming-fest-2026",
-      "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games/",
-      "https://80.lv/articles/80-level-contest-win-a-steam-key-for-breathedge-2-in-space-nobody-can-hear-your-chicken/"
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/",
+      "https://80.lv/articles/rooms-change-when-you-look-away-in-this-sci-fi-horror-game",
+      "https://80.lv/articles/this-simulation-game-encourages-you-to-be-a-reckless-and-fast-bus-driver",
+      "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games"
     ],
-    "image_filename": "indie_20260912.png",
+    "image_filename": "indie_20260913.png",
     "image_keywords": [
       "gameplay",
       "chart",
