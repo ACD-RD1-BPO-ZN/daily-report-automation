@@ -7,253 +7,13 @@
     "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
     "last_seen": "2026-09-08"
   },
-  "https://godotengine.org/article/godotfest-2026/": {
-    "og_image": "https://godotengine.org/storage/blog/covers/godotfest-2026.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.blender.org/press/blender-5-2-lts-release/": {
-    "og_image": "https://www.blender.org/wp-content/uploads/2026/07/5_2_lion-480x270.webp",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran/": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltb6373fc5e64be2aa/6a7df3b1d0a4172381d889a4/Small_Axe_Header.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309950/": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/57/7886d59f26a9b3b5fccb9085781zv055.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309949": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/07/4a7b549d28c28575ddaa1dcea81zvff5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.gamedeveloper.com/business/scabby-versus-sharma-twitch-s-genai-admission-and-netflix-shutters-more-studios-patch-notes-65/": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltb754f40282304078/6a7efb31e9f4a670eb7660af/Patch_65.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309948/": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/06/becb86cf8b7681d7ddb4c615f51zvfe5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.gamedeveloper.com/business/scabby-versus-sharma-twitch-s-genai-admission-and-netflix-shutters-more-studios-patch-notes-65": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltb754f40282304078/6a7efb31e9f4a670eb7660af/Patch_65.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309947": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/05/2ceffd3fc99370ca90b27d61421zvfd5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309948": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/06/becb86cf8b7681d7ddb4c615f51zvfe5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309949/": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/07/4a7b549d28c28575ddaa1dcea81zvff5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309947/": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/05/2ceffd3fc99370ca90b27d61421zvfd5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309951": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/08/bec92e62c0829648bc81b6bbfb1zvfg5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309951/": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/08/bec92e62c0829648bc81b6bbfb1zvfg5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.blendernation.com/2026/08/14/blender-jobs-for-august-14-2026/": {
-    "og_image": "https://www.blendernation.com/wp-content/uploads/2021/08/low-poly-office-file.jpeg",
-    "last_seen": "2026-08-15"
-  },
-  "https://store.steampowered.com/news/276074/": {
-    "og_image": "https://store.fastly.steamstatic.com/public/shared/images/responsive/steam_share_image.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309950": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/57/7886d59f26a9b3b5fccb9085781zv055.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309946": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/04/c181a6eeb284ffe5efd67967ac1zvfc5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309946/": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/04/c181a6eeb284ffe5efd67967ac1zvfc5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/embracer-group-expects-next-kingdom-come-sooner-than-you-might-think/": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49748/images/6a7f284460f39/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/build-eerie-worlds-with-this-dark-fantasy-signature-collection/": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49733/images/6a7f3f392b514/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/warner-bros-officially-confirmed-hogwarts-legacy-2-in-a-shareholder-letter/": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49750/images/6a7f5e9969593/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/procedural-american-downtown-generator-for-blender/": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49749/images/6a7f2a898ba59/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/this-game-where-you-renovate-1990s-flats-is-finally-out/": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49751/images/6a7f787cf363a/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/this-game-where-you-renovate-1990s-flats-is-finally-out": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49751/images/6a7f787cf363a/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://deadline.com/2026/08/indie-films-opening-matthew-mcconaughey-green-day-comedy-1237040791/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2026/08/The-Rivals-of-Amziah-King-Nimrod.jpg?w=1000",
-    "last_seen": "2026-08-15"
-  },
-  "https://variety.com/2026/film/news/paramount-warner-bros-mexicos-settle-ellison-1236834861/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/02/David-Ellison-3.jpg?crop=0px%2C10px%2C1500px%2C844px&resize=1000%2C563",
-    "last_seen": "2026-08-15"
-  },
-  "https://variety.com/2026/film/news/anne-hathaway-movies-dog-deaths-rated-r-1236834811/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/08/P118CCWG.jpg?w=1000&h=563&crop=1",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/festivals/pictoplasma-nyc-program-speakers-265567.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Pictoplasma-NYC.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/newsletter/netflixs-theatrical-change-of-heart-juried-emmy-winners-coyote-vs-acme-details-265586.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/image-2-2.png",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/business/duolingo-acquires-animade-london-studio-265574.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Duolingo-Animade.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.firstshowing.net/2026/official-trailer-for-indie-film-dear-you-about-chinese-families-abroad/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/dearyourtrailerchmainimgbigtw3.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://variety.com/2026/film/news/ian-crafford-dead-field-of-dreams-1236834958/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/08/ian4-2.jpeg?crop=0px%2C37px%2C640px%2C360px&resize=1000%2C563",
-    "last_seen": "2026-08-15"
-  },
-  "https://variety.com/2026/film/global/paul-wright-george-mackay-mission-1236834494/": {
-    "og_image": "https://variety.com/wp-content/uploads/2026/08/Mission.jpg?w=1000&h=563&crop=1",
-    "last_seen": "2026-08-15"
-  },
-  "https://deadline.com/2026/08/emmy-nominees-2026-final-campaign-stops-1237033459/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2024/09/Emmys-new.jpg?w=1024",
-    "last_seen": "2026-08-15"
-  },
-  "https://deadline.com/2026/08/netflix-ya-slate-end-of-summer-bash-crossover-prime-video-1237040780/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Netflix-End-of-Summer-Bash.jpg?w=1024",
-    "last_seen": "2026-08-15"
-  },
   "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Vision-Black-Headline.jpg",
     "last_seen": "2026-08-16"
   },
-  "https://www.cartoonbrew.com/festivals/pictoplasma-nyc-program-speakers-265567.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Pictoplasma-NYC.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/vfx/visual-effects-society-women-who-lead-summit-265583.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Women-Who-Lead.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://deadline.com/2026/08/ryan-de-nino-dead-married-at-first-sight-1237041002/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Ryan-De-Nino.png?w=1024",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.firstshowing.net/2026/official-trailer-for-dugout-dads-series-sandlot-spiritual-sequel/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/dugoutdadsseriesmainimgtw2.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/vfx/visual-effects-society-women-who-lead-summit-265583.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Women-Who-Lead.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.firstshowing.net/2026/first-look-teaser-for-if-i-go-will-they-miss-me-acclaimed-indie-film/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/ifigowilltheymissmeteaser1bigtw.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/business/duolingo-acquires-animade-london-studio-265574.html": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Duolingo-Animade.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/educational/titmouse-foundation-warrior-art-camp-shorts-fellowship-2-265580.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Short-Animation-Fellowship.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.firstshowing.net/2026/demonic-horror-film-yellow-eyes-trailer-produced-by-joe-swanberg/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/yelloweyesindiefilmhormaintw2.jpg",
-    "last_seen": "2026-08-15"
-  },
   "https://www.cartoonbrew.com/educational/titmouse-foundation-warrior-art-camp-shorts-fellowship-2-265580.html": {
     "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Short-Animation-Fellowship.jpg",
     "last_seen": "2026-08-16"
-  },
-  "https://www.cartoonbrew.com/series/star-wars-visions-black-shinya-ohira-265543.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/Vision-Black-Headline.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.firstshowing.net/2026/firstshowing.net/2026/june-shreiner-in-gnarly-creature-feature-dark-hollow-horror-trailer/": {
-    "og_image": "https://media2.firstshowing.net/firstshowing/img18/darkhollowposterhormainbigtw2.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.cartoonbrew.com/newsletter/netflixs-theatrical-change-of-heart-juried-emmy-winners-coyote-vs-acme-details-265586.html/": {
-    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/08/image-2-2.png",
-    "last_seen": "2026-08-15"
-  },
-  "https://deadline.com/2026/08/de-noche-producer-praises-pedro-pascal-danny-ramirez-1237040958/": {
-    "og_image": "https://deadline.com/wp-content/uploads/2026/08/Danny-Ramirez-Pedro-Pascal-2-shot.jpg?w=1024",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.boxofficemojo.com/date/2026-08-15/": {
-    "og_image": "",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309959": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/84/bc0600f5ab21e6356dbbe3fb441zvhk5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309958": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/55/c380422ee6c50b23eaf259ca3c1zvgr5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://godotengine.org/article/submissions-open-godot-2026-showreel/": {
-    "og_image": "https://godotengine.org/storage/blog/covers/godot-showreel-2024.webp",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309960": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/47/f3e9767c93516510548ec72ef71zurj5.PNG",
-    "last_seen": "2026-08-15"
-  },
-  "https://www.gamedeveloper.com/business/2k-announces-new-vancouver-based-studio-led-by-ea-veteran": {
-    "og_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/bltb6373fc5e64be2aa/6a7df3b1d0a4172381d889a4/Small_Axe_Header.png?disable=upscale&width=1200&height=630&fit=crop",
-    "last_seen": "2026-08-15"
-  },
-  "https://gnn.gamer.com.tw/detail.php?sn=309957": {
-    "og_image": "https://p2.bahamut.com.tw/B/2KU/49/377706c5c5c64ecc1e64ddec641zvgl5.JPG",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/huion-kamvas-22-gen-3-affordable-entry-level-pen-display-for-2d-3d-video-editing": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49612/images/6a7c858f65ecd/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/build-eerie-worlds-with-this-dark-fantasy-signature-collection": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49733/images/6a7f3f392b514/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/warner-bros-officially-confirmed-hogwarts-legacy-2-in-a-shareholder-letter": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49750/images/6a7f5e9969593/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
-  },
-  "https://80.lv/articles/procedural-american-downtown-generator-for-blender": {
-    "og_image": "https://cdn.80.lv/api/upload/meta/49749/images/6a7f2a898ba59/contain_1200x630.jpg",
-    "last_seen": "2026-08-15"
   },
   "https://deadline.com/2026/08/summer-house-season-10-emmy-interview-1237041687/": {
     "og_image": "https://deadline.com/wp-content/uploads/2026/08/Summer-House.jpg?w=1024",
@@ -3901,7 +3661,7 @@
   },
   "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games/": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50169/images/6aa4559bc1e30/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://80.lv/articles/80-level-contest-win-a-steam-key-for-breathedge-2-in-space-nobody-can-hear-your-chicken/": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50125/images/6aa1913f2d9a5/contain_1200x630.jpg",
@@ -3917,7 +3677,7 @@
   },
   "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50170/images/6aa47c65b2d76/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://deadline.com/2026/09/russell-crowe-charms-1400-venice-audience-love-builds-1237099686/": {
     "og_image": "https://deadline.com/wp-content/uploads/2026/09/GettyImages-2294759062.jpg?w=1024",
@@ -4029,27 +3789,27 @@
   },
   "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50169/images/6aa4559bc1e30/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://80.lv/articles/rooms-change-when-you-look-away-in-this-sci-fi-horror-game/": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50141/images/6aa29ae3adda9/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://80.lv/articles/this-simulation-game-encourages-you-to-be-a-reckless-and-fast-bus-driver/": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50153/images/6aa34d8e4601e/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50123/images/6aa16cd8a1256/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://80.lv/articles/rooms-change-when-you-look-away-in-this-sci-fi-horror-game": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50141/images/6aa29ae3adda9/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://80.lv/articles/this-simulation-game-encourages-you-to-be-a-reckless-and-fast-bus-driver": {
     "og_image": "https://cdn.80.lv/api/upload/meta/50153/images/6aa34d8e4601e/contain_1200x630.jpg",
-    "last_seen": "2026-09-13"
+    "last_seen": "2026-09-14"
   },
   "https://deadline.com/2026/09/netflix-developing-diablo-animated-series-1237100389/": {
     "og_image": "https://deadline.com/wp-content/uploads/2026/09/Screenshot-2026-09-12-at-3.58.15-PM.png?w=998",
@@ -4122,5 +3882,93 @@
   "https://anilist.co/anime/189046": {
     "og_image": "https://img.anili.st/media/189046",
     "last_seen": "2026-09-13"
+  },
+  "https://www.blendernation.com/2026/09/13/caustify-a-free-open-source-spectral-dispersion-path-tracer/": {
+    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/08/bn-lens-crop2-798x450.png.webp",
+    "last_seen": "2026-09-14"
+  },
+  "https://www.blendernation.com/2026/09/13/how-to-make-a-low-poly-stylized-hand-painted-shield/": {
+    "og_image": "https://www.blendernation.com/wp-content/uploads/2026/09/Shield-Final-Render-1-800x450.jpg.webp",
+    "last_seen": "2026-09-14"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=311604": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/26/688874dbbd94deb12c16c367d320asq5.PNG",
+    "last_seen": "2026-09-14"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=311602": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/53/d8fdfef1059b48eb536481364a20aqp5.JPG",
+    "last_seen": "2026-09-14"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=311600": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/76/78ade3a8bd7d26e41a23e5fb3620aok5.JPG",
+    "last_seen": "2026-09-14"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=311603": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/18/db5d8ce8c3f5705493eaba9d1120asi5.JPG",
+    "last_seen": "2026-09-14"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=311605": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/30/f173029cc27f23393a63b44d8c20asu5.JPG",
+    "last_seen": "2026-09-14"
+  },
+  "https://gnn.gamer.com.tw/detail.php?sn=311601": {
+    "og_image": "https://p2.bahamut.com.tw/B/2KU/78/b9ba748b8ea8143736d120b41720aom5.JPG",
+    "last_seen": "2026-09-14"
+  },
+  "https://deadline.com/2026/09/mattel-studios-boss-wants-to-see-a-barbie-sequel-1237100871/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2024/07/Screenshot-2024-07-28-at-16.06.32.png?w=1024",
+    "last_seen": "2026-09-14"
+  },
+  "https://deadline.com/2026/09/mr-irrelevant-trailer-david-corenswet-ny-giants-1237101028/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/09/Mr.-Irrelevant.jpg?w=1024",
+    "last_seen": "2026-09-14"
+  },
+  "https://variety.com/2026/film/reviews/diary-of-a-mad-old-man-review-1236860647/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/09/Diary-of-a-Mad-Old-Manl_01.webp?w=1000&h=563&crop=1",
+    "last_seen": "2026-09-14"
+  },
+  "https://variety.com/2026/film/news/israels-minister-culture-revoke-citizenships-naza-directors-1236860821/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/09/GettyImages-2294526916.jpg?crop=0px%2C76px%2C3000px%2C1688px&resize=1000%2C563",
+    "last_seen": "2026-09-14"
+  },
+  "https://variety.com/2026/film/news/on-behalf-of-my-son-review-1236860722/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/09/VARIETY-SIZING-13.png?w=1000&h=563&crop=1",
+    "last_seen": "2026-09-14"
+  },
+  "https://www.cartoonbrew.com/newsletter/a-guide-to-the-perfect-pitch-richard-williams-final-film-guillermo-del-toro-on-ai-266481.html": {
+    "og_image": "https://www.cartoonbrew.com/wp-content/uploads/2026/09/imagen.png",
+    "last_seen": "2026-09-14"
+  },
+  "https://variety.com/2026/film/news/courteney-cox-tribute-scream-hayden-panettiere-1236860690/": {
+    "og_image": "https://variety.com/wp-content/uploads/2026/09/2026-toronto-international-film-festival-evil-genius-paramou-1000x667-1.jpg?crop=0px%2C0px%2C1000px%2C562px&resize=1000%2C563",
+    "last_seen": "2026-09-14"
+  },
+  "https://deadline.com/2026/09/prima-facie-review-cynthia-erivo-as-lawyer-who-finds-herself-as-victim-in-rape-trial-in-uneven-film-version-of-tony-and-olivier-winning-stage-play-toronto-film-festival-1237100300/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/09/Prima-Facie.jpg?w=1024",
+    "last_seen": "2026-09-14"
+  },
+  "https://www.firstshowing.net/2026/scary-full-trailer-for-crystal-lake-the-friday-the-13th-horror-series/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/crystallaketrailer3mainimgbigtw3.jpg",
+    "last_seen": "2026-09-14"
+  },
+  "https://deadline.com/2026/09/indie-film-box-office-buddy-comedy-horror-runner-angel-studios-1237101029/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/08/BUDDY_Courtesy_of_Roadside_Attractions_1781f70c93.jpg?w=1024",
+    "last_seen": "2026-09-14"
+  },
+  "https://deadline.com/2026/09/pierce-brosnan-next-james-bond-unknown-tom-ellis-1237100945/": {
+    "og_image": "https://deadline.com/wp-content/uploads/2026/09/pierce-brosnan-007-james-bond-die-another-day.jpg?w=1024",
+    "last_seen": "2026-09-14"
+  },
+  "https://www.firstshowing.net/2026/first-look-teaser-for-revelatory-capturing-bigfoot-documentary-film/": {
+    "og_image": "https://media2.firstshowing.net/firstshowing/img18/capturingbigfootdocmainimgtw1.jpg",
+    "last_seen": "2026-09-14"
+  },
+  "https://www.boxofficemojo.com/date/2026-09-14/": {
+    "og_image": "",
+    "last_seen": "2026-09-14"
+  },
+  "https://www.firstshowing.net/2026/first-look-teaser-for- revelatory-capturing-bigfoot-documentary-film/": {
+    "og_image": "",
+    "last_seen": "2026-09-14"
   }
 }

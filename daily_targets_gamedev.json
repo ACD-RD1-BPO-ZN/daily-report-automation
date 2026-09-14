@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311590"
+      "https://gnn.gamer.com.tw/detail.php?sn=311605"
     ],
-    "image_filename": "headline_20260913.png",
+    "image_filename": "headline_20260914.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,11 +16,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/12/a-npr-horror-animation/",
-      "https://www.blendernation.com/2026/09/12/best-of-blender-artists-2026-37/",
-      "https://www.blendernation.com/2026/09/12/vintage-lantern-tutorial/"
+      "https://www.blendernation.com/2026/09/13/how-to-make-a-low-poly-stylized-hand-painted-shield/",
+      "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/",
+      "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
     ],
-    "image_filename": "model3d_20260913.png",
+    "image_filename": "model3d_20260914.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -35,10 +35,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/",
-      "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
+      "https://www.blendernation.com/2026/09/13/caustify-a-free-open-source-spectral-dispersion-path-tracer/"
     ],
-    "image_filename": "ta_20260913.png",
+    "image_filename": "ta_20260914.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,14 +53,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311593",
-      "https://gnn.gamer.com.tw/detail.php?sn=311592",
-      "https://gnn.gamer.com.tw/detail.php?sn=311591",
-      "https://gnn.gamer.com.tw/detail.php?sn=311589",
-      "https://gnn.gamer.com.tw/detail.php?sn=311588",
-      "https://www.gamedeveloper.com/business/an-honest-opinion-or-defamation-a-solicitor-outlines-the-legal-nuance"
+      "https://gnn.gamer.com.tw/detail.php?sn=311603",
+      "https://gnn.gamer.com.tw/detail.php?sn=311604",
+      "https://gnn.gamer.com.tw/detail.php?sn=311602",
+      "https://gnn.gamer.com.tw/detail.php?sn=311601"
     ],
-    "image_filename": "globalgames_20260913.png",
+    "image_filename": "globalgames_20260914.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -73,18 +70,46 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/",
       "https://80.lv/articles/rooms-change-when-you-look-away-in-this-sci-fi-horror-game",
       "https://80.lv/articles/this-simulation-game-encourages-you-to-be-a-reckless-and-fast-bus-driver",
       "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games"
     ],
-    "image_filename": "indie_20260913.png",
+    "image_filename": "indie_20260914.png",
     "image_keywords": [
       "gameplay",
       "chart",
       "capsule",
       "steam",
       "indie"
+    ]
+  },
+  {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=311600"
+    ],
+    "image_filename": "local_20260914.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=311605",
+      "https://gnn.gamer.com.tw/detail.php?sn=311604",
+      "https://www.blendernation.com/2026/09/13/how-to-make-a-low-poly-stylized-hand-painted-shield/",
+      "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/"
+    ],
+    "image_filename": "producer_20260914.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
