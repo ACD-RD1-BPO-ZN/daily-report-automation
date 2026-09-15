@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311605"
+      "https://gnn.gamer.com.tw/detail.php?sn=311661"
     ],
-    "image_filename": "headline_20260914.png",
+    "image_filename": "headline_20260915.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,13 +14,26 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://unity.com/blog/unity-plugin-for-codex"
+    ],
+    "image_filename": "engine_20260915.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/13/how-to-make-a-low-poly-stylized-hand-painted-shield/",
-      "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/",
-      "https://80.lv/articles/this-blender-add-on-lets-you-add-jiggle-physics-to-bodies-clothes-and-hair/"
+      "https://www.blender.org/press/blender-5-2-lts-release/",
+      "https://www.blendernation.com/2026/09/14/11-methods-for-sharp-corners-in-blender/"
     ],
-    "image_filename": "model3d_20260914.png",
+    "image_filename": "model3d_20260915.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -35,9 +48,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/13/caustify-a-free-open-source-spectral-dispersion-path-tracer/"
+      "https://80.lv/articles/blender-s-overgrown-teaser-is-a-proof-of-concept-for-open-filmmaking/"
     ],
-    "image_filename": "ta_20260914.png",
+    "image_filename": "ta_20260915.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,12 +66,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311603",
-      "https://gnn.gamer.com.tw/detail.php?sn=311604",
-      "https://gnn.gamer.com.tw/detail.php?sn=311602",
-      "https://gnn.gamer.com.tw/detail.php?sn=311601"
+      "https://gnn.gamer.com.tw/detail.php?sn=311660",
+      "https://gnn.gamer.com.tw/detail.php?sn=311659",
+      "https://gnn.gamer.com.tw/detail.php?sn=311664",
+      "https://80.lv/articles/wardogs-sold-over-1-million-copies-in-its-first-24-hours/",
+      "https://store.steampowered.com/news/276074/"
     ],
-    "image_filename": "globalgames_20260914.png",
+    "image_filename": "globalgames_20260915.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -70,11 +84,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/rooms-change-when-you-look-away-in-this-sci-fi-horror-game",
-      "https://80.lv/articles/this-simulation-game-encourages-you-to-be-a-reckless-and-fast-bus-driver",
-      "https://80.lv/articles/steam-leak-reveals-achievements-for-unreleased-and-unannounced-games"
+      "https://www.gamedeveloper.com/business/moss-developer-polyarc-has-shut-down",
+      "https://www.gamedeveloper.com/business/worker-owned-studio-ko_op-confirms-layoffs"
     ],
-    "image_filename": "indie_20260914.png",
+    "image_filename": "indie_20260915.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -86,30 +99,15 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311600"
+      "https://gnn.gamer.com.tw/detail.php?sn=311663",
+      "https://gnn.gamer.com.tw/detail.php?sn=311662"
     ],
-    "image_filename": "local_20260914.png",
+    "image_filename": "local_20260915.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311605",
-      "https://gnn.gamer.com.tw/detail.php?sn=311604",
-      "https://www.blendernation.com/2026/09/13/how-to-make-a-low-poly-stylized-hand-painted-shield/",
-      "https://80.lv/articles/this-free-blender-tool-makes-hair-rigging-easier/"
-    ],
-    "image_filename": "producer_20260914.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
