@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/roblox-will-allow-devs-to-release-games-as-standalone-apps-on-other-stores"
+      "https://www.gamedeveloper.com/production/activision-blizzard-sued-by-former-employee-over-sexual-harassment"
     ],
-    "image_filename": "headline_20260916.png",
+    "image_filename": "headline_20260917.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,25 +14,11 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://unity.com/blog/cicd-made-easier-with-unity-cli"
-    ],
-    "image_filename": "engine_20260916.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/15/sessions-interior-six-blender-interior-scenes-two-hours-each/"
+      "https://www.blendernation.com/2026/09/16/beginner-modelling-blender-tutorial-model-an-x-wing/"
     ],
-    "image_filename": "model3d_20260916.png",
+    "image_filename": "model3d_20260917.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,11 +33,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://godotengine.org/article/rendering-cpu-optimizations/",
-      "https://80.lv/articles/tomb-raider-legacy-of-atlantis-devs-on-the-game-s-greek-creatures",
-      "https://80.lv/articles/solo-developer-on-recreating-the-late-90s-console-shooter-enemy-ai-for-an-fps"
+      "https://80.lv/articles/dissectible-anatomy-lets-users-cut-tear-virtual-bodies-in-real-time",
+      "https://80.lv/articles/texlab-packing-pbr-maps-inside-ue5-without-lying-about-the-preview",
+      "https://80.lv/articles/have-a-look-at-wip-ivy-generator-for-the-last-of-us-like-damage-control-tool"
     ],
-    "image_filename": "ta_20260916.png",
+    "image_filename": "ta_20260917.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,15 +53,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/bungie-is-overhauling-marathon-from-its-original-extraction-shooter-vision",
-      "https://www.gamedeveloper.com/business/wardogs-lead-says-the-studio-won-t-hire-people-who-decry-crunch-on-social-media",
-      "https://www.gamedeveloper.com/business/why-does-this-prominent-washington-state-politician-think-video-games-can-be-soft-power-",
-      "https://www.gamedeveloper.com/business/bohemia-interactive-acquires-minority-stake-in-everwind-developer-enjoy-studio",
-      "https://www.gamedeveloper.com/extended-reality/valve-s-steam-frame-will-retail-for-1-059",
-      "https://gnn.gamer.com.tw/detail.php?sn=311745",
-      "https://gnn.gamer.com.tw/detail.php?sn=311741"
+      "https://www.gamedeveloper.com/business/report-mindseye-developer-build-a-rocket-boy-seemingly-closing-after-more-layoffs",
+      "https://www.gamedeveloper.com/business/shinji-mikami-to-join-aias-hall-of-fame-at-2026-dice-awards"
     ],
-    "image_filename": "globalgames_20260916.png",
+    "image_filename": "globalgames_20260917.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -87,11 +68,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/this-beautiful-cozy-game-will-have-you-delivering-packages-in-crazy-ways",
-      "https://80.lv/articles/new-free-to-play-pok-mon-rival-aniimo-launches-today-on-pc-and-consoles",
-      "https://80.lv/articles/unique-pixel-art-game-about-cursed-artifact-you-ll-struggle-to-carry"
+      "https://store.steampowered.com/news/276347/",
+      "https://80.lv/articles/10-great-party-based-rpgs-now-discounted-on-steam",
+      "https://80.lv/articles/80-level-contest-win-a-steam-key-for-jump-king-quest-reach-new-heights-fall-back-down"
     ],
-    "image_filename": "indie_20260916.png",
+    "image_filename": "indie_20260917.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -103,12 +84,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311746",
-      "https://gnn.gamer.com.tw/detail.php?sn=311744",
-      "https://gnn.gamer.com.tw/detail.php?sn=311743",
-      "https://gnn.gamer.com.tw/detail.php?sn=311742"
+      "https://gnn.gamer.com.tw/detail.php?sn=311836",
+      "https://gnn.gamer.com.tw/detail.php?sn=311835",
+      "https://gnn.gamer.com.tw/detail.php?sn=311834",
+      "https://gnn.gamer.com.tw/detail.php?sn=311833",
+      "https://gnn.gamer.com.tw/detail.php?sn=311832",
+      "https://gnn.gamer.com.tw/detail.php?sn=311831"
     ],
-    "image_filename": "local_20260916.png",
+    "image_filename": "local_20260917.png",
     "image_keywords": [
       "event",
       "meetup",
