@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/activision-blizzard-sued-by-former-employee-over-sexual-harassment"
+      "https://gnn.gamer.com.tw/detail.php?sn=311942"
     ],
-    "image_filename": "headline_20260917.png",
+    "image_filename": "headline_20260918.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,30 +14,26 @@
     ]
   },
   {
-    "section_name": "Model3D",
+    "section_name": "Engine",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/16/beginner-modelling-blender-tutorial-model-an-x-wing/"
+      "https://www.gamedeveloper.com/events/unreal-fest"
     ],
-    "image_filename": "model3d_20260917.png",
+    "image_filename": "engine_20260918.png",
     "image_keywords": [
-      "3d",
-      "modeling",
-      "sculpt",
-      "topology",
-      "blender",
-      "maya",
-      "zbrush",
-      "substance"
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
     ]
   },
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/dissectible-anatomy-lets-users-cut-tear-virtual-bodies-in-real-time",
-      "https://80.lv/articles/texlab-packing-pbr-maps-inside-ue5-without-lying-about-the-preview",
-      "https://80.lv/articles/have-a-look-at-wip-ivy-generator-for-the-last-of-us-like-damage-control-tool"
+      "https://80.lv/articles/this-action-roguelite-will-let-you-beat-the-boss-or-break-the-game",
+      "https://80.lv/articles/this-multiplayer-game-is-like-pictionary-but-in-a-3d-space"
     ],
-    "image_filename": "ta_20260917.png",
+    "image_filename": "ta_20260918.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,10 +49,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/report-mindseye-developer-build-a-rocket-boy-seemingly-closing-after-more-layoffs",
-      "https://www.gamedeveloper.com/business/shinji-mikami-to-join-aias-hall-of-fame-at-2026-dice-awards"
+      "https://gnn.gamer.com.tw/detail.php?sn=311944",
+      "https://gnn.gamer.com.tw/detail.php?sn=311943",
+      "https://gnn.gamer.com.tw/detail.php?sn=311941",
+      "https://gnn.gamer.com.tw/detail.php?sn=311940",
+      "https://gnn.gamer.com.tw/detail.php?sn=311939",
+      "https://80.lv/articles/zach-cregger-s-resident-evil-is-now-the-highest-rated-live-action-video-game-adaptation"
     ],
-    "image_filename": "globalgames_20260917.png",
+    "image_filename": "globalgames_20260918.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -68,11 +68,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/276347/",
-      "https://80.lv/articles/10-great-party-based-rpgs-now-discounted-on-steam",
-      "https://80.lv/articles/80-level-contest-win-a-steam-key-for-jump-king-quest-reach-new-heights-fall-back-down"
+      "https://80.lv/articles/steam-quietly-made-a-huge-discoverability-change-for-indie-games"
     ],
-    "image_filename": "indie_20260917.png",
+    "image_filename": "indie_20260918.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -82,21 +80,17 @@
     ]
   },
   {
-    "section_name": "Local",
+    "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=311836",
-      "https://gnn.gamer.com.tw/detail.php?sn=311835",
-      "https://gnn.gamer.com.tw/detail.php?sn=311834",
-      "https://gnn.gamer.com.tw/detail.php?sn=311833",
-      "https://gnn.gamer.com.tw/detail.php?sn=311832",
-      "https://gnn.gamer.com.tw/detail.php?sn=311831"
+      "https://gnn.gamer.com.tw/detail.php?sn=311942",
+      "https://80.lv/articles/steam-quietly-made-a-huge-discoverability-change-for-indie-games"
     ],
-    "image_filename": "local_20260917.png",
+    "image_filename": "producer_20260918.png",
     "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
