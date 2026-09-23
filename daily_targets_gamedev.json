@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/tt-games-brings-gotham-city-to-life-in-lego-batman-legacy-of-the-dark-knight"
+      "https://gnn.gamer.com.tw/detail.php?sn=312213"
     ],
-    "image_filename": "headline_20260922.png",
+    "image_filename": "headline_20260923.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312151",
-      "https://unity.com/blog/unity-simulation-pro-early-access"
+      "https://unity.com/blog/content-directories-beyond-the-assetbundle"
     ],
-    "image_filename": "engine_20260922.png",
+    "image_filename": "engine_20260923.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -31,12 +30,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/news/show-your-support-for-blender-projects/",
-      "https://www.blendernation.com/2026/09/21/animation-workflow-course/",
-      "https://80.lv/articles/this-tool-merges-all-your-blender-add-on-panels-into-one-menu",
-      "https://80.lv/articles/watch-this-blender-tutorial-if-you-re-starting-character-rigging"
+      "https://code.blender.org/2026/07/remote-asset-libraries/",
+      "https://www.blendernation.com/2026/09/22/exode-short-film-made-with-blender-2/",
+      "https://www.blendernation.com/2026/09/22/light-it-up-4-0-0-a-free-add-on-for-studio-lighting-presets/"
     ],
-    "image_filename": "model3d_20260922.png",
+    "image_filename": "model3d_20260923.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -51,12 +49,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/21/video-2026ad/",
-      "https://80.lv/articles/check-out-this-impressive-painterly-style-fighting-animation",
-      "https://80.lv/articles/give-animated-characters-realistic-jiggle-motion-with-this-unity-tool",
-      "https://80.lv/articles/hypnotizing-fluid-simulation-based-on-w-t-s-research-on-lagrangian-waves"
+      "https://80.lv/articles/lara-croft-and-tomb-raider-celebrate-their-30th-anniversary-this-october",
+      "https://80.lv/articles/pok-mon-celebrates-its-30th-anniversary-with-rare-new-releases"
     ],
-    "image_filename": "ta_20260922.png",
+    "image_filename": "ta_20260923.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -72,12 +68,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/console/bungie-declares-it-s-not-done-with-destiny-as-it-lays-out-studio-s-future",
-      "https://www.gamedeveloper.com/console/sony-appears-to-censor-lgbtq-content-marvel-s-wolverine-for-some-regions",
-      "https://www.gamedeveloper.com/business/kojima-productions-survival-story-may-sound-strikingly-familiar-to-struggling-devs",
-      "https://www.gamedeveloper.com/business/french-publisher-dear-villagers-confirms-layoffs"
+      "https://www.gamedeveloper.com/business/escape-from-tarkov-dev-wants-to-bet-on-risky-games-with-its-new-publishing-arm",
+      "https://www.gamedeveloper.com/production/-do-not-rockstar-outlines-modding-rules-before-gta-vi-touches-down",
+      "https://gnn.gamer.com.tw/detail.php?sn=312211",
+      "https://gnn.gamer.com.tw/detail.php?sn=312210"
     ],
-    "image_filename": "globalgames_20260922.png",
+    "image_filename": "globalgames_20260923.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -89,10 +85,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312148",
-      "https://gnn.gamer.com.tw/detail.php?sn=312146"
+      "https://www.gamedeveloper.com/business/-we-want-to-keep-it-very-simple-how-nex-playrground-is-beating-expectations-during-a-hardware-crisis",
+      "https://gnn.gamer.com.tw/detail.php?sn=312212",
+      "https://gnn.gamer.com.tw/detail.php?sn=312208"
     ],
-    "image_filename": "indie_20260922.png",
+    "image_filename": "indie_20260923.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -104,16 +101,30 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312150",
-      "https://gnn.gamer.com.tw/detail.php?sn=312149",
-      "https://gnn.gamer.com.tw/detail.php?sn=312147"
+      "https://gnn.gamer.com.tw/detail.php?sn=312209"
     ],
-    "image_filename": "local_20260922.png",
+    "image_filename": "local_20260923.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=312213",
+      "https://unity.com/blog/content-directories-beyond-the-assetbundle",
+      "https://code.blender.org/2026/07/remote-asset-libraries/",
+      "https://www.gamedeveloper.com/business/-we-want-to-keep-it-very-simple-how-nex-playrground-is-beating-expectations-during-a-hardware-crisis"
+    ],
+    "image_filename": "producer_20260923.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
