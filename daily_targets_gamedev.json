@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-continues-reset-with-halo-studios-layoffs-and-undead-labs-divestment"
+      "https://www.gamedeveloper.com/business/meta-announces-new-vr-glasses-that-weight-about-100-grams-and-cost-1-300"
     ],
-    "image_filename": "headline_20260924.png",
+    "image_filename": "headline_20260925.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/23/your-sci-fi-turret-looks-great-until-it-rotates-from-under-the-floor/"
+      "https://unity.com/blog/build-for-meta-vr-glasses-with-unity"
     ],
-    "image_filename": "engine_20260924.png",
+    "image_filename": "engine_20260925.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/23/rigging-ormie-a-blender-character-rig-overview/",
-      "https://www.blender.org/news/blender-foundation-annual-report-2025/"
+      "https://www.blendernation.com/2026/09/24/create-this-simple-realistic-landscape-in-blender/",
+      "https://80.lv/articles/how-to-create-dynamic-wuthering-waves-style-hair-in-blender"
     ],
-    "image_filename": "model3d_20260924.png",
+    "image_filename": "model3d_20260925.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,9 +48,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-simulation-game-lets-you-cut-and-sew-your-own-dresses"
+      "https://80.lv/articles/check-out-this-fascinating-3d-model-that-looks-like-an-oil-painting"
     ],
-    "image_filename": "ta_20260924.png",
+    "image_filename": "ta_20260925.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +66,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/discord-re-introduces-age-verification-policy-with-new-methods",
-      "https://www.gamedeveloper.com/business/report-bethesda-president-tells-obsidian-staff-it-won-t-lose-creative-identity-after-merge",
-      "https://www.gamedeveloper.com/business/undead-labs-makes-significant-layoffs-after-splitting-from-xbox"
+      "https://www.gamedeveloper.com/business/former-avalanche-studios-chief-natalie-francis-joins-massive-entertainment-as-managing-director",
+      "https://gnn.gamer.com.tw/detail.php?sn=312369",
+      "https://gnn.gamer.com.tw/detail.php?sn=312367",
+      "https://80.lv/articles/one-more-spin-off-in-the-silent-hill-series-silent-hill-townfall-released"
     ],
-    "image_filename": "globalgames_20260924.png",
+    "image_filename": "globalgames_20260925.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,13 +83,13 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/the-hand-drawn-metroidvania-well-dweller-has-been-released",
-      "https://80.lv/articles/gloomy-sandbox-graveyard-keeper-2-is-finally-out",
-      "https://80.lv/articles/you-feed-your-enemies-instead-of-killing-them-in-this-deckbuilding-pixel-art-adventure",
-      "https://80.lv/articles/nearly-ten-years-later-this-where-s-waldo-style-browser-game-keeps-growing",
-      "https://gnn.gamer.com.tw/detail.php?sn=312268"
+      "https://gnn.gamer.com.tw/detail.php?sn=312368",
+      "https://gnn.gamer.com.tw/detail.php?sn=312365",
+      "https://gnn.gamer.com.tw/detail.php?sn=312364",
+      "https://80.lv/articles/befriend-corrupted-creatures-turn-them-into-automated-factory-in-this-indie-gem",
+      "https://80.lv/articles/in-this-game-you-have-to-draw-border-lines-from-memory-on-a-map"
     ],
-    "image_filename": "indie_20260924.png",
+    "image_filename": "indie_20260925.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -100,32 +101,15 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312270",
-      "https://gnn.gamer.com.tw/detail.php?sn=312269",
-      "https://gnn.gamer.com.tw/detail.php?sn=312267",
-      "https://gnn.gamer.com.tw/detail.php?sn=312266",
-      "https://gnn.gamer.com.tw/detail.php?sn=312265"
+      "https://www.gamedeveloper.com/business/irish-game-fund-expands-with-additional-funding-pathways",
+      "https://gnn.gamer.com.tw/detail.php?sn=312366"
     ],
-    "image_filename": "local_20260924.png",
+    "image_filename": "local_20260925.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-continues-reset-with-halo-studios-layoffs-and-undead-labs-divestment",
-      "https://gnn.gamer.com.tw/detail.php?sn=312268"
-    ],
-    "image_filename": "producer_20260924.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
