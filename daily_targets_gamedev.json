@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/meta-announces-new-vr-glasses-that-weight-about-100-grams-and-cost-1-300"
+      "https://www.gamedeveloper.com/business/-this-shows-the-power-that-comes-from-employees-joining-forces-king-signs-collective-bargaining-agreement-with-union-workers"
     ],
-    "image_filename": "headline_20260925.png",
+    "image_filename": "headline_20260926.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/build-for-meta-vr-glasses-with-unity"
+      "https://unity.com/blog/rust-ltd-hot-dogs-horseshoes-hand-grenades-2"
     ],
-    "image_filename": "engine_20260925.png",
+    "image_filename": "engine_20260926.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,12 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/24/create-this-simple-realistic-landscape-in-blender/",
-      "https://80.lv/articles/how-to-create-dynamic-wuthering-waves-style-hair-in-blender"
+      "https://www.blender.org/press/20-years-open-movies/",
+      "https://www.blendernation.com/2026/09/25/cyberpunk-katana-tutorial/",
+      "https://www.blendernation.com/2026/09/25/blender-jobs-for-september-25-2026/",
+      "https://www.blendernation.com/2026/09/25/best-of-blender-artists-2026-39/"
     ],
-    "image_filename": "model3d_20260925.png",
+    "image_filename": "model3d_20260926.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,9 +50,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/check-out-this-fascinating-3d-model-that-looks-like-an-oil-painting"
+      "https://80.lv/articles/exploring-thin-pale-slimy-skin-texture-by-recreating-the-demogorgon-from-stranger-things/",
+      "https://80.lv/articles/how-to-create-futuristic-hovercraft-flight-simulator-inspired-by-matrix/",
+      "https://80.lv/articles/this-1940-life-magazine-ad-is-actually-2d-vector-animation/"
     ],
-    "image_filename": "ta_20260925.png",
+    "image_filename": "ta_20260926.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,12 +70,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/former-avalanche-studios-chief-natalie-francis-joins-massive-entertainment-as-managing-director",
-      "https://gnn.gamer.com.tw/detail.php?sn=312369",
-      "https://gnn.gamer.com.tw/detail.php?sn=312367",
-      "https://80.lv/articles/one-more-spin-off-in-the-silent-hill-series-silent-hill-townfall-released"
+      "https://www.gamedeveloper.com/production/gdc-side-quest-exploring-co-development-opportunities-with-sam-carlisle",
+      "https://gnn.gamer.com.tw/detail.php?sn=312374",
+      "https://gnn.gamer.com.tw/detail.php?sn=312373",
+      "https://gnn.gamer.com.tw/detail.php?sn=312375"
     ],
-    "image_filename": "globalgames_20260925.png",
+    "image_filename": "globalgames_20260926.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -83,13 +87,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312368",
-      "https://gnn.gamer.com.tw/detail.php?sn=312365",
-      "https://gnn.gamer.com.tw/detail.php?sn=312364",
-      "https://80.lv/articles/befriend-corrupted-creatures-turn-them-into-automated-factory-in-this-indie-gem",
-      "https://80.lv/articles/in-this-game-you-have-to-draw-border-lines-from-memory-on-a-map"
+      "https://80.lv/articles/what-to-play-if-you-like-unusual-art-style-in-games-top-10-titles/"
     ],
-    "image_filename": "indie_20260925.png",
+    "image_filename": "indie_20260926.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -101,15 +101,29 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/irish-game-fund-expands-with-additional-funding-pathways",
-      "https://gnn.gamer.com.tw/detail.php?sn=312366"
+      "https://gnn.gamer.com.tw/detail.php?sn=312378",
+      "https://gnn.gamer.com.tw/detail.php?sn=312377",
+      "https://gnn.gamer.com.tw/detail.php?sn=312376"
     ],
-    "image_filename": "local_20260925.png",
+    "image_filename": "local_20260926.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://80.lv/articles/the-players-you-already-have-are-your-biggest-growth-opportunity"
+    ],
+    "image_filename": "producer_20260926.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
