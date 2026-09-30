@@ -1,18 +1,4 @@
 {
-  "2026-08-30": [
-    "https://gnn.gamer.com.tw/detail.php?sn=310698",
-    "https://www.blendernation.com/2026/08/29/best-of-blender-artists-2026-35/",
-    "https://80.lv/articles/blender-tutorial-creating-boiling-water/",
-    "https://80.lv/articles/check-out-how-this-cool-traffic-light-animation-was-made-using-c4d",
-    "https://80.lv/articles/how-to-make-stylized-hair-look-like-curves-in-maya",
-    "https://80.lv/articles/how-tripo-is-tackling-clean-topology-for-its-3d-asset-pipeline",
-    "https://gnn.gamer.com.tw/detail.php?sn=310696",
-    "https://gnn.gamer.com.tw/detail.php?sn=310699",
-    "https://80.lv/articles/this-fps-lets-you-play-as-a-soldier-in-the-vietnam-war",
-    "https://gnn.gamer.com.tw/detail.php?sn=310697",
-    "https://gnn.gamer.com.tw/detail.php?sn=310701",
-    "https://gnn.gamer.com.tw/detail.php?sn=310700"
-  ],
   "2026-08-31": [
     "https://gnn.gamer.com.tw/detail.php?sn=310713",
     "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5",
@@ -516,5 +502,25 @@
     "https://80.lv/articles/creating-cozy-sandbox-sandcastle-with-a-focus-on-water-sand-simulation",
     "https://gnn.gamer.com.tw/detail.php?sn=312385",
     "https://gnn.gamer.com.tw/detail.php?sn=312384"
+  ],
+  "2026-09-30": [
+    "https://www.gamedeveloper.com/pc/steam-s-discounts-and-events-tab-will-soon-be-fully-algorithm-driven",
+    "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-7/",
+    "https://www.blendernation.com/2026/09/29/plan-your-3d-prints-with-bed-fit-splitter/",
+    "https://www.blendernation.com/2026/09/29/start-animating-the-easiest-face-rig-in-blender/",
+    "https://80.lv/articles/the-witcher-3-remastered-makes-an-11-year-old-rpg-feel-new-again",
+    "https://80.lv/articles/learn-complete-retopology-workflow-for-animation-ready-character-heads",
+    "https://80.lv/articles/creating-a-realistic-19th-century-sewing-machine-for-sierra-division-s-antique-prop-challenge",
+    "https://80.lv/articles/creating-horror-roguelike-inspired-by-no-i-m-not-a-human-buckshot-roulette",
+    "https://www.gamedeveloper.com/business/former-dying-light-franchise-lead-joins-bloober-team-horror-imprint-broken-mirror-games",
+    "https://www.gamedeveloper.com/console/naughty-dog-is-working-on-new-the-last-of-us-projects-",
+    "https://www.gamedeveloper.com/design/control-resonant-director-lays-out-case-for-avoiding-excessive-yellow-paint-",
+    "https://www.gamedeveloper.com/production/-we-were-constantly-overshooting-our-capacity-arc-raiders-exec-explains-success-resulted-in-burnout",
+    "https://gnn.gamer.com.tw/detail.php?sn=312512",
+    "https://gnn.gamer.com.tw/detail.php?sn=312509",
+    "https://gnn.gamer.com.tw/detail.php?sn=312507",
+    "https://gnn.gamer.com.tw/detail.php?sn=312511",
+    "https://gnn.gamer.com.tw/detail.php?sn=312510",
+    "https://gnn.gamer.com.tw/detail.php?sn=312508"
   ]
 }

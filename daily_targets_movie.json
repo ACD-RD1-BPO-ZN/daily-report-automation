@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/09/russo-brothers-hulk-appearing-avengers-doomsday-1237115931/"
+      "https://deadline.com/2026/09/cindy-holland-leaving-paramount-wbd-merger-1237141927/"
     ],
-    "image_filename": "headline_20260929.png",
+    "image_filename": "headline_20260930.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,22 +18,15 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://variety.com/2026/film/news/alan-cumming-plot-avengers-doomsday-1236877644/",
-      "https://variety.com/2026/film/news/rob-lowe-st-elmos-fire-sequel-in-the-works-1236877779/",
-      "https://variety.com/2026/film/festivals/mohammad-rasoulof-o-mipo-tokyo-kurosawa-akira-award-1236877201/",
-      "https://www.firstshowing.net/2026/official-trailer-for-horror-film-the-living-tree-ai-treehouse-thriller/",
-      "https://www.firstshowing.net/2026/comedian-doc-paralyzed-by-hope-the-maria-bamford-story-trailer/",
-      "https://www.firstshowing.net/2026/full-us-trailer-for-los-javis-la-bola-negra-queer-spanish-triptych/",
-      "https://www.firstshowing.net/2026/andrew-scott-is-actor-ian-charleson-in-emotional-elsinore-film-trailer/",
-      "https://www.firstshowing.net/2026/official-us-trailer-for-17th-century-drama-rose-with-sandra-huller/",
-      "https://www.firstshowing.net/2026/review-serville-pobletes-sunburn-is-a-toronto-summer-sensation/",
-      "https://www.cartoonbrew.com/box-office-report/forgotten-island-opening-weekend-coyote-vs-acme-267211.html",
-      "https://www.cartoonbrew.com/events/asifa-hollywood-animation-showcase-awards-season-267253.html",
-      "https://www.cartoonbrew.com/festivals/ottawa-international-animation-festival-spotlight-newsletter-267206.html",
-      "https://www.cartoonbrew.com/animators/ace-canada-netflix-excelerator-cohort-267217.html",
-      "https://www.cartoonbrew.com/interviews/futurama-drawing-rules-fry-bender-leela-267174.html"
+      "https://variety.com/2026/film/news/jennifer-lawrence-zach-creggers-the-flood-1236878570/",
+      "https://variety.com/2026/film/news/making-marie-antoinette-sofia-coppola-mother-kirsten-dunst-nyff-1236878756/",
+      "https://variety.com/2026/film/reviews/what-remains-review-1236876765/",
+      "https://www.firstshowing.net/2026/an-inside-look-at-making-sense-sensibility-with-daisy-edgar-jones/",
+      "https://www.cartoonbrew.com/festivals/manchester-animation-festival-wildwood-ray-gunn-forgotten-island-267261.html",
+      "https://www.cartoonbrew.com/newsletter/forgotten-island-stumbles-futuramas-drawing-rules-inside-ray-gunn-267273.html",
+      "https://www.cartoonbrew.com/shorts/awake-trailer-mhmoud-khalil-elyse-kelly-dan-fipphen-267272.html"
     ],
-    "image_filename": "production_20260929.png",
+    "image_filename": "production_20260930.png",
     "image_keywords": [
       "film",
       "production",
@@ -48,11 +41,9 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://www.boxofficemojo.com/date/2026-09-29/",
-      "https://variety.com/2026/film/festivals/horror-movies-future-filmmakers-shudder-debate-1236875312/",
-      "https://variety.com/2026/film/news/paramount-settlement-cory-booker-response-1236877590/"
+      "https://www.boxofficemojo.com/date/2026-09-30/"
     ],
-    "image_filename": "boxoffice_20260929.png",
+    "image_filename": "boxoffice_20260930.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -63,12 +54,16 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/09/apple-tv-viewership-record-ted-lasso-mayday-widows-bay-1237115696/",
-      "https://deadline.com/2026/09/all-american-series-finale-daniel-ezra-director-interview-1237114160/",
-      "https://deadline.com/2026/09/espn-jeopardy-renewed-season-2-hulu-disney-1237115867/",
-      "https://deadline.com/2026/09/nbc-major-league-baseball-wild-card-playoffs-tv-peacock-1237115559/"
+      "https://variety.com/feature/whats-on-netflix-movies-shows-1203517873/",
+      "https://variety.com/feature/whats-on-disney-plus-new-shows-movies-1203517920/",
+      "https://deadline.com/feature/icebreaker-series-adaptation-news-updates-netflix-tv-show-1237136961/",
+      "https://deadline.com/2026/09/vanderpump-rules-lisa-las-vegas-trailer-episode-bravo-1237140601/",
+      "https://www.firstshowing.net/2026/official-trailer-for-biopic-doc-the-one-about-matthew-perry-on-netflix/",
+      "https://www.firstshowing.net/2026/connie-britton-sam-nivola-in-mystery-series-phony-official-trailer/",
+      "https://www.firstshowing.net/2026/liev-schreiber-zazie-beetz-in-nocturne-dark-thriller-series-trailer/",
+      "https://www.cartoonbrew.com/streaming/toy-story-5-streaming-numbers-267281.html"
     ],
-    "image_filename": "streaming_20260929.png",
+    "image_filename": "streaming_20260930.png",
     "image_keywords": [
       "netflix",
       "disney+",
