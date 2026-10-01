@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/pc/steam-s-discounts-and-events-tab-will-soon-be-fully-algorithm-driven"
+      "https://gnn.gamer.com.tw/detail.php?sn=312590"
     ],
-    "image_filename": "headline_20260930.png",
+    "image_filename": "headline_20261001.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-7/"
+      "https://www.unrealengine.com/learning/septembers-epic-learning-content-metahumans-physics-animation-and-more"
     ],
-    "image_filename": "engine_20260930.png",
+    "image_filename": "engine_20261001.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/09/29/plan-your-3d-prints-with-bed-fit-splitter/",
-      "https://www.blendernation.com/2026/09/29/start-animating-the-easiest-face-rig-in-blender/"
+      "https://code.blender.org/2026/07/geometry-nodes-physics/",
+      "https://www.blendernation.com/2026/09/30/blendkit-hit-150k-assets/",
+      "https://80.lv/articles/see-blender-5-3-running-on-wacom-android-tablet"
     ],
-    "image_filename": "model3d_20260930.png",
+    "image_filename": "model3d_20261001.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,12 +49,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/the-witcher-3-remastered-makes-an-11-year-old-rpg-feel-new-again",
-      "https://80.lv/articles/learn-complete-retopology-workflow-for-animation-ready-character-heads",
-      "https://80.lv/articles/creating-a-realistic-19th-century-sewing-machine-for-sierra-division-s-antique-prop-challenge",
-      "https://80.lv/articles/creating-horror-roguelike-inspired-by-no-i-m-not-a-human-buckshot-roulette"
+      "https://80.lv/articles/sculpting-nature-inspired-bas-reliefs-on-a-stone-wall-in-a-moody-ancient-forest-environment",
+      "https://80.lv/articles/demon-s-souls-remake-performance-reportedly-hits-40-50-fps-on-ps5-emulator"
     ],
-    "image_filename": "ta_20260930.png",
+    "image_filename": "ta_20261001.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,15 +68,9 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/former-dying-light-franchise-lead-joins-bloober-team-horror-imprint-broken-mirror-games",
-      "https://www.gamedeveloper.com/console/naughty-dog-is-working-on-new-the-last-of-us-projects-",
-      "https://www.gamedeveloper.com/design/control-resonant-director-lays-out-case-for-avoiding-excessive-yellow-paint-",
-      "https://www.gamedeveloper.com/production/-we-were-constantly-overshooting-our-capacity-arc-raiders-exec-explains-success-resulted-in-burnout",
-      "https://gnn.gamer.com.tw/detail.php?sn=312512",
-      "https://gnn.gamer.com.tw/detail.php?sn=312509",
-      "https://gnn.gamer.com.tw/detail.php?sn=312507"
+      "https://www.gamedeveloper.com/production/ubisoft-montreal-employees-launch-collective-action-to-preserve-hybrid-work-schedule"
     ],
-    "image_filename": "globalgames_20260930.png",
+    "image_filename": "globalgames_20261001.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -89,11 +82,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312511",
-      "https://gnn.gamer.com.tw/detail.php?sn=312510",
-      "https://gnn.gamer.com.tw/detail.php?sn=312508"
+      "https://gnn.gamer.com.tw/detail.php?sn=312587",
+      "https://gnn.gamer.com.tw/detail.php?sn=312586",
+      "https://gnn.gamer.com.tw/detail.php?sn=312585",
+      "https://80.lv/articles/check-out-this-cozy-cyberpunk-life-sim-where-you-build-business-explore-neon-lit-city"
     ],
-    "image_filename": "indie_20260930.png",
+    "image_filename": "indie_20261001.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -103,15 +97,28 @@
     ]
   },
   {
+    "section_name": "Local",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=312591",
+      "https://gnn.gamer.com.tw/detail.php?sn=312589"
+    ],
+    "image_filename": "local_20261001.png",
+    "image_keywords": [
+      "event",
+      "meetup",
+      "poster",
+      "community"
+    ]
+  },
+  {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/pc/steam-s-discounts-and-events-tab-will-soon-be-fully-algorithm-driven",
-      "https://www.gamedeveloper.com/console/naughty-dog-is-working-on-new-the-last-of-us-projects-",
-      "https://www.gamedeveloper.com/production/-we-were-constantly-overshooting-our-capacity-arc-raiders-exec-explains-success-resulted-in-burnout",
-      "https://www.blendernation.com/2026/09/29/plan-your-3d-prints-with-bed-fit-splitter/",
-      "https://www.blendernation.com/2026/09/29/start-animating-the-easiest-face-rig-in-blender/"
+      "https://gnn.gamer.com.tw/detail.php?sn=312590",
+      "https://www.gamedeveloper.com/production/ubisoft-montreal-employees-launch-collective-action-to-preserve-hybrid-work-schedule",
+      "https://code.blender.org/2026/07/geometry-nodes-physics/",
+      "https://www.unrealengine.com/learning/septembers-epic-learning-content-metahumans-physics-animation-and-more"
     ],
-    "image_filename": "producer_20260930.png",
+    "image_filename": "producer_20261001.png",
     "image_keywords": [
       "marketing",
       "development",
