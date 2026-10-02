@@ -1,22 +1,4 @@
 {
-  "2026-09-01": [
-    "https://gnn.gamer.com.tw/detail.php?sn=310791",
-    "https://www.unrealengine.com/learning/julys-epic-learning-content-animation-mobile-game-development-and-more",
-    "https://www.blendernation.com/2026/08/31/ccc-matcher-a-free-extension-for-colour-chart-matching/",
-    "https://80.lv/articles/blender-guru-shares-how-to-create-the-backrooms-using-blender/",
-    "https://80.lv/articles/take-closer-look-at-character-vfx-made-for-2xko/",
-    "https://80.lv/articles/interview-new-indie-game-uses-local-ai-model-trained-entirely-on-studio-s-own-artists/",
-    "https://gnn.gamer.com.tw/detail.php?sn=310788",
-    "https://www.gamedeveloper.com/business/housemarque-co-founder-ilari-kuittinen-retires-from-studio",
-    "https://gnn.gamer.com.tw/detail.php?sn=310790",
-    "https://gnn.gamer.com.tw/detail.php?sn=310789",
-    "https://gnn.gamer.com.tw/detail.php?sn=310786",
-    "https://gnn.gamer.com.tw/detail.php?sn=310787",
-    "https://www.gamedeveloper.com/pc/report-13tb-of-steam-data-leaked-after-users-access-publicly-accessible-endpoint-",
-    "https://www.gamedeveloper.com/business/indie-devs-and-publishers-hit-in-gamescom-equipment-thefts",
-    "https://80.lv/articles/this-rpg-will-have-you-exploring-the-surreal-worlds-of-hieronymus-bosch/",
-    "https://80.lv/articles/the-blood-of-dawnwalker-is-a-special-kind-of-open-world-rp-with-a-narrative-sandbox/"
-  ],
   "2026-09-02": [
     "https://www.gamedeveloper.com/business/aggro-crab-launches-publishing-label-to-splash-that-peak-cash",
     "https://code.blender.org/2026/02/winter-of-quality-2026/",
@@ -526,5 +508,23 @@
     "https://80.lv/articles/check-out-this-cozy-cyberpunk-life-sim-where-you-build-business-explore-neon-lit-city/",
     "https://gnn.gamer.com.tw/detail.php?sn=312591",
     "https://gnn.gamer.com.tw/detail.php?sn=312589"
+  ],
+  "2026-10-02": [
+    "https://80.lv/articles/gears-of-war-e-day-is-the-highest-rated-gears-game-in-over-15-years",
+    "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5",
+    "https://www.blendernation.com/2026/10/01/blender-5-3-alpha-on-nvidia-dgx-spark-with-dlss-arm64-builds-tutorial-teaser/",
+    "https://80.lv/articles/creating-an-alien-character-for-a-sci-fi-short-film-with-blender-substance-3d",
+    "https://80.lv/articles/base-ps5-finally-gets-its-own-version-of-pssr-upscaling",
+    "https://80.lv/articles/suppressing-noise-without-sacrificing-lighting-quality-when-using-unreal-engine-s-lumen",
+    "https://www.gamedeveloper.com/business/-xbox-is-not-for-sale-ceo-asha-sharma-says",
+    "https://www.gamedeveloper.com/business/suda-51-s-grasshopper-manufacture-splits-from-netease",
+    "https://www.gamedeveloper.com/production/ubisoft-montreal-employees-launch-collective-action-to-preserve-hybrid-work-schedule",
+    "https://gnn.gamer.com.tw/detail.php?sn=312714",
+    "https://gnn.gamer.com.tw/detail.php?sn=312713",
+    "https://gnn.gamer.com.tw/detail.php?sn=312712",
+    "https://gnn.gamer.com.tw/detail.php?sn=312711",
+    "https://store.steampowered.com/news/285134/",
+    "https://gnn.gamer.com.tw/detail.php?sn=312710",
+    "https://gnn.gamer.com.tw/detail.php?sn=312715"
   ]
 }
