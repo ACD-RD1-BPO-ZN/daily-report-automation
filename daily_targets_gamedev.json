@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://80.lv/articles/gears-of-war-e-day-is-the-highest-rated-gears-game-in-over-15-years"
+      "https://www.gamedeveloper.com/business/nerial-to-enter-hibernation-mode-and-lay-off-developers"
     ],
-    "image_filename": "headline_20261002.png",
+    "image_filename": "headline_20261003.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,12 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5"
+      "https://unity.com/blog/external-dependency-manager",
+      "https://unity.com/blog/unity-plugin-grok",
+      "https://unity.com/blog/mobile-gaming-attention-economy-driving-marketing-performance",
+      "https://unity.com/blog/games-made-with-unity-september-2026-releases"
     ],
-    "image_filename": "engine_20261002.png",
+    "image_filename": "engine_20261003.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +33,12 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/01/blender-5-3-alpha-on-nvidia-dgx-spark-with-dlss-arm64-builds-tutorial-teaser/",
-      "https://80.lv/articles/creating-an-alien-character-for-a-sci-fi-short-film-with-blender-substance-3d"
+      "https://code.blender.org/2026/02/winter-of-quality-2026/",
+      "https://code.blender.org/2025/10/geometry-nodes-workshop-september-2025/",
+      "https://www.blendernation.com/2026/10/02/blender-jobs-for-october-2-2026/",
+      "https://www.blendernation.com/2026/10/02/best-of-blender-artists-2026-40/"
     ],
-    "image_filename": "model3d_20261002.png",
+    "image_filename": "model3d_20261003.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,10 +53,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/base-ps5-finally-gets-its-own-version-of-pssr-upscaling",
-      "https://80.lv/articles/suppressing-noise-without-sacrificing-lighting-quality-when-using-unreal-engine-s-lumen"
+      "https://80.lv/articles/inside-marvel-rivals-character-art-vfx-destruction-pipeline",
+      "https://80.lv/articles/recreating-armenia-s-natural-monument-made-up-of-basalt-columns-in-3d"
     ],
-    "image_filename": "ta_20261002.png",
+    "image_filename": "ta_20261003.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,15 +72,15 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/-xbox-is-not-for-sale-ceo-asha-sharma-says",
-      "https://www.gamedeveloper.com/business/suda-51-s-grasshopper-manufacture-splits-from-netease",
-      "https://www.gamedeveloper.com/production/ubisoft-montreal-employees-launch-collective-action-to-preserve-hybrid-work-schedule",
-      "https://gnn.gamer.com.tw/detail.php?sn=312714",
-      "https://gnn.gamer.com.tw/detail.php?sn=312713",
-      "https://gnn.gamer.com.tw/detail.php?sn=312712",
-      "https://gnn.gamer.com.tw/detail.php?sn=312711"
+      "https://gnn.gamer.com.tw/detail.php?sn=312846",
+      "https://gnn.gamer.com.tw/detail.php?sn=312845",
+      "https://gnn.gamer.com.tw/detail.php?sn=312844",
+      "https://gnn.gamer.com.tw/detail.php?sn=312842",
+      "https://gnn.gamer.com.tw/detail.php?sn=312841",
+      "https://80.lv/articles/star-wars-galactic-racer-is-the-best-reviewed-star-wars-game-in-20-years",
+      "https://80.lv/articles/aion-2-became-steam-s-top-seller-with-over-170k-players-before-full-launch"
     ],
-    "image_filename": "globalgames_20261002.png",
+    "image_filename": "globalgames_20261003.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -87,10 +92,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://store.steampowered.com/news/285134/",
-      "https://gnn.gamer.com.tw/detail.php?sn=312710"
+      "https://store.steampowered.com/news/285419/",
+      "https://80.lv/articles/10-all-time-great-games-you-can-grab-cheap-in-steam-autumn-sale"
     ],
-    "image_filename": "indie_20261002.png",
+    "image_filename": "indie_20261003.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -102,9 +107,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312715"
+      "https://gnn.gamer.com.tw/detail.php?sn=312843"
     ],
-    "image_filename": "local_20261002.png",
+    "image_filename": "local_20261003.png",
     "image_keywords": [
       "event",
       "meetup",
