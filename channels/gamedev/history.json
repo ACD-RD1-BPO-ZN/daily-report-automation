@@ -1,25 +1,4 @@
 {
-  "2026-09-04": [
-    "https://www.gamedeveloper.com/business/supercell-s-acquisition-of-metacore-expected-to-close-this-month",
-    "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals",
-    "https://www.unrealengine.com/events/emea-dev-days",
-    "https://unity.com/blog/project-ember-mixed-reality-transforming-burn-care-training",
-    "https://unity.com/blog/games-made-with-unity-august-2026-releases",
-    "https://www.blendernation.com/2026/09/03/sculpting-a-roman-bust-statue-in-blender/",
-    "https://www.blendernation.com/2026/09/03/blender-for-architecture-with-bonsaibim-workshop/",
-    "https://www.blender.org/events/blender-in-annecy-2026-recap/",
-    "https://80.lv/articles/artstation-will-block-ai-crawlers-from-scraping-artists-work",
-    "https://80.lv/articles/how-capcom-built-onimushas-real-time-sword-combat-re-engine",
-    "https://www.gamedeveloper.com/cloud/xbox-to-cap-cloud-gaming-hours-for-game-pass-subscribers",
-    "https://www.gamedeveloper.com/business/cd-projekt-red-won-t-be-abandoning-physical-releases",
-    "https://gnn.gamer.com.tw/detail.php?sn=311037",
-    "https://gnn.gamer.com.tw/detail.php?sn=311036",
-    "https://gnn.gamer.com.tw/detail.php?sn=311038",
-    "https://www.gamedeveloper.com/business/gamecity-hamburg-launches-second-round-of-prototype-funding",
-    "https://gnn.gamer.com.tw/detail.php?sn=311035",
-    "https://gnn.gamer.com.tw/detail.php?sn=311034",
-    "https://gnn.gamer.com.tw/detail.php?sn=311033"
-  ],
   "2026-09-05": [
     "https://gnn.gamer.com.tw/detail.php?sn=311138",
     "https://www.blender.org/news/upcoming-blender-development-fund-and-ai-policies/",
@@ -522,5 +501,13 @@
     "https://gnn.gamer.com.tw/detail.php?sn=312849",
     "https://gnn.gamer.com.tw/detail.php?sn=312848",
     "https://gnn.gamer.com.tw/detail.php?sn=312847"
+  ],
+  "2026-10-05": [
+    "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals",
+    "https://www.unrealengine.com/events/emea-dev-days",
+    "https://www.blender.org/events/blender-in-annecy-2026-recap/",
+    "https://www.blendernation.com/2026/10/04/switch-between-multiple-shaders-with-one-material/",
+    "https://www.blendernation.com/2026/10/04/creating-a-mech-girl-character-part-1/",
+    "https://gnn.gamer.com.tw/detail.php?sn=312851"
   ]
 }
