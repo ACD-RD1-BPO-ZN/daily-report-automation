@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals"
+      "https://www.gamedeveloper.com/business/arc-raiders-and-the-finals-set-for-tv-and-film-adaptations-from-backrooms-co-producer"
     ],
-    "image_filename": "headline_20261005.png",
+    "image_filename": "headline_20261006.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,27 +14,13 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://www.unrealengine.com/events/emea-dev-days"
-    ],
-    "image_filename": "engine_20261005.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/events/blender-in-annecy-2026-recap/",
-      "https://www.blendernation.com/2026/10/04/switch-between-multiple-shaders-with-one-material/",
-      "https://www.blendernation.com/2026/10/04/creating-a-mech-girl-character-part-1/"
+      "https://code.blender.org/2026/10/geometry-nodes-workshop-september-2026/",
+      "https://www.blendernation.com/2026/10/05/quadify-clean-quad-retopology-for-ai-scan-and-cad-meshes-in-blender/",
+      "https://www.blendernation.com/2026/10/05/make-this-realistic-lake-landscape-in-blender/"
     ],
-    "image_filename": "model3d_20261005.png",
+    "image_filename": "model3d_20261006.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,32 +33,68 @@
     ]
   },
   {
+    "section_name": "TA",
+    "source_urls": [
+      "https://80.lv/articles/merging-space-colonization-solver-with-pyro-simulation-to-create-looping-smoke-bursts/"
+    ],
+    "image_filename": "ta_20261006.png",
+    "image_keywords": [
+      "screenshot",
+      "preview",
+      "featured",
+      "spotlight",
+      "render",
+      "engine",
+      "technology",
+      "shader",
+      "scene"
+    ]
+  },
+  {
+    "section_name": "GlobalGames",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/report-ninja-theory-lays-off-workers-after-failing-to-spin-off-from-xbox",
+      "https://www.gamedeveloper.com/design/why-it-s-still-worth-making-immersive-sims-ft-harvey-smith-amp-ben-horne",
+      "https://gnn.gamer.com.tw/detail.php?sn=312915"
+    ],
+    "image_filename": "globalgames_20261006.png",
+    "image_keywords": [
+      "gameplay",
+      "trailer",
+      "release",
+      "commercial",
+      "global"
+    ]
+  },
+  {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=312919",
+      "https://gnn.gamer.com.tw/detail.php?sn=312913",
+      "https://store.steampowered.com/news/285564/"
+    ],
+    "image_filename": "indie_20261006.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312851"
+      "https://gnn.gamer.com.tw/detail.php?sn=312918",
+      "https://gnn.gamer.com.tw/detail.php?sn=312916",
+      "https://gnn.gamer.com.tw/detail.php?sn=312914"
     ],
-    "image_filename": "local_20261005.png",
+    "image_filename": "local_20261006.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals",
-      "https://www.blender.org/events/blender-in-annecy-2026-recap/",
-      "https://www.unrealengine.com/events/emea-dev-days",
-      "https://gnn.gamer.com.tw/detail.php?sn=312851"
-    ],
-    "image_filename": "producer_20261005.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
