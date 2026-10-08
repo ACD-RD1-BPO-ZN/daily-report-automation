@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/console/gamestop-other-retailers-to-sell-used-playstation-5-pro-units-for-66-percent-over-msrp"
+      "https://www.gamedeveloper.com/programming/unity-unveils-unity-spark-an-prompt-based-tool-for-google-s-ai-games-platform"
     ],
-    "image_filename": "headline_20261007.png",
+    "image_filename": "headline_20261008.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/unity-industry-hmi-template-for-embedded-systems"
+      "https://unity.com/blog/why-we-built-unity-spark"
     ],
-    "image_filename": "engine_20261007.png",
+    "image_filename": "engine_20261008.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/06/matelume-realistic-fabric-materials-from-flat-images-into-blender-in-one-click/",
-      "https://www.blender.org/news/blender-survey-2026/",
-      "https://80.lv/articles/3d-artist-shows-how-to-make-procedural-fly-swarm-in-blender/"
+      "https://www.blendernation.com/2026/10/07/free-100-pbr-materials-scans/",
+      "https://80.lv/articles/mastering-stylized-characters-with-character-creator-5-headshot-3/"
     ],
-    "image_filename": "model3d_20261007.png",
+    "image_filename": "model3d_20261008.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,13 +48,12 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/06/how-to-make-a-death-star-trench-with-geo-nodes/",
-      "https://80.lv/articles/veteran-game-world-designer-explains-why-bigger-game-worlds-aren-t-always-better",
-      "https://80.lv/articles/dinosaur-leg-muscle-simulation-gets-guillermo-del-toro-s-approval",
-      "https://80.lv/articles/vfx-artist-shared-advanced-whitewater-solver-based-on-w-t-s-research",
-      "https://80.lv/articles/how-to-recreate-saber-from-type-moon-s-fate-stay-night-in-3d"
+      "https://80.lv/articles/unity-spark-puts-artist-made-assets-inside-an-ai-assisted-game-editor/",
+      "https://80.lv/articles/almost-every-object-in-this-stardew-valley-style-cemetery-sim-is-actually-3D/",
+      "https://80.lv/articles/warhammer-40-000-dark-heresy-s-detective-system-doesn-t-care-about-innocence",
+      "https://80.lv/articles/gta-1-s-vehicle-physics-are-now-playable-in-your-browser/"
     ],
-    "image_filename": "ta_20261007.png",
+    "image_filename": "ta_20261008.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -71,14 +69,14 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/report-ninja-theory-lays-off-workers-after-failing-to-spin-off-from-xbox",
-      "https://www.gamedeveloper.com/business/unlead-labs-studio-head-says-they-were-irresponsibly-transparent-in-preparing-staff-for-layoffs",
-      "https://www.gamedeveloper.com/design/why-it-s-still-worth-making-immersive-sims-ft.-harvey-smith-amp-ben-horne",
-      "https://gnn.gamer.com.tw/detail.php?sn=312980",
-      "https://gnn.gamer.com.tw/detail.php?sn=312977",
-      "https://gnn.gamer.com.tw/detail.php?sn=312975"
+      "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff",
+      "https://www.gamedeveloper.com/business/former-activision-ceo-bobby-kotick-named-to-the-board-of-post-merger-skydance",
+      "https://www.gamedeveloper.com/business/electronic-arts-leveraged-buyout-faces-a-bondholder-battle",
+      "https://www.gamedeveloper.com/business/google-debuts-new-ai-game-platform-named-google-playground",
+      "https://gnn.gamer.com.tw/detail.php?sn=313053",
+      "https://gnn.gamer.com.tw/detail.php?sn=313054"
     ],
-    "image_filename": "globalgames_20261007.png",
+    "image_filename": "globalgames_20261008.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -90,9 +88,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/co-dev-case-study-how-blackbird-interactive-and-secret-mode-helped-escape-the-backrooms-ride-the-backrooms-hype-wave"
+      "https://gnn.gamer.com.tw/detail.php?sn=313057",
+      "https://gnn.gamer.com.tw/detail.php?sn=313056"
     ],
-    "image_filename": "indie_20261007.png",
+    "image_filename": "indie_20261008.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -104,11 +103,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=312978",
-      "https://gnn.gamer.com.tw/detail.php?sn=312979",
-      "https://gnn.gamer.com.tw/detail.php?sn=312976"
+      "https://gnn.gamer.com.tw/detail.php?sn=313058",
+      "https://gnn.gamer.com.tw/detail.php?sn=313055"
     ],
-    "image_filename": "local_20261007.png",
+    "image_filename": "local_20261008.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -119,13 +117,12 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/console/gamestop-other-retailers-to-sell-used-playstation-5-pro-units-for-66-percent-over-msrp",
-      "https://www.gamedeveloper.com/business/report-ninja-theory-lays-off-workers-after-failing-to-spin-off-from-xbox",
-      "https://www.gamedeveloper.com/business/unlead-labs-studio-head-says-they-were-irresponsibly-transparent-in-preparing-staff-for-layoffs",
-      "https://www.blendernation.com/2026/10/06/matelume-realistic-fabric-materials-from-flat-images-into-blender-in-one-click/",
-      "https://www.blendernation.com/2026/10/06/how-to-make-a-death-star-trench-with-geo-nodes/"
+      "https://www.gamedeveloper.com/programming/unity-unveils-unity-spark-an-prompt-based-tool-for-google-s-ai-games-platform",
+      "https://unity.com/blog/why-we-built-unity-spark",
+      "https://www.gamedeveloper.com/business/google-debuts-new-ai-game-platform-named-google-playground",
+      "https://gnn.gamer.com.tw/detail.php?sn=313053"
     ],
-    "image_filename": "producer_20261007.png",
+    "image_filename": "producer_20261008.png",
     "image_keywords": [
       "marketing",
       "development",

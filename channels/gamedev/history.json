@@ -1,13 +1,4 @@
 {
-  "2026-09-07": [
-    "https://www.blendernation.com/2026/09/06/sticking-hand-drawn-ink-lines-to-3d-animation-with-blender-grease-pencil-and-geometry-nodes/",
-    "https://80.lv/articles/blender-studio-opens-overgrown-s-free-behind-the-scenes-archive/",
-    "https://www.blendernation.com/2026/09/05/multiversal-short-film/",
-    "https://80.lv/articles/experimental-stylized-3d-tribute-to-spider-man-brand-new-day/",
-    "https://80.lv/articles/artist-shares-a-cool-blender-animation-of-jack-plugs-acting-weird/",
-    "https://80.lv/articles/metro-2039-runs-at-4k-with-60-fps-and-ray-tracing-even-on-ps5-and-xbox/",
-    "https://80.lv/articles/interview-how-war-for-westeros-turns-game-of-thrones-into-an-epic-rts/"
-  ],
   "2026-09-08": [
     "https://gnn.gamer.com.tw/detail.php?sn=311201",
     "https://www.blendernation.com/2026/09/07/booleans-to-subdivision-topology-with-quad-remesher/",
@@ -518,5 +509,25 @@
     "https://gnn.gamer.com.tw/detail.php?sn=312978",
     "https://gnn.gamer.com.tw/detail.php?sn=312979",
     "https://gnn.gamer.com.tw/detail.php?sn=312976"
+  ],
+  "2026-10-08": [
+    "https://www.gamedeveloper.com/programming/unity-unveils-unity-spark-an-prompt-based-tool-for-google-s-ai-games-platform",
+    "https://unity.com/blog/why-we-built-unity-spark",
+    "https://www.blendernation.com/2026/10/07/free-100-pbr-materials-scans/",
+    "https://80.lv/articles/mastering-stylized-characters-with-character-creator-5-headshot-3/",
+    "https://80.lv/articles/unity-spark-puts-artist-made-assets-inside-an-ai-assisted-game-editor/",
+    "https://80.lv/articles/almost-every-object-in-this-stardew-valley-style-cemetery-sim-is-actually-3D/",
+    "https://80.lv/articles/warhammer-40-000-dark-heresy-s-detective-system-doesn-t-care-about-innocence/",
+    "https://80.lv/articles/gta-1-s-vehicle-physics-are-now-playable-in-your-browser/",
+    "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff",
+    "https://www.gamedeveloper.com/business/former-activision-ceo-bobby-kotick-named-to-the-board-of-post-merger-skydance",
+    "https://www.gamedeveloper.com/business/electronic-arts-leveraged-buyout-faces-a-bondholder-battle",
+    "https://www.gamedeveloper.com/business/google-debuts-new-ai-game-platform-named-google-playground",
+    "https://gnn.gamer.com.tw/detail.php?sn=313053",
+    "https://gnn.gamer.com.tw/detail.php?sn=313054",
+    "https://gnn.gamer.com.tw/detail.php?sn=313057",
+    "https://gnn.gamer.com.tw/detail.php?sn=313056",
+    "https://gnn.gamer.com.tw/detail.php?sn=313058",
+    "https://gnn.gamer.com.tw/detail.php?sn=313055"
   ]
 }
