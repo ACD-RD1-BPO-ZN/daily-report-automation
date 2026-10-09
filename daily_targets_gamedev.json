@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/unity-unveils-unity-spark-an-prompt-based-tool-for-google-s-ai-games-platform"
+      "https://www.gamedeveloper.com/business/trump-administration-suspends-microsoft-s-ability-to-apply-for-green-cards-alleging-fraud"
     ],
-    "image_filename": "headline_20261008.png",
+    "image_filename": "headline_20261009.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/why-we-built-unity-spark"
+      "https://unity.com/blog/echo-weaver-time-loop-unity"
     ],
-    "image_filename": "engine_20261008.png",
+    "image_filename": "engine_20261009.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/07/free-100-pbr-materials-scans/",
-      "https://80.lv/articles/mastering-stylized-characters-with-character-creator-5-headshot-3/"
+      "https://www.blendernation.com/2026/10/08/stylized-robot-tutorial/",
+      "https://www.blendernation.com/2026/10/08/add-on-for-mesh-reconstruction-with-unrealizex/"
     ],
-    "image_filename": "model3d_20261008.png",
+    "image_filename": "model3d_20261009.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,12 +48,12 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/unity-spark-puts-artist-made-assets-inside-an-ai-assisted-game-editor/",
-      "https://80.lv/articles/almost-every-object-in-this-stardew-valley-style-cemetery-sim-is-actually-3D/",
-      "https://80.lv/articles/warhammer-40-000-dark-heresy-s-detective-system-doesn-t-care-about-innocence",
-      "https://80.lv/articles/gta-1-s-vehicle-physics-are-now-playable-in-your-browser/"
+      "https://80.lv/articles/rizomuv-2027-introduces-faster-unfolding-live-updates-full-ui-customization/",
+      "https://80.lv/articles/how-silver-pines-used-rotoscoping-to-create-its-unsettling-horror",
+      "https://80.lv/articles/free-advanced-radial-blur-with-chromatic-smear-for-after-effects",
+      "https://80.lv/articles/explore-this-tactile-ui-powered-by-real-time-webgl-shader"
     ],
-    "image_filename": "ta_20261008.png",
+    "image_filename": "ta_20261009.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,14 +69,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff",
-      "https://www.gamedeveloper.com/business/former-activision-ceo-bobby-kotick-named-to-the-board-of-post-merger-skydance",
-      "https://www.gamedeveloper.com/business/electronic-arts-leveraged-buyout-faces-a-bondholder-battle",
-      "https://www.gamedeveloper.com/business/google-debuts-new-ai-game-platform-named-google-playground",
-      "https://gnn.gamer.com.tw/detail.php?sn=313053",
-      "https://gnn.gamer.com.tw/detail.php?sn=313054"
+      "https://www.gamedeveloper.com/console/xbox-ceo-unveils-new-xbox-division-for-game-adjacent-ventures-named-xp-",
+      "https://www.gamedeveloper.com/business/denuvo-attempts-to-subpoena-discord-valve-and-reddit-in-effort-to-identify-hacker"
     ],
-    "image_filename": "globalgames_20261008.png",
+    "image_filename": "globalgames_20261009.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -88,10 +84,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313057",
-      "https://gnn.gamer.com.tw/detail.php?sn=313056"
+      "https://80.lv/articles/this-cozy-horror-co-op-has-you-playing-as-one-of-two- puppies-saving-their-owner"
     ],
-    "image_filename": "indie_20261008.png",
+    "image_filename": "indie_20261009.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -103,31 +98,19 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313058",
-      "https://gnn.gamer.com.tw/detail.php?sn=313055"
+      "https://gnn.gamer.com.tw/detail.php?sn=313161",
+      "https://gnn.gamer.com.tw/detail.php?sn=313160",
+      "https://gnn.gamer.com.tw/detail.php?sn=313165",
+      "https://gnn.gamer.com.tw/detail.php?sn=313164",
+      "https://gnn.gamer.com.tw/detail.php?sn=313163",
+      "https://gnn.gamer.com.tw/detail.php?sn=313162"
     ],
-    "image_filename": "local_20261008.png",
+    "image_filename": "local_20261009.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/programming/unity-unveils-unity-spark-an-prompt-based-tool-for-google-s-ai-games-platform",
-      "https://unity.com/blog/why-we-built-unity-spark",
-      "https://www.gamedeveloper.com/business/google-debuts-new-ai-game-platform-named-google-playground",
-      "https://gnn.gamer.com.tw/detail.php?sn=313053"
-    ],
-    "image_filename": "producer_20261008.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
