@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/trump-administration-suspends-microsoft-s-ability-to-apply-for-green-cards-alleging-fraud"
+      "https://www.blendernation.com/2026/10/09/ceo-ai-powered-lip-sync/"
     ],
-    "image_filename": "headline_20261009.png",
+    "image_filename": "headline_20261010.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/echo-weaver-time-loop-unity"
+      "https://unity.com/blog/horror-games-made-with-unity-halloween-2026"
     ],
-    "image_filename": "engine_20261009.png",
+    "image_filename": "engine_20261010.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/08/stylized-robot-tutorial/",
-      "https://www.blendernation.com/2026/10/08/add-on-for-mesh-reconstruction-with-unrealizex/"
+      "https://www.blendernation.com/2026/10/09/best-of-blender-artists-2026-41/",
+      "https://www.blendernation.com/2026/10/09/blender-jobs-for-october-9-2026/"
     ],
-    "image_filename": "model3d_20261009.png",
+    "image_filename": "model3d_20261010.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,12 +48,12 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/rizomuv-2027-introduces-faster-unfolding-live-updates-full-ui-customization/",
-      "https://80.lv/articles/how-silver-pines-used-rotoscoping-to-create-its-unsettling-horror",
-      "https://80.lv/articles/free-advanced-radial-blur-with-chromatic-smear-for-after-effects",
-      "https://80.lv/articles/explore-this-tactile-ui-powered-by-real-time-webgl-shader"
+      "https://80.lv/articles/proactive-not-reactive-24-years-of-keeping-games-online",
+      "https://80.lv/articles/this-rhythm-rpg-was-rebuilt-three-times-during-its-10-year-development",
+      "https://80.lv/articles/free-online-archive-of-ps1-n64-3d-models-game-assets",
+      "https://80.lv/articles/world-of-warcraft-forever-almost-launched-without-classic-models"
     ],
-    "image_filename": "ta_20261009.png",
+    "image_filename": "ta_20261010.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,10 +69,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/console/xbox-ceo-unveils-new-xbox-division-for-game-adjacent-ventures-named-xp-",
-      "https://www.gamedeveloper.com/business/denuvo-attempts-to-subpoena-discord-valve-and-reddit-in-effort-to-identify-hacker"
+      "https://www.gamedeveloper.com/mobile/ubisoft-to-sunset-rainbow-six-mobile-just-seven-months-after-launch",
+      "https://www.gamedeveloper.com/business/report-double-fine-s-union-drive-collapsed-under-miscommunications-and-culture-clash",
+      "https://gnn.gamer.com.tw/detail.php?sn=313168",
+      "https://gnn.gamer.com.tw/detail.php?sn=313167"
     ],
-    "image_filename": "globalgames_20261009.png",
+    "image_filename": "globalgames_20261010.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,30 +84,11 @@
     ]
   },
   {
-    "section_name": "Indie",
-    "source_urls": [
-      "https://80.lv/articles/this-cozy-horror-co-op-has-you-playing-as-one-of-two- puppies-saving-their-owner"
-    ],
-    "image_filename": "indie_20261009.png",
-    "image_keywords": [
-      "gameplay",
-      "chart",
-      "capsule",
-      "steam",
-      "indie"
-    ]
-  },
-  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313161",
-      "https://gnn.gamer.com.tw/detail.php?sn=313160",
-      "https://gnn.gamer.com.tw/detail.php?sn=313165",
-      "https://gnn.gamer.com.tw/detail.php?sn=313164",
-      "https://gnn.gamer.com.tw/detail.php?sn=313163",
-      "https://gnn.gamer.com.tw/detail.php?sn=313162"
+      "https://gnn.gamer.com.tw/detail.php?sn=313166"
     ],
-    "image_filename": "local_20261009.png",
+    "image_filename": "local_20261010.png",
     "image_keywords": [
       "event",
       "meetup",
