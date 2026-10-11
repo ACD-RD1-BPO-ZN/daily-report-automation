@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/09/ceo-ai-powered-lip-sync/"
+      "https://gnn.gamer.com.tw/detail.php?sn=313172"
     ],
-    "image_filename": "headline_20261010.png",
+    "image_filename": "headline_20261011.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,26 +14,12 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://unity.com/blog/horror-games-made-with-unity-halloween-2026"
-    ],
-    "image_filename": "engine_20261010.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/09/best-of-blender-artists-2026-41/",
-      "https://www.blendernation.com/2026/10/09/blender-jobs-for-october-9-2026/"
+      "https://www.blendernation.com/2026/10/10/low-poly-treasure-chest/",
+      "https://80.lv/articles/best-3d-modeling-software-blender-maya-zbrush-more"
     ],
-    "image_filename": "model3d_20261010.png",
+    "image_filename": "model3d_20261011.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,12 +34,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/proactive-not-reactive-24-years-of-keeping-games-online",
-      "https://80.lv/articles/this-rhythm-rpg-was-rebuilt-three-times-during-its-10-year-development",
-      "https://80.lv/articles/free-online-archive-of-ps1-n64-3d-models-game-assets",
-      "https://80.lv/articles/world-of-warcraft-forever-almost-launched-without-classic-models"
+      "https://80.lv/articles/in-this-first-person-horror-eye-exam-pulls-you-into-backrooms-style-house",
+      "https://80.lv/articles/how-to-build-an-atmospheric-stylized-lighthouse-scene-with-a-custom-modular-set"
     ],
-    "image_filename": "ta_20261010.png",
+    "image_filename": "ta_20261011.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,12 +53,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/mobile/ubisoft-to-sunset-rainbow-six-mobile-just-seven-months-after-launch",
-      "https://www.gamedeveloper.com/business/report-double-fine-s-union-drive-collapsed-under-miscommunications-and-culture-clash",
-      "https://gnn.gamer.com.tw/detail.php?sn=313168",
-      "https://gnn.gamer.com.tw/detail.php?sn=313167"
+      "https://gnn.gamer.com.tw/detail.php?sn=313171",
+      "https://80.lv/articles/atari-s-iconic-1980s-computer-is-back-available-for-purchase"
     ],
-    "image_filename": "globalgames_20261010.png",
+    "image_filename": "globalgames_20261011.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,11 +66,26 @@
     ]
   },
   {
+    "section_name": "Indie",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=313170",
+      "https://80.lv/articles/80-level-contest-win-a-neyyah-steam-key"
+    ],
+    "image_filename": "indie_20261011.png",
+    "image_keywords": [
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
+    ]
+  },
+  {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313166"
+      "https://gnn.gamer.com.tw/detail.php?sn=313169"
     ],
-    "image_filename": "local_20261010.png",
+    "image_filename": "local_20261011.png",
     "image_keywords": [
       "event",
       "meetup",
