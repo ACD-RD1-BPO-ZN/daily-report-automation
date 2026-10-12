@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313172"
+      "https://code.blender.org/2026/09/small-teams-ambitious-projects/"
     ],
-    "image_filename": "headline_20261011.png",
+    "image_filename": "headline_20261012.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/10/low-poly-treasure-chest/",
-      "https://80.lv/articles/best-3d-modeling-software-blender-maya-zbrush-more"
+      "https://www.blender.org/events/blender-at-siggraph-2026/",
+      "https://www.blendernation.com/2026/10/11/creating-a-mech-girl-character-part-2/"
     ],
-    "image_filename": "model3d_20261011.png",
+    "image_filename": "model3d_20261012.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,10 +34,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/in-this-first-person-horror-eye-exam-pulls-you-into-backrooms-style-house",
-      "https://80.lv/articles/how-to-build-an-atmospheric-stylized-lighthouse-scene-with-a-custom-modular-set"
+      "https://80.lv/articles/how-to-build-an-atmospheric-stylized-lighthouse-scene-with-a-custom-modular-set",
+      "https://80.lv/articles/this-real-life-low-resolution-interior-design-decor-turns-any-space-into-a-retro-game-scene"
     ],
-    "image_filename": "ta_20261011.png",
+    "image_filename": "ta_20261012.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,10 +53,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313171",
-      "https://80.lv/articles/atari-s-iconic-1980s-computer-is-back-available-for-purchase"
+      "https://gnn.gamer.com.tw/detail.php?sn=313173",
+      "https://gnn.gamer.com.tw/detail.php?sn=313174"
     ],
-    "image_filename": "globalgames_20261011.png",
+    "image_filename": "globalgames_20261012.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -68,10 +68,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313170",
       "https://80.lv/articles/80-level-contest-win-a-neyyah-steam-key"
     ],
-    "image_filename": "indie_20261011.png",
+    "image_filename": "indie_20261012.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -83,9 +82,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313169"
+      "https://gnn.gamer.com.tw/detail.php?sn=313176",
+      "https://gnn.gamer.com.tw/detail.php?sn=313175"
     ],
-    "image_filename": "local_20261011.png",
+    "image_filename": "local_20261012.png",
     "image_keywords": [
       "event",
       "meetup",
