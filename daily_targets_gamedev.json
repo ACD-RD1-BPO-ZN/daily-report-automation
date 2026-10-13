@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://code.blender.org/2026/09/small-teams-ambitious-projects/"
+      "https://www.blendernation.com/2026/10/12/blender-animation-contest-with-1500-in-cash-prizes/"
     ],
-    "image_filename": "headline_20261012.png",
+    "image_filename": "headline_20261013.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/events/blender-at-siggraph-2026/",
-      "https://www.blendernation.com/2026/10/11/creating-a-mech-girl-character-part-2/"
+      "https://www.blendernation.com/2026/10/12/all-loop-tools-now-native-in-blender-5-3/",
+      "https://80.lv/articles/creating-a-thriller-animated-series-with-hand-drawn-textures-in-blender",
+      "https://80.lv/articles/turn-photos-3d-renders-into-paintings-with-this-blender-filter"
     ],
-    "image_filename": "model3d_20261012.png",
+    "image_filename": "model3d_20261013.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,10 +35,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-to-build-an-atmospheric-stylized-lighthouse-scene-with-a-custom-modular-set",
-      "https://80.lv/articles/this-real-life-low-resolution-interior-design-decor-turns-any-space-into-a-retro-game-scene"
+      "https://80.lv/articles/epic-games-tells-devs-no-more-hand-written-code-to-adopt-an-ai-first-production-model",
+      "https://80.lv/articles/this-soft-body-simulation-can-cut-peel-break-objects-in-real-time",
+      "https://80.lv/articles/this-platformer-lets-you-use-shadows-of-real-life-objects-to-play"
     ],
-    "image_filename": "ta_20261012.png",
+    "image_filename": "ta_20261013.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,10 +55,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313173",
-      "https://gnn.gamer.com.tw/detail.php?sn=313174"
+      "https://gnn.gamer.com.tw/detail.php?sn=313281",
+      "https://gnn.gamer.com.tw/detail.php?sn=313279",
+      "https://gnn.gamer.com.tw/detail.php?sn=313276",
+      "https://gnn.gamer.com.tw/detail.php?sn=313275",
+      "https://gnn.gamer.com.tw/detail.php?sn=313273"
     ],
-    "image_filename": "globalgames_20261012.png",
+    "image_filename": "globalgames_20261013.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -68,9 +73,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/80-level-contest-win-a-neyyah-steam-key"
+      "https://gnn.gamer.com.tw/detail.php?sn=313274",
+      "https://store.steampowered.com/news/285796/"
     ],
-    "image_filename": "indie_20261012.png",
+    "image_filename": "indie_20261013.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -80,17 +86,18 @@
     ]
   },
   {
-    "section_name": "Local",
+    "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313176",
-      "https://gnn.gamer.com.tw/detail.php?sn=313175"
+      "https://80.lv/articles/epic-games-tells-devs-no-more-hand-written-code-to-adopt-an-ai-first-production-model",
+      "https://www.blendernation.com/2026/10/12/blender-animation-contest-with-1500-in-cash-prizes/",
+      "https://gnn.gamer.com.tw/detail.php?sn=313281"
     ],
-    "image_filename": "local_20261012.png",
+    "image_filename": "producer_20261013.png",
     "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
