@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313340"
+      "https://www.gamedeveloper.com/programming/no-more-hand-written-code-epic-s-disney-project-reportedly-shifts-to-ai-first-development"
     ],
-    "image_filename": "headline_20261014.png",
+    "image_filename": "headline_20261015.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game"
+      "https://www.unrealengine.com/news/uefn-professional-bootcamp-prepare-for-unreal-engine-6"
     ],
-    "image_filename": "engine_20261014.png",
+    "image_filename": "engine_20261015.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/events/blender-conference-2026-recap/",
-      "https://80.lv/articles/undo-history-for-each-blender-object-10-000-times-with-this-add-on"
+      "https://code.blender.org/2026/10/bcon26-talks-by-blender-developers/",
+      "https://80.lv/articles/color-picker-for-photoshop-that-lets-you-see-hues-on-3d-shapes-before-painting-them"
     ],
-    "image_filename": "model3d_20261014.png",
+    "image_filename": "model3d_20261015.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,10 +48,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-this-painterly-animated-short-was-rigged-animated-entirely-in-unreal-engine",
-      "https://80.lv/articles/get-ready-for-halloween-with-these-19-free-mocap-animations"
+      "https://80.lv/articles/enormous-number-of-smart-npcs-was-one-of-reasons-for-gta-6-delay",
+      "https://80.lv/articles/grab-this-updated-metahuman-animation-tool-for-free"
     ],
-    "image_filename": "ta_20261014.png",
+    "image_filename": "ta_20261015.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,14 +67,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/gta-6-is-reportedly-coming-to-pc-in-early-2027",
-      "https://gnn.gamer.com.tw/detail.php?sn=313344",
-      "https://gnn.gamer.com.tw/detail.php?sn=313343",
-      "https://gnn.gamer.com.tw/detail.php?sn=313342",
-      "https://gnn.gamer.com.tw/detail.php?sn=313341",
-      "https://gnn.gamer.com.tw/detail.php?sn=313339"
+      "https://www.gamedeveloper.com/business/ubisoft-to-close-trials-studio-redlynx-downsize-ubisoft-singapore",
+      "https://gnn.gamer.com.tw/detail.php?sn=313413",
+      "https://gnn.gamer.com.tw/detail.php?sn=313408",
+      "https://gnn.gamer.com.tw/detail.php?sn=313409",
+      "https://gnn.gamer.com.tw/detail.php?sn=313410"
     ],
-    "image_filename": "globalgames_20261014.png",
+    "image_filename": "globalgames_20261015.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -86,10 +85,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/extended-reality/owlchemy-ceo-vr-is-still-an-emerging-market-because-it-hasn-t-passed-the-cafe-test-",
-      "https://80.lv/articles/reviving-mystery-house-roberta-and-ken-williams-1980-apple-ii-classic"
+      "https://gnn.gamer.com.tw/detail.php?sn=313411"
     ],
-    "image_filename": "indie_20261014.png",
+    "image_filename": "indie_20261015.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -99,19 +97,16 @@
     ]
   },
   {
-    "section_name": "Producer",
+    "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313340",
-      "https://www.gamedeveloper.com/extended-reality/owlchemy-ceo-vr-is-still-an-emerging-market-because-it-hasn-t-passed-the-cafe-test-",
-      "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
-      "https://80.lv/articles/undo-history-for-each-blender-object-10-000-times-with-this-add-on"
+      "https://gnn.gamer.com.tw/detail.php?sn=313412"
     ],
-    "image_filename": "producer_20261014.png",
+    "image_filename": "local_20261015.png",
     "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]
