@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313496"
+      "https://gnn.gamer.com.tw/detail.php?sn=313587"
     ],
-    "image_filename": "headline_20261016.png",
+    "image_filename": "headline_20261017.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,10 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/silent-hill-townfall-delivers-haunting-psychological-horror-at-its-very-best-with-ue5"
+      "https://www.unrealengine.com/learning/check-out-the-top-fortnite-islands-from-the-uefn-student-bootcamp",
+      "https://unity.com/blog/foxy-dumplings-cross-platform-development"
     ],
-    "image_filename": "engine_20261016.png",
+    "image_filename": "engine_20261017.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +31,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/press/blender-5-2-lts-release/"
+      "https://80.lv/articles/see-how-this-sparkly-glass-like-apple-was-made-in-blender",
+      "https://80.lv/articles/sculpting-scales-simulating-clothes-for-creature-chef-in-zbrush-marvelous-designer"
     ],
-    "image_filename": "model3d_20261016.png",
+    "image_filename": "model3d_20261017.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,13 +49,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/cdpr-says-its-first-original-ip-has-been-its-biggest-undertaking-yet",
-      "https://80.lv/articles/the-gta-6-launch-trailer-is-now-live-over-a-month-early",
-      "https://80.lv/articles/how-brigador-killers-makes-blowing-up-buildings-part-of-the-strategy",
-      "https://80.lv/articles/fortnite-is-coming-to-linux-as-epic-rebuilds-easy-anti-cheat",
-      "https://80.lv/articles/league-of-legends-music-band-k-da-teases-its-return"
+      "https://80.lv/articles/hidden-design-decisions-behind-believable-open-world-cities"
     ],
-    "image_filename": "ta_20261016.png",
+    "image_filename": "ta_20261017.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,10 +67,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313497",
-      "https://gnn.gamer.com.tw/detail.php?sn=313494"
+      "https://80.lv/articles/classic-tabletop-adventure-heroquest-is-coming-to-pc",
+      "https://gnn.gamer.com.tw/detail.php?sn=313584"
     ],
-    "image_filename": "globalgames_20261016.png",
+    "image_filename": "globalgames_20261017.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,11 +82,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/pc/caves-of-qud-diaspora-breaks-new-ground-by-being-the-first-early-access-dlc-release-on-steam",
-      "https://gnn.gamer.com.tw/detail.php?sn=313495",
-      "https://store.steampowered.com/news/276074/"
+      "https://gnn.gamer.com.tw/detail.php?sn=313582",
+      "https://80.lv/articles/getting-over-it-meets-nokia-nostalgia-in-new-indie-game-flipping-is-hard",
+      "https://store.steampowered.com/news/286827/"
     ],
-    "image_filename": "indie_20261016.png",
+    "image_filename": "indie_20261017.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -100,10 +98,11 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313498",
-      "https://gnn.gamer.com.tw/detail.php?sn=313493"
+      "https://gnn.gamer.com.tw/detail.php?sn=313581",
+      "https://gnn.gamer.com.tw/detail.php?sn=313580",
+      "https://gnn.gamer.com.tw/detail.php?sn=313586"
     ],
-    "image_filename": "local_20261016.png",
+    "image_filename": "local_20261017.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -114,11 +113,9 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313496",
-      "https://www.gamedeveloper.com/pc/caves-of-qud-diaspora-breaks-new-ground-by-being-the-first-early-access-dlc-release-on-steam",
-      "https://www.unrealengine.com/developer-interviews/silent-hill-townfall-delivers-haunting-psychological-horror-at-its-very-best-with-ue5"
+      "https://www.gamedeveloper.com/design/busting-myths-in-game-writing-ft-bruno-dias-aysha-farah-andrea-saravia-perez"
     ],
-    "image_filename": "producer_20261016.png",
+    "image_filename": "producer_20261017.png",
     "image_keywords": [
       "marketing",
       "development",
