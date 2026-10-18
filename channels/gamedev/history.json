@@ -1,22 +1,4 @@
 {
-  "2026-09-17": [
-    "https://www.gamedeveloper.com/production/activision-blizzard-sued-by-former-employee-over-sexual-harassment",
-    "https://www.blendernation.com/2026/09/16/beginner-modelling-blender-tutorial-model-an-x-wing/",
-    "https://80.lv/articles/dissectible-anatomy-lets-users-cut-tear-virtual-bodies-in-real-time",
-    "https://80.lv/articles/texlab-packing-pbr-maps-inside-ue5-without-lying-about-the-preview",
-    "https://80.lv/articles/have-a-look-at-wip-ivy-generator-for-the-last-of-us-like-damage-control-tool",
-    "https://www.gamedeveloper.com/business/report-mindseye-developer-build-a-rocket-boy-seemingly-closing-after-more-layoffs",
-    "https://www.gamedeveloper.com/business/shinji-mikami-to-join-aias-hall-of-fame-at-2026-dice-awards",
-    "https://store.steampowered.com/news/276347/",
-    "https://80.lv/articles/10-great-party-based-rpgs-now-discounted-on-steam",
-    "https://80.lv/articles/80-level-contest-win-a-steam-key-for-jump-king-quest-reach-new-heights-fall-back-down",
-    "https://gnn.gamer.com.tw/detail.php?sn=311836",
-    "https://gnn.gamer.com.tw/detail.php?sn=311835",
-    "https://gnn.gamer.com.tw/detail.php?sn=311834",
-    "https://gnn.gamer.com.tw/detail.php?sn=311833",
-    "https://gnn.gamer.com.tw/detail.php?sn=311832",
-    "https://gnn.gamer.com.tw/detail.php?sn=311831"
-  ],
   "2026-09-18": [
     "https://gnn.gamer.com.tw/detail.php?sn=311942",
     "https://www.gamedeveloper.com/events/unreal-fest",
@@ -503,5 +485,18 @@
     "https://gnn.gamer.com.tw/detail.php?sn=313580",
     "https://gnn.gamer.com.tw/detail.php?sn=313586",
     "https://www.gamedeveloper.com/design/busting-myths-in-game-writing-ft-bruno-dias-aysha-farah-andrea-saravia-perez"
+  ],
+  "2026-10-18": [
+    "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/",
+    "https://80.lv/articles/blender-is-hiring-new-job-openings-for-software-devops-engineers",
+    "https://80.lv/articles/kenney-shape-tool-for-generating-extruded-3d-models-from-2d-pixel-art-is-now-free",
+    "https://80.lv/articles/see-how-you-can-make-a-blender-animation-of-spider-man-skating",
+    "https://godotengine.org/article/rendering-cpu-optimizations/",
+    "https://80.lv/articles/this-tool-speeds-up-texturing-workflow-between-painter-ue5",
+    "https://gnn.gamer.com.tw/detail.php?sn=313589",
+    "https://store.steampowered.com/news/276347/",
+    "https://80.lv/articles/this-language-based-puzzle-game-is-hand-painted-in-watercolor",
+    "https://gnn.gamer.com.tw/detail.php?sn=313590",
+    "https://gnn.gamer.com.tw/detail.php?sn=313588"
   ]
 }

@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313587"
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/"
     ],
-    "image_filename": "headline_20261017.png",
+    "image_filename": "headline_20261018.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,27 +14,13 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://www.unrealengine.com/learning/check-out-the-top-fortnite-islands-from-the-uefn-student-bootcamp",
-      "https://unity.com/blog/foxy-dumplings-cross-platform-development"
-    ],
-    "image_filename": "engine_20261017.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/see-how-this-sparkly-glass-like-apple-was-made-in-blender",
-      "https://80.lv/articles/sculpting-scales-simulating-clothes-for-creature-chef-in-zbrush-marvelous-designer"
+      "https://80.lv/articles/blender-is-hiring-new-job-openings-for-software-devops-engineers",
+      "https://80.lv/articles/kenney-shape-tool-for-generating-extruded-3d-models-from-2d-pixel-art-is-now-free",
+      "https://80.lv/articles/see-how-you-can-make-a-blender-animation-of-spider-man-skating"
     ],
-    "image_filename": "model3d_20261017.png",
+    "image_filename": "model3d_20261018.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,9 +35,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/hidden-design-decisions-behind-believable-open-world-cities"
+      "https://godotengine.org/article/rendering-cpu-optimizations/",
+      "https://80.lv/articles/this-tool-speeds-up-texturing-workflow-between-painter-ue5"
     ],
-    "image_filename": "ta_20261017.png",
+    "image_filename": "ta_20261018.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -67,10 +54,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/classic-tabletop-adventure-heroquest-is-coming-to-pc",
-      "https://gnn.gamer.com.tw/detail.php?sn=313584"
+      "https://gnn.gamer.com.tw/detail.php?sn=313589",
+      "https://store.steampowered.com/news/276347/"
     ],
-    "image_filename": "globalgames_20261017.png",
+    "image_filename": "globalgames_20261018.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,11 +69,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313582",
-      "https://80.lv/articles/getting-over-it-meets-nokia-nostalgia-in-new-indie-game-flipping-is-hard",
-      "https://store.steampowered.com/news/286827/"
+      "https://80.lv/articles/this-language-based-puzzle-game-is-hand-painted-in-watercolor"
     ],
-    "image_filename": "indie_20261017.png",
+    "image_filename": "indie_20261018.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -98,29 +83,15 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313581",
-      "https://gnn.gamer.com.tw/detail.php?sn=313580",
-      "https://gnn.gamer.com.tw/detail.php?sn=313586"
+      "https://gnn.gamer.com.tw/detail.php?sn=313590",
+      "https://gnn.gamer.com.tw/detail.php?sn=313588"
     ],
-    "image_filename": "local_20261017.png",
+    "image_filename": "local_20261018.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.gamedeveloper.com/design/busting-myths-in-game-writing-ft-bruno-dias-aysha-farah-andrea-saravia-perez"
-    ],
-    "image_filename": "producer_20261017.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]

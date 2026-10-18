@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://variety.com/2026/film/columns/peter-rice-hired-by-netflix-ted-sarandos-1236914367/"
+      "https://variety.com/2026/film/news/quentin-tarantino-confirms-script-for-tenth-film-1236915169/"
     ],
-    "image_filename": "headline_20261017.png",
+    "image_filename": "headline_20261018.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,20 +18,17 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/2026/10/brad-caleb-kane-teases-it-welcome-to-derry-season-2-pennywise-1237166286/",
-      "https://deadline.com/2026/10/diablo-cody-jennifers-body-2-more-sympathetic-1237166245/",
-      "https://variety.com/2026/film/news/red-rising-movie-paramount-hunger-games-director-books-1236914459/",
-      "https://variety.com/lists/street-fighter-cast-video-game-vs-live-action/",
-      "https://deadline.com/2026/10/whalefall-dad-son-themes-director-author-explain-set-visit-1237158531/",
-      "https://deadline.com/2026/10/la-bola-negra-directors-interview-los-javis-1237165637/",
-      "https://www.firstshowing.net/2026/final-official-trailer-for-you-cant-leave-survival-horror-thriller-film/",
-      "https://www.firstshowing.net/2026/trailer-for-loves-company-indie-comedy-with-rachel-dratch/",
-      "https://www.firstshowing.net/2026/first-trailer-for-forty-love-french-tennis-film-with-romeo-beckham/",
+      "https://deadline.com/2026/10/james-mcavoy-pitched-star-trek-series-young-picard-1237166532/",
+      "https://deadline.com/2026/10/paul-mccartney-concerned-paul-mescal-markedly-shorter-beatles-1237166503/",
+      "https://deadline.com/2026/10/clive-barker-hellraiser-revival-reignited-ideas-film-franchise-1237166512/",
+      "https://deadline.com/2026/10/street-fighter-orville-peck-tried-kylie-minogue-cameo-1237166445/",
+      "https://variety.com/2026/film/news/harry-styles-john-wilson-tour-documentary-universal-1236914875/",
+      "https://variety.com/2026/film/news/klara-and-the-sun-review-1236914992/",
       "https://www.cartoonbrew.com/feature-film/disney-hexed-30-minutes-footage-view-conference-267989.html",
-      "https://www.cartoonbrew.com/shorts/oscars-short-cosmonauts-leo-cernic-267608.html",
-      "https://www.firstshowing.net/2026/watch-adorable-animated-short-matcha-mountain-made-at-gobelins/"
+      "https://www.cartoonbrew.com/events/hoppers-tom-the-lizard-daniel-chong-nicole-paradis-grindle-267980.html",
+      "https://www.cartoonbrew.com/shorts/oscars-short-cosmonauts-leo-cernic-267608.html"
     ],
-    "image_filename": "production_20261017.png",
+    "image_filename": "production_20261018.png",
     "image_keywords": [
       "film",
       "production",
@@ -46,12 +43,13 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/10/bryson-fire-malibu-1237158950/",
-      "https://www.boxofficemojo.com/date/2026-10-17/",
-      "https://www.cartoonbrew.com/executives/david-zaslav-606-million-compensation-267972.html",
-      "https://www.cartoonbrew.com/events/hoppers-tom-the-lizard-daniel-chong-nicole-paradis-grindle-267980.html"
+      "https://www.boxofficemojo.com/date/2026-10-18/",
+      "https://variety.com/2026/film/news/james-mcavoy-split-only-film-that-consistently-pays-me-1236915162/",
+      "https://www.cartoonbrew.com/artist-rights/wia-jinko-gotoh-marge-dean-268021.html",
+      "https://www.cartoonbrew.com/newsletter/animations-creative-divide-netflixs-layoffs-zaslavs-millions-268012.html",
+      "https://www.cartoonbrew.com/executives/david-zaslav-606-million-compensation-267972.html"
     ],
-    "image_filename": "boxoffice_20261017.png",
+    "image_filename": "boxoffice_20261018.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -62,13 +60,11 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://variety.com/2026/film/news/netflix-peter-rice-bajaria-messy-dan-lin-jinny-howe-nbcu-1236914573/",
-      "https://variety.com/2026/film/news/billy-evans-defends-you-can-see-everything-elizabeth-holmes-insane-1236914043/",
-      "https://www.firstshowing.net/2026/maddie-ziegler-in-fun-time-loop-comedy-in-a-holidaze-official-trailer/",
-      "https://www.firstshowing.net/2026/final-promo-spots-for-jennifer-peedoms-tenzing-now-on-apple-tv/",
-      "https://www.cartoonbrew.com/newsletter/animations-creative-divide-netflixs-layoffs-zaslavs-millions-268012.html"
+      "https://deadline.com/2026/10/jaime-pressly-defends-mom-co-stars-chuck-lorre-memoir-1237166522/",
+      "https://deadline.com/2026/10/snl-uk-donald-trump-first-time-andy-burnham-zelensky-1237166466/",
+      "https://variety.com/2026/film/news/paul-bettany-johnny-depp-hadnt-spoken-in-years-libel-trial-1236915108/"
     ],
-    "image_filename": "streaming_20261017.png",
+    "image_filename": "streaming_20261018.png",
     "image_keywords": [
       "netflix",
       "disney+",
