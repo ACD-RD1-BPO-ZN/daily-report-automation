@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313593"
+      "https://www.gamedeveloper.com/programming/moonlighter-developer-delays-public-playtest-of-next-game-over-concerns-of-ai-cloning"
     ],
-    "image_filename": "headline_20261019.png",
+    "image_filename": "headline_20261020.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,68 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/"
+    ],
+    "image_filename": "engine_20261020.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
+    "section_name": "Model3D",
+    "source_urls": [
+      "https://www.blendernation.com/2026/10/19/short-science-film-life-in-a-drop/",
+      "https://www.blendernation.com/2026/10/19/sticking-hand-drawn-ink-lines-to-3d-animation-with-blender-grease-pencil-and-geometry-nodes-2/"
+    ],
+    "image_filename": "model3d_20261020.png",
+    "image_keywords": [
+      "3d",
+      "modeling",
+      "sculpt",
+      "topology",
+      "blender",
+      "maya",
+      "zbrush",
+      "substance"
+    ]
+  },
+  {
+    "section_name": "TA",
+    "source_urls": [
+      "https://80.lv/articles/brunch-studio-reveals-how-they-made-the-valorant-through-the-cracks-cinematic-trailer/",
+      "https://80.lv/articles/painting-image-editing-workspace-with-live-brush-stroke-previews-meet-moko/",
+      "https://80.lv/articles/gunfire-reborn-s-dragonchaser-reimagined-as-painterly-3d-asset-in-wayfinder-s-style/"
+    ],
+    "image_filename": "ta_20261020.png",
+    "image_keywords": [
+      "screenshot",
+      "preview",
+      "featured",
+      "spotlight",
+      "render",
+      "engine",
+      "technology",
+      "shader",
+      "scene"
+    ]
+  },
+  {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313592"
+      "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
+      "https://gnn.gamer.com.tw/detail.php?sn=313661",
+      "https://gnn.gamer.com.tw/detail.php?sn=313664",
+      "https://gnn.gamer.com.tw/detail.php?sn=313663",
+      "https://gnn.gamer.com.tw/detail.php?sn=313659",
+      "https://80.lv/articles/black-white-remaster-might-be-in-the-works-peter-molyneux-says/"
     ],
-    "image_filename": "globalgames_20261019.png",
+    "image_filename": "globalgames_20261020.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -28,25 +85,29 @@
     ]
   },
   {
-    "section_name": "Local",
+    "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313591"
+      "https://gnn.gamer.com.tw/detail.php?sn=313665",
+      "https://gnn.gamer.com.tw/detail.php?sn=313662",
+      "https://80.lv/articles/get-six-awesome-pc-games-for-usd9-99-with-the-gamescom-asia-bundle"
     ],
-    "image_filename": "local_20261019.png",
+    "image_filename": "indie_20261020.png",
     "image_keywords": [
-      "event",
-      "meetup",
-      "poster",
-      "community"
+      "gameplay",
+      "chart",
+      "capsule",
+      "steam",
+      "indie"
     ]
   },
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313593",
-      "https://gnn.gamer.com.tw/detail.php?sn=313592"
+      "https://www.gamedeveloper.com/programming/moonlighter-developer-delays-public-playtest-of-next-game-over-concerns-of-ai-cloning",
+      "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/"
     ],
-    "image_filename": "producer_20261019.png",
+    "image_filename": "producer_20261020.png",
     "image_keywords": [
       "marketing",
       "development",
