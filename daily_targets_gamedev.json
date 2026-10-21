@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/moonlighter-developer-delays-public-playtest-of-next-game-over-concerns-of-ai-cloning"
+      "https://www.gamedeveloper.com/production/fuse-games-ceo-breaks-down-codev-framework-for-star-wars-galactic-racer"
     ],
-    "image_filename": "headline_20261020.png",
+    "image_filename": "headline_20261021.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/"
+      "https://80.lv/articles/learn-unreal-engine-5-game-development-with-over-24-courses-from-this-bundle"
     ],
-    "image_filename": "engine_20261020.png",
+    "image_filename": "engine_20261021.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/19/short-science-film-life-in-a-drop/",
-      "https://www.blendernation.com/2026/10/19/sticking-hand-drawn-ink-lines-to-3d-animation-with-blender-grease-pencil-and-geometry-nodes-2/"
+      "https://www.blendernation.com/2026/10/20/cute-pumpkin-carving-sculpt/",
+      "https://80.lv/articles/3d-modeling-cad-software-plasticity-2026-2-has-been-released"
     ],
-    "image_filename": "model3d_20261020.png",
+    "image_filename": "model3d_20261021.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,11 +48,9 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/brunch-studio-reveals-how-they-made-the-valorant-through-the-cracks-cinematic-trailer/",
-      "https://80.lv/articles/painting-image-editing-workspace-with-live-brush-stroke-previews-meet-moko/",
-      "https://80.lv/articles/gunfire-reborn-s-dragonchaser-reimagined-as-painterly-3d-asset-in-wayfinder-s-style/"
+      "https://80.lv/articles/this-wip-mod-adds-path-tracing-to-fallout-new-vegas"
     ],
-    "image_filename": "ta_20261020.png",
+    "image_filename": "ta_20261021.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,14 +66,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
-      "https://gnn.gamer.com.tw/detail.php?sn=313661",
-      "https://gnn.gamer.com.tw/detail.php?sn=313664",
-      "https://gnn.gamer.com.tw/detail.php?sn=313663",
-      "https://gnn.gamer.com.tw/detail.php?sn=313659",
-      "https://80.lv/articles/black-white-remaster-might-be-in-the-works-peter-molyneux-says/"
+      "https://www.gamedeveloper.com/business/griffin-gaming-partners-entertainment-360-jointly-unveil-production-company-hitpoint-entertainment",
+      "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
+      "https://gnn.gamer.com.tw/detail.php?sn=313749"
     ],
-    "image_filename": "globalgames_20261020.png",
+    "image_filename": "globalgames_20261021.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -87,11 +82,12 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313665",
-      "https://gnn.gamer.com.tw/detail.php?sn=313662",
-      "https://80.lv/articles/get-six-awesome-pc-games-for-usd9-99-with-the-gamescom-asia-bundle"
+      "https://gnn.gamer.com.tw/detail.php?sn=313747",
+      "https://gnn.gamer.com.tw/detail.php?sn=313746",
+      "https://80.lv/articles/jackbox-esque-social-deduction-game-where-you-help-your-friends-or-betray-them",
+      "https://80.lv/articles/protect-bizarre-stray-animals-in-this-survival-horror-animal-shelter-simulator"
     ],
-    "image_filename": "indie_20261020.png",
+    "image_filename": "indie_20261021.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -101,18 +97,18 @@
     ]
   },
   {
-    "section_name": "Producer",
+    "section_name": "Local",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/moonlighter-developer-delays-public-playtest-of-next-game-over-concerns-of-ai-cloning",
-      "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
-      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-5/"
+      "https://gnn.gamer.com.tw/detail.php?sn=313751",
+      "https://gnn.gamer.com.tw/detail.php?sn=313750",
+      "https://gnn.gamer.com.tw/detail.php?sn=313748"
     ],
-    "image_filename": "producer_20261020.png",
+    "image_filename": "local_20261021.png",
     "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
+      "event",
+      "meetup",
+      "poster",
+      "community"
     ]
   }
 ]
