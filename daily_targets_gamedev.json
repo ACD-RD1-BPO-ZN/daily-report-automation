@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/fuse-games-ceo-breaks-down-codev-framework-for-star-wars-galactic-racer"
+      "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development"
     ],
-    "image_filename": "headline_20261021.png",
+    "image_filename": "headline_20261022.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://80.lv/articles/learn-unreal-engine-5-game-development-with-over-24-courses-from-this-bundle"
+      "https://unity.com/blog/mobile-gaming-advertising-full-funnel-strategy-for-marketers"
     ],
-    "image_filename": "engine_20261021.png",
+    "image_filename": "engine_20261022.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,10 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/20/cute-pumpkin-carving-sculpt/",
-      "https://80.lv/articles/3d-modeling-cad-software-plasticity-2026-2-has-been-released"
+      "https://www.blendernation.com/2026/10/21/discover-some-of-blenders-most-underrated-modeling-tools/"
     ],
-    "image_filename": "model3d_20261021.png",
+    "image_filename": "model3d_20261022.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -48,9 +47,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-wip-mod-adds-path-tracing-to-fallout-new-vegas"
+      "https://80.lv/articles/substance-3d-painter-12-2-lets-artists-paint-baking-cages-directly-on-models/",
+      "https://80.lv/articles/tomb-raider-director-explains-how-3d-level-design-has-evolved-over-30-years/"
     ],
-    "image_filename": "ta_20261021.png",
+    "image_filename": "ta_20261022.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +66,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/griffin-gaming-partners-entertainment-360-jointly-unveil-production-company-hitpoint-entertainment",
-      "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
-      "https://gnn.gamer.com.tw/detail.php?sn=313749"
+      "https://80.lv/articles/cdpr-somehow-found-another-reason-to-update-cyberpunk-2077-again-for-free/",
+      "https://gnn.gamer.com.tw/detail.php?sn=313820",
+      "https://gnn.gamer.com.tw/detail.php?sn=313817"
     ],
-    "image_filename": "globalgames_20261021.png",
+    "image_filename": "globalgames_20261022.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,12 +82,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313747",
-      "https://gnn.gamer.com.tw/detail.php?sn=313746",
-      "https://80.lv/articles/jackbox-esque-social-deduction-game-where-you-help-your-friends-or-betray-them",
-      "https://80.lv/articles/protect-bizarre-stray-animals-in-this-survival-horror-animal-shelter-simulator"
+      "https://80.lv/articles/what-to-play-during-steam-s-next-fest-2026-best-games-to-try/"
     ],
-    "image_filename": "indie_20261021.png",
+    "image_filename": "indie_20261022.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -99,16 +96,30 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313751",
-      "https://gnn.gamer.com.tw/detail.php?sn=313750",
-      "https://gnn.gamer.com.tw/detail.php?sn=313748"
+      "https://gnn.gamer.com.tw/detail.php?sn=313819",
+      "https://gnn.gamer.com.tw/detail.php?sn=313818",
+      "https://gnn.gamer.com.tw/detail.php?sn=313816"
     ],
-    "image_filename": "local_20261021.png",
+    "image_filename": "local_20261022.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development",
+      "https://unity.com/blog/mobile-gaming-advertising-full-funnel-strategy-for-marketers"
+    ],
+    "image_filename": "producer_20261022.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
