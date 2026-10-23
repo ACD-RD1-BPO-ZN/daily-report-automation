@@ -1,26 +1,4 @@
 {
-  "2026-09-22": [
-    "https://www.unrealengine.com/developer-interviews/tt-games-brings-gotham-city-to-life-in-lego-batman-legacy-of-the-dark-knight",
-    "https://gnn.gamer.com.tw/detail.php?sn=312151",
-    "https://unity.com/blog/unity-simulation-pro-early-access",
-    "https://www.blender.org/news/show-your-support-for-blender-projects/",
-    "https://www.blendernation.com/2026/09/21/animation-workflow-course/",
-    "https://80.lv/articles/this-tool-merges-all-your-blender-add-on-panels-into-one-menu",
-    "https://80.lv/articles/watch-this-blender-tutorial-if-you-re-starting-character-rigging",
-    "https://www.blendernation.com/2026/09/21/video-2026ad/",
-    "https://80.lv/articles/check-out-this-impressive-painterly-style-fighting-animation",
-    "https://80.lv/articles/give-animated-characters-realistic-jiggle-motion-with-this-unity-tool",
-    "https://80.lv/articles/hypnotizing-fluid-simulation-based-on-w-t-s-research-on-lagrangian-waves",
-    "https://www.gamedeveloper.com/console/bungie-declares-it-s-not-done-with-destiny-as-it-lays-out-studio-s-future",
-    "https://www.gamedeveloper.com/console/sony-appears-to-censor-lgbtq-content-marvel-s-wolverine-for-some-regions",
-    "https://www.gamedeveloper.com/business/kojima-productions-survival-story-may-sound-strikingly-familiar-to-struggling-devs",
-    "https://www.gamedeveloper.com/business/french-publisher-dear-villagers-confirms-layoffs",
-    "https://gnn.gamer.com.tw/detail.php?sn=312148",
-    "https://gnn.gamer.com.tw/detail.php?sn=312146",
-    "https://gnn.gamer.com.tw/detail.php?sn=312150",
-    "https://gnn.gamer.com.tw/detail.php?sn=312149",
-    "https://gnn.gamer.com.tw/detail.php?sn=312147"
-  ],
   "2026-09-23": [
     "https://gnn.gamer.com.tw/detail.php?sn=312213",
     "https://unity.com/blog/content-directories-beyond-the-assetbundle",
@@ -494,5 +472,25 @@
     "https://gnn.gamer.com.tw/detail.php?sn=313819",
     "https://gnn.gamer.com.tw/detail.php?sn=313818",
     "https://gnn.gamer.com.tw/detail.php?sn=313816"
+  ],
+  "2026-10-23": [
+    "https://www.unrealengine.com/news/2026-epic-ai-megajam",
+    "https://unity.com/blog/unity-cli-usage-data-ai-coding-agents",
+    "https://unity.com/blog/skipping-domain-reload-faster-iteration-using-the-methodreload-feature",
+    "https://www.blender.org/news/show-your-support-for-blender-projects/",
+    "https://www.blendernation.com/2026/10/22/202916/",
+    "https://www.blendernation.com/2026/10/22/fix-merged-geometry-after-voxel-remeshing/",
+    "https://80.lv/articles/terraforming-the-alters-last-variable-with-blender-zbrush-ue5",
+    "https://80.lv/articles/interview-how-final-fantasy-resonance-turns-hd-2d-pixel-art-into-a-cinematic-experience",
+    "https://80.lv/articles/building-an-abandoned-the-last-of-us-inspired-mediterranean-house-with-custom-materials",
+    "https://80.lv/articles/trailer-for-bioware-s-canceled-mass-effect-game-apparently-leaks-online",
+    "https://80.lv/articles/respawn-dice-are-reportedly-working-on-star-wars-battlefront-3",
+    "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
+    "https://gnn.gamer.com.tw/detail.php?sn=313899",
+    "https://gnn.gamer.com.tw/detail.php?sn=313900",
+    "https://gnn.gamer.com.tw/detail.php?sn=313903",
+    "https://gnn.gamer.com.tw/detail.php?sn=313902",
+    "https://gnn.gamer.com.tw/detail.php?sn=313901",
+    "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs"
   ]
 }

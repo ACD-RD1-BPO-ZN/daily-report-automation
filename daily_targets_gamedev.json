@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development"
+      "https://www.unrealengine.com/news/2026-epic-ai-megajam"
     ],
-    "image_filename": "headline_20261022.png",
+    "image_filename": "headline_20261023.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,11 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://unity.com/blog/mobile-gaming-advertising-full-funnel-strategy-for-marketers"
+      "https://www.unrealengine.com/news/2026-epic-ai-megajam",
+      "https://unity.com/blog/unity-cli-usage-data-ai-coding-agents",
+      "https://unity.com/blog/skipping-domain-reload-faster-iteration-using-the-methodreload-feature"
     ],
-    "image_filename": "engine_20261022.png",
+    "image_filename": "engine_20261023.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +32,11 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/21/discover-some-of-blenders-most-underrated-modeling-tools/"
+      "https://www.blender.org/news/show-your-support-for-blender-projects/",
+      "https://www.blendernation.com/2026/10/22/202916/",
+      "https://www.blendernation.com/2026/10/22/fix-merged-geometry-after-voxel-remeshing/"
     ],
-    "image_filename": "model3d_20261022.png",
+    "image_filename": "model3d_20261023.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,10 +51,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/substance-3d-painter-12-2-lets-artists-paint-baking-cages-directly-on-models/",
-      "https://80.lv/articles/tomb-raider-director-explains-how-3d-level-design-has-evolved-over-30-years/"
+      "https://80.lv/articles/terraforming-the-alters-last-variable-with-blender-zbrush-ue5",
+      "https://80.lv/articles/interview-how-final-fantasy-resonance-turns-hd-2d-pixel-art-into-a-cinematic-experience",
+      "https://80.lv/articles/building-an-abandoned-the-last-of-us-inspired-mediterranean-house-with-custom-materials"
     ],
-    "image_filename": "ta_20261022.png",
+    "image_filename": "ta_20261023.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +71,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/cdpr-somehow-found-another-reason-to-update-cyberpunk-2077-again-for-free/",
-      "https://gnn.gamer.com.tw/detail.php?sn=313820",
-      "https://gnn.gamer.com.tw/detail.php?sn=313817"
+      "https://80.lv/articles/trailer-for-bioware-s-canceled-mass-effect-game-apparently-leaks-online",
+      "https://80.lv/articles/respawn-dice-are-reportedly-working-on-star-wars-battlefront-3",
+      "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
+      "https://gnn.gamer.com.tw/detail.php?sn=313899",
+      "https://gnn.gamer.com.tw/detail.php?sn=313900"
     ],
-    "image_filename": "globalgames_20261022.png",
+    "image_filename": "globalgames_20261023.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,9 +89,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/what-to-play-during-steam-s-next-fest-2026-best-games-to-try/"
+      "https://gnn.gamer.com.tw/detail.php?sn=313903",
+      "https://gnn.gamer.com.tw/detail.php?sn=313902"
     ],
-    "image_filename": "indie_20261022.png",
+    "image_filename": "indie_20261023.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -96,11 +104,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313819",
-      "https://gnn.gamer.com.tw/detail.php?sn=313818",
-      "https://gnn.gamer.com.tw/detail.php?sn=313816"
+      "https://gnn.gamer.com.tw/detail.php?sn=313901"
     ],
-    "image_filename": "local_20261022.png",
+    "image_filename": "local_20261023.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -111,10 +117,9 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development",
-      "https://unity.com/blog/mobile-gaming-advertising-full-funnel-strategy-for-marketers"
+      "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs"
     ],
-    "image_filename": "producer_20261022.png",
+    "image_filename": "producer_20261023.png",
     "image_keywords": [
       "marketing",
       "development",
