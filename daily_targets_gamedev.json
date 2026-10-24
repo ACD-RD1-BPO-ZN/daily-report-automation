@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.unrealengine.com/news/2026-epic-ai-megajam"
+      "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs"
     ],
-    "image_filename": "headline_20261023.png",
+    "image_filename": "headline_20261024.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,29 +14,12 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://www.unrealengine.com/news/2026-epic-ai-megajam",
-      "https://unity.com/blog/unity-cli-usage-data-ai-coding-agents",
-      "https://unity.com/blog/skipping-domain-reload-faster-iteration-using-the-methodreload-feature"
-    ],
-    "image_filename": "engine_20261023.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blender.org/news/show-your-support-for-blender-projects/",
-      "https://www.blendernation.com/2026/10/22/202916/",
-      "https://www.blendernation.com/2026/10/22/fix-merged-geometry-after-voxel-remeshing/"
+      "https://code.blender.org/2026/07/remote-asset-libraries/",
+      "https://www.blendernation.com/2026/10/23/best-of-blender-artists-2026-43/"
     ],
-    "image_filename": "model3d_20261023.png",
+    "image_filename": "model3d_20261024.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -51,11 +34,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/terraforming-the-alters-last-variable-with-blender-zbrush-ue5",
-      "https://80.lv/articles/interview-how-final-fantasy-resonance-turns-hd-2d-pixel-art-into-a-cinematic-experience",
-      "https://80.lv/articles/building-an-abandoned-the-last-of-us-inspired-mediterranean-house-with-custom-materials"
+      "https://80.lv/articles/bluey-s-simple-2d-look-required-gameloft-s-most-technically-challenging-art-pipeline",
+      "https://80.lv/articles/how-tripo-p2-0-astra-work-together-in-blender-and-unity",
+      "https://80.lv/articles/this-dreamy-wooden-cabin-scene-with-glowing-water-fx-was-made-with-houdini"
     ],
-    "image_filename": "ta_20261023.png",
+    "image_filename": "ta_20261024.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -71,13 +54,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/trailer-for-bioware-s-canceled-mass-effect-game-apparently-leaks-online",
-      "https://80.lv/articles/respawn-dice-are-reportedly-working-on-star-wars-battlefront-3",
-      "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
-      "https://gnn.gamer.com.tw/detail.php?sn=313899",
-      "https://gnn.gamer.com.tw/detail.php?sn=313900"
+      "https://gnn.gamer.com.tw/detail.php?sn=313915",
+      "https://gnn.gamer.com.tw/detail.php?sn=313914",
+      "https://gnn.gamer.com.tw/detail.php?sn=313912",
+      "https://gnn.gamer.com.tw/detail.php?sn=313911",
+      "https://gnn.gamer.com.tw/detail.php?sn=313909"
     ],
-    "image_filename": "globalgames_20261023.png",
+    "image_filename": "globalgames_20261024.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -89,10 +72,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313903",
-      "https://gnn.gamer.com.tw/detail.php?sn=313902"
+      "https://80.lv/articles/on-the-lookout-for-games-that-make-you-feel-something-raw-fury-ceo-on-game-publishing",
+      "https://80.lv/articles/this-long-lost-classic-d-n-d-rpg-is-finally-coming-to-steam-soon"
     ],
-    "image_filename": "indie_20261023.png",
+    "image_filename": "indie_20261024.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -104,9 +87,9 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313901"
+      "https://gnn.gamer.com.tw/detail.php?sn=313910"
     ],
-    "image_filename": "local_20261023.png",
+    "image_filename": "local_20261024.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -117,9 +100,10 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs"
+      "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
+      "https://code.blender.org/2026/07/remote-asset-libraries/"
     ],
-    "image_filename": "producer_20261023.png",
+    "image_filename": "producer_20261024.png",
     "image_keywords": [
       "marketing",
       "development",

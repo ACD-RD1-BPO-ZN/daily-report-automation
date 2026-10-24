@@ -1,21 +1,4 @@
 {
-  "2026-09-23": [
-    "https://gnn.gamer.com.tw/detail.php?sn=312213",
-    "https://unity.com/blog/content-directories-beyond-the-assetbundle",
-    "https://code.blender.org/2026/07/remote-asset-libraries/",
-    "https://www.blendernation.com/2026/09/22/exode-short-film-made-with-blender-2/",
-    "https://www.blendernation.com/2026/09/22/light-it-up-4-0-0-a-free-add-on-for-studio-lighting-presets/",
-    "https://80.lv/articles/lara-croft-and-tomb-raider-celebrate-their-30th-anniversary-this-october",
-    "https://80.lv/articles/pok-mon-celebrates-its-30th-anniversary-with-rare-new-releases",
-    "https://www.gamedeveloper.com/business/escape-from-tarkov-dev-wants-to-bet-on-risky-games-with-its-new-publishing-arm",
-    "https://www.gamedeveloper.com/production/-do-not-rockstar-outlines-modding-rules-before-gta-vi-touches-down",
-    "https://gnn.gamer.com.tw/detail.php?sn=312211",
-    "https://gnn.gamer.com.tw/detail.php?sn=312210",
-    "https://www.gamedeveloper.com/business/-we-want-to-keep-it-very-simple-how-nex-playrground-is-beating-expectations-during-a-hardware-crisis",
-    "https://gnn.gamer.com.tw/detail.php?sn=312212",
-    "https://gnn.gamer.com.tw/detail.php?sn=312208",
-    "https://gnn.gamer.com.tw/detail.php?sn=312209"
-  ],
   "2026-09-24": [
     "https://www.gamedeveloper.com/business/xbox-continues-reset-with-halo-studios-layoffs-and-undead-labs-divestment",
     "https://www.blendernation.com/2026/09/23/your-sci-fi-turret-looks-great-until-it-rotates-from-under-the-floor/",
@@ -492,5 +475,21 @@
     "https://gnn.gamer.com.tw/detail.php?sn=313902",
     "https://gnn.gamer.com.tw/detail.php?sn=313901",
     "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs"
+  ],
+  "2026-10-24": [
+    "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
+    "https://code.blender.org/2026/07/remote-asset-libraries/",
+    "https://www.blendernation.com/2026/10/23/best-of-blender-artists-2026-43/",
+    "https://80.lv/articles/bluey-s-simple-2d-look-required-gameloft-s-most-technically-challenging-art-pipeline",
+    "https://80.lv/articles/how-tripo-p2-0-astra-work-together-in-blender-and-unity/",
+    "https://80.lv/articles/this-dreamy-wooden-cabin-scene-with-glowing-water-fx-was-made-with-houdini/",
+    "https://gnn.gamer.com.tw/detail.php?sn=313915",
+    "https://gnn.gamer.com.tw/detail.php?sn=313914",
+    "https://gnn.gamer.com.tw/detail.php?sn=313912",
+    "https://gnn.gamer.com.tw/detail.php?sn=313911",
+    "https://gnn.gamer.com.tw/detail.php?sn=313909",
+    "https://80.lv/articles/on-the-lookout-for-games-that-make-you-feel-something-raw-fury-ceo-on-game-publishing/",
+    "https://80.lv/articles/this-long-lost-classic-d-d-rpg-is-finally-coming-to-steam-soon/",
+    "https://gnn.gamer.com.tw/detail.php?sn=313910"
   ]
 }
