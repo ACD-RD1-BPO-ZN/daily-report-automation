@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs"
+      "https://gnn.gamer.com.tw/detail.php?sn=313921"
     ],
-    "image_filename": "headline_20261024.png",
+    "image_filename": "headline_20261025.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,10 +16,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/07/remote-asset-libraries/",
-      "https://www.blendernation.com/2026/10/23/best-of-blender-artists-2026-43/"
+      "https://www.blender.org/news/blender-foundation-annual-report-2025/",
+      "https://www.blendernation.com/2026/10/24/polypaint-your-sculpts-heres-why/"
     ],
-    "image_filename": "model3d_20261024.png",
+    "image_filename": "model3d_20261025.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -34,11 +34,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/bluey-s-simple-2d-look-required-gameloft-s-most-technically-challenging-art-pipeline",
-      "https://80.lv/articles/how-tripo-p2-0-astra-work-together-in-blender-and-unity",
-      "https://80.lv/articles/this-dreamy-wooden-cabin-scene-with-glowing-water-fx-was-made-with-houdini"
+      "https://80.lv/articles/get-this-free-blender-add-on-that-makes-hair-meshes-thinner-at-the-ends",
+      "https://80.lv/articles/how-tripo-p2-0-astra-work-together-in-blender-and-unity"
     ],
-    "image_filename": "ta_20261024.png",
+    "image_filename": "ta_20261025.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -54,13 +53,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313915",
-      "https://gnn.gamer.com.tw/detail.php?sn=313914",
-      "https://gnn.gamer.com.tw/detail.php?sn=313912",
-      "https://gnn.gamer.com.tw/detail.php?sn=313911",
-      "https://gnn.gamer.com.tw/detail.php?sn=313909"
+      "https://gnn.gamer.com.tw/detail.php?sn=313922",
+      "https://gnn.gamer.com.tw/detail.php?sn=313920"
     ],
-    "image_filename": "globalgames_20261024.png",
+    "image_filename": "globalgames_20261025.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -72,10 +68,11 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/on-the-lookout-for-games-that-make-you-feel-something-raw-fury-ceo-on-game-publishing",
-      "https://80.lv/articles/this-long-lost-classic-d-n-d-rpg-is-finally-coming-to-steam-soon"
+      "https://80.lv/articles/check-out-this-relaxing-brutalist-city-builder-inspired-by-tiny-glade",
+      "https://80.lv/articles/this-long-lost-classic-d-n-d-rpg-is-finally-coming-to-steam-soon",
+      "https://gnn.gamer.com.tw/detail.php?sn=313917"
     ],
-    "image_filename": "indie_20261024.png",
+    "image_filename": "indie_20261025.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -87,9 +84,10 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313910"
+      "https://gnn.gamer.com.tw/detail.php?sn=313923",
+      "https://gnn.gamer.com.tw/detail.php?sn=313919"
     ],
-    "image_filename": "local_20261024.png",
+    "image_filename": "local_20261025.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -100,10 +98,9 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
-      "https://code.blender.org/2026/07/remote-asset-libraries/"
+      "https://80.lv/articles/on-the-lookout-for-games-that-make-you-feel-something-raw-fury-ceo-on-game-publishing"
     ],
-    "image_filename": "producer_20261024.png",
+    "image_filename": "producer_20261025.png",
     "image_keywords": [
       "marketing",
       "development",

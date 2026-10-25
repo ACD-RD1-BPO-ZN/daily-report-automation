@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/"
+      "https://variety.com/2026/film/news/sag-aftra-duncan-crabtree-ireland-contract-extension-1236930503/"
     ],
-    "image_filename": "headline_20261024.png",
+    "image_filename": "headline_20261025.png",
     "image_keywords": [
       "movie",
       "cinema",
@@ -18,18 +18,17 @@
   {
     "section_name": "Production",
     "source_urls": [
-      "https://deadline.com/feature/miami-vice-85-movie-news-updates-1237172205/",
-      "https://deadline.com/2026/10/klara-and-the-sun-songs-soundtrack-chopin-vivaldi-1237172171/",
-      "https://deadline.com/2026/10/indie-films-opening-only-living-pickpocket-in-new-york-wicker-1237171300/",
-      "https://www.firstshowing.net/2026/freaky-trailer-for-french-sci-fi-just-after-dawn-all-people-are-gone/",
-      "https://www.firstshowing.net/2026/full-trailer-for-doc-threeasfour-full-circle-about-fashion-designers/",
-      "https://www.firstshowing.net/2026/kelsey-bascom-has-diabetes-in-quarter-coming-of-age-film-trailer/",
-      "https://www.firstshowing.net/2026/final-featurettes-for-laikas-wildwood-must-see-fantasy-adventure/",
-      "https://www.firstshowing.net/2026/amusing-trailer-for-animated-movie-cloud-girl-about-a-magical-pen/",
-      "https://www.cartoonbrew.com/feature-film/moonfish-director-daniel-zvereff-268286.html",
-      "https://www.cartoonbrew.com/feature-film/game-of-pets-aaron-blabey-animated-movie-amazon-mgm-268292.html"
+      "https://www.firstshowing.net/2026/avengers-doomsday-extra-boring-baseball-themed-teaser/",
+      "https://variety.com/2026/film/columns/i-play-rocky-anthony-ippolito-sylvester-stallone-dog-1236930482/",
+      "https://variety.com/2026/film/news/nathan-fielder-you-can-see-everything-lance-oppenheim-1236916862/",
+      "https://variety.com/2026/film/columns/what-is-fjord-really-about-1236930049/",
+      "https://variety.com/2026/film/columns/the-crawling-alien-movie-1236930222/",
+      "https://variety.com/2026/film/columns/amanda-seyfried-you-can-see-everything-oscar-1236916757/",
+      "https://www.cartoonbrew.com/feature-film/meltdown-memories-when-the-wind-blows-at-40-268317.html",
+      "https://www.cartoonbrew.com/newsletter/laika-studio-visit-netflixs-buyback-billions-daniel-zvereff-on-moonfish-268320.html",
+      "https://www.cartoonbrew.com/awards/saba-director-liron-topaz-268294.html"
     ],
-    "image_filename": "production_20261024.png",
+    "image_filename": "production_20261025.png",
     "image_keywords": [
       "film",
       "production",
@@ -44,13 +43,9 @@
   {
     "section_name": "BoxOffice",
     "source_urls": [
-      "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
-      "https://variety.com/2026/film/people-news/ken-atchity-dead-the-meg-1236930069/",
-      "https://variety.com/2026/film/global/el-gouna-cinegouna-arab-film-industry-programs-1236929945/",
-      "https://www.cartoonbrew.com/sponsored-by-tokyo-international-film-festival/tiff-animation-lineup-ryota-fujitsu-268228.html",
-      "https://www.cartoonbrew.com/anime/sony-crunchyroll-aniplex-cloverworks-hayate-268302.html"
+      "https://www.boxofficemojo.com/date/2026-10-25/"
     ],
-    "image_filename": "boxoffice_20261024.png",
+    "image_filename": "boxoffice_20261025.png",
     "image_keywords": [
       "box office",
       "ticket",
@@ -61,11 +56,15 @@
   {
     "section_name": "Streaming",
     "source_urls": [
-      "https://deadline.com/2026/10/crazy-rich-asians-constance-wu-teases-funny-hbo-series-1237172108/",
-      "https://www.firstshowing.net/2026/official-trailer-for-dead-end-job-korean-supernatural-work-series/",
-      "https://anilist.co/anime/182300"
+      "https://deadline.com/2026/10/jessica-biel-modernize-7th-heaven-reboot-create-safe-space-1237172395/",
+      "https://deadline.com/2026/10/these-summer-storms-hulu-tv-series-erin-sara-foster-1237172245/",
+      "https://deadline.com/2026/10/chris-hansen-warner-bros-legal-action-the-vow-feels-personal-1237172408/",
+      "https://deadline.com/2026/10/kaitlin-olson-high-potential-pay-respects-matthew-lamb-mother-1237172405/",
+      "https://deadline.com/2026/10/snl-uk-andy-burnhams-gogglebox-special-cold-open-1237172411/",
+      "https://deadline.com/2026/10/snl-uk-cynthia-eriva-nigerian-wicked-sapphic-parody-1237172417/",
+      "https://www.cartoonbrew.com/series/gameoverse-full-season-glitch-productions-may-return-268390.html"
     ],
-    "image_filename": "streaming_20261024.png",
+    "image_filename": "streaming_20261025.png",
     "image_keywords": [
       "netflix",
       "disney+",
