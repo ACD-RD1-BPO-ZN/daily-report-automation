@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313936"
+      "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties"
     ],
-    "image_filename": "headline_20261026.png",
+    "image_filename": "headline_20261027.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,11 +14,27 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer"
+    ],
+    "image_filename": "engine_20261027.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://80.lv/articles/artist-shows-ziva-vfx-inspired-muscle-simulation-plug-in-for-3ds-max-maya"
+      "https://www.blendernation.com/2026/10/26/model-the-master-sword-from-zelda/",
+      "https://www.blendernation.com/2026/10/26/203024/",
+      "https://www.blender.org/press/20-years-open-movies/"
     ],
-    "image_filename": "model3d_20261026.png",
+    "image_filename": "model3d_20261027.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -33,9 +49,11 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-dreamy-wooden-cabin-scene-with-glowing-water-fx-was-made-with-houdini"
+      "https://80.lv/articles/reallusion-s-2026-3d-character-contest-meet-the-winners",
+      "https://80.lv/articles/free-blender-tool-for-dolly-zoom-camera-effect",
+      "https://80.lv/articles/how-to-use-blender-for-backgrounds-in-concept-art"
     ],
-    "image_filename": "ta_20261026.png",
+    "image_filename": "ta_20261027.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -51,10 +69,10 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313937",
-      "https://80.lv/articles/croteam-is-officially-working-on-serious-sam-the-third-encounter"
+      "https://www.gamedeveloper.com/console/xbox-coo-helen-chiang-leaves-role-shortly-after-its-creation",
+      "https://www.gamedeveloper.com/audio/obituary-voice-actor-eric-bauza-has-passed-away-at-46"
     ],
-    "image_filename": "globalgames_20261026.png",
+    "image_filename": "globalgames_20261027.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -66,9 +84,9 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/gamemaker-s-new-runtime-will-become-free-for-commercial-use"
+      "https://80.lv/articles/this-metroidvania-about-depressed-garbage-man-is-fully-hand-painted/"
     ],
-    "image_filename": "indie_20261026.png",
+    "image_filename": "indie_20261027.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -80,15 +98,30 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313936",
-      "https://gnn.gamer.com.tw/detail.php?sn=313934"
+      "https://gnn.gamer.com.tw/detail.php?sn=313939",
+      "https://gnn.gamer.com.tw/detail.php?sn=313938",
+      "https://gnn.gamer.com.tw/detail.php?sn=313935"
     ],
-    "image_filename": "local_20261026.png",
+    "image_filename": "local_20261027.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties",
+      "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer"
+    ],
+    "image_filename": "producer_20261027.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]
