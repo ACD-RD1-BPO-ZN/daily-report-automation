@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "section_name": "Headline",
+    "source_urls": [
+      "https://deadline.com/2026/10/klara-and-the-sun-box-office-fail-1237201321/"
+    ],
+    "image_filename": "headline_20261028.png",
+    "image_keywords": [
+      "movie",
+      "cinema",
+      "headline",
+      "poster",
+      "trailer",
+      "anime",
+      "animation"
+    ]
+  },
+  {
+    "section_name": "Production",
+    "source_urls": [
+      "https://variety.com/2026/film/festivals/tokyo-opener-sukiyaki-director-zeze-takahisa-song-protest-roots-1236932574/",
+      "https://variety.com/2026/film/markets-festivals/horror-land-of-jinn-first-indonesia-kyrgyzstan-co-production-1236932567/",
+      "https://variety.com/2026/film/markets-festivals/ancestral-memory-ai-nepali-drama-shirjara-tokyo-market-1236932531/",
+      "https://variety.com/2026/film/markets-festivals/guitar-wolf-rocks-back-wild-zero-overdrive-tokyo-market-1236932518/",
+      "https://variety.com/2026/film/markets-festivals/acrobatic-pastor-drama-trinity-tokyo-gap-financing-market-1236932480/",
+      "https://www.cartoonbrew.com/feature-film/wildwood-opening-weekend-box-office-laika-268464.html",
+      "https://www.cartoonbrew.com/awards/coyote-vs-acme-oscars-eligable-268527.html",
+      "https://www.firstshowing.net/2026/new-trailer-for-4k-version-of-animal-farm-50s-cia-animated-classic/"
+    ],
+    "image_filename": "production_20261028.png",
+    "image_keywords": [
+      "film",
+      "production",
+      "cast",
+      "director",
+      "cinema",
+      "anime",
+      "animation",
+      "character"
+    ]
+  },
+  {
+    "section_name": "BoxOffice",
+    "source_urls": [
+      "https://www.boxofficemojo.com/date/2026-10-28/",
+      "https://deadline.com/2026/10/ida-documentary-awards-2026-shortlists-1237206811/",
+      "https://www.cartoonbrew.com/rip/animation-industry-pays-tribute-to-eric-bauza-268488.html",
+      "https://www.cartoonbrew.com/shorts/animation-showcase-2026-shorts-collection-268495.html"
+    ],
+    "image_filename": "boxoffice_20261028.png",
+    "image_keywords": [
+      "box office",
+      "ticket",
+      "chart",
+      "audience"
+    ]
+  },
+  {
+    "section_name": "Streaming",
+    "source_urls": [
+      "https://deadline.com/2026/10/melanie-lynskey-mushroom-murders-australian-drama-series-1237206665/",
+      "https://www.firstshowing.net/2026/tj-power-reconnects-with-alien-pal-in-allen-scifi-comedy/",
+      "https://www.firstshowing.net/2026/amy-poehler-hugh-laurie-in-archaeologists-series-dig-main-trailer/",
+      "https://deadline.com/2026/10/the-kitchen-food-network-date-special-episode-1237206795/"
+    ],
+    "image_filename": "streaming_20261028.png",
+    "image_keywords": [
+      "netflix",
+      "disney+",
+      "hbo",
+      "streaming",
+      "series",
+      "anime",
+      "crunchyroll"
+    ]
+  }
+]

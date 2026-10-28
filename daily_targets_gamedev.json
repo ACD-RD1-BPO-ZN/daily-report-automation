@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties"
+      "https://www.gamedeveloper.com/programming/epic-is-updating-the-eula-to-allow-ai-training-on-outputs-from-unreal-engine-and-metahuman"
     ],
-    "image_filename": "headline_20261027.png",
+    "image_filename": "headline_20261028.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,15 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer"
+      "https://www.unrealengine.com/news/mutable-sample-for-runtime-character-customization-now-updated-for-ue-5-8",
+      "https://unity.com/blog/video-game-terrain-guide",
+      "https://unity.com/blog/frame-rate-in-video-games-explained",
+      "https://unity.com/blog/things-to-know-before-starting-your-first-game",
+      "https://unity.com/blog/how-enemy-ai-works-video-games",
+      "https://unity.com/blog/find-your-core-game-loop",
+      "https://unity.com/blog/define-your-video-game"
     ],
-    "image_filename": "engine_20261027.png",
+    "image_filename": "engine_20261028.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +36,12 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/26/model-the-master-sword-from-zelda/",
-      "https://www.blendernation.com/2026/10/26/203024/",
-      "https://www.blender.org/press/20-years-open-movies/"
+      "https://www.blendernation.com/2026/10/27/grease-pencil-in-blender-5-3-no-more-mode-switching-finally-canvas-flip-roll/",
+      "https://www.blendernation.com/2026/10/27/pocketcam-virtual-camera-for-blender/",
+      "https://80.lv/articles/see-how-this-music-video-was-made-in-blender-instead-of-after-effects",
+      "https://80.lv/articles/real-time-motion-paths-add-on-for-blender-gets-updated"
     ],
-    "image_filename": "model3d_20261027.png",
+    "image_filename": "model3d_20261028.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,11 +56,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/reallusion-s-2026-3d-character-contest-meet-the-winners",
-      "https://80.lv/articles/free-blender-tool-for-dolly-zoom-camera-effect",
-      "https://80.lv/articles/how-to-use-blender-for-backgrounds-in-concept-art"
+      "https://80.lv/articles/interview-konami-envisions-silent-hill-like-a-premium-tv-series-with-various-game-formats",
+      "https://80.lv/articles/building-a-stylized-mountain-cabin-with-modular-assets-and-custom-shaders"
     ],
-    "image_filename": "ta_20261027.png",
+    "image_filename": "ta_20261028.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -69,10 +75,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/console/xbox-coo-helen-chiang-leaves-role-shortly-after-its-creation",
-      "https://www.gamedeveloper.com/audio/obituary-voice-actor-eric-bauza-has-passed-away-at-46"
+      "https://www.gamedeveloper.com/business/rockstar-workers-to-vote-on-unionization-ahead-of-grand-theft-auto-vi-release",
+      "https://www.gamedeveloper.com/programming/warhorse-studios-hit-by-an-undetailed-cybersecurity-incident",
+      "https://www.gamedeveloper.com/mobile/crossy-road-creator-matt-hall-named-atari-s-evp-of-mobile",
+      "https://www.gamedeveloper.com/business/night-dive-studios-ceo-says-atari-is-demonstrating-right-way-to-do-acquisitions",
+      "https://www.gamedeveloper.com/business/sucker-punch-lays-off-24-to-align-with-current-market-next-project-needs"
     ],
-    "image_filename": "globalgames_20261027.png",
+    "image_filename": "globalgames_20261028.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,9 +93,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/this-metroidvania-about-depressed-garbage-man-is-fully-hand-painted/"
+      "https://godotengine.org/article/godot-xr-update-oct2026/",
+      "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-6/"
     ],
-    "image_filename": "indie_20261027.png",
+    "image_filename": "indie_20261028.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -98,11 +108,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=313939",
-      "https://gnn.gamer.com.tw/detail.php?sn=313938",
-      "https://gnn.gamer.com.tw/detail.php?sn=313935"
+      "https://gnn.gamer.com.tw/detail.php?sn=314022",
+      "https://gnn.gamer.com.tw/detail.php?sn=314021",
+      "https://gnn.gamer.com.tw/detail.php?sn=314020",
+      "https://gnn.gamer.com.tw/detail.php?sn=314019",
+      "https://gnn.gamer.com.tw/detail.php?sn=314018",
+      "https://gnn.gamer.com.tw/detail.php?sn=314017"
     ],
-    "image_filename": "local_20261027.png",
+    "image_filename": "local_20261028.png",
     "image_keywords": [
       "event",
       "meetup",
@@ -113,10 +126,11 @@
   {
     "section_name": "Producer",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties",
-      "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer"
+      "https://www.gamedeveloper.com/business/sucker-punch-lays-off-24-to-align-with-current-market-next-project-needs",
+      "https://www.gamedeveloper.com/programming/epic-is-updating-the-eula-to-allow-ai-training-on-outputs-from-unreal-engine-and-metahuman",
+      "https://unity.com/blog/things-to-know-before-starting-your-first-game"
     ],
-    "image_filename": "producer_20261027.png",
+    "image_filename": "producer_20261028.png",
     "image_keywords": [
       "marketing",
       "development",
