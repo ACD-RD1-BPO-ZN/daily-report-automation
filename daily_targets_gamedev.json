@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://www.gamedeveloper.com/programming/unreal-engine-will-be-developed-with-ai-code-confirms-epic"
+      "https://gnn.gamer.com.tw/detail.php?sn=314190"
     ],
-    "image_filename": "headline_20261029.png",
+    "image_filename": "headline_20261030.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,28 +14,14 @@
     ]
   },
   {
-    "section_name": "Engine",
-    "source_urls": [
-      "https://www.unrealengine.com/learning/octobers-epic-learning-content-mobile-development-in-unreal-engine",
-      "https://unity.com/blog/google-play-indie-games-fund-2026",
-      "https://unity.com/blog/xreal-aura-games-made-with-unity"
-    ],
-    "image_filename": "engine_20261029.png",
-    "image_keywords": [
-      "engine",
-      "editor",
-      "unreal",
-      "unity",
-      "viewport"
-    ]
-  },
-  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/28/cinematic-lighting-for-3d-environments-the-monastery-dungeon/",
-      "https://www.blendernation.com/2026/10/28/tintline-2-2-adds-one-click-auto-shade-for-low-poly-colour-atlases/"
+      "https://www.blendernation.com/2026/10/29/dead-simple-motion/",
+      "https://www.blendernation.com/2026/10/29/polyweft-keep-independent-edits-in-one-prepared-blender-mesh/",
+      "https://80.lv/articles/adobe-explains-how-it-rebuilt-substance-3d-painter-s-baking-workflow/",
+      "https://80.lv/articles/breakdown-giant-robot-in-cathedral-ruins-made-in-3d/"
     ],
-    "image_filename": "model3d_20261029.png",
+    "image_filename": "model3d_20261030.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -50,9 +36,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/this-new-shopkeeping-sim-is-like-cyberpunk-2077-meets-papers-please"
+      "https://80.lv/articles/the-elder-scrolls-6-may-finally-have-a-name-confirmation-and-it-makes-perfect-sense",
+      "https://80.lv/articles/how-hitman-devs-turned-jacksepticeye-into-a-violent-narcissist-in-newest-mission"
     ],
-    "image_filename": "ta_20261029.png",
+    "image_filename": "ta_20261030.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,11 +55,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://80.lv/articles/bioware-co-founder-greg-zeschuk-says-studio-was-killed-by-executives-who-have-never-made-a-game",
-      "https://gnn.gamer.com.tw/detail.php?sn=314089",
-      "https://gnn.gamer.com.tw/detail.php?sn=314091"
+      "https://www.gamedeveloper.com/business/netflix-adapts-krafton-pubg-to-be-written-and-led-by-donald-glover",
+      "https://www.gamedeveloper.com/console/xbox-ceo-says-console-demand-is-outstripping-supply-as-sales-continue-to-drop",
+      "https://gnn.gamer.com.tw/detail.php?sn=314191"
     ],
-    "image_filename": "globalgames_20261029.png",
+    "image_filename": "globalgames_20261030.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -84,12 +71,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/pc/valve-addresses-steam-ai-cloning-problem",
-      "https://www.gamedeveloper.com/business/roblox-confirms-no-adult-content-used-in-ai-training-after-scraping-open3dlab-data",
-      "https://gnn.gamer.com.tw/detail.php?sn=314092",
-      "https://gnn.gamer.com.tw/detail.php?sn=314090"
+      "https://80.lv/articles/second-life-wants-its-23-year-old-world-to-be-a-modern-game-platform",
+      "https://store.steampowered.com/news/289185/"
     ],
-    "image_filename": "indie_20261029.png",
+    "image_filename": "indie_20261030.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -101,10 +86,12 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314094",
-      "https://gnn.gamer.com.tw/detail.php?sn=314093"
+      "https://gnn.gamer.com.tw/detail.php?sn=314195",
+      "https://gnn.gamer.com.tw/detail.php?sn=314193",
+      "https://gnn.gamer.com.tw/detail.php?sn=314192",
+      "https://gnn.gamer.com.tw/detail.php?sn=314189"
     ],
-    "image_filename": "local_20261029.png",
+    "image_filename": "local_20261030.png",
     "image_keywords": [
       "event",
       "meetup",
