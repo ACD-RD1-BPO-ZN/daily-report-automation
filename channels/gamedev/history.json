@@ -1,20 +1,4 @@
 {
-  "2026-10-01": [
-    "https://gnn.gamer.com.tw/detail.php?sn=312590",
-    "https://www.unrealengine.com/learning/septembers-epic-learning-content-metahumans-physics-animation-and-more",
-    "https://code.blender.org/2026/07/geometry-nodes-physics/",
-    "https://www.blendernation.com/2026/09/30/blendkit-hit-150k-assets/",
-    "https://80.lv/articles/see-blender-5-3-running-on-wacom-android-tablet/",
-    "https://80.lv/articles/sculpting-nature-inspired-bas-reliefs-on-a-stone-wall-in-a-moody-ancient-forest-environment/",
-    "https://80.lv/articles/demon-s-souls-remake-performance-reportedly-hits-40-50-fps-on-ps5-emulator/",
-    "https://www.gamedeveloper.com/production/ubisoft-montreal-employees-launch-collective-action-to-preserve-hybrid-work-schedule/",
-    "https://gnn.gamer.com.tw/detail.php?sn=312587",
-    "https://gnn.gamer.com.tw/detail.php?sn=312586",
-    "https://gnn.gamer.com.tw/detail.php?sn=312585",
-    "https://80.lv/articles/check-out-this-cozy-cyberpunk-life-sim-where-you-build-business-explore-neon-lit-city/",
-    "https://gnn.gamer.com.tw/detail.php?sn=312591",
-    "https://gnn.gamer.com.tw/detail.php?sn=312589"
-  ],
   "2026-10-02": [
     "https://80.lv/articles/gears-of-war-e-day-is-the-highest-rated-gears-game-in-over-15-years",
     "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5",
@@ -508,5 +492,18 @@
     "https://gnn.gamer.com.tw/detail.php?sn=314284",
     "https://gnn.gamer.com.tw/detail.php?sn=314283",
     "https://gnn.gamer.com.tw/detail.php?sn=314277"
+  ],
+  "2026-11-01": [
+    "https://code.blender.org/2026/07/geometry-nodes-physics/",
+    "https://www.blendernation.com/2026/10/31/best-of-blender-artists-2026-44/",
+    "https://www.blendernation.com/2026/10/31/5-tips-square-to-round-shapes-inverted-hull-reduce-polycount-find-double-geometry-better-bevels/",
+    "https://80.lv/articles/sculpting-texturing-a-semi-realistic-lobo-bust-with-zbrush-substance-3d/",
+    "https://80.lv/articles/fun-morning-routine-animation-reference-for-sony-s-goat-movie/",
+    "https://gnn.gamer.com.tw/detail.php?sn=314285",
+    "https://80.lv/articles/diablo-style-pvp-by-former-blizzard-cco-is-coming-to-early-access-in-november/",
+    "https://80.lv/articles/this-new-retro-fantasy-indie-rpg-channels-dark-souls-and-king-s-field/",
+    "https://80.lv/articles/you-can-now-play-the-mortuary-assistant-dev-s-canceled-paranormal-activity-game-for-free/",
+    "https://gnn.gamer.com.tw/detail.php?sn=314286",
+    "https://www.blendernation.com/2026/10/30/blender-jobs-for-october-30-2026/"
   ]
 }
