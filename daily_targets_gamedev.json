@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://code.blender.org/2026/07/geometry-nodes-physics/"
+      "https://gnn.gamer.com.tw/detail.php?sn=314292"
     ],
-    "image_filename": "headline_20261101.png",
+    "image_filename": "headline_20261102.png",
     "image_keywords": [
       "official",
       "hero",
@@ -14,13 +14,25 @@
     ]
   },
   {
+    "section_name": "Engine",
+    "source_urls": [
+      "https://gnn.gamer.com.tw/detail.php?sn=314289"
+    ],
+    "image_filename": "engine_20261102.png",
+    "image_keywords": [
+      "engine",
+      "editor",
+      "unreal",
+      "unity",
+      "viewport"
+    ]
+  },
+  {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/10/31/best-of-blender-artists-2026-44/",
-      "https://www.blendernation.com/2026/10/31/5-tips-square-to-round-shapes-inverted-hull-reduce-polycount-find-double-geometry-better-bevels/",
-      "https://80.lv/articles/sculpting-texturing-a-semi-realistic-lobo-bust-with-zbrush-substance-3d/"
+      "https://www.blendernation.com/2026/11/01/ichno-free-one-click-technical-drawings-from-blender-scenes/"
     ],
-    "image_filename": "model3d_20261101.png",
+    "image_filename": "model3d_20261102.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -35,9 +47,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/fun-morning-routine-animation-reference-for-sony-s-goat-movie/"
+      "https://80.lv/articles/sculpting-texturing-a-semi-realistic-lobo-bust-with-zbrush-substance-3d",
+      "https://80.lv/articles/fun-morning-routine-animation-reference-for-sony-s-goat-movie"
     ],
-    "image_filename": "ta_20261101.png",
+    "image_filename": "ta_20261102.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -53,10 +66,11 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314285",
-      "https://80.lv/articles/diablo-style-pvp-by-former-blizzard-cco-is-coming-to-early-access-in-november/"
+      "https://gnn.gamer.com.tw/detail.php?sn=314291",
+      "https://gnn.gamer.com.tw/detail.php?sn=314290",
+      "https://gnn.gamer.com.tw/detail.php?sn=314287"
     ],
-    "image_filename": "globalgames_20261101.png",
+    "image_filename": "globalgames_20261102.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -69,9 +83,10 @@
     "section_name": "Indie",
     "source_urls": [
       "https://80.lv/articles/this-new-retro-fantasy-indie-rpg-channels-dark-souls-and-king-s-field",
-      "https://80.lv/articles/you-can-now-play-the-mortuary-assistant-dev-s-canceled-paranormal-activity-game-for-free"
+      "https://80.lv/articles/you-can-now-play-the-mortuary-assistant-dev-s-canceled-paranormal-activity-game-for-free",
+      "https://80.lv/articles/diablo-style-pvp-by-former-blizzard-cco-is-coming-to-early-access-in-november"
     ],
-    "image_filename": "indie_20261101.png",
+    "image_filename": "indie_20261102.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -83,27 +98,14 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314286"
+      "https://gnn.gamer.com.tw/detail.php?sn=314288"
     ],
-    "image_filename": "local_20261101.png",
+    "image_filename": "local_20261102.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
-    ]
-  },
-  {
-    "section_name": "Producer",
-    "source_urls": [
-      "https://www.blendernation.com/2026/10/30/blender-jobs-for-october-30-2026/"
-    ],
-    "image_filename": "producer_20261101.png",
-    "image_keywords": [
-      "marketing",
-      "development",
-      "producer",
-      "idea"
     ]
   }
 ]
