@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314292"
+      "https://www.gamedeveloper.com/business/nagoshi-studio-toshihiro-nagoshi-s-game-development-studio-after-leaving-sega-closes-as-netease-cuts-its-funding"
     ],
-    "image_filename": "headline_20261102.png",
+    "image_filename": "headline_20261103.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,9 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314289"
+      "https://unity.com/blog/games-made-with-unity-october-2026-releases"
     ],
-    "image_filename": "engine_20261102.png",
+    "image_filename": "engine_20261103.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,9 +30,9 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://www.blendernation.com/2026/11/01/ichno-free-one-click-technical-drawings-from-blender-scenes/"
+      "https://www.blendernation.com/2026/11/02/learn-to-model-links-shield-step-by-step/"
     ],
-    "image_filename": "model3d_20261102.png",
+    "image_filename": "model3d_20261103.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -47,10 +47,13 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/sculpting-texturing-a-semi-realistic-lobo-bust-with-zbrush-substance-3d",
-      "https://80.lv/articles/fun-morning-routine-animation-reference-for-sony-s-goat-movie"
+      "https://80.lv/articles/halloween-showcase-celebrating-our-artists",
+      "https://80.lv/articles/free-affinity-app-for-ipad-now-available",
+      "https://80.lv/articles/how-medium-rare-uses-pixel-art-collages-to-evoke-dread-of-industrialized-cannibalism",
+      "https://80.lv/articles/recreating-hiss-effect-from-remedy-s-control-in-blender",
+      "https://80.lv/articles/claude-code-blocks-video-game-cloning-some-reverse-engineering-tasks"
     ],
-    "image_filename": "ta_20261102.png",
+    "image_filename": "ta_20261103.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -66,11 +69,12 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314291",
-      "https://gnn.gamer.com.tw/detail.php?sn=314290",
-      "https://gnn.gamer.com.tw/detail.php?sn=314287"
+      "https://gnn.gamer.com.tw/detail.php?sn=314375",
+      "https://gnn.gamer.com.tw/detail.php?sn=314374",
+      "https://gnn.gamer.com.tw/detail.php?sn=314373",
+      "https://www.gamedeveloper.com/production/zelda-producer-ocarina-of-time-remake-helps-junior-staff-learn-classic-insights"
     ],
-    "image_filename": "globalgames_20261102.png",
+    "image_filename": "globalgames_20261103.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -82,11 +86,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://80.lv/articles/this-new-retro-fantasy-indie-rpg-channels-dark-souls-and-king-s-field",
-      "https://80.lv/articles/you-can-now-play-the-mortuary-assistant-dev-s-canceled-paranormal-activity-game-for-free",
-      "https://80.lv/articles/diablo-style-pvp-by-former-blizzard-cco-is-coming-to-early-access-in-november"
+      "https://www.gamedeveloper.com/pc/number-of-game-pages-doubles-on-itch-io-as-ai-clones-flood-the-store",
+      "https://store.steampowered.com/news/285419/"
     ],
-    "image_filename": "indie_20261102.png",
+    "image_filename": "indie_20261103.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -98,9 +101,11 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314288"
+      "https://gnn.gamer.com.tw/detail.php?sn=314363",
+      "https://gnn.gamer.com.tw/detail.php?sn=314362",
+      "https://gnn.gamer.com.tw/detail.php?sn=314361"
     ],
-    "image_filename": "local_20261102.png",
+    "image_filename": "local_20261103.png",
     "image_keywords": [
       "event",
       "meetup",
