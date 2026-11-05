@@ -2,9 +2,9 @@
   {
     "section_name": "Headline",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314423"
+      "https://www.gamedeveloper.com/business/valve-warns-of-slower-steam-approval-process-due-to-flood-of-new-games"
     ],
-    "image_filename": "headline_20261104.png",
+    "image_filename": "headline_20261105.png",
     "image_keywords": [
       "official",
       "hero",
@@ -16,9 +16,11 @@
   {
     "section_name": "Engine",
     "source_urls": [
-      "https://www.unrealengine.com/developer-interviews/no-law-crafting-a-living-breathing-cyber-noir-world-with-ue5"
+      "https://www.unrealengine.com/news/unreal-engine-innovation-heads-to-i-itsec-2026",
+      "https://unity.com/blog/ares-interactive-live-service-games",
+      "https://unity.com/blog/october-2026-industry-content-wrap-up"
     ],
-    "image_filename": "engine_20261104.png",
+    "image_filename": "engine_20261105.png",
     "image_keywords": [
       "engine",
       "editor",
@@ -30,11 +32,10 @@
   {
     "section_name": "Model3D",
     "source_urls": [
-      "https://code.blender.org/2026/11/layered-actions-workshop-september-2026/",
-      "https://www.blendernation.com/2026/11/03/blender-secrets-on-sale/",
-      "https://www.blendernation.com/2026/11/03/free-browser-step-stl-converter-fabrapid-3d/"
+      "https://www.blendernation.com/2026/11/04/creating-a-mech-girl-character-part-4%ef%b8%b1retopology-tips/",
+      "https://www.blendernation.com/2026/11/04/create-a-procedural-cartoon-flame-in-blender-with-geometry-nodes/"
     ],
-    "image_filename": "model3d_20261104.png",
+    "image_filename": "model3d_20261105.png",
     "image_keywords": [
       "3d",
       "modeling",
@@ -49,10 +50,10 @@
   {
     "section_name": "TA",
     "source_urls": [
-      "https://80.lv/articles/how-to-combine-watercolor-painting-with-3d-texturing",
-      "https://80.lv/articles/sparseal-releases-ai-assisted-retopology-app-for-pc"
+      "https://80.lv/articles/behind-the-animation-of-star-wars-galactic-racer-s-high-speed-chaos",
+      "https://80.lv/articles/get-this-blender-add-on-for-realistic-real-time-procedural-sky"
     ],
-    "image_filename": "ta_20261104.png",
+    "image_filename": "ta_20261105.png",
     "image_keywords": [
       "screenshot",
       "preview",
@@ -68,13 +69,13 @@
   {
     "section_name": "GlobalGames",
     "source_urls": [
-      "https://www.gamedeveloper.com/business/half-of-control-resonant-s-players-were-new-to-the-franchise",
-      "https://www.gamedeveloper.com/business/former-xbox-coo-helen-chiang-takes-umbrage-with-the-characterizations-of-her-departure",
-      "https://www.gamedeveloper.com/business/south-of-midnight-director-was-always-worried-about-rome-burning-at-xbox",
-      "https://gnn.gamer.com.tw/detail.php?sn=314418",
-      "https://gnn.gamer.com.tw/detail.php?sn=314419"
+      "https://www.gamedeveloper.com/business/tripwire-interactive-expands-publishing-business-to-focus-on-smaller-developers-and-games",
+      "https://www.gamedeveloper.com/business/ubisoft-among-the-bidders-for-arkane-as-xbox-looks-to-sell-the-studio",
+      "https://gnn.gamer.com.tw/detail.php?sn=314497",
+      "https://gnn.gamer.com.tw/detail.php?sn=314502",
+      "https://gnn.gamer.com.tw/detail.php?sn=314493"
     ],
-    "image_filename": "globalgames_20261104.png",
+    "image_filename": "globalgames_20261105.png",
     "image_keywords": [
       "gameplay",
       "trailer",
@@ -86,9 +87,10 @@
   {
     "section_name": "Indie",
     "source_urls": [
-      "https://www.gamedeveloper.com/design/what-rami-ismail-learned-with-his-return-to-game-development"
+      "https://store.steampowered.com/news/290724/",
+      "https://80.lv/articles/this-cozy-parenting-game-looks-like-thank-goodness-you-re-here-plays-like-a-little-to-the-left"
     ],
-    "image_filename": "indie_20261104.png",
+    "image_filename": "indie_20261105.png",
     "image_keywords": [
       "gameplay",
       "chart",
@@ -100,16 +102,29 @@
   {
     "section_name": "Local",
     "source_urls": [
-      "https://gnn.gamer.com.tw/detail.php?sn=314422",
-      "https://gnn.gamer.com.tw/detail.php?sn=314421",
-      "https://gnn.gamer.com.tw/detail.php?sn=314420"
+      "https://gnn.gamer.com.tw/detail.php?sn=314501",
+      "https://gnn.gamer.com.tw/detail.php?sn=314496",
+      "https://gnn.gamer.com.tw/detail.php?sn=314492"
     ],
-    "image_filename": "local_20261104.png",
+    "image_filename": "local_20261105.png",
     "image_keywords": [
       "event",
       "meetup",
       "poster",
       "community"
+    ]
+  },
+  {
+    "section_name": "Producer",
+    "source_urls": [
+      "https://80.lv/articles/building-your-game-is-only-the-beginning-now-you-need-player-trust"
+    ],
+    "image_filename": "producer_20261105.png",
+    "image_keywords": [
+      "marketing",
+      "development",
+      "producer",
+      "idea"
     ]
   }
 ]

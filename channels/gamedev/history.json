@@ -1,12 +1,4 @@
 {
-  "2026-10-05": [
-    "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals",
-    "https://www.unrealengine.com/events/emea-dev-days",
-    "https://www.blender.org/events/blender-in-annecy-2026-recap/",
-    "https://www.blendernation.com/2026/10/04/switch-between-multiple-shaders-with-one-material/",
-    "https://www.blendernation.com/2026/10/04/creating-a-mech-girl-character-part-1/",
-    "https://gnn.gamer.com.tw/detail.php?sn=312851"
-  ],
   "2026-10-06": [
     "https://www.gamedeveloper.com/business/arc-raiders-and-the-finals-set-for-tv-and-film-adaptations-from-backrooms-co-producer",
     "https://code.blender.org/2026/10/geometry-nodes-workshop-september-2026/",
@@ -500,5 +492,26 @@
     "https://gnn.gamer.com.tw/detail.php?sn=314422",
     "https://gnn.gamer.com.tw/detail.php?sn=314421",
     "https://gnn.gamer.com.tw/detail.php?sn=314420"
+  ],
+  "2026-11-05": [
+    "https://www.gamedeveloper.com/business/valve-warns-of-slower-steam-approval-process-due-to-flood-of-new-games",
+    "https://www.unrealengine.com/news/unreal-engine-innovation-heads-to-i-itsec-2026",
+    "https://unity.com/blog/ares-interactive-live-service-games",
+    "https://unity.com/blog/october-2026-industry-content-wrap-up",
+    "https://www.blendernation.com/2026/11/04/creating-a-mech-girl-character-part-4%ef%b8%b1retopology-tips/",
+    "https://www.blendernation.com/2026/11/04/create-a-procedural-cartoon-flame-in-blender-with-geometry-nodes/",
+    "https://80.lv/articles/behind-the-animation-of-star-wars-galactic-racer-s-high-speed-chaos",
+    "https://80.lv/articles/get-this-blender-add-on-for-realistic-real-time-procedural-sky",
+    "https://www.gamedeveloper.com/business/tripwire-interactive-expands-publishing-business-to-focus-on-smaller-developers-and-games",
+    "https://www.gamedeveloper.com/business/ubisoft-among-the-bidders-for-arkane-as-xbox-looks-to-sell-the-studio",
+    "https://gnn.gamer.com.tw/detail.php?sn=314497",
+    "https://gnn.gamer.com.tw/detail.php?sn=314502",
+    "https://gnn.gamer.com.tw/detail.php?sn=314493",
+    "https://store.steampowered.com/news/290724/",
+    "https://80.lv/articles/this-cozy-parenting-game-looks-like-thank-goodness-you-re-here-plays-like-a-little-to-the-left",
+    "https://gnn.gamer.com.tw/detail.php?sn=314501",
+    "https://gnn.gamer.com.tw/detail.php?sn=314496",
+    "https://gnn.gamer.com.tw/detail.php?sn=314492",
+    "https://80.lv/articles/building-your-game-is-only-the-beginning-now-you-need-player-trust"
   ]
 }
